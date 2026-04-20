@@ -1,0 +1,155 @@
+[gd_scene format=3 uid="uid://cbqqr0mpwpnmi"]
+
+[ext_resource type="Script" uid="uid://djk17gyktdxdq" path="res://mapa.gd" id="1_622qf"]
+[ext_resource type="Texture2D" uid="uid://b3wfnscgwckc" path="res://GFX/mapa.png" id="2_rml5n"]
+[ext_resource type="Texture2D" uid="uid://cw1e38yqqo464" path="res://GFX/atras.png" id="3_udyo2"]
+
+[node name="Control" type="Control" unique_id=1485101437]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_622qf")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1122689724]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_rml5n")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1576942291]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 109.0
+offset_top = 245.0
+offset_right = -109.0
+offset_bottom = -66.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1479065497]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Level 1" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=997496263]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1"
+
+[node name="Level 2" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=475813942]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "2"
+
+[node name="Level 3" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=756301561]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "3"
+
+[node name="Level 4" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=110896221]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "4"
+
+[node name="Level 5" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=28944831]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "5"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=1035917664]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 50
+
+[node name="Level 6" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=1185029764]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "6"
+
+[node name="Level 7" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=1738663964]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "7"
+
+[node name="Level 8" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=920773736]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "8"
+
+[node name="Level 9" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=1823965717]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "9"
+
+[node name="Level 10" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=1256539344]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "10"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer" unique_id=220419508]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 50
+
+[node name="Level 11" type="Button" parent="VBoxContainer/HBoxContainer3" unique_id=1088182469]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "11"
+
+[node name="Level 12" type="Button" parent="VBoxContainer/HBoxContainer3" unique_id=654589170]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "12"
+
+[node name="Level 13" type="Button" parent="VBoxContainer/HBoxContainer3" unique_id=976214597]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "13"
+
+[node name="Level 14" type="Button" parent="VBoxContainer/HBoxContainer3" unique_id=744496674]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "14"
+
+[node name="Level 15" type="Button" parent="VBoxContainer/HBoxContainer3" unique_id=157975183]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "15"
+
+[node name="atras" type="Button" parent="." unique_id=1593490767]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 15.0
+offset_right = 162.0
+offset_bottom = 165.0
+size_flags_horizontal = 3
+icon = ExtResource("3_udyo2")
+flat = true
+
+[connection signal="pressed" from="atras" to="." method="_on_atras_pressed"]

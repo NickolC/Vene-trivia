@@ -1,0 +1,169 @@
+[gd_scene format=3 uid="uid://2g7gnhrhk3d2"]
+
+[ext_resource type="Texture2D" uid="uid://c327tpj0yb88s" path="res://GFX/Menu de inicio.png" id="1_we40w"]
+[ext_resource type="FontFile" uid="uid://cn65q6b06tv8u" path="res://font/Minecraft.ttf" id="2_fs2h7"]
+[ext_resource type="Texture2D" uid="uid://cilnjykb7xwtb" path="res://GFX/ajuste.png" id="3_fs2h7"]
+[ext_resource type="Texture2D" uid="uid://bxd6kbqnokrvp" path="res://GFX/black.png" id="3_goybn"]
+
+[sub_resource type="GDScript" id="GDScript_6pedr"]
+script/source = "extends Control
+
+
+
+func _on_jugar_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Scenes/Juego.tscn\")
+
+
+func _on_minijuegos_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Scenes/Minijuegos.tscn\")
+
+
+func _on_opciones_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Scenes/Opciones.tscn\")
+
+
+func _on_extras_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://Scenes/Extras.tscn\")
+
+
+func _on_cuenta_pressed() -> void:
+	
+	
+	pass # Replace with function body.
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_goybn"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7wbh"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cpw8e"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sr0qy"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fs2h7"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Animation" id="Animation_s2c3o"]
+resource_name = "Fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ma218"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_idohh"]
+_data = {
+&"Fade_out": SubResource("Animation_s2c3o"),
+&"RESET": SubResource("Animation_ma218")
+}
+
+[node name="Menu" type="Control" unique_id=308756920]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+script = SubResource("GDScript_6pedr")
+
+[node name="Colormenu" type="ColorRect" parent="." unique_id=1886500051]
+layout_mode = 1
+color = Color(0.44291076, 0.44291076, 0.44291073, 1)
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=1714569909]
+layout_mode = 1
+offset_right = 1820.0
+offset_bottom = 980.0
+texture = ExtResource("1_we40w")
+
+[node name="Contenedor" type="VBoxContainer" parent="Fondo" unique_id=521576531]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.50100005
+anchor_top = 0.70600003
+anchor_right = 0.50100005
+anchor_bottom = 0.70600003
+offset_left = -146.82007
+offset_top = -180.88
+offset_right = 147.17993
+offset_bottom = 180.12
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 54
+
+[node name="Jugar" type="Button" parent="Fondo/Contenedor" unique_id=393762713]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fs2h7")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_goybn")
+text = "JUGAR"
+
+[node name="Minijuegos" type="Button" parent="Fondo/Contenedor" unique_id=481098337]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fs2h7")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_c7wbh")
+text = "MINIJUEGOS"
+
+[node name="Opciones" type="Button" parent="Fondo/Contenedor" unique_id=963211344]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fs2h7")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_cpw8e")
+text = "OPCIONES"
+
+[node name="Extras" type="Button" parent="Fondo/Contenedor" unique_id=275746938]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fs2h7")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_sr0qy")
+text = "EXTRAS"
+
+[node name="Cuenta" type="Button" parent="Fondo" unique_id=579565907]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 890.0
+offset_right = 111.0
+offset_bottom = 966.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_fs2h7")
+icon = ExtResource("3_fs2h7")
+
+[node name="Transicion" type="Sprite2D" parent="." unique_id=1920562429]
+visible = false
+position = Vector2(917, 488.00012)
+scale = Vector2(0.9484375, 0.90833336)
+texture = ExtResource("3_goybn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Transicion" unique_id=632883786]
+libraries/ = SubResource("AnimationLibrary_idohh")
+autoplay = &"Fade_out"
+
+[connection signal="pressed" from="Fondo/Contenedor/Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Fondo/Contenedor/Minijuegos" to="." method="_on_minijuegos_pressed"]
+[connection signal="pressed" from="Fondo/Contenedor/Opciones" to="." method="_on_opciones_pressed"]
+[connection signal="pressed" from="Fondo/Contenedor/Extras" to="." method="_on_extras_pressed"]
+[connection signal="pressed" from="Fondo/Cuenta" to="." method="_on_cuenta_pressed"]

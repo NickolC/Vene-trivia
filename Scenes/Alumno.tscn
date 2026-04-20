@@ -1,0 +1,397 @@
+[gd_scene format=3 uid="uid://cl5epy5lwpkaq"]
+
+[ext_resource type="Script" uid="uid://doa6gcgmt3yrv" path="res://Scenes/alumno.gd" id="1_6r77h"]
+[ext_resource type="Texture2D" uid="uid://csis4i4purf45" path="res://GFX/Alumno.png" id="1_dyp3p"]
+[ext_resource type="FontFile" uid="uid://cn65q6b06tv8u" path="res://font/Minecraft.ttf" id="2_qy7yc"]
+[ext_resource type="FontFile" uid="uid://2s1p28deo8oy" path="res://GFX/Minecraft.ttf" id="3_m24ux"]
+[ext_resource type="Texture2D" uid="uid://cw1e38yqqo464" path="res://GFX/atras.png" id="5_7tn0i"]
+[ext_resource type="Texture2D" uid="uid://bxd6kbqnokrvp" path="res://GFX/black.png" id="5_bjbae"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m24ux"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6r77h"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7tn0i"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5f7xi"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_us6dg"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2e02u"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o5hxj"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0kp7q"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a2bwr"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xc0ys"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_efhyf"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n8qlr"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nkck7"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Animation" id="Animation_s2c3o"]
+resource_name = "Fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ma218"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7tn0i"]
+_data = {
+&"Fade_out": SubResource("Animation_s2c3o"),
+&"RESET": SubResource("Animation_ma218")
+}
+
+[node name="Control" type="Control" unique_id=151932442]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6r77h")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2141308733]
+layout_mode = 0
+offset_right = 1821.0
+offset_bottom = 1023.0
+texture = ExtResource("1_dyp3p")
+
+[node name="Registro" type="Label" parent="TextureRect" unique_id=1883045783]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.26200002
+anchor_top = 0.202
+anchor_right = 0.26200002
+anchor_bottom = 0.202
+offset_left = -202.10205
+offset_top = -33.162003
+offset_right = 202.89795
+offset_bottom = 33.837997
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qy7yc")
+theme_override_font_sizes/font_size = 66
+text = "REGISTRO"
+horizontal_alignment = 1
+
+[node name="Inicio" type="Label" parent="TextureRect" unique_id=1249439473]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.74200004
+anchor_top = 0.15100001
+anchor_right = 0.74200004
+anchor_bottom = 0.15100001
+offset_left = -202.18213
+offset_top = -41.131012
+offset_right = 202.81787
+offset_bottom = 40.868988
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qy7yc")
+theme_override_font_sizes/font_size = 81
+text = "INICIO"
+horizontal_alignment = 1
+
+[node name="Reg-Usuario" type="Label" parent="TextureRect" unique_id=259694839]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.18200001
+anchor_top = 0.33100003
+anchor_right = 0.18200001
+anchor_bottom = 0.33100003
+offset_left = -86.42203
+offset_top = -22.71103
+offset_right = 87.57797
+offset_bottom = 23.28897
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_qy7yc")
+theme_override_font_sizes/font_size = 45
+text = "Usuario:"
+horizontal_alignment = 1
+
+[node name="Reg-clave" type="Label" parent="TextureRect" unique_id=451538564]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.17400001
+anchor_top = 0.485
+anchor_right = 0.17400001
+anchor_bottom = 0.485
+offset_left = -69.854004
+offset_top = -22.785004
+offset_right = 68.145996
+offset_bottom = 23.214966
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_qy7yc")
+theme_override_font_sizes/font_size = 45
+text = "Clave:"
+horizontal_alignment = 1
+
+[node name="Reg-RepetirClave" type="Label" parent="TextureRect" unique_id=631557714]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.21700001
+anchor_top = 0.597
+anchor_right = 0.21700001
+anchor_bottom = 0.597
+offset_left = -151.15701
+offset_top = -19.656982
+offset_right = 151.84299
+offset_bottom = 20.343018
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_qy7yc")
+theme_override_font_sizes/font_size = 40
+text = "Repita la clave:"
+horizontal_alignment = 1
+
+[node name="Ini-Usuario" type="Label" parent="TextureRect" unique_id=1946684234]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.63500005
+anchor_top = 0.33600003
+anchor_right = 0.63500005
+anchor_bottom = 0.33600003
+offset_left = -107.33508
+offset_top = -28.616028
+offset_right = 105.66492
+offset_bottom = 27.383972
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qy7yc")
+theme_override_font_sizes/font_size = 55
+text = "Usuario:"
+horizontal_alignment = 1
+
+[node name="Ini-Clave" type="Label" parent="TextureRect/Ini-Usuario" unique_id=1372158259]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41300002
+anchor_top = 3.5540001
+anchor_right = 0.41300002
+anchor_bottom = 3.5540001
+offset_left = -83.969
+offset_top = -28.024002
+offset_right = 84.031
+offset_bottom = 27.975998
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qy7yc")
+theme_override_font_sizes/font_size = 55
+text = "Clave:"
+horizontal_alignment = 1
+
+[node name="login-alumno" type="Button" parent="TextureRect" unique_id=2140703245]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.26500002
+anchor_top = 0.82100004
+anchor_right = 0.26500002
+anchor_bottom = 0.82100004
+offset_left = -220.56503
+offset_top = -35.401062
+offset_right = 219.43497
+offset_bottom = 35.598938
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qy7yc")
+theme_override_font_sizes/font_size = 65
+theme_override_styles/normal = SubResource("StyleBoxFlat_m24ux")
+text = "ACEPTAR"
+
+[node name="login-docente" type="Button" parent="TextureRect" unique_id=1991638307]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.74100006
+anchor_top = 0.80500007
+anchor_right = 0.74100006
+anchor_bottom = 0.80500007
+offset_left = -245.36108
+offset_top = -37.70508
+offset_right = 245.63892
+offset_bottom = 38.29492
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qy7yc")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_6r77h")
+text = "INGRESAR"
+
+[node name="RegIngresaUsu" type="LineEdit" parent="TextureRect" unique_id=50356321]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.26500002
+anchor_top = 0.38300002
+anchor_right = 0.26500002
+anchor_bottom = 0.38300002
+offset_left = -243.56503
+offset_top = -20.723022
+offset_right = 243.43497
+offset_bottom = 20.276978
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.6)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_m24ux")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_7tn0i")
+theme_override_styles/focus = SubResource("StyleBoxFlat_5f7xi")
+placeholder_text = "Ingrese usuario"
+alignment = 1
+max_length = 10
+
+[node name="RegIngresaClv" type="LineEdit" parent="TextureRect" unique_id=229965910]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.266
+anchor_top = 0.536
+anchor_right = 0.266
+anchor_bottom = 0.536
+offset_left = -244.38602
+offset_top = -20.81604
+offset_right = 242.61398
+offset_bottom = 20.18396
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.6)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_m24ux")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_us6dg")
+theme_override_styles/focus = SubResource("StyleBoxFlat_2e02u")
+placeholder_text = "Ingrese clave"
+alignment = 1
+max_length = 10
+virtual_keyboard_type = 6
+secret = true
+
+[node name="IniIngresaUsu" type="LineEdit" parent="TextureRect" unique_id=862477362]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.74300003
+anchor_top = 0.40300003
+anchor_right = 0.74300003
+anchor_bottom = 0.40300003
+offset_left = -310.00305
+offset_top = -29.343018
+offset_right = 308.99695
+offset_bottom = 29.656982
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.6)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_m24ux")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_o5hxj")
+theme_override_styles/focus = SubResource("StyleBoxFlat_0kp7q")
+placeholder_text = "Ingrese su usuario"
+alignment = 1
+max_length = 10
+
+[node name="IniIngresaClv" type="LineEdit" parent="TextureRect" unique_id=1019867699]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.74300003
+anchor_top = 0.57600003
+anchor_right = 0.74300003
+anchor_bottom = 0.57600003
+offset_left = -310.00305
+offset_top = -29.05603
+offset_right = 308.99695
+offset_bottom = 29.94397
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.6)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_m24ux")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_a2bwr")
+theme_override_styles/focus = SubResource("StyleBoxFlat_xc0ys")
+placeholder_text = "Ingrese su clave"
+alignment = 1
+max_length = 10
+virtual_keyboard_type = 6
+secret = true
+
+[node name="RegRepiteClv" type="LineEdit" parent="." unique_id=2113335907]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.263
+anchor_top = 0.67
+anchor_right = 0.263
+anchor_bottom = 0.67
+offset_left = -243.92303
+offset_top = -20.27002
+offset_right = 243.07697
+offset_bottom = 20.72998
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.6)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_m24ux")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_efhyf")
+theme_override_styles/focus = SubResource("StyleBoxFlat_n8qlr")
+placeholder_text = "Repita la clave"
+alignment = 1
+max_length = 10
+virtual_keyboard_type = 6
+secret = true
+
+[node name="atras" type="Button" parent="." unique_id=571351082]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.066
+anchor_top = 0.93100005
+anchor_right = 0.066
+anchor_bottom = 0.93100005
+offset_left = -68.186
+offset_top = -68.311035
+offset_right = 67.814
+offset_bottom = 67.688965
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_styles/normal = SubResource("StyleBoxFlat_nkck7")
+icon = ExtResource("5_7tn0i")
+
+[node name="Transicion" type="Sprite2D" parent="." unique_id=1021836498]
+visible = false
+position = Vector2(918.00006, 492.00006)
+scale = Vector2(0.9484375, 0.90833336)
+texture = ExtResource("5_bjbae")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Transicion" unique_id=1536296866]
+libraries/ = SubResource("AnimationLibrary_7tn0i")
+autoplay = &"Fade_out"
+
+[connection signal="pressed" from="TextureRect/login-alumno" to="." method="_on_loginalumno_pressed"]
+[connection signal="pressed" from="TextureRect/login-docente" to="." method="_on_logindocente_pressed"]
+[connection signal="pressed" from="atras" to="." method="_on_atras_pressed"]

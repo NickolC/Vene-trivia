@@ -1,0 +1,597 @@
+[gd_scene format=3 uid="uid://b0xtqmd43xoq6"]
+
+[ext_resource type="Texture2D" uid="uid://dbk5bgquf7vfb" path="res://GFX/configuraciones.png" id="1_28310"]
+[ext_resource type="Script" uid="uid://4awcyimgi71u" path="res://Scenes/opciones.gd" id="1_xjga3"]
+[ext_resource type="FontFile" uid="uid://cn65q6b06tv8u" path="res://font/Minecraft.ttf" id="3_knh8s"]
+[ext_resource type="Texture2D" uid="uid://bbr3kf2uek0es" path="res://GFX/perilla para ajustes.png" id="4_knh8s"]
+[ext_resource type="Texture2D" uid="uid://dggo723hcq52u" path="res://GFX/switch de desactivado.png" id="5_2o01m"]
+[ext_resource type="Texture2D" uid="uid://c1eir4mtgxkp5" path="res://GFX/switch de prendido.png" id="6_ycbjo"]
+[ext_resource type="FontFile" uid="uid://2s1p28deo8oy" path="res://GFX/Minecraft.ttf" id="7_7rfdi"]
+[ext_resource type="Texture2D" uid="uid://id0uerx77kh0" path="res://GFX/seleccion multiple configuracion.png" id="7_ycbjo"]
+[ext_resource type="Texture2D" uid="uid://c7eyr2x0w10ys" path="res://GFX/salir.png" id="9_s5jop"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xjga3"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q5ffs"]
+bg_color = Color(0.8980392, 0.7137255, 0.49803922, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_knh8s"]
+bg_color = Color(0.8980392, 0.7137255, 0.49803922, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n44uc"]
+bg_color = Color(0.8980392, 0.7137255, 0.49803922, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2o01m"]
+bg_color = Color(0.8980392, 0.7137255, 0.49803922, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hgr1l"]
+bg_color = Color(0.8980392, 0.7137255, 0.49803922, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ycbjo"]
+bg_color = Color(0.8980392, 0.7137255, 0.49803922, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_70sea"]
+bg_color = Color(0.8980392, 0.7137255, 0.49803922, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7rfdi"]
+content_margin_top = 5.0
+content_margin_bottom = 6.0
+bg_color = Color(0.8980392, 0.7137255, 0.49803922, 1)
+border_color = Color(0.8980392, 0.7137255, 0.49803922, 0)
+expand_margin_top = 5.0
+expand_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b5mq8"]
+content_margin_top = 5.0
+content_margin_bottom = 6.0
+bg_color = Color(0.8980392, 0.7137255, 0.49803922, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s5jop"]
+bg_color = Color(0.8980392, 0.7137255, 0.49803922, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h5ujg"]
+bg_color = Color(0.8980392, 0.7137255, 0.49803922, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vr0f5"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_47vbh"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gg2gv"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="ImageTexture" id="ImageTexture_ycbjo"]
+
+[sub_resource type="Environment" id="Environment_7rfdi"]
+background_mode = 3
+adjustment_enabled = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t4v5g"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Control" type="Control" unique_id=718337341]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xjga3")
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=1441154183]
+layout_mode = 0
+offset_right = 1821.0
+offset_bottom = 1023.0
+texture = ExtResource("1_28310")
+
+[node name="Configuraciones" type="Label" parent="TextureRect3" unique_id=1716521658]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.497
+anchor_top = 0.11000001
+anchor_right = 0.497
+anchor_bottom = 0.11000001
+offset_left = -252.23999
+offset_top = -25.80001
+offset_right = 250.76001
+offset_bottom = 25.19999
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_knh8s")
+theme_override_font_sizes/font_size = 50
+text = "CONFIGURACIONES"
+horizontal_alignment = 1
+
+[node name="Video" type="Label" parent="TextureRect3" unique_id=319344825]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49600002
+anchor_top = 0.19100001
+anchor_right = 0.49600002
+anchor_bottom = 0.19100001
+offset_left = -52.32007
+offset_top = -20.280014
+offset_right = 50.67993
+offset_bottom = 19.719986
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_knh8s")
+theme_override_font_sizes/font_size = 40
+text = "Video"
+horizontal_alignment = 1
+
+[node name="Audio" type="Label" parent="TextureRect3" unique_id=644047100]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.499
+anchor_top = 0.508
+anchor_right = 0.499
+anchor_bottom = 0.508
+offset_left = -52.080017
+offset_top = -19.640015
+offset_right = 50.919983
+offset_bottom = 20.359985
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_knh8s")
+theme_override_font_sizes/font_size = 40
+text = "Audio"
+horizontal_alignment = 1
+
+[node name="Restablecer" type="Button" parent="TextureRect3" unique_id=1489679428]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.38900003
+anchor_top = 0.809
+anchor_right = 0.38900003
+anchor_bottom = 0.809
+offset_left = -183.36908
+offset_top = -29.606995
+offset_right = 183.63092
+offset_bottom = 29.393005
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_knh8s")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_xjga3")
+text = "RESTABLECER AJUSTES"
+
+[node name="Guardar" type="Button" parent="TextureRect3" unique_id=1283417806]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.646
+anchor_top = 0.483
+anchor_right = 1.646
+anchor_bottom = 0.483
+offset_left = -2073.581
+offset_top = 302.891
+offset_right = -1709.5809
+offset_bottom = 361.891
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_knh8s")
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxFlat_xjga3")
+text = "GUARDAR AJUSTES"
+
+[node name="Volumen Maestro" type="HSlider" parent="TextureRect3/Guardar" unique_id=1246132002]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.29000002
+anchor_top = -3.607
+anchor_right = 0.29000002
+anchor_bottom = -3.607
+offset_left = -401.52832
+offset_top = -16.471909
+offset_right = 401.47168
+offset_bottom = 16.528091
+theme_override_icons/grabber = ExtResource("4_knh8s")
+theme_override_icons/grabber_highlight = ExtResource("4_knh8s")
+theme_override_icons/grabber_disabled = ExtResource("4_knh8s")
+theme_override_styles/slider = SubResource("StyleBoxFlat_q5ffs")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_knh8s")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_n44uc")
+
+[node name="Musica" type="HSlider" parent="TextureRect3/Guardar/Volumen Maestro" unique_id=773379349]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49800003
+anchor_top = 2.47
+anchor_right = 0.49800003
+anchor_bottom = 2.47
+offset_left = -401.894
+offset_top = -16.510002
+offset_right = 401.106
+offset_bottom = 16.489998
+theme_override_icons/grabber = ExtResource("4_knh8s")
+theme_override_icons/grabber_highlight = ExtResource("4_knh8s")
+theme_override_icons/grabber_disabled = ExtResource("4_knh8s")
+theme_override_styles/slider = SubResource("StyleBoxFlat_q5ffs")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_2o01m")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_hgr1l")
+
+[node name="Efectos" type="HSlider" parent="TextureRect3/Guardar/Volumen Maestro/Musica" unique_id=1827119657]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49800003
+anchor_top = 2.5
+anchor_right = 0.49800003
+anchor_bottom = 2.5
+offset_left = -400.394
+offset_top = -16.5
+offset_right = 401.106
+offset_bottom = 16.5
+theme_override_icons/grabber = ExtResource("4_knh8s")
+theme_override_icons/grabber_highlight = ExtResource("4_knh8s")
+theme_override_icons/grabber_disabled = ExtResource("4_knh8s")
+theme_override_styles/slider = SubResource("StyleBoxFlat_q5ffs")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_ycbjo")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_70sea")
+
+[node name="Brillo" type="HSlider" parent="TextureRect3/Guardar/Volumen Maestro" unique_id=319366613]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49800003
+anchor_top = -9.591001
+anchor_right = 0.49800003
+anchor_bottom = -9.591001
+offset_left = -400.6329
+offset_top = -12.496979
+offset_right = 400.106
+offset_bottom = 20.503021
+theme_override_icons/grabber = ExtResource("4_knh8s")
+theme_override_icons/grabber_highlight = ExtResource("4_knh8s")
+theme_override_icons/grabber_disabled = ExtResource("4_knh8s")
+theme_override_styles/slider = SubResource("StyleBoxFlat_q5ffs")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_7rfdi")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_b5mq8")
+min_value = 0.1
+max_value = 3.0
+step = 0.1
+value = 1.0
+
+[node name="Gamma" type="HSlider" parent="TextureRect3/Guardar/Volumen Maestro/Brillo" unique_id=2075529352]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.499
+anchor_top = 2.47
+anchor_right = 0.499
+anchor_bottom = 2.47
+offset_left = -401.699
+offset_top = -16.510002
+offset_right = 402.301
+offset_bottom = 16.489998
+theme_override_icons/grabber = ExtResource("4_knh8s")
+theme_override_icons/grabber_highlight = ExtResource("4_knh8s")
+theme_override_icons/grabber_disabled = ExtResource("4_knh8s")
+theme_override_styles/slider = SubResource("StyleBoxFlat_q5ffs")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_s5jop")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_h5ujg")
+min_value = 0.1
+max_value = 3.0
+step = 0.1
+value = 1.0
+
+[node name="Perfil" type="Button" parent="TextureRect3" unique_id=1193932290]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.86600006
+anchor_top = 0.155
+anchor_right = 0.86600006
+anchor_bottom = 0.155
+offset_left = -34.986084
+offset_top = -62.565002
+offset_right = 35.013916
+offset_bottom = 63.434998
+theme_override_styles/normal = SubResource("StyleBoxFlat_vr0f5")
+flat = true
+
+[node name="Tienda" type="Button" parent="TextureRect3" unique_id=718589301]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.86600006
+anchor_top = 0.28500003
+anchor_right = 0.86600006
+anchor_bottom = 0.28500003
+offset_left = -33.986084
+offset_top = -62.555023
+offset_right = 35.013916
+offset_bottom = 62.444977
+theme_override_styles/normal = SubResource("StyleBoxFlat_47vbh")
+flat = true
+
+[node name="Cancelar" type="Button" parent="TextureRect3/Tienda" unique_id=1052242516]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 2.6160002
+anchor_right = 0.5
+anchor_bottom = 2.6160002
+offset_left = -34.162136
+offset_top = -62.978027
+offset_right = 34.49997
+offset_bottom = 63.021973
+theme_override_styles/normal = SubResource("StyleBoxFlat_gg2gv")
+flat = true
+
+[node name="Pantalla Completa" type="CheckButton" parent="TextureRect3" unique_id=122628654]
+layout_mode = 0
+offset_left = 633.0
+offset_top = 365.0
+offset_right = 694.0
+offset_bottom = 409.0
+theme_override_icons/checked = ExtResource("6_ycbjo")
+theme_override_icons/unchecked = ExtResource("5_2o01m")
+flat = true
+
+[node name="Resolucion" type="OptionButton" parent="TextureRect3" unique_id=754766668]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.38900003
+anchor_top = 0.45100003
+anchor_right = 0.38900003
+anchor_bottom = 0.45100003
+offset_left = -118.880066
+offset_top = -32.080048
+offset_right = 127.119934
+offset_bottom = 29.919952
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
+theme_override_fonts/font = ExtResource("7_7rfdi")
+theme_override_font_sizes/font_size = 30
+theme_override_icons/icon = ExtResource("7_ycbjo")
+theme_override_icons/arrow = SubResource("ImageTexture_ycbjo")
+flat = true
+alignment = 1
+autowrap_trim_flags = 0
+icon_alignment = 1
+expand_icon = true
+selected = 0
+allow_reselect = true
+item_count = 3
+popup/item_0/text = "1920x1080"
+popup/item_0/icon = ExtResource("7_ycbjo")
+popup/item_0/id = 0
+popup/item_1/text = "1280x720"
+popup/item_1/icon = ExtResource("7_ycbjo")
+popup/item_1/id = 1
+popup/item_2/text = "640x480"
+popup/item_2/icon = ExtResource("7_ycbjo")
+popup/item_2/id = 2
+
+[node name="Brillo2" type="Label" parent="TextureRect3" unique_id=722223386]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.268
+anchor_top = 0.25
+anchor_right = 0.268
+anchor_bottom = 0.25
+offset_left = -38.559998
+offset_top = -16.0
+offset_right = 38.440002
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_knh8s")
+theme_override_font_sizes/font_size = 30
+text = "Brillo"
+horizontal_alignment = 1
+
+[node name="Gamma2" type="Label" parent="TextureRect3" unique_id=240650788]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.27
+anchor_top = 0.31300002
+anchor_right = 0.27
+anchor_bottom = 0.31300002
+offset_left = -57.400024
+offset_top = -15.040039
+offset_right = 58.599976
+offset_bottom = 15.959961
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_knh8s")
+theme_override_font_sizes/font_size = 30
+text = "Gamma"
+horizontal_alignment = 1
+
+[node name="Fullscreen" type="Label" parent="TextureRect3" unique_id=1348296803]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.272
+anchor_top = 0.37800002
+anchor_right = 0.272
+anchor_bottom = 0.37800002
+offset_left = -70.24005
+offset_top = -32.24002
+offset_right = 68.75995
+offset_bottom = 32.75998
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_knh8s")
+theme_override_font_sizes/font_size = 30
+text = "Pantalla 
+Completa"
+horizontal_alignment = 1
+
+[node name="Resolucion2" type="Label" parent="TextureRect3" unique_id=1069384792]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.272
+anchor_top = 0.45200002
+anchor_right = 0.272
+anchor_bottom = 0.45200002
+offset_left = -78.24005
+offset_top = -15.160034
+offset_right = 77.75995
+offset_bottom = 15.839966
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_knh8s")
+theme_override_font_sizes/font_size = 30
+text = "Resolucion"
+horizontal_alignment = 1
+
+[node name="Volumen Maestro" type="Label" parent="TextureRect3" unique_id=1908399268]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.27400002
+anchor_top = 0.57100004
+anchor_right = 0.27400002
+anchor_bottom = 0.57100004
+offset_left = -66.08002
+offset_top = -32.680054
+offset_right = 66.91998
+offset_bottom = 32.319946
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_knh8s")
+theme_override_font_sizes/font_size = 30
+text = "Volumen 
+Maestro"
+horizontal_alignment = 1
+
+[node name="Musica" type="Label" parent="TextureRect3" unique_id=1028704776]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.273
+anchor_top = 0.637
+anchor_right = 0.273
+anchor_bottom = 0.637
+offset_left = -47.160034
+offset_top = -15.960022
+offset_right = 48.839966
+offset_bottom = 15.039978
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_knh8s")
+theme_override_font_sizes/font_size = 30
+text = "Musica"
+horizontal_alignment = 1
+
+[node name="Efectos" type="Label" parent="TextureRect3/Musica" unique_id=1228260859]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 2.661
+anchor_right = 0.5
+anchor_bottom = 2.661
+offset_left = -58.000008
+offset_top = -15.491005
+offset_right = 57.999992
+offset_bottom = 15.508995
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_knh8s")
+theme_override_font_sizes/font_size = 30
+text = "Efectos"
+horizontal_alignment = 1
+
+[node name="WorldGamma" type="WorldEnvironment" parent="TextureRect3" unique_id=1010080964]
+environment = SubResource("Environment_7rfdi")
+
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=1721266548]
+visible = false
+layout_mode = 0
+offset_right = 1820.0
+offset_bottom = 1023.0
+texture = ExtResource("9_s5jop")
+
+[node name="Volvermenu" type="Button" parent="TextureRect4" unique_id=1773386164]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.508
+anchor_top = 0.337
+anchor_right = 0.508
+anchor_bottom = 0.337
+offset_left = -338.56006
+offset_top = -53.960022
+offset_right = 340.43994
+offset_bottom = 55.039978
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_knh8s")
+theme_override_font_sizes/font_size = 54
+theme_override_styles/normal = SubResource("StyleBoxFlat_t4v5g")
+text = "Volver al Menu Principal"
+flat = true
+
+[node name="salir" type="Button" parent="TextureRect4" unique_id=2027785443]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.50100005
+anchor_top = 0.541
+anchor_right = 0.50100005
+anchor_bottom = 0.541
+offset_left = -156.82007
+offset_top = -54.28003
+offset_right = 156.17993
+offset_bottom = 53.71997
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_knh8s")
+theme_override_font_sizes/font_size = 58
+theme_override_styles/normal = SubResource("StyleBoxFlat_t4v5g")
+text = "Salir"
+flat = true
+
+[node name="Opciones" type="Button" parent="TextureRect4" unique_id=1278375475]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.86600006
+anchor_top = 0.41400003
+anchor_right = 0.86600006
+anchor_bottom = 0.41400003
+offset_left = -37.720093
+offset_top = -63.522034
+offset_right = 34.879883
+offset_bottom = 62.477966
+theme_override_styles/normal = SubResource("StyleBoxFlat_47vbh")
+flat = true
+
+[node name="Tienda" type="Button" parent="TextureRect4" unique_id=1193209734]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.86600006
+anchor_top = 0.28500003
+anchor_right = 0.86600006
+anchor_bottom = 0.28500003
+offset_left = -37.720093
+offset_top = -62.555023
+offset_right = 34.879883
+offset_bottom = 63.444977
+theme_override_styles/normal = SubResource("StyleBoxFlat_47vbh")
+flat = true
+
+[node name="Perfil" type="Button" parent="TextureRect4" unique_id=1106635837]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.86600006
+anchor_top = 0.155
+anchor_right = 0.86600006
+anchor_bottom = 0.155
+offset_left = -37.720093
+offset_top = -62.565002
+offset_right = 34.879883
+offset_bottom = 63.434998
+theme_override_styles/normal = SubResource("StyleBoxFlat_47vbh")
+flat = true
+
+[connection signal="pressed" from="TextureRect3/Restablecer" to="." method="_on_restablecer_pressed"]
+[connection signal="pressed" from="TextureRect3/Guardar" to="." method="_on_guardar_pressed"]
+[connection signal="value_changed" from="TextureRect3/Guardar/Volumen Maestro/Brillo" to="." method="_on_brillo_value_changed"]
+[connection signal="value_changed" from="TextureRect3/Guardar/Volumen Maestro/Brillo/Gamma" to="." method="_on_gamma_value_changed"]
+[connection signal="pressed" from="TextureRect3/Tienda" to="." method="_on_tienda_pressed"]
+[connection signal="pressed" from="TextureRect3/Tienda/Cancelar" to="." method="_on_cancelar_pressed"]
+[connection signal="toggled" from="TextureRect3/Pantalla Completa" to="." method="_on_pantalla_completa_toggled"]
+[connection signal="item_selected" from="TextureRect3/Resolucion" to="." method="_on_resolucion_item_selected"]
+[connection signal="pressed" from="TextureRect4/Volvermenu" to="." method="_on_volvermenu_pressed"]
+[connection signal="pressed" from="TextureRect4/salir" to="." method="_on_salir_pressed"]
+[connection signal="pressed" from="TextureRect4/Opciones" to="." method="_on_opciones_pressed"]

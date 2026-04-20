@@ -1,0 +1,229 @@
+[
+  {
+    "pregunta": "¿En qué fecha se libró la Batalla de Carabobo?",
+    "opciones": ["19 de abril de 1810", "24 de junio de 1821", "24 de julio de 1783", "5 de julio de 1811"],
+    "correcta": 1
+  },
+
+  {
+    "pregunta": "¿Quién fue el líder principal del ejército patriota en esta batalla?",
+    "opciones": ["Cristóbal Colón", "Napoleón Bonaparte", "Francisco de Miranda", "Simón Bolívar"],
+    "correcta": 3
+  },
+
+  {
+    "pregunta": "¿Qué se logró principalmente con la victoria en Carabobo?",
+    "opciones": ["Comprar barcos nuevos", "La construcción de una nueva escuela", "La independencia definitiva de Venezuela", "El descubrimiento de oro"],
+    "correcta": 2
+  },
+
+  {
+    "pregunta": "¿Cómo se llamaba el perro que acompañó a Simón Bolívar y murió en la batalla?",
+    "opciones": ["Nevado", "Azabache", "Relámpago", "Simba"],
+    "correcta": 0
+  },
+
+  {
+    "pregunta": "¿Quién era el valiente soldado conocido como 'El Negro Primero'?",
+    "opciones": ["José Antonio Páez", "Antonio José de Sucre", "Pedro Camejo", "Rafael Urdaneta"],
+    "correcta": 2
+  },
+
+  {
+    "pregunta": "¿En qué estado actual de Venezuela se encuentra el Campo de Carabobo?",
+    "opciones": ["Estado Nueva Esparta", "Estado Zulia", "Estado Bolívar", "Estado Carabobo"],
+    "correcta": 3
+  },
+
+  {
+    "pregunta": "¿Contra qué país luchaba Venezuela para ser libre?",
+    "opciones": ["Francia", "Estados Unidos", "España", "Brasil"],
+    "correcta": 2
+  },
+
+  {
+    "pregunta": "¿Qué general lideraba la caballería de los 'Llaneros'?",
+    "opciones": ["José Antonio Páez", "Santiago Mariño", "Daniel O'Leary", "Juan Vicente Gómez"],
+    "correcta": 0
+  },
+
+  {
+    "pregunta": "¿Qué usaban principalmente los soldados de caballería de Páez?",
+    "opciones": ["Rayos láser", "Lanzas", "Arcos y flechas", "Tanques de guerra"],
+    "correcta": 1
+  },
+
+  {
+    "pregunta": "¿Aproximadamente cuánto tiempo duró el combate principal de la batalla?",
+    "opciones": ["Tres meses", "Diez minutos", "Cerca de una hora", "Un año entero"],
+    "correcta": 2
+  },
+
+  {
+    "pregunta": "¿Cómo se llamaba el general que lideraba al ejército español (realista) en Carabobo?",
+    "opciones": ["Miguel de la Torre", "Pablo Morillo", "Fernando VII", "Juan José Flores"],
+    "correcta": 0
+  },
+
+  {
+    "pregunta": "¿En qué año se cumplió el Bicentenario (200 años) de la Batalla de Carabobo?",
+    "opciones": ["2021", "1921", "2024", "2010"],
+    "correcta": 0
+  },
+
+  {
+    "pregunta": "¿Cuál era el nombre del batallón formado por soldados ingleses e irlandeses que ayudó a Bolívar?",
+    "opciones": ["Ejército de los Andes", "Los Dragones del Rey", "Batallón Victoria", "Legión Británica"],
+    "correcta": 3
+  },
+
+  {
+    "pregunta": "Qué importante ciudad de Venezuela fue liberada poco después de la batalla?",
+    "opciones": ["Maracaibo", "Bogotá", "Caracas", "Coro"],
+    "correcta": 2
+  },
+
+  {
+    "pregunta": "¿Cómo se llamaba la estrategia de Bolívar de dividir su ejército en grupos más pequeños?",
+    "opciones": ["Divisiones", "Capa y espada", "Bandas de música", "Equipos de fútbol"],
+    "correcta": 0
+  },
+
+  {
+    "pregunta": "¿Quién era el jefe de la Primera División del ejército patriota?",
+    "opciones": ["Santiago Mariño", "José Antonio Páez", "Ambrosio Plaza", "Antonio José de Sucre"],
+    "correcta": 1
+  },
+
+  {
+    "pregunta": "¿Qué accidente geográfico usaron los patriotas para sorprender a los españoles?",
+    "opciones": ["Un volcán en erupción", "Una pica o sendero estrecho", "Un túnel subterráneo", "Un puente de cristal"],
+    "correcta": 1
+  },
+
+  {
+    "pregunta": "¿Qué dijo Pedro Camejo (Negro Primero) a Páez antes de morir?",
+    "opciones": ["Mañana nos vemos para desayunar", "Se me olvidaron las llaves", "¡Ganaremos el mundial!", "Vengo a decirle adiós porque estoy muerto"],
+    "correcta": 3
+  },
+
+  {
+    "pregunta": "¿Qué monumento muy alto se encuentra hoy en el Campo de Carabobo?",
+    "opciones": ["El Arco de Triunfo", "La Estatua de la Libertad", "La Torre Eiffel", "Una pirámide egipcia"],
+    "correcta": 0
+  },
+
+  {
+    "pregunta": "¿Cuál era el color predominante en el uniforme de los soldados españoles?",
+    "opciones": ["Verde Fluorescente", "Morado con lunares", "Transparente", "Rojo"],
+    "correcta": 3
+  },
+
+  {
+    "pregunta": "¿Qué hacía Simón Bolívar durante la batalla para observar al enemigo?",
+    "opciones": ["Usaba un catalejo desde una colina", "Usaba un dron con cámara", "Miraba por televisión", "Cerraba los ojos y adivinaba"],
+    "correcta": 0
+  },
+
+  {
+    "pregunta": "¿A qué hora aproximada comenzó la batalla?",
+    "opciones": ["A la hora de la cena", "A la medianoche", "A media mañana (11 AM)", "A las 3 de la mañana"],
+    "correcta": 2
+  },
+
+  {
+    "pregunta": "¿Cómo se llamaba el jefe de la Legión Británica que murió en la batalla?",
+    "opciones": ["George Washington", "Thomas Ferriar", "Harry Potter", "Sherlock Holmes"],
+    "correcta": 1
+  },
+
+  {
+    "pregunta": "¿Qué simboliza el Altar de la Patria en el Campo de Carabobo?",
+    "opciones": ["Un centro comercial", "Un refugio para animales", "La unión y libertad de Venezuela", "Una cocina gigante"],
+    "correcta": 2
+  },
+
+  {
+    "pregunta": "¿Cuántas divisiones patriotas participaron en el ataque?",
+    "opciones": ["Tres", "Una sola", "Ninguna", "Cien"],
+    "correcta": 0
+  },
+
+  {
+    "pregunta": "¿Quién era el 'Centauro de los Llanos'?",
+    "opciones": ["Un soldado español", "José Antonio Páez", "Simón Bolívar", "Un caballo con alas"],
+    "correcta": 1
+  },
+
+  {
+    "pregunta": "¿Qué pasó con los soldados españoles que sobrevivieron y huyeron?",
+    "opciones": ["Se refugiaron en el castillo de Puerto Cabello", "Pidieron perdón y se hicieron amigos", "Se convirtieron en piratas", "Se fueron a la luna"],
+    "correcta": 0
+  },
+
+  {
+    "pregunta": "¿Qué instrumento musical se usó para dar órdenes en la batalla?",
+    "opciones": ["El triángulo", "La flauta dulce", "La trompeta o el clarín", "El piano"],
+    "correcta": 2
+  },
+
+  {
+    "pregunta": "¿De qué material estaban hechas la mayoría de las casas en esa época?",
+    "opciones": ["Plástico", "Caramelos", "Barro, paja y madera", "Papel de regalo"],
+    "correcta": 2
+  },
+
+  {
+    "pregunta": "¿Cómo se transportaban las noticias importantes en 1821?",
+    "opciones": ["Por WhatsApp", "Por señales de humo solamente", "Teletransportación", "A caballo por mensajeros"],
+    "correcta": 3
+  },
+
+  {
+    "pregunta": "¿Qué general patriota murió al final de la batalla y hoy tiene una plaza famosa?",
+    "opciones": ["Manuel Piar", "Ambrosio Plaza", "Francisco de Miranda", "Guaicaipuro"],
+    "correcta": 1
+  },
+
+  {
+    "pregunta": "¿Qué hacían las mujeres valientes durante la época de la independencia?",
+    "opciones": ["Solo miraban desde lejos", "Jugaban videojuegos", "Eran enfermeras, espías y algunas hasta soldados", "Se escondían bajo la cama todo el tiempo"],
+    "correcta": 2
+  },
+
+  {
+    "pregunta": "¿Qué representaba la bandera que llevaban los patriotas?",
+    "opciones": ["Que les gustaba mucho pintar", "El equipo favorito de Bolívar", "Una señal para pedir Comida", "El deseo de ser un país libre y soberano"],
+    "correcta": 3
+  },
+
+  {
+    "pregunta": "¿Quién cuidaba al perro Nevado?",
+    "opciones": ["El indio Tinjacá", "Páez", "El Rey de España", "Un veterinario moderno"],
+    "correcta": 0
+  },
+
+  {
+    "pregunta": "¿Por qué era importante el cerro Buenavista?",
+    "opciones": ["Porque allí se escondía el tesoro", "Porque tenía un parque de diversiones", "Porque era un volcán de chocolates", "Porque desde allí Bolívar vio todo el campo de batalla"],
+    "correcta": 3
+  },
+
+  {
+    "pregunta": "¿Cómo se llamaba el país que quería formar Bolívar uniendo a varios países liberados?",
+    "opciones": ["Mundo Bolívar", "La Gran Colombia", "Europa", "Atlantis"],
+    "correcta": 1
+  },
+
+  {
+    "pregunta": "¿Por qué los patriotas atacaron por el flanco izquierdo (el lado menos esperado)?",
+    "opciones": ["Para buscar flores", "Porque por ahí había una heladería", "Para evitar los cañones que estaban en el camino principal", "Porque se perdieron en el mapa"],
+    "correcta": 2
+  },
+
+  {
+    "pregunta": "¿Qué pasó con el ejército español después de perder en Carabobo?",
+    "opciones": ["Se fueron de vacaciones a la playa", "Se hicieron amigos de Bolívar inmediatamente", "Perdieron casi todo su poder en Venezuela", "Ganaron la guerra al día siguiente"],
+    "correcta": 2
+  }
+]
