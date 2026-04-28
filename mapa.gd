@@ -26,12 +26,12 @@ func _ready():
 	configurar_selector()
 
 func _on_atras_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/menu-alumno.tscn")
+	Configuracion.change_scene_to_file("res://Scenes/menu-alumno.tscn")
 
 func configurar_selector():
 	# Consultamos el progreso: niveles que tienen al menos 1 estrella
 	# Esto nos dirá hasta qué nivel ha llegado el alumno
-	var query = "SELECT MAX(NU_NIVEL) as nivel_max FROM niveles WHERE NM_ALUMNO = '%s' AND NU_ESTRELLAS > 0" % GlobalUsuario.nombre_alumno
+	var query = "SELECT MAX(NU_NIVEL) as nivel_max FROM nivel_1 WHERE NM_ALUMNO = '%s' AND NU_ESTRELLAS > 0" % GlobalUsuario.nombre_alumno
 	db.query(query)
 	
 	var ultimo_nivel_pasado = 0
@@ -66,7 +66,7 @@ func desbloquear_boton(btn: Button, num: int):
 		btn.pressed.connect(_ir_al_nivel.bind(num))
 	
 	# OPCIONAL: Consultar si ya tiene estrellas para mostrarlas bajo el botón
-	var q_estrellas = "SELECT NU_ESTRELLAS FROM niveles WHERE NU_NIVEL = %d AND NU_USU = %d;" % [num, GlobalUsuario.usuario_actual_id]
+	var q_estrellas = "SELECT NU_ESTRELLAS FROM nivel_1 WHERE NU_NIVEL = %d AND NU_USU = %d;" % [num, GlobalUsuario.usuario_actual_id]
 	db.query(q_estrellas)
 	if db.query_result.size() > 0:
 		var cant_estrellas = db.query_result[0]["NU_ESTRELLAS"]
@@ -80,4 +80,4 @@ func bloquear_boton(btn: Button):
 func _ir_al_nivel(n: int):
 	db.close_db() # Cerramos antes de cambiar de escena
 	var ruta = "res://Nivel " + str(n) + ".tscn"
-	get_tree().change_scene_to_file(ruta)
+	Configuracion.change_scene_to_file(ruta)

@@ -840,7 +840,7 @@ func configurar_botones(estrellas):
 		
 func _on_btn_siguiente_pressed():
 	# Lógica para ir al nivel 2 (asumiendo que estás en el 1)
-	get_tree().change_scene_to_file("res://Scenes/Nivel2.tscn")
+	Configuracion.change_scene_to_file("res://Scenes/Nivel2.tscn")
 
 func _on_btn_repetir_pressed():
 	# Reseteamos manualmente las variables críticas antes de recargar
@@ -853,10 +853,10 @@ func _on_btn_repetir_pressed():
 	get_tree().reload_current_scene()
 
 func _on_btn_mapa_pressed():
-	get_tree().change_scene_to_file("res://Mapa.tscn")
+	Configuracion.change_scene_to_file("res://Mapa.tscn")
 
 func _on_btn_menu_pressed():
-	get_tree().change_scene_to_file("res://Scenes/menu-alumno.tscn")
+	Configuracion.change_scene_to_file("res://Scenes/menu-alumno.tscn")
 
 func guardar_final_nivel(total_preg: int, correctas: int, punto: int, estrellas: int):
 		

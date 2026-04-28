@@ -696,16 +696,19 @@ mouse_filter = 2
 custom_minimum_size = Vector2(225, 200)
 layout_mode = 2
 texture = ExtResource("12_kjnei")
+expand_mode = 5
 
 [node name="TextureRect2" type="TextureRect" parent="PantallaResultados/Panel/HBoxContainer" unique_id=1105664038]
 custom_minimum_size = Vector2(225, 200)
 layout_mode = 2
 texture = ExtResource("12_kjnei")
+expand_mode = 1
 
 [node name="TextureRect3" type="TextureRect" parent="PantallaResultados/Panel/HBoxContainer" unique_id=539930942]
 custom_minimum_size = Vector2(225, 200)
 layout_mode = 2
 texture = ExtResource("12_kjnei")
+expand_mode = 5
 
 [node name="Label2" type="Label" parent="PantallaResultados/Panel" unique_id=1833093755]
 layout_mode = 0

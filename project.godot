@@ -18,8 +18,7 @@ config/icon="uid://losj62la8r65"
 [autoload]
 
 GlobalUsuario="*uid://dpqob34rkqj6u"
-Configuracion="*uid://cde3l1b3nhhw0"
-GameConfig="*uid://vrrqv0jhauxn"
+Configuracion="*uid://bx3m16y1dgt8n"
 Alertas="*uid://blldaak4ms224"
 
 [display]

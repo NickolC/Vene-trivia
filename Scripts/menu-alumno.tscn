@@ -1,36 +1,18 @@
-[gd_scene format=3 uid="uid://2g7gnhrhk3d2"]
+[gd_scene format=3 uid="uid://c1ehcwgm3ji2l"]
 
+[ext_resource type="Script" uid="uid://k01xvpdi4s4v" path="res://Scenes/menu_alumno.gd" id="1_c7wbh"]
 [ext_resource type="Texture2D" uid="uid://c327tpj0yb88s" path="res://GFX/Menu de inicio.png" id="1_we40w"]
 [ext_resource type="FontFile" uid="uid://cn65q6b06tv8u" path="res://font/Minecraft.ttf" id="2_fs2h7"]
 [ext_resource type="Texture2D" uid="uid://cilnjykb7xwtb" path="res://GFX/ajuste.png" id="3_fs2h7"]
 [ext_resource type="Texture2D" uid="uid://bxd6kbqnokrvp" path="res://GFX/black.png" id="3_goybn"]
+[ext_resource type="Texture2D" uid="uid://cw1e38yqqo464" path="res://GFX/atras.png" id="5_goybn"]
 
-[sub_resource type="GDScript" id="GDScript_6pedr"]
-script/source = "extends Control
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fs2h7"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
-
-
-func _on_jugar_pressed() -> void:
-	get_tree().change_scene_to_file(\"res://Scenes/Juego.tscn\")
-
-
-func _on_minijuegos_pressed() -> void:
-	get_tree().change_scene_to_file(\"res://Scenes/Minijuegos.tscn\")
-
-
-func _on_opciones_pressed() -> void:
-	get_tree().change_scene_to_file(\"res://Scenes/Opciones.tscn\")
-
-
-func _on_extras_pressed() -> void:
-	get_tree().change_scene_to_file(\"res://Scenes/Extras.tscn\")
-
-
-func _on_cuenta_pressed() -> void:
-	
-	
-	pass # Replace with function body.
-"
+[sub_resource type="Environment" id="Environment_fs2h7"]
+background_mode = 3
+adjustment_enabled = true
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_goybn"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -42,9 +24,6 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sr0qy"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fs2h7"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="Animation" id="Animation_s2c3o"]
@@ -88,7 +67,7 @@ layout_mode = 3
 anchors_preset = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-script = SubResource("GDScript_6pedr")
+script = ExtResource("1_c7wbh")
 
 [node name="Colormenu" type="ColorRect" parent="." unique_id=1886500051]
 layout_mode = 1
@@ -97,60 +76,83 @@ color = Color(0.44291076, 0.44291076, 0.44291073, 1)
 [node name="Fondo" type="TextureRect" parent="." unique_id=1714569909]
 layout_mode = 1
 offset_right = 1820.0
-offset_bottom = 980.0
+offset_bottom = 1023.0
 texture = ExtResource("1_we40w")
 
-[node name="Contenedor" type="VBoxContainer" parent="Fondo" unique_id=521576531]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.50100005
-anchor_top = 0.70600003
-anchor_right = 0.50100005
-anchor_bottom = 0.70600003
-offset_left = -146.82007
-offset_top = -180.88
-offset_right = 147.17993
-offset_bottom = 180.12
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 54
+[node name="Cuenta" type="Button" parent="Fondo" unique_id=579565907]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 925.0
+offset_right = 121.0
+offset_bottom = 1012.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_fs2h7")
+icon = ExtResource("3_fs2h7")
+flat = true
+icon_alignment = 1
 
-[node name="Jugar" type="Button" parent="Fondo/Contenedor" unique_id=393762713]
-layout_mode = 2
+[node name="WorldGamma" type="WorldEnvironment" parent="Fondo" unique_id=246811187]
+environment = SubResource("Environment_fs2h7")
+
+[node name="Jugar" type="Button" parent="Fondo" unique_id=393762713]
+layout_mode = 0
+offset_left = 736.0
+offset_top = 515.0
+offset_right = 1081.0
+offset_bottom = 599.0
 theme_override_fonts/font = ExtResource("2_fs2h7")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_goybn")
 text = "JUGAR"
+flat = true
 
-[node name="Minijuegos" type="Button" parent="Fondo/Contenedor" unique_id=481098337]
-layout_mode = 2
+[node name="Minijuegos" type="Button" parent="Fondo" unique_id=481098337]
+layout_mode = 0
+offset_left = 734.0
+offset_top = 617.0
+offset_right = 1083.0
+offset_bottom = 700.0
 theme_override_fonts/font = ExtResource("2_fs2h7")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_c7wbh")
 text = "MINIJUEGOS"
+flat = true
 
-[node name="Opciones" type="Button" parent="Fondo/Contenedor" unique_id=963211344]
-layout_mode = 2
+[node name="Opciones" type="Button" parent="Fondo" unique_id=963211344]
+layout_mode = 0
+offset_left = 735.0
+offset_top = 721.0
+offset_right = 1082.0
+offset_bottom = 805.0
 theme_override_fonts/font = ExtResource("2_fs2h7")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_cpw8e")
 text = "OPCIONES"
+flat = true
 
-[node name="Extras" type="Button" parent="Fondo/Contenedor" unique_id=275746938]
-layout_mode = 2
+[node name="Extras" type="Button" parent="Fondo" unique_id=275746938]
+layout_mode = 0
+offset_left = 736.0
+offset_top = 827.0
+offset_right = 1079.0
+offset_bottom = 909.0
 theme_override_fonts/font = ExtResource("2_fs2h7")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_sr0qy")
 text = "EXTRAS"
+flat = true
 
-[node name="Cuenta" type="Button" parent="Fondo" unique_id=579565907]
+[node name="Button" type="Button" parent="." unique_id=1063434423]
 layout_mode = 0
-offset_left = 21.0
-offset_top = 890.0
-offset_right = 111.0
-offset_bottom = 966.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_fs2h7")
-icon = ExtResource("3_fs2h7")
+offset_left = 15.0
+offset_top = 9.0
+offset_right = 135.0
+offset_bottom = 122.0
+icon = ExtResource("5_goybn")
+flat = true
+autowrap_mode = 1
+autowrap_trim_flags = 0
+icon_alignment = 1
+expand_icon = true
 
 [node name="Transicion" type="Sprite2D" parent="." unique_id=1920562429]
 visible = false
@@ -162,8 +164,9 @@ texture = ExtResource("3_goybn")
 libraries/ = SubResource("AnimationLibrary_idohh")
 autoplay = &"Fade_out"
 
-[connection signal="pressed" from="Fondo/Contenedor/Jugar" to="." method="_on_jugar_pressed"]
-[connection signal="pressed" from="Fondo/Contenedor/Minijuegos" to="." method="_on_minijuegos_pressed"]
-[connection signal="pressed" from="Fondo/Contenedor/Opciones" to="." method="_on_opciones_pressed"]
-[connection signal="pressed" from="Fondo/Contenedor/Extras" to="." method="_on_extras_pressed"]
 [connection signal="pressed" from="Fondo/Cuenta" to="." method="_on_cuenta_pressed"]
+[connection signal="pressed" from="Fondo/Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Fondo/Minijuegos" to="." method="_on_minijuegos_pressed"]
+[connection signal="pressed" from="Fondo/Opciones" to="." method="_on_opciones_pressed"]
+[connection signal="pressed" from="Fondo/Extras" to="." method="_on_extras_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,61 +1,11 @@
 [gd_scene format=3 uid="uid://2g7gnhrhk3d2"]
 
+[ext_resource type="Script" uid="uid://k01xvpdi4s4v" path="res://Scenes/menu_alumno.gd" id="1_c7wbh"]
 [ext_resource type="Texture2D" uid="uid://c327tpj0yb88s" path="res://GFX/Menu de inicio.png" id="1_we40w"]
 [ext_resource type="FontFile" uid="uid://cn65q6b06tv8u" path="res://font/Minecraft.ttf" id="2_fs2h7"]
 [ext_resource type="Texture2D" uid="uid://cilnjykb7xwtb" path="res://GFX/ajuste.png" id="3_fs2h7"]
 [ext_resource type="Texture2D" uid="uid://bxd6kbqnokrvp" path="res://GFX/black.png" id="3_goybn"]
 [ext_resource type="Texture2D" uid="uid://cw1e38yqqo464" path="res://GFX/atras.png" id="5_goybn"]
-
-[sub_resource type="GDScript" id="GDScript_6pedr"]
-script/source = "extends Control
-
-var db : SQLite
-var nivel_actual: int 
-
-func _ready() -> void:
-	# En el script de tu Nivel o Escena de Juego
-	db = SQLite.new()
-	db.path = \"res://DB/venetrivia.db\"
-	db.open_db()
-	
-	var query = (\"SELECT * FROM Alumnos WHERE NM_ALUMNO = '%s';\" % GlobalUsuario.nombre_alumno)
-	db.query(query)
-	
-	var resultado = db.query_result # Esto devuelve un Array de Diccionarios
-	if resultado.size() > 0:
-		# ¡Éxito! El primer elemento [0] tiene nuestro ID
-		GlobalUsuario.nombre_alumno = resultado[0][\"NM_ALUMNO\"]
-		print(\"Sesión iniciada como: \", GlobalUsuario.nombre_alumno)
-	else:
-		print(\"El alumno no existe en la base de datos.\")
-		
-	# Buscamos el WorldEnvironment de esta escena específica
-	Configuracion.cargar_ajustes()
-
-func _on_jugar_pressed() -> void:
-	get_tree().change_scene_to_file(\"res://Mapa.tscn\")
-
-
-func _on_minijuegos_pressed() -> void:
-	get_tree().change_scene_to_file(\"res://Scenes/Minijuegos.tscn\")
-
-
-func _on_opciones_pressed() -> void:
-	get_tree().change_scene_to_file(\"res://Scenes/Opciones.tscn\")
-
-
-func _on_extras_pressed() -> void:
-	get_tree().change_scene_to_file(\"res://Scenes/Extras.tscn\")
-
-
-func _on_cuenta_pressed() -> void:
-
-	pass # Replace with function body.
-
-
-func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file(\"res://Scenes/Alumno.tscn\")
-"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fs2h7"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -117,7 +67,7 @@ layout_mode = 3
 anchors_preset = 0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-script = SubResource("GDScript_6pedr")
+script = ExtResource("1_c7wbh")
 
 [node name="Colormenu" type="ColorRect" parent="." unique_id=1886500051]
 layout_mode = 1

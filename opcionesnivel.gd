@@ -3,10 +3,14 @@ extends Control
 var db : SQLite
 var nivel_actual: int 
 
-@onready var slider_brillo = $"TextureRect3/Restablecer/Guardar/Volumen Maestro/Brillo"
-@onready var slider_gamma = $"TextureRect3/Restablecer/Guardar/Volumen Maestro/Brillo/Gamma"
+@onready var slider_brillo = $"TextureRect3/Guardar/Volumen Maestro/Brillo"
+@onready var slider_gamma = $"TextureRect3/Guardar/Volumen Maestro/Brillo/Gamma"
 @onready var check_full = $"TextureRect3/Pantalla Completa"
 @onready var option_res = $TextureRect3/Resolucion
+
+@onready var volumen_maestro = $"TextureRect3/Guardar/Volumen Maestro"
+@onready var musica = $"TextureRect3/Guardar/Volumen Maestro/Musica"
+@onready var efectos = $"TextureRect3/Guardar/Volumen Maestro/Musica/Efectos"
 
 # Creamos un diccionario para asociar el índice del botón con una resolución real
 const RESOLUTIONS: Dictionary = {
@@ -46,8 +50,6 @@ func actualizar_ui_con_valores():
 	# Sincronizamos los nodos visuales con las variables del Singleton
 	slider_brillo.value = Configuracion.brillo
 	slider_gamma.value = Configuracion.saturacion
-	slider_gamma.value = Configuracion.contraste
-	slider_gamma.value = Configuracion.brillo
 	check_full.button_pressed = Configuracion.fullscreen
 	option_res.selected = Configuracion.res_index
 	
@@ -95,30 +97,27 @@ func _on_pantalla_completa_toggled(toggled_on: bool) -> void:
 
 func _on_brillo_value_changed(value: float) -> void:
 	# Guardamos el valor globalmente
-	GameConfig.brillo = value
+	Configuracion.brillo = value
 	
 	# Buscamos el WorldEnvironment que esté vivo en la escena actual
 	var world_env = get_tree().root.find_child("WorldGamma", true, false)
 	if world_env:
-		GameConfig.aplicar_ajustes(world_env.environment)
+		Configuracion.aplicar_ajustes(world_env.environment)
 	pass # Replace with function body.
 
 func _on_gamma_value_changed(value: float) -> void:
-# Guardamos el valor globalmente
-	GameConfig.brillo = value
-	GameConfig.saturacion = value
-	GameConfig.contraste = value
+	# Guardamos el valor globalmente
+	Configuracion.saturacion = value
 	# Buscamos el WorldEnvironment que esté vivo en la escena actual
 	var world_env = get_tree().root.find_child("WorldGamma", true, false)
 	if world_env:
-		GameConfig.aplicar_ajustes(world_env.environment)
+		Configuracion.aplicar_ajustes(world_env.environment)
 	pass # Replace with function body.
 
 # --- BOTÓN GUARDAR ---
 func _on_guardar_pressed() -> void:
 	# Antes de guardar, capturamos los valores actuales de la UI
 	Configuracion.brillo = slider_brillo.value
-	Configuracion.brillo = slider_gamma.value
 	Configuracion.saturacion = slider_gamma.value
 	Configuracion.contraste = slider_gamma.value
 	Configuracion.fullscreen = check_full.button_pressed
@@ -140,6 +139,8 @@ func _on_restablecer_pressed() -> void:
 	
 	# Actualizamos la visualización de los sliders/botones
 	actualizar_ui_con_valores()
+	Alertas.mostrar_alerta("Ajustes restablecidos con éxito.", 1.0)
+	print("Ajustes guardados con éxito.")
 	pass # Replace with function body.
 
 
@@ -171,12 +172,11 @@ func _on_volvermenu_pressed() -> void:
 func guardar_todo():
 	# Actualizamos las variables del Singleton (Autoload) con los valores de la UI
 	Configuracion.brillo = slider_brillo.value
-	Configuracion.brillo = slider_gamma.value
 	Configuracion.saturacion = slider_gamma.value
 	Configuracion.contraste = slider_gamma.value
-	##Configuracion.volumen_maestro = slider_vol_general.value
-	##Configuracion.volumen_musica = slider_vol_musica.value
-	##Configuracion.volumen_sfx = slider_vol_sfx.value
+	Configuracion.volumen_maestro = volumen_maestro.value
+	Configuracion.volumen_musica = musica.value
+	Configuracion.volumen_sfx = efectos.value
 	Configuracion.fullscreen = check_full.button_pressed
 	Configuracion.res_index = option_res.selected
 	
@@ -184,10 +184,10 @@ func guardar_todo():
 	Configuracion.guardar_ajustes()
 	
 	# 3. Cambiamos de escena
-	get_tree().change_scene_to_file("res://Nivel 1.tscn")
-	
+	Configuracion.change_scene_to_file("res://Nivel 1.tscn")
+
 	pass # Replace with function body.
 
 
 func _on_salir_pressed() -> void:
-	get_tree().change_scene_to_file("res://Mapa.tscn")
+	Configuracion.change_scene_to_file("res://Mapa.tscn")
