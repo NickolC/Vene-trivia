@@ -531,7 +531,7 @@ flat = true
 [connection signal="value_changed" from="TextureRect3/Guardar/Volumen Maestro/Brillo" to="." method="_on_brillo_value_changed"]
 [connection signal="value_changed" from="TextureRect3/Guardar/Volumen Maestro/Brillo/Gamma" to="." method="_on_gamma_value_changed"]
 [connection signal="pressed" from="TextureRect3/Cancelar" to="." method="_on_cancelar_pressed"]
-[connection signal="pressed" from="TextureRect3/Pantalla Completa" to="." method="_on_pantalla_completa_toggled"]
+[connection signal="toggled" from="TextureRect3/Pantalla Completa" to="." method="_on_pantalla_completa_toggled"]
 [connection signal="item_selected" from="TextureRect3/Resolucion" to="." method="_on_resolucion_item_selected"]
 [connection signal="pressed" from="TextureRect4/Volvermenu" to="." method="_on_volvermenu_pressed"]
 [connection signal="pressed" from="TextureRect4/Opciones" to="." method="_on_opciones_pressed"]

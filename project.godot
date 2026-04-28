@@ -21,6 +21,7 @@ GlobalUsuario="*uid://dpqob34rkqj6u"
 Configuracion="*uid://cde3l1b3nhhw0"
 GameConfig="*uid://vrrqv0jhauxn"
 Alertas="*uid://blldaak4ms224"
+AudioManager="*res://Scripts/audio_manager.gd"
 
 [display]
 

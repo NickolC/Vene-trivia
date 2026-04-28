@@ -1,19 +1,26 @@
 extends Node
 
-var numero_de_nivel = GlobalUsuario.nivel_maximo
-var nombre_estudiante : String
+const SQLiteHelper = preload("res://Scripts/sqlite_helper.gd")
+const TOTAL_PREGUNTAS_RONDA := 15
+const PUNTOS_RESPUESTA_CORRECTA := 5
+const UMBRAL_2_ESTRELLAS := 10
+const UMBRAL_1_ESTRELLA := 5
 
-var db : SQLite
+var numero_de_nivel: int = GlobalUsuario.nivel_maximo
+var nombre_estudiante: String
 
-var estrellas_ganadas : int = 0
-var puntaje_total : int = 0
+var db: SQLite
+
+var estrellas_ganadas: int = 0
+var puntaje_total: int = 0
 var img_estrella_llena = preload("res://GFX/estrella completada.png")
 var img_estrella_vacia = preload("res://GFX/estrella vacia.png")
+var textura_boton_respuesta = preload("res://GFX/boton-extras.png")
 
-var todas_las_preguntas : Array = []    # Las 40 del JSON
-var pool_disponible : Array = []       # Las que aún no han salido
-var preguntas_partida_actual : Array = [] # Las 15 de esta ronda
-var botones_respuesta = []
+var todas_las_preguntas: Array = []
+var pool_disponible: Array = []
+var preguntas_partida_actual: Array = []
+var botones_respuesta: Array[Button] = []
 var mi_fuente = load("res://GFX/Minecraft.ttf")
 
 var ya_aviso_tiempo_mediano = false
@@ -90,24 +97,70 @@ func cambiar_pose(nueva_textura):
 	sprite_personaje.scale = Vector2(0.9, 0.9)
 	t.tween_property(sprite_personaje, "scale", Vector2(1.0, 1.0), 0.2).set_trans(Tween.TRANS_BACK)
 
-func _ready():
-	# En el script de tu Nivel o Escena de Juego
-	db = SQLite.new()
-	db.path = "res://DB/venetrivia.db"
-	db.open_db()
-	
-	var query = ("SELECT * FROM Alumnos WHERE NM_ALUMNO = '%s';" % GlobalUsuario.nombre_alumno)
-	db.query(query)
-	
-	var resultado = db.query_result # Esto devuelve un Array de Diccionarios
-	if resultado.size() > 0:
-		# ¡Éxito! El primer elemento [0] tiene nuestro ID
-		GlobalUsuario.nombre_alumno = resultado[0]["NM_ALUMNO"]
-		print("Sesión iniciada como: ", GlobalUsuario.nombre_alumno)
+func _ready() -> void:
+	db = SQLiteHelper.open_db_connection()
+	_cargar_usuario_actual()
+
+	cargar_json()
+	if todas_las_preguntas.is_empty():
+		push_error("No se pudo cargar el banco de preguntas del nivel 1.")
+		return
+
+	preparar_nuevo_nivel()
+	crear_barra_progreso(TOTAL_PREGUNTAS_RONDA)
+
+	if not timer_pregunta.timeout.is_connected(_on_timer_timeout):
+		timer_pregunta.timeout.connect(_on_timer_timeout)
+
+	add_child(timer_llamada)
+	timer_llamada.one_shot = true
+	if not timer_llamada.timeout.is_connected(_on_terminar_llamada):
+		timer_llamada.timeout.connect(_on_terminar_llamada)
+
+	if not $Buttonpausa.pressed.is_connected(_on_boton_pausa_visual_pressed):
+		$Buttonpausa.pressed.connect(_on_boton_pausa_visual_pressed)
+
+	menu_pausa.hide()
+	capa_confirmacion.hide()
+	_ocultar_ui_juego()
+
+	cambiar_pose(pose_normal)
+	decir_mensaje("¡Bienvenido! Preparate para este reto.", 2.0)
+	await get_tree().create_timer(3.0).timeout
+
+	cambiar_pose(pose_feliz)
+	decir_mensaje("¡La ronda comienza ahora! ¡Mucha suerte!", 2.0)
+	await get_tree().create_timer(2.0).timeout
+
+	label_dialogo.get_parent().hide()
+	_mostrar_ui_juego()
+	comenzar_nivel()
+
+func _exit_tree() -> void:
+	SQLiteHelper.close_db_connection(db)
+
+func _cargar_usuario_actual() -> void:
+	var query := ""
+	if GlobalUsuario.usuario_actual_id > 0:
+		query = "SELECT NU_USU, NM_ALUMNO, NU_NIVEL_MAX FROM Alumnos WHERE NU_USU = %d;" % GlobalUsuario.usuario_actual_id
+	elif not GlobalUsuario.nombre_alumno.is_empty():
+		query = "SELECT NU_USU, NM_ALUMNO, NU_NIVEL_MAX FROM Alumnos WHERE NM_ALUMNO = '%s';" % SQLiteHelper.escape(GlobalUsuario.nombre_alumno)
 	else:
-		print("El alumno no existe en la base de datos.")
-	
-	$CanvasLayer2/CenterContainer.hide() # Ocultamos todo lo anterior
+		return
+
+	db.query(query)
+	if db.query_result.is_empty():
+		print("No se pudo validar la sesion del alumno.")
+		return
+
+	var resultado: Dictionary = db.query_result[0]
+	GlobalUsuario.usuario_actual_id = int(resultado.get("NU_USU", GlobalUsuario.usuario_actual_id))
+	GlobalUsuario.nombre_alumno = str(resultado.get("NM_ALUMNO", GlobalUsuario.nombre_alumno))
+	GlobalUsuario.nivel_maximo = int(resultado.get("NU_NIVEL_MAX", GlobalUsuario.nivel_maximo))
+	numero_de_nivel = GlobalUsuario.nivel_maximo
+
+func _ocultar_ui_juego() -> void:
+	$CanvasLayer2/CenterContainer.hide()
 	$CanvasLayer2/GridContainer.hide()
 	$Buttoncomodin.hide()
 	$Buttonpublico.hide()
@@ -116,20 +169,9 @@ func _ready():
 	$Labelpuntaje.hide()
 	$barraprogreso.hide()
 	$CanvasLayer2/Timer/ProgressBar.hide()
-	
-	cambiar_pose(pose_normal)
-	decir_mensaje("¡Bienvenido! Prepárate para este reto.", 2.0)
-	
-	await get_tree().create_timer(3.0).timeout
-	
-	cambiar_pose(pose_feliz)
-	decir_mensaje("¡La ronda comienza ahora! ¡Mucha suerte!", 2.0)
-	
-	await get_tree().create_timer(2.0).timeout
-	
-	# ACTIVACIÓN DEL JUEGO
-	label_dialogo.get_parent().hide() # Ocultamos el cuadro de texto
-	$CanvasLayer2/CenterContainer.show() # Mostramos preguntas, puntos y círculos
+
+func _mostrar_ui_juego() -> void:
+	$CanvasLayer2/CenterContainer.show()
 	$CanvasLayer2/GridContainer.show()
 	$Buttoncomodin.show()
 	$Buttonpublico.show()
@@ -138,29 +180,6 @@ func _ready():
 	$Labelpuntaje.show()
 	$barraprogreso.show()
 	$CanvasLayer2/Timer/ProgressBar.show()
-	
-	comenzar_nivel() # Tu función que arranca la primera pregunta
-	
-	cargar_json()
-	preparar_nuevo_nivel()
-# Se conecta la señal del timer para cuando se acabe el tiempo
-	timer_pregunta.timeout.connect(_on_timer_timeout)
-	# Suponiendo que ya se tiene las preguntas_ronda cargadas
-	comenzar_nivel()
-	
-	# Configurar el timer de la llamada
-	add_child(timer_llamada)
-	timer_llamada.one_shot = true
-	timer_llamada.timeout.connect(_on_terminar_llamada)
-	
-	# Ambos empiezan ocultos
-	menu_pausa.hide()
-	capa_confirmacion.hide()
-	
-	$Buttonpausa.pressed.connect(_on_boton_pausa_visual_pressed)
-	menu_pausa.hide()
-	
-	crear_barra_progreso(15) # Creamos 15 puntos para el nivel
 
 func crear_barra_progreso(cantidad):
 	# Limpiamos por si acaso
@@ -273,23 +292,18 @@ func cargar_json():
 			pool_disponible.shuffle() # Barajeamos el mazo completo
 
 func preparar_nuevo_nivel():
-	# 1. Se verifica si hay suficientes preguntas en el pool
-	# Si quedan menos de 15, recargamos y barajeamos todo para no quedarnos cortos
-	if pool_disponible.size() < 15:
+	if pool_disponible.size() < TOTAL_PREGUNTAS_RONDA:
 		print("Pocas preguntas restantes. Recargando mazo...")
 		pool_disponible = todas_las_preguntas.duplicate()
 		pool_disponible.shuffle()
 
-	# 2. Se extrae exactamente 15 preguntas
 	preguntas_partida_actual.clear()
 	
-	for i in range(15):
-		# pop_front() saca el elemento del array y lo elimina de la lista disponible
+	for i in range(TOTAL_PREGUNTAS_RONDA):
 		var pregunta_sacada = pool_disponible.pop_front()
 		preguntas_partida_actual.append(pregunta_sacada)
 	
 	print("Preguntas listas para la partida. Quedan en reserva: ", pool_disponible.size())
-	comenzar_nivel()
 
 func comenzar_nivel():
 	indice_actual = 0
@@ -322,54 +336,36 @@ func mostrar_pregunta():
 		
 	# Se crean los 4 botones de respuesta
 	for i in range(datos_pregunta["opciones"].size()):
-		var boton = Button.new()
-		boton.text = datos_pregunta["opciones"][i]
-		
-		
-		var texto_respuesta = datos_pregunta["opciones"][i]
+		var boton := Button.new()
+		var texto_respuesta: String = datos_pregunta["opciones"][i]
 		boton.text = texto_respuesta
-		if texto_respuesta.length() > 25: # Si tiene más de 50 caracteres
-			boton.add_theme_font_size_override("font_size", 18) # Letra pequeña
+		if texto_respuesta.length() > 25:
+			boton.add_theme_font_size_override("font_size", 18)
 		else:
-			boton.add_theme_font_size_override("font_size", 24) # Letra normal
+			boton.add_theme_font_size_override("font_size", 24)
 		
-		# --- AGREGAR ICONO ---
-		var textura_icono = load("res://GFX/boton-extras.png") # Carga tu imagen
-		boton.icon = textura_icono
+		boton.icon = textura_boton_respuesta
 		boton.icon_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		boton.vertical_icon_alignment = VERTICAL_ALIGNMENT_CENTER
 		boton.flat = true
-		# Permite que el texto salte a la siguiente línea
 		boton.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		
-		# IMPORTANTE: Define un tamaño fijo para que el autowrap sepa dónde "rebotar"
 		boton.custom_minimum_size = Vector2(800, 155) 
-		# Asegura que el icono cubra todo el fondo del botón
 		boton.expand_icon = true
 		
-		# --- PERSONALIZACIÓN DE TEXTO ---
-		# 1. Asignar la fuente importada
 		boton.add_theme_font_override("font", mi_fuente)
-		
-		# 2. Cambiar el tamaño de la letra (ejemplo: 24 o 32)
-		boton.add_theme_font_size_override("font_size", 28)
-		
-		# Asegurarse de que el texto sea visible sobre el icono
+		if texto_respuesta.length() <= 25:
+			boton.add_theme_font_size_override("font_size", 28)
 		boton.add_theme_color_override("font_color", Color.BLACK)
 		
-		# Conectamos el clic y pasamos el ID de la opción
 		boton.pressed.connect(_on_respuesta_seleccionada.bind(i, boton))
 		contenedor_botones.add_child(boton)
 		botones_respuesta.append(boton)
 		
-		barra_tiempo.max_value = 10 # Asegurar el máximo
-		barra_tiempo.value = 10     # Empezar llena
-		barra_tiempo.self_modulate = Color.GREEN
-		timer_pregunta.start(10)
-		
-	# Reiniciar y arrancar el reloj de 25 segundos
+	barra_tiempo.max_value = 10
+	barra_tiempo.value = 10
+	barra_tiempo.self_modulate = Color.GREEN
 	timer_pregunta.start(10)
-	ya_aviso_tiempo_corto = false # Reseteamos el seguro para la nueva pregunta
+	ya_aviso_tiempo_corto = false
 	ya_aviso_tiempo_mediano = false
 
 func configurar_estilo_boton(boton: Button):
@@ -442,7 +438,7 @@ func _on_respuesta_seleccionada(id_elegido: int, boton_presionado: Button):
 	
 	if id_elegido == correcta:
 		# Respuesta Correcta: Pintar de verde
-		puntos += 5
+		puntos += PUNTOS_RESPUESTA_CORRECTA
 		actualizar_interfaz_puntos()
 		print("¡Correcto!")
 		cambiar_color_boton(boton_presionado, Color.GREEN)
@@ -507,8 +503,7 @@ func _on_timer_timeout() -> void:
 
 func siguiente_pregunta():
 	indice_actual += 1
-	# Verificamos si ya llegamos al límite (15 preguntas)
-	if indice_actual >= 15:
+	if indice_actual >= TOTAL_PREGUNTAS_RONDA:
 		finalizar_nivel()
 	else:
 		# Pequeña pausa opcional antes de la siguiente para que el usuario respire
@@ -517,21 +512,11 @@ func siguiente_pregunta():
 
 func finalizar_nivel():
 	timer_pregunta.stop()
-	if indice_actual == 15:
-		$CanvasLayer2/CenterContainer.hide() # Ocultamos todo lo anterior
-		$CanvasLayer2/GridContainer.hide()
-		$Buttoncomodin.hide()
-		$Buttonpublico.hide()
-		$Buttonporcentaje.hide()
-		$Buttonpausa.hide()
-		$Labelpuntaje.hide()
-		$barraprogreso.hide()
-		$CanvasLayer2/Timer/ProgressBar.hide()
+	if indice_actual >= TOTAL_PREGUNTAS_RONDA:
+		_ocultar_ui_juego()
 	print("Nivel terminado. Puntos: ", puntos)
 	
-	# 2. El presentador cambia a una pose feliz y da su mensaje final
-	# Creamos un mensaje dinámico basado en su esfuerzo
-	if indice_actual == 15:
+	if indice_actual >= TOTAL_PREGUNTAS_RONDA:
 		var mensaje_final = ""
 		if puntos >= 60:
 			mensaje_final = "¡Increíble esfuerzo! Has demostrado una maestría total en este nivel."
@@ -539,33 +524,29 @@ func finalizar_nivel():
 			mensaje_final = "¡Muy bien hecho! Tu dedicación se nota en cada respuesta."
 		else:
 			mensaje_final = "¡Buen intento! Con un poco más de práctica serás imparable."
-			# Llamamos a la función de diálogo que creamos antes (esperamos 4 segundos)
+
 		await get_tree().create_timer(1.5).timeout 
 		cambiar_pose(pose_normal)
 		await decir_mensaje(mensaje_final, 4.0)
-	# Aquí llamas a la lógica de las estrellas que vimos antes
+
+	var total_preguntas := TOTAL_PREGUNTAS_RONDA
+	var respuestas_correctas := int(round(float(puntos) / float(PUNTOS_RESPUESTA_CORRECTA)))
+	estrellas_ganadas = _calcular_estrellas(respuestas_correctas)
 	
-	var total_preguntas = 15
-	var respuestas_correctas = puntos # Las que acumuló el jugador
+	var bono_estrellas := estrellas_ganadas * 150
+	var puntos_finales := (respuestas_correctas * 100) + bono_estrellas
 	
-	# Lógica de estrellas
-	if puntos == 75:
-		estrellas_ganadas = 3
-	elif puntos >= 50:
-		estrellas_ganadas = 2
-	elif puntos >= 25:
-		estrellas_ganadas = 1
-	else:
-		estrellas_ganadas = 0
-	
-	# Cálculo de puntos con bonos
-	var bono_estrellas = estrellas_ganadas * 150 # Ejemplo: 150 puntos extra por cada estrella
-	var puntos_finales = (respuestas_correctas * 100) + bono_estrellas
-	
-	# Llamada simple: solo pasas los datos del juego, la DB saca el usuario del Autoload
 	guardar_final_nivel(total_preguntas, respuestas_correctas, puntos_finales, estrellas_ganadas)
-	
 	mostrar_resultados(respuestas_correctas)
+
+func _calcular_estrellas(respuestas_correctas: int) -> int:
+	if respuestas_correctas >= TOTAL_PREGUNTAS_RONDA:
+		return 3
+	if respuestas_correctas >= UMBRAL_2_ESTRELLAS:
+		return 2
+	if respuestas_correctas >= UMBRAL_1_ESTRELLA:
+		return 1
+	return 0
 
 func _on_buttoncomodin_pressed() -> void:
 	if comodin_usado or indice_actual >= preguntas_partida_actual.size():
@@ -775,37 +756,20 @@ func _on_timer_inactividad_timeout():
 		# 4. Ocultar el panel
 		decir_mensaje("¡Oye! No te quedes pensando tanto, ¡el tiempo corre!", 4.0)
 
-func mostrar_resultados(puntos_acumulados: int):
-	puntos = puntos_acumulados
+func mostrar_resultados(respuestas_correctas: int) -> void:
+	puntos = respuestas_correctas * PUNTOS_RESPUESTA_CORRECTA
+	estrellas_ganadas = _calcular_estrellas(respuestas_correctas)
+
+	var bono := estrellas_ganadas * 150
 	
-	# 1. Evaluar Estrellas (Basado en 15 preguntas)
-	if puntos == 75:
-		estrellas_ganadas = 3
-	elif puntos >= 50:
-		estrellas_ganadas = 2
-	elif puntos >= 25:
-		estrellas_ganadas = 1
-	else:
-		estrellas_ganadas = 0
-		
-	# 2. Calcular Bonificación
-	# Ejemplo: 3 estrellas = +500 pts, 2 = +200 pts, 1 = +50 pts
-	var bono = 0
-	match estrellas_ganadas:
-		3: bono = 500
-		2: bono = 200
-		1: bono = 50
-	
-	puntaje_total = (puntos * 100) + bono # Cada pregunta vale 100 + bono
-	
-	# 3. Actualizar Visuales
+	puntaje_total = (respuestas_correctas * 100) + bono
 	$PantallaResultados/Panel/Label2.text = "Puntaje Total: " + str(puntaje_total)
 	
 	actualizar_estrellas_visual(estrellas_ganadas)
 	configurar_botones(estrellas_ganadas)
 	
-	if indice_actual == 15:
-		$PantallaResultados.show() # Mostrar la pantalla
+	if indice_actual >= TOTAL_PREGUNTAS_RONDA:
+		$PantallaResultados.show()
 		
 
 func actualizar_estrellas_visual(cantidad):
@@ -858,33 +822,33 @@ func _on_btn_mapa_pressed():
 func _on_btn_menu_pressed():
 	get_tree().change_scene_to_file("res://Scenes/menu-alumno.tscn")
 
-func guardar_final_nivel(total_preg: int, correctas: int, punto: int, estrellas: int):
-		
-		var incorrectas = total_preg - correctas
-		var id_actual = GlobalUsuario.usuario_actual_id
-		var nombre_actual = GlobalUsuario.nombre_alumno
-		var completado_100 = 1 if estrellas == 3 else 0
-		var nivel = GlobalUsuario.nivel_maximo
-		
-		# 2. Ejecutar el INSERT
-		var query_nivel = "INSERT OR REPLACE INTO niveles " + \
-		"(NU_NIVEL, NU_USU, NM_ALUMNO, NU_PREG, NU_RESPC, NU_RESPI, NU_PUNTOS, NU_ESTRELLAS, SW_COM) " + \
-		"VALUES (%d, %d, '%s', %d, %d, %d, %d, %d, %d);" % [
-			nivel, id_actual, nombre_actual, total_preg, correctas, incorrectas, punto, estrellas, completado_100
-		]
-		# Ejecutamos una sola vez y guardamos el resultado
-		var check_nivel = db.query(query_nivel)
-		
-		# 3. Ejecutar el UPDATE
-		var proximo_nivel = nivel + 1
-		var query_alumno = "UPDATE Alumnos SET NU_NIVEL_MAX = %d WHERE NU_USU = %d AND NU_NIVEL_MAX < %d;" % [
-			proximo_nivel, id_actual, proximo_nivel
-		]
-		var check_alumno = db.query(query_alumno)
-		
-		# Verificación por consola
-		if check_nivel and check_alumno:
-			print("¡Datos guardados con éxito en la DB!")
-			print("Nivel guardado:", nivel, " para el ID:", id_actual)
-		else:
-			print("Error en los queries. Revisa nombres de tablas/columnas.") 
+func guardar_final_nivel(total_preg: int, correctas: int, punto: int, estrellas: int) -> void:
+	if db == null:
+		print("No hay conexion activa con la DB para guardar resultados.")
+		return
+
+	var incorrectas := total_preg - correctas
+	var id_actual := GlobalUsuario.usuario_actual_id
+	var nombre_actual := SQLiteHelper.escape(GlobalUsuario.nombre_alumno)
+	var completado_100 := 1 if estrellas == 3 else 0
+	var nivel: int = maxi(1, numero_de_nivel)
+
+	var query_nivel := "INSERT OR REPLACE INTO niveles " + \
+	"(NU_NIVEL, NU_USU, NM_ALUMNO, NU_PREG, NU_RESPC, NU_RESPI, NU_PUNTOS, NU_ESTRELLAS, SW_COM) " + \
+	"VALUES (%d, %d, '%s', %d, %d, %d, %d, %d, %d);" % [
+		nivel, id_actual, nombre_actual, total_preg, correctas, incorrectas, punto, estrellas, completado_100
+	]
+	var check_nivel := db.query(query_nivel)
+
+	var proximo_nivel: int = nivel + 1
+	var query_alumno := "UPDATE Alumnos SET NU_NIVEL_MAX = %d WHERE NU_USU = %d AND NU_NIVEL_MAX < %d;" % [
+		proximo_nivel, id_actual, proximo_nivel
+	]
+	var check_alumno := db.query(query_alumno)
+
+	if check_nivel and check_alumno:
+		GlobalUsuario.nivel_maximo = proximo_nivel
+		print("Datos guardados con exito en la DB.")
+		print("Nivel guardado:", nivel, " para el ID:", id_actual)
+	else:
+		print("Error en los queries. Revisa nombres de tablas/columnas.")

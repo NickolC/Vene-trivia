@@ -1,45 +1,61 @@
 [gd_scene format=3 uid="uid://dw32t2elfg7yn"]
 
-[ext_resource type="Texture2D" uid="uid://cen030tw674mh" path="res://GFX/login.png" id="1_767d8"]
-[ext_resource type="FontFile" uid="uid://cn65q6b06tv8u" path="res://font/Minecraft.ttf" id="2_xklxs"]
+[ext_resource type="Texture2D" path="res://GFX/login.png" id="1_bg"]
+[ext_resource type="FontFile" path="res://font/Minecraft.ttf" id="2_font"]
+[ext_resource type="Script" path="res://Scenes/login.gd" id="3_script"]
 
-[sub_resource type="GDScript" id="GDScript_767d8"]
-script/source = "extends Control
-
-
-func _on_login_docente_pressed() -> void:
-	get_tree().change_scene_to_file(\"res://Scenes/Admin.tscn\")
-
-
-func _on_login_alumno_pressed() -> void:
-	get_tree().change_scene_to_file(\"res://Scenes/Alumno.tscn\")
-"
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xklxs"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_transparent"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_767d8"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_superadmin"]
+bg_color = Color(0.8980392, 0.7137255, 0.49803922, 0.7)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6, 0.39607844, 0.33333334, 0.8)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
-[node name="login" type="Control" unique_id=259570280]
+[node name="login" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = SubResource("GDScript_767d8")
+script = ExtResource("3_script")
 
-[node name="login" type="TextureRect" parent="." unique_id=1067033832]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_767d8")
+texture = ExtResource("1_bg")
 
-[node name="docente" type="Label" parent="login" unique_id=190317332]
+[node name="TituloCentro" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.07
+anchor_right = 0.5
+anchor_bottom = 0.07
+offset_left = -367.0
+offset_top = -28.0
+offset_right = 367.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(0.12, 0.12, 0.12, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 46
+text = "SELECCIONA TU PERFIL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="docente" type="Label" parent="Background"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.266
@@ -51,12 +67,12 @@ offset_top = -41.131012
 offset_right = 201.61398
 offset_bottom = 40.868988
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_xklxs")
+theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 81
 text = "DOCENTE"
 horizontal_alignment = 1
 
-[node name="bienvenida-docente" type="Label" parent="login" unique_id=1923790346]
+[node name="bienvenida-docente" type="Label" parent="Background"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.23300001
@@ -68,15 +84,12 @@ offset_top = -133.01303
 offset_right = 245.70697
 offset_bottom = 133.98697
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_xklxs")
+theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 50
-text = "Un registro 
-completo de tus
-estudiantes, para un
-mejor control
-del aprendizaje"
+text = "Un registro\ncompleto de tus\nestudiantes, para un\nmejor control\ndel aprendizaje"
+horizontal_alignment = 1
 
-[node name="login-Docente" type="Button" parent="login" unique_id=1830759893]
+[node name="login-Docente" type="Button" parent="Background"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.261
@@ -88,12 +101,13 @@ offset_top = -41.55304
 offset_right = 297.719
 offset_bottom = 42.44696
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_xklxs")
+theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 75
-theme_override_styles/normal = SubResource("StyleBoxFlat_xklxs")
+theme_override_styles/normal = SubResource("StyleBoxFlat_transparent")
 text = "INGRESAR"
+flat = true
 
-[node name="alumno" type="Label" parent="." unique_id=168807400]
+[node name="alumno" type="Label" parent="Background"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.74200004
@@ -105,12 +119,12 @@ offset_top = -41.131012
 offset_right = 202.81787
 offset_bottom = 40.868988
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_xklxs")
+theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 81
 text = "ALUMNO"
 horizontal_alignment = 1
 
-[node name="bienvenida-alumno" type="Label" parent="." unique_id=138607761]
+[node name="bienvenida-alumno" type="Label" parent="Background"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.758
@@ -122,16 +136,12 @@ offset_top = -133.97504
 offset_right = 275.682
 offset_bottom = 133.02496
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_xklxs")
+theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 50
-text = "Explora y disfruta
-de una aventura
-inmersiva sobre
-la hitoria de nuestra
-region"
+text = "Explora y disfruta\nde una aventura\ninmersiva sobre\nla historia de nuestra\nregion"
 horizontal_alignment = 2
 
-[node name="login-Alumno" type="Button" parent="." unique_id=947714293]
+[node name="login-Alumno" type="Button" parent="Background"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.74200004
@@ -143,10 +153,29 @@ offset_top = -37.515076
 offset_right = 295.81787
 offset_bottom = 38.484924
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_xklxs")
+theme_override_fonts/font = ExtResource("2_font")
 theme_override_font_sizes/font_size = 75
-theme_override_styles/normal = SubResource("StyleBoxFlat_767d8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_transparent")
 text = "INGRESAR"
+flat = true
 
-[connection signal="pressed" from="login/login-Docente" to="." method="_on_login_docente_pressed"]
-[connection signal="pressed" from="login-Alumno" to="." method="_on_login_alumno_pressed"]
+[node name="super-admin" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.93
+anchor_right = 0.5
+anchor_bottom = 0.93
+offset_left = -196.0
+offset_top = -30.0
+offset_right = 196.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxFlat_superadmin")
+text = "SUPER ADMIN"
+
+[connection signal="pressed" from="Background/login-Docente" to="." method="_on_login_docente_pressed"]
+[connection signal="pressed" from="Background/login-Alumno" to="." method="_on_login_alumno_pressed"]
+[connection signal="pressed" from="super-admin" to="." method="_on_super_admin_pressed"]
