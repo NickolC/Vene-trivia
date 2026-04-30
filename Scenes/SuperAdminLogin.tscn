@@ -1,0 +1,255 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scenes/super_admin_login.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://GFX/docente.png" id="2_bg"]
+[ext_resource type="FontFile" path="res://font/Minecraft.ttf" id="3_font"]
+[ext_resource type="Texture2D" path="res://GFX/atras.png" id="4_back"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_transparent"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_input"]
+bg_color = Color(0.9019608, 0.76862746, 0.59607846, 0.9)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5647059, 0.35686275, 0.29803923, 0.85)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_info"]
+bg_color = Color(0.9529412, 0.8666667, 0.7176471, 0.9)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5647059, 0.35686275, 0.29803923, 0.75)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1821.0
+offset_bottom = 1023.0
+texture = ExtResource("2_bg")
+
+[node name="Titulo" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.74200004
+anchor_top = 0.15100001
+anchor_right = 0.74200004
+anchor_bottom = 0.15100001
+offset_left = -290.0
+offset_top = -42.0
+offset_right = 290.0
+offset_bottom = 42.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 64
+text = "SUPER ADMIN"
+horizontal_alignment = 1
+
+[node name="InfoPanel" type="PanelContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.255
+anchor_top = 0.5
+anchor_right = 0.255
+anchor_bottom = 0.5
+offset_left = -292.0
+offset_top = -245.0
+offset_right = 292.0
+offset_bottom = 245.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_info")
+
+[node name="Margin" type="MarginContainer" parent="TextureRect/InfoPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 22
+theme_override_constants/margin_top = 22
+theme_override_constants/margin_right = 22
+theme_override_constants/margin_bottom = 22
+
+[node name="InfoVBox" type="VBoxContainer" parent="TextureRect/InfoPanel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="InfoTitulo" type="Label" parent="TextureRect/InfoPanel/Margin/InfoVBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 44
+text = "Panel Super Admin"
+horizontal_alignment = 1
+
+[node name="InfoDescripcion" type="Label" parent="TextureRect/InfoPanel/Margin/InfoVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 28
+text = "Desde aqui puedes:\n- Crear cuentas de Docente\n- Ver actividad de Alumnos\n- Ver actividad de Docentes\n\nAcceso exclusivo para personal autorizado."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Ini-Usuario" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.63500005
+anchor_top = 0.33600003
+anchor_right = 0.63500005
+anchor_bottom = 0.33600003
+offset_left = -107.33508
+offset_top = -28.616028
+offset_right = 105.66492
+offset_bottom = 27.383972
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 55
+text = "Usuario:"
+horizontal_alignment = 1
+
+[node name="Ini-Clave" type="Label" parent="TextureRect/Ini-Usuario"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41300002
+anchor_top = 3.5540001
+anchor_right = 0.41300002
+anchor_bottom = 3.5540001
+offset_left = -83.969
+offset_top = -28.024002
+offset_right = 84.031
+offset_bottom = 27.975998
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 55
+text = "Clave:"
+horizontal_alignment = 1
+
+[node name="Ini-IngresaUsu" type="LineEdit" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.74300003
+anchor_top = 0.402
+anchor_right = 0.74300003
+anchor_bottom = 0.402
+offset_left = -310.00305
+offset_top = -29.362
+offset_right = 308.99695
+offset_bottom = 29.638
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.2, 0.2, 0.2, 0.8)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_input")
+theme_override_styles/focus = SubResource("StyleBoxFlat_input")
+placeholder_text = "Ingrese su usuario super admin"
+alignment = 1
+
+[node name="Ini-IngresaClv" type="LineEdit" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.74300003
+anchor_top = 0.57600003
+anchor_right = 0.74300003
+anchor_bottom = 0.57600003
+offset_left = -310.00305
+offset_top = -29.05603
+offset_right = 308.99695
+offset_bottom = 29.94397
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.2, 0.2, 0.2, 0.8)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_input")
+theme_override_styles/focus = SubResource("StyleBoxFlat_input")
+placeholder_text = "Ingrese su clave"
+alignment = 1
+secret = true
+
+[node name="login-super-admin" type="Button" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.74100006
+anchor_top = 0.80500007
+anchor_right = 0.74100006
+anchor_bottom = 0.80500007
+offset_left = -301.36108
+offset_top = -52.515076
+offset_right = 299.63892
+offset_bottom = 55.484924
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_transparent")
+text = "INGRESAR"
+flat = true
+
+[node name="Estado" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.74300003
+anchor_top = 0.68
+anchor_right = 0.74300003
+anchor_bottom = 0.68
+offset_left = -310.0
+offset_top = -24.0
+offset_right = 309.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.15, 0.15, 0.15, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Ayuda" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.74200004
+anchor_top = 0.26
+anchor_right = 0.74200004
+anchor_bottom = 0.26
+offset_left = -338.0
+offset_top = -28.0
+offset_right = 338.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(0.12, 0.12, 0.12, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 20
+text = "Sin registro en UI. Usa documents-internos/run_create_superadmin.py"
+horizontal_alignment = 1
+
+[node name="atras" type="Button" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.071
+anchor_top = 0.88500005
+anchor_right = 0.071
+anchor_bottom = 0.88500005
+offset_left = -67.291
+offset_top = -68.18506
+offset_right = 68.709
+offset_bottom = 67.81494
+theme_override_styles/normal = SubResource("StyleBoxFlat_transparent")
+icon = ExtResource("4_back")
+
+[connection signal="pressed" from="TextureRect/login-super-admin" to="." method="_on_login_super_admin_pressed"]
+[connection signal="pressed" from="TextureRect/atras" to="." method="_on_atras_pressed"]

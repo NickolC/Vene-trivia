@@ -20,6 +20,7 @@ config/icon="uid://losj62la8r65"
 GlobalUsuario="*uid://dpqob34rkqj6u"
 Configuracion="*uid://bx3m16y1dgt8n"
 Alertas="*uid://blldaak4ms224"
+AudioManager="*res://Scripts/audio_manager.gd"
 
 [display]
 

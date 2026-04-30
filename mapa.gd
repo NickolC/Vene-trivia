@@ -1,70 +1,66 @@
 extends Control
 
-var db : SQLite
-var nivel_actual = GlobalUsuario.nivel_maximo
+const SQLiteHelper = preload("res://Scripts/sqlite_helper.gd")
 
-@onready var contenedor1 = $VBoxContainer/HBoxContainer # Cambia esto a tu contenedor real
-@onready var contenedor2 = $VBoxContainer/HBoxContainer2
-@onready var contenedor3 = $VBoxContainer/HBoxContainer3
+var db: SQLite
+var nivel_actual: int = GlobalUsuario.nivel_maximo
 
-func _ready():
-	db = SQLite.new()
-	db.path = "res://DB/venetrivia.db"
-	db.open_db()
-	
-	var query = ("SELECT * FROM Alumnos WHERE NM_ALUMNO = '%s';" % GlobalUsuario.nombre_alumno)
-	db.query(query)
-	
-	var resultado = db.query_result # Esto devuelve un Array de Diccionarios
-	if resultado.size() > 0:
-		# ¡Éxito! El primer elemento [0] tiene nuestro ID
-		GlobalUsuario.nombre_alumno = resultado[0]["NM_ALUMNO"]
-		print("Sesión iniciada como: ", GlobalUsuario.nombre_alumno)
-	else:
-		print("El alumno no existe en la base de datos.")
-	# 3. Actualizamos la interfaz
+@onready var contenedor1: HBoxContainer = $VBoxContainer/HBoxContainer
+@onready var contenedor2: HBoxContainer = $VBoxContainer/HBoxContainer2
+@onready var contenedor3: HBoxContainer = $VBoxContainer/HBoxContainer3
+
+func _ready() -> void:
+	db = SQLiteHelper.open_db_connection()
+	_cargar_usuario_actual()
 	configurar_selector()
+
+func _exit_tree() -> void:
+	if db:
+		SQLiteHelper.close_db_connection(db)
+		db = null 
 
 func _on_atras_pressed() -> void:
 	Configuracion.change_scene_to_file("res://Scenes/menu-alumno.tscn")
 
-func configurar_selector():
-	# Consultamos el progreso: niveles que tienen al menos 1 estrella
-	# Esto nos dirá hasta qué nivel ha llegado el alumno
-	var query = "SELECT MAX(NU_NIVEL) as nivel_max FROM nivel_1 WHERE NM_ALUMNO = '%s' AND NU_ESTRELLAS > 0" % GlobalUsuario.nombre_alumno
+func configurar_selector() -> void:
+	var query := ""
+	if GlobalUsuario.usuario_actual_id > 0:
+		query = "SELECT MAX(NU_NIVEL) AS nivel_max FROM nivel_1 WHERE NU_USU = %d AND NU_ESTRELLAS > 0" % GlobalUsuario.usuario_actual_id
+	else:
+		query = "SELECT MAX(NU_NIVEL) AS nivel_max FROM nivel_1 WHERE NM_ALUMNO = '%s' AND NU_ESTRELLAS > 0" % SQLiteHelper.escape(GlobalUsuario.nombre_alumno)
+
 	db.query(query)
 	
-	var ultimo_nivel_pasado = 0
+	var ultimo_nivel_pasado := 0
 	if db.query_result.size() > 0 and db.query_result[0]["nivel_max"] != null:
 		ultimo_nivel_pasado = int(db.query_result[0]["nivel_max"])
 	
-	# El nivel disponible es el siguiente al último pasado
-	var nivel_disponible = ultimo_nivel_pasado + 1
+	var nivel_disponible := ultimo_nivel_pasado + 1
+	nivel_actual = max(nivel_actual, nivel_disponible)
 	
-	# 2. UNIFICAR todos los botones en una sola lista maestra
-	var todos_los_botones = []
+	var todos_los_botones: Array[Node] = []
 	todos_los_botones.append_array(contenedor1.get_children())
 	todos_los_botones.append_array(contenedor2.get_children())
 	todos_los_botones.append_array(contenedor3.get_children())
 	
-	# 3. Recorrer la lista unificada (del 0 al 14)
 	for i in range(todos_los_botones.size()):
-		var n_nivel = i + 1 # Esto nos da el número real del nivel (1 al 15)
-		var btn = todos_los_botones[i]
+		var n_nivel := i + 1
+		var btn := todos_los_botones[i] as Button
+		if btn == null:
+			continue
 		
-		# Lógica de desbloqueo
 		if n_nivel <= nivel_disponible:
 			desbloquear_boton(btn, n_nivel)
 		else:
 			bloquear_boton(btn)
 
-func desbloquear_boton(btn: Button, num: int):
+func desbloquear_boton(btn: Button, num: int) -> void:
 	btn.disabled = false
 	btn.modulate = Color.WHITE
-	# Conectamos la señal para que al pulsar nos lleve a la escena del nivel
-	if not btn.pressed.is_connected(_ir_al_nivel):
-		btn.pressed.connect(_ir_al_nivel.bind(num))
-	
+	var callback := Callable(self, "_ir_al_nivel").bind(num)
+	if not btn.pressed.is_connected(callback):
+		btn.pressed.connect(callback)
+
 	# OPCIONAL: Consultar si ya tiene estrellas para mostrarlas bajo el botón
 	var q_estrellas = "SELECT NU_ESTRELLAS FROM nivel_1 WHERE NU_NIVEL = %d AND NU_USU = %d;" % [num, GlobalUsuario.usuario_actual_id]
 	db.query(q_estrellas)
@@ -75,9 +71,41 @@ func desbloquear_boton(btn: Button, num: int):
 
 func bloquear_boton(btn: Button):
 	btn.disabled = true
-	btn.modulate = Color(0.3, 0.3, 0.3, 0.8) # Se ve oscuro y no se puede tocar
+	btn.modulate = Color(0.3, 0.3, 0.3, 0.8)
 
-func _ir_al_nivel(n: int):
-	db.close_db() # Cerramos antes de cambiar de escena
-	var ruta = "res://Nivel " + str(n) + ".tscn"
-	Configuracion.change_scene_to_file(ruta)
+func _ir_al_nivel(n: int) -> void:
+	if db:
+		SQLiteHelper.close_db_connection(db)
+		db = null 
+	var ruta := "res://Nivel %d.tscn" % n
+	if not ResourceLoader.exists(ruta):
+		_mostrar_alerta("El nivel %d aun no esta disponible." % n)
+		return
+	
+	get_tree().change_scene_to_file(ruta)
+
+func _cargar_usuario_actual() -> void:
+	var query := ""
+	if GlobalUsuario.usuario_actual_id > 0:
+		query = "SELECT NU_USU, NM_ALUMNO, NU_NIVEL_MAX FROM Alumnos WHERE NU_USU = %d;" % GlobalUsuario.usuario_actual_id
+	elif not GlobalUsuario.nombre_alumno.is_empty():
+		query = "SELECT NU_USU, NM_ALUMNO, NU_NIVEL_MAX FROM Alumnos WHERE NM_ALUMNO = '%s';" % SQLiteHelper.escape(GlobalUsuario.nombre_alumno)
+	else:
+		return
+
+	db.query(query)
+	if db.query_result.is_empty():
+		_mostrar_alerta("No se encontro la sesion del alumno.")
+		return
+
+	var resultado: Dictionary = db.query_result[0]
+	GlobalUsuario.usuario_actual_id = int(resultado.get("NU_USU", GlobalUsuario.usuario_actual_id))
+	GlobalUsuario.nombre_alumno = str(resultado.get("NM_ALUMNO", GlobalUsuario.nombre_alumno))
+	GlobalUsuario.nivel_maximo = int(resultado.get("NU_NIVEL_MAX", GlobalUsuario.nivel_maximo))
+	print("Sesion iniciada como: ", GlobalUsuario.nombre_alumno)
+
+func _mostrar_alerta(mensaje: String) -> void:
+	var alertas := get_node_or_null("/root/Alertas")
+	if alertas and alertas.has_method("mostrar_alerta"):
+		alertas.mostrar_alerta(mensaje, 1.0)
+	print(mensaje)

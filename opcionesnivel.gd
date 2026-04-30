@@ -1,7 +1,7 @@
-extends Control
+extends "res://Scripts/opciones_base.gd"
 
-var db : SQLite
-var nivel_actual: int 
+func _get_return_scene_path() -> String:
+	return "res://Nivel 1.tscn"
 
 @onready var slider_brillo = $"TextureRect3/Guardar/Volumen Maestro/Brillo"
 @onready var slider_gamma = $"TextureRect3/Guardar/Volumen Maestro/Brillo/Gamma"

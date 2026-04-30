@@ -1,4 +1,4 @@
-extends Control
+extends "res://Scripts/opciones_base.gd"
 
 var db : SQLite
 var nivel_actual: int 
@@ -6,10 +6,6 @@ var costopor: int
 var costopub: int
 var costomid: int
 
-@onready var slider_brillo = $"TextureRect3/Guardar/Volumen Maestro/Brillo"
-@onready var slider_gamma = $"TextureRect3/Guardar/Volumen Maestro/Brillo/Gamma"
-@onready var check_full = $"TextureRect3/Pantalla Completa"
-@onready var option_res = $TextureRect3/Resolucion
 @onready var label_dinero = $TextureRect2/HBoxContainer/moneda
 @onready var precioPor = $TextureRect2/VBoxContainer/Precio
 @onready var precioPub = $TextureRect2/VBoxContainer2/Precio
@@ -18,15 +14,8 @@ var costomid: int
 @onready var volumen_maestro = $"TextureRect3/Guardar/Volumen Maestro"
 @onready var musica = $"TextureRect3/Guardar/Volumen Maestro/Musica"
 @onready var efectos = $"TextureRect3/Guardar/Volumen Maestro/Musica/Efectos"
-
 @onready var compra = $TextureRect2/confrimarcomodines/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Label
 
-# Creamos un diccionario para asociar el índice del botón con una resolución real
-const RESOLUTIONS: Dictionary = {
-	0: Vector2i(1920, 1080),
-	1: Vector2i(1280, 720),
-	2: Vector2i(640, 480)
-}
 
 func _ready():
 	# En el script de tu Nivel o Escena de Juego
@@ -186,21 +175,21 @@ func _on_opciones_pressed() -> void:
 func _on_volvermenu_pressed() -> void:
 	# 1. Llamamos a la función que guarda los datos en el archivo .cfg o .json
 	# Esta es la misma función que usa tu botón "Guardar"
-	guardar_todo()
+	aplicar_todo()
 	Alertas.mostrar_alerta("Ajustes guardados automáticamente.", 1.0)
 	print("Ajustes guardados automáticamente.")
 	Configuracion.change_scene_to_file("res://Scenes/menu-alumno.tscn")
 	
 	
 	# Esta es la función que ya deberías tener para tu botón de "Guardar"
-func guardar_todo():
+func guardar_ajustes():
 	# Actualizamos las variables del Singleton (Autoload) con los valores de la UI
 	Configuracion.brillo = slider_brillo.value
 	Configuracion.saturacion = slider_gamma.value
 	Configuracion.contraste = slider_gamma.value
-	#Configuracion.volumen_maestro = volumen_maestro.value
-	#Configuracion.volumen_musica = musica.value
-	#Configuracion.volumen_sfx = efectos.value
+	Configuracion.volumen_maestro = volumen_maestro.value
+	Configuracion.volumen_musica = musica.value
+	Configuracion.volumen_sfx = efectos.value
 	Configuracion.fullscreen = check_full.button_pressed
 	Configuracion.res_index = option_res.selected
 	
@@ -210,6 +199,12 @@ func guardar_todo():
 func _on_salir_pressed() -> void:
 	Configuracion.change_scene_to_file("res://Scenes/Alumno.tscn")
 
+func _get_return_scene_path() -> String:
+	return "res://Scenes/menu-alumno.tscn"
+
+
+func _get_exit_scene_path() -> String:
+	return "res://Scenes/Login.tscn"
 
 func _on_tienda_pressed() -> void:
 	#$TextureRect.visible = false
