@@ -256,8 +256,7 @@ func _on_boton_salir_pressed():
 # --- LÓGICA DE LA CAPA DE CONFIRMACIÓN ---
 
 func _on_boton_si_confirmar_salir_pressed():
-	# IMPORTANTE: Quitar la pausa antes de cambiar de escena
-	#get_tree().paused = false
+	get_tree().paused = false
 	# Reemplaza con la ruta real de tu escena de mapa
 	get_tree().change_scene_to_file("res://Mapa.tscn")
 
@@ -284,12 +283,16 @@ func cargar_json():
 	if FileAccess.file_exists(path):
 		var file = FileAccess.open(path, FileAccess.READ)
 		var json_string = file.get_as_text()
+		json_string = json_string.strip_edges()
 		var datos = JSON.parse_string(json_string)
-		if datos is Array:
+		if datos != null and datos is Array:
 			todas_las_preguntas = datos
 			# Al inicio, todas están disponibles
 			pool_disponible = todas_las_preguntas.duplicate()
 			pool_disponible.shuffle() # Barajeamos el mazo completo
+			print("JSON cargado con éxito")
+		else:
+			push_error("Error: El JSON no es un Array válido o tiene errores de sintaxis.")
 
 func preparar_nuevo_nivel():
 	if pool_disponible.size() < TOTAL_PREGUNTAS_RONDA:

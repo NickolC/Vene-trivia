@@ -12,6 +12,11 @@ var db: SQLite
 
 func _ready() -> void:
 	db = SQLiteHelper.open_db_connection()
+	
+func cerrar_db_seguro():
+	if db != null:
+		SQLiteHelper.close_db_connection(db)
+		db = null
 
 func _exit_tree() -> void:
 	SQLiteHelper.close_db_connection(db)
@@ -72,11 +77,13 @@ func _on_logindocente_pressed() -> void:
 		GlobalUsuario.nivel_maximo = int(datos.get("NU_NIVEL_MAX", 1))
 		SQLiteHelper.log_activity(db, "alumno", nombre_ingresado, "inicio_sesion")
 		print("Sesión global iniciada para: ", GlobalUsuario.nombre_alumno)
+		SQLiteHelper.close_db_connection(db)
 		get_tree().change_scene_to_file("res://Scenes/menu-alumno.tscn")
 	else:
 		_mostrar_alerta("Usuario o contraseña incorrectos.")
 
 func _on_atras_pressed() -> void:
+	SQLiteHelper.close_db_connection(db)
 	get_tree().change_scene_to_file("res://Scenes/Login.tscn")
 
 func _mostrar_alerta(mensaje: String) -> void:

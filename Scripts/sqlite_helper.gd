@@ -12,7 +12,7 @@ static func escape(value: String) -> String:
 	return value.replace("'", "''")
 
 static func close_db_connection(database: SQLite) -> void:
-	if database != null:
+	if is_instance_valid(database):
 		database.close_db()
 
 static func ensure_activity_table(database: SQLite) -> void:

@@ -116,10 +116,11 @@ grow_vertical = 2
 script = ExtResource("1_xjga3")
 
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=556088993]
+visible = false
 clip_contents = true
 layout_mode = 0
-offset_right = 1821.0
-offset_bottom = 1023.0
+offset_right = 1820.0
+offset_bottom = 980.0
 texture = ExtResource("2_h5ujg")
 
 [node name="Label" type="Label" parent="TextureRect2" unique_id=1779260876]
@@ -169,9 +170,9 @@ anchor_top = 0.156
 anchor_right = 0.86600006
 anchor_bottom = 0.156
 offset_left = -34.986084
-offset_top = -63.587997
+offset_top = -60.880005
 offset_right = 35.013916
-offset_bottom = 63.412003
+offset_bottom = 60.119995
 flat = true
 
 [node name="Opciones" type="Button" parent="TextureRect2" unique_id=1747784874]
@@ -182,9 +183,9 @@ anchor_top = 0.41300002
 anchor_right = 0.86600006
 anchor_bottom = 0.41300002
 offset_left = -34.986084
-offset_top = -62.499023
+offset_top = -59.74002
 offset_right = 35.013916
-offset_bottom = 63.500977
+offset_bottom = 61.25998
 flat = true
 
 [node name="Cancelar" type="Button" parent="TextureRect2" unique_id=1383220644]
@@ -195,9 +196,9 @@ anchor_top = 0.54300004
 anchor_right = 0.86600006
 anchor_bottom = 0.54300004
 offset_left = -34.986084
-offset_top = -62.489014
+offset_top = -60.140015
 offset_right = 35.013916
-offset_bottom = 63.510986
+offset_bottom = 60.859985
 flat = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TextureRect2" unique_id=301077178]
@@ -319,7 +320,7 @@ visible = false
 
 [node name="ColorRect" type="ColorRect" parent="TextureRect2/confrimarcomodines" unique_id=1738853423]
 offset_right = 1821.0
-offset_bottom = 1023.0
+offset_bottom = 981.0
 color = Color(0, 0, 0, 0.7764706)
 
 [node name="CenterContainer" type="CenterContainer" parent="TextureRect2/confrimarcomodines" unique_id=1648021]
@@ -392,7 +393,7 @@ visible = false
 
 [node name="ColorRect" type="ColorRect" parent="TextureRect2/confirmarniveles" unique_id=1972771816]
 offset_right = 1821.0
-offset_bottom = 1023.0
+offset_bottom = 981.0
 color = Color(0, 0, 0, 0.7764706)
 
 [node name="CenterContainer" type="CenterContainer" parent="TextureRect2/confirmarniveles" unique_id=268965672]
@@ -462,8 +463,8 @@ icon_alignment = 1
 [node name="TextureRect3" type="TextureRect" parent="." unique_id=1441154183]
 visible = false
 layout_mode = 0
-offset_right = 1821.0
-offset_bottom = 1023.0
+offset_right = 1820.0
+offset_bottom = 980.0
 texture = ExtResource("1_28310")
 
 [node name="Configuraciones" type="Label" parent="TextureRect3" unique_id=1716521658]
@@ -542,9 +543,9 @@ anchor_top = 0.483
 anchor_right = 1.646
 anchor_bottom = 0.483
 offset_left = -2073.581
-offset_top = 302.891
+offset_top = 289.66
 offset_right = -1709.5809
-offset_bottom = 361.891
+offset_bottom = 346.66
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_knh8s")
 theme_override_font_sizes/font_size = 34
@@ -559,9 +560,9 @@ anchor_top = -3.607
 anchor_right = 0.29000002
 anchor_bottom = -3.607
 offset_left = -401.52832
-offset_top = -16.471909
+offset_top = -15.471924
 offset_right = 401.47168
-offset_bottom = 16.528091
+offset_bottom = 17.528076
 theme_override_icons/grabber = ExtResource("4_knh8s")
 theme_override_icons/grabber_highlight = ExtResource("4_knh8s")
 theme_override_icons/grabber_disabled = ExtResource("4_knh8s")
@@ -577,9 +578,9 @@ anchor_top = 2.47
 anchor_right = 0.49800003
 anchor_bottom = 2.47
 offset_left = -401.894
-offset_top = -16.510002
+offset_top = -18.510002
 offset_right = 401.106
-offset_bottom = 16.489998
+offset_bottom = 14.489998
 theme_override_icons/grabber = ExtResource("4_knh8s")
 theme_override_icons/grabber_highlight = ExtResource("4_knh8s")
 theme_override_icons/grabber_disabled = ExtResource("4_knh8s")
@@ -595,9 +596,9 @@ anchor_top = 2.5
 anchor_right = 0.49800003
 anchor_bottom = 2.5
 offset_left = -400.394
-offset_top = -16.5
+offset_top = -20.5
 offset_right = 401.106
-offset_bottom = 16.5
+offset_bottom = 12.5
 theme_override_icons/grabber = ExtResource("4_knh8s")
 theme_override_icons/grabber_highlight = ExtResource("4_knh8s")
 theme_override_icons/grabber_disabled = ExtResource("4_knh8s")
@@ -609,13 +610,13 @@ theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_70sea")
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.49800003
-anchor_top = -9.591001
+anchor_top = -8.985001
 anchor_right = 0.49800003
-anchor_bottom = -9.591001
+anchor_bottom = -8.985001
 offset_left = -400.6329
-offset_top = -12.496979
+offset_top = -16.494995
 offset_right = 400.106
-offset_bottom = 20.503021
+offset_bottom = 16.505005
 theme_override_icons/grabber = ExtResource("4_knh8s")
 theme_override_icons/grabber_highlight = ExtResource("4_knh8s")
 theme_override_icons/grabber_disabled = ExtResource("4_knh8s")
@@ -631,13 +632,13 @@ value = 1.0
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.499
-anchor_top = 2.47
+anchor_top = 2.4090002
 anchor_right = 0.499
-anchor_bottom = 2.47
+anchor_bottom = 2.4090002
 offset_left = -401.699
-offset_top = -16.510002
-offset_right = 402.301
-offset_bottom = 16.489998
+offset_top = -16.497002
+offset_right = 402.30103
+offset_bottom = 16.502998
 theme_override_icons/grabber = ExtResource("4_knh8s")
 theme_override_icons/grabber_highlight = ExtResource("4_knh8s")
 theme_override_icons/grabber_disabled = ExtResource("4_knh8s")
@@ -657,9 +658,9 @@ anchor_top = 0.155
 anchor_right = 0.86600006
 anchor_bottom = 0.155
 offset_left = -34.986084
-offset_top = -62.565002
+offset_top = -59.899994
 offset_right = 35.013916
-offset_bottom = 63.434998
+offset_bottom = 61.100006
 theme_override_styles/normal = SubResource("StyleBoxFlat_vr0f5")
 flat = true
 
@@ -671,9 +672,9 @@ anchor_top = 0.28500003
 anchor_right = 0.86600006
 anchor_bottom = 0.28500003
 offset_left = -33.986084
-offset_top = -62.555023
+offset_top = -60.30002
 offset_right = 35.013916
-offset_bottom = 62.444977
+offset_bottom = 60.69998
 theme_override_styles/normal = SubResource("StyleBoxFlat_47vbh")
 flat = true
 
@@ -687,16 +688,16 @@ anchor_bottom = 2.6160002
 offset_left = -34.162136
 offset_top = -62.978027
 offset_right = 34.49997
-offset_bottom = 63.021973
+offset_bottom = 57.46399
 theme_override_styles/normal = SubResource("StyleBoxFlat_gg2gv")
 flat = true
 
 [node name="Pantalla Completa" type="CheckButton" parent="TextureRect3" unique_id=122628654]
 layout_mode = 0
-offset_left = 633.0
-offset_top = 365.0
-offset_right = 694.0
-offset_bottom = 409.0
+offset_left = 628.0
+offset_top = 348.0
+offset_right = 689.0
+offset_bottom = 392.0
 theme_override_icons/checked = ExtResource("6_ycbjo")
 theme_override_icons/unchecked = ExtResource("5_2o01m")
 flat = true
@@ -704,14 +705,14 @@ flat = true
 [node name="Resolucion" type="OptionButton" parent="TextureRect3" unique_id=754766668]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.38900003
-anchor_top = 0.45100003
-anchor_right = 0.38900003
-anchor_bottom = 0.45100003
-offset_left = -118.880066
-offset_top = -32.080048
-offset_right = 127.119934
-offset_bottom = 29.919952
+anchor_left = 0.393
+anchor_top = 0.453
+anchor_right = 0.393
+anchor_bottom = 0.453
+offset_left = -122.160034
+offset_top = -31.040009
+offset_right = 123.839966
+offset_bottom = 30.959991
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_disabled_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
 theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
@@ -862,10 +863,9 @@ horizontal_alignment = 1
 environment = SubResource("Environment_7rfdi")
 
 [node name="TextureRect4" type="TextureRect" parent="." unique_id=1721266548]
-visible = false
 layout_mode = 0
-offset_right = 1821.0
-offset_bottom = 1023.0
+offset_right = 1820.0
+offset_bottom = 980.0
 texture = ExtResource("9_s5jop")
 
 [node name="Volvermenu" type="Button" parent="TextureRect4" unique_id=1773386164]
@@ -912,9 +912,9 @@ anchor_top = 0.41400003
 anchor_right = 0.86600006
 anchor_bottom = 0.41400003
 offset_left = -37.720093
-offset_top = -63.522034
+offset_top = -60.72003
 offset_right = 34.879883
-offset_bottom = 62.477966
+offset_bottom = 60.27997
 theme_override_styles/normal = SubResource("StyleBoxFlat_47vbh")
 flat = true
 
@@ -926,9 +926,9 @@ anchor_top = 0.28500003
 anchor_right = 0.86600006
 anchor_bottom = 0.28500003
 offset_left = -37.720093
-offset_top = -62.555023
+offset_top = -60.30002
 offset_right = 34.879883
-offset_bottom = 63.444977
+offset_bottom = 60.69998
 theme_override_styles/normal = SubResource("StyleBoxFlat_47vbh")
 flat = true
 
@@ -940,9 +940,9 @@ anchor_top = 0.155
 anchor_right = 0.86600006
 anchor_bottom = 0.155
 offset_left = -37.720093
-offset_top = -62.565002
+offset_top = -59.899994
 offset_right = 34.879883
-offset_bottom = 63.434998
+offset_bottom = 61.100006
 theme_override_styles/normal = SubResource("StyleBoxFlat_47vbh")
 flat = true
 

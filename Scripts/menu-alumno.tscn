@@ -76,15 +76,15 @@ color = Color(0.44291076, 0.44291076, 0.44291073, 1)
 [node name="Fondo" type="TextureRect" parent="." unique_id=1714569909]
 layout_mode = 1
 offset_right = 1820.0
-offset_bottom = 1023.0
+offset_bottom = 980.0
 texture = ExtResource("1_we40w")
 
 [node name="Cuenta" type="Button" parent="Fondo" unique_id=579565907]
 layout_mode = 0
 offset_left = 13.0
-offset_top = 925.0
+offset_top = 886.0
 offset_right = 121.0
-offset_bottom = 1012.0
+offset_bottom = 969.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_fs2h7")
 icon = ExtResource("3_fs2h7")
 flat = true
@@ -95,10 +95,10 @@ environment = SubResource("Environment_fs2h7")
 
 [node name="Jugar" type="Button" parent="Fondo" unique_id=393762713]
 layout_mode = 0
-offset_left = 736.0
-offset_top = 515.0
-offset_right = 1081.0
-offset_bottom = 599.0
+offset_left = 760.0
+offset_top = 492.0
+offset_right = 1059.0
+offset_bottom = 567.0
 theme_override_fonts/font = ExtResource("2_fs2h7")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_goybn")
@@ -107,10 +107,10 @@ flat = true
 
 [node name="Minijuegos" type="Button" parent="Fondo" unique_id=481098337]
 layout_mode = 0
-offset_left = 734.0
-offset_top = 617.0
-offset_right = 1083.0
-offset_bottom = 700.0
+offset_left = 760.0
+offset_top = 592.0
+offset_right = 1059.0
+offset_bottom = 667.0
 theme_override_fonts/font = ExtResource("2_fs2h7")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_c7wbh")
@@ -119,10 +119,10 @@ flat = true
 
 [node name="Opciones" type="Button" parent="Fondo" unique_id=963211344]
 layout_mode = 0
-offset_left = 735.0
-offset_top = 721.0
-offset_right = 1082.0
-offset_bottom = 805.0
+offset_left = 760.0
+offset_top = 691.0
+offset_right = 1059.0
+offset_bottom = 766.0
 theme_override_fonts/font = ExtResource("2_fs2h7")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_cpw8e")
@@ -131,10 +131,10 @@ flat = true
 
 [node name="Extras" type="Button" parent="Fondo" unique_id=275746938]
 layout_mode = 0
-offset_left = 736.0
-offset_top = 827.0
-offset_right = 1079.0
-offset_bottom = 909.0
+offset_left = 760.0
+offset_top = 791.0
+offset_right = 1059.0
+offset_bottom = 866.0
 theme_override_fonts/font = ExtResource("2_fs2h7")
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_sr0qy")
@@ -143,9 +143,9 @@ flat = true
 
 [node name="Button" type="Button" parent="." unique_id=1063434423]
 layout_mode = 0
-offset_left = 15.0
+offset_left = 13.0
 offset_top = 9.0
-offset_right = 135.0
+offset_right = 133.0
 offset_bottom = 122.0
 icon = ExtResource("5_goybn")
 flat = true
@@ -156,7 +156,7 @@ expand_icon = true
 
 [node name="Transicion" type="Sprite2D" parent="." unique_id=1920562429]
 visible = false
-position = Vector2(917, 488.00012)
+position = Vector2(910, 493.00003)
 scale = Vector2(0.9484375, 0.90833336)
 texture = ExtResource("3_goybn")
 

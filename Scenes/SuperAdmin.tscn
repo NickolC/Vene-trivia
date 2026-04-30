@@ -1,8 +1,8 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://buyu1hf48g462"]
 
-[ext_resource type="Script" path="res://Scenes/super_admin.gd" id="1_script"]
-[ext_resource type="Texture2D" path="res://GFX/docente.png" id="2_bg"]
-[ext_resource type="FontFile" path="res://font/Minecraft.ttf" id="3_font"]
+[ext_resource type="Script" uid="uid://b8dxm0o423npl" path="res://Scenes/super_admin.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://dfyubnkjhps84" path="res://GFX/superadmin.png" id="2_q7lkx"]
+[ext_resource type="FontFile" uid="uid://cn65q6b06tv8u" path="res://font/Minecraft.ttf" id="3_font"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
 bg_color = Color(0.9529412, 0.8666667, 0.7176471, 0.94)
@@ -28,18 +28,6 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button"]
-bg_color = Color(0.88235295, 0.7019608, 0.49019608, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.5058824, 0.28627452, 0.23137255, 0.85)
-corner_radius_top_left = 6
-corner_radius_top_right = 6
-corner_radius_bottom_right = 6
-corner_radius_bottom_left = 6
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_input"]
 bg_color = Color(0.94509804, 0.83137256, 0.654902, 1)
 border_width_left = 2
@@ -51,6 +39,18 @@ corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button"]
+bg_color = Color(0.88235295, 0.7019608, 0.49019608, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5058824, 0.28627452, 0.23137255, 0.85)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_list"]
 bg_color = Color(0.94509804, 0.8666667, 0.73333335, 1)
@@ -64,7 +64,7 @@ corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 
-[node name="SuperAdmin" type="Control"]
+[node name="SuperAdmin" type="Control" unique_id=1150195134]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -73,16 +73,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_script")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=1282623834]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_bg")
+texture = ExtResource("2_q7lkx")
 
-[node name="Overlay" type="ColorRect" parent="."]
+[node name="Overlay" type="ColorRect" parent="." unique_id=814385726]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -91,9 +91,9 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.1)
 
-[node name="MainPanel" type="PanelContainer" parent="."]
+[node name="MainPanel" type="PanelContainer" parent="." unique_id=1610767471]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_left = 0.055
 anchor_top = 0.055
 anchor_right = 0.945
@@ -102,18 +102,18 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
 
-[node name="Margin" type="MarginContainer" parent="MainPanel"]
+[node name="Margin" type="MarginContainer" parent="MainPanel" unique_id=1364711200]
 layout_mode = 2
 theme_override_constants/margin_left = 28
 theme_override_constants/margin_top = 22
 theme_override_constants/margin_right = 28
 theme_override_constants/margin_bottom = 22
 
-[node name="VBox" type="VBoxContainer" parent="MainPanel/Margin"]
+[node name="VBox" type="VBoxContainer" parent="MainPanel/Margin" unique_id=1927602942]
 layout_mode = 2
 theme_override_constants/separation = 14
 
-[node name="Titulo" type="Label" parent="MainPanel/Margin/VBox"]
+[node name="Titulo" type="Label" parent="MainPanel/Margin/VBox" unique_id=1545092193]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
@@ -121,7 +121,7 @@ theme_override_font_sizes/font_size = 64
 text = "SUPER ADMIN"
 horizontal_alignment = 1
 
-[node name="Subtitulo" type="Label" parent="MainPanel/Margin/VBox"]
+[node name="Subtitulo" type="Label" parent="MainPanel/Margin/VBox" unique_id=1588875347]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.12, 0.12, 0.12, 1)
 theme_override_fonts/font = ExtResource("3_font")
@@ -129,30 +129,30 @@ theme_override_font_sizes/font_size = 30
 text = "Gestion de docentes y monitoreo de actividad"
 horizontal_alignment = 1
 
-[node name="Content" type="HBoxContainer" parent="MainPanel/Margin/VBox"]
+[node name="Content" type="HBoxContainer" parent="MainPanel/Margin/VBox" unique_id=525078324]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 16
 
-[node name="CrearDocentePanel" type="PanelContainer" parent="MainPanel/Margin/VBox/Content"]
+[node name="CrearDocentePanel" type="PanelContainer" parent="MainPanel/Margin/VBox/Content" unique_id=24656181]
 custom_minimum_size = Vector2(430, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_card")
 
-[node name="Margin" type="MarginContainer" parent="MainPanel/Margin/VBox/Content/CrearDocentePanel"]
+[node name="Margin" type="MarginContainer" parent="MainPanel/Margin/VBox/Content/CrearDocentePanel" unique_id=1883368399]
 layout_mode = 2
 theme_override_constants/margin_left = 18
 theme_override_constants/margin_top = 18
 theme_override_constants/margin_right = 18
 theme_override_constants/margin_bottom = 18
 
-[node name="CrearDocenteVBox" type="VBoxContainer" parent="MainPanel/Margin/VBox/Content/CrearDocentePanel/Margin"]
+[node name="CrearDocenteVBox" type="VBoxContainer" parent="MainPanel/Margin/VBox/Content/CrearDocentePanel/Margin" unique_id=1653405199]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="TituloCrear" type="Label" parent="MainPanel/Margin/VBox/Content/CrearDocentePanel/Margin/CrearDocenteVBox"]
+[node name="TituloCrear" type="Label" parent="MainPanel/Margin/VBox/Content/CrearDocentePanel/Margin/CrearDocenteVBox" unique_id=2003972766]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
 theme_override_fonts/font = ExtResource("3_font")
@@ -160,7 +160,7 @@ theme_override_font_sizes/font_size = 38
 text = "Crear Usuario Docente"
 horizontal_alignment = 1
 
-[node name="InputUsuarioDocente" type="LineEdit" parent="MainPanel/Margin/VBox/Content/CrearDocentePanel/Margin/CrearDocenteVBox"]
+[node name="InputUsuarioDocente" type="LineEdit" parent="MainPanel/Margin/VBox/Content/CrearDocentePanel/Margin/CrearDocenteVBox" unique_id=1693792649]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_colors/font_placeholder_color = Color(0.25, 0.25, 0.25, 0.8)
@@ -171,7 +171,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_input")
 theme_override_styles/focus = SubResource("StyleBoxFlat_input")
 placeholder_text = "Usuario docente"
 
-[node name="InputClaveDocente" type="LineEdit" parent="MainPanel/Margin/VBox/Content/CrearDocentePanel/Margin/CrearDocenteVBox"]
+[node name="InputClaveDocente" type="LineEdit" parent="MainPanel/Margin/VBox/Content/CrearDocentePanel/Margin/CrearDocenteVBox" unique_id=1588888987]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_colors/font_placeholder_color = Color(0.25, 0.25, 0.25, 0.8)
@@ -183,7 +183,7 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_input")
 placeholder_text = "Clave docente"
 secret = true
 
-[node name="CrearDocente" type="Button" parent="MainPanel/Margin/VBox/Content/CrearDocentePanel/Margin/CrearDocenteVBox"]
+[node name="CrearDocente" type="Button" parent="MainPanel/Margin/VBox/Content/CrearDocentePanel/Margin/CrearDocenteVBox" unique_id=703518942]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
@@ -191,22 +191,22 @@ theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_button")
 text = "CREAR DOCENTE"
 
-[node name="EstadoOperacion" type="Label" parent="MainPanel/Margin/VBox/Content/CrearDocentePanel/Margin/CrearDocenteVBox"]
+[node name="EstadoOperacion" type="Label" parent="MainPanel/Margin/VBox/Content/CrearDocentePanel/Margin/CrearDocenteVBox" unique_id=1160736528]
+custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 22
-text = ""
 autowrap_mode = 2
 
-[node name="DocentesLabel" type="Label" parent="MainPanel/Margin/VBox/Content/CrearDocentePanel/Margin/CrearDocenteVBox"]
+[node name="DocentesLabel" type="Label" parent="MainPanel/Margin/VBox/Content/CrearDocentePanel/Margin/CrearDocenteVBox" unique_id=812852099]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 28
 text = "Docentes Registrados"
 
-[node name="ListaDocentes" type="ItemList" parent="MainPanel/Margin/VBox/Content/CrearDocentePanel/Margin/CrearDocenteVBox"]
+[node name="ListaDocentes" type="ItemList" parent="MainPanel/Margin/VBox/Content/CrearDocentePanel/Margin/CrearDocenteVBox" unique_id=1365714526]
 custom_minimum_size = Vector2(0, 420)
 layout_mode = 2
 size_flags_vertical = 3
@@ -216,24 +216,24 @@ theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/panel = SubResource("StyleBoxFlat_list")
 
-[node name="ActividadPanel" type="PanelContainer" parent="MainPanel/Margin/VBox/Content"]
+[node name="ActividadPanel" type="PanelContainer" parent="MainPanel/Margin/VBox/Content" unique_id=1506124969]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_card")
 
-[node name="Margin" type="MarginContainer" parent="MainPanel/Margin/VBox/Content/ActividadPanel"]
+[node name="Margin" type="MarginContainer" parent="MainPanel/Margin/VBox/Content/ActividadPanel" unique_id=1539258712]
 layout_mode = 2
 theme_override_constants/margin_left = 18
 theme_override_constants/margin_top = 18
 theme_override_constants/margin_right = 18
 theme_override_constants/margin_bottom = 18
 
-[node name="ActividadVBox" type="VBoxContainer" parent="MainPanel/Margin/VBox/Content/ActividadPanel/Margin"]
+[node name="ActividadVBox" type="VBoxContainer" parent="MainPanel/Margin/VBox/Content/ActividadPanel/Margin" unique_id=16384292]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="TituloActividad" type="Label" parent="MainPanel/Margin/VBox/Content/ActividadPanel/Margin/ActividadVBox"]
+[node name="TituloActividad" type="Label" parent="MainPanel/Margin/VBox/Content/ActividadPanel/Margin/ActividadVBox" unique_id=1235427646]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
@@ -241,7 +241,7 @@ theme_override_font_sizes/font_size = 38
 text = "Actividad del Sistema"
 horizontal_alignment = 1
 
-[node name="ActualizarActividad" type="Button" parent="MainPanel/Margin/VBox/Content/ActividadPanel/Margin/ActividadVBox"]
+[node name="ActualizarActividad" type="Button" parent="MainPanel/Margin/VBox/Content/ActividadPanel/Margin/ActividadVBox" unique_id=1702174175]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
@@ -249,21 +249,19 @@ theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_button")
 text = "ACTUALIZAR ACTIVIDAD"
 
-[node name="ActividadTexto" type="RichTextLabel" parent="MainPanel/Margin/VBox/Content/ActividadPanel/Margin/ActividadVBox"]
+[node name="ActividadTexto" type="RichTextLabel" parent="MainPanel/Margin/VBox/Content/ActividadPanel/Margin/ActividadVBox" unique_id=1384730787]
 custom_minimum_size = Vector2(0, 460)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/normal_font = ExtResource("3_font")
 theme_override_font_sizes/normal_font_size = 24
-bbcode_enabled = false
-scroll_active = true
 
-[node name="Actions" type="HBoxContainer" parent="MainPanel/Margin/VBox"]
+[node name="Actions" type="HBoxContainer" parent="MainPanel/Margin/VBox" unique_id=405238516]
 layout_mode = 2
 alignment = 1
 
-[node name="VolverLogin" type="Button" parent="MainPanel/Margin/VBox/Actions"]
+[node name="VolverLogin" type="Button" parent="MainPanel/Margin/VBox/Actions" unique_id=1108390858]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")

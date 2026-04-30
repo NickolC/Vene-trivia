@@ -179,18 +179,31 @@ clip_text = true
 icon_alignment = 1
 
 [node name="Button2" type="Button" parent="CanvasLayer2/GridContainer" unique_id=532316527]
+clip_contents = true
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_1boc4")
+button_mask = 0
+autowrap_trim_flags = 192
+clip_text = true
+icon_alignment = 1
 
 [node name="Button3" type="Button" parent="CanvasLayer2/GridContainer" unique_id=2039171609]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_1boc4")
+button_mask = 0
+autowrap_trim_flags = 192
+clip_text = true
+icon_alignment = 1
 
 [node name="Button4" type="Button" parent="CanvasLayer2/GridContainer" unique_id=658465523]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_1boc4")
+button_mask = 0
+autowrap_trim_flags = 192
+clip_text = true
+icon_alignment = 1
 
 [node name="Timer" type="Timer" parent="CanvasLayer2" unique_id=837652393]
 wait_time = 15.0
@@ -491,8 +504,8 @@ process_mode = 3
 visible = false
 
 [node name="ColorRect" type="ColorRect" parent="Menupausa" unique_id=2138301330]
-offset_right = 1920.0
-offset_bottom = 1080.0
+offset_right = 1821.0
+offset_bottom = 981.0
 color = Color(0, 0, 0, 0.7764706)
 
 [node name="CenterContainer" type="CenterContainer" parent="Menupausa" unique_id=963705912]
@@ -555,11 +568,10 @@ icon_alignment = 1
 
 [node name="confrimar" type="CanvasLayer" parent="." unique_id=1269032812]
 process_mode = 3
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="confrimar" unique_id=398246538]
-offset_right = 1920.0
-offset_bottom = 1080.0
+offset_right = 1821.0
+offset_bottom = 980.0
 color = Color(0, 0, 0, 0.7764706)
 
 [node name="CenterContainer" type="CenterContainer" parent="confrimar" unique_id=820604043]
