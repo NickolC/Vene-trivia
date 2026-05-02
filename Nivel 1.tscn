@@ -74,9 +74,12 @@ grow_vertical = 2
 script = ExtResource("1_q4lj4")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1801597989]
-layout_mode = 0
-offset_right = 1821.0
-offset_bottom = 981.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_suadl")
 
 [node name="capapersonaje" type="CanvasLayer" parent="." unique_id=315670599]
@@ -504,8 +507,11 @@ process_mode = 3
 visible = false
 
 [node name="ColorRect" type="ColorRect" parent="Menupausa" unique_id=2138301330]
-offset_right = 1821.0
-offset_bottom = 981.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 0, 0, 0.7764706)
 
 [node name="CenterContainer" type="CenterContainer" parent="Menupausa" unique_id=963705912]
@@ -568,10 +574,13 @@ icon_alignment = 1
 
 [node name="confrimar" type="CanvasLayer" parent="." unique_id=1269032812]
 process_mode = 3
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="confrimar" unique_id=398246538]
-offset_right = 1821.0
-offset_bottom = 980.0
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.9990001
+offset_bottom = -0.019042969
 color = Color(0, 0, 0, 0.7764706)
 
 [node name="CenterContainer" type="CenterContainer" parent="confrimar" unique_id=820604043]
@@ -670,8 +679,11 @@ layer = 10
 visible = false
 
 [node name="ColorRect" type="ColorRect" parent="PantallaResultados" unique_id=1556556116]
-offset_right = 1922.0
-offset_bottom = 1082.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 0.7764706)
 

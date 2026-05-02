@@ -96,9 +96,12 @@ grow_vertical = 2
 script = ExtResource("1_n1gh6")
 
 [node name="TextureRect3" type="TextureRect" parent="." unique_id=46494454]
-layout_mode = 0
-offset_right = 1820.0
-offset_bottom = 980.0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.9990001
+anchor_bottom = 0.9990001
+offset_right = 0.82092285
+offset_bottom = -0.019042969
 texture = ExtResource("1_7prnm")
 
 [node name="Configuraciones" type="Label" parent="TextureRect3" unique_id=1353334368]
@@ -470,10 +473,12 @@ horizontal_alignment = 1
 environment = SubResource("Environment_gbyod")
 
 [node name="TextureRect4" type="TextureRect" parent="." unique_id=1848037378]
-visible = false
-layout_mode = 0
-offset_right = 1820.0
-offset_bottom = 980.0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.9990001
+anchor_bottom = 0.9990001
+offset_right = 0.82092285
+offset_bottom = -0.019042969
 texture = ExtResource("9_jlghd")
 
 [node name="Volvermenu" type="Button" parent="TextureRect4" unique_id=2142099095]
