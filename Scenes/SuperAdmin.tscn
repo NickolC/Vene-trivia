@@ -191,6 +191,14 @@ theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_button")
 text = "CREAR DOCENTE"
 
+[node name="EliminarDocente" type="Button" parent="MainPanel/Margin/VBox/Content/CrearDocentePanel/Margin/CrearDocenteVBox" unique_id=1833102244]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_button")
+text = "ELIMINAR DOCENTE"
+
 [node name="EstadoOperacion" type="Label" parent="MainPanel/Margin/VBox/Content/CrearDocentePanel/Margin/CrearDocenteVBox" unique_id=1160736528]
 custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
@@ -257,9 +265,120 @@ theme_override_colors/default_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/normal_font = ExtResource("3_font")
 theme_override_font_sizes/normal_font_size = 24
 
+[node name="AlumnosCanvas" type="PanelContainer" parent="MainPanel/Margin/VBox" unique_id=1693116008]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_card")
+
+[node name="Margin" type="MarginContainer" parent="MainPanel/Margin/VBox/AlumnosCanvas" unique_id=212430175]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 18
+
+[node name="AlumnosVBox" type="VBoxContainer" parent="MainPanel/Margin/VBox/AlumnosCanvas/Margin" unique_id=567262084]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TituloAlumnos" type="Label" parent="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox" unique_id=1900350505]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 42
+text = "GESTION DE ALUMNOS"
+horizontal_alignment = 1
+
+[node name="SubtituloAlumnos" type="Label" parent="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox" unique_id=386318892]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.12, 0.12, 0.12, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 24
+text = "Ver credenciales y ocultar/restaurar alumnos sin borrar la base de datos"
+horizontal_alignment = 1
+
+[node name="ListaAlumnosAdmin" type="ItemList" parent="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox" unique_id=1343028997]
+custom_minimum_size = Vector2(0, 320)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/panel = SubResource("StyleBoxFlat_list")
+
+[node name="DetalleAlumno" type="Label" parent="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox" unique_id=1237306320]
+custom_minimum_size = Vector2(10, 90)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 22
+text = "Selecciona un alumno para ver usuario y clave."
+autowrap_mode = 2
+
+[node name="AlumnosActions" type="HBoxContainer" parent="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox" unique_id=819562254]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="BtnOcultarRegistro" type="Button" parent="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox/AlumnosActions" unique_id=1217563748]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_button")
+text = "OCULTAR REGISTRO"
+
+[node name="BtnRestaurarRegistro" type="Button" parent="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox/AlumnosActions" unique_id=297663843]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_button")
+text = "RESTAURAR"
+
+[node name="BtnToggleInactivos" type="Button" parent="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox/AlumnosActions" unique_id=1308822559]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_button")
+text = "MOSTRAR INACTIVOS"
+
+[node name="BtnRefrescarAlumnos" type="Button" parent="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox" unique_id=2118408876]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_button")
+text = "ACTUALIZAR"
+
+[node name="EstadoAlumnos" type="Label" parent="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox" unique_id=1572943904]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 22
+autowrap_mode = 2
+
+[node name="BtnVolverPrincipal" type="Button" parent="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox" unique_id=1623318022]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_button")
+text = "VOLVER AL PANEL PRINCIPAL"
+
 [node name="Actions" type="HBoxContainer" parent="MainPanel/Margin/VBox" unique_id=405238516]
 layout_mode = 2
 alignment = 1
+theme_override_constants/separation = 12
+
+[node name="GestionarAlumnos" type="Button" parent="MainPanel/Margin/VBox/Actions" unique_id=1701234567]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_button")
+text = "VER ALUMNOS"
 
 [node name="VolverLogin" type="Button" parent="MainPanel/Margin/VBox/Actions" unique_id=1108390858]
 layout_mode = 2
@@ -270,5 +389,13 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_button")
 text = "VOLVER A LOGIN"
 
 [connection signal="pressed" from="MainPanel/Margin/VBox/Content/CrearDocentePanel/Margin/CrearDocenteVBox/CrearDocente" to="." method="_on_crear_docente_pressed"]
+[connection signal="pressed" from="MainPanel/Margin/VBox/Content/CrearDocentePanel/Margin/CrearDocenteVBox/EliminarDocente" to="." method="_on_eliminar_docente_pressed"]
 [connection signal="pressed" from="MainPanel/Margin/VBox/Content/ActividadPanel/Margin/ActividadVBox/ActualizarActividad" to="." method="_on_actualizar_actividad_pressed"]
+[connection signal="pressed" from="MainPanel/Margin/VBox/Actions/GestionarAlumnos" to="." method="_on_gestionar_alumnos_pressed"]
 [connection signal="pressed" from="MainPanel/Margin/VBox/Actions/VolverLogin" to="." method="_on_volver_login_pressed"]
+[connection signal="item_selected" from="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox/ListaAlumnosAdmin" to="." method="_on_lista_alumnos_admin_item_selected"]
+[connection signal="pressed" from="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox/AlumnosActions/BtnOcultarRegistro" to="." method="_on_btn_ocultar_registro_pressed"]
+[connection signal="pressed" from="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox/AlumnosActions/BtnRestaurarRegistro" to="." method="_on_btn_restaurar_registro_pressed"]
+[connection signal="pressed" from="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox/AlumnosActions/BtnToggleInactivos" to="." method="_on_btn_toggle_inactivos_pressed"]
+[connection signal="pressed" from="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox/BtnRefrescarAlumnos" to="." method="_on_btn_refrescar_alumnos_pressed"]
+[connection signal="pressed" from="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox/BtnVolverPrincipal" to="." method="_on_btn_volver_principal_pressed"]

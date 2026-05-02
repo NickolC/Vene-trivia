@@ -1,0 +1,891 @@
+[
+  {
+    "pregunta": "¿Cómo se llama el arquitecto que diseñó la Ciudad Universitaria de Caracas?",
+    "tipo": "texto",
+    "opciones": [
+      "Carlos Raúl Villanueva",
+      "Leonardo Da Vinci",
+      "Señor Ladrillo",
+      "Arquitecto Arepa"
+    ],
+    "correcta": 0,
+    "explicacion": "Carlos Raúl Villanueva fue el arquitecto que diseñó la Ciudad Universitaria de Caracas, también conocida como la UCV. Fue un genio que mezcló arte y arquitectura.",
+    "dato_curioso": "Carlos Raúl Villanueva nació en Inglaterra pero era venezolano de corazón. Estudió en París y luego dedicó su vida a crear cosas hermosas en Venezuela."
+  },
+  {
+    "pregunta": "¿Qué organización muy importante declaró la UCV Patrimonio de la Humanidad?",
+    "tipo": "imagen",
+    "imagen_descripcion": "El logo de la UNESCO sobre un fondo azul, con la fachada de la UCV al fondo y una cinta que dice 'PATRIMONIO DE LA HUMANIDAD 2000'. Estilo ilustración oficial y colorida.",
+    "opciones": [
+      "El Club de los Dinosaurios",
+      "La UNESCO",
+      "El Ministerio de Arepas",
+      "La Liga de la Justicia"
+    ],
+    "correcta": 1,
+    "explicacion": "La UNESCO, que es la organización de la ONU que protege los tesoros culturales del mundo, declaró la UCV Patrimonio de la Humanidad en el año 2000.",
+    "dato_curioso": "Ser Patrimonio de la Humanidad significa que ese lugar le pertenece a todos los seres humanos del planeta y debe ser protegido para siempre. ¡La UCV es un tesoro de toda la humanidad!"
+  },
+  {
+    "pregunta": "¿En qué año fue declarada la UCV Patrimonio de la Humanidad?",
+    "tipo": "texto",
+    "opciones": [
+      "En el año 2000",
+      "En 1492",
+      "En el año 3000",
+      "En 1810"
+    ],
+    "correcta": 0,
+    "explicacion": "La UCV fue declarada Patrimonio de la Humanidad por la UNESCO en el año 2000. Fue un reconocimiento enorme para Venezuela y para su arquitectura.",
+    "dato_curioso": "La UCV es uno de los pocos edificios universitarios en el mundo que tiene ese reconocimiento de la UNESCO. ¡Es una de las universidades más especiales del planeta!"
+  },
+  {
+    "pregunta": "¿Cuántos artistas integró Villanueva en el diseño de la Ciudad Universitaria?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Una representación colorida de 39 siluetas de artistas distintos con paletas de pintura, esculturas y lienzos alrededor de la fachada de la UCV. El número '39' resaltado en grande y dorado. Estilo festivo.",
+    "opciones": [
+      "Solo uno",
+      "39 artistas",
+      "Dos artistas",
+      "Cien mil artistas"
+    ],
+    "correcta": 1,
+    "explicacion": "Carlos Raúl Villanueva integró a 39 artistas diferentes en el diseño de la Ciudad Universitaria. Pinturas, esculturas y murales de todos ellos están en los edificios.",
+    "dato_curioso": "Villanueva quería que la universidad fuera como un museo al aire libre. Por eso invitó a artistas de Venezuela y del mundo para decorar cada rincón del campus."
+  },
+  {
+    "pregunta": "¿Qué cosa especial tiene el techo del Aula Magna de la UCV?",
+    "tipo": "texto",
+    "opciones": [
+      "Nubes acústicas flotantes",
+      "Estrellas de neón parpadeantes",
+      "Un techo de queso gruyere",
+      "Globos de helio gigantes"
+    ],
+    "correcta": 0,
+    "explicacion": "El Aula Magna tiene en su techo unas 'nubes acústicas', que son formas extrañas y coloridas que flotan en el techo y ayudan a que el sonido se escuche perfecto dentro.",
+    "dato_curioso": "Las nubes acústicas no solo son bonitas, ¡también son inteligentes! Están colocadas de manera exacta para que el sonido de los conciertos y conferencias llegue bien a todos los asientos."
+  },
+  {
+    "pregunta": "¿Quién diseñó las famosas nubes acústicas del Aula Magna?",
+    "tipo": "imagen",
+    "imagen_descripcion": "El interior del Aula Magna de la UCV con sus coloridas nubes acústicas flotando en el techo, iluminadas con luz suave. Una pequeña fotografía de Alexander Calder con bigote y sonrisa en la esquina. Ilustración artística.",
+    "opciones": [
+      "Un panadero famoso",
+      "Alexander Calder",
+      "Un niño de 5 años",
+      "Una computadora"
+    ],
+    "correcta": 1,
+    "explicacion": "Alexander Calder, un artista norteamericano muy famoso, diseñó las nubes acústicas del Aula Magna. Son una de sus obras más conocidas.",
+    "dato_curioso": "Alexander Calder era famoso por crear móviles, que son esculturas que se mueven con el viento. Las nubes del Aula Magna son fijas, pero parecen estar flotando en el aire."
+  },
+  {
+    "pregunta": "¿Cómo se llama el arte que parece moverse cuando lo miras?",
+    "tipo": "texto",
+    "opciones": [
+      "Arte cinético",
+      "Arte dormido",
+      "Arte de acuarela bailarina",
+      "Arte de dinosaurios"
+    ],
+    "correcta": 0,
+    "explicacion": "El arte cinético es un tipo de arte que parece moverse o cambiar cuando lo miras. Usan colores, líneas y formas que engañan a tus ojos de una manera mágica.",
+    "dato_curioso": "La palabra 'cinético' viene del griego y significa 'movimiento'. Los artistas cinéticos son como magos que hacen que las cosas estáticas parezcan vivas."
+  },
+  {
+    "pregunta": "¿Cómo se llama uno de los artistas cinéticos venezolanos más famosos del mundo?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un retrato amigable de Jesús Soto con una de sus obras de fondo: tubos metálicos colgantes que crean efectos visuales de movimiento. El fondo tiene vibraciones de colores. Estilo ilustración artística venezolana.",
+    "opciones": [
+      "Miguel Ángel",
+      "Jesús Soto",
+      "Pablo Picasso",
+      "Señor Pincel"
+    ],
+    "correcta": 1,
+    "explicacion": "Jesús Soto es uno de los artistas cinéticos venezolanos más famosos del mundo. Sus obras están en los mejores museos del planeta.",
+    "dato_curioso": "Jesús Soto nació en Ciudad Bolívar en 1923. De niño pintaba guitarras para ganarse la vida. ¡Nadie imaginaba que ese niño se convertiría en uno de los artistas más famosos del planeta!"
+  },
+  {
+    "pregunta": "¿Dónde nació el artista cinético venezolano Jesús Soto?",
+    "tipo": "texto",
+    "opciones": [
+      "En Caracas",
+      "En Ciudad Bolívar",
+      "En Marte",
+      "En el fondo del Orinoco"
+    ],
+    "correcta": 1,
+    "explicacion": "Jesús Soto nació en Ciudad Bolívar, una hermosa ciudad venezolana a orillas del río Orinoco. De allí salió para conquistar los museos del mundo.",
+    "dato_curioso": "Ciudad Bolívar tiene un museo dedicado a Jesús Soto llamado Museo de Arte Moderno Jesús Soto. Es uno de los museos más importantes de Venezuela."
+  },
+  {
+    "pregunta": "¿En qué ciudades del mundo se pueden ver obras de Jesús Soto?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un mapa del mundo con estrellas doradas sobre París, Nueva York y Tokyo, con pequeñas imágenes de obras de Soto cerca de cada estrella. Una flecha desde Venezuela apunta a esas ciudades. Estilo mapa educativo infantil.",
+    "opciones": [
+      "Solo en Maracaibo",
+      "En París, Nueva York y Tokyo",
+      "Solo en la Luna",
+      "En el Polo Sur"
+    ],
+    "correcta": 1,
+    "explicacion": "Las obras de Jesús Soto están en museos de París, Nueva York, Tokyo y muchas otras ciudades del mundo. Es uno de los artistas venezolanos más internacionales.",
+    "dato_curioso": "Soto vivió muchos años en París, Francia, pero nunca olvidó Venezuela. Muchas de sus obras más importantes las donó a museos venezolanos para que todos pudieran verlas."
+  },
+  {
+    "pregunta": "¿Qué otro artista cinético venezolano es tan famoso como Jesús Soto?",
+    "tipo": "texto",
+    "opciones": [
+      "Carlos Cruz-Diez",
+      "Juan Pincelote",
+      "El Señor Rayas",
+      "Colorín Colorado"
+    ],
+    "correcta": 0,
+    "explicacion": "Carlos Cruz-Diez es otro artista cinético venezolano muy famoso. Sus obras llenas de franjas de colores se pueden ver en todo el mundo.",
+    "dato_curioso": "Cruz-Diez y Soto eran amigos y los dos eran venezolanos. Juntos pusieron a Venezuela en el mapa del arte moderno mundial. ¡Qué orgullo!"
+  },
+  {
+    "pregunta": "¿Qué cosa especial pasa con las obras de Carlos Cruz-Diez?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Una obra de Cruz-Diez hecha de franjas de colores vibrantes que cambian de color según el ángulo. Dos personas mirando desde lados diferentes ven colores distintos. Flechas muestran el fenómeno. Estilo ilustración artística.",
+    "opciones": [
+      "Se mueven solas de noche",
+      "Sus colores cambian según el ángulo desde donde los miras",
+      "Se caen si las miras mucho",
+      "Desaparecen con la lluvia"
+    ],
+    "correcta": 1,
+    "explicacion": "Las obras de Cruz-Diez son mágicas porque los colores cambian dependiendo desde dónde las mires. Si te mueves, ¡parece que la pintura se transforma!",
+    "dato_curioso": "Cruz-Diez estudió toda su vida cómo los ojos y el cerebro perciben los colores. Sus obras son experimentos científicos disfrazados de arte. ¡Ciencia y arte al mismo tiempo!"
+  },
+  {
+    "pregunta": "¿Qué quiso lograr Villanueva al mezclar arte y educación en la UCV?",
+    "tipo": "texto",
+    "opciones": [
+      "Que el arte y la educación fueran inseparables",
+      "Que los estudiantes dibujaran en vez de estudiar",
+      "Que los profesores fueran artistas famosos",
+      "Que la universidad fuera un museo sin clases"
+    ],
+    "correcta": 0,
+    "explicacion": "Villanueva quería que el arte y la educación no fueran cosas separadas sino una sola. Que los estudiantes aprendieran rodeados de belleza todos los días.",
+    "dato_curioso": "Villanueva decía que los estudiantes aprenden mejor cuando están en un ambiente bello. Por eso cada pasillo, jardín y salón de la UCV tiene arte alrededor."
+  },
+  {
+    "pregunta": "¿Qué es el Aula Magna de la UCV?",
+    "tipo": "imagen",
+    "imagen_descripcion": "El interior del Aula Magna de la UCV con sus filas de butacas rojas, el escenario iluminado y las nubes acústicas de colores en el techo. Gente sentada escuchando un concierto. Estilo ilustración cálida y artística.",
+    "opciones": [
+      "Un comedor universitario enorme",
+      "El salón principal donde se dan conciertos y actos importantes",
+      "Un campo de béisbol techado",
+      "Una piscina de arte"
+    ],
+    "correcta": 1,
+    "explicacion": "El Aula Magna es el salón más importante de la UCV, donde se hacen conciertos, conferencias y ceremonias. Es famosa en el mundo por su belleza y su acústica perfecta.",
+    "dato_curioso": "El Aula Magna fue inaugurada en 1954 y desde entonces ha sido escenario de los conciertos más importantes de Venezuela. ¡Hasta Gustavo Dudamel ha dirigido allí!"
+  },
+  {
+    "pregunta": "¿Qué significa que la UCV sea Patrimonio de la Humanidad?",
+    "tipo": "texto",
+    "opciones": [
+      "Que es de todos los seres humanos y debe protegerse para siempre",
+      "Que solo los venezolanos pueden entrar",
+      "Que tiene los mejores chocolates del mundo",
+      "Que está hecha de materiales del espacio"
+    ],
+    "correcta": 0,
+    "explicacion": "Ser Patrimonio de la Humanidad significa que ese lugar es tan especial que pertenece a todos los seres humanos del mundo y hay que protegerlo para las generaciones futuras.",
+    "dato_curioso": "Solo hay 1.157 sitios Patrimonio de la Humanidad en todo el mundo. Venezuela tiene varios, incluyendo la UCV y el Parque Nacional Canaima donde está el Salto Ángel."
+  },
+  {
+    "pregunta": "¿En qué período fue construida la Ciudad Universitaria de Caracas?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Una línea del tiempo colorida mostrando los años 1940-1960 con imágenes de la construcción de la UCV: trabajadores, andamios y edificios levantándose. El año 1954 marcado como la inauguración. Estilo infográfico infantil.",
+    "opciones": [
+      "En la Edad Media",
+      "Entre los años 1940 y 1960",
+      "En el año 1492",
+      "Durante la prehistoria"
+    ],
+    "correcta": 1,
+    "explicacion": "La Ciudad Universitaria fue construida entre los años 1940 y 1960. Fue un proyecto gigantesco que tardó muchos años en completarse.",
+    "dato_curioso": "Villanueva trabajó en la UCV durante más de 20 años. Fue su obra más grande e importante, y la que lo hizo famoso en todo el mundo."
+  },
+  {
+    "pregunta": "¿Qué tipo de arte hacía Carlos Cruz-Diez con los colores?",
+    "tipo": "texto",
+    "opciones": [
+      "Arte que cambia de color según la luz y el ángulo de visión",
+      "Arte que se pinta solo en la oscuridad",
+      "Arte que desaparece cuando lo tocas",
+      "Arte que canta cuando lo miras"
+    ],
+    "correcta": 0,
+    "explicacion": "Cruz-Diez estudiaba cómo los colores cambian con la luz. Sus obras parecen cambiar de color dependiendo de dónde estés parado. Es arte que engaña a los ojos.",
+    "dato_curioso": "Cruz-Diez vivió hasta los 95 años y nunca dejó de crear arte. Fue uno de los artistas más longevos y productivos de Venezuela."
+  },
+  {
+    "pregunta": "¿Dónde están expuestas las obras de Jesús Soto en el mundo?",
+    "tipo": "imagen",
+    "imagen_descripcion": "El interior de un museo moderno con obras de Soto: tubos colgantes de metal creando efectos visuales. Visitantes de diferentes países mirando asombrados. El cartel del museo dice 'COLECCIÓN SOTO'. Estilo ilustración artística.",
+    "opciones": [
+      "Solo en el sótano de su casa",
+      "En museos de París, Nueva York, Tokyo y muchos más países",
+      "Solo en Ciudad Bolívar",
+      "En el fondo del océano"
+    ],
+    "correcta": 1,
+    "explicacion": "Las obras de Soto están en los museos más famosos del mundo, como el Museo de Arte Moderno de París y el MoMA de Nueva York. Venezuela tiene artistas de clase mundial.",
+    "dato_curioso": "El Museo Soto en Ciudad Bolívar tiene más de 200 obras del artista. Si visitas esa ciudad, puedes ver una colección enorme de su arte en un edificio diseñado especialmente para él."
+  },
+  {
+    "pregunta": "¿Cuándo fue inaugurada la Ciudad Universitaria de Caracas aproximadamente?",
+    "tipo": "texto",
+    "opciones": [
+      "En 1954",
+      "En el año 1800",
+      "En 2010",
+      "En 1492"
+    ],
+    "correcta": 0,
+    "explicacion": "La Ciudad Universitaria de Caracas fue inaugurada en 1954. Fue un momento muy importante para Venezuela y para la arquitectura latinoamericana.",
+    "dato_curioso": "En 1954, Venezuela era gobernada por el general Marcos Pérez Jiménez. Fue durante su gobierno que se inauguró la UCV, aunque el diseño y la visión eran de Villanueva."
+  },
+  {
+    "pregunta": "¿Qué tiene de especial la Plaza Cubierta de la UCV?",
+    "tipo": "imagen",
+    "imagen_descripcion": "La Plaza Cubierta de la UCV con su techo ondulado que crea sombra, murales de colores en las paredes y estudiantes caminando entre obras de arte. Luz natural filtrándose por aberturas. Estilo acuarela artística.",
+    "opciones": [
+      "Que es la plaza más fría del mundo",
+      "Que es un espacio techado lleno de murales y esculturas por donde pasan los estudiantes",
+      "Que tiene una piscina de colores",
+      "Que allí hay robots bailando"
+    ],
+    "correcta": 1,
+    "explicacion": "La Plaza Cubierta es un espacio con techo donde los estudiantes caminan y se encuentran, rodeados de murales y obras de arte en cada pared. Es arte en la vida cotidiana.",
+    "dato_curioso": "Villanueva diseñó la Plaza Cubierta para que los estudiantes no se mojaran con la lluvia de Caracas mientras iban de clase en clase. ¡Arte funcional y útil al mismo tiempo!"
+  },
+  {
+    "pregunta": "¿Cómo se llama la universidad donde está toda esa obra de arte?",
+    "tipo": "texto",
+    "opciones": [
+      "Universidad Central de Venezuela (UCV)",
+      "Universidad de la Arepa",
+      "Escuela de Arte Mágico",
+      "Universidad Villanueva Grande"
+    ],
+    "correcta": 0,
+    "explicacion": "Todo ese arte maravilloso está en la Universidad Central de Venezuela, conocida como la UCV. Es la universidad más grande e importante del país.",
+    "dato_curioso": "La UCV fue fundada en 1721, ¡hace más de 300 años! Es una de las universidades más antiguas de América del Sur."
+  },
+  {
+    "pregunta": "¿Qué hizo Villanueva único entre los arquitectos del siglo XX?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Villanueva en el centro de la imagen, rodeado de pintores, escultores y artistas de todos tipos, todos colaborando en maquetas y planos de la UCV. Todos sonríen y crean juntos. Estilo ilustración cálida y colaborativa.",
+    "opciones": [
+      "Que construía sin usar ladrillos",
+      "Que integró a 39 artistas dentro de su diseño arquitectónico",
+      "Que hacía edificios que volaban",
+      "Que construía con chocolate"
+    ],
+    "correcta": 1,
+    "explicacion": "Villanueva fue único porque no solo diseñó edificios bonitos, sino que invitó a 39 artistas a ser parte del diseño. Arte y arquitectura fueron una sola cosa.",
+    "dato_curioso": "Antes de Villanueva, los artistas decoraban los edificios después de construirlos. Villanueva fue el primero en incluir el arte en los planos del edificio desde el principio."
+  },
+  {
+    "pregunta": "¿Por qué el arte cinético es tan especial?",
+    "tipo": "texto",
+    "opciones": [
+      "Porque parece estar vivo y en movimiento aunque esté quieto",
+      "Porque se puede comer",
+      "Porque se hace solo con pincel de gato",
+      "Porque vuela por las noches"
+    ],
+    "correcta": 0,
+    "explicacion": "El arte cinético es especial porque engaña a tus ojos. Aunque la obra esté quieta y no se mueva de verdad, tus ojos la ven como si estuviera en movimiento. ¡Es magia visual!",
+    "dato_curioso": "El cerebro humano es fácil de engañar con ciertos patrones de colores y líneas. Los artistas cinéticos estudiaron cómo funciona la visión para crear esas ilusiones tan asombrosas."
+  },
+  {
+    "pregunta": "¿Qué países tienen obras de Soto y Cruz-Diez en sus museos más importantes?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un collage de los logos o fachadas del Museo Pompidou de París, el MoMA de Nueva York y un museo de Tokyo, con obras de arte cinético venezolano colgadas dentro. Mapas pequeños muestran los países. Estilo educativo y colorido.",
+    "opciones": [
+      "Solo Venezuela",
+      "Francia, Estados Unidos, Japón y muchos más",
+      "Solo Colombia y Brasil",
+      "Solo el planeta Marte"
+    ],
+    "correcta": 1,
+    "explicacion": "Las obras de Soto y Cruz-Diez están en museos de Francia, Estados Unidos, Japón y muchos otros países. Los venezolanos pusieron su arte en todo el planeta.",
+    "dato_curioso": "El Centro Pompidou de París, uno de los museos más visitados del mundo, tiene obras de Jesús Soto en su colección permanente. ¡Venezuela está en el corazón de París!"
+  },
+  {
+    "pregunta": "¿Qué es una escultura cinética?",
+    "tipo": "texto",
+    "opciones": [
+      "Una escultura que parece moverse o realmente se mueve",
+      "Una escultura de comida",
+      "Una escultura que canta canciones",
+      "Una escultura que explota"
+    ],
+    "correcta": 0,
+    "explicacion": "Una escultura cinética es una obra de arte tridimensional que parece estar en movimiento, o que realmente se mueve con el viento o con un motor.",
+    "dato_curioso": "Soto creó unas esculturas llamadas 'Penetrables' donde puedes entrar caminando y quedas rodeado de miles de tiras de plástico que se mueven a tu alrededor. ¡Te conviertes en parte de la obra!"
+  },
+  {
+    "pregunta": "¿Cómo se llaman las obras de Jesús Soto en las que puedes entrar?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Una persona caminando dentro de un 'Penetrable' de Jesús Soto: miles de tiras amarillas y azules colgando que rodean al visitante. La persona tiene cara de asombro y alegría. Fondo exterior de museo. Estilo ilustración artística vibrante.",
+    "opciones": [
+      "Los Entrables",
+      "Los Penetrables",
+      "Las Casas Mágicas",
+      "Los Túneles de Colores"
+    ],
+    "correcta": 1,
+    "explicacion": "Los 'Penetrables' de Soto son esculturas gigantes hechas de miles de tiras colgantes en las que puedes entrar y caminar. Te vuelves parte de la obra de arte.",
+    "dato_curioso": "Los Penetrables de Soto se han instalado en plazas públicas, museos y hasta en la calle. Cualquier persona puede entrar y experimentar el arte en su cuerpo."
+  },
+  {
+    "pregunta": "¿Cuál fue el sueño más grande de Villanueva con la UCV?",
+    "tipo": "texto",
+    "opciones": [
+      "Que la universidad fuera el lugar donde el arte y el saber vivieran juntos",
+      "Que fuera la universidad más grande del mundo",
+      "Que tuviera el mejor equipo de béisbol",
+      "Que los estudiantes vivieran dentro de los cuadros"
+    ],
+    "correcta": 0,
+    "explicacion": "El gran sueño de Villanueva era crear una universidad donde el arte y el conocimiento fueran inseparables. Que estudiar rodeado de belleza inspirara a los estudiantes.",
+    "dato_curioso": "Villanueva dijo una vez: 'La fusión de las artes es la integración de la vida'. Creía que separar el arte de la vida era un error. La UCV fue su manera de demostrar que tenía razón."
+  },
+  {
+    "pregunta": "¿Por qué es la UCV considerada una obra maestra de la arquitectura moderna?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Vista aérea de la Ciudad Universitaria de Caracas mostrando sus edificios blancos y curvos entre árboles y jardines, con el estadio, el aula magna y la biblioteca visibles. Cielo azul y montañas al fondo. Estilo ilustración panorámica.",
+    "opciones": [
+      "Porque es la más alta del mundo",
+      "Porque integra arquitectura, arte y naturaleza en perfecta armonía",
+      "Porque está hecha de vidrio de colores",
+      "Porque tiene el jardín de flores más grande"
+    ],
+    "correcta": 1,
+    "explicacion": "La UCV es una obra maestra porque logra unir arquitectura, arte y naturaleza en un solo espacio armonioso. Es única en el mundo.",
+    "dato_curioso": "La UCV fue construida en un terreno pantanoso en las afueras de Caracas. Los ingenieros tuvieron que trabajar muy duro para construir sobre esa tierra difícil y crear algo tan hermoso."
+  },
+  {
+    "pregunta": "¿Qué materiales usaba Soto en sus obras cinéticas?",
+    "tipo": "texto",
+    "opciones": [
+      "Metal, plástico, nylon y luz",
+      "Solo barro y piedra",
+      "Queso y arepa",
+      "Nubes y relámpagos"
+    ],
+    "correcta": 0,
+    "explicacion": "Soto usaba materiales modernos como metal, plástico, nylon y luz para crear sus obras. Experimentó con materiales industriales para hacer arte.",
+    "dato_curioso": "Soto fue el primero en usar tubos de acero inoxidable colgantes en el arte. Nadie lo había hecho antes. Inventó una nueva manera de crear arte."
+  },
+  {
+    "pregunta": "¿Cómo se llamaba el tipo de arte internacional al que pertenecían Soto y Cruz-Diez?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un collage de obras de arte op-art y cinético: franjas de colores, tubos metálicos, ilusiones ópticas. En el centro, una etiqueta que dice 'Arte Cinético / Op-Art'. Obras con las banderas venezolana y francesa. Estilo artístico educativo.",
+    "opciones": [
+      "Arte rupestre",
+      "Arte Cinético y Op-Art",
+      "Arte de cavernas",
+      "Arte de payasos"
+    ],
+    "correcta": 1,
+    "explicacion": "Soto y Cruz-Diez eran líderes mundiales del Arte Cinético y el Op-Art (arte óptico). Venezuela produjo a los dos artistas más importantes de ese movimiento.",
+    "dato_curioso": "El movimiento de arte cinético fue muy popular en los años 1960 y 1970. Venezuela tenía a los mejores representantes de ese movimiento en Soto y Cruz-Diez, ¡qué orgullo!"
+  },
+  {
+    "pregunta": "¿Por qué Villanueva invitó a artistas internacionales como Calder a la UCV?",
+    "tipo": "texto",
+    "opciones": [
+      "Porque quería el mejor arte del mundo para Venezuela",
+      "Porque no había artistas venezolanos",
+      "Porque eran más baratos",
+      "Porque hablaban español"
+    ],
+    "correcta": 0,
+    "explicacion": "Villanueva invitó a los mejores artistas del mundo porque quería que la UCV tuviera arte de nivel mundial. Quería que Venezuela tuviera lo mejor.",
+    "dato_curioso": "Calder aceptó la invitación de Villanueva porque el proyecto le pareció extraordinario. Dijo que era la primera vez que le pedían crear arte integrado a un edificio desde el principio."
+  },
+  {
+    "pregunta": "¿Qué pasaría si la UCV fuera dañada o destruida hoy?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un cartel con el escudo de la UNESCO y el texto 'SITIO PROTEGIDO - PATRIMONIO DE LA HUMANIDAD'. Al fondo la fachada de la UCV con personas cuidándola y un símbolo de protección. Estilo ilustración oficial amigable.",
+    "opciones": [
+      "No pasaría nada importante",
+      "Sería una pérdida terrible para toda la humanidad",
+      "Se construiría algo mejor enseguida",
+      "Solo les importaría a los venezolanos"
+    ],
+    "correcta": 1,
+    "explicacion": "Si la UCV fuera dañada sería una pérdida enorme para toda la humanidad, porque es un Patrimonio de la Humanidad que pertenece a todos los seres del planeta.",
+    "dato_curioso": "Por ser Patrimonio de la Humanidad, la UNESCO puede ayudar con fondos y expertos a restaurar la UCV si se daña. El mundo entero se preocupa por su cuidado."
+  },
+  {
+    "pregunta": "¿Qué emoción siente una persona cuando entra a un espacio lleno de arte cinético?",
+    "tipo": "texto",
+    "opciones": [
+      "Asombro porque parece que todo se mueve a su alrededor",
+      "Aburrimiento profundo",
+      "Sueño y cansancio",
+      "Miedo de los colores"
+    ],
+    "correcta": 0,
+    "explicacion": "Cuando entras a un espacio de arte cinético te sientes asombrado porque los colores, líneas y formas hacen que todo parezca estar vivo y en movimiento.",
+    "dato_curioso": "Los neurocientíficos han estudiado qué le pasa al cerebro cuando mira arte cinético. Descubrieron que se activan las mismas áreas que cuando realmente ves cosas moviéndose. ¡El cerebro se deja engañar!"
+  },
+  {
+    "pregunta": "¿Qué legado dejaron Villanueva, Soto y Cruz-Diez para Venezuela?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Tres siluetas de Villanueva (con casco de arquitecto), Soto y Cruz-Diez (con pinceles), cada uno con su obra más famosa de fondo. La bandera venezolana ondeando y el texto '¡ORGULLO VENEZOLANO!' en letras grandes. Estilo ilustración heroica.",
+    "opciones": [
+      "Construyeron parques de diversiones",
+      "Pusieron al arte y la arquitectura venezolana en el mundo entero",
+      "Inventaron nuevas arepas",
+      "Crearon cohetes espaciales"
+    ],
+    "correcta": 1,
+    "explicacion": "Villanueva, Soto y Cruz-Diez pusieron a Venezuela en el mapa mundial del arte y la arquitectura. Demostraron que Venezuela podía crear cosas de clase mundial.",
+    "dato_curioso": "Gracias a ellos, Venezuela es estudiada en las universidades de arte y arquitectura de todo el mundo. Estudiantes de Francia, Japón y EE.UU. aprenden sobre Venezuela por sus obras."
+  },
+  {
+    "pregunta": "¿Qué tipo de edificios diseñó Villanueva aparte de la UCV?",
+    "tipo": "texto",
+    "opciones": [
+      "También diseñó viviendas populares y edificios públicos en Caracas",
+      "Solo diseñó parques de diversiones",
+      "Solo hizo castillos medievales",
+      "Diseñó exclusivamente fábricas de arepas"
+    ],
+    "correcta": 0,
+    "explicacion": "Villanueva también diseñó conjuntos de viviendas para familias venezolanas y otros edificios en Caracas. Su trabajo llegó a más personas que solo los estudiantes universitarios.",
+    "dato_curioso": "El Museo de Bellas Artes de Caracas fue ampliado por Villanueva. Es uno de los museos más importantes de Venezuela y lleva el sello de su arquitectura característica."
+  },
+  {
+    "pregunta": "¿Dónde puedes encontrar arte de Cruz-Diez en Venezuela hoy?",
+    "tipo": "imagen",
+    "imagen_descripcion": "El piso del Aeropuerto Internacional de Maiquetía en Venezuela completamente decorado con el patrón de colores de Cruz-Diez. Viajeros caminando sobre los colores. Una señal dice 'Bienvenidos a Venezuela'. Estilo ilustración vibrante.",
+    "opciones": [
+      "Solo en museos caros",
+      "Hasta en el piso del aeropuerto internacional de Venezuela",
+      "Solo en libros de arte",
+      "Solo en las nubes"
+    ],
+    "correcta": 1,
+    "explicacion": "Cruz-Diez decoró el piso del Aeropuerto Internacional Simón Bolívar de Maiquetía. Así, lo primero que ven los viajeros al llegar a Venezuela es una obra de arte de clase mundial.",
+    "dato_curioso": "Cruz-Diez dijo que quería que su arte no estuviera solo en museos sino en la vida de la gente. El aeropuerto fue su manera de compartir el arte con millones de personas que lo pisan cada día."
+  },
+  {
+    "pregunta": "¿Qué tienen en común Villanueva, Soto y Cruz-Diez con Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Los tres son venezolanos que pusieron al país en el mapa mundial del arte",
+      "Los tres jugaron béisbol en Venezuela",
+      "Los tres trabajaron en el petróleo",
+      "Los tres eran primos hermanos"
+    ],
+    "correcta": 0,
+    "explicacion": "Villanueva (arquitecto), Soto y Cruz-Diez (artistas) son venezolanos que con su talento pusieron a Venezuela en el mapa mundial del arte y la arquitectura. Son un orgullo para el país.",
+    "dato_curioso": "Es poco frecuente que un solo país pequeño produzca al mismo tiempo un arquitecto y dos artistas que sean líderes mundiales en sus respectivos campos. Venezuela tuvo esa suerte increíble en el siglo XX."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cómo se llama el arquitecto que diseñó la Ciudad Universitaria de Caracas?",
+    "tipo": "texto",
+    "opciones": [
+      "Carlos Raúl Villanueva",
+      "Arquitecto Arepa",
+      "Leonardo Da Vinci",
+      "Señor Ladrillo"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: Carlos Raúl Villanueva fue el arquitecto que diseñó la Ciudad Universitaria de Caracas, también conocida como la UCV. Fue un genio que mezcló arte y arquitectura.",
+    "dato_curioso": "Repaso curioso: Carlos Raúl Villanueva nació en Inglaterra pero era venezolano de corazón. Estudió en París y luego dedicó su vida a crear cosas hermosas en Venezuela."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué organización muy importante declaró la UCV Patrimonio de la Humanidad?",
+    "tipo": "texto",
+    "opciones": [
+      "El Club de los Dinosaurios",
+      "El Ministerio de Arepas",
+      "La Liga de la Justicia",
+      "La UNESCO"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: La UNESCO, que es la organización de la ONU que protege los tesoros culturales del mundo, declaró la UCV Patrimonio de la Humanidad en el año 2000.",
+    "dato_curioso": "Repaso curioso: Ser Patrimonio de la Humanidad significa que ese lugar le pertenece a todos los seres humanos del planeta y debe ser protegido para siempre. ¡La UCV es un tesoro de toda la humanidad!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: En qué año fue declarada la UCV Patrimonio de la Humanidad?",
+    "tipo": "texto",
+    "opciones": [
+      "En 1492",
+      "En el año 3000",
+      "En 1810",
+      "En el año 2000"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: La UCV fue declarada Patrimonio de la Humanidad por la UNESCO en el año 2000. Fue un reconocimiento enorme para Venezuela y para su arquitectura.",
+    "dato_curioso": "Repaso curioso: La UCV es uno de los pocos edificios universitarios en el mundo que tiene ese reconocimiento de la UNESCO. ¡Es una de las universidades más especiales del planeta!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cuántos artistas integró Villanueva en el diseño de la Ciudad Universitaria?",
+    "tipo": "texto",
+    "opciones": [
+      "Cien mil artistas",
+      "Dos artistas",
+      "Solo uno",
+      "39 artistas"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: Carlos Raúl Villanueva integró a 39 artistas diferentes en el diseño de la Ciudad Universitaria. Pinturas, esculturas y murales de todos ellos están en los edificios.",
+    "dato_curioso": "Repaso curioso: Villanueva quería que la universidad fuera como un museo al aire libre. Por eso invitó a artistas de Venezuela y del mundo para decorar cada rincón del campus."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué cosa especial tiene el techo del Aula Magna de la UCV?",
+    "tipo": "texto",
+    "opciones": [
+      "Estrellas de neón parpadeantes",
+      "Un techo de queso gruyere",
+      "Globos de helio gigantes",
+      "Nubes acústicas flotantes"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: El Aula Magna tiene en su techo unas 'nubes acústicas', que son formas extrañas y coloridas que flotan en el techo y ayudan a que el sonido se escuche perfecto dentro.",
+    "dato_curioso": "Repaso curioso: Las nubes acústicas no solo son bonitas, ¡también son inteligentes! Están colocadas de manera exacta para que el sonido de los conciertos y conferencias llegue bien a todos los asientos."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Quién diseñó las famosas nubes acústicas del Aula Magna?",
+    "tipo": "texto",
+    "opciones": [
+      "Una computadora",
+      "Alexander Calder",
+      "Un niño de 5 años",
+      "Un panadero famoso"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: Alexander Calder, un artista norteamericano muy famoso, diseñó las nubes acústicas del Aula Magna. Son una de sus obras más conocidas.",
+    "dato_curioso": "Repaso curioso: Alexander Calder era famoso por crear móviles, que son esculturas que se mueven con el viento. Las nubes del Aula Magna son fijas, pero parecen estar flotando en el aire."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cómo se llama el arte que parece moverse cuando lo miras?",
+    "tipo": "texto",
+    "opciones": [
+      "Arte dormido",
+      "Arte cinético",
+      "Arte de dinosaurios",
+      "Arte de acuarela bailarina"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: El arte cinético es un tipo de arte que parece moverse o cambiar cuando lo miras. Usan colores, líneas y formas que engañan a tus ojos de una manera mágica.",
+    "dato_curioso": "Repaso curioso: La palabra 'cinético' viene del griego y significa 'movimiento'. Los artistas cinéticos son como magos que hacen que las cosas estáticas parezcan vivas."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cómo se llama uno de los artistas cinéticos venezolanos más famosos del mundo?",
+    "tipo": "texto",
+    "opciones": [
+      "Jesús Soto",
+      "Pablo Picasso",
+      "Señor Pincel",
+      "Miguel Ángel"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: Jesús Soto es uno de los artistas cinéticos venezolanos más famosos del mundo. Sus obras están en los mejores museos del planeta.",
+    "dato_curioso": "Repaso curioso: Jesús Soto nació en Ciudad Bolívar en 1923. De niño pintaba guitarras para ganarse la vida. ¡Nadie imaginaba que ese niño se convertiría en uno de los artistas más famosos del planeta!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Dónde nació el artista cinético venezolano Jesús Soto?",
+    "tipo": "texto",
+    "opciones": [
+      "En Ciudad Bolívar",
+      "En Caracas",
+      "En el fondo del Orinoco",
+      "En Marte"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: Jesús Soto nació en Ciudad Bolívar, una hermosa ciudad venezolana a orillas del río Orinoco. De allí salió para conquistar los museos del mundo.",
+    "dato_curioso": "Repaso curioso: Ciudad Bolívar tiene un museo dedicado a Jesús Soto llamado Museo de Arte Moderno Jesús Soto. Es uno de los museos más importantes de Venezuela."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: En qué ciudades del mundo se pueden ver obras de Jesús Soto?",
+    "tipo": "texto",
+    "opciones": [
+      "Solo en la Luna",
+      "En el Polo Sur",
+      "En París, Nueva York y Tokyo",
+      "Solo en Maracaibo"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: Las obras de Jesús Soto están en museos de París, Nueva York, Tokyo y muchas otras ciudades del mundo. Es uno de los artistas venezolanos más internacionales.",
+    "dato_curioso": "Repaso curioso: Soto vivió muchos años en París, Francia, pero nunca olvidó Venezuela. Muchas de sus obras más importantes las donó a museos venezolanos para que todos pudieran verlas."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué otro artista cinético venezolano es tan famoso como Jesús Soto?",
+    "tipo": "texto",
+    "opciones": [
+      "La UNESCO",
+      "En el año 2000",
+      "Carlos Raúl Villanueva",
+      "Carlos Cruz-Diez"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: Carlos Cruz-Diez es otro artista cinético venezolano muy famoso. Sus obras llenas de franjas de colores se pueden ver en todo el mundo.",
+    "dato_curioso": "Dato para profundizar: Cruz-Diez y Soto eran amigos y los dos eran venezolanos. Juntos pusieron a Venezuela en el mapa del arte moderno mundial. ¡Qué orgullo!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué cosa especial pasa con las obras de Carlos Cruz-Diez?",
+    "tipo": "texto",
+    "opciones": [
+      "Carlos Raúl Villanueva",
+      "En el año 2000",
+      "La UNESCO",
+      "Sus colores cambian según el ángulo desde donde los miras"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: Las obras de Cruz-Diez son mágicas porque los colores cambian dependiendo desde dónde las mires. Si te mueves, ¡parece que la pintura se transforma!",
+    "dato_curioso": "Dato para profundizar: Cruz-Diez estudió toda su vida cómo los ojos y el cerebro perciben los colores. Sus obras son experimentos científicos disfrazados de arte. ¡Ciencia y arte al mismo tiempo!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué quiso lograr Villanueva al mezclar arte y educación en la UCV?",
+    "tipo": "texto",
+    "opciones": [
+      "Que el arte y la educación fueran inseparables",
+      "En el año 2000",
+      "La UNESCO",
+      "Carlos Raúl Villanueva"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: Villanueva quería que el arte y la educación no fueran cosas separadas sino una sola. Que los estudiantes aprendieran rodeados de belleza todos los días.",
+    "dato_curioso": "Dato para profundizar: Villanueva decía que los estudiantes aprenden mejor cuando están en un ambiente bello. Por eso cada pasillo, jardín y salón de la UCV tiene arte alrededor."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué es el Aula Magna de la UCV?",
+    "tipo": "texto",
+    "opciones": [
+      "En el año 2000",
+      "La UNESCO",
+      "Carlos Raúl Villanueva",
+      "El salón principal donde se dan conciertos y actos importantes"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: El Aula Magna es el salón más importante de la UCV, donde se hacen conciertos, conferencias y ceremonias. Es famosa en el mundo por su belleza y su acústica perfecta.",
+    "dato_curioso": "Dato para profundizar: El Aula Magna fue inaugurada en 1954 y desde entonces ha sido escenario de los conciertos más importantes de Venezuela. ¡Hasta Gustavo Dudamel ha dirigido allí!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué significa que la UCV sea Patrimonio de la Humanidad?",
+    "tipo": "texto",
+    "opciones": [
+      "La UNESCO",
+      "Que es de todos los seres humanos y debe protegerse para siempre",
+      "En el año 2000",
+      "Carlos Raúl Villanueva"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: Ser Patrimonio de la Humanidad significa que ese lugar es tan especial que pertenece a todos los seres humanos del mundo y hay que protegerlo para las generaciones futuras.",
+    "dato_curioso": "Dato para profundizar: Solo hay 1.157 sitios Patrimonio de la Humanidad en todo el mundo. Venezuela tiene varios, incluyendo la UCV y el Parque Nacional Canaima donde está el Salto Ángel."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: En qué período fue construida la Ciudad Universitaria de Caracas?",
+    "tipo": "texto",
+    "opciones": [
+      "En el año 2000",
+      "La UNESCO",
+      "Carlos Raúl Villanueva",
+      "Entre los años 1940 y 1960"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: La Ciudad Universitaria fue construida entre los años 1940 y 1960. Fue un proyecto gigantesco que tardó muchos años en completarse.",
+    "dato_curioso": "Dato para profundizar: Villanueva trabajó en la UCV durante más de 20 años. Fue su obra más grande e importante, y la que lo hizo famoso en todo el mundo."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué tipo de arte hacía Carlos Cruz-Diez con los colores?",
+    "tipo": "texto",
+    "opciones": [
+      "Carlos Raúl Villanueva",
+      "Arte que cambia de color según la luz y el ángulo de visión",
+      "En el año 2000",
+      "La UNESCO"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: Cruz-Diez estudiaba cómo los colores cambian con la luz. Sus obras parecen cambiar de color dependiendo de dónde estés parado. Es arte que engaña a los ojos.",
+    "dato_curioso": "Dato para profundizar: Cruz-Diez vivió hasta los 95 años y nunca dejó de crear arte. Fue uno de los artistas más longevos y productivos de Venezuela."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Dónde están expuestas las obras de Jesús Soto en el mundo?",
+    "tipo": "texto",
+    "opciones": [
+      "La UNESCO",
+      "En el año 2000",
+      "Carlos Raúl Villanueva",
+      "En museos de París, Nueva York, Tokyo y muchos más países"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: Las obras de Soto están en los museos más famosos del mundo, como el Museo de Arte Moderno de París y el MoMA de Nueva York. Venezuela tiene artistas de clase mundial.",
+    "dato_curioso": "Dato para profundizar: El Museo Soto en Ciudad Bolívar tiene más de 200 obras del artista. Si visitas esa ciudad, puedes ver una colección enorme de su arte en un edificio diseñado especialmente para él."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cuándo fue inaugurada la Ciudad Universitaria de Caracas aproximadamente?",
+    "tipo": "texto",
+    "opciones": [
+      "En el año 2000",
+      "En 1954",
+      "Carlos Raúl Villanueva",
+      "La UNESCO"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: La Ciudad Universitaria de Caracas fue inaugurada en 1954. Fue un momento muy importante para Venezuela y para la arquitectura latinoamericana.",
+    "dato_curioso": "Dato para profundizar: En 1954, Venezuela era gobernada por el general Marcos Pérez Jiménez. Fue durante su gobierno que se inauguró la UCV, aunque el diseño y la visión eran de Villanueva."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué tiene de especial la Plaza Cubierta de la UCV?",
+    "tipo": "texto",
+    "opciones": [
+      "En el año 2000",
+      "Carlos Raúl Villanueva",
+      "Que es un espacio techado lleno de murales y esculturas por donde pasan los estudiantes",
+      "La UNESCO"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: La Plaza Cubierta es un espacio con techo donde los estudiantes caminan y se encuentran, rodeados de murales y obras de arte en cada pared. Es arte en la vida cotidiana.",
+    "dato_curioso": "Dato para profundizar: Villanueva diseñó la Plaza Cubierta para que los estudiantes no se mojaran con la lluvia de Caracas mientras iban de clase en clase. ¡Arte funcional y útil al mismo tiempo!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cómo se llama la universidad donde está toda esa obra de arte?",
+    "tipo": "texto",
+    "opciones": [
+      "Universidad de la Arepa",
+      "Escuela de Arte Mágico",
+      "Universidad Central de Venezuela (UCV)",
+      "Universidad Villanueva Grande"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: Todo ese arte maravilloso está en la Universidad Central de Venezuela, conocida como la UCV. Es la universidad más grande e importante del país.",
+    "dato_curioso": "Ampliación histórica: La UCV fue fundada en 1721, ¡hace más de 300 años! Es una de las universidades más antiguas de América del Sur."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué hizo Villanueva único entre los arquitectos del siglo XX?",
+    "tipo": "texto",
+    "opciones": [
+      "Que construía con chocolate",
+      "Que construía sin usar ladrillos",
+      "Que integró a 39 artistas dentro de su diseño arquitectónico",
+      "Que hacía edificios que volaban"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: Villanueva fue único porque no solo diseñó edificios bonitos, sino que invitó a 39 artistas a ser parte del diseño. Arte y arquitectura fueron una sola cosa.",
+    "dato_curioso": "Ampliación histórica: Antes de Villanueva, los artistas decoraban los edificios después de construirlos. Villanueva fue el primero en incluir el arte en los planos del edificio desde el principio."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Por qué el arte cinético es tan especial?",
+    "tipo": "texto",
+    "opciones": [
+      "Porque parece estar vivo y en movimiento aunque esté quieto",
+      "Porque se hace solo con pincel de gato",
+      "Porque vuela por las noches",
+      "Porque se puede comer"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: El arte cinético es especial porque engaña a tus ojos. Aunque la obra esté quieta y no se mueva de verdad, tus ojos la ven como si estuviera en movimiento. ¡Es magia visual!",
+    "dato_curioso": "Ampliación histórica: El cerebro humano es fácil de engañar con ciertos patrones de colores y líneas. Los artistas cinéticos estudiaron cómo funciona la visión para crear esas ilusiones tan asombrosas."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué países tienen obras de Soto y Cruz-Diez en sus museos más importantes?",
+    "tipo": "texto",
+    "opciones": [
+      "Solo Venezuela",
+      "Solo Colombia y Brasil",
+      "Solo el planeta Marte",
+      "Francia, Estados Unidos, Japón y muchos más"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: Las obras de Soto y Cruz-Diez están en museos de Francia, Estados Unidos, Japón y muchos otros países. Los venezolanos pusieron su arte en todo el planeta.",
+    "dato_curioso": "Ampliación histórica: El Centro Pompidou de París, uno de los museos más visitados del mundo, tiene obras de Jesús Soto en su colección permanente. ¡Venezuela está en el corazón de París!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué es una escultura cinética?",
+    "tipo": "texto",
+    "opciones": [
+      "Una escultura que canta canciones",
+      "Una escultura que parece moverse o realmente se mueve",
+      "Una escultura que explota",
+      "Una escultura de comida"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: Una escultura cinética es una obra de arte tridimensional que parece estar en movimiento, o que realmente se mueve con el viento o con un motor.",
+    "dato_curioso": "Ampliación histórica: Soto creó unas esculturas llamadas 'Penetrables' donde puedes entrar caminando y quedas rodeado de miles de tiras de plástico que se mueven a tu alrededor. ¡Te conviertes en parte de la obra!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cómo se llaman las obras de Jesús Soto en las que puedes entrar?",
+    "tipo": "texto",
+    "opciones": [
+      "Los Túneles de Colores",
+      "Los Entrables",
+      "Las Casas Mágicas",
+      "Los Penetrables"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: Los 'Penetrables' de Soto son esculturas gigantes hechas de miles de tiras colgantes en las que puedes entrar y caminar. Te vuelves parte de la obra de arte.",
+    "dato_curioso": "Ampliación histórica: Los Penetrables de Soto se han instalado en plazas públicas, museos y hasta en la calle. Cualquier persona puede entrar y experimentar el arte en su cuerpo."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cuál fue el sueño más grande de Villanueva con la UCV?",
+    "tipo": "texto",
+    "opciones": [
+      "Que tuviera el mejor equipo de béisbol",
+      "Que los estudiantes vivieran dentro de los cuadros",
+      "Que fuera la universidad más grande del mundo",
+      "Que la universidad fuera el lugar donde el arte y el saber vivieran juntos"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: El gran sueño de Villanueva era crear una universidad donde el arte y el conocimiento fueran inseparables. Que estudiar rodeado de belleza inspirara a los estudiantes.",
+    "dato_curioso": "Ampliación histórica: Villanueva dijo una vez: 'La fusión de las artes es la integración de la vida'. Creía que separar el arte de la vida era un error. La UCV fue su manera de demostrar que tenía razón."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Por qué es la UCV considerada una obra maestra de la arquitectura moderna?",
+    "tipo": "texto",
+    "opciones": [
+      "Porque integra arquitectura, arte y naturaleza en perfecta armonía",
+      "Porque tiene el jardín de flores más grande",
+      "Porque es la más alta del mundo",
+      "Porque está hecha de vidrio de colores"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: La UCV es una obra maestra porque logra unir arquitectura, arte y naturaleza en un solo espacio armonioso. Es única en el mundo.",
+    "dato_curioso": "Ampliación histórica: La UCV fue construida en un terreno pantanoso en las afueras de Caracas. Los ingenieros tuvieron que trabajar muy duro para construir sobre esa tierra difícil y crear algo tan hermoso."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué materiales usaba Soto en sus obras cinéticas?",
+    "tipo": "texto",
+    "opciones": [
+      "Nubes y relámpagos",
+      "Queso y arepa",
+      "Metal, plástico, nylon y luz",
+      "Solo barro y piedra"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: Soto usaba materiales modernos como metal, plástico, nylon y luz para crear sus obras. Experimentó con materiales industriales para hacer arte.",
+    "dato_curioso": "Ampliación histórica: Soto fue el primero en usar tubos de acero inoxidable colgantes en el arte. Nadie lo había hecho antes. Inventó una nueva manera de crear arte."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cómo se llamaba el tipo de arte internacional al que pertenecían Soto y Cruz-Diez?",
+    "tipo": "texto",
+    "opciones": [
+      "Arte de payasos",
+      "Arte Cinético y Op-Art",
+      "Arte de cavernas",
+      "Arte rupestre"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: Soto y Cruz-Diez eran líderes mundiales del Arte Cinético y el Op-Art (arte óptico). Venezuela produjo a los dos artistas más importantes de ese movimiento.",
+    "dato_curioso": "Ampliación histórica: El movimiento de arte cinético fue muy popular en los años 1960 y 1970. Venezuela tenía a los mejores representantes de ese movimiento en Soto y Cruz-Diez, ¡qué orgullo!"
+  }
+]

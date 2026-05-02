@@ -23,20 +23,8 @@ func _on_atras_pressed() -> void:
 	Configuracion.change_scene_to_file("res://Scenes/menu-alumno.tscn")
 
 func configurar_selector() -> void:
-	var query := ""
-	if GlobalUsuario.usuario_actual_id > 0:
-		query = "SELECT MAX(NU_NIVEL) AS nivel_max FROM nivel_1 WHERE NU_USU = %d AND NU_ESTRELLAS > 0" % GlobalUsuario.usuario_actual_id
-	else:
-		query = "SELECT MAX(NU_NIVEL) AS nivel_max FROM nivel_1 WHERE NM_ALUMNO = '%s' AND NU_ESTRELLAS > 0" % SQLiteHelper.escape(GlobalUsuario.nombre_alumno)
-
-	db.query(query)
-	
-	var ultimo_nivel_pasado := 0
-	if db.query_result.size() > 0 and db.query_result[0]["nivel_max"] != null:
-		ultimo_nivel_pasado = int(db.query_result[0]["nivel_max"])
-	
-	var nivel_disponible := ultimo_nivel_pasado + 1
-	nivel_actual = max(nivel_actual, nivel_disponible)
+	var nivel_disponible := maxi(1, int(GlobalUsuario.nivel_maximo))
+	nivel_actual = nivel_disponible
 	
 	var todos_los_botones: Array[Node] = []
 	todos_los_botones.append_array(contenedor1.get_children())
@@ -62,7 +50,11 @@ func desbloquear_boton(btn: Button, num: int) -> void:
 		btn.pressed.connect(callback)
 
 	# OPCIONAL: Consultar si ya tiene estrellas para mostrarlas bajo el botón
-	var q_estrellas = "SELECT NU_ESTRELLAS FROM nivel_1 WHERE NU_NIVEL = %d AND NU_USU = %d;" % [num, GlobalUsuario.usuario_actual_id]
+	var q_estrellas := ""
+	if GlobalUsuario.usuario_actual_id > 0:
+		q_estrellas = "SELECT NU_ESTRELLAS FROM niveles WHERE NU_NIVEL = %d AND NU_USU = %d LIMIT 1;" % [num, GlobalUsuario.usuario_actual_id]
+	else:
+		q_estrellas = "SELECT NU_ESTRELLAS FROM niveles WHERE NU_NIVEL = %d AND NM_ALUMNO = '%s' LIMIT 1;" % [num, SQLiteHelper.escape(GlobalUsuario.nombre_alumno)]
 	db.query(q_estrellas)
 	if db.query_result.size() > 0:
 		var cant_estrellas = db.query_result[0]["NU_ESTRELLAS"]
@@ -74,15 +66,11 @@ func bloquear_boton(btn: Button):
 	btn.modulate = Color(0.3, 0.3, 0.3, 0.8)
 
 func _ir_al_nivel(n: int) -> void:
+	GlobalUsuario.nivel_seleccionado = n
 	if db:
 		SQLiteHelper.close_db_connection(db)
 		db = null 
-	var ruta := "res://Nivel %d.tscn" % n
-	if not ResourceLoader.exists(ruta):
-		_mostrar_alerta("El nivel %d aun no esta disponible." % n)
-		return
-	
-	get_tree().change_scene_to_file(ruta)
+	Configuracion.change_scene_to_file("res://Nivel 1.tscn")
 
 func _cargar_usuario_actual() -> void:
 	var query := ""

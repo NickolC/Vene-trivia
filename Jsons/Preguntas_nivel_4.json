@@ -1,0 +1,904 @@
+[
+  {
+    "pregunta": "¿Quién era Francis Drake?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Retrato caricaturesco de un pirata inglés con barba roja, sombrero de almirante, parche en el ojo y una bandera inglesa en la mano, estilo colorido para niños.",
+    "opciones": [
+      "Un cocinero famoso de Londres",
+      "Un pirata inglés muy temido",
+      "Un rey de chocolate",
+      "Un mago de circo"
+    ],
+    "correcta": 1,
+    "explicacion": "Francis Drake era un pirata inglés muy peligroso. Su reina lo mandaba a atacar barcos y ciudades de España.",
+    "dato_curioso": "¡La reina de Inglaterra le regaló una espada de oro por ser tan buen pirata! A veces los piratas eran héroes para su propio país."
+  },
+  {
+    "pregunta": "¿A qué ciudad venezolana atacó Francis Drake en 1595?",
+    "tipo": "texto",
+    "opciones": [
+      "Maracaibo",
+      "Caracas",
+      "La Guaira",
+      "Valencia"
+    ],
+    "correcta": 2,
+    "explicacion": "Francis Drake llegó con sus barcos y atacó La Guaira en 1595. La Guaira es el puerto más cercano a Caracas.",
+    "dato_curioso": "Drake llegó con tantos barcos que la gente de La Guaira corrió a esconderse en las montañas. ¡Fue como una película de aventuras!"
+  },
+  {
+    "pregunta": "¿Cómo se llaman los piratas que tenían permiso del rey para atacar?",
+    "tipo": "texto",
+    "opciones": [
+      "Magos del mar",
+      "Corsarios",
+      "Tiburones disfrazados",
+      "Marineros de chocolate"
+    ],
+    "correcta": 1,
+    "explicacion": "Los corsarios eran piratas especiales con un papel del rey que les daba permiso para atacar barcos enemigos. ¡Eran piratas con licencia!",
+    "dato_curioso": "El papel que les daba el rey se llamaba 'Carta de Corso'. ¡Era como tener un carnet especial para ser pirata!"
+  },
+  {
+    "pregunta": "¿Quién era Lolonois?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración caricaturesca de un pirata francés con bigote rizado, sombrero con pluma roja, espada en mano y una bolsa de monedas, fondo de barcos piratas en el mar.",
+    "opciones": [
+      "Un chef francés de pasteles",
+      "Un pirata francés muy feroz",
+      "Un príncipe de las nubes",
+      "Un domador de leones"
+    ],
+    "correcta": 1,
+    "explicacion": "Lolonois, cuyo nombre real era François l'Olonnais, era un pirata francés muy feroz. Era tan peligroso que todos le tenían miedo.",
+    "dato_curioso": "¡Lolonois atacó Maracaibo con 700 piratas! Era como un ejército entero de piratas juntos."
+  },
+  {
+    "pregunta": "¿Cuántos piratas trajo Lolonois cuando atacó Maracaibo?",
+    "tipo": "texto",
+    "opciones": [
+      "Solo 3 piratas amigos",
+      "200 piratas con patines",
+      "700 piratas",
+      "1 pirata muy grande"
+    ],
+    "correcta": 2,
+    "explicacion": "Lolonois llegó con 700 piratas a Maracaibo en 1666. Era un grupo enorme y muy peligroso.",
+    "dato_curioso": "¡700 piratas es como llenar casi 10 autobuses escolares de piratas! Con tantos piratas, nadie podía detenerlos."
+  },
+  {
+    "pregunta": "¿En qué año atacó Lolonois la ciudad de Maracaibo?",
+    "tipo": "texto",
+    "opciones": [
+      "En el año 2000",
+      "En 1666",
+      "Ayer por la tarde",
+      "En 1492"
+    ],
+    "correcta": 1,
+    "explicacion": "Lolonois atacó Maracaibo en el año 1666. Eso fue hace muchísimos años, más de 350 años atrás.",
+    "dato_curioso": "En ese mismo año, en Londres ocurrió un gran incendio que quemó casi toda la ciudad. ¡El año 1666 fue muy movido en el mundo!"
+  },
+  {
+    "pregunta": "¿Para qué construyeron castillos en Venezuela?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración colorida de un castillo de piedra en la orilla del mar con cañones asomando por las murallas, soldados con uniformes coloniales y barcos piratas a lo lejos.",
+    "opciones": [
+      "Para guardar helados gigantes",
+      "Para defender las ciudades de los piratas",
+      "Para hacer fiestas de cumpleaños",
+      "Para criar dragones"
+    ],
+    "correcta": 1,
+    "explicacion": "Los castillos en Venezuela se construyeron para proteger a la gente de los piratas. Tenían cañones grandes para alejar los barcos enemigos.",
+    "dato_curioso": "Algunos castillos venezolanos todavía existen hoy. ¡Puedes visitarlos y ver los cañones que asustaban a los piratas!"
+  },
+  {
+    "pregunta": "¿Dónde está el Castillo de San Felipe?",
+    "tipo": "texto",
+    "opciones": [
+      "En la Luna",
+      "En Puerto Cabello",
+      "Debajo del mar",
+      "En un parque de diversiones"
+    ],
+    "correcta": 1,
+    "explicacion": "El Castillo de San Felipe está en Puerto Cabello, una ciudad costera de Venezuela. Fue construido para defender ese puerto importante.",
+    "dato_curioso": "Puerto Cabello tiene uno de los puertos más tranquilos del mundo. ¡El agua es tan quieta que los barcos apenas se mueven!"
+  },
+  {
+    "pregunta": "¿Qué controlaba el Castillo San Carlos?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Mapa ilustrado para niños mostrando el Lago de Maracaibo con un canal estrecho en la entrada y el Castillo San Carlos en la orilla, con barcos pequeños y gaviotas.",
+    "opciones": [
+      "La entrada al Lago de Maracaibo",
+      "La tienda de dulces más grande",
+      "El paso a la montaña de helado",
+      "El camino a la ciudad de robots"
+    ],
+    "correcta": 0,
+    "explicacion": "El Castillo San Carlos vigilaba la única entrada al Lago de Maracaibo. Si el castillo estaba ahí, nadie podía entrar sin permiso.",
+    "dato_curioso": "El canal de entrada al Lago de Maracaibo es tan estrecho que un castillo en la orilla podía controlar todo el paso. ¡Era como una puerta gigante!"
+  },
+  {
+    "pregunta": "¿Qué productos robaban los piratas en Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Videojuegos y paletas",
+      "Cacao, cuero e índigo",
+      "Pizzas y hamburguesas",
+      "Cohetes espaciales"
+    ],
+    "correcta": 1,
+    "explicacion": "Los piratas querían robar cacao, cuero e índigo de Venezuela. Esas cosas valían muchísimo dinero en Europa.",
+    "dato_curioso": "El cacao se usa para hacer chocolate. ¡Los piratas robaban el ingrediente secreto del chocolate venezolano para venderlo muy caro en Europa!"
+  },
+  {
+    "pregunta": "¿Qué era el índigo que robaban los piratas?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de una planta tropical de color verde con hojas grandes, junto a un frasco de tinte azul brillante y telas teñidas de azul intenso, estilo colorido para niños.",
+    "opciones": [
+      "Un helado de vainilla azul",
+      "Un tinte azul muy valioso para teñir telas",
+      "Un animal marino brillante",
+      "Una fruta mágica que vuela"
+    ],
+    "correcta": 1,
+    "explicacion": "El índigo era una planta que se usaba para hacer un tinte azul hermoso. Con ese azul, en Europa teñían telas muy elegantes.",
+    "dato_curioso": "Antes de inventar los tintes de fábrica, el único azul bonito venía de plantas como el índigo. ¡Era tan valioso que a veces valía más que el oro!"
+  },
+  {
+    "pregunta": "¿Cómo se llamaban los barcos rápidos que usaban los piratas?",
+    "tipo": "texto",
+    "opciones": [
+      "Submarinos de caramelo",
+      "Bergantines y fragatas",
+      "Barcos de papel gigantes",
+      "Balsas con motor de pizza"
+    ],
+    "correcta": 1,
+    "explicacion": "Los piratas navegaban en bergantines y fragatas. Eran barcos rápidos y fáciles de maniobrar para atacar y escapar.",
+    "dato_curioso": "Los bergantines podían usar velas y remos al mismo tiempo. ¡Así los piratas podían moverse aunque no hubiera viento!"
+  },
+  {
+    "pregunta": "¿Qué tenían los castillos para defenderse de los piratas?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de un cañón de hierro negro del siglo XVII sobre una muralla de piedra, con una bola de cañón volando y una explosión de fuego y humo, estilo caricaturesco para niños.",
+    "opciones": [
+      "Pistolas de agua gigantes",
+      "Cañones de hierro muy poderosos",
+      "Lanzadores de pasteles",
+      "Rayos láser de colores"
+    ],
+    "correcta": 1,
+    "explicacion": "Los castillos tenían cañones grandes de hierro. Cuando disparaban, una bola enorme volaba hacia los barcos enemigos.",
+    "dato_curioso": "¡Una bola de cañón podía volar más de un kilómetro! Era como lanzar una bola de boliche muy pesada pero mucho más lejos."
+  },
+  {
+    "pregunta": "¿Por qué Venezuela era tan interesante para los piratas?",
+    "tipo": "texto",
+    "opciones": [
+      "Porque ahí vivían unicornios",
+      "Porque tenía productos muy valiosos para Europa",
+      "Porque tenía ríos de limonada",
+      "Porque el suelo era de oro puro"
+    ],
+    "correcta": 1,
+    "explicacion": "Venezuela tenía cacao, cuero e índigo que valían mucho dinero en Europa. Por eso los piratas querían robarlo.",
+    "dato_curioso": "En esa época, el cacao venezolano era el mejor del mundo. Los europeos lo adoraban tanto que pagaban fortunas para tenerlo."
+  },
+  {
+    "pregunta": "¿Qué eran las murallas que rodeaban las ciudades costeras?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración colorida de una muralla de piedra gruesa y alta rodeando una pequeña ciudad colonial venezolana, con torretas en las esquinas y el mar al fondo.",
+    "opciones": [
+      "Vallas de madera para los caballos",
+      "Paredes de piedra para proteger la ciudad de piratas",
+      "Muros de chocolate comestibles",
+      "Cercas de plástico de colores"
+    ],
+    "correcta": 1,
+    "explicacion": "Las murallas eran paredes de piedra muy gruesas que rodeaban las ciudades. Protegían a la gente de los ataques de los piratas.",
+    "dato_curioso": "Algunas murallas eran tan gruesas que podías caminar encima de ellas. ¡Eran como carreteras de piedra en las alturas!"
+  },
+  {
+    "pregunta": "¿De dónde era Francis Drake?",
+    "tipo": "texto",
+    "opciones": [
+      "Era de Marte",
+      "Era de Inglaterra",
+      "Era de la Antártida",
+      "Era de un submarino"
+    ],
+    "correcta": 1,
+    "explicacion": "Francis Drake era inglés, venía de Inglaterra. Su reina Isabel I le daba misiones para atacar barcos y ciudades españolas.",
+    "dato_curioso": "La reina Isabel de Inglaterra llamaba a Drake 'Mi pirata'. ¡Era tan famoso que la reina lo consideraba su pirata favorito!"
+  },
+  {
+    "pregunta": "¿Qué hacían los habitantes cuando llegaban los piratas?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración simpática de familias coloniales venezolanas corriendo apresuradas hacia las montañas, cargando bultos, gallinas y ollas, mientras se ven barcos en el horizonte.",
+    "opciones": [
+      "Se ponían a bailar en la plaza",
+      "Huían a esconderse en las montañas",
+      "Invitaban a los piratas a cenar",
+      "Se subían a los árboles a cantar"
+    ],
+    "correcta": 1,
+    "explicacion": "Cuando llegaban los piratas, la gente huía rápido a las montañas o al campo. Era lo más seguro para proteger sus vidas.",
+    "dato_curioso": "A veces la gente enterraba sus tesoros antes de escapar. ¡Por eso hoy en día algunas personas todavía buscan tesoros escondidos en Venezuela!"
+  },
+  {
+    "pregunta": "¿Qué significa ser un 'corsario'?",
+    "tipo": "texto",
+    "opciones": [
+      "Ser un cocinero del mar",
+      "Ser un pirata con permiso del rey",
+      "Ser un nadador muy rápido",
+      "Ser un vendedor de barcos"
+    ],
+    "correcta": 1,
+    "explicacion": "Un corsario es un pirata que tiene permiso especial del rey para atacar barcos enemigos. Es diferente a un pirata común.",
+    "dato_curioso": "El permiso del rey se llamaba 'patente de corso'. Con ese papel, el corsario podía atacar libremente y nadie lo metía preso en su propio país."
+  },
+  {
+    "pregunta": "¿Cómo llegaban los piratas a las costas venezolanas?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de un bergantín pirata de madera con velas negras y una calavera en la bandera, navegando por el Caribe con palmeras en la costa venezolana al fondo.",
+    "opciones": [
+      "En aviones de papel gigantes",
+      "En barcos de vela rápidos",
+      "En patinetas voladoras",
+      "En globos de colores"
+    ],
+    "correcta": 1,
+    "explicacion": "Los piratas llegaban en barcos de vela. El viento les ayudaba a navegar rápido por el mar Caribe.",
+    "dato_curioso": "Algunos barcos piratas podían viajar más de 200 kilómetros en un solo día con buen viento. ¡Era como ir de Caracas a Valencia en barco!"
+  },
+  {
+    "pregunta": "¿En qué siglo atacó Drake a Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "En el siglo XXI",
+      "En el siglo XVI",
+      "En el siglo I",
+      "Todavía no ha pasado"
+    ],
+    "correcta": 1,
+    "explicacion": "Francis Drake atacó Venezuela en el siglo XVI, que son los años 1500. El ataque a La Guaira fue en 1595.",
+    "dato_curioso": "El siglo XVI fue una época llena de exploradores y piratas en el Caribe. ¡El mar Caribe era el lugar más emocionante y peligroso del mundo!"
+  },
+  {
+    "pregunta": "¿Qué hacían los piratas con lo que robaban en Venezuela?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración caricaturesca de piratas vendiendo cacao, telas de colores y cueros en un mercado europeo lleno de gente, con monedas de oro volando por el aire.",
+    "opciones": [
+      "Lo usaban para pintar cuadros",
+      "Lo vendían en Europa para ganar mucho dinero",
+      "Lo devolvían arrepentidos",
+      "Lo regalaban en Navidad"
+    ],
+    "correcta": 1,
+    "explicacion": "Los piratas vendían lo que robaban en Europa. El cacao y el índigo valían muchísimo dinero allá.",
+    "dato_curioso": "Un saco de cacao venezolano valía tanto que una familia podía vivir con ese dinero por meses. ¡El chocolate era un lujo para ricos!"
+  },
+  {
+    "pregunta": "¿Qué tenían los barcos piratas que les daba miedo a todos?",
+    "tipo": "texto",
+    "opciones": [
+      "Bocinas muy ruidosas",
+      "La bandera de la calavera",
+      "Altavoces con música de terror",
+      "Cohetes de colores"
+    ],
+    "correcta": 1,
+    "explicacion": "Los barcos piratas tenían la bandera de la calavera, llamada Jolly Roger. Cuando la veías, sabías que los piratas venían.",
+    "dato_curioso": "¡La bandera de la calavera se inventó para asustar tanto que la gente se rindiera sin pelear! Era como decir 'ríndete o te va a ir muy mal'."
+  },
+  {
+    "pregunta": "¿Cuál es la única entrada al Lago de Maracaibo?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Mapa simple y colorido del Lago de Maracaibo visto desde arriba, mostrando el canal estrecho que conecta el lago con el mar, con flechitas y el castillo marcado.",
+    "opciones": [
+      "Un túnel secreto bajo tierra",
+      "Un canal estrecho vigilado por el Castillo San Carlos",
+      "Un puente colgante de cuerdas",
+      "Una escalera de madera muy larga"
+    ],
+    "correcta": 1,
+    "explicacion": "Para entrar al Lago de Maracaibo hay que pasar por un canal muy estrecho. El Castillo San Carlos estaba ahí para vigilar ese paso.",
+    "dato_curioso": "El Lago de Maracaibo es el lago más grande de Venezuela y de toda Sudamérica. ¡Es tan grande que parece un mar pequeño!"
+  },
+  {
+    "pregunta": "¿Qué pasaba si un barco pirata intentaba entrar al Lago de Maracaibo con el Castillo San Carlos activo?",
+    "tipo": "texto",
+    "opciones": [
+      "Lo invitaban a tomar café",
+      "Los cañones del castillo lo atacaban",
+      "Le daban un mapa de tesoros",
+      "Le ponían una multa de tráfico"
+    ],
+    "correcta": 1,
+    "explicacion": "Si un barco enemigo intentaba pasar, los soldados del Castillo San Carlos disparaban los cañones. Era muy difícil entrar sin permiso.",
+    "dato_curioso": "¡A veces los piratas esperaban la noche para intentar colarse! Pero los soldados del castillo siempre estaban despiertos vigilando."
+  },
+  {
+    "pregunta": "¿Qué usaban los colonos venezolanos para fabricar cosas valiosas del cuero?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de un artesano colonial venezolano trabajando el cuero en un taller: haciendo botas, sillas de montar y cinturones, con vacas pastando afuera por la ventana.",
+    "opciones": [
+      "Cuero de dragón volador",
+      "Cuero de las vacas y otros animales",
+      "Plástico de colores",
+      "Hojas de árboles mágicos"
+    ],
+    "correcta": 1,
+    "explicacion": "El cuero venía de las vacas y otros animales de Venezuela. Con ese cuero hacían botas, sillas de montar y muchas cosas útiles.",
+    "dato_curioso": "Venezuela tenía tantas vacas en esa época que el cuero era uno de sus productos más importantes. ¡Los llanos venezolanos estaban llenos de ganado!"
+  },
+  {
+    "pregunta": "¿Por qué Francis Drake era famoso en toda Europa?",
+    "tipo": "texto",
+    "opciones": [
+      "Por inventar el helado de mango",
+      "Por ser un gran explorador y pirata temido",
+      "Por ganar un campeonato de pesca",
+      "Por tener el sombrero más grande del mundo"
+    ],
+    "correcta": 1,
+    "explicacion": "Drake era famoso porque había navegado alrededor del mundo entero y atacado muchos puertos españoles. Era el pirata más conocido de su época.",
+    "dato_curioso": "Drake fue el segundo hombre en navegar alrededor de todo el mundo. ¡Tardó casi tres años en completar ese viaje increíble!"
+  },
+  {
+    "pregunta": "¿Cómo se organizaban los piratas cuando atacaban una ciudad?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de piratas bajando de barcos en botes pequeños hacia una playa, con espadas y banderas, organizados en grupos mientras el capitán da órdenes desde el barco.",
+    "opciones": [
+      "Cada uno iba por su lado comiendo galletas",
+      "El capitán organizaba a todos en grupos para atacar juntos",
+      "Jugaban piedra papel tijera para decidir quién entraba primero",
+      "Mandaban una carta pidiendo permiso"
+    ],
+    "correcta": 1,
+    "explicacion": "El capitán pirata organizaba el ataque y los piratas bajaban juntos en botes pequeños a la playa. Luego atacaban la ciudad en grupo.",
+    "dato_curioso": "¡Los barcos piratas tenían reglas propias! Todos votaban las decisiones importantes y el botín se repartía de forma ordenada entre la tripulación."
+  },
+  {
+    "pregunta": "¿Qué significa 'saquear' una ciudad?",
+    "tipo": "texto",
+    "opciones": [
+      "Limpiarla muy bien",
+      "Robar todo lo que hay en la ciudad",
+      "Construir casas nuevas",
+      "Plantar flores en las calles"
+    ],
+    "correcta": 1,
+    "explicacion": "Saquear significa entrar a una ciudad y robar todo lo que puedas encontrar. Los piratas saqueaban las ciudades venezolanas para llevarse sus riquezas.",
+    "dato_curioso": "Cuando Lolonois saqueó Maracaibo, se llevó tanto que sus barcos casi no podían flotar de tanto peso. ¡Cargó todo lo que encontró!"
+  },
+  {
+    "pregunta": "¿Qué construyeron los españoles para defender Puerto Cabello?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración del Castillo de San Felipe en Puerto Cabello: un fuerte colonial de piedra amarilla en el mar, rodeado de agua por tres lados, con cañones en las murallas y una bandera española.",
+    "opciones": [
+      "Una pared de globos de colores",
+      "El Castillo de San Felipe con murallas y cañones",
+      "Una cerca de bambú muy alta",
+      "Un foso lleno de cocodrilos de goma"
+    ],
+    "correcta": 1,
+    "explicacion": "Para defender Puerto Cabello construyeron el Castillo de San Felipe. Tenía gruesas murallas de piedra y cañones poderosos.",
+    "dato_curioso": "El Castillo de San Felipe está rodeado de agua por casi todos sus lados. ¡Los piratas tendrían que nadar para llegar, y ahí estaban esperándoles los cañones!"
+  },
+  {
+    "pregunta": "¿Qué necesitaban los corsarios para atacar barcos legalmente?",
+    "tipo": "texto",
+    "opciones": [
+      "Un disfraz de fantasma",
+      "Una carta o permiso del rey",
+      "Un sombrero de tres picos especial",
+      "Un mapa del tesoro firmado"
+    ],
+    "correcta": 1,
+    "explicacion": "Los corsarios necesitaban una carta o patente del rey que les daba permiso para atacar barcos enemigos. Sin ese papel, eran simples piratas.",
+    "dato_curioso": "Si un corsario perdía su carta de corso, podían colgarlo como pirata común. ¡Ese papelito era el más importante de su vida!"
+  },
+  {
+    "pregunta": "¿De dónde venía Lolonois?",
+    "tipo": "texto",
+    "opciones": [
+      "De Marte con cohete",
+      "De Francia",
+      "De debajo del océano",
+      "De una isla de dulces"
+    ],
+    "correcta": 1,
+    "explicacion": "Lolonois era francés, venía de Francia. Su nombre real era François l'Olonnais, que viene de la ciudad francesa de Les Sables-d'Olonne.",
+    "dato_curioso": "Lolonois fue esclavo cuando era joven en las Indias. Después escapó y se convirtió en el pirata más temido del Caribe."
+  },
+  {
+    "pregunta": "¿Qué hacían los soldados en los castillos costeros venezolanos?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de soldados coloniales con uniformes azules y rojos vigilando desde las murallas de un castillo costero venezolano, usando telescopios y apuntando cañones al mar.",
+    "opciones": [
+      "Cocinaban tamales todo el día",
+      "Vigilaban el mar y defendían el puerto de piratas",
+      "Bailaban en la muralla para entretener a los barcos",
+      "Pescaban para la cena del castillo"
+    ],
+    "correcta": 1,
+    "explicacion": "Los soldados vigilaban el mar desde las murallas del castillo. Si veían barcos enemigos, disparaban los cañones para alejarlos.",
+    "dato_curioso": "Los soldados usaban telescopios para ver los barcos desde muy lejos. ¡Podían identificar si un barco era amigo o enemigo antes de que llegara!"
+  },
+  {
+    "pregunta": "¿Cuántos siglos atrás ocurrió el ataque de Lolonois a Maracaibo?",
+    "tipo": "texto",
+    "opciones": [
+      "Ocurrió ayer",
+      "Hace más de 350 años, en el siglo XVII",
+      "Hace 10 años",
+      "En el siglo XXII, que no ha llegado"
+    ],
+    "correcta": 1,
+    "explicacion": "Lolonois atacó Maracaibo en 1666, que fue en el siglo XVII. Eso fue hace más de 350 años. ¡Fue hace muchísimo tiempo!",
+    "dato_curioso": "En 1666, todavía no existían los carros, ni los aviones, ni la electricidad. La gente viajaba a caballo y se alumbraba con velas."
+  },
+  {
+    "pregunta": "¿Por qué el cacao venezolano era más valioso que el oro para los piratas?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de una balanza antigua de colores donde en un lado hay monedas de oro y en el otro hay granos de cacao, y el cacao pesa igual o más, con piratas asombrados alrededor.",
+    "opciones": [
+      "Porque sabía a arcoíris de colores",
+      "Porque en Europa pagaban mucho dinero por el chocolate",
+      "Porque los piratas lo necesitaban para su desayuno",
+      "Porque brillaba como las estrellas de noche"
+    ],
+    "correcta": 1,
+    "explicacion": "El cacao era tan valioso porque en Europa el chocolate era un lujo para los ricos. ¡Un poco de cacao podía valer tanto como muchas monedas de oro!",
+    "dato_curioso": "Los aztecas ya usaban el cacao como moneda antes de que llegaran los europeos. ¡El cacao ha sido dinero comestible por miles de años!"
+  },
+  {
+    "pregunta": "¿Qué era un bergantín?",
+    "tipo": "texto",
+    "opciones": [
+      "Un tipo de sombrero pirata muy elegante",
+      "Un barco rápido con velas y remos",
+      "Un cañón extra grande y brillante",
+      "Un monstruo marino inventado"
+    ],
+    "correcta": 1,
+    "explicacion": "Un bergantín era un barco rápido que podía usar tanto velas como remos. Los piratas los amaban por su velocidad.",
+    "dato_curioso": "Los bergantines eran tan rápidos que podían escapar de barcos de guerra más grandes. ¡Su secreto era ser livianos y ágiles como una lancha moderna!"
+  },
+  {
+    "pregunta": "¿Qué pasó con las ciudades venezolanas después de los ataques piratas?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de obreros coloniales venezolanos construyendo murallas de piedra más altas y castillos más fuertes después de un ataque, con supervisores dando órdenes y carros llenos de piedras.",
+    "opciones": [
+      "Las abandonaron y se fueron a vivir al espacio",
+      "Construyeron mejores defensas y castillos más fuertes",
+      "Pintaron las casas de colores para disimular",
+      "Pusieron carteles que decían 'No hay nada aquí'"
+    ],
+    "correcta": 1,
+    "explicacion": "Después de los ataques, los venezolanos construyeron mejores castillos y murallas. Aprendieron a defenderse cada vez mejor.",
+    "dato_curioso": "¡Cada vez que los piratas atacaban, los castillos se hacían más grandes y resistentes! Los piratas sin querer ayudaron a Venezuela a tener fortalezas impresionantes."
+  },
+  {
+    "pregunta": "¿Por qué Venezuela era el lugar favorito de los piratas en el Caribe?",
+    "tipo": "texto",
+    "opciones": [
+      "Porque tenía las mejores playas para vacacionar",
+      "Porque tenía muchas riquezas y costas fáciles de atacar",
+      "Porque el idioma español les parecía bonito",
+      "Porque ahí vendían los mejores sombreros del mundo"
+    ],
+    "correcta": 1,
+    "explicacion": "Venezuela era muy atractiva para los piratas porque tenía costas largas, ciudades ricas y productos muy valiosos como el cacao.",
+    "dato_curioso": "Venezuela tiene más de 2800 kilómetros de costa en el Caribe. ¡Con tanta playa, era imposible vigilar todo y los piratas encontraban lugares para esconderse!"
+  },
+  {
+    "pregunta": "¿Qué necesitaban los piratas para navegar de noche?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de piratas en la cubierta de un barco de noche, uno con un telescopio mirando las estrellas, otro con una brújula, y un mapa extendido iluminado por una linterna.",
+    "opciones": [
+      "Linternas de dinosaurio fluorescente",
+      "Las estrellas, una brújula y mapas para orientarse",
+      "Gafas de visión nocturna de colores",
+      "Un faro de discoteca en el barco"
+    ],
+    "correcta": 1,
+    "explicacion": "Los piratas usaban las estrellas, brújulas y mapas para navegar de noche. Era su forma de saber dónde estaban en el mar oscuro.",
+    "dato_curioso": "Los marineros de esa época eran expertos en leer las estrellas. ¡Mirando el cielo podían saber exactamente dónde estaban en el océano, sin GPS ni celular!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Quién era Francis Drake?",
+    "tipo": "texto",
+    "opciones": [
+      "Un cocinero famoso de Londres",
+      "Un pirata inglés muy temido",
+      "Un rey de chocolate",
+      "Un mago de circo"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: Francis Drake era un pirata inglés muy peligroso. Su reina lo mandaba a atacar barcos y ciudades de España.",
+    "dato_curioso": "Repaso curioso: ¡La reina de Inglaterra le regaló una espada de oro por ser tan buen pirata! A veces los piratas eran héroes para su propio país."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: A qué ciudad venezolana atacó Francis Drake en 1595?",
+    "tipo": "texto",
+    "opciones": [
+      "Maracaibo",
+      "La Guaira",
+      "Caracas",
+      "Valencia"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: Francis Drake llegó con sus barcos y atacó La Guaira en 1595. La Guaira es el puerto más cercano a Caracas.",
+    "dato_curioso": "Repaso curioso: Drake llegó con tantos barcos que la gente de La Guaira corrió a esconderse en las montañas. ¡Fue como una película de aventuras!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cómo se llaman los piratas que tenían permiso del rey para atacar?",
+    "tipo": "texto",
+    "opciones": [
+      "Corsarios",
+      "Marineros de chocolate",
+      "Magos del mar",
+      "Tiburones disfrazados"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: Los corsarios eran piratas especiales con un papel del rey que les daba permiso para atacar barcos enemigos. ¡Eran piratas con licencia!",
+    "dato_curioso": "Repaso curioso: El papel que les daba el rey se llamaba 'Carta de Corso'. ¡Era como tener un carnet especial para ser pirata!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Quién era Lolonois?",
+    "tipo": "texto",
+    "opciones": [
+      "Un príncipe de las nubes",
+      "Un pirata francés muy feroz",
+      "Un chef francés de pasteles",
+      "Un domador de leones"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: Lolonois, cuyo nombre real era François l'Olonnais, era un pirata francés muy feroz. Era tan peligroso que todos le tenían miedo.",
+    "dato_curioso": "Repaso curioso: ¡Lolonois atacó Maracaibo con 700 piratas! Era como un ejército entero de piratas juntos."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cuántos piratas trajo Lolonois cuando atacó Maracaibo?",
+    "tipo": "texto",
+    "opciones": [
+      "1 pirata muy grande",
+      "700 piratas",
+      "Solo 3 piratas amigos",
+      "200 piratas con patines"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: Lolonois llegó con 700 piratas a Maracaibo en 1666. Era un grupo enorme y muy peligroso.",
+    "dato_curioso": "Repaso curioso: ¡700 piratas es como llenar casi 10 autobuses escolares de piratas! Con tantos piratas, nadie podía detenerlos."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: En qué año atacó Lolonois la ciudad de Maracaibo?",
+    "tipo": "texto",
+    "opciones": [
+      "Ayer por la tarde",
+      "En 1666",
+      "En el año 2000",
+      "En 1492"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: Lolonois atacó Maracaibo en el año 1666. Eso fue hace muchísimos años, más de 350 años atrás.",
+    "dato_curioso": "Repaso curioso: En ese mismo año, en Londres ocurrió un gran incendio que quemó casi toda la ciudad. ¡El año 1666 fue muy movido en el mundo!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Para qué construyeron castillos en Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Para guardar helados gigantes",
+      "Para defender las ciudades de los piratas",
+      "Para criar dragones",
+      "Para hacer fiestas de cumpleaños"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: Los castillos en Venezuela se construyeron para proteger a la gente de los piratas. Tenían cañones grandes para alejar los barcos enemigos.",
+    "dato_curioso": "Repaso curioso: Algunos castillos venezolanos todavía existen hoy. ¡Puedes visitarlos y ver los cañones que asustaban a los piratas!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Dónde está el Castillo de San Felipe?",
+    "tipo": "texto",
+    "opciones": [
+      "En la Luna",
+      "Debajo del mar",
+      "En Puerto Cabello",
+      "En un parque de diversiones"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: El Castillo de San Felipe está en Puerto Cabello, una ciudad costera de Venezuela. Fue construido para defender ese puerto importante.",
+    "dato_curioso": "Repaso curioso: Puerto Cabello tiene uno de los puertos más tranquilos del mundo. ¡El agua es tan quieta que los barcos apenas se mueven!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué controlaba el Castillo San Carlos?",
+    "tipo": "texto",
+    "opciones": [
+      "La tienda de dulces más grande",
+      "La entrada al Lago de Maracaibo",
+      "El camino a la ciudad de robots",
+      "El paso a la montaña de helado"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: El Castillo San Carlos vigilaba la única entrada al Lago de Maracaibo. Si el castillo estaba ahí, nadie podía entrar sin permiso.",
+    "dato_curioso": "Repaso curioso: El canal de entrada al Lago de Maracaibo es tan estrecho que un castillo en la orilla podía controlar todo el paso. ¡Era como una puerta gigante!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué productos robaban los piratas en Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Cacao, cuero e índigo",
+      "Cohetes espaciales",
+      "Pizzas y hamburguesas",
+      "Videojuegos y paletas"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: Los piratas querían robar cacao, cuero e índigo de Venezuela. Esas cosas valían muchísimo dinero en Europa.",
+    "dato_curioso": "Repaso curioso: El cacao se usa para hacer chocolate. ¡Los piratas robaban el ingrediente secreto del chocolate venezolano para venderlo muy caro en Europa!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué era el índigo que robaban los piratas?",
+    "tipo": "texto",
+    "opciones": [
+      "La Guaira",
+      "Un pirata inglés muy temido",
+      "Corsarios",
+      "Un tinte azul muy valioso para teñir telas"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: El índigo era una planta que se usaba para hacer un tinte azul hermoso. Con ese azul, en Europa teñían telas muy elegantes.",
+    "dato_curioso": "Dato para profundizar: Antes de inventar los tintes de fábrica, el único azul bonito venía de plantas como el índigo. ¡Era tan valioso que a veces valía más que el oro!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cómo se llamaban los barcos rápidos que usaban los piratas?",
+    "tipo": "texto",
+    "opciones": [
+      "La Guaira",
+      "Bergantines y fragatas",
+      "Corsarios",
+      "Un pirata inglés muy temido"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: Los piratas navegaban en bergantines y fragatas. Eran barcos rápidos y fáciles de maniobrar para atacar y escapar.",
+    "dato_curioso": "Dato para profundizar: Los bergantines podían usar velas y remos al mismo tiempo. ¡Así los piratas podían moverse aunque no hubiera viento!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué tenían los castillos para defenderse de los piratas?",
+    "tipo": "texto",
+    "opciones": [
+      "La Guaira",
+      "Un pirata inglés muy temido",
+      "Corsarios",
+      "Cañones de hierro muy poderosos"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: Los castillos tenían cañones grandes de hierro. Cuando disparaban, una bola enorme volaba hacia los barcos enemigos.",
+    "dato_curioso": "Dato para profundizar: ¡Una bola de cañón podía volar más de un kilómetro! Era como lanzar una bola de boliche muy pesada pero mucho más lejos."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Por qué Venezuela era tan interesante para los piratas?",
+    "tipo": "texto",
+    "opciones": [
+      "Corsarios",
+      "Porque tenía productos muy valiosos para Europa",
+      "Un pirata inglés muy temido",
+      "La Guaira"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: Venezuela tenía cacao, cuero e índigo que valían mucho dinero en Europa. Por eso los piratas querían robarlo.",
+    "dato_curioso": "Dato para profundizar: En esa época, el cacao venezolano era el mejor del mundo. Los europeos lo adoraban tanto que pagaban fortunas para tenerlo."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué eran las murallas que rodeaban las ciudades costeras?",
+    "tipo": "texto",
+    "opciones": [
+      "Paredes de piedra para proteger la ciudad de piratas",
+      "La Guaira",
+      "Un pirata inglés muy temido",
+      "Corsarios"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: Las murallas eran paredes de piedra muy gruesas que rodeaban las ciudades. Protegían a la gente de los ataques de los piratas.",
+    "dato_curioso": "Dato para profundizar: Algunas murallas eran tan gruesas que podías caminar encima de ellas. ¡Eran como carreteras de piedra en las alturas!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: De dónde era Francis Drake?",
+    "tipo": "texto",
+    "opciones": [
+      "Un pirata inglés muy temido",
+      "La Guaira",
+      "Era de Inglaterra",
+      "Corsarios"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: Francis Drake era inglés, venía de Inglaterra. Su reina Isabel I le daba misiones para atacar barcos y ciudades españolas.",
+    "dato_curioso": "Dato para profundizar: La reina Isabel de Inglaterra llamaba a Drake 'Mi pirata'. ¡Era tan famoso que la reina lo consideraba su pirata favorito!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué hacían los habitantes cuando llegaban los piratas?",
+    "tipo": "texto",
+    "opciones": [
+      "La Guaira",
+      "Un pirata inglés muy temido",
+      "Huían a esconderse en las montañas",
+      "Corsarios"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: Cuando llegaban los piratas, la gente huía rápido a las montañas o al campo. Era lo más seguro para proteger sus vidas.",
+    "dato_curioso": "Dato para profundizar: A veces la gente enterraba sus tesoros antes de escapar. ¡Por eso hoy en día algunas personas todavía buscan tesoros escondidos en Venezuela!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué significa ser un 'corsario'?",
+    "tipo": "texto",
+    "opciones": [
+      "Corsarios",
+      "La Guaira",
+      "Ser un pirata con permiso del rey",
+      "Un pirata inglés muy temido"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: Un corsario es un pirata que tiene permiso especial del rey para atacar barcos enemigos. Es diferente a un pirata común.",
+    "dato_curioso": "Dato para profundizar: El permiso del rey se llamaba 'patente de corso'. Con ese papel, el corsario podía atacar libremente y nadie lo metía preso en su propio país."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cómo llegaban los piratas a las costas venezolanas?",
+    "tipo": "texto",
+    "opciones": [
+      "Un pirata inglés muy temido",
+      "Corsarios",
+      "En barcos de vela rápidos",
+      "La Guaira"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: Los piratas llegaban en barcos de vela. El viento les ayudaba a navegar rápido por el mar Caribe.",
+    "dato_curioso": "Dato para profundizar: Algunos barcos piratas podían viajar más de 200 kilómetros en un solo día con buen viento. ¡Era como ir de Caracas a Valencia en barco!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: En qué siglo atacó Drake a Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Un pirata inglés muy temido",
+      "La Guaira",
+      "Corsarios",
+      "En el siglo XVI"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: Francis Drake atacó Venezuela en el siglo XVI, que son los años 1500. El ataque a La Guaira fue en 1595.",
+    "dato_curioso": "Dato para profundizar: El siglo XVI fue una época llena de exploradores y piratas en el Caribe. ¡El mar Caribe era el lugar más emocionante y peligroso del mundo!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué hacían los piratas con lo que robaban en Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Lo devolvían arrepentidos",
+      "Lo regalaban en Navidad",
+      "Lo vendían en Europa para ganar mucho dinero",
+      "Lo usaban para pintar cuadros"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: Los piratas vendían lo que robaban en Europa. El cacao y el índigo valían muchísimo dinero allá.",
+    "dato_curioso": "Ampliación histórica: Un saco de cacao venezolano valía tanto que una familia podía vivir con ese dinero por meses. ¡El chocolate era un lujo para ricos!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué tenían los barcos piratas que les daba miedo a todos?",
+    "tipo": "texto",
+    "opciones": [
+      "Cohetes de colores",
+      "La bandera de la calavera",
+      "Bocinas muy ruidosas",
+      "Altavoces con música de terror"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: Los barcos piratas tenían la bandera de la calavera, llamada Jolly Roger. Cuando la veías, sabías que los piratas venían.",
+    "dato_curioso": "Ampliación histórica: ¡La bandera de la calavera se inventó para asustar tanto que la gente se rindiera sin pelear! Era como decir 'ríndete o te va a ir muy mal'."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cuál es la única entrada al Lago de Maracaibo?",
+    "tipo": "texto",
+    "opciones": [
+      "Un puente colgante de cuerdas",
+      "Un túnel secreto bajo tierra",
+      "Un canal estrecho vigilado por el Castillo San Carlos",
+      "Una escalera de madera muy larga"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: Para entrar al Lago de Maracaibo hay que pasar por un canal muy estrecho. El Castillo San Carlos estaba ahí para vigilar ese paso.",
+    "dato_curioso": "Ampliación histórica: El Lago de Maracaibo es el lago más grande de Venezuela y de toda Sudamérica. ¡Es tan grande que parece un mar pequeño!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué pasaba si un barco pirata intentaba entrar al Lago de Maracaibo con el Castillo San Carlos activo?",
+    "tipo": "texto",
+    "opciones": [
+      "Los cañones del castillo lo atacaban",
+      "Lo invitaban a tomar café",
+      "Le ponían una multa de tráfico",
+      "Le daban un mapa de tesoros"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: Si un barco enemigo intentaba pasar, los soldados del Castillo San Carlos disparaban los cañones. Era muy difícil entrar sin permiso.",
+    "dato_curioso": "Ampliación histórica: ¡A veces los piratas esperaban la noche para intentar colarse! Pero los soldados del castillo siempre estaban despiertos vigilando."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué usaban los colonos venezolanos para fabricar cosas valiosas del cuero?",
+    "tipo": "texto",
+    "opciones": [
+      "Plástico de colores",
+      "Cuero de las vacas y otros animales",
+      "Cuero de dragón volador",
+      "Hojas de árboles mágicos"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: El cuero venía de las vacas y otros animales de Venezuela. Con ese cuero hacían botas, sillas de montar y muchas cosas útiles.",
+    "dato_curioso": "Ampliación histórica: Venezuela tenía tantas vacas en esa época que el cuero era uno de sus productos más importantes. ¡Los llanos venezolanos estaban llenos de ganado!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Por qué Francis Drake era famoso en toda Europa?",
+    "tipo": "texto",
+    "opciones": [
+      "Por inventar el helado de mango",
+      "Por tener el sombrero más grande del mundo",
+      "Por ser un gran explorador y pirata temido",
+      "Por ganar un campeonato de pesca"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: Drake era famoso porque había navegado alrededor del mundo entero y atacado muchos puertos españoles. Era el pirata más conocido de su época.",
+    "dato_curioso": "Ampliación histórica: Drake fue el segundo hombre en navegar alrededor de todo el mundo. ¡Tardó casi tres años en completar ese viaje increíble!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cómo se organizaban los piratas cuando atacaban una ciudad?",
+    "tipo": "texto",
+    "opciones": [
+      "Mandaban una carta pidiendo permiso",
+      "Cada uno iba por su lado comiendo galletas",
+      "Jugaban piedra papel tijera para decidir quién entraba primero",
+      "El capitán organizaba a todos en grupos para atacar juntos"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: El capitán pirata organizaba el ataque y los piratas bajaban juntos en botes pequeños a la playa. Luego atacaban la ciudad en grupo.",
+    "dato_curioso": "Ampliación histórica: ¡Los barcos piratas tenían reglas propias! Todos votaban las decisiones importantes y el botín se repartía de forma ordenada entre la tripulación."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué significa 'saquear' una ciudad?",
+    "tipo": "texto",
+    "opciones": [
+      "Limpiarla muy bien",
+      "Robar todo lo que hay en la ciudad",
+      "Plantar flores en las calles",
+      "Construir casas nuevas"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: Saquear significa entrar a una ciudad y robar todo lo que puedas encontrar. Los piratas saqueaban las ciudades venezolanas para llevarse sus riquezas.",
+    "dato_curioso": "Ampliación histórica: Cuando Lolonois saqueó Maracaibo, se llevó tanto que sus barcos casi no podían flotar de tanto peso. ¡Cargó todo lo que encontró!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué construyeron los españoles para defender Puerto Cabello?",
+    "tipo": "texto",
+    "opciones": [
+      "Un foso lleno de cocodrilos de goma",
+      "Una pared de globos de colores",
+      "Una cerca de bambú muy alta",
+      "El Castillo de San Felipe con murallas y cañones"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: Para defender Puerto Cabello construyeron el Castillo de San Felipe. Tenía gruesas murallas de piedra y cañones poderosos.",
+    "dato_curioso": "Ampliación histórica: El Castillo de San Felipe está rodeado de agua por casi todos sus lados. ¡Los piratas tendrían que nadar para llegar, y ahí estaban esperándoles los cañones!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué necesitaban los corsarios para atacar barcos legalmente?",
+    "tipo": "texto",
+    "opciones": [
+      "Un mapa del tesoro firmado",
+      "Una carta o permiso del rey",
+      "Un disfraz de fantasma",
+      "Un sombrero de tres picos especial"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: Los corsarios necesitaban una carta o patente del rey que les daba permiso para atacar barcos enemigos. Sin ese papel, eran simples piratas.",
+    "dato_curioso": "Ampliación histórica: Si un corsario perdía su carta de corso, podían colgarlo como pirata común. ¡Ese papelito era el más importante de su vida!"
+  }
+]

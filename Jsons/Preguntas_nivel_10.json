@@ -1,0 +1,891 @@
+[
+  {
+    "pregunta": "¿Qué es la esclavitud?",
+    "tipo": "texto",
+    "opciones": [
+      "Un juego divertido de cartas antiguo",
+      "Cuando una persona es forzada a trabajar sin libertad ni pago",
+      "Un baile tradicional venezolano bonito",
+      "Un tipo de fiesta colonial muy animada"
+    ],
+    "correcta": 1,
+    "explicacion": "¡La esclavitud es cuando alguien obliga a otra persona a trabajar sin libertad y sin pagarle! Era algo muy injusto y cruel que existió antes.",
+    "dato_curioso": "¡Hoy la esclavitud está prohibida en todos los países del mundo! Fue una lucha muy larga lograr que todas las personas fueran libres."
+  },
+  {
+    "pregunta": "¿De dónde venían las personas que fueron esclavizadas en Venezuela?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Mapa que muestra flechas gruesas cruzando el Océano Atlántico desde el continente africano hacia Venezuela y América del Sur. Las flechas representan los barcos esclavistas. El mapa tiene tonos serios pero educativos, apropiados para niños.",
+    "opciones": [
+      "De África, traídas a la fuerza por barco",
+      "De la luna y las estrellas distantes",
+      "Del fondo del Mar Caribe venezolano",
+      "De un país imaginario llamado Esclavonia"
+    ],
+    "correcta": 0,
+    "explicacion": "¡Las personas esclavizadas venían de África! Las capturaban y las metían en barcos contra su voluntad para traerlas a trabajar en América.",
+    "dato_curioso": "¡El viaje en esos barcos era terriblemente cruel! Las personas eran tratadas muy mal durante semanas en el mar. Fue una de las injusticias más grandes de la historia."
+  },
+  {
+    "pregunta": "¿Cuántas personas esclavizadas había en Venezuela al inicio de la independencia?",
+    "tipo": "texto",
+    "opciones": [
+      "Solo 5 personas en todo el país",
+      "Exactamente un millón de personas",
+      "Nadie, Venezuela no tenía esclavitud",
+      "Aproximadamente 87.000 personas esclavizadas"
+    ],
+    "correcta": 3,
+    "explicacion": "¡En Venezuela había alrededor de 87.000 personas esclavizadas! Era una cantidad enorme de gente viviendo sin libertad.",
+    "dato_curioso": "¡87.000 personas es más que toda la gente que cabe en un estadio de fútbol grande! Imagínate a todas esas personas sin libertad. Qué tristeza tan grande."
+  },
+  {
+    "pregunta": "¿En qué tipo de lugares trabajaban principalmente las personas esclavizadas?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de una gran plantación colonial venezolana con plantas de cacao, café y caña de azúcar. Personas trabajando duramente bajo el sol intenso mientras supervisores los observan. La imagen transmite dureza del trabajo sin ser violenta.",
+    "opciones": [
+      "En palacios de hielo y nieve fría",
+      "En plantaciones de cacao, café y caña de azúcar",
+      "En fábricas de juguetes coloniales divertidos",
+      "En laboratorios de magia y ciencia especial"
+    ],
+    "correcta": 1,
+    "explicacion": "¡Las personas esclavizadas trabajaban en las plantaciones donde crecían el cacao, el café y la caña de azúcar! Trabajaban durísimo bajo el sol.",
+    "dato_curioso": "¡El chocolate que hoy comes viene del cacao! Muchas personas esclavizadas trabajaron cultivando cacao para que los ricos de Europa pudieran comer chocolate."
+  },
+  {
+    "pregunta": "¿A quién le prometió Bolívar en 1816 que liberaría a los esclavos de Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Al rey de España en carta formal",
+      "A los dinosaurios en un sueño especial",
+      "Al presidente de Haití, Alexandre Petión",
+      "A su mamá en una promesa familiar"
+    ],
+    "correcta": 2,
+    "explicacion": "¡Bolívar le prometió al presidente de Haití, Alexandre Petión, que liberaría a los esclavos! A cambio, Petión le ayudó con armas y soldados.",
+    "dato_curioso": "¡Haití fue el primer país en abolir la esclavitud en América en 1804! Por eso Petión entendía muy bien la importancia de la libertad para todos."
+  },
+  {
+    "pregunta": "¿Quién fue Alexandre Petión?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Retrato ilustrado de Alexandre Petión, presidente de Haití, con uniforme presidencial de la época, sentado en un escritorio con documentos. Tiene expresión de inteligencia y dignidad. Fondo de la bandera haitiana azul y roja.",
+    "opciones": [
+      "Un cocinero famoso de Puerto Rico",
+      "Un general español muy malvado",
+      "Un pirata del Caribe muy gracioso",
+      "El presidente de Haití que ayudó a Bolívar"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Alexandre Petión era el presidente de Haití! Ayudó a Bolívar dándole armas, barcos y soldados para continuar la lucha por la independencia.",
+    "dato_curioso": "¡Haití es el vecino isleño de Venezuela en el Mar Caribe! Fue el primer país de América Latina en ser libre, un modelo de valentía para Bolívar."
+  },
+  {
+    "pregunta": "¿Qué le dio Petión a Bolívar a cambio de la promesa de liberar a los esclavos?",
+    "tipo": "texto",
+    "opciones": [
+      "Armas, barcos y soldados para continuar la lucha",
+      "Una torta de cumpleaños gigantísima",
+      "Cien caballos de colores brillantes",
+      "Un mapa del tesoro pirata especial"
+    ],
+    "correcta": 0,
+    "explicacion": "¡Petión le dio a Bolívar armas, barcos y soldados! Con esa ayuda, Bolívar pudo continuar la guerra de independencia que parecía perdida.",
+    "dato_curioso": "¡Sin la ayuda de Haití, la independencia de Venezuela podría haber tardado mucho más! Petión fue un aliado clave que muchos no conocen."
+  },
+  {
+    "pregunta": "¿Qué hicieron muchos esclavos liberados por Bolívar durante la independencia?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de un grupo de hombres que acaban de recibir su libertad, algunos con cadenas rotas en el suelo, uniéndose a una columna de soldados patriotas venezolanos. Expresiones de determinación y esperanza en sus rostros. Bandera patriota al fondo.",
+    "opciones": [
+      "Se fueron a vivir en el extranjero lejos",
+      "Empezaron negocios de dulces coloniales especiales",
+      "Se unieron al ejército patriota para luchar por Venezuela",
+      "Construyeron el primer estadio de fútbol venezolano"
+    ],
+    "correcta": 2,
+    "explicacion": "¡Muchos esclavos liberados se unieron al ejército patriota para luchar por la independencia de Venezuela! Lucharon por su libertad y la de todos.",
+    "dato_curioso": "¡Muchos de esos exesclavos fueron soldados valientes y brillantes! Algunos hasta se convirtieron en oficiales importantes del ejército patriota."
+  },
+  {
+    "pregunta": "¿Quién firmó la abolición definitiva de la esclavitud en Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Simón Bolívar en Angostura 1819",
+      "La reina de España arrepentida",
+      "José Gregorio Monagas el 24 de marzo de 1854",
+      "El primer astronauta venezolano del espacio"
+    ],
+    "correcta": 2,
+    "explicacion": "¡El presidente José Gregorio Monagas firmó la abolición definitiva de la esclavitud el 24 de marzo de 1854! Ese día todos los esclavos venezolanos fueron libres.",
+    "dato_curioso": "¡El 24 de marzo de 1854 fue uno de los días más felices de la historia venezolana! Imagínate la alegría de 87.000 personas al recibir su libertad."
+  },
+  {
+    "pregunta": "¿En qué año firmó Monagas la abolición de la esclavitud en Venezuela?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración del presidente José Gregorio Monagas en su despacho presidencial, firmando solemnemente un gran documento con pluma y tintero. La fecha '24 de marzo de 1854' aparece visible en el documento. Funcionarios observan el momento histórico.",
+    "opciones": [
+      "En el año 1492 con Colón",
+      "En 1854, el 24 de marzo",
+      "En el año 2000 modernamente",
+      "En 1776 como en Estados Unidos"
+    ],
+    "correcta": 1,
+    "explicacion": "¡Monagas firmó la abolición el 24 de marzo de 1854! Ese fue el fin oficial de la esclavitud en Venezuela para siempre jamás.",
+    "dato_curioso": "¡Venezuela abolió la esclavitud en 1854 mientras en Estados Unidos todavía existía! EE.UU. la abolió en 1865, once años después de Venezuela."
+  },
+  {
+    "pregunta": "¿Qué posición tiene Venezuela en América respecto a la abolición de la esclavitud?",
+    "tipo": "texto",
+    "opciones": [
+      "Fue el último país en abolirla en América",
+      "Venezuela nunca tuvo esclavitud en su historia",
+      "Abolió la esclavitud al mismo tiempo que todos",
+      "Fue uno de los primeros países en abolir la esclavitud en América"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Venezuela fue uno de los primeros países de América en abolir la esclavitud! Eso la pone en un lugar de honor en la historia de la libertad.",
+    "dato_curioso": "¡Muchos países de América tuvieron esclavitud hasta mucho después que Venezuela! Brasil, por ejemplo, abolió la esclavitud en 1888, más de 30 años después."
+  },
+  {
+    "pregunta": "¿Cómo se llama la fiesta venezolana que celebra la libertad de los esclavos?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración vibrante y colorida de la Fiesta de San Juan en Venezuela con personas bailando, tambores africanos, vestuario colorido con influencias afrovenezolanas, collares de cuentas y palmas decorativas. Ambiente de alegría y celebración cultural.",
+    "opciones": [
+      "El Carnaval de Caracas moderno",
+      "La Fiesta de San Juan en honor a la libertad",
+      "El Festival del Cacao Venezolano delicioso",
+      "La Semana del Arepa Nacional venezolana"
+    ],
+    "correcta": 1,
+    "explicacion": "¡La Fiesta de San Juan celebra la libertad de los esclavos! Es una fiesta llena de tambores, baile y alegría con raíces africanas muy bonitas.",
+    "dato_curioso": "¡La Fiesta de San Juan se celebra el 24 de junio! Los tambores que se tocan vienen de África y representan la voz de todos los que lucharon por ser libres."
+  },
+  {
+    "pregunta": "¿En qué ciudad venezolana se celebra especialmente la Fiesta de San Juan?",
+    "tipo": "texto",
+    "opciones": [
+      "En la Luna venezolana orbital",
+      "En Caracas, la capital siempre",
+      "En San Juan de los Morros y otras ciudades con raíces africanas",
+      "Solo en Ciudad Bolívar junto al Orinoco"
+    ],
+    "correcta": 2,
+    "explicacion": "¡San Juan de los Morros y muchas otras ciudades venezolanas con comunidades afrodescendientes celebran la Fiesta de San Juan! Es una tradición muy viva.",
+    "dato_curioso": "¡Las comunidades afrovenezolanas han preservado sus tradiciones africanas por cientos de años! Sus tambores, bailes y cantos son un tesoro cultural único."
+  },
+  {
+    "pregunta": "¿Cómo viajaron las personas esclavizadas desde África hasta Venezuela?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración sobria de un barco esclavista del siglo XVII-XVIII cruzando el Océano Atlántico. El barco tiene una bandera colonial y navega entre olas. La imagen es educativa sin mostrar violencia gráfica, enfocada en el viaje histórico.",
+    "opciones": [
+      "En barcos esclavistas por el Océano Atlántico a la fuerza",
+      "Volando en aviones coloniales especiales",
+      "Caminando por un puente hasta Venezuela",
+      "En submarinos secretos de madera"
+    ],
+    "correcta": 0,
+    "explicacion": "¡Las personas eran llevadas a la fuerza en barcos que cruzaban el Océano Atlántico! El viaje duraba semanas y las condiciones eran horribles.",
+    "dato_curioso": "¡A ese terrible viaje lo llamaban 'el paso del Medio'! Millones de personas africanas murieron durante ese cruce del océano. Fue una de las peores tragedias de la historia."
+  },
+  {
+    "pregunta": "¿Qué cultivos cosechaban los esclavos venezolanos principalmente?",
+    "tipo": "texto",
+    "opciones": [
+      "Fresas, manzanas y peras importadas",
+      "Trigo, maíz y papas gigantes",
+      "Cacao, café y caña de azúcar",
+      "Naranjas, mangos y uvas europeas"
+    ],
+    "correcta": 2,
+    "explicacion": "¡Los esclavos venezolanos trabajaban cosechando cacao para el chocolate, café y caña de azúcar! Productos que los ricos europeos querían mucho.",
+    "dato_curioso": "¡El cacao venezolano era famoso en toda Europa! El mejor chocolate del mundo se hacía con cacao de Venezuela. Y los esclavos fueron quienes lo cosecharon."
+  },
+  {
+    "pregunta": "¿Qué sentía Bolívar cuando prometió liberar a los esclavos?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de Simón Bolívar reunido con Alexandre Petión en Haití, estrechando su mano con expresión solemne y comprometida. Ambos hombres tienen miradas de respeto mutuo. Un documento de promesa está sobre la mesa entre los dos líderes.",
+    "opciones": [
+      "Indiferencia porque no le importaba ese tema",
+      "Convicción de que la libertad era un derecho de todos",
+      "Miedo de que fuera una mala idea política",
+      "Ganas de quedar bien solo para conseguir la ayuda"
+    ],
+    "correcta": 1,
+    "explicacion": "¡Bolívar creía genuinamente que la libertad era un derecho de todos los seres humanos! Por eso su promesa fue sincera y la cumplió.",
+    "dato_curioso": "¡Bolívar también nació en una sociedad con esclavitud! Conocía esa injusticia de cerca y quería acabar con ella para siempre en Venezuela."
+  },
+  {
+    "pregunta": "¿Cuántos años antes que Venezuela abolió Haití la esclavitud?",
+    "tipo": "texto",
+    "opciones": [
+      "Haití la abolió después de Venezuela siempre",
+      "Cien años antes en 1754",
+      "El mismo día exactamente",
+      "50 años antes, en 1804"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Haití abolió la esclavitud en 1804, exactamente 50 años antes que Venezuela en 1854! Haití fue el primer país del mundo en hacerlo.",
+    "dato_curioso": "¡La revolución de Haití fue la primera revolución exitosa de esclavos en la historia del mundo! Inspiró luchas por la libertad en todo el continente americano."
+  },
+  {
+    "pregunta": "¿Qué instrumento musical afrovenezolano es símbolo de la libertad y la Fiesta de San Juan?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración colorida de varios tambores afrovenezolanos de diferentes tamaños (mina, cumacos) con diseños decorativos tradicionales, siendo tocados por músicos con ropas coloridas durante una celebración al aire libre en Venezuela.",
+    "opciones": [
+      "El piano de cola europeo elegante",
+      "La guitarra eléctrica moderna amplificada",
+      "Los tambores africanos heredados por los afrovenezolanos",
+      "El acordeón llanero venezolano típico"
+    ],
+    "correcta": 2,
+    "explicacion": "¡Los tambores africanos son el símbolo musical más poderoso de las comunidades afrovenezolanas! Su sonido celebra la vida, la libertad y la memoria de los ancestros.",
+    "dato_curioso": "¡Los tambores afrovenezolanos están declarados Patrimonio Cultural de Venezuela! Su ritmo lleva siglos contando la historia de un pueblo que nunca se rindió."
+  },
+  {
+    "pregunta": "¿Cómo se llamaba el presidente que firmó la abolición de la esclavitud en Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Simón Bolívar El Liberador",
+      "Francisco de Miranda heroico",
+      "José Gregorio Monagas",
+      "Antonio José de Sucre joven"
+    ],
+    "correcta": 2,
+    "explicacion": "¡El presidente José Gregorio Monagas firmó la abolición! Fue un acto muy valiente porque muchos dueños de plantaciones estaban furiosos.",
+    "dato_curioso": "¡Monagas tuvo que enfrentar mucha resistencia para firmar la abolición! Los ricos que tenían esclavos no querían perder su mano de obra gratis."
+  },
+  {
+    "pregunta": "¿Qué le prometió Bolívar a Petión exactamente para recibir su apoyo?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de Bolívar firmando una promesa escrita ante Petión en Puerto Príncipe, Haití. El documento dice 'libertad para los esclavos de Venezuela'. Ambos líderes tienen expresiones serias y determinadas. Ambiente de negociación histórica importante.",
+    "opciones": [
+      "Que le regalaría una isla venezolana bonita",
+      "Que lo nombraría general del ejército venezolano",
+      "Que le enviaría cacao gratis para siempre",
+      "Que liberaría a todos los esclavos de Venezuela"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Bolívar prometió que si ganaba la independencia, liberaría a todos los esclavos de Venezuela! Era un trato que cambiaría miles de vidas para siempre.",
+    "dato_curioso": "¡Bolívar cumplió su promesa! Después de la independencia, empezó el proceso de liberación que terminó en 1854 con la abolición definitiva."
+  },
+  {
+    "pregunta": "¿Qué significa la palabra 'abolición' cuando hablamos de la esclavitud?",
+    "tipo": "texto",
+    "opciones": [
+      "Eliminar y terminar con la esclavitud para siempre",
+      "Aumentar y fortalecer la esclavitud más",
+      "Cambiar las reglas de la esclavitud solo un poco",
+      "Exportar esclavos a otros países vecinos"
+    ],
+    "correcta": 0,
+    "explicacion": "¡Abolir la esclavitud significa eliminarla completamente y para siempre! Es decir que ninguna persona puede ser esclava de otra. Nunca más.",
+    "dato_curioso": "¡La palabra 'abolición' viene del latín 'abolere' que significa destruir o eliminar! Es una palabra poderosa que cambió la historia del mundo entero."
+  },
+  {
+    "pregunta": "¿Cómo reaccionaron los esclavos venezolanos cuando supieron que eran libres?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración emotiva y joyosa de personas afrovenezolanas celebrando su libertad: abrazándose, levantando los brazos al cielo, algunos llorando de alegría, otros bailando. Cadenas rotas en el suelo. Expresiones de felicidad y alivio profundo.",
+    "opciones": [
+      "Se fueron todos en barcos a África inmediatamente",
+      "Les dio igual porque ya no creían en nada",
+      "Se quedaron exactamente igual que antes tranquilos",
+      "Celebraron con enorme alegría su libertad recién ganada"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Las personas esclavizadas celebraron su libertad con una alegría enorme! Después de generaciones de sufrimiento, por fin eran libres e iguales.",
+    "dato_curioso": "¡Muchos de los liberados formaron comunidades propias, cultivaron sus tierras y preservaron sus tradiciones africanas! Su cultura sobrevivió y floreció en Venezuela."
+  },
+  {
+    "pregunta": "¿Qué estado venezolano lleva el nombre del presidente que abolió la esclavitud?",
+    "tipo": "texto",
+    "opciones": [
+      "El Estado Bolívar en el sur",
+      "El Estado Monagas al oriente",
+      "El Estado Zulia al occidente",
+      "El Estado Miranda al norte"
+    ],
+    "correcta": 1,
+    "explicacion": "¡El Estado Monagas lleva el nombre de la familia del presidente que firmó la abolición! Es un honor enorme que lleva su apellido en el mapa de Venezuela.",
+    "dato_curioso": "¡El Estado Monagas está en el oriente de Venezuela y es famoso por su petróleo y sus selvas! También fue donde vivió Juana La Avanzadora."
+  },
+  {
+    "pregunta": "¿Qué aportaron las culturas africanas a Venezuela?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Collage ilustrado de aportes culturales africanos a Venezuela: tambores afrovenezolanos, baile de tambores, comidas como el funche, artesanías con patrones africanos, y representaciones de la Fiesta de San Juan. Colores vibrantes y alegres.",
+    "opciones": [
+      "Absolutamente nada, llegaron sin cultura propia",
+      "Solo la técnica para cultivar maíz básicamente",
+      "Solo los nombres de algunos ríos venezolanos",
+      "Música, danzas, gastronomía y tradiciones que enriquecen Venezuela"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Los africanos traídos a Venezuela trajeron su música, sus danzas, su comida y sus tradiciones! Esas culturas se mezclaron y enriquecieron a Venezuela para siempre.",
+    "dato_curioso": "¡Venezuela es un país mestizo y multicultural! La mezcla de culturas indígena, española y africana es lo que hace tan única y rica a la cultura venezolana."
+  },
+  {
+    "pregunta": "¿En qué año fue Bolívar a Haití a pedir ayuda a Petión?",
+    "tipo": "texto",
+    "opciones": [
+      "En 1810, al inicio de todo",
+      "En 1816, cuando la guerra patriota parecía perdida",
+      "En 1821, cuando ya habían ganado",
+      "En el año 1900 modernamente"
+    ],
+    "correcta": 1,
+    "explicacion": "¡Bolívar fue a Haití en 1816 cuando las cosas estaban muy difíciles para los patriotas! Necesitaba ayuda urgente para poder continuar la lucha.",
+    "dato_curioso": "¡En 1816 los patriotas habían perdido muchas batallas y estaban derrotados! El apoyo de Haití fue como un salvavidas que cambió el destino de Venezuela."
+  },
+  {
+    "pregunta": "¿Cómo se llamaba el sistema que mantenía a las personas sin libertad en Venezuela colonial?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración educativa que muestra el contraste entre una plantación colonial con esclavos trabajando y, al otro lado, personas libres. En el centro, una cadena partida por la mitad simboliza el fin de la esclavitud. Estilo ilustrativo claro para niños.",
+    "opciones": [
+      "El sistema de vacaciones forzadas largas",
+      "El sistema de trabajo voluntario bien pagado",
+      "La esclavitud, que negaba la libertad y los derechos básicos",
+      "El contrato de empleo colonial normal"
+    ],
+    "correcta": 2,
+    "explicacion": "¡La esclavitud era el sistema que mantenía a las personas sin libertad! Les quitaba todos sus derechos y las trataba como si fueran objetos en lugar de personas.",
+    "dato_curioso": "¡La esclavitud existió en casi todo el mundo durante miles de años! Por eso fue tan difícil abolirla. Mucha gente rica se beneficiaba de ese sistema terrible."
+  },
+  {
+    "pregunta": "¿Qué tenían en común Bolívar y Petión que los unió en su acuerdo?",
+    "tipo": "texto",
+    "opciones": [
+      "Los dos amaban el chocolate con leche calientito",
+      "Los dos habían estudiado en la misma universidad",
+      "Los dos eran del mismo país caribeño",
+      "Los dos creían que la libertad era un derecho de todos los seres humanos"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Tanto Bolívar como Petión creían que todos los seres humanos merecen ser libres! Ese valor compartido los unió en uno de los acuerdos más importantes de la historia.",
+    "dato_curioso": "¡Petión era el hijo de un hombre blanco y una mujer negra! Conocía en carne propia la injusticia de la esclavitud y luchó toda su vida contra ella."
+  },
+  {
+    "pregunta": "¿Qué simbolizan las cadenas rotas en la historia de la abolición?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración artística de unas cadenas gruesas de hierro partiéndose en dos con un destello de luz brillante. De las cadenas rotas salen palomas blancas volando hacia un cielo azul luminoso. Imagen poderosa y esperanzadora.",
+    "opciones": [
+      "Que los herreros venezolanos eran muy malos haciendo cadenas",
+      "La libertad ganada después de romper con la esclavitud para siempre",
+      "Que las cadenas eran de muy mala calidad colonial",
+      "Un problema de construcción en las cárceles coloniales venezolanas"
+    ],
+    "correcta": 1,
+    "explicacion": "¡Las cadenas rotas simbolizan la libertad! Cuando se abolió la esclavitud, era como si las cadenas que ataban a miles de personas se rompieran para siempre.",
+    "dato_curioso": "¡El símbolo de las cadenas rotas es usado hoy en muchos países del mundo para recordar la lucha por la libertad! Lo verás en monumentos y escudos de armas."
+  },
+  {
+    "pregunta": "¿Qué es el Patrimonio Cultural Afrovenezolano?",
+    "tipo": "texto",
+    "opciones": [
+      "Las tradiciones, música y costumbres africanas que viven en Venezuela",
+      "Las deudas económicas que dejó la esclavitud siempre",
+      "Los edificios coloniales que construyeron los esclavos",
+      "Las plantaciones de cacao que todavía existen hoy"
+    ],
+    "correcta": 0,
+    "explicacion": "¡El Patrimonio Cultural Afrovenezolano son las tradiciones, la música, los bailes y las costumbres que los africanos trajeron y que siguen vivos en Venezuela!",
+    "dato_curioso": "¡Venezuela tiene una Ley de Patrimonio Cultural Afrovenezolano para proteger esas tradiciones! El gobierno reconoce la enorme contribución africana al país."
+  },
+  {
+    "pregunta": "¿Qué día se conmemora la abolición de la esclavitud en Venezuela?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de un calendario marcando el 24 de marzo con un círculo dorado y una estrella roja. Alrededor del calendario hay elementos afrovenezolanos: tambores, vestuario colorido y una familia celebrando con alegría esa fecha histórica.",
+    "opciones": [
+      "El 5 de julio, Día de la Independencia siempre",
+      "El 31 de diciembre, Año Nuevo colonial venezolano",
+      "El 24 de marzo, día en que Monagas firmó la abolición",
+      "El 19 de abril, Grito de Independencia histórico"
+    ],
+    "correcta": 2,
+    "explicacion": "¡El 24 de marzo es el día que conmemora la abolición de la esclavitud en Venezuela! Fue el día en que Monagas firmó ese documento histórico fundamental.",
+    "dato_curioso": "¡Cada 24 de marzo se hacen actos especiales en Venezuela para recordar ese día tan importante! Es un día para honrar a todos los que sufrieron y lucharon por ser libres."
+  },
+  {
+    "pregunta": "¿Qué lección nos enseña la historia de la abolición de la esclavitud?",
+    "tipo": "texto",
+    "opciones": [
+      "Que la injusticia siempre dura para siempre jamás",
+      "Que con valentía y lucha se pueden cambiar las injusticias del mundo",
+      "Que es mejor no meterse en problemas de otros",
+      "Que las cosas malas no pueden cambiarse nunca"
+    ],
+    "correcta": 1,
+    "explicacion": "¡La abolición de la esclavitud nos enseña que con valentía, determinación y unión se pueden cambiar las injusticias! Nunca es imposible luchar por lo que es justo.",
+    "dato_curioso": "¡Hoy todavía existen formas modernas de esclavitud en el mundo, como el trabajo infantil forzado! Por eso seguimos necesitando personas valientes que luchen por la justicia."
+  },
+  {
+    "pregunta": "¿Cómo describirías a José Gregorio Monagas por firmar la abolición?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Retrato ilustrado del presidente José Gregorio Monagas en pose presidencial solemne, con el documento de abolición firmado en su mano extendida hacia el espectador. Expresión de orgullo y determinación. Fondo del Palacio de Gobierno de Caracas.",
+    "opciones": [
+      "Como un presidente que tuvo miedo de hacer lo correcto",
+      "Como alguien que no entendía lo que hacía ese día",
+      "Como el peor presidente de la historia venezolana",
+      "Como un presidente valiente que hizo lo correcto aunque fue difícil"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Monagas fue un presidente valiente que hizo lo correcto aunque era difícil y peligroso! Los dueños de esclavos estaban furiosos pero él firmó igual.",
+    "dato_curioso": "¡Después de firmar la abolición, Monagas recibió muchas críticas de los ricos del país! Pero la historia lo recuerda como un héroe por defender la libertad de todos."
+  },
+  {
+    "pregunta": "¿Qué dice la historia que aportaron los afrodescendientes a la construcción de Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Nada, llegaron demasiado tarde para aportar algo",
+      "Solo los nombres de algunas ciudades venezolanas menores",
+      "Solo la cocina picante que comemos hoy en día",
+      "Su trabajo, su cultura, su música y su valentía al luchar por la libertad"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Los afrodescendientes aportaron su trabajo que construyó la economía, su cultura rica y su valentía al unirse a la lucha por la libertad de Venezuela!",
+    "dato_curioso": "¡Sin el trabajo de los esclavizados y sus descendientes, Venezuela no tendría la misma cultura, música ni riqueza agrícola que la hicieron grande!"
+  },
+  {
+    "pregunta": "¿Qué país latinoamericano abolió la esclavitud mucho después que Venezuela, en 1888?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Mapa comparativo con dos fechas resaltadas: Venezuela con '1854' y Brasil con '1888', conectadas por una línea de tiempo. Las dos naciones están ilustradas con sus banderas respectivas y los números de los años en grande y claro.",
+    "opciones": [
+      "Argentina que lo hizo en 1888 finalmente",
+      "Brasil que tardó 34 años más que Venezuela en abolirla",
+      "Chile que fue el último en todo América siempre",
+      "México que esperó hasta 1900 sin prisa"
+    ],
+    "correcta": 1,
+    "explicacion": "¡Brasil abolió la esclavitud en 1888, 34 años después que Venezuela! Cuando Venezuela ya tenía 34 años de haber liberado a sus esclavos, Brasil todavía no lo hacía.",
+    "dato_curioso": "¡Brasil fue el último país de América en abolir la esclavitud! Recibió más esclavos africanos que cualquier otro país de América. Aproximadamente 4 millones de personas."
+  },
+  {
+    "pregunta": "¿Cómo se llama la costa venezolana donde llegaban los barcos con personas esclavizadas?",
+    "tipo": "texto",
+    "opciones": [
+      "Costa de la Felicidad y Tranquilidad",
+      "El Puerto de las Estrellas lejano",
+      "La costa del Océano Pacífico venezolano",
+      "La costa del Mar Caribe venezolano al norte"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Los barcos llegaban por el Mar Caribe, que baña la costa norte de Venezuela! Desde ahí llevaban a las personas esclavizadas al interior del país.",
+    "dato_curioso": "¡Las ciudades costeras venezolanas como La Guaira y Cumaná fueron puertos coloniales importantes! Por sus muelles llegaron personas esclavizadas que cambiaron la historia venezolana."
+  },
+  {
+    "pregunta": "¿Por qué es importante que Venezuela recuerde la historia de la esclavitud?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de niños venezolanos de diferentes tonos de piel tomados de la mano frente a una escuela, con libros en sus manos. Detrás de ellos, un mural colorido que muestra momentos de la historia afrovenezolana: la llegada, el trabajo, la abolición y la celebración.",
+    "opciones": [
+      "Para sentir vergüenza de la historia venezolana siempre",
+      "Porque está en el examen de matemáticas escolar",
+      "Para honrar a quienes sufrieron y no repetir esas injusticias nunca",
+      "Para poder culpar a otros países por lo que pasó"
+    ],
+    "correcta": 2,
+    "explicacion": "¡Recordar la historia de la esclavitud nos ayuda a honrar a quienes sufrieron y a asegurarnos de que esas injusticias jamás se repitan! La historia nos enseña.",
+    "dato_curioso": "¡En Venezuela hay museos y monumentos dedicados a la memoria afrovenezolana! El país reconoce que esa historia es parte fundamental de lo que somos hoy."
+  },
+  {
+    "pregunta": "¿Qué palabra describe mejor a José Gregorio Monagas, el presidente que abolió la esclavitud?",
+    "tipo": "texto",
+    "opciones": [
+      "Cobarde, porque tenía miedo de todo",
+      "Valiente, porque hizo lo correcto aunque fue difícil y arriesgado",
+      "Distraído, porque no sabía lo que firmaba",
+      "Aburrido, porque nunca hizo nada importante"
+    ],
+    "correcta": 1,
+    "explicacion": "¡Monagas fue valiente! Firmar la abolición fue arriesgado porque los poderosos dueños de esclavos se enojaron mucho, pero él lo hizo de todas formas.",
+    "dato_curioso": "¡Después de firmar la abolición, Monagas tuvo que enfrentar una gran oposición política! Pero Venezuela entera lo recuerda como el presidente que le dio la libertad a miles de personas."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué es la esclavitud?",
+    "tipo": "texto",
+    "opciones": [
+      "Un baile tradicional venezolano bonito",
+      "Cuando una persona es forzada a trabajar sin libertad ni pago",
+      "Un juego divertido de cartas antiguo",
+      "Un tipo de fiesta colonial muy animada"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: ¡La esclavitud es cuando alguien obliga a otra persona a trabajar sin libertad y sin pagarle! Era algo muy injusto y cruel que existió antes.",
+    "dato_curioso": "Repaso curioso: ¡Hoy la esclavitud está prohibida en todos los países del mundo! Fue una lucha muy larga lograr que todas las personas fueran libres."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: De dónde venían las personas que fueron esclavizadas en Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "De un país imaginario llamado Esclavonia",
+      "De África, traídas a la fuerza por barco",
+      "Del fondo del Mar Caribe venezolano",
+      "De la luna y las estrellas distantes"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: ¡Las personas esclavizadas venían de África! Las capturaban y las metían en barcos contra su voluntad para traerlas a trabajar en América.",
+    "dato_curioso": "Repaso curioso: ¡El viaje en esos barcos era terriblemente cruel! Las personas eran tratadas muy mal durante semanas en el mar. Fue una de las injusticias más grandes de la historia."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cuántas personas esclavizadas había en Venezuela al inicio de la independencia?",
+    "tipo": "texto",
+    "opciones": [
+      "Solo 5 personas en todo el país",
+      "Exactamente un millón de personas",
+      "Nadie, Venezuela no tenía esclavitud",
+      "Aproximadamente 87.000 personas esclavizadas"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: ¡En Venezuela había alrededor de 87.000 personas esclavizadas! Era una cantidad enorme de gente viviendo sin libertad.",
+    "dato_curioso": "Repaso curioso: ¡87.000 personas es más que toda la gente que cabe en un estadio de fútbol grande! Imagínate a todas esas personas sin libertad. Qué tristeza tan grande."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: En qué tipo de lugares trabajaban principalmente las personas esclavizadas?",
+    "tipo": "texto",
+    "opciones": [
+      "En laboratorios de magia y ciencia especial",
+      "En palacios de hielo y nieve fría",
+      "En plantaciones de cacao, café y caña de azúcar",
+      "En fábricas de juguetes coloniales divertidos"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: ¡Las personas esclavizadas trabajaban en las plantaciones donde crecían el cacao, el café y la caña de azúcar! Trabajaban durísimo bajo el sol.",
+    "dato_curioso": "Repaso curioso: ¡El chocolate que hoy comes viene del cacao! Muchas personas esclavizadas trabajaron cultivando cacao para que los ricos de Europa pudieran comer chocolate."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: A quién le prometió Bolívar en 1816 que liberaría a los esclavos de Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "A su mamá en una promesa familiar",
+      "Al presidente de Haití, Alexandre Petión",
+      "Al rey de España en carta formal",
+      "A los dinosaurios en un sueño especial"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: ¡Bolívar le prometió al presidente de Haití, Alexandre Petión, que liberaría a los esclavos! A cambio, Petión le ayudó con armas y soldados.",
+    "dato_curioso": "Repaso curioso: ¡Haití fue el primer país en abolir la esclavitud en América en 1804! Por eso Petión entendía muy bien la importancia de la libertad para todos."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Quién fue Alexandre Petión?",
+    "tipo": "texto",
+    "opciones": [
+      "Un general español muy malvado",
+      "Un pirata del Caribe muy gracioso",
+      "El presidente de Haití que ayudó a Bolívar",
+      "Un cocinero famoso de Puerto Rico"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: ¡Alexandre Petión era el presidente de Haití! Ayudó a Bolívar dándole armas, barcos y soldados para continuar la lucha por la independencia.",
+    "dato_curioso": "Repaso curioso: ¡Haití es el vecino isleño de Venezuela en el Mar Caribe! Fue el primer país de América Latina en ser libre, un modelo de valentía para Bolívar."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué le dio Petión a Bolívar a cambio de la promesa de liberar a los esclavos?",
+    "tipo": "texto",
+    "opciones": [
+      "Un mapa del tesoro pirata especial",
+      "Cien caballos de colores brillantes",
+      "Armas, barcos y soldados para continuar la lucha",
+      "Una torta de cumpleaños gigantísima"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: ¡Petión le dio a Bolívar armas, barcos y soldados! Con esa ayuda, Bolívar pudo continuar la guerra de independencia que parecía perdida.",
+    "dato_curioso": "Repaso curioso: ¡Sin la ayuda de Haití, la independencia de Venezuela podría haber tardado mucho más! Petión fue un aliado clave que muchos no conocen."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué hicieron muchos esclavos liberados por Bolívar durante la independencia?",
+    "tipo": "texto",
+    "opciones": [
+      "Empezaron negocios de dulces coloniales especiales",
+      "Construyeron el primer estadio de fútbol venezolano",
+      "Se fueron a vivir en el extranjero lejos",
+      "Se unieron al ejército patriota para luchar por Venezuela"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: ¡Muchos esclavos liberados se unieron al ejército patriota para luchar por la independencia de Venezuela! Lucharon por su libertad y la de todos.",
+    "dato_curioso": "Repaso curioso: ¡Muchos de esos exesclavos fueron soldados valientes y brillantes! Algunos hasta se convirtieron en oficiales importantes del ejército patriota."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Quién firmó la abolición definitiva de la esclavitud en Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Simón Bolívar en Angostura 1819",
+      "La reina de España arrepentida",
+      "José Gregorio Monagas el 24 de marzo de 1854",
+      "El primer astronauta venezolano del espacio"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: ¡El presidente José Gregorio Monagas firmó la abolición definitiva de la esclavitud el 24 de marzo de 1854! Ese día todos los esclavos venezolanos fueron libres.",
+    "dato_curioso": "Repaso curioso: ¡El 24 de marzo de 1854 fue uno de los días más felices de la historia venezolana! Imagínate la alegría de 87.000 personas al recibir su libertad."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: En qué año firmó Monagas la abolición de la esclavitud en Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "En el año 2000 modernamente",
+      "En 1776 como en Estados Unidos",
+      "En 1854, el 24 de marzo",
+      "En el año 1492 con Colón"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: ¡Monagas firmó la abolición el 24 de marzo de 1854! Ese fue el fin oficial de la esclavitud en Venezuela para siempre jamás.",
+    "dato_curioso": "Repaso curioso: ¡Venezuela abolió la esclavitud en 1854 mientras en Estados Unidos todavía existía! EE.UU. la abolió en 1865, once años después de Venezuela."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué posición tiene Venezuela en América respecto a la abolición de la esclavitud?",
+    "tipo": "texto",
+    "opciones": [
+      "Cuando una persona es forzada a trabajar sin libertad ni pago",
+      "Aproximadamente 87.000 personas esclavizadas",
+      "De África, traídas a la fuerza por barco",
+      "Fue uno de los primeros países en abolir la esclavitud en América"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: ¡Venezuela fue uno de los primeros países de América en abolir la esclavitud! Eso la pone en un lugar de honor en la historia de la libertad.",
+    "dato_curioso": "Dato para profundizar: ¡Muchos países de América tuvieron esclavitud hasta mucho después que Venezuela! Brasil, por ejemplo, abolió la esclavitud en 1888, más de 30 años después."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cómo se llama la fiesta venezolana que celebra la libertad de los esclavos?",
+    "tipo": "texto",
+    "opciones": [
+      "Cuando una persona es forzada a trabajar sin libertad ni pago",
+      "La Fiesta de San Juan en honor a la libertad",
+      "Aproximadamente 87.000 personas esclavizadas",
+      "De África, traídas a la fuerza por barco"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: ¡La Fiesta de San Juan celebra la libertad de los esclavos! Es una fiesta llena de tambores, baile y alegría con raíces africanas muy bonitas.",
+    "dato_curioso": "Dato para profundizar: ¡La Fiesta de San Juan se celebra el 24 de junio! Los tambores que se tocan vienen de África y representan la voz de todos los que lucharon por ser libres."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: En qué ciudad venezolana se celebra especialmente la Fiesta de San Juan?",
+    "tipo": "texto",
+    "opciones": [
+      "Aproximadamente 87.000 personas esclavizadas",
+      "De África, traídas a la fuerza por barco",
+      "En San Juan de los Morros y otras ciudades con raíces africanas",
+      "Cuando una persona es forzada a trabajar sin libertad ni pago"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: ¡San Juan de los Morros y muchas otras ciudades venezolanas con comunidades afrodescendientes celebran la Fiesta de San Juan! Es una tradición muy viva.",
+    "dato_curioso": "Dato para profundizar: ¡Las comunidades afrovenezolanas han preservado sus tradiciones africanas por cientos de años! Sus tambores, bailes y cantos son un tesoro cultural único."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cómo viajaron las personas esclavizadas desde África hasta Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "En barcos esclavistas por el Océano Atlántico a la fuerza",
+      "Cuando una persona es forzada a trabajar sin libertad ni pago",
+      "De África, traídas a la fuerza por barco",
+      "Aproximadamente 87.000 personas esclavizadas"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: ¡Las personas eran llevadas a la fuerza en barcos que cruzaban el Océano Atlántico! El viaje duraba semanas y las condiciones eran horribles.",
+    "dato_curioso": "Dato para profundizar: ¡A ese terrible viaje lo llamaban 'el paso del Medio'! Millones de personas africanas murieron durante ese cruce del océano. Fue una de las peores tragedias de la historia."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué cultivos cosechaban los esclavos venezolanos principalmente?",
+    "tipo": "texto",
+    "opciones": [
+      "Cacao, café y caña de azúcar",
+      "Cuando una persona es forzada a trabajar sin libertad ni pago",
+      "De África, traídas a la fuerza por barco",
+      "Aproximadamente 87.000 personas esclavizadas"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: ¡Los esclavos venezolanos trabajaban cosechando cacao para el chocolate, café y caña de azúcar! Productos que los ricos europeos querían mucho.",
+    "dato_curioso": "Dato para profundizar: ¡El cacao venezolano era famoso en toda Europa! El mejor chocolate del mundo se hacía con cacao de Venezuela. Y los esclavos fueron quienes lo cosecharon."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué sentía Bolívar cuando prometió liberar a los esclavos?",
+    "tipo": "texto",
+    "opciones": [
+      "Cuando una persona es forzada a trabajar sin libertad ni pago",
+      "De África, traídas a la fuerza por barco",
+      "Aproximadamente 87.000 personas esclavizadas",
+      "Convicción de que la libertad era un derecho de todos"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: ¡Bolívar creía genuinamente que la libertad era un derecho de todos los seres humanos! Por eso su promesa fue sincera y la cumplió.",
+    "dato_curioso": "Dato para profundizar: ¡Bolívar también nació en una sociedad con esclavitud! Conocía esa injusticia de cerca y quería acabar con ella para siempre en Venezuela."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cuántos años antes que Venezuela abolió Haití la esclavitud?",
+    "tipo": "texto",
+    "opciones": [
+      "50 años antes, en 1804",
+      "De África, traídas a la fuerza por barco",
+      "Aproximadamente 87.000 personas esclavizadas",
+      "Cuando una persona es forzada a trabajar sin libertad ni pago"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: ¡Haití abolió la esclavitud en 1804, exactamente 50 años antes que Venezuela en 1854! Haití fue el primer país del mundo en hacerlo.",
+    "dato_curioso": "Dato para profundizar: ¡La revolución de Haití fue la primera revolución exitosa de esclavos en la historia del mundo! Inspiró luchas por la libertad en todo el continente americano."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué instrumento musical afrovenezolano es símbolo de la libertad y la Fiesta de San Juan?",
+    "tipo": "texto",
+    "opciones": [
+      "Aproximadamente 87.000 personas esclavizadas",
+      "Cuando una persona es forzada a trabajar sin libertad ni pago",
+      "Los tambores africanos heredados por los afrovenezolanos",
+      "De África, traídas a la fuerza por barco"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: ¡Los tambores africanos son el símbolo musical más poderoso de las comunidades afrovenezolanas! Su sonido celebra la vida, la libertad y la memoria de los ancestros.",
+    "dato_curioso": "Dato para profundizar: ¡Los tambores afrovenezolanos están declarados Patrimonio Cultural de Venezuela! Su ritmo lleva siglos contando la historia de un pueblo que nunca se rindió."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cómo se llamaba el presidente que firmó la abolición de la esclavitud en Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "De África, traídas a la fuerza por barco",
+      "Cuando una persona es forzada a trabajar sin libertad ni pago",
+      "Aproximadamente 87.000 personas esclavizadas",
+      "José Gregorio Monagas"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: ¡El presidente José Gregorio Monagas firmó la abolición! Fue un acto muy valiente porque muchos dueños de plantaciones estaban furiosos.",
+    "dato_curioso": "Dato para profundizar: ¡Monagas tuvo que enfrentar mucha resistencia para firmar la abolición! Los ricos que tenían esclavos no querían perder su mano de obra gratis."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué le prometió Bolívar a Petión exactamente para recibir su apoyo?",
+    "tipo": "texto",
+    "opciones": [
+      "Cuando una persona es forzada a trabajar sin libertad ni pago",
+      "De África, traídas a la fuerza por barco",
+      "Aproximadamente 87.000 personas esclavizadas",
+      "Que liberaría a todos los esclavos de Venezuela"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: ¡Bolívar prometió que si ganaba la independencia, liberaría a todos los esclavos de Venezuela! Era un trato que cambiaría miles de vidas para siempre.",
+    "dato_curioso": "Dato para profundizar: ¡Bolívar cumplió su promesa! Después de la independencia, empezó el proceso de liberación que terminó en 1854 con la abolición definitiva."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué significa la palabra 'abolición' cuando hablamos de la esclavitud?",
+    "tipo": "texto",
+    "opciones": [
+      "Cambiar las reglas de la esclavitud solo un poco",
+      "Exportar esclavos a otros países vecinos",
+      "Aumentar y fortalecer la esclavitud más",
+      "Eliminar y terminar con la esclavitud para siempre"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: ¡Abolir la esclavitud significa eliminarla completamente y para siempre! Es decir que ninguna persona puede ser esclava de otra. Nunca más.",
+    "dato_curioso": "Ampliación histórica: ¡La palabra 'abolición' viene del latín 'abolere' que significa destruir o eliminar! Es una palabra poderosa que cambió la historia del mundo entero."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cómo reaccionaron los esclavos venezolanos cuando supieron que eran libres?",
+    "tipo": "texto",
+    "opciones": [
+      "Se quedaron exactamente igual que antes tranquilos",
+      "Se fueron todos en barcos a África inmediatamente",
+      "Celebraron con enorme alegría su libertad recién ganada",
+      "Les dio igual porque ya no creían en nada"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: ¡Las personas esclavizadas celebraron su libertad con una alegría enorme! Después de generaciones de sufrimiento, por fin eran libres e iguales.",
+    "dato_curioso": "Ampliación histórica: ¡Muchos de los liberados formaron comunidades propias, cultivaron sus tierras y preservaron sus tradiciones africanas! Su cultura sobrevivió y floreció en Venezuela."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué estado venezolano lleva el nombre del presidente que abolió la esclavitud?",
+    "tipo": "texto",
+    "opciones": [
+      "El Estado Zulia al occidente",
+      "El Estado Miranda al norte",
+      "El Estado Monagas al oriente",
+      "El Estado Bolívar en el sur"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: ¡El Estado Monagas lleva el nombre de la familia del presidente que firmó la abolición! Es un honor enorme que lleva su apellido en el mapa de Venezuela.",
+    "dato_curioso": "Ampliación histórica: ¡El Estado Monagas está en el oriente de Venezuela y es famoso por su petróleo y sus selvas! También fue donde vivió Juana La Avanzadora."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué aportaron las culturas africanas a Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Música, danzas, gastronomía y tradiciones que enriquecen Venezuela",
+      "Solo los nombres de algunos ríos venezolanos",
+      "Solo la técnica para cultivar maíz básicamente",
+      "Absolutamente nada, llegaron sin cultura propia"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: ¡Los africanos traídos a Venezuela trajeron su música, sus danzas, su comida y sus tradiciones! Esas culturas se mezclaron y enriquecieron a Venezuela para siempre.",
+    "dato_curioso": "Ampliación histórica: ¡Venezuela es un país mestizo y multicultural! La mezcla de culturas indígena, española y africana es lo que hace tan única y rica a la cultura venezolana."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: En qué año fue Bolívar a Haití a pedir ayuda a Petión?",
+    "tipo": "texto",
+    "opciones": [
+      "En 1816, cuando la guerra patriota parecía perdida",
+      "En 1810, al inicio de todo",
+      "En 1821, cuando ya habían ganado",
+      "En el año 1900 modernamente"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: ¡Bolívar fue a Haití en 1816 cuando las cosas estaban muy difíciles para los patriotas! Necesitaba ayuda urgente para poder continuar la lucha.",
+    "dato_curioso": "Ampliación histórica: ¡En 1816 los patriotas habían perdido muchas batallas y estaban derrotados! El apoyo de Haití fue como un salvavidas que cambió el destino de Venezuela."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cómo se llamaba el sistema que mantenía a las personas sin libertad en Venezuela colonial?",
+    "tipo": "texto",
+    "opciones": [
+      "El contrato de empleo colonial normal",
+      "La esclavitud, que negaba la libertad y los derechos básicos",
+      "El sistema de trabajo voluntario bien pagado",
+      "El sistema de vacaciones forzadas largas"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: ¡La esclavitud era el sistema que mantenía a las personas sin libertad! Les quitaba todos sus derechos y las trataba como si fueran objetos en lugar de personas.",
+    "dato_curioso": "Ampliación histórica: ¡La esclavitud existió en casi todo el mundo durante miles de años! Por eso fue tan difícil abolirla. Mucha gente rica se beneficiaba de ese sistema terrible."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué tenían en común Bolívar y Petión que los unió en su acuerdo?",
+    "tipo": "texto",
+    "opciones": [
+      "Los dos eran del mismo país caribeño",
+      "Los dos amaban el chocolate con leche calientito",
+      "Los dos creían que la libertad era un derecho de todos los seres humanos",
+      "Los dos habían estudiado en la misma universidad"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: ¡Tanto Bolívar como Petión creían que todos los seres humanos merecen ser libres! Ese valor compartido los unió en uno de los acuerdos más importantes de la historia.",
+    "dato_curioso": "Ampliación histórica: ¡Petión era el hijo de un hombre blanco y una mujer negra! Conocía en carne propia la injusticia de la esclavitud y luchó toda su vida contra ella."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué simbolizan las cadenas rotas en la historia de la abolición?",
+    "tipo": "texto",
+    "opciones": [
+      "Un problema de construcción en las cárceles coloniales venezolanas",
+      "La libertad ganada después de romper con la esclavitud para siempre",
+      "Que las cadenas eran de muy mala calidad colonial",
+      "Que los herreros venezolanos eran muy malos haciendo cadenas"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: ¡Las cadenas rotas simbolizan la libertad! Cuando se abolió la esclavitud, era como si las cadenas que ataban a miles de personas se rompieran para siempre.",
+    "dato_curioso": "Ampliación histórica: ¡El símbolo de las cadenas rotas es usado hoy en muchos países del mundo para recordar la lucha por la libertad! Lo verás en monumentos y escudos de armas."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué es el Patrimonio Cultural Afrovenezolano?",
+    "tipo": "texto",
+    "opciones": [
+      "Los edificios coloniales que construyeron los esclavos",
+      "Las plantaciones de cacao que todavía existen hoy",
+      "Las tradiciones, música y costumbres africanas que viven en Venezuela",
+      "Las deudas económicas que dejó la esclavitud siempre"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: ¡El Patrimonio Cultural Afrovenezolano son las tradiciones, la música, los bailes y las costumbres que los africanos trajeron y que siguen vivos en Venezuela!",
+    "dato_curioso": "Ampliación histórica: ¡Venezuela tiene una Ley de Patrimonio Cultural Afrovenezolano para proteger esas tradiciones! El gobierno reconoce la enorme contribución africana al país."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué día se conmemora la abolición de la esclavitud en Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "El 31 de diciembre, Año Nuevo colonial venezolano",
+      "El 19 de abril, Grito de Independencia histórico",
+      "El 24 de marzo, día en que Monagas firmó la abolición",
+      "El 5 de julio, Día de la Independencia siempre"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: ¡El 24 de marzo es el día que conmemora la abolición de la esclavitud en Venezuela! Fue el día en que Monagas firmó ese documento histórico fundamental.",
+    "dato_curioso": "Ampliación histórica: ¡Cada 24 de marzo se hacen actos especiales en Venezuela para recordar ese día tan importante! Es un día para honrar a todos los que sufrieron y lucharon por ser libres."
+  }
+]

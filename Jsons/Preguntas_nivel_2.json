@@ -1,0 +1,900 @@
+[
+  {
+    "pregunta": "¿Quién era Amalivaca según los indígenas Tamanacos?",
+    "tipo": "texto",
+    "opciones": [
+      "Un dios creador que llegó en canoa",
+      "Un dragón de fuego gigante",
+      "Un astronauta del espacio",
+      "Un cocinero muy famoso"
+    ],
+    "correcta": 0,
+    "explicacion": "Amalivaca era el dios creador de los Tamanacos, un pueblo indígena de Venezuela. Llegó en una canoa durante una gran inundación para ayudar a la gente.",
+    "dato_curioso": "Los Tamanacos contaban la historia de Amalivaca de generación en generación, ¡sin libros ni computadoras, solo hablando!"
+  },
+  {
+    "pregunta": "¿En qué llegó Amalivaca cuando hubo una gran inundación?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Una canoa de madera rústica indígena navegando sobre aguas desbordadas, con árboles selváticos asomando por encima del nivel del agua. Estilo ilustración colorida para niños.",
+    "opciones": [
+      "En un avión de papel",
+      "En una canoa",
+      "En un submarino amarillo",
+      "Montado en una tortuga gigante"
+    ],
+    "correcta": 1,
+    "explicacion": "Amalivaca llegó en una canoa cuando el agua cubrió toda la tierra. Era muy valiente para navegar en una inundación tan grande.",
+    "dato_curioso": "Las canoas indígenas se hacían vaciando un tronco de árbol enorme. ¡Imagina tallar un árbol entero para hacer tu bote!"
+  },
+  {
+    "pregunta": "¿Qué pueblo indígena venezolano adoraba a Amalivaca como su dios creador?",
+    "tipo": "texto",
+    "opciones": [
+      "Los dinosaurios robots",
+      "Los habitantes de la luna",
+      "Los Tamanacos",
+      "Los pingüinos bailarines"
+    ],
+    "correcta": 2,
+    "explicacion": "Los Tamanacos eran un pueblo indígena que vivía cerca del río Orinoco. Ellos creían que Amalivaca había creado el mundo y a las personas.",
+    "dato_curioso": "Los Tamanacos tenían una lengua propia muy diferente al español. ¡Imagina aprender a hablar de una manera completamente distinta!"
+  },
+  {
+    "pregunta": "¿Qué grabó Amalivaca en las rocas del río Orinoco?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Primer plano de una roca grande oscura con figuras grabadas: espirales, animales y formas humanas talladas en la piedra, a la orilla de un río. Estilo ilustración educativa para niños.",
+    "opciones": [
+      "Su número de teléfono",
+      "El nombre de su perro",
+      "Una receta de arepa",
+      "Figuras y dibujos llamados petroglifos"
+    ],
+    "correcta": 3,
+    "explicacion": "Amalivaca grabó figuras en las rocas del Orinoco y esos dibujos se llaman petroglifos. Son como mensajes que nos dejó hace muchísimo tiempo.",
+    "dato_curioso": "Los petroglifos son tan duros que ni la lluvia ni el viento los han borrado en miles de años. ¡Son más resistentes que cualquier cuaderno!"
+  },
+  {
+    "pregunta": "¿Cómo se llaman los dibujos grabados en rocas que dejaron los indígenas?",
+    "tipo": "texto",
+    "opciones": [
+      "Petroglifos",
+      "Tatuajes de piedra",
+      "Garabatos mágicos",
+      "Selfies antiguas"
+    ],
+    "correcta": 0,
+    "explicacion": "Los petroglifos son figuras talladas en rocas que hacían los indígenas hace miles de años. Son como el arte más viejo de Venezuela.",
+    "dato_curioso": "La palabra petroglifo viene del griego y significa 'dibujo en piedra'. ¡Los griegos también sabían mucho sobre historia!"
+  },
+  {
+    "pregunta": "¿Dónde están los petroglifos más famosos de Venezuela relacionados con Amalivaca?",
+    "tipo": "texto",
+    "opciones": [
+      "En la luna de queso",
+      "En Caicara del Orinoco",
+      "En el fondo del mar Caribe",
+      "Dentro de un volcán de helado"
+    ],
+    "correcta": 1,
+    "explicacion": "Los petroglifos de Caicara del Orinoco son los más conocidos de Venezuela. Están cerca del gran río Orinoco y tienen más de 2.000 años.",
+    "dato_curioso": "Caicara del Orinoco es una ciudad de Venezuela donde puedes ir a ver estos dibujos en piedra con tus propios ojos. ¡Es como visitar un museo al aire libre!"
+  },
+  {
+    "pregunta": "¿Cuántos años tienen aproximadamente los petroglifos de Caicara del Orinoco?",
+    "tipo": "texto",
+    "opciones": [
+      "Dos días",
+      "Cincuenta años",
+      "Más de 2.000 años",
+      "Trescientos años"
+    ],
+    "correcta": 2,
+    "explicacion": "Los petroglifos de Caicara tienen más de 2.000 años de antigüedad. Eso quiere decir que existían mucho antes de que nacieran tus bisabuelos, tatarabuelos, y muchos más.",
+    "dato_curioso": "Hace 2.000 años no había televisión, internet ni celulares. Los indígenas usaban el arte en rocas para contar sus historias."
+  },
+  {
+    "pregunta": "¿Cuál es el tercer río más caudaloso del mundo?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Vista aérea de un río enorme y majestuoso rodeado de selva tropical verde y densa. El río es ancho y de agua oscura. En el horizonte se ve el atardecer. Estilo ilustración colorida para niños.",
+    "opciones": [
+      "El río de la limonada",
+      "El río de los cocodrilos voladores",
+      "El río de la pizza flotante",
+      "El Orinoco"
+    ],
+    "correcta": 3,
+    "explicacion": "El río Orinoco es el tercer río más caudaloso del mundo. Eso significa que tiene muchísima agua corriendo por él todo el tiempo.",
+    "dato_curioso": "Si pudieras nadar desde el inicio hasta el final del Orinoco, tardarías semanas enteras. ¡Es enorme como una autopista de agua!"
+  },
+  {
+    "pregunta": "¿Qué usaban los indígenas del Orinoco para moverse, comerciar y comunicarse?",
+    "tipo": "texto",
+    "opciones": [
+      "El río Orinoco",
+      "Patinetas voladoras",
+      "Trenes de vapor",
+      "Elefantes de colores"
+    ],
+    "correcta": 0,
+    "explicacion": "El río Orinoco era como una autopista de agua para los indígenas. Lo usaban para moverse de un lugar a otro, intercambiar cosas y hablar con otras comunidades.",
+    "dato_curioso": "Hoy usamos carreteras y aviones para viajar, pero hace miles de años el río era el camino más rápido y seguro para los indígenas venezolanos."
+  },
+  {
+    "pregunta": "¿Cuántas comunidades indígenas conectaba el río Orinoco como una gran autopista?",
+    "tipo": "texto",
+    "opciones": [
+      "Solo 3 comunidades",
+      "Más de 400 comunidades",
+      "Exactamente 10 comunidades",
+      "Ninguna, vivían solos"
+    ],
+    "correcta": 1,
+    "explicacion": "El Orinoco conectaba más de 400 comunidades indígenas. Era como tener internet pero con agua, ¡todos podían comunicarse gracias al río!",
+    "dato_curioso": "400 comunidades es muchísimo, como si fueran 400 pueblitos distintos todos conectados por el mismo río enorme."
+  },
+  {
+    "pregunta": "¿Cuántos grupos étnicos indígenas viven cerca del Orinoco hoy en día?",
+    "tipo": "texto",
+    "opciones": [
+      "Solo uno",
+      "Ninguno, ya no existen",
+      "Más de 20 grupos étnicos",
+      "Exactamente 5 grupos"
+    ],
+    "correcta": 2,
+    "explicacion": "Hoy en día más de 20 grupos étnicos indígenas viven cerca del río Orinoco. Ellos siguen cuidando ese territorio como lo hacían sus ancestros.",
+    "dato_curioso": "Cada grupo étnico tiene su propia lengua, música y tradiciones. ¡Es como tener 20 culturas diferentes todas viviendo cerca del mismo río!"
+  },
+  {
+    "pregunta": "¿En qué continente se encuentra el río Orinoco?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Mapa sencillo y colorido de América del Sur con el río Orinoco marcado en azul brillante cruzando Venezuela. El mapa tiene un estilo divertido y educativo para niños, con colores vivos.",
+    "opciones": [
+      "En la Antártida helada",
+      "En el planeta Marte",
+      "En la luna de queso",
+      "En América del Sur"
+    ],
+    "correcta": 3,
+    "explicacion": "El río Orinoco está en América del Sur, dentro de Venezuela. Es uno de los ríos más grandes e importantes de todo el continente.",
+    "dato_curioso": "Venezuela tiene tantos ríos y agua dulce que es uno de los países con más agua fresca de todo el mundo. ¡Somos muy afortunados!"
+  },
+  {
+    "pregunta": "Según la leyenda, ¿qué hizo Amalivaca para salvar a la gente durante la inundación?",
+    "tipo": "texto",
+    "opciones": [
+      "Llegó en canoa para ayudar y enseñar",
+      "Construyó un castillo de nubes",
+      "Llamó a los bomberos del espacio",
+      "Hizo una piscina gigante para todos"
+    ],
+    "correcta": 0,
+    "explicacion": "Según la leyenda, Amalivaca llegó en canoa durante la gran inundación para guiar y proteger a las personas. Era como un superhéroe en canoa.",
+    "dato_curioso": "Muchos pueblos del mundo tienen leyendas de grandes inundaciones. ¡Los humanos siempre han querido explicar las cosas grandes de la naturaleza!"
+  },
+  {
+    "pregunta": "¿Cómo se llama la gran inundación que aparece en la historia de Amalivaca?",
+    "tipo": "texto",
+    "opciones": [
+      "La lluvia de caramelos",
+      "La gran inundación del Orinoco",
+      "El diluvio de pizza",
+      "La tormenta de algodón de azúcar"
+    ],
+    "correcta": 1,
+    "explicacion": "En la mitología Tamanaca, hubo una gran inundación que cubrió toda la tierra. Amalivaca llegó a ayudar a la gente en ese momento tan difícil.",
+    "dato_curioso": "Las inundaciones del Orinoco todavía ocurren cada año cuando llueve mucho. Los animales y plantas del río ya están acostumbrados a ellas."
+  },
+  {
+    "pregunta": "¿Por qué era tan importante el río Orinoco para los indígenas venezolanos?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Escena animada colorida de indígenas venezolanos en canoas intercambiando frutas, pescados y artesanías en el río. Hay niños mirando desde la orilla y guacamayas volando. Estilo ilustración infantil.",
+    "opciones": [
+      "Porque tenía wifi gratis",
+      "Porque tenía sirenas que cantaban",
+      "Porque era fuente de agua, alimento y camino",
+      "Porque era de color rosa brillante"
+    ],
+    "correcta": 2,
+    "explicacion": "El Orinoco les daba agua para beber, peces para comer, y era el camino para viajar y visitar a otros. Era todo lo que necesitaban para vivir.",
+    "dato_curioso": "El río Orinoco tiene más de 1.000 tipos diferentes de peces. ¡Imagina ir a pescar y poder sacar animales de todos los colores y tamaños!"
+  },
+  {
+    "pregunta": "¿Qué herramientas usaban los indígenas para grabar petroglifos en las rocas?",
+    "tipo": "texto",
+    "opciones": [
+      "Computadoras portátiles",
+      "Rayos láser de sus ojos",
+      "Lápices mágicos invisibles",
+      "Piedras duras y afiladas"
+    ],
+    "correcta": 3,
+    "explicacion": "Los indígenas usaban piedras muy duras y afiladas para grabar figuras en las rocas. Era un trabajo muy difícil que requería mucha paciencia.",
+    "dato_curioso": "Hacer un petroglifo podía tardar días o semanas. Los indígenas eran muy dedicados y artísticos, ¡mucho más que dibujar con crayones!"
+  },
+  {
+    "pregunta": "¿Qué representa la figura de Amalivaca en la cultura Tamanaca?",
+    "tipo": "texto",
+    "opciones": [
+      "Un dios creador y protector",
+      "Un villano malvado",
+      "Un monstruo del río",
+      "Un chef de cocina espacial"
+    ],
+    "correcta": 0,
+    "explicacion": "Amalivaca era un dios bueno y creador para los Tamanacos. Lo respetaban mucho porque creían que él había dado forma al mundo.",
+    "dato_curioso": "Los dioses de los pueblos indígenas venezolanos estaban conectados con la naturaleza: el río, la lluvia, los árboles. ¡Todo era sagrado para ellos!"
+  },
+  {
+    "pregunta": "¿Qué tipo de figuras se pueden ver en los petroglifos del Orinoco?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Colección de petroglifos venezolanos típicos: figuras humanas con brazos levantados, espirales, rostros solares, animales como tortugas y jaguares, todos grabados sobre roca oscura. Ilustración educativa.",
+    "opciones": [
+      "Logos de marcas de ropa",
+      "Figuras humanas, animales y espirales",
+      "Emoticones de teléfono",
+      "Recetas de cocina antigua"
+    ],
+    "correcta": 1,
+    "explicacion": "En los petroglifos puedes ver figuras de personas, animales, espirales y formas geométricas. Cada dibujo tenía un significado especial para los indígenas.",
+    "dato_curioso": "Algunos petroglifos muestran animales que ya no existen en Venezuela. ¡Son como fotografías de animales extintos hechas en piedra!"
+  },
+  {
+    "pregunta": "¿Cuánto tiempo lleva el río Orinoco sirviendo a las comunidades indígenas?",
+    "tipo": "texto",
+    "opciones": [
+      "Solo desde el año 2000",
+      "Desde el mes pasado",
+      "Miles de años",
+      "Apenas diez años"
+    ],
+    "correcta": 2,
+    "explicacion": "El Orinoco ha sido hogar de comunidades indígenas por miles y miles de años. Es uno de los ríos con más historia humana de toda América.",
+    "dato_curioso": "Algunas familias indígenas llevan viviendo cerca del Orinoco por más de 10.000 años. ¡Eso es más tiempo del que existe la escritura!"
+  },
+  {
+    "pregunta": "¿Cómo se transmitían las historias de Amalivaca entre los indígenas?",
+    "tipo": "texto",
+    "opciones": [
+      "Por correo electrónico",
+      "A través de la televisión",
+      "Por mensajes de texto",
+      "De boca a oído, contándolas en voz alta"
+    ],
+    "correcta": 3,
+    "explicacion": "Las historias de Amalivaca se contaban oralmente, es decir, hablando. Los abuelos se las contaban a sus hijos y nietos alrededor del fuego.",
+    "dato_curioso": "Esta forma de contar historias habladas se llama tradición oral. Gracias a eso, historias de miles de años llegaron hasta nosotros hoy."
+  },
+  {
+    "pregunta": "¿Qué animal era sagrado para muchos pueblos indígenas del Orinoco?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un jaguar majestuoso pintado con estilo indígena venezolano, con patrones geométricos en su cuerpo. Está parado en la orilla de un río. Ilustración colorida y vibrante para niños.",
+    "opciones": [
+      "El jaguar",
+      "El perrito de la suerte",
+      "El unicornio arcoíris",
+      "El dinosaurio volador"
+    ],
+    "correcta": 0,
+    "explicacion": "El jaguar era un animal muy respetado y sagrado para muchos pueblos indígenas. Lo veían como un ser poderoso y especial.",
+    "dato_curioso": "El jaguar es el felino más grande de América. ¡Puede nadar muy bien y hasta le gusta pescar en los ríos como el Orinoco!"
+  },
+  {
+    "pregunta": "¿Qué significa la palabra 'Orinoco' según algunas comunidades indígenas?",
+    "tipo": "texto",
+    "opciones": [
+      "Río de pizza flotante",
+      "Lugar donde se rema",
+      "Río de nubes de algodón",
+      "El río que baila salsa"
+    ],
+    "correcta": 1,
+    "explicacion": "Según algunas comunidades, Orinoco significa 'lugar donde se rema' o 'el gran río'. Era el nombre que le daban a esa gran corriente de agua.",
+    "dato_curioso": "Muchos ríos y ciudades de Venezuela tienen nombres indígenas. ¡Es una forma de recordar siempre a los primeros habitantes de estas tierras!"
+  },
+  {
+    "pregunta": "¿Dónde desemboca el río Orinoco?",
+    "tipo": "texto",
+    "opciones": [
+      "En el desierto del Sahara",
+      "En la ciudad de Caracas",
+      "En el océano Atlántico",
+      "En el lago de la leche chocolatada"
+    ],
+    "correcta": 2,
+    "explicacion": "El río Orinoco desemboca en el océano Atlántico, al noreste de Venezuela. Después de recorrer miles de kilómetros, sus aguas llegan al mar.",
+    "dato_curioso": "Cuando el Orinoco llega al mar, descarga tanta agua dulce que cambia el color del océano en esa zona. ¡Se puede ver desde el espacio!"
+  },
+  {
+    "pregunta": "¿Qué tipo de bosque rodea gran parte del río Orinoco?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Selva tropical venezolana densa y exuberante a ambos lados de un río de aguas oscuras. Hay guacamayas, monos y mariposas gigantes de colores. Estilo ilustración vibrante para niños.",
+    "opciones": [
+      "Un bosque de algodón de azúcar",
+      "Un bosque de papas fritas",
+      "Un bosque de helados de fresa",
+      "La selva tropical"
+    ],
+    "correcta": 3,
+    "explicacion": "El Orinoco está rodeado de selva tropical, un bosque lleno de árboles enormes, animales y plantas de todos los tipos. Es un lugar muy especial.",
+    "dato_curioso": "La selva del Orinoco tiene tantos animales y plantas que los científicos todavía están descubriendo especies nuevas. ¡Hay secretos sin descubrir!"
+  },
+  {
+    "pregunta": "¿Qué hacían los indígenas con los peces del río Orinoco?",
+    "tipo": "texto",
+    "opciones": [
+      "Los comían y comerciaban con ellos",
+      "Los usaban como almohadas",
+      "Los entrenaban para el circo acuático",
+      "Los coloreaban con acuarelas"
+    ],
+    "correcta": 0,
+    "explicacion": "Los indígenas pescaban en el Orinoco para alimentarse y también intercambiaban pescado con otras comunidades. Era una fuente de comida muy importante.",
+    "dato_curioso": "El Orinoco tiene peces gigantes como el payara, que tiene colmillos grandes. ¡Pescar uno de esos era toda una aventura para los indígenas!"
+  },
+  {
+    "pregunta": "¿Qué es la mitología indígena venezolana?",
+    "tipo": "texto",
+    "opciones": [
+      "Un tipo de comida muy picante",
+      "Las historias y creencias de los pueblos indígenas",
+      "Una película de superhéroes",
+      "Un juego de video muy antiguo"
+    ],
+    "correcta": 1,
+    "explicacion": "La mitología indígena son todas las historias, creencias y leyendas que los pueblos nativos de Venezuela han contado por miles de años. Son sus formas de explicar el mundo.",
+    "dato_curioso": "Venezuela tiene decenas de mitologías diferentes porque tiene muchos pueblos indígenas distintos. ¡Cada uno con sus propios dioses y aventuras increíbles!"
+  },
+  {
+    "pregunta": "¿Cómo se llama el dios creador de los Tamanacos que grabó petroglifos?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración colorida de Amalivaca, un ser divino indígena navegando en una canoa decorada sobre el río Orinoco. Lleva pinturas en el cuerpo y plumas de colores. Estilo mural venezolano vibrante.",
+    "opciones": [
+      "SuperMán del río",
+      "El Señor Ladrillo",
+      "Amalivaca",
+      "Don Pepito de las Piedras"
+    ],
+    "correcta": 2,
+    "explicacion": "Amalivaca es el dios creador de los Tamanacos. Él llegó en canoa, grabó figuras en las rocas y es un personaje muy importante de la mitología venezolana.",
+    "dato_curioso": "Amalivaca es tan importante que aparece en libros, murales y obras de arte venezolanas. ¡Es como un superhéroe indígena que tiene miles de años de historia!"
+  },
+  {
+    "pregunta": "¿Qué actividad artística hacían los indígenas en las orillas del Orinoco?",
+    "tipo": "texto",
+    "opciones": [
+      "Hacían conciertos de rock",
+      "Hacían esculturas de hielo",
+      "Pintaban paredes con spray",
+      "Grababan petroglifos en las rocas"
+    ],
+    "correcta": 3,
+    "explicacion": "Los indígenas grababan petroglifos, que son figuras talladas en las rocas de la orilla. Era su forma de arte y también de dejar mensajes para el futuro.",
+    "dato_curioso": "Los petroglifos no solo eran decorativos. Algunos creen que marcaban territorios, contaban historias o eran mapas del río. ¡Arte y ciencia juntos!"
+  },
+  {
+    "pregunta": "¿Por qué el Orinoco era importante para el comercio indígena?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Mapa ilustrado del río Orinoco con flechas que conectan varios pueblos indígenas a lo largo de sus orillas. Pequeñas canoas llevan productos como frutas, cerámica y plumas. Estilo infantil educativo.",
+    "opciones": [
+      "Porque conectaba pueblos que intercambiaban productos",
+      "Porque tenía cajeros automáticos",
+      "Porque era una tienda flotante",
+      "Porque tenía máquinas expendedoras de frutas"
+    ],
+    "correcta": 0,
+    "explicacion": "El Orinoco conectaba muchas comunidades que intercambiaban frutas, artesanías, animales y otros productos. Era como el centro comercial de los indígenas.",
+    "dato_curioso": "Los indígenas intercambiaban cosas sin usar dinero. Daban un objeto a cambio de otro. ¡A eso se le llama trueque y funcionaba muy bien!"
+  },
+  {
+    "pregunta": "¿Qué pueden aprender los niños de hoy estudiando los petroglifos?",
+    "tipo": "texto",
+    "opciones": [
+      "Cómo manejar un carro",
+      "La historia y cultura de los indígenas venezolanos",
+      "Recetas de cocina antigua",
+      "Cómo hacer un cohete espacial"
+    ],
+    "correcta": 1,
+    "explicacion": "Los petroglifos nos enseñan cómo vivían, qué creían y qué era importante para los indígenas venezolanos. Son como libros de piedra que todavía podemos leer.",
+    "dato_curioso": "Los arqueólogos, que son personas que estudian objetos del pasado, investigan los petroglifos para aprender sobre civilizaciones que vivieron hace miles de años."
+  },
+  {
+    "pregunta": "¿Qué pez gigante y peligroso vive en el río Orinoco?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Una piraña grande y colorida con dientes afilados brillantes, nadando en aguas oscuras del río Orinoco. Tiene escamas rojas y plateadas. Estilo ilustración divertida para niños, no aterradora.",
+    "opciones": [
+      "El pez arcoíris mágico",
+      "El pez que canta ópera",
+      "La piraña",
+      "El tiburón de río con sombrero"
+    ],
+    "correcta": 2,
+    "explicacion": "La piraña es un famoso pez del Orinoco que tiene dientes muy afilados. Los indígenas aprendieron a conocerla y vivir junto a ella en el río.",
+    "dato_curioso": "Las pirañas son más pequeñas de lo que imaginas, como la palma de tu mano. ¡Son temidas por sus dientes, no por su tamaño!"
+  },
+  {
+    "pregunta": "¿Cómo cruzaban los indígenas el río Orinoco cuando era muy ancho?",
+    "tipo": "texto",
+    "opciones": [
+      "Con un trampolín gigante",
+      "Por un túnel debajo del agua",
+      "Volando con alas de tucán",
+      "En canoas y balsas de madera"
+    ],
+    "correcta": 3,
+    "explicacion": "Los indígenas construían canoas y balsas con troncos de árboles para cruzar el ancho río Orinoco. Eran expertos navegantes desde pequeños.",
+    "dato_curioso": "Algunos niños indígenas aprendían a manejar una canoa antes de aprender a caminar bien. ¡El río era su patio de juegos principal!"
+  },
+  {
+    "pregunta": "¿En qué estado venezolano se encuentran muchos de los petroglifos del Orinoco?",
+    "tipo": "texto",
+    "opciones": [
+      "En el estado Bolívar",
+      "En el estado Nevería",
+      "En el estado Chocolatera",
+      "En el estado Arcoíris"
+    ],
+    "correcta": 0,
+    "explicacion": "Muchos petroglifos importantes están en el estado Bolívar, en el sur de Venezuela. Es una región llena de ríos, selvas y tesoros arqueológicos.",
+    "dato_curioso": "El estado Bolívar es el más grande de Venezuela, ¡más grande que muchos países del mundo! Y está lleno de maravillas naturales."
+  },
+  {
+    "pregunta": "¿Qué enseñaba Amalivaca a las personas según las leyendas Tamanacos?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de Amalivaca rodeado de personas indígenas a quienes enseña a cultivar, a hacer canoas y a navegar el río. Escena cálida y colorida al atardecer junto al Orinoco. Estilo mural venezolano.",
+    "opciones": [
+      "A usar tabletas digitales",
+      "A vivir en armonía con la naturaleza y el río",
+      "A construir cohetes espaciales",
+      "A hacer postres de chocolate"
+    ],
+    "correcta": 1,
+    "explicacion": "Según las leyendas, Amalivaca enseñó a las personas cómo vivir bien con la naturaleza, respetar el río y aprovechar sus recursos. Era muy sabio.",
+    "dato_curioso": "Los indígenas venezolanos todavía practican muchas de esas enseñanzas hoy en día. ¡Cuidan la selva y el río como lo hicieron sus ancestros por miles de años!"
+  },
+  {
+    "pregunta": "¿Cuál de estos animales NO se encuentra en el río Orinoco?",
+    "tipo": "texto",
+    "opciones": [
+      "Caimán",
+      "Tonina de río (delfín rosado)",
+      "Oso polar ártico",
+      "Anaconda"
+    ],
+    "correcta": 2,
+    "explicacion": "El oso polar vive en el Ártico, muy lejos del Orinoco. En el río venezolano sí viven caimanes, delfines rosados y anacondas.",
+    "dato_curioso": "El Orinoco tiene delfines de agua dulce llamados toninas que son rosados. ¡Un delfín rosado en un río de la selva, eso sí es mágico de verdad!"
+  },
+  {
+    "pregunta": "¿Por qué los petroglifos son un tesoro de Venezuela?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un niño venezolano con expresión asombrada mirando petroglifos grabados en una gran roca en la orilla del Orinoco. Al fondo hay selva y el río brillante. Estilo ilustración infantil cálida.",
+    "opciones": [
+      "Porque están hechos de oro puro",
+      "Porque son el menú de un restaurante antiguo",
+      "Porque dan puntos en los videojuegos",
+      "Porque son la historia de nuestros ancestros grabada en piedra"
+    ],
+    "correcta": 3,
+    "explicacion": "Los petroglifos son un tesoro porque guardan la memoria de quiénes vivieron aquí antes que nosotros. Son parte de la identidad venezolana.",
+    "dato_curioso": "Venezuela tiene más de 200 sitios con petroglifos. ¡Eso significa que hay más de 200 museos naturales al aire libre esperando ser visitados!"
+  },
+  {
+    "pregunta": "¿Qué elemento de la naturaleza veneraban especialmente los pueblos del Orinoco?",
+    "tipo": "texto",
+    "opciones": [
+      "El agua y el río",
+      "Los semáforos de tráfico",
+      "Los robots de cocina",
+      "Las escaleras mecánicas"
+    ],
+    "correcta": 0,
+    "explicacion": "Los pueblos indígenas del Orinoco veneraban el agua y el río. Para ellos, el río era sagrado porque les daba vida, alimento y camino.",
+    "dato_curioso": "En muchas culturas indígenas de Venezuela, tirar basura al río era considerado una falta muy grave, ¡como si le faltaras el respeto a un dios!"
+  },
+  {
+    "pregunta": "¿Cómo se llamaba el pueblo indígena cuyo dios creador era Amalivaca?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Grupo de indígenas venezolanos Tamanacos con vestimenta tradicional, pinturas corporales coloridas y accesorios de plumas. Están sentados alrededor de un fuego en la orilla del río. Ilustración colorida para niños.",
+    "opciones": [
+      "Los astronautas galácticos",
+      "Los Tamanacos",
+      "Los vikingos del Orinoco",
+      "Los magos de la pizza voladora"
+    ],
+    "correcta": 1,
+    "explicacion": "Los Tamanacos eran el pueblo indígena que adoraba a Amalivaca. Vivían cerca del Orinoco y tenían una cultura y lengua propia muy rica.",
+    "dato_curioso": "Aunque el idioma Tamanaco ya no se habla como lengua cotidiana, algunos investigadores han logrado recopilar palabras y frases para que no se olvide nunca."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Quién era Amalivaca según los indígenas Tamanacos?",
+    "tipo": "texto",
+    "opciones": [
+      "Un dios creador que llegó en canoa",
+      "Un cocinero muy famoso",
+      "Un astronauta del espacio",
+      "Un dragón de fuego gigante"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: Amalivaca era el dios creador de los Tamanacos, un pueblo indígena de Venezuela. Llegó en una canoa durante una gran inundación para ayudar a la gente.",
+    "dato_curioso": "Repaso curioso: Los Tamanacos contaban la historia de Amalivaca de generación en generación, ¡sin libros ni computadoras, solo hablando!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: En qué llegó Amalivaca cuando hubo una gran inundación?",
+    "tipo": "texto",
+    "opciones": [
+      "En una canoa",
+      "En un avión de papel",
+      "En un submarino amarillo",
+      "Montado en una tortuga gigante"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: Amalivaca llegó en una canoa cuando el agua cubrió toda la tierra. Era muy valiente para navegar en una inundación tan grande.",
+    "dato_curioso": "Repaso curioso: Las canoas indígenas se hacían vaciando un tronco de árbol enorme. ¡Imagina tallar un árbol entero para hacer tu bote!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué pueblo indígena venezolano adoraba a Amalivaca como su dios creador?",
+    "tipo": "texto",
+    "opciones": [
+      "Los dinosaurios robots",
+      "Los habitantes de la luna",
+      "Los pingüinos bailarines",
+      "Los Tamanacos"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: Los Tamanacos eran un pueblo indígena que vivía cerca del río Orinoco. Ellos creían que Amalivaca había creado el mundo y a las personas.",
+    "dato_curioso": "Repaso curioso: Los Tamanacos tenían una lengua propia muy diferente al español. ¡Imagina aprender a hablar de una manera completamente distinta!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué grabó Amalivaca en las rocas del río Orinoco?",
+    "tipo": "texto",
+    "opciones": [
+      "Una receta de arepa",
+      "Figuras y dibujos llamados petroglifos",
+      "El nombre de su perro",
+      "Su número de teléfono"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: Amalivaca grabó figuras en las rocas del Orinoco y esos dibujos se llaman petroglifos. Son como mensajes que nos dejó hace muchísimo tiempo.",
+    "dato_curioso": "Repaso curioso: Los petroglifos son tan duros que ni la lluvia ni el viento los han borrado en miles de años. ¡Son más resistentes que cualquier cuaderno!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cómo se llaman los dibujos grabados en rocas que dejaron los indígenas?",
+    "tipo": "texto",
+    "opciones": [
+      "Petroglifos",
+      "Selfies antiguas",
+      "Garabatos mágicos",
+      "Tatuajes de piedra"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: Los petroglifos son figuras talladas en rocas que hacían los indígenas hace miles de años. Son como el arte más viejo de Venezuela.",
+    "dato_curioso": "Repaso curioso: La palabra petroglifo viene del griego y significa 'dibujo en piedra'. ¡Los griegos también sabían mucho sobre historia!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Dónde están los petroglifos más famosos de Venezuela relacionados con Amalivaca?",
+    "tipo": "texto",
+    "opciones": [
+      "En Caicara del Orinoco",
+      "En la luna de queso",
+      "Dentro de un volcán de helado",
+      "En el fondo del mar Caribe"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: Los petroglifos de Caicara del Orinoco son los más conocidos de Venezuela. Están cerca del gran río Orinoco y tienen más de 2.000 años.",
+    "dato_curioso": "Repaso curioso: Caicara del Orinoco es una ciudad de Venezuela donde puedes ir a ver estos dibujos en piedra con tus propios ojos. ¡Es como visitar un museo al aire libre!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cuántos años tienen aproximadamente los petroglifos de Caicara del Orinoco?",
+    "tipo": "texto",
+    "opciones": [
+      "Dos días",
+      "Trescientos años",
+      "Cincuenta años",
+      "Más de 2.000 años"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: Los petroglifos de Caicara tienen más de 2.000 años de antigüedad. Eso quiere decir que existían mucho antes de que nacieran tus bisabuelos, tatarabuelos, y muchos más.",
+    "dato_curioso": "Repaso curioso: Hace 2.000 años no había televisión, internet ni celulares. Los indígenas usaban el arte en rocas para contar sus historias."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cuál es el tercer río más caudaloso del mundo?",
+    "tipo": "texto",
+    "opciones": [
+      "El río de la pizza flotante",
+      "El río de los cocodrilos voladores",
+      "El Orinoco",
+      "El río de la limonada"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: El río Orinoco es el tercer río más caudaloso del mundo. Eso significa que tiene muchísima agua corriendo por él todo el tiempo.",
+    "dato_curioso": "Repaso curioso: Si pudieras nadar desde el inicio hasta el final del Orinoco, tardarías semanas enteras. ¡Es enorme como una autopista de agua!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué usaban los indígenas del Orinoco para moverse, comerciar y comunicarse?",
+    "tipo": "texto",
+    "opciones": [
+      "El río Orinoco",
+      "Patinetas voladoras",
+      "Elefantes de colores",
+      "Trenes de vapor"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: El río Orinoco era como una autopista de agua para los indígenas. Lo usaban para moverse de un lugar a otro, intercambiar cosas y hablar con otras comunidades.",
+    "dato_curioso": "Repaso curioso: Hoy usamos carreteras y aviones para viajar, pero hace miles de años el río era el camino más rápido y seguro para los indígenas venezolanos."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cuántas comunidades indígenas conectaba el río Orinoco como una gran autopista?",
+    "tipo": "texto",
+    "opciones": [
+      "Exactamente 10 comunidades",
+      "Ninguna, vivían solos",
+      "Más de 400 comunidades",
+      "Solo 3 comunidades"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: El Orinoco conectaba más de 400 comunidades indígenas. Era como tener internet pero con agua, ¡todos podían comunicarse gracias al río!",
+    "dato_curioso": "Repaso curioso: 400 comunidades es muchísimo, como si fueran 400 pueblitos distintos todos conectados por el mismo río enorme."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cuántos grupos étnicos indígenas viven cerca del Orinoco hoy en día?",
+    "tipo": "texto",
+    "opciones": [
+      "Los Tamanacos",
+      "En una canoa",
+      "Un dios creador que llegó en canoa",
+      "Más de 20 grupos étnicos"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: Hoy en día más de 20 grupos étnicos indígenas viven cerca del río Orinoco. Ellos siguen cuidando ese territorio como lo hacían sus ancestros.",
+    "dato_curioso": "Dato para profundizar: Cada grupo étnico tiene su propia lengua, música y tradiciones. ¡Es como tener 20 culturas diferentes todas viviendo cerca del mismo río!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: En qué continente se encuentra el río Orinoco?",
+    "tipo": "texto",
+    "opciones": [
+      "Un dios creador que llegó en canoa",
+      "En una canoa",
+      "Los Tamanacos",
+      "En América del Sur"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: El río Orinoco está en América del Sur, dentro de Venezuela. Es uno de los ríos más grandes e importantes de todo el continente.",
+    "dato_curioso": "Dato para profundizar: Venezuela tiene tantos ríos y agua dulce que es uno de los países con más agua fresca de todo el mundo. ¡Somos muy afortunados!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Según la leyenda, ¿qué hizo Amalivaca para salvar a la gente durante la inundación??",
+    "tipo": "texto",
+    "opciones": [
+      "En una canoa",
+      "Los Tamanacos",
+      "Un dios creador que llegó en canoa",
+      "Llegó en canoa para ayudar y enseñar"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: Según la leyenda, Amalivaca llegó en canoa durante la gran inundación para guiar y proteger a las personas. Era como un superhéroe en canoa.",
+    "dato_curioso": "Dato para profundizar: Muchos pueblos del mundo tienen leyendas de grandes inundaciones. ¡Los humanos siempre han querido explicar las cosas grandes de la naturaleza!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cómo se llama la gran inundación que aparece en la historia de Amalivaca?",
+    "tipo": "texto",
+    "opciones": [
+      "Los Tamanacos",
+      "La gran inundación del Orinoco",
+      "Un dios creador que llegó en canoa",
+      "En una canoa"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: En la mitología Tamanaca, hubo una gran inundación que cubrió toda la tierra. Amalivaca llegó a ayudar a la gente en ese momento tan difícil.",
+    "dato_curioso": "Dato para profundizar: Las inundaciones del Orinoco todavía ocurren cada año cuando llueve mucho. Los animales y plantas del río ya están acostumbrados a ellas."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Por qué era tan importante el río Orinoco para los indígenas venezolanos?",
+    "tipo": "texto",
+    "opciones": [
+      "Porque era fuente de agua, alimento y camino",
+      "Los Tamanacos",
+      "En una canoa",
+      "Un dios creador que llegó en canoa"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: El Orinoco les daba agua para beber, peces para comer, y era el camino para viajar y visitar a otros. Era todo lo que necesitaban para vivir.",
+    "dato_curioso": "Dato para profundizar: El río Orinoco tiene más de 1.000 tipos diferentes de peces. ¡Imagina ir a pescar y poder sacar animales de todos los colores y tamaños!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué herramientas usaban los indígenas para grabar petroglifos en las rocas?",
+    "tipo": "texto",
+    "opciones": [
+      "Los Tamanacos",
+      "Piedras duras y afiladas",
+      "En una canoa",
+      "Un dios creador que llegó en canoa"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: Los indígenas usaban piedras muy duras y afiladas para grabar figuras en las rocas. Era un trabajo muy difícil que requería mucha paciencia.",
+    "dato_curioso": "Dato para profundizar: Hacer un petroglifo podía tardar días o semanas. Los indígenas eran muy dedicados y artísticos, ¡mucho más que dibujar con crayones!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué representa la figura de Amalivaca en la cultura Tamanaca?",
+    "tipo": "texto",
+    "opciones": [
+      "Los Tamanacos",
+      "Un dios creador y protector",
+      "Un dios creador que llegó en canoa",
+      "En una canoa"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: Amalivaca era un dios bueno y creador para los Tamanacos. Lo respetaban mucho porque creían que él había dado forma al mundo.",
+    "dato_curioso": "Dato para profundizar: Los dioses de los pueblos indígenas venezolanos estaban conectados con la naturaleza: el río, la lluvia, los árboles. ¡Todo era sagrado para ellos!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué tipo de figuras se pueden ver en los petroglifos del Orinoco?",
+    "tipo": "texto",
+    "opciones": [
+      "Los Tamanacos",
+      "Figuras humanas, animales y espirales",
+      "En una canoa",
+      "Un dios creador que llegó en canoa"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: En los petroglifos puedes ver figuras de personas, animales, espirales y formas geométricas. Cada dibujo tenía un significado especial para los indígenas.",
+    "dato_curioso": "Dato para profundizar: Algunos petroglifos muestran animales que ya no existen en Venezuela. ¡Son como fotografías de animales extintos hechas en piedra!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cuánto tiempo lleva el río Orinoco sirviendo a las comunidades indígenas?",
+    "tipo": "texto",
+    "opciones": [
+      "En una canoa",
+      "Un dios creador que llegó en canoa",
+      "Los Tamanacos",
+      "Miles de años"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: El Orinoco ha sido hogar de comunidades indígenas por miles y miles de años. Es uno de los ríos con más historia humana de toda América.",
+    "dato_curioso": "Dato para profundizar: Algunas familias indígenas llevan viviendo cerca del Orinoco por más de 10.000 años. ¡Eso es más tiempo del que existe la escritura!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cómo se transmitían las historias de Amalivaca entre los indígenas?",
+    "tipo": "texto",
+    "opciones": [
+      "Un dios creador que llegó en canoa",
+      "De boca a oído, contándolas en voz alta",
+      "Los Tamanacos",
+      "En una canoa"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: Las historias de Amalivaca se contaban oralmente, es decir, hablando. Los abuelos se las contaban a sus hijos y nietos alrededor del fuego.",
+    "dato_curioso": "Dato para profundizar: Esta forma de contar historias habladas se llama tradición oral. Gracias a eso, historias de miles de años llegaron hasta nosotros hoy."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué animal era sagrado para muchos pueblos indígenas del Orinoco?",
+    "tipo": "texto",
+    "opciones": [
+      "El dinosaurio volador",
+      "El jaguar",
+      "El unicornio arcoíris",
+      "El perrito de la suerte"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: El jaguar era un animal muy respetado y sagrado para muchos pueblos indígenas. Lo veían como un ser poderoso y especial.",
+    "dato_curioso": "Ampliación histórica: El jaguar es el felino más grande de América. ¡Puede nadar muy bien y hasta le gusta pescar en los ríos como el Orinoco!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué significa la palabra 'Orinoco' según algunas comunidades indígenas?",
+    "tipo": "texto",
+    "opciones": [
+      "Lugar donde se rema",
+      "Río de pizza flotante",
+      "El río que baila salsa",
+      "Río de nubes de algodón"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: Según algunas comunidades, Orinoco significa 'lugar donde se rema' o 'el gran río'. Era el nombre que le daban a esa gran corriente de agua.",
+    "dato_curioso": "Ampliación histórica: Muchos ríos y ciudades de Venezuela tienen nombres indígenas. ¡Es una forma de recordar siempre a los primeros habitantes de estas tierras!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Dónde desemboca el río Orinoco?",
+    "tipo": "texto",
+    "opciones": [
+      "En el desierto del Sahara",
+      "En la ciudad de Caracas",
+      "En el lago de la leche chocolatada",
+      "En el océano Atlántico"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: El río Orinoco desemboca en el océano Atlántico, al noreste de Venezuela. Después de recorrer miles de kilómetros, sus aguas llegan al mar.",
+    "dato_curioso": "Ampliación histórica: Cuando el Orinoco llega al mar, descarga tanta agua dulce que cambia el color del océano en esa zona. ¡Se puede ver desde el espacio!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué tipo de bosque rodea gran parte del río Orinoco?",
+    "tipo": "texto",
+    "opciones": [
+      "La selva tropical",
+      "Un bosque de papas fritas",
+      "Un bosque de helados de fresa",
+      "Un bosque de algodón de azúcar"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: El Orinoco está rodeado de selva tropical, un bosque lleno de árboles enormes, animales y plantas de todos los tipos. Es un lugar muy especial.",
+    "dato_curioso": "Ampliación histórica: La selva del Orinoco tiene tantos animales y plantas que los científicos todavía están descubriendo especies nuevas. ¡Hay secretos sin descubrir!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué hacían los indígenas con los peces del río Orinoco?",
+    "tipo": "texto",
+    "opciones": [
+      "Los coloreaban con acuarelas",
+      "Los usaban como almohadas",
+      "Los comían y comerciaban con ellos",
+      "Los entrenaban para el circo acuático"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: Los indígenas pescaban en el Orinoco para alimentarse y también intercambiaban pescado con otras comunidades. Era una fuente de comida muy importante.",
+    "dato_curioso": "Ampliación histórica: El Orinoco tiene peces gigantes como el payara, que tiene colmillos grandes. ¡Pescar uno de esos era toda una aventura para los indígenas!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué es la mitología indígena venezolana?",
+    "tipo": "texto",
+    "opciones": [
+      "Un tipo de comida muy picante",
+      "Un juego de video muy antiguo",
+      "Las historias y creencias de los pueblos indígenas",
+      "Una película de superhéroes"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: La mitología indígena son todas las historias, creencias y leyendas que los pueblos nativos de Venezuela han contado por miles de años. Son sus formas de explicar el mundo.",
+    "dato_curioso": "Ampliación histórica: Venezuela tiene decenas de mitologías diferentes porque tiene muchos pueblos indígenas distintos. ¡Cada uno con sus propios dioses y aventuras increíbles!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cómo se llama el dios creador de los Tamanacos que grabó petroglifos?",
+    "tipo": "texto",
+    "opciones": [
+      "Don Pepito de las Piedras",
+      "SuperMán del río",
+      "El Señor Ladrillo",
+      "Amalivaca"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: Amalivaca es el dios creador de los Tamanacos. Él llegó en canoa, grabó figuras en las rocas y es un personaje muy importante de la mitología venezolana.",
+    "dato_curioso": "Ampliación histórica: Amalivaca es tan importante que aparece en libros, murales y obras de arte venezolanas. ¡Es como un superhéroe indígena que tiene miles de años de historia!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué actividad artística hacían los indígenas en las orillas del Orinoco?",
+    "tipo": "texto",
+    "opciones": [
+      "Grababan petroglifos en las rocas",
+      "Hacían conciertos de rock",
+      "Pintaban paredes con spray",
+      "Hacían esculturas de hielo"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: Los indígenas grababan petroglifos, que son figuras talladas en las rocas de la orilla. Era su forma de arte y también de dejar mensajes para el futuro.",
+    "dato_curioso": "Ampliación histórica: Los petroglifos no solo eran decorativos. Algunos creen que marcaban territorios, contaban historias o eran mapas del río. ¡Arte y ciencia juntos!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Por qué el Orinoco era importante para el comercio indígena?",
+    "tipo": "texto",
+    "opciones": [
+      "Porque conectaba pueblos que intercambiaban productos",
+      "Porque era una tienda flotante",
+      "Porque tenía máquinas expendedoras de frutas",
+      "Porque tenía cajeros automáticos"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: El Orinoco conectaba muchas comunidades que intercambiaban frutas, artesanías, animales y otros productos. Era como el centro comercial de los indígenas.",
+    "dato_curioso": "Ampliación histórica: Los indígenas intercambiaban cosas sin usar dinero. Daban un objeto a cambio de otro. ¡A eso se le llama trueque y funcionaba muy bien!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué pueden aprender los niños de hoy estudiando los petroglifos?",
+    "tipo": "texto",
+    "opciones": [
+      "La historia y cultura de los indígenas venezolanos",
+      "Cómo manejar un carro",
+      "Recetas de cocina antigua",
+      "Cómo hacer un cohete espacial"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: Los petroglifos nos enseñan cómo vivían, qué creían y qué era importante para los indígenas venezolanos. Son como libros de piedra que todavía podemos leer.",
+    "dato_curioso": "Ampliación histórica: Los arqueólogos, que son personas que estudian objetos del pasado, investigan los petroglifos para aprender sobre civilizaciones que vivieron hace miles de años."
+  }
+]

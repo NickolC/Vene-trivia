@@ -1,0 +1,886 @@
+[
+  {
+    "pregunta": "¿Qué día especial ocurrió algo muy importante en Caracas en 1810?",
+    "tipo": "texto",
+    "opciones": [
+      "El 19 de abril",
+      "El 5 de julio",
+      "El 25 de diciembre",
+      "El 1 de enero"
+    ],
+    "correcta": 0,
+    "explicacion": "¡El 19 de abril de 1810 fue el día en que los caraqueños dijeron que ya no querían que España los mandara! ¡Fue un día muy valiente!",
+    "dato_curioso": "¡El 19 de abril es tan importante que Venezuela lo celebra como fiesta nacional todos los años! ¡Hay desfiles y todo!"
+  },
+  {
+    "pregunta": "¿Cómo se llamaba el gobernador español de Caracas en 1810?",
+    "tipo": "texto",
+    "opciones": [
+      "Supervillano González",
+      "Vicente Emparan",
+      "Dragón Pérez",
+      "Capitán Churros"
+    ],
+    "correcta": 1,
+    "explicacion": "Vicente Emparan era el señor que mandaba en Caracas cuando llegaron los españoles. ¡Pero ese día todo le salió muy mal!",
+    "dato_curioso": "Emparan era de un lugar de España llamado País Vasco. ¡Nunca pensó que ese día 19 de abril le iban a quitar el mando!"
+  },
+  {
+    "pregunta": "¿Dónde se reunieron los patriotas el 19 de abril de 1810?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Edificio colonial venezolano: el Cabildo de Caracas, con arcos de piedra, paredes blancas y amarillas, patio interior con columnas, ambiente de época colonial 1810, estilo ilustración colorida para niños.",
+    "opciones": [
+      "En una pizzería",
+      "En el Cabildo de Caracas",
+      "En la playa de Macuto",
+      "En un castillo de dulces"
+    ],
+    "correcta": 1,
+    "explicacion": "El Cabildo era como el ayuntamiento de Caracas, donde se reunían los señores importantes para tomar decisiones. ¡Ese día tomaron una decisión MUY grande!",
+    "dato_curioso": "El Cabildo de Caracas todavía existe hoy. ¡Puedes ir a visitarlo y ver el mismo lugar donde pasó todo!"
+  },
+  {
+    "pregunta": "¿Quién fue el cura que hizo señas para que la gente dijera NO a Emparan?",
+    "tipo": "texto",
+    "opciones": [
+      "El padre Madariaga",
+      "El padre Espagueti",
+      "El padre Cohete",
+      "El padre Helado"
+    ],
+    "correcta": 0,
+    "explicacion": "El padre José Cortés de Madariaga fue un cura muy valiente que usó sus manos para decirle a la gente que dijera que no a Emparan. ¡Fue muy listo!",
+    "dato_curioso": "El padre Madariaga era de Chile, pero amaba tanto a Venezuela que arriesgó todo para ayudar en el 19 de abril. ¡Un héroe de otro país!"
+  },
+  {
+    "pregunta": "Cuando Emparan preguntó si lo querían como jefe, ¿qué dijo la gente?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Multitud de personas coloniales venezolanas frente al Cabildo de Caracas, todos diciendo '¡NO!' con gestos de rechazo, el gobernador Emparan en un balcón viéndolos sorprendido, colores vivos estilo ilustración infantil.",
+    "opciones": [
+      "¡Sí, sí, sí!",
+      "¡NO!",
+      "¡Olé!",
+      "¡Que viva el helado!"
+    ],
+    "correcta": 1,
+    "explicacion": "Cuando Emparan preguntó si lo querían como gobernador, la gente gritó ¡NO! El padre Madariaga les había hecho señas para que dijeran eso. ¡Fue un plan secreto!",
+    "dato_curioso": "Emparan se asomó al balcón del Cabildo y vio que nadie lo quería como jefe. ¡Fue el momento más vergonzoso de su vida!"
+  },
+  {
+    "pregunta": "¿Para qué dijeron que gobernaban después del 19 de abril, aunque era un truco?",
+    "tipo": "texto",
+    "opciones": [
+      "Para el rey de España",
+      "Para los dinosaurios",
+      "Para el rey del chocolate",
+      "Para el capitán pirata"
+    ],
+    "correcta": 0,
+    "explicacion": "Dijeron que gobernarían 'en nombre del Rey de España', ¡pero era una mentira piadosa! En realidad querían ser libres. ¡Fue el engaño más grande de la historia!",
+    "dato_curioso": "Decir que gobernaban 'en nombre del rey' era un truco para que España no se enojara tanto. ¡Pero todo el mundo sabía que era mentira!"
+  },
+  {
+    "pregunta": "¿Qué le pasó a Emparan después del 19 de abril?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un barco de vela colonial en el mar azul, con el gobernador Emparan a bordo mirando triste hacia atrás hacia las costas de Venezuela, estilo ilustración colorida para niños.",
+    "opciones": [
+      "Lo hicieron rey de Venezuela",
+      "Lo mandaron en barco a España",
+      "Se fue a vivir a la luna",
+      "Lo convirtieron en estatua de mantequilla"
+    ],
+    "correcta": 1,
+    "explicacion": "A Emparan lo metieron en un barco y lo mandaron de regreso a España. ¡Tuvo que irse de Venezuela para siempre!",
+    "dato_curioso": "Emparan era tan mandón que cuando lo enviaron a España, ¡ni los españoles lo quisieron! Pasó muchos años en problemas."
+  },
+  {
+    "pregunta": "¿Qué declararon los venezolanos el 19 de abril de 1810?",
+    "tipo": "texto",
+    "opciones": [
+      "La receta del pabellón criollo",
+      "La primera Junta de Gobierno",
+      "El mejor equipo de fútbol",
+      "El día del helado gratis"
+    ],
+    "correcta": 1,
+    "explicacion": "El 19 de abril se creó la primera Junta de Gobierno de Venezuela. ¡Fue la primera vez que los venezolanos gobernaron su propio país!",
+    "dato_curioso": "¡La Junta de Gobierno de Venezuela fue la primera de toda Sudamérica! ¡Venezuela se adelantó a todos los demás países!"
+  },
+  {
+    "pregunta": "¿Declararon la independencia total el 19 de abril de 1810?",
+    "tipo": "texto",
+    "opciones": [
+      "Sí, ese mismo día",
+      "No, eso fue después",
+      "Sí, a medianoche",
+      "No, nunca la declararon"
+    ],
+    "correcta": 1,
+    "explicacion": "El 19 de abril NO fue la independencia total. Eso llegó el 5 de julio de 1811. El 19 de abril fue el primer paso, como el principio de un cuento muy emocionante.",
+    "dato_curioso": "¡Pasaron más de un año entre el 19 de abril de 1810 y la independencia del 5 de julio de 1811! ¡Fue un proceso largo y emocionante!"
+  },
+  {
+    "pregunta": "¿Cómo se llamaba el lugar donde vivían todos juntos en Caracas?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Vista colorida de la ciudad colonial de Caracas en 1810, con iglesias, casas de colores, calles de piedra, gente con ropa de la época colonial, montañas de fondo, estilo ilustración infantil vibrante.",
+    "opciones": [
+      "Ciudad de los dragones",
+      "Caracas",
+      "Maracaibo mágica",
+      "Villa de los chocolates"
+    ],
+    "correcta": 1,
+    "explicacion": "Caracas era la ciudad capital de Venezuela donde vivían muchas personas importantes. ¡Ahí fue donde ocurrió todo el 19 de abril!",
+    "dato_curioso": "¡Caracas fue fundada en 1567 y todavía es la capital de Venezuela! ¡Tiene más de 450 años de historia!"
+  },
+  {
+    "pregunta": "¿El Cabildo de Caracas se reunió con o sin permiso del gobernador español?",
+    "tipo": "texto",
+    "opciones": [
+      "Con permiso y con torta",
+      "Sin permiso del gobernador",
+      "Con permiso del rey",
+      "Con permiso del dragón"
+    ],
+    "correcta": 1,
+    "explicacion": "El Cabildo se reunió sin pedirle permiso a Emparan. ¡Eso fue muy valiente porque podían meterse en muchos problemas!",
+    "dato_curioso": "Reunirse sin permiso del gobernador era algo muy serio en esa época. ¡Los patriotas arriesgaron todo por Venezuela!"
+  },
+  {
+    "pregunta": "¿Cómo se llamaba el grupo de señores importantes que gobernaron después del 19 de abril?",
+    "tipo": "texto",
+    "opciones": [
+      "El club de los superhéroes",
+      "La Junta Suprema de Caracas",
+      "El equipo de los valientes",
+      "Los amigos del helado"
+    ],
+    "correcta": 1,
+    "explicacion": "La Junta Suprema de Caracas fue el primer gobierno venezolano. ¡Era como un equipo de personas que trabajaban juntas para gobernar el país!",
+    "dato_curioso": "La Junta Suprema de Caracas mandó cartas a otras ciudades de Venezuela para que también se unieran. ¡Era como armar un equipo gigante!"
+  },
+  {
+    "pregunta": "¿En qué año ocurrió el 19 de abril?",
+    "tipo": "texto",
+    "opciones": [
+      "En el año 1000",
+      "En 1810",
+      "En el año 3000",
+      "En 1492"
+    ],
+    "correcta": 1,
+    "explicacion": "El 19 de abril fue en el año 1810. ¡Hace más de doscientos años! ¡Imagínate lo viejita que es esa historia!",
+    "dato_curioso": "¡En 1810 no había internet, ni celulares, ni televisión! Las noticias viajaban en cartas o de boca en boca a caballo."
+  },
+  {
+    "pregunta": "¿Cómo se enteró la gente de Caracas de la reunión del Cabildo el 19 de abril?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Gente colonial venezolana en las calles de Caracas, algunos corriendo a avisar a otros, un hombre a caballo llevando un mensaje, ambiente de urgencia y emoción, colores vivos estilo ilustración infantil.",
+    "opciones": [
+      "Por TikTok",
+      "Se corrió la voz por las calles",
+      "Por televisión",
+      "Por un robot mensajero"
+    ],
+    "correcta": 1,
+    "explicacion": "En 1810 no había internet. ¡La gente se enteraba corriendo por las calles y diciéndole a sus vecinos! Era como un teléfono roto gigante.",
+    "dato_curioso": "En esa época las noticias podían tardar semanas o meses en llegar a otras ciudades. ¡Había que mandar cartas a caballo!"
+  },
+  {
+    "pregunta": "¿Por qué el 19 de abril se llama 'el día del gran engaño'?",
+    "tipo": "texto",
+    "opciones": [
+      "Porque regalaron dulces de mentira",
+      "Porque dijeron gobernar por el rey pero era un truco",
+      "Porque Emparan mintió sobre su edad",
+      "Porque perdieron unas llaves"
+    ],
+    "correcta": 1,
+    "explicacion": "Se llama así porque dijeron que gobernaban 'por el rey' ¡pero era un truco! En realidad querían independizarse. ¡Fue el engaño más famoso de Venezuela!",
+    "dato_curioso": "¡Ese truco funcionó! España tardó tiempo en darse cuenta de que los venezolanos ya estaban gobernando solos."
+  },
+  {
+    "pregunta": "¿Qué ropa usaba la gente importante del Cabildo en 1810?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Caballeros coloniales venezolanos con levitas negras, sombreros de tres puntas, camisas blancas con encajes, pantalones ajustados y zapatos con hebillas, dentro del Cabildo de Caracas, estilo ilustración colorida para niños.",
+    "opciones": [
+      "Trajes de baño de colores",
+      "Levitas, sombreros y medias blancas",
+      "Pijamas con estampado de estrellas",
+      "Disfraces de superhéroes"
+    ],
+    "correcta": 1,
+    "explicacion": "Los señores importantes de 1810 usaban levitas (como sacos largos) y sombreros especiales. ¡Se vestían muy diferente a como nos vestimos hoy!",
+    "dato_curioso": "¡Los pantalones de esa época llegaban hasta la rodilla y usaban medias largas blancas! A nosotros nos parecería un disfraz muy raro."
+  },
+  {
+    "pregunta": "¿Cuánto tiempo duró la reunión del Cabildo el 19 de abril?",
+    "tipo": "texto",
+    "opciones": [
+      "Cinco minutos",
+      "Todo el día con mucha tensión",
+      "Solo un segundo",
+      "Tres días y tres noches"
+    ],
+    "correcta": 1,
+    "explicacion": "La reunión del Cabildo duró todo el día. ¡Hubo mucha discusión, tensión y nervios! Era una decisión muy muy importante.",
+    "dato_curioso": "Imagínate estar todo un día decidiendo el futuro de tu país. ¡Los patriotas debían estar muy cansados y nerviosos al final del día!"
+  },
+  {
+    "pregunta": "¿Qué es un Cabildo?",
+    "tipo": "texto",
+    "opciones": [
+      "Un tipo de helado especial",
+      "El lugar donde se gobernaba la ciudad",
+      "Un baile venezolano muy alegre",
+      "Un animal de la selva"
+    ],
+    "correcta": 1,
+    "explicacion": "El Cabildo era como el ayuntamiento o municipio de la ciudad. ¡Era el lugar donde los señores importantes tomaban las decisiones grandes!",
+    "dato_curioso": "Los cabildos en América los pusieron los españoles para organizar las ciudades. ¡Pero al final esas mismas instituciones ayudaron a lograr la independencia!"
+  },
+  {
+    "pregunta": "¿Qué hizo el padre Madariaga con sus manos durante la reunión?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un cura con sotana negra en el Cabildo de Caracas haciendo señas con el dedo índice moviendo hacia los lados (señal de 'no') hacia la gente que lo mira, Emparan al fondo confundido, estilo ilustración colorida infantil.",
+    "opciones": [
+      "Aplaudía muy fuerte",
+      "Hacía señas con el dedo para que la gente dijera no",
+      "Hacía magia con varitas",
+      "Sacaba fotos con un celular"
+    ],
+    "correcta": 1,
+    "explicacion": "El padre Madariaga hacía señas con el dedo para que la gente dijera NO a Emparan. ¡Era como una señal secreta entre amigos!",
+    "dato_curioso": "¡El padre Madariaga era tan listo que Emparan no se dio cuenta de las señas! Cuando la gente gritó NO, Emparan se quedó boquiabierto."
+  },
+  {
+    "pregunta": "¿En qué estado de Venezuela está Caracas?",
+    "tipo": "texto",
+    "opciones": [
+      "En el estado Arepa",
+      "En el Distrito Capital",
+      "En el estado Sombrero",
+      "En el estado Maracaibo"
+    ],
+    "correcta": 1,
+    "explicacion": "Caracas está en el Distrito Capital, que es una zona especial por ser la capital de Venezuela. ¡Ahí viven millones de venezolanos!",
+    "dato_curioso": "¡Caracas está rodeada de montañas por todos lados! Está en un valle entre cerros altísimos que la protegen como murallas gigantes."
+  },
+  {
+    "pregunta": "¿Qué significa que el 19 de abril fue el inicio del proceso de independencia?",
+    "tipo": "texto",
+    "opciones": [
+      "Que terminó todo ese día",
+      "Que fue el primer paso hacia la libertad",
+      "Que ganaron un campeonato",
+      "Que descubrieron un tesoro"
+    ],
+    "correcta": 1,
+    "explicacion": "El 19 de abril fue el primer paso, como cuando empiezas a caminar hacia tu casa. ¡Todavía faltaba mucho camino para llegar a la libertad total!",
+    "dato_curioso": "Desde el 19 de abril de 1810 hasta la verdadera independencia pasaron muchos años de batallas y sacrificios. ¡No fue fácil ser libre!"
+  },
+  {
+    "pregunta": "¿Cómo llegaron los españoles a mandar en Venezuela?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Barcos españoles de la época colonial llegando a costas venezolanas, con banderas de España, soldados con armaduras desembarcando en la playa, indígenas observando desde la selva, estilo ilustración colorida infantil.",
+    "opciones": [
+      "Llegaron en cohete espacial",
+      "Llegaron en barcos hace cientos de años",
+      "Llegaron en avión desde Madrid",
+      "Los trajeron los dinosaurios"
+    ],
+    "correcta": 1,
+    "explicacion": "Los españoles llegaron a Venezuela en barcos hace cientos de años y se quedaron a mandar. ¡Por eso los venezolanos querían ser libres en 1810!",
+    "dato_curioso": "España mandó en Venezuela por más de 300 años. ¡Imagínate trescientos años! Es como diez generaciones de abuelos y abuelas."
+  },
+  {
+    "pregunta": "¿Qué le gritó la gente a Emparan cuando se asomó al balcón?",
+    "tipo": "texto",
+    "opciones": [
+      "¡Que viva Emparan!",
+      "¡No queremos que nos mandes!",
+      "¡Queremos pizza!",
+      "¡Feliz cumpleaños!"
+    ],
+    "correcta": 1,
+    "explicacion": "La gente le dijo a Emparan que NO lo querían como gobernador. ¡Fue un momento muy valiente porque Emparan era muy poderoso!",
+    "dato_curioso": "Emparan se quedó tan sorprendido que dijo: 'Yo tampoco quiero el mando' y se entregó. ¡Fue el gobernador más rápido en rendirse!"
+  },
+  {
+    "pregunta": "¿Qué celebra Venezuela el 19 de abril cada año?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Desfile festivo en Venezuela con niños y adultos con ropa de colores de la bandera venezolana, banderas ondeando, música, gente bailando y celebrando en las calles, estilo ilustración alegre infantil.",
+    "opciones": [
+      "El día de la arepa",
+      "El inicio del proceso de independencia",
+      "El cumpleaños de Emparan",
+      "El día del helado nacional"
+    ],
+    "correcta": 1,
+    "explicacion": "El 19 de abril es fiesta nacional en Venezuela. ¡Se celebra el momento en que los venezolanos comenzaron a luchar por su libertad!",
+    "dato_curioso": "El 19 de abril también se llama 'Día del Comienzo de la Independencia'. ¡Es uno de los días más importantes del calendario venezolano!"
+  },
+  {
+    "pregunta": "¿Por qué los venezolanos ya no querían que España los gobernara?",
+    "tipo": "texto",
+    "opciones": [
+      "Porque España les quitaba los juguetes",
+      "Porque querían decidir por sí mismos",
+      "Porque España olía muy feo",
+      "Porque España tenía dragones"
+    ],
+    "correcta": 1,
+    "explicacion": "Los venezolanos querían tomar sus propias decisiones sin que alguien de muy lejos les dijera qué hacer. ¡Querían ser libres como los pájaros!",
+    "dato_curioso": "España estaba al otro lado del Atlántico, ¡a miles de kilómetros! A veces las órdenes tardaban meses en llegar a Venezuela."
+  },
+  {
+    "pregunta": "¿Cómo se llamaban los señores que integraban el Cabildo de Caracas?",
+    "tipo": "texto",
+    "opciones": [
+      "Los cabildantes o capitulantes",
+      "Los ninjas de Caracas",
+      "Los superhéroes del mal",
+      "Los dragones voladores"
+    ],
+    "correcta": 0,
+    "explicacion": "Los cabildantes eran los señores del Cabildo. ¡Ese día actuaron con mucho valor para cambiar la historia de Venezuela!",
+    "dato_curioso": "Muchos de los cabildantes eran criollos, es decir, personas nacidas en Venezuela pero de padres españoles. ¡Amaban su tierra natal!"
+  },
+  {
+    "pregunta": "¿Cómo se llamaba el tipo de reunión especial que hicieron ese 19 de abril?",
+    "tipo": "texto",
+    "opciones": [
+      "Una pijamada histórica",
+      "Un Cabildo Abierto Extraordinario",
+      "Un torneo de ajedrez",
+      "Una fiesta de disfraces"
+    ],
+    "correcta": 1,
+    "explicacion": "Fue un Cabildo Abierto Extraordinario, lo que significa que invitaron a mucha más gente de lo normal a participar. ¡Era una reunión muy especial!",
+    "dato_curioso": "Un Cabildo Abierto era algo muy raro y serio. Solo se hacía en momentos muy, muy importantes. ¡El 19 de abril fue el más famoso de todos!"
+  },
+  {
+    "pregunta": "¿Qué país mandaba en Venezuela antes de la independencia?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Bandera de España (roja y amarilla) ondeando sobre una ciudad colonial venezolana con iglesias y casas de la época, gente con ropa colonial mirando la bandera, estilo ilustración colorida infantil.",
+    "opciones": [
+      "Francia con baguettes",
+      "España",
+      "China con dragones",
+      "El reino del arco iris"
+    ],
+    "correcta": 1,
+    "explicacion": "España gobernaba Venezuela antes de la independencia. ¡Los españoles vinieron en barcos y se quedaron mandando por muchos, muchos años!",
+    "dato_curioso": "En 1810, España tenía problemas en casa porque Napoleón de Francia había invadido España. ¡Ese lío ayudó a los venezolanos a actuar rápido!"
+  },
+  {
+    "pregunta": "¿Qué pasó en España que ayudó a los venezolanos a rebelarse en 1810?",
+    "tipo": "texto",
+    "opciones": [
+      "España ganó la Copa del Mundo",
+      "Napoleón invadió España y había mucho caos",
+      "El rey de España se fue de vacaciones",
+      "España se quedó sin chocolate"
+    ],
+    "correcta": 1,
+    "explicacion": "Napoleón de Francia había invadido España y todo era un caos. ¡Los venezolanos vieron la oportunidad y dijeron: ¡ahora es cuando!",
+    "dato_curioso": "Napoleón puso a su hermano José como rey de España. Los venezolanos dijeron que no lo reconocían y por eso formaron su propia junta. ¡Muy listos!"
+  },
+  {
+    "pregunta": "¿Dónde está el Cabildo de Caracas que fue tan importante ese día?",
+    "tipo": "imagen",
+    "imagen_descripcion": "El edificio del Cabildo de Caracas junto a la Plaza Bolívar, con la estatua ecuestre de Simón Bolívar visible, edificios coloniales alrededor, ambiente del centro histórico de Caracas, estilo ilustración detallada para niños.",
+    "opciones": [
+      "Al lado del mar en la playa",
+      "En la Plaza Bolívar de Caracas",
+      "En el espacio exterior",
+      "Debajo del agua en el lago"
+    ],
+    "correcta": 1,
+    "explicacion": "El Cabildo de Caracas está en la Plaza Bolívar, en el corazón de la ciudad. ¡Todavía puedes ir a visitarlo y sentirte en la historia!",
+    "dato_curioso": "La Plaza Bolívar de Caracas es el lugar más histórico de Venezuela. ¡Muchas cosas importantísimas ocurrieron ahí!"
+  },
+  {
+    "pregunta": "¿El padre Madariaga era político o era cura?",
+    "tipo": "texto",
+    "opciones": [
+      "Era cocinero famoso",
+      "Era cura (sacerdote) y también patriota",
+      "Era capitán de barco pirata",
+      "Era mago de circo"
+    ],
+    "correcta": 1,
+    "explicacion": "El padre Madariaga era un cura, pero también amaba la libertad y ayudó a los patriotas. ¡A veces los más valientes son los que menos te esperas!",
+    "dato_curioso": "El padre Madariaga era tan importante que lo llamaban el 'precursor de la independencia'. ¡Eso significa que él fue de los primeros en actuar!"
+  },
+  {
+    "pregunta": "¿Qué significa la palabra 'patriota' en la historia de Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Alguien que come mucha arepa",
+      "Alguien que amaba a Venezuela y luchaba por su libertad",
+      "Un jugador de fútbol muy bueno",
+      "Alguien con capa de superhéroe"
+    ],
+    "correcta": 1,
+    "explicacion": "Un patriota era alguien que amaba tanto a su país que estaba dispuesto a luchar por su libertad. ¡Los patriotas venezolanos fueron muy valientes!",
+    "dato_curioso": "¡Muchos patriotas venezolanos eran jóvenes! Algunos tenían solo 20 o 25 años cuando decidieron luchar por la independencia. ¡Qué valientes!"
+  },
+  {
+    "pregunta": "¿Qué tipo de gobierno crearon el 19 de abril de 1810?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Sala del Cabildo de Caracas con varios señores coloniales sentados alrededor de una mesa grande, firmando documentos importantes, velas encendidas, ambiente solemne pero emocionante, estilo ilustración infantil histórica.",
+    "opciones": [
+      "Un gobierno de robots",
+      "Una Junta de Gobierno",
+      "Un gobierno de piratas",
+      "Un gobierno de payasos"
+    ],
+    "correcta": 1,
+    "explicacion": "Crearon una Junta de Gobierno, que era como un equipo de personas que gobernaba juntas. ¡Fue la primera vez que venezolanos gobernaron Venezuela!",
+    "dato_curioso": "¡La Junta de Gobierno de Caracas fue la primera en toda Sudamérica! Eso significa que Venezuela le mostró el camino a todos los demás países."
+  },
+  {
+    "pregunta": "¿Cómo se sentía la gente en Caracas durante el 19 de abril?",
+    "tipo": "texto",
+    "opciones": [
+      "Dormida y aburrida",
+      "Emocionada, nerviosa y valiente",
+      "Muy tranquila comiendo",
+      "Jugando videojuegos feliz"
+    ],
+    "correcta": 1,
+    "explicacion": "La gente estaba muy emocionada y nerviosa porque estaban haciendo algo muy grande y peligroso. ¡Era como el día más emocionante de sus vidas!",
+    "dato_curioso": "Muchas personas en Caracas sabían que ese día podía cambiar todo. ¡Y tenían razón! El 19 de abril cambió la historia de Venezuela para siempre."
+  },
+  {
+    "pregunta": "¿Qué símbolo representa el inicio de la independencia venezolana?",
+    "tipo": "imagen",
+    "imagen_descripcion": "La bandera de Venezuela con sus colores amarillo, azul y rojo con estrellas, ondeando con orgullo en el cielo azul, con detalles del escudo nacional, estilo ilustración vibrante y colorida para niños.",
+    "opciones": [
+      "Una pizza con los colores de Venezuela",
+      "La bandera venezolana",
+      "Un cohete espacial tricolor",
+      "Un pastel de cumpleaños"
+    ],
+    "correcta": 1,
+    "explicacion": "La bandera venezolana representa la libertad que los patriotas del 19 de abril comenzaron a buscar. ¡Cada color tiene un significado muy especial!",
+    "dato_curioso": "El amarillo de la bandera venezolana representa las riquezas del país. El azul el mar. Y el rojo la sangre de los héroes. ¡Cuánto significado!"
+  },
+  {
+    "pregunta": "¿Cuál era la capital de Venezuela en 1810?",
+    "tipo": "texto",
+    "opciones": [
+      "Maracaibo",
+      "Caracas",
+      "Ciudad de los sueños",
+      "Barquisimeto"
+    ],
+    "correcta": 1,
+    "explicacion": "Caracas era y sigue siendo la capital de Venezuela. ¡En 1810 fue el corazón de toda la revolución por la independencia!",
+    "dato_curioso": "¡Caracas fue fundada el 25 de julio de 1567 por Diego de Losada! Se llama oficialmente Santiago de León de Caracas. ¡Qué nombre tan largo!"
+  },
+  {
+    "pregunta": "¿Por qué es importante recordar el 19 de abril hoy en día?",
+    "tipo": "texto",
+    "opciones": [
+      "Para pedir dulces gratis",
+      "Porque fue el comienzo de la libertad venezolana",
+      "Para ver fuegos artificiales nomás",
+      "Porque lo mandan hacer en la tele"
+    ],
+    "correcta": 1,
+    "explicacion": "Recordamos el 19 de abril porque fue el día en que los venezolanos comenzaron a luchar por ser libres. ¡Sin ese día, Venezuela no existiría como la conocemos!",
+    "dato_curioso": "¡Gracias a los valientes del 19 de abril, hoy Venezuela es un país libre! Cada venezolano lleva un poco de esa valentía en su corazón."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué día especial ocurrió algo muy importante en Caracas en 1810?",
+    "tipo": "texto",
+    "opciones": [
+      "El 1 de enero",
+      "El 25 de diciembre",
+      "El 19 de abril",
+      "El 5 de julio"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: ¡El 19 de abril de 1810 fue el día en que los caraqueños dijeron que ya no querían que España los mandara! ¡Fue un día muy valiente!",
+    "dato_curioso": "Repaso curioso: ¡El 19 de abril es tan importante que Venezuela lo celebra como fiesta nacional todos los años! ¡Hay desfiles y todo!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cómo se llamaba el gobernador español de Caracas en 1810?",
+    "tipo": "texto",
+    "opciones": [
+      "Capitán Churros",
+      "Vicente Emparan",
+      "Dragón Pérez",
+      "Supervillano González"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: Vicente Emparan era el señor que mandaba en Caracas cuando llegaron los españoles. ¡Pero ese día todo le salió muy mal!",
+    "dato_curioso": "Repaso curioso: Emparan era de un lugar de España llamado País Vasco. ¡Nunca pensó que ese día 19 de abril le iban a quitar el mando!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Dónde se reunieron los patriotas el 19 de abril de 1810?",
+    "tipo": "texto",
+    "opciones": [
+      "En el Cabildo de Caracas",
+      "En una pizzería",
+      "En la playa de Macuto",
+      "En un castillo de dulces"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: El Cabildo era como el ayuntamiento de Caracas, donde se reunían los señores importantes para tomar decisiones. ¡Ese día tomaron una decisión MUY grande!",
+    "dato_curioso": "Repaso curioso: El Cabildo de Caracas todavía existe hoy. ¡Puedes ir a visitarlo y ver el mismo lugar donde pasó todo!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Quién fue el cura que hizo señas para que la gente dijera NO a Emparan?",
+    "tipo": "texto",
+    "opciones": [
+      "El padre Espagueti",
+      "El padre Cohete",
+      "El padre Madariaga",
+      "El padre Helado"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: El padre José Cortés de Madariaga fue un cura muy valiente que usó sus manos para decirle a la gente que dijera que no a Emparan. ¡Fue muy listo!",
+    "dato_curioso": "Repaso curioso: El padre Madariaga era de Chile, pero amaba tanto a Venezuela que arriesgó todo para ayudar en el 19 de abril. ¡Un héroe de otro país!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cuando Emparan preguntó si lo querían como jefe, ¿qué dijo la gente??",
+    "tipo": "texto",
+    "opciones": [
+      "¡Sí, sí, sí!",
+      "¡Que viva el helado!",
+      "¡NO!",
+      "¡Olé!"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: Cuando Emparan preguntó si lo querían como gobernador, la gente gritó ¡NO! El padre Madariaga les había hecho señas para que dijeran eso. ¡Fue un plan secreto!",
+    "dato_curioso": "Repaso curioso: Emparan se asomó al balcón del Cabildo y vio que nadie lo quería como jefe. ¡Fue el momento más vergonzoso de su vida!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Para qué dijeron que gobernaban después del 19 de abril, aunque era un truco?",
+    "tipo": "texto",
+    "opciones": [
+      "Para el rey de España",
+      "Para el capitán pirata",
+      "Para los dinosaurios",
+      "Para el rey del chocolate"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: Dijeron que gobernarían 'en nombre del Rey de España', ¡pero era una mentira piadosa! En realidad querían ser libres. ¡Fue el engaño más grande de la historia!",
+    "dato_curioso": "Repaso curioso: Decir que gobernaban 'en nombre del rey' era un truco para que España no se enojara tanto. ¡Pero todo el mundo sabía que era mentira!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué le pasó a Emparan después del 19 de abril?",
+    "tipo": "texto",
+    "opciones": [
+      "Lo convirtieron en estatua de mantequilla",
+      "Lo mandaron en barco a España",
+      "Se fue a vivir a la luna",
+      "Lo hicieron rey de Venezuela"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: A Emparan lo metieron en un barco y lo mandaron de regreso a España. ¡Tuvo que irse de Venezuela para siempre!",
+    "dato_curioso": "Repaso curioso: Emparan era tan mandón que cuando lo enviaron a España, ¡ni los españoles lo quisieron! Pasó muchos años en problemas."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué declararon los venezolanos el 19 de abril de 1810?",
+    "tipo": "texto",
+    "opciones": [
+      "La receta del pabellón criollo",
+      "La primera Junta de Gobierno",
+      "El mejor equipo de fútbol",
+      "El día del helado gratis"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: El 19 de abril se creó la primera Junta de Gobierno de Venezuela. ¡Fue la primera vez que los venezolanos gobernaron su propio país!",
+    "dato_curioso": "Repaso curioso: ¡La Junta de Gobierno de Venezuela fue la primera de toda Sudamérica! ¡Venezuela se adelantó a todos los demás países!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Declararon la independencia total el 19 de abril de 1810?",
+    "tipo": "texto",
+    "opciones": [
+      "Sí, a medianoche",
+      "No, nunca la declararon",
+      "No, eso fue después",
+      "Sí, ese mismo día"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: El 19 de abril NO fue la independencia total. Eso llegó el 5 de julio de 1811. El 19 de abril fue el primer paso, como el principio de un cuento muy emocionante.",
+    "dato_curioso": "Repaso curioso: ¡Pasaron más de un año entre el 19 de abril de 1810 y la independencia del 5 de julio de 1811! ¡Fue un proceso largo y emocionante!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cómo se llamaba el lugar donde vivían todos juntos en Caracas?",
+    "tipo": "texto",
+    "opciones": [
+      "Villa de los chocolates",
+      "Ciudad de los dragones",
+      "Maracaibo mágica",
+      "Caracas"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: Caracas era la ciudad capital de Venezuela donde vivían muchas personas importantes. ¡Ahí fue donde ocurrió todo el 19 de abril!",
+    "dato_curioso": "Repaso curioso: ¡Caracas fue fundada en 1567 y todavía es la capital de Venezuela! ¡Tiene más de 450 años de historia!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: El Cabildo de Caracas se reunió con o sin permiso del gobernador español?",
+    "tipo": "texto",
+    "opciones": [
+      "El 19 de abril",
+      "Sin permiso del gobernador",
+      "Vicente Emparan",
+      "En el Cabildo de Caracas"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: El Cabildo se reunió sin pedirle permiso a Emparan. ¡Eso fue muy valiente porque podían meterse en muchos problemas!",
+    "dato_curioso": "Dato para profundizar: Reunirse sin permiso del gobernador era algo muy serio en esa época. ¡Los patriotas arriesgaron todo por Venezuela!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cómo se llamaba el grupo de señores importantes que gobernaron después del 19 de abril?",
+    "tipo": "texto",
+    "opciones": [
+      "El 19 de abril",
+      "Vicente Emparan",
+      "La Junta Suprema de Caracas",
+      "En el Cabildo de Caracas"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: La Junta Suprema de Caracas fue el primer gobierno venezolano. ¡Era como un equipo de personas que trabajaban juntas para gobernar el país!",
+    "dato_curioso": "Dato para profundizar: La Junta Suprema de Caracas mandó cartas a otras ciudades de Venezuela para que también se unieran. ¡Era como armar un equipo gigante!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: En qué año ocurrió el 19 de abril?",
+    "tipo": "texto",
+    "opciones": [
+      "En el Cabildo de Caracas",
+      "El 19 de abril",
+      "Vicente Emparan",
+      "En 1810"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: El 19 de abril fue en el año 1810. ¡Hace más de doscientos años! ¡Imagínate lo viejita que es esa historia!",
+    "dato_curioso": "Dato para profundizar: ¡En 1810 no había internet, ni celulares, ni televisión! Las noticias viajaban en cartas o de boca en boca a caballo."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cómo se enteró la gente de Caracas de la reunión del Cabildo el 19 de abril?",
+    "tipo": "texto",
+    "opciones": [
+      "Se corrió la voz por las calles",
+      "El 19 de abril",
+      "Vicente Emparan",
+      "En el Cabildo de Caracas"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: En 1810 no había internet. ¡La gente se enteraba corriendo por las calles y diciéndole a sus vecinos! Era como un teléfono roto gigante.",
+    "dato_curioso": "Dato para profundizar: En esa época las noticias podían tardar semanas o meses en llegar a otras ciudades. ¡Había que mandar cartas a caballo!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Por qué el 19 de abril se llama 'el día del gran engaño'?",
+    "tipo": "texto",
+    "opciones": [
+      "El 19 de abril",
+      "En el Cabildo de Caracas",
+      "Vicente Emparan",
+      "Porque dijeron gobernar por el rey pero era un truco"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: Se llama así porque dijeron que gobernaban 'por el rey' ¡pero era un truco! En realidad querían independizarse. ¡Fue el engaño más famoso de Venezuela!",
+    "dato_curioso": "Dato para profundizar: ¡Ese truco funcionó! España tardó tiempo en darse cuenta de que los venezolanos ya estaban gobernando solos."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué ropa usaba la gente importante del Cabildo en 1810?",
+    "tipo": "texto",
+    "opciones": [
+      "El 19 de abril",
+      "Levitas, sombreros y medias blancas",
+      "Vicente Emparan",
+      "En el Cabildo de Caracas"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: Los señores importantes de 1810 usaban levitas (como sacos largos) y sombreros especiales. ¡Se vestían muy diferente a como nos vestimos hoy!",
+    "dato_curioso": "Dato para profundizar: ¡Los pantalones de esa época llegaban hasta la rodilla y usaban medias largas blancas! A nosotros nos parecería un disfraz muy raro."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cuánto tiempo duró la reunión del Cabildo el 19 de abril?",
+    "tipo": "texto",
+    "opciones": [
+      "Todo el día con mucha tensión",
+      "Vicente Emparan",
+      "El 19 de abril",
+      "En el Cabildo de Caracas"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: La reunión del Cabildo duró todo el día. ¡Hubo mucha discusión, tensión y nervios! Era una decisión muy muy importante.",
+    "dato_curioso": "Dato para profundizar: Imagínate estar todo un día decidiendo el futuro de tu país. ¡Los patriotas debían estar muy cansados y nerviosos al final del día!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué es un Cabildo?",
+    "tipo": "texto",
+    "opciones": [
+      "El lugar donde se gobernaba la ciudad",
+      "En el Cabildo de Caracas",
+      "Vicente Emparan",
+      "El 19 de abril"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: El Cabildo era como el ayuntamiento o municipio de la ciudad. ¡Era el lugar donde los señores importantes tomaban las decisiones grandes!",
+    "dato_curioso": "Dato para profundizar: Los cabildos en América los pusieron los españoles para organizar las ciudades. ¡Pero al final esas mismas instituciones ayudaron a lograr la independencia!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué hizo el padre Madariaga con sus manos durante la reunión?",
+    "tipo": "texto",
+    "opciones": [
+      "Vicente Emparan",
+      "En el Cabildo de Caracas",
+      "El 19 de abril",
+      "Hacía señas con el dedo para que la gente dijera no"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: El padre Madariaga hacía señas con el dedo para que la gente dijera NO a Emparan. ¡Era como una señal secreta entre amigos!",
+    "dato_curioso": "Dato para profundizar: ¡El padre Madariaga era tan listo que Emparan no se dio cuenta de las señas! Cuando la gente gritó NO, Emparan se quedó boquiabierto."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: En qué estado de Venezuela está Caracas?",
+    "tipo": "texto",
+    "opciones": [
+      "El 19 de abril",
+      "En el Cabildo de Caracas",
+      "Vicente Emparan",
+      "En el Distrito Capital"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: Caracas está en el Distrito Capital, que es una zona especial por ser la capital de Venezuela. ¡Ahí viven millones de venezolanos!",
+    "dato_curioso": "Dato para profundizar: ¡Caracas está rodeada de montañas por todos lados! Está en un valle entre cerros altísimos que la protegen como murallas gigantes."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué significa que el 19 de abril fue el inicio del proceso de independencia?",
+    "tipo": "texto",
+    "opciones": [
+      "Que descubrieron un tesoro",
+      "Que terminó todo ese día",
+      "Que ganaron un campeonato",
+      "Que fue el primer paso hacia la libertad"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: El 19 de abril fue el primer paso, como cuando empiezas a caminar hacia tu casa. ¡Todavía faltaba mucho camino para llegar a la libertad total!",
+    "dato_curioso": "Ampliación histórica: Desde el 19 de abril de 1810 hasta la verdadera independencia pasaron muchos años de batallas y sacrificios. ¡No fue fácil ser libre!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cómo llegaron los españoles a mandar en Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Llegaron en barcos hace cientos de años",
+      "Llegaron en cohete espacial",
+      "Llegaron en avión desde Madrid",
+      "Los trajeron los dinosaurios"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: Los españoles llegaron a Venezuela en barcos hace cientos de años y se quedaron a mandar. ¡Por eso los venezolanos querían ser libres en 1810!",
+    "dato_curioso": "Ampliación histórica: España mandó en Venezuela por más de 300 años. ¡Imagínate trescientos años! Es como diez generaciones de abuelos y abuelas."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué le gritó la gente a Emparan cuando se asomó al balcón?",
+    "tipo": "texto",
+    "opciones": [
+      "¡Feliz cumpleaños!",
+      "¡Queremos pizza!",
+      "¡No queremos que nos mandes!",
+      "¡Que viva Emparan!"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: La gente le dijo a Emparan que NO lo querían como gobernador. ¡Fue un momento muy valiente porque Emparan era muy poderoso!",
+    "dato_curioso": "Ampliación histórica: Emparan se quedó tan sorprendido que dijo: 'Yo tampoco quiero el mando' y se entregó. ¡Fue el gobernador más rápido en rendirse!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué celebra Venezuela el 19 de abril cada año?",
+    "tipo": "texto",
+    "opciones": [
+      "El día de la arepa",
+      "El día del helado nacional",
+      "El inicio del proceso de independencia",
+      "El cumpleaños de Emparan"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: El 19 de abril es fiesta nacional en Venezuela. ¡Se celebra el momento en que los venezolanos comenzaron a luchar por su libertad!",
+    "dato_curioso": "Ampliación histórica: El 19 de abril también se llama 'Día del Comienzo de la Independencia'. ¡Es uno de los días más importantes del calendario venezolano!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Por qué los venezolanos ya no querían que España los gobernara?",
+    "tipo": "texto",
+    "opciones": [
+      "Porque España les quitaba los juguetes",
+      "Porque querían decidir por sí mismos",
+      "Porque España tenía dragones",
+      "Porque España olía muy feo"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: Los venezolanos querían tomar sus propias decisiones sin que alguien de muy lejos les dijera qué hacer. ¡Querían ser libres como los pájaros!",
+    "dato_curioso": "Ampliación histórica: España estaba al otro lado del Atlántico, ¡a miles de kilómetros! A veces las órdenes tardaban meses en llegar a Venezuela."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cómo se llamaban los señores que integraban el Cabildo de Caracas?",
+    "tipo": "texto",
+    "opciones": [
+      "Los cabildantes o capitulantes",
+      "Los ninjas de Caracas",
+      "Los superhéroes del mal",
+      "Los dragones voladores"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: Los cabildantes eran los señores del Cabildo. ¡Ese día actuaron con mucho valor para cambiar la historia de Venezuela!",
+    "dato_curioso": "Ampliación histórica: Muchos de los cabildantes eran criollos, es decir, personas nacidas en Venezuela pero de padres españoles. ¡Amaban su tierra natal!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cómo se llamaba el tipo de reunión especial que hicieron ese 19 de abril?",
+    "tipo": "texto",
+    "opciones": [
+      "Una fiesta de disfraces",
+      "Una pijamada histórica",
+      "Un torneo de ajedrez",
+      "Un Cabildo Abierto Extraordinario"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: Fue un Cabildo Abierto Extraordinario, lo que significa que invitaron a mucha más gente de lo normal a participar. ¡Era una reunión muy especial!",
+    "dato_curioso": "Ampliación histórica: Un Cabildo Abierto era algo muy raro y serio. Solo se hacía en momentos muy, muy importantes. ¡El 19 de abril fue el más famoso de todos!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué país mandaba en Venezuela antes de la independencia?",
+    "tipo": "texto",
+    "opciones": [
+      "Francia con baguettes",
+      "España",
+      "El reino del arco iris",
+      "China con dragones"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: España gobernaba Venezuela antes de la independencia. ¡Los españoles vinieron en barcos y se quedaron mandando por muchos, muchos años!",
+    "dato_curioso": "Ampliación histórica: En 1810, España tenía problemas en casa porque Napoleón de Francia había invadido España. ¡Ese lío ayudó a los venezolanos a actuar rápido!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué pasó en España que ayudó a los venezolanos a rebelarse en 1810?",
+    "tipo": "texto",
+    "opciones": [
+      "España se quedó sin chocolate",
+      "Napoleón invadió España y había mucho caos",
+      "España ganó la Copa del Mundo",
+      "El rey de España se fue de vacaciones"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: Napoleón de Francia había invadido España y todo era un caos. ¡Los venezolanos vieron la oportunidad y dijeron: ¡ahora es cuando!",
+    "dato_curioso": "Ampliación histórica: Napoleón puso a su hermano José como rey de España. Los venezolanos dijeron que no lo reconocían y por eso formaron su propia junta. ¡Muy listos!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Dónde está el Cabildo de Caracas que fue tan importante ese día?",
+    "tipo": "texto",
+    "opciones": [
+      "Debajo del agua en el lago",
+      "En el espacio exterior",
+      "En la Plaza Bolívar de Caracas",
+      "Al lado del mar en la playa"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: El Cabildo de Caracas está en la Plaza Bolívar, en el corazón de la ciudad. ¡Todavía puedes ir a visitarlo y sentirte en la historia!",
+    "dato_curioso": "Ampliación histórica: La Plaza Bolívar de Caracas es el lugar más histórico de Venezuela. ¡Muchas cosas importantísimas ocurrieron ahí!"
+  }
+]

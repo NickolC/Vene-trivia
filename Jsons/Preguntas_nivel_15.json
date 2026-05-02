@@ -1,0 +1,797 @@
+[
+  {
+    "pregunta": "¿En qué año fue creada la OPEP?",
+    "tipo": "texto",
+    "opciones": [
+      "En 1960",
+      "En el año 2000",
+      "En 1492",
+      "En 1810"
+    ],
+    "correcta": 0,
+    "explicacion": "La OPEP fue creada en 1960 en Bagdad, Iraq. Venezuela fue uno de los cinco países fundadores de esta organización tan importante para el mundo.",
+    "dato_curioso": "La reunión donde se fundó la OPEP duró solo cinco días. En esos cinco días, Venezuela y otros cuatro países decidieron unirse para controlar el precio del petróleo en el mundo entero."
+  },
+  {
+    "pregunta": "¿Cuántos países fundaron la OPEP junto a Venezuela en 1960?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Cinco banderas de los países fundadores de la OPEP: Venezuela, Arabia Saudita, Irán, Irak y Kuwait, desplegadas en semicírculo alrededor del logo de la OPEP. Estilo ilustración oficial y colorida para niños.",
+    "opciones": [
+      "Solo Venezuela",
+      "Cuatro países más: Arabia Saudita, Irán, Irak y Kuwait",
+      "Veinte países de Europa",
+      "Solo dos países"
+    ],
+    "correcta": 1,
+    "explicacion": "Venezuela fundó la OPEP junto a Arabia Saudita, Irán, Irak y Kuwait. Entre los cinco decidieron trabajar juntos para controlar el precio del petróleo.",
+    "dato_curioso": "Estos cinco países tenían algo en común: todos eran muy ricos en petróleo pero no tenían control sobre el precio que les pagaban las empresas extranjeras. La OPEP cambió eso."
+  },
+  {
+    "pregunta": "¿Cómo se llama el venezolano que fue el cerebro detrás de la creación de la OPEP?",
+    "tipo": "texto",
+    "opciones": [
+      "Juan Pablo Pérez Alfonzo",
+      "Simón Petróleo",
+      "El Señor Barril",
+      "Don Aceite Venezolano"
+    ],
+    "correcta": 0,
+    "explicacion": "Juan Pablo Pérez Alfonzo fue el venezolano que tuvo la idea de crear la OPEP y convenció a los demás países de unirse. Es conocido como el padre intelectual de la organización.",
+    "dato_curioso": "Pérez Alfonzo era tan inteligente que los sauditas lo llamaron 'el hombre del petróleo'. Sin embargo, también advertía que el petróleo podía ser una maldición si no se usaba bien."
+  },
+  {
+    "pregunta": "¿Qué controla la OPEP en el mundo?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un diagrama infantil mostrando la OPEP como un árbitro de béisbol en el centro, con barriles de petróleo y bolsas de dinero en los lados. Una balanza muestra el equilibrio del precio. Estilo ilustración económica divertida.",
+    "opciones": [
+      "El precio del chocolate en el mundo",
+      "El precio del petróleo en el mundo entero",
+      "Los campeonatos de fútbol mundiales",
+      "El precio de las arepas internacionales"
+    ],
+    "correcta": 1,
+    "explicacion": "La OPEP controla el precio del petróleo en el mundo entero. Cuando la OPEP decide producir menos petróleo, el precio sube; cuando produce más, el precio baja.",
+    "dato_curioso": "La OPEP es tan poderosa que cuando decidió no vender petróleo a algunos países en 1973, esos países se quedaron sin gasolina y hubo filas kilométricas en las gasolineras."
+  },
+  {
+    "pregunta": "¿Cuántos títulos de Miss Universo y Miss Mundo ganó Venezuela per cápita hasta los años 90?",
+    "tipo": "texto",
+    "opciones": [
+      "Más que casi cualquier otro país del mundo",
+      "Ninguno",
+      "Solo uno en toda la historia",
+      "Exactamente tres"
+    ],
+    "correcta": 0,
+    "explicacion": "Venezuela ganó más títulos de Miss Universo y Miss Mundo per cápita que casi cualquier otro país del mundo hasta los años 90. Era famosa por producir las mujeres más hermosas.",
+    "dato_curioso": "Venezuela ganó el título de Miss Universo 7 veces y Miss Mundo 6 veces. Eso es un récord increíble para un país tan pequeño comparado con los gigantes del mundo."
+  },
+  {
+    "pregunta": "¿A cuántos países llegaron las telenovelas venezolanas?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un mapa del mundo con líneas rojas que parten desde Venezuela hacia más de 130 países resaltados. Un televisor con una telenovela venezolana en el centro. El texto dice '130+ PAÍSES'. Estilo ilustración educativa vistosa.",
+    "opciones": [
+      "Solo a Venezuela",
+      "A más de 130 países del mundo",
+      "Solo a Colombia y Brasil",
+      "A 3 países vecinos"
+    ],
+    "correcta": 1,
+    "explicacion": "Las telenovelas venezolanas fueron exportadas a más de 130 países del mundo. Se veían en Europa, Asia, África y América. ¡Venezuela conquistó los televisores del mundo!",
+    "dato_curioso": "La telenovela venezolana 'Cristal' fue transmitida hasta en Rusia, donde la gente hacía filas para verla. En los años 80, Venezuela era la 'Hollywood de las telenovelas'."
+  },
+  {
+    "pregunta": "¿Cómo se llamaba la famosa telenovela venezolana que se vio hasta en Rusia?",
+    "tipo": "texto",
+    "opciones": [
+      "Cristal",
+      "Arepas del Corazón",
+      "El Petróleo del Amor",
+      "La Telenovela de las Estrellas"
+    ],
+    "correcta": 0,
+    "explicacion": "La telenovela 'Cristal' fue uno de los grandes éxitos de la televisión venezolana. Se transmitió en más de 100 países, incluyendo la Rusia soviética.",
+    "dato_curioso": "En Rusia, cuando 'Cristal' se transmitía, el país entero se detenía. Las calles quedaban vacías porque todos estaban en casa viendo la telenovela venezolana. ¡Qué éxito tan increíble!"
+  },
+  {
+    "pregunta": "¿Cómo se llamaba Caracas en los años 80 por su riqueza?",
+    "tipo": "imagen",
+    "imagen_descripcion": "El skyline de Caracas de los años 80 con rascacielos brillantes de noche, luces de ciudad, carros modernos y una pancarta que dice 'LA SUCURSAL DEL CIELO'. Estilo ilustración retro y vibrante.",
+    "opciones": [
+      "La Ciudad del Petróleo",
+      "La Sucursal del Cielo",
+      "El Paraíso del Maíz",
+      "La Ciudad de las Arepas de Oro"
+    ],
+    "correcta": 1,
+    "explicacion": "En los años 80, Caracas era llamada 'La Sucursal del Cielo' porque era una ciudad muy rica, moderna y llena de vida. La gente la consideraba casi tan buena como el paraíso.",
+    "dato_curioso": "En esa época, los caraqueños iban de compras a Miami como si fuera ir al mercado del barrio. Decían 'tá barato, dame dos' porque el dólar era muy accesible con los bolívares de entonces."
+  },
+  {
+    "pregunta": "¿Cuánto mide la caída libre del Salto Ángel?",
+    "tipo": "texto",
+    "opciones": [
+      "979 metros de caída libre",
+      "10 metros de caída",
+      "Un kilómetro exacto",
+      "50 metros de alto"
+    ],
+    "correcta": 0,
+    "explicacion": "El Salto Ángel tiene 979 metros de caída libre, lo que lo hace la cascada más alta del mundo. El agua cae desde la cima del tepuy Auyantepui.",
+    "dato_curioso": "El agua del Salto Ángel cae desde tan alto que, cuando llega a la mitad del camino, ya se ha convertido en niebla. ¡El agua se evapora antes de tocar el suelo en días de mucho calor!"
+  },
+  {
+    "pregunta": "¿Cómo se llama el Salto Ángel en el idioma indígena pemón?",
+    "tipo": "imagen",
+    "imagen_descripcion": "El Salto Ángel cayendo desde un tepuy majestuoso en la Gran Sabana venezolana, con niebla alrededor y selva verde. Un cartel en el primer plano dice 'KEREPAKUPAI VENÁ - SALTO DEL LUGAR MÁS PROFUNDO'. Ilustración majestuosa.",
+    "opciones": [
+      "Agua Grande del Cielo",
+      "Kerepakupai Vená",
+      "Gran Caída Venezolana",
+      "Chorro del Ángel Azul"
+    ],
+    "correcta": 1,
+    "explicacion": "Los indígenas pemón llaman al Salto Ángel 'Kerepakupai Vená', que significa 'salto del lugar más profundo'. Ese nombre existía mucho antes de que llegaran los exploradores extranjeros.",
+    "dato_curioso": "El nombre 'Salto Ángel' viene del aviador estadounidense Jimmy Angel, quien fue el primer extranjero en sobrevolar la cascada en 1933. Pero los pemones ya la conocían desde siempre."
+  },
+  {
+    "pregunta": "¿Dónde está ubicado el Salto Ángel?",
+    "tipo": "texto",
+    "opciones": [
+      "En el Parque Nacional Canaima, estado Bolívar",
+      "En Caracas, junto al Capitolio",
+      "En el lago de Maracaibo",
+      "En los Andes venezolanos"
+    ],
+    "correcta": 0,
+    "explicacion": "El Salto Ángel está en el Parque Nacional Canaima, en el estado Bolívar. Es una región de tepuyes y selva tropical en el sur de Venezuela.",
+    "dato_curioso": "El Parque Nacional Canaima es Patrimonio de la Humanidad de la UNESCO. Tiene tepuyes (montañas de mesa) que son tan únicos en el planeta que inspiraron la película animada 'Up' de Pixar."
+  },
+  {
+    "pregunta": "¿Qué es un tepuy?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Una ilustración del tepuy Auyantepui: una montaña gigante con tope plano, paredes verticales de roca y el Salto Ángel cayendo desde su cima. Nubes rodean la cumbre. Selva verde a los pies. Estilo majestuoso e infantil.",
+    "opciones": [
+      "Un tipo de arepa grande",
+      "Una montaña con cima plana única de Venezuela y Guyana",
+      "Un submarino de petróleo",
+      "Una nube de forma cuadrada"
+    ],
+    "correcta": 1,
+    "explicacion": "Un tepuy es una montaña con la cima completamente plana que solo existe en Venezuela, Guyana y Brasil. Son tan antiguos y únicos que tienen plantas y animales que no existen en ningún otro lugar.",
+    "dato_curioso": "Los tepuyes tienen más de 1.800 millones de años y son algunas de las formaciones rocosas más antiguas del planeta. ¡Las plantas que viven en su cima existen solo allí y en ningún otro lugar del mundo!"
+  },
+  {
+    "pregunta": "¿Cuál es la diferencia entre la OPEP y las empresas petroleras?",
+    "tipo": "texto",
+    "opciones": [
+      "La OPEP es una alianza de países, no una empresa",
+      "La OPEP vende hamburguesas además de petróleo",
+      "La OPEP es una empresa de Caracas",
+      "No hay ninguna diferencia"
+    ],
+    "correcta": 0,
+    "explicacion": "La OPEP es una organización formada por países productores de petróleo para defenderse juntos. No es una empresa que vende petróleo, sino una alianza para controlar los precios.",
+    "dato_curioso": "Hoy la OPEP tiene 13 países miembros de África, Asia, América del Sur y el Medio Oriente. Juntos controlan más del 40% de todo el petróleo que se produce en el mundo."
+  },
+  {
+    "pregunta": "¿Qué es lo que hace al Salto Ángel el más alto del mundo?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Comparación de tamaño: el Salto Ángel de 979 metros al lado de la Torre Eiffel (300m) y el Empire State Building (443m), haciendo que el Salto Ángel parezca gigantesco. Flechas con medidas. Estilo infográfico infantil.",
+    "opciones": [
+      "Que tiene el agua más azul del mundo",
+      "Que cae desde 979 metros de altura, más que dos Empire State juntos",
+      "Que está siempre con nieve en la cima",
+      "Que el agua sabe a limonada"
+    ],
+    "correcta": 1,
+    "explicacion": "El Salto Ángel tiene 979 metros de caída, que es más del doble de la altura del Empire State Building. Por eso es la cascada más alta del mundo con gran diferencia.",
+    "dato_curioso": "La segunda cascada más alta del mundo, las Cataratas de Tugela en Sudáfrica, solo tiene 948 metros. El Salto Ángel la supera por 31 metros. ¡Venezuela tiene la más alta con comodidad!"
+  },
+  {
+    "pregunta": "¿Qué tipo de música clásica enseña El Sistema venezolano?",
+    "tipo": "texto",
+    "opciones": [
+      "Música sinfónica y de cámara con instrumentos clásicos",
+      "Solo música de tambores",
+      "Solo canciones de telenovelas",
+      "Música de videojuegos"
+    ],
+    "correcta": 0,
+    "explicacion": "El Sistema enseña música sinfónica y de cámara, usando instrumentos clásicos como violines, cellos, trompetas y flautas. Los niños aprenden a tocar en orquestas.",
+    "dato_curioso": "Una orquesta sinfónica puede tener hasta 100 músicos tocando al mismo tiempo. Coordinar eso requiere una disciplina y trabajo en equipo extraordinarios que El Sistema enseña desde pequeños."
+  },
+  {
+    "pregunta": "¿Qué hizo famosa a Venezuela en los concursos de belleza internacionales?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Una corona de Miss Universo brillante en el centro, rodeada de pequeñas banderas venezolanas. Los números 7 y 6 resaltados representando los títulos de Miss Universo y Miss Mundo. Confeti y estrellas alrededor. Estilo festivo.",
+    "opciones": [
+      "Ganar más títulos de belleza por habitante que casi cualquier país",
+      "Tener las faldas más coloridas",
+      "Inventar los concursos de belleza",
+      "Tener la corona más pesada del mundo"
+    ],
+    "correcta": 0,
+    "explicacion": "Venezuela fue famosa por ganar más títulos de Miss Universo y Miss Mundo per cápita que casi cualquier otro país. 7 Miss Universo y 6 Miss Mundo es un récord impresionante.",
+    "dato_curioso": "Venezuela tiene una escuela especial para entrenar a sus candidatas de belleza que es famosa en todo el mundo. Países de todo el planeta mandaban a sus candidatas a entrenarse en Venezuela."
+  },
+  {
+    "pregunta": "¿Qué pasó con el poder económico de Venezuela cuando los precios del petróleo eran altos?",
+    "tipo": "texto",
+    "opciones": [
+      "Venezuela era uno de los países más ricos de América Latina",
+      "Venezuela se quedó sin dinero igual",
+      "El petróleo no generaba dinero",
+      "Venezuela prestaba dinero a EE.UU."
+    ],
+    "correcta": 0,
+    "explicacion": "Cuando el precio del petróleo era alto, Venezuela era uno de los países más ricos de América Latina. Tenía dinero para construir carreteras, escuelas y hospitales.",
+    "dato_curioso": "En los años 70, cuando el petróleo estaba muy caro, Venezuela tenía más dinero que muchos países europeos. ¡Llegó a ser más rico por persona que Argentina y Chile juntos!"
+  },
+  {
+    "pregunta": "¿Por qué Pérez Alfonzo es tan importante en la historia del petróleo mundial?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Juan Pablo Pérez Alfonzo en traje formal, con una mano en un mapa del mundo y la otra señalando la bandera venezolana. Líderes de Arabia Saudita, Irán, Irak y Kuwait a su alrededor, todos estrechando manos. Estilo ilustración histórica.",
+    "opciones": [
+      "Porque inventó el petróleo",
+      "Porque fue el cerebro que creó la alianza OPEP entre países petroleros",
+      "Porque perforó el primer pozo de Arabia Saudita",
+      "Porque descubrió petróleo en la Luna"
+    ],
+    "correcta": 1,
+    "explicacion": "Pérez Alfonzo fue tan importante porque fue él quien tuvo la idea de crear la OPEP y convenció a los demás países. Sin él, esa organización tal vez nunca hubiera existido.",
+    "dato_curioso": "Pérez Alfonzo era abogado y economista, no geólogo ni ingeniero. Sin embargo, entendía el petróleo mejor que nadie. Usó su mente legal para crear una alianza que cambió la economía del mundo."
+  },
+  {
+    "pregunta": "¿Cómo se llama el director de orquesta venezolano que más ha viajado por el mundo?",
+    "tipo": "texto",
+    "opciones": [
+      "Gustavo Dudamel",
+      "Carlos Cruz-Diez",
+      "Luis Aparicio Jr.",
+      "Maestro Barquisimelón"
+    ],
+    "correcta": 0,
+    "explicacion": "Gustavo Dudamel es el director de orquesta venezolano más viajado e importante del mundo. Fue formado en El Sistema y hoy dirige las mejores orquestas del planeta.",
+    "dato_curioso": "Dudamel fue nombrado director de la Orquesta Filarmónica de Los Ángeles cuando tenía solo 26 años. Era uno de los directores más jóvenes en ocupar ese cargo en toda la historia."
+  },
+  {
+    "pregunta": "¿Qué podían ver los turistas que visitaban el Parque Nacional Canaima?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Turistas en una pequeña canoa en el río Carrao acercándose al Salto Ángel, viendo la cascada caer desde el tepuy. El cielo azul con nubes y la selva verde a los lados. Caras de asombro en los turistas. Estilo ilustración de aventura.",
+    "opciones": [
+      "Pingüinos y osos polares",
+      "El Salto Ángel cayendo desde un tepuy gigante en la selva",
+      "Una ciudad futurista debajo del agua",
+      "Cohetes lanzándose desde la selva"
+    ],
+    "correcta": 1,
+    "explicacion": "En el Parque Nacional Canaima, los visitantes pueden ver el impresionante Salto Ángel cayendo desde la cima del tepuy Auyantepui, rodeado de selva tropical.",
+    "dato_curioso": "Para llegar al Salto Ángel hay que volar en avioneta desde Ciudad Bolívar hasta Canaima. ¡No hay carretera! Es una aventura de verdad en una de las selvas más hermosas del mundo."
+  },
+  {
+    "pregunta": "¿Qué impacto tuvo El Sistema venezolano en el mundo de la música clásica?",
+    "tipo": "texto",
+    "opciones": [
+      "Demostró que niños pobres pueden alcanzar la excelencia musical",
+      "Hizo que la música clásica se prohibiera en otros países",
+      "Creó una nueva nota musical",
+      "Solo fue famoso en Caracas"
+    ],
+    "correcta": 0,
+    "explicacion": "El Sistema demostró al mundo que los niños de familias pobres pueden llegar a ser músicos de nivel mundial. Cambió la manera en que el mundo piensa sobre la educación musical.",
+    "dato_curioso": "El famoso director Claudio Abbado dijo que El Sistema venezolano era el proyecto musical más importante del mundo. ¡El máximo experto de la música clásica mundial admiraba lo que hacía Venezuela!"
+  },
+  {
+    "pregunta": "¿Cómo se relaciona el Salto Ángel con la película animada 'UP'?",
+    "tipo": "imagen",
+    "imagen_descripcion": "A la izquierda, el Salto Ángel y el tepuy Auyantepui en Venezuela. A la derecha, una imagen estilizada de una casa volando con globos hacia una montaña de mesa similar. Una etiqueta dice 'INSPIRACIÓN'. Estilo colorido y mágico.",
+    "opciones": [
+      "El Salto Ángel fue pintado en la película",
+      "Los tepuyes venezolanos inspiraron la montaña 'Paraíso de las Cataratas' en la película UP",
+      "El director de UP es venezolano",
+      "Los globos de UP son venezolanos"
+    ],
+    "correcta": 1,
+    "explicacion": "Los tepuyes venezolanos, especialmente el área de Canaima, inspiraron a los creadores de la película 'UP' para diseñar la montaña 'Paraíso de las Cataratas'. Venezuela inspiró a Hollywood.",
+    "dato_curioso": "Los directores de 'UP' viajaron a Venezuela a estudiar los tepuyes antes de hacer la película. Quedaron tan asombrados que recrearon ese paisaje único en su película que ganó el Oscar."
+  },
+  {
+    "pregunta": "¿Por qué Venezuela fue un país tan importante en los años 60 y 70?",
+    "tipo": "texto",
+    "opciones": [
+      "Por su petróleo, su cultura y su liderazgo en la OPEP",
+      "Porque tenía el ejército más grande de América",
+      "Porque inventó el internet",
+      "Porque tenía la mejor pizza del mundo"
+    ],
+    "correcta": 0,
+    "explicacion": "Venezuela fue muy importante en los 60 y 70 por su petróleo, su cultura (telenovelas, concursos de belleza, música), y por ser fundadora y líder de la OPEP.",
+    "dato_curioso": "En esa época, los presidentes del mundo querían visitar Venezuela. Era un país con mucha influencia política y económica. ¡Venezuela tenía un asiento muy importante en la mesa del mundo!"
+  },
+  {
+    "pregunta": "¿Qué tienen en común el Salto Ángel y la UCV de Caracas?",
+    "tipo": "imagen",
+    "imagen_descripcion": "El escudo de la UNESCO con los textos 'SALTO ÁNGEL - CANAIMA' y 'UCV - CARACAS' escritos en dos ramas de un árbol. Ambos sitios ilustrados pequeños a los lados. Texto central: 'PATRIMONIO DE LA HUMANIDAD'. Estilo educativo.",
+    "opciones": [
+      "Que los dos tienen petróleo debajo",
+      "Que los dos son Patrimonio de la Humanidad de la UNESCO",
+      "Que los dos están en el estado Zulia",
+      "Que los dos fueron construidos por Guzmán Blanco"
+    ],
+    "correcta": 1,
+    "explicacion": "Tanto el Parque Nacional Canaima (donde está el Salto Ángel) como la Ciudad Universitaria (UCV) son Patrimonio de la Humanidad declarados por la UNESCO. Venezuela tiene dos tesoros mundiales.",
+    "dato_curioso": "Venezuela tiene tres sitios Patrimonio de la Humanidad de la UNESCO: Canaima, la UCV y el Puerto, Fortalezas y Conjunto Monumental de Coro. ¡Tres tesoros reconocidos por el mundo entero!"
+  },
+  {
+    "pregunta": "¿Qué es lo que hace que el concurso Miss Universo sea tan famoso?",
+    "tipo": "texto",
+    "opciones": [
+      "Es el concurso de belleza más importante del mundo",
+      "Es el único concurso con pizza de premio",
+      "Solo venezolanas pueden participar",
+      "Es un concurso de baile"
+    ],
+    "correcta": 0,
+    "explicacion": "Miss Universo es el concurso de belleza más importante y conocido del mundo. Venezuela ganó ese título 7 veces, más que casi cualquier otro país.",
+    "dato_curioso": "El primer Miss Universo fue en 1952. Venezuela participó desde los primeros años y comenzó a ganar con tanta frecuencia que el mundo la llamó 'la fábrica de reinas'."
+  },
+  {
+    "pregunta": "¿Qué pasó con el dinero del petróleo venezolano en los años 70?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Gráfica de barras con el precio del petróleo subiendo en los años 70 y un carro deportivo, un avión y edificios modernos apareciendo en Venezuela. El texto dice 'EL BOOM DEL PETRÓLEO'. Estilo infográfico infantil colorido.",
+    "opciones": [
+      "Se perdió en el mar",
+      "Venezuela se volvió muy rica y construyó muchas cosas",
+      "El dinero se convirtió en arepas",
+      "Se gastó todo en trenes de vapor"
+    ],
+    "correcta": 1,
+    "explicacion": "En los años 70, cuando el petróleo se puso muy caro, Venezuela ganó tanto dinero que construyó carreteras, hospitales, universidades y muchas cosas más para el pueblo.",
+    "dato_curioso": "En 1973, cuando la OPEP subió los precios del petróleo, Venezuela ganó en un año lo que antes tardaba diez años en ganar. Fue el 'Big Bang' de la economía venezolana."
+  },
+  {
+    "pregunta": "¿Qué orquesta famosa del mundo dirige hoy el venezolano Gustavo Dudamel?",
+    "tipo": "texto",
+    "opciones": [
+      "La Filarmónica de Los Ángeles",
+      "La Orquesta de la Selva Amazónica",
+      "La Filarmónica del Salto Ángel",
+      "Los Tambores de Caracas"
+    ],
+    "correcta": 0,
+    "explicacion": "Gustavo Dudamel dirige la Orquesta Filarmónica de Los Ángeles, una de las más importantes del mundo. También fue director de la Ópera de París.",
+    "dato_curioso": "Dudamel es tan famoso que tiene más de un millón de seguidores en redes sociales, lo cual es extraordinario para un director de orquesta clásica. ¡Hizo cool la música clásica!"
+  },
+  {
+    "pregunta": "¿Por qué las telenovelas venezolanas fueron tan exitosas en el mundo?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un televisor vintage mostrando una telenovela venezolana dramática con actores elegantes. Banderas de muchos países rodean el televisor: Rusia, España, Italia, Brasil, México. El texto dice 'VISTO EN 130 PAÍSES'. Estilo retro colorido.",
+    "opciones": [
+      "Porque eran muy cortas y aburridas",
+      "Porque tenían historias emocionantes y actores muy talentosos",
+      "Porque eran en blanco y negro",
+      "Porque las protagonistas cocinaban en cada capítulo"
+    ],
+    "correcta": 1,
+    "explicacion": "Las telenovelas venezolanas eran exitosas porque tenían historias emocionantes de amor, traición y aventura con actores muy talentosos y con mucha belleza en pantalla.",
+    "dato_curioso": "En los años 80, Venezuela exportaba sus telenovelas a todo el mundo y ganaba mucho dinero con eso. ¡Las historias venezolanas hacían llorar y reír a personas de todos los continentes!"
+  },
+  {
+    "pregunta": "¿Qué orgullo le da a Venezuela ser fundadora de la OPEP?",
+    "tipo": "texto",
+    "opciones": [
+      "Que Venezuela tuvo voz en las decisiones del petróleo mundial desde el principio",
+      "Que Venezuela puede vender petróleo solo a sus amigos",
+      "Que Venezuela tiene la sede de la OPEP",
+      "Que Venezuela inventó el petróleo"
+    ],
+    "correcta": 0,
+    "explicacion": "Ser fundadora de la OPEP significa que Venezuela tiene voz y voto en las decisiones sobre el petróleo a nivel mundial. Es uno de los países más influyentes en la energía global.",
+    "dato_curioso": "La sede de la OPEP está en Viena, Austria. Pero el venezolano Pérez Alfonzo fue tan importante que una sala de reuniones de la OPEP lleva su nombre. ¡Venezuela está presente en esa sede para siempre!"
+  },
+  {
+    "pregunta": "¿Cuál es el resumen del legado de Venezuela en la segunda mitad del siglo XX?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un collage con: la bandera venezolana, la corona de Miss Universo, una orquesta de niños, el Salto Ángel, un barril de petróleo y el logo de la OPEP. Todos conectados por líneas doradas. El texto dice 'VENEZUELA EN EL MUNDO'. Estilo celebración.",
+    "opciones": [
+      "Venezuela fue importante solo por el petróleo",
+      "Venezuela contribuyó al mundo en petróleo, música, belleza, naturaleza y televisión",
+      "Venezuela fue famosa solo por las arepas",
+      "Venezuela solo era conocida por el béisbol"
+    ],
+    "correcta": 1,
+    "explicacion": "El legado de Venezuela en el siglo XX incluye el petróleo y la OPEP, El Sistema de orquestas, los títulos de belleza, las telenovelas y maravillas naturales como el Salto Ángel.",
+    "dato_curioso": "Venezuela es uno de los pocos países del mundo que ha tenido un impacto global tan amplio: en energía, música, televisión, deportes, ciencia y naturaleza. ¡Un país pequeño con un impacto enorme!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: En qué año fue creada la OPEP?",
+    "tipo": "texto",
+    "opciones": [
+      "En el año 2000",
+      "En 1960",
+      "En 1492",
+      "En 1810"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: La OPEP fue creada en 1960 en Bagdad, Iraq. Venezuela fue uno de los cinco países fundadores de esta organización tan importante para el mundo.",
+    "dato_curioso": "Repaso curioso: La reunión donde se fundó la OPEP duró solo cinco días. En esos cinco días, Venezuela y otros cuatro países decidieron unirse para controlar el precio del petróleo en el mundo entero."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cuántos países fundaron la OPEP junto a Venezuela en 1960?",
+    "tipo": "texto",
+    "opciones": [
+      "Cuatro países más: Arabia Saudita, Irán, Irak y Kuwait",
+      "Solo dos países",
+      "Solo Venezuela",
+      "Veinte países de Europa"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: Venezuela fundó la OPEP junto a Arabia Saudita, Irán, Irak y Kuwait. Entre los cinco decidieron trabajar juntos para controlar el precio del petróleo.",
+    "dato_curioso": "Repaso curioso: Estos cinco países tenían algo en común: todos eran muy ricos en petróleo pero no tenían control sobre el precio que les pagaban las empresas extranjeras. La OPEP cambió eso."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cómo se llama el venezolano que fue el cerebro detrás de la creación de la OPEP?",
+    "tipo": "texto",
+    "opciones": [
+      "Juan Pablo Pérez Alfonzo",
+      "Don Aceite Venezolano",
+      "Simón Petróleo",
+      "El Señor Barril"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: Juan Pablo Pérez Alfonzo fue el venezolano que tuvo la idea de crear la OPEP y convenció a los demás países de unirse. Es conocido como el padre intelectual de la organización.",
+    "dato_curioso": "Repaso curioso: Pérez Alfonzo era tan inteligente que los sauditas lo llamaron 'el hombre del petróleo'. Sin embargo, también advertía que el petróleo podía ser una maldición si no se usaba bien."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué controla la OPEP en el mundo?",
+    "tipo": "texto",
+    "opciones": [
+      "El precio de las arepas internacionales",
+      "El precio del petróleo en el mundo entero",
+      "Los campeonatos de fútbol mundiales",
+      "El precio del chocolate en el mundo"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: La OPEP controla el precio del petróleo en el mundo entero. Cuando la OPEP decide producir menos petróleo, el precio sube; cuando produce más, el precio baja.",
+    "dato_curioso": "Repaso curioso: La OPEP es tan poderosa que cuando decidió no vender petróleo a algunos países en 1973, esos países se quedaron sin gasolina y hubo filas kilométricas en las gasolineras."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cuántos títulos de Miss Universo y Miss Mundo ganó Venezuela per cápita hasta los años 90?",
+    "tipo": "texto",
+    "opciones": [
+      "Ninguno",
+      "Exactamente tres",
+      "Solo uno en toda la historia",
+      "Más que casi cualquier otro país del mundo"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: Venezuela ganó más títulos de Miss Universo y Miss Mundo per cápita que casi cualquier otro país del mundo hasta los años 90. Era famosa por producir las mujeres más hermosas.",
+    "dato_curioso": "Repaso curioso: Venezuela ganó el título de Miss Universo 7 veces y Miss Mundo 6 veces. Eso es un récord increíble para un país tan pequeño comparado con los gigantes del mundo."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: A cuántos países llegaron las telenovelas venezolanas?",
+    "tipo": "texto",
+    "opciones": [
+      "Solo a Colombia y Brasil",
+      "Solo a Venezuela",
+      "A 3 países vecinos",
+      "A más de 130 países del mundo"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: Las telenovelas venezolanas fueron exportadas a más de 130 países del mundo. Se veían en Europa, Asia, África y América. ¡Venezuela conquistó los televisores del mundo!",
+    "dato_curioso": "Repaso curioso: La telenovela venezolana 'Cristal' fue transmitida hasta en Rusia, donde la gente hacía filas para verla. En los años 80, Venezuela era la 'Hollywood de las telenovelas'."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cómo se llamaba la famosa telenovela venezolana que se vio hasta en Rusia?",
+    "tipo": "texto",
+    "opciones": [
+      "La Telenovela de las Estrellas",
+      "Cristal",
+      "Arepas del Corazón",
+      "El Petróleo del Amor"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: La telenovela 'Cristal' fue uno de los grandes éxitos de la televisión venezolana. Se transmitió en más de 100 países, incluyendo la Rusia soviética.",
+    "dato_curioso": "Repaso curioso: En Rusia, cuando 'Cristal' se transmitía, el país entero se detenía. Las calles quedaban vacías porque todos estaban en casa viendo la telenovela venezolana. ¡Qué éxito tan increíble!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cómo se llamaba Caracas en los años 80 por su riqueza?",
+    "tipo": "texto",
+    "opciones": [
+      "El Paraíso del Maíz",
+      "La Sucursal del Cielo",
+      "La Ciudad de las Arepas de Oro",
+      "La Ciudad del Petróleo"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: En los años 80, Caracas era llamada 'La Sucursal del Cielo' porque era una ciudad muy rica, moderna y llena de vida. La gente la consideraba casi tan buena como el paraíso.",
+    "dato_curioso": "Repaso curioso: En esa época, los caraqueños iban de compras a Miami como si fuera ir al mercado del barrio. Decían 'tá barato, dame dos' porque el dólar era muy accesible con los bolívares de entonces."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cuánto mide la caída libre del Salto Ángel?",
+    "tipo": "texto",
+    "opciones": [
+      "50 metros de alto",
+      "10 metros de caída",
+      "979 metros de caída libre",
+      "Un kilómetro exacto"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: El Salto Ángel tiene 979 metros de caída libre, lo que lo hace la cascada más alta del mundo. El agua cae desde la cima del tepuy Auyantepui.",
+    "dato_curioso": "Repaso curioso: El agua del Salto Ángel cae desde tan alto que, cuando llega a la mitad del camino, ya se ha convertido en niebla. ¡El agua se evapora antes de tocar el suelo en días de mucho calor!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cómo se llama el Salto Ángel en el idioma indígena pemón?",
+    "tipo": "texto",
+    "opciones": [
+      "Chorro del Ángel Azul",
+      "Gran Caída Venezolana",
+      "Kerepakupai Vená",
+      "Agua Grande del Cielo"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: Los indígenas pemón llaman al Salto Ángel 'Kerepakupai Vená', que significa 'salto del lugar más profundo'. Ese nombre existía mucho antes de que llegaran los exploradores extranjeros.",
+    "dato_curioso": "Repaso curioso: El nombre 'Salto Ángel' viene del aviador estadounidense Jimmy Angel, quien fue el primer extranjero en sobrevolar la cascada en 1933. Pero los pemones ya la conocían desde siempre."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Dónde está ubicado el Salto Ángel?",
+    "tipo": "texto",
+    "opciones": [
+      "En el Parque Nacional Canaima, estado Bolívar",
+      "Juan Pablo Pérez Alfonzo",
+      "Cuatro países más: Arabia Saudita, Irán, Irak y Kuwait",
+      "En 1960"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: El Salto Ángel está en el Parque Nacional Canaima, en el estado Bolívar. Es una región de tepuyes y selva tropical en el sur de Venezuela.",
+    "dato_curioso": "Dato para profundizar: El Parque Nacional Canaima es Patrimonio de la Humanidad de la UNESCO. Tiene tepuyes (montañas de mesa) que son tan únicos en el planeta que inspiraron la película animada 'Up' de Pixar."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué es un tepuy?",
+    "tipo": "texto",
+    "opciones": [
+      "Cuatro países más: Arabia Saudita, Irán, Irak y Kuwait",
+      "Juan Pablo Pérez Alfonzo",
+      "En 1960",
+      "Una montaña con cima plana única de Venezuela y Guyana"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: Un tepuy es una montaña con la cima completamente plana que solo existe en Venezuela, Guyana y Brasil. Son tan antiguos y únicos que tienen plantas y animales que no existen en ningún otro lugar.",
+    "dato_curioso": "Dato para profundizar: Los tepuyes tienen más de 1.800 millones de años y son algunas de las formaciones rocosas más antiguas del planeta. ¡Las plantas que viven en su cima existen solo allí y en ningún otro lugar del mundo!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cuál es la diferencia entre la OPEP y las empresas petroleras?",
+    "tipo": "texto",
+    "opciones": [
+      "Cuatro países más: Arabia Saudita, Irán, Irak y Kuwait",
+      "La OPEP es una alianza de países, no una empresa",
+      "En 1960",
+      "Juan Pablo Pérez Alfonzo"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: La OPEP es una organización formada por países productores de petróleo para defenderse juntos. No es una empresa que vende petróleo, sino una alianza para controlar los precios.",
+    "dato_curioso": "Dato para profundizar: Hoy la OPEP tiene 13 países miembros de África, Asia, América del Sur y el Medio Oriente. Juntos controlan más del 40% de todo el petróleo que se produce en el mundo."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué es lo que hace al Salto Ángel el más alto del mundo?",
+    "tipo": "texto",
+    "opciones": [
+      "Cuatro países más: Arabia Saudita, Irán, Irak y Kuwait",
+      "En 1960",
+      "Que cae desde 979 metros de altura, más que dos Empire State juntos",
+      "Juan Pablo Pérez Alfonzo"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: El Salto Ángel tiene 979 metros de caída, que es más del doble de la altura del Empire State Building. Por eso es la cascada más alta del mundo con gran diferencia.",
+    "dato_curioso": "Dato para profundizar: La segunda cascada más alta del mundo, las Cataratas de Tugela en Sudáfrica, solo tiene 948 metros. El Salto Ángel la supera por 31 metros. ¡Venezuela tiene la más alta con comodidad!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué tipo de música clásica enseña El Sistema venezolano?",
+    "tipo": "texto",
+    "opciones": [
+      "Juan Pablo Pérez Alfonzo",
+      "Música sinfónica y de cámara con instrumentos clásicos",
+      "En 1960",
+      "Cuatro países más: Arabia Saudita, Irán, Irak y Kuwait"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: El Sistema enseña música sinfónica y de cámara, usando instrumentos clásicos como violines, cellos, trompetas y flautas. Los niños aprenden a tocar en orquestas.",
+    "dato_curioso": "Dato para profundizar: Una orquesta sinfónica puede tener hasta 100 músicos tocando al mismo tiempo. Coordinar eso requiere una disciplina y trabajo en equipo extraordinarios que El Sistema enseña desde pequeños."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué hizo famosa a Venezuela en los concursos de belleza internacionales?",
+    "tipo": "texto",
+    "opciones": [
+      "Juan Pablo Pérez Alfonzo",
+      "En 1960",
+      "Cuatro países más: Arabia Saudita, Irán, Irak y Kuwait",
+      "Ganar más títulos de belleza por habitante que casi cualquier país"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: Venezuela fue famosa por ganar más títulos de Miss Universo y Miss Mundo per cápita que casi cualquier otro país. 7 Miss Universo y 6 Miss Mundo es un récord impresionante.",
+    "dato_curioso": "Dato para profundizar: Venezuela tiene una escuela especial para entrenar a sus candidatas de belleza que es famosa en todo el mundo. Países de todo el planeta mandaban a sus candidatas a entrenarse en Venezuela."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué pasó con el poder económico de Venezuela cuando los precios del petróleo eran altos?",
+    "tipo": "texto",
+    "opciones": [
+      "Juan Pablo Pérez Alfonzo",
+      "En 1960",
+      "Cuatro países más: Arabia Saudita, Irán, Irak y Kuwait",
+      "Venezuela era uno de los países más ricos de América Latina"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: Cuando el precio del petróleo era alto, Venezuela era uno de los países más ricos de América Latina. Tenía dinero para construir carreteras, escuelas y hospitales.",
+    "dato_curioso": "Dato para profundizar: En los años 70, cuando el petróleo estaba muy caro, Venezuela tenía más dinero que muchos países europeos. ¡Llegó a ser más rico por persona que Argentina y Chile juntos!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Por qué Pérez Alfonzo es tan importante en la historia del petróleo mundial?",
+    "tipo": "texto",
+    "opciones": [
+      "Cuatro países más: Arabia Saudita, Irán, Irak y Kuwait",
+      "Juan Pablo Pérez Alfonzo",
+      "En 1960",
+      "Porque fue el cerebro que creó la alianza OPEP entre países petroleros"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: Pérez Alfonzo fue tan importante porque fue él quien tuvo la idea de crear la OPEP y convenció a los demás países. Sin él, esa organización tal vez nunca hubiera existido.",
+    "dato_curioso": "Dato para profundizar: Pérez Alfonzo era abogado y economista, no geólogo ni ingeniero. Sin embargo, entendía el petróleo mejor que nadie. Usó su mente legal para crear una alianza que cambió la economía del mundo."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cómo se llama el director de orquesta venezolano que más ha viajado por el mundo?",
+    "tipo": "texto",
+    "opciones": [
+      "Gustavo Dudamel",
+      "En 1960",
+      "Cuatro países más: Arabia Saudita, Irán, Irak y Kuwait",
+      "Juan Pablo Pérez Alfonzo"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: Gustavo Dudamel es el director de orquesta venezolano más viajado e importante del mundo. Fue formado en El Sistema y hoy dirige las mejores orquestas del planeta.",
+    "dato_curioso": "Dato para profundizar: Dudamel fue nombrado director de la Orquesta Filarmónica de Los Ángeles cuando tenía solo 26 años. Era uno de los directores más jóvenes en ocupar ese cargo en toda la historia."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué podían ver los turistas que visitaban el Parque Nacional Canaima?",
+    "tipo": "texto",
+    "opciones": [
+      "El Salto Ángel cayendo desde un tepuy gigante en la selva",
+      "En 1960",
+      "Cuatro países más: Arabia Saudita, Irán, Irak y Kuwait",
+      "Juan Pablo Pérez Alfonzo"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: En el Parque Nacional Canaima, los visitantes pueden ver el impresionante Salto Ángel cayendo desde la cima del tepuy Auyantepui, rodeado de selva tropical.",
+    "dato_curioso": "Dato para profundizar: Para llegar al Salto Ángel hay que volar en avioneta desde Ciudad Bolívar hasta Canaima. ¡No hay carretera! Es una aventura de verdad en una de las selvas más hermosas del mundo."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué impacto tuvo El Sistema venezolano en el mundo de la música clásica?",
+    "tipo": "texto",
+    "opciones": [
+      "Hizo que la música clásica se prohibiera en otros países",
+      "Demostró que niños pobres pueden alcanzar la excelencia musical",
+      "Creó una nueva nota musical",
+      "Solo fue famoso en Caracas"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: El Sistema demostró al mundo que los niños de familias pobres pueden llegar a ser músicos de nivel mundial. Cambió la manera en que el mundo piensa sobre la educación musical.",
+    "dato_curioso": "Ampliación histórica: El famoso director Claudio Abbado dijo que El Sistema venezolano era el proyecto musical más importante del mundo. ¡El máximo experto de la música clásica mundial admiraba lo que hacía Venezuela!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cómo se relaciona el Salto Ángel con la película animada 'UP'?",
+    "tipo": "texto",
+    "opciones": [
+      "El director de UP es venezolano",
+      "El Salto Ángel fue pintado en la película",
+      "Los tepuyes venezolanos inspiraron la montaña 'Paraíso de las Cataratas' en la película UP",
+      "Los globos de UP son venezolanos"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: Los tepuyes venezolanos, especialmente el área de Canaima, inspiraron a los creadores de la película 'UP' para diseñar la montaña 'Paraíso de las Cataratas'. Venezuela inspiró a Hollywood.",
+    "dato_curioso": "Ampliación histórica: Los directores de 'UP' viajaron a Venezuela a estudiar los tepuyes antes de hacer la película. Quedaron tan asombrados que recrearon ese paisaje único en su película que ganó el Oscar."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Por qué Venezuela fue un país tan importante en los años 60 y 70?",
+    "tipo": "texto",
+    "opciones": [
+      "Porque tenía el ejército más grande de América",
+      "Por su petróleo, su cultura y su liderazgo en la OPEP",
+      "Porque tenía la mejor pizza del mundo",
+      "Porque inventó el internet"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: Venezuela fue muy importante en los 60 y 70 por su petróleo, su cultura (telenovelas, concursos de belleza, música), y por ser fundadora y líder de la OPEP.",
+    "dato_curioso": "Ampliación histórica: En esa época, los presidentes del mundo querían visitar Venezuela. Era un país con mucha influencia política y económica. ¡Venezuela tenía un asiento muy importante en la mesa del mundo!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué tienen en común el Salto Ángel y la UCV de Caracas?",
+    "tipo": "texto",
+    "opciones": [
+      "Que los dos son Patrimonio de la Humanidad de la UNESCO",
+      "Que los dos están en el estado Zulia",
+      "Que los dos tienen petróleo debajo",
+      "Que los dos fueron construidos por Guzmán Blanco"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: Tanto el Parque Nacional Canaima (donde está el Salto Ángel) como la Ciudad Universitaria (UCV) son Patrimonio de la Humanidad declarados por la UNESCO. Venezuela tiene dos tesoros mundiales.",
+    "dato_curioso": "Ampliación histórica: Venezuela tiene tres sitios Patrimonio de la Humanidad de la UNESCO: Canaima, la UCV y el Puerto, Fortalezas y Conjunto Monumental de Coro. ¡Tres tesoros reconocidos por el mundo entero!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué es lo que hace que el concurso Miss Universo sea tan famoso?",
+    "tipo": "texto",
+    "opciones": [
+      "Es el único concurso con pizza de premio",
+      "Solo venezolanas pueden participar",
+      "Es el concurso de belleza más importante del mundo",
+      "Es un concurso de baile"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: Miss Universo es el concurso de belleza más importante y conocido del mundo. Venezuela ganó ese título 7 veces, más que casi cualquier otro país.",
+    "dato_curioso": "Ampliación histórica: El primer Miss Universo fue en 1952. Venezuela participó desde los primeros años y comenzó a ganar con tanta frecuencia que el mundo la llamó 'la fábrica de reinas'."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué pasó con el dinero del petróleo venezolano en los años 70?",
+    "tipo": "texto",
+    "opciones": [
+      "Venezuela se volvió muy rica y construyó muchas cosas",
+      "El dinero se convirtió en arepas",
+      "Se perdió en el mar",
+      "Se gastó todo en trenes de vapor"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: En los años 70, cuando el petróleo se puso muy caro, Venezuela ganó tanto dinero que construyó carreteras, hospitales, universidades y muchas cosas más para el pueblo.",
+    "dato_curioso": "Ampliación histórica: En 1973, cuando la OPEP subió los precios del petróleo, Venezuela ganó en un año lo que antes tardaba diez años en ganar. Fue el 'Big Bang' de la economía venezolana."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué orquesta famosa del mundo dirige hoy el venezolano Gustavo Dudamel?",
+    "tipo": "texto",
+    "opciones": [
+      "La Filarmónica de Los Ángeles",
+      "La Orquesta de la Selva Amazónica",
+      "Los Tambores de Caracas",
+      "La Filarmónica del Salto Ángel"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: Gustavo Dudamel dirige la Orquesta Filarmónica de Los Ángeles, una de las más importantes del mundo. También fue director de la Ópera de París.",
+    "dato_curioso": "Ampliación histórica: Dudamel es tan famoso que tiene más de un millón de seguidores en redes sociales, lo cual es extraordinario para un director de orquesta clásica. ¡Hizo cool la música clásica!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Por qué las telenovelas venezolanas fueron tan exitosas en el mundo?",
+    "tipo": "texto",
+    "opciones": [
+      "Porque las protagonistas cocinaban en cada capítulo",
+      "Porque tenían historias emocionantes y actores muy talentosos",
+      "Porque eran en blanco y negro",
+      "Porque eran muy cortas y aburridas"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: Las telenovelas venezolanas eran exitosas porque tenían historias emocionantes de amor, traición y aventura con actores muy talentosos y con mucha belleza en pantalla.",
+    "dato_curioso": "Ampliación histórica: En los años 80, Venezuela exportaba sus telenovelas a todo el mundo y ganaba mucho dinero con eso. ¡Las historias venezolanas hacían llorar y reír a personas de todos los continentes!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué orgullo le da a Venezuela ser fundadora de la OPEP?",
+    "tipo": "texto",
+    "opciones": [
+      "Que Venezuela inventó el petróleo",
+      "Que Venezuela puede vender petróleo solo a sus amigos",
+      "Que Venezuela tuvo voz en las decisiones del petróleo mundial desde el principio",
+      "Que Venezuela tiene la sede de la OPEP"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: Ser fundadora de la OPEP significa que Venezuela tiene voz y voto en las decisiones sobre el petróleo a nivel mundial. Es uno de los países más influyentes en la energía global.",
+    "dato_curioso": "Ampliación histórica: La sede de la OPEP está en Viena, Austria. Pero el venezolano Pérez Alfonzo fue tan importante que una sala de reuniones de la OPEP lleva su nombre. ¡Venezuela está presente en esa sede para siempre!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cuál es el resumen del legado de Venezuela en la segunda mitad del siglo XX?",
+    "tipo": "texto",
+    "opciones": [
+      "Venezuela fue importante solo por el petróleo",
+      "Venezuela fue famosa solo por las arepas",
+      "Venezuela solo era conocida por el béisbol",
+      "Venezuela contribuyó al mundo en petróleo, música, belleza, naturaleza y televisión"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: El legado de Venezuela en el siglo XX incluye el petróleo y la OPEP, El Sistema de orquestas, los títulos de belleza, las telenovelas y maravillas naturales como el Salto Ángel.",
+    "dato_curioso": "Ampliación histórica: Venezuela es uno de los pocos países del mundo que ha tenido un impacto global tan amplio: en energía, música, televisión, deportes, ciencia y naturaleza. ¡Un país pequeño con un impacto enorme!"
+  }
+]
