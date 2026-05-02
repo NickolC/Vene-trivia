@@ -1,0 +1,891 @@
+[
+  {
+    "pregunta": "¿Cómo se llamaba el presidente que construyó el primer tren de Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Simón Bolívar",
+      "Antonio Guzmán Blanco",
+      "El Capitán Churros",
+      "Don Arepaldo"
+    ],
+    "correcta": 1,
+    "explicacion": "Antonio Guzmán Blanco fue el presidente que modernizó Venezuela con trenes y edificios bonitos. Fue presidente tres veces entre 1870 y 1888.",
+    "dato_curioso": "Guzmán Blanco vivía tanto en París que la gente decía que era más francés que venezolano. Le gustaba mucho esa ciudad con sus luces y boulevares."
+  },
+  {
+    "pregunta": "¿En qué año salió a rodar el primer tren de Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "1877",
+      "1955",
+      "1492",
+      "3000"
+    ],
+    "correcta": 0,
+    "explicacion": "El primer ferrocarril venezolano empezó a funcionar en 1877, uniendo Caracas con La Guaira. Era una ruta muy importante para llevar cosas al mar.",
+    "dato_curioso": "Las locomotoras del tren fueron traídas desde Alemania e Inglaterra en barcos enormes. ¡Imagínate cargar un tren en un barco!"
+  },
+  {
+    "pregunta": "¿Qué dos ciudades unía el primer ferrocarril de Venezuela?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Mapa infantil y colorido de Venezuela mostrando Caracas y La Guaira conectadas por una línea de tren con humo. Las ciudades tienen caras sonrientes. El mar Caribe es visible en azul brillante.",
+    "opciones": [
+      "Maracaibo y Valencia",
+      "Caracas y La Guaira",
+      "Mérida y Coro",
+      "El Dorado y La Luna"
+    ],
+    "correcta": 1,
+    "explicacion": "El primer tren unía Caracas, la capital, con La Guaira, el puerto junto al mar. Así las cosas llegaban más rápido desde los barcos.",
+    "dato_curioso": "Antes del tren, la gente subía las montañas a caballo o a pie para ir de La Guaira a Caracas. ¡El tren lo hacía mucho más rápido y sin cansarse!"
+  },
+  {
+    "pregunta": "¿Cuántos kilómetros de vías de tren llegó a tener Venezuela en su mejor momento?",
+    "tipo": "texto",
+    "opciones": [
+      "Más de 1.000 km",
+      "Solo 10 km",
+      "Exactamente 7 km",
+      "Un millón de km"
+    ],
+    "correcta": 0,
+    "explicacion": "Venezuela llegó a tener más de 1.000 kilómetros de vías de tren. Eso es como ir de Caracas a Maracaibo y un poco más.",
+    "dato_curioso": "Hoy casi no quedan trenes en Venezuela, pero en esa época los trenes eran como el internet de ahora: ¡todo se movía gracias a ellos!"
+  },
+  {
+    "pregunta": "¿De qué países vinieron las locomotoras que usó Venezuela?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Una locomotora antigua a vapor con la bandera de Alemania en un lado y la bandera de Inglaterra en el otro, llegando en un barco al puerto de Venezuela. Estilo dibujo animado colorido.",
+    "opciones": [
+      "De Marte y Júpiter",
+      "De Alemania e Inglaterra",
+      "De China y Brasil",
+      "Del fondo del mar"
+    ],
+    "correcta": 1,
+    "explicacion": "Las locomotoras eran alemanas e inglesas, traídas en barcos hasta Venezuela. Eran las mejores del mundo en ese tiempo.",
+    "dato_curioso": "Una locomotora de vapor era como un dragón de metal que comía carbón y echaba humo por la chimenea. ¡Hacía un ruido fortísimo al avanzar!"
+  },
+  {
+    "pregunta": "¿Qué cosas llevaban los trenes venezolanos hasta los puertos?",
+    "tipo": "texto",
+    "opciones": [
+      "Cacao, café y cuero",
+      "Pizzas y helados",
+      "Juguetes y globos",
+      "Nubes de algodón de azúcar"
+    ],
+    "correcta": 0,
+    "explicacion": "Los trenes transportaban cacao, café y cuero desde las fincas hasta los puertos para venderlos en otros países. Eran los productos más importantes de Venezuela.",
+    "dato_curioso": "El cacao de Venezuela era tan famoso que los chocolates europeos más ricos se hacían con él. ¡Los europeos amaban el chocolate venezolano!"
+  },
+  {
+    "pregunta": "¿Qué famoso edificio del gobierno construyó Guzmán Blanco en Caracas?",
+    "tipo": "imagen",
+    "imagen_descripcion": "El Capitolio Nacional de Caracas, un edificio blanco y amarillo con una gran cúpula dorada en el centro, rodeado de palmeras y cielo azul. Estilo ilustración infantil brillante.",
+    "opciones": [
+      "La Torre Eiffel",
+      "El Capitolio Nacional",
+      "Una pirámide de queso",
+      "El Castillo de la Arepa"
+    ],
+    "correcta": 1,
+    "explicacion": "Guzmán Blanco construyó el Capitolio Nacional, que es donde trabajan los políticos de Venezuela. Es un edificio precioso con una cúpula dorada.",
+    "dato_curioso": "La cúpula del Capitolio brilla como oro cuando le da el sol. Dentro hay pinturas gigantes que cuentan la historia de Venezuela."
+  },
+  {
+    "pregunta": "¿Qué otro nombre famoso tiene el teatro que construyó Guzmán Blanco en Caracas?",
+    "tipo": "texto",
+    "opciones": [
+      "Teatro Magnífico",
+      "Teatro Municipal",
+      "Circo de los Leones",
+      "Salón de los Dragones"
+    ],
+    "correcta": 1,
+    "explicacion": "Guzmán Blanco construyó el Teatro Municipal de Caracas, donde cantantes y actores dan sus espectáculos. Es uno de los teatros más bonitos de Venezuela.",
+    "dato_curioso": "Cuando el Teatro Municipal abrió sus puertas, la gente se quedó boquiabierta de lo hermoso que era. Tenía luces de cristal que brillaban como estrellas."
+  },
+  {
+    "pregunta": "¿Qué lugar especial construyó Guzmán Blanco para honrar a los héroes venezolanos?",
+    "tipo": "imagen",
+    "imagen_descripcion": "El Panteón Nacional de Caracas, un edificio blanco con columnas y arcos góticos, con estatuas y una bandera venezolana ondeando en la entrada. Ilustración colorida estilo cuento.",
+    "opciones": [
+      "Un parque de diversiones",
+      "El Panteón Nacional",
+      "Una fábrica de arepas",
+      "Una piscina gigante"
+    ],
+    "correcta": 1,
+    "explicacion": "El Panteón Nacional es el lugar donde descansan los restos de los héroes más importantes de Venezuela, como Simón Bolívar. Es como un museo muy especial.",
+    "dato_curioso": "El Panteón Nacional tiene pinturas en el techo tan grandes que necesitas estirarte bien el cuello para verlas. ¡Es como leer un libro de historia mirando hacia arriba!"
+  },
+  {
+    "pregunta": "¿A qué ciudad europea quería parecerse Caracas según los sueños de Guzmán Blanco?",
+    "tipo": "texto",
+    "opciones": [
+      "Londres",
+      "París",
+      "Roma",
+      "El Planeta de los Pasteles"
+    ],
+    "correcta": 1,
+    "explicacion": "Guzmán Blanco quería que Caracas se pareciera a París, la ciudad más elegante de Europa. Por eso construyó tantos edificios bonitos.",
+    "dato_curioso": "Guzmán Blanco pasaba tanto tiempo en París, Francia, que a veces gobernaba Venezuela desde allá por carta. ¡Imagínate mandar mensajes por carta desde tan lejos!"
+  },
+  {
+    "pregunta": "¿En qué año dejó de funcionar el último tren de pasajeros en Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "1983",
+      "2020",
+      "1800",
+      "Nunca dejó de funcionar"
+    ],
+    "correcta": 0,
+    "explicacion": "El último tren de pasajeros en Venezuela dejó de funcionar en 1983. Después de eso, la gente empezó a viajar solo en autobuses y carros.",
+    "dato_curioso": "Venezuela fue uno de los primeros países de América del Sur en tener trenes, pero también fue uno de los primeros en perderlos. ¡Qué triste historia!"
+  },
+  {
+    "pregunta": "¿Cuántas veces fue presidente Guzmán Blanco de Venezuela?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Caricatura amigable de Guzmán Blanco con bigote y sombrero de copa, sosteniendo tres dedos en alto con una sonrisa. Hay tres estrellas numeradas 1, 2, 3 a su alrededor. Estilo dibujo animado.",
+    "opciones": [
+      "Una vez",
+      "Dos veces",
+      "Tres veces",
+      "Cuarenta y dos veces"
+    ],
+    "correcta": 2,
+    "explicacion": "Guzmán Blanco fue presidente de Venezuela tres veces entre 1870 y 1888. Era muy poderoso y le gustaba mandar.",
+    "dato_curioso": "Guzmán Blanco se hacía llamar 'El Ilustre Americano'. Le gustaban mucho los títulos bonitos y que la gente lo admirara."
+  },
+  {
+    "pregunta": "¿Qué tipo de máquina era una locomotora de vapor?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Una locomotora de vapor antigua pintada en colores vivos, echando humo por su chimenea, con ruedas grandes de metal. El fondo muestra campos verdes venezolanos. Estilo caricatura divertida.",
+    "opciones": [
+      "Una licuadora gigante",
+      "Una máquina que jalaba el tren con vapor de agua",
+      "Un robot bailarín",
+      "Una aspiradora voladora"
+    ],
+    "correcta": 1,
+    "explicacion": "Una locomotora de vapor era una máquina que calentaba agua hasta que se convertía en vapor, y ese vapor hacía girar las ruedas del tren. ¡Era como una olla a presión gigante sobre ruedas!",
+    "dato_curioso": "Las locomotoras de vapor necesitaban que alguien las alimentara con carbón todo el tiempo. Había una persona llamada 'fogonero' que echaba carbón al fuego durante todo el viaje."
+  },
+  {
+    "pregunta": "¿Qué usaban las personas para viajar en Venezuela ANTES de que existieran los trenes?",
+    "tipo": "texto",
+    "opciones": [
+      "Cohetes espaciales",
+      "Caballos y mulas",
+      "Patinetas de madera",
+      "Sillas voladoras"
+    ],
+    "correcta": 1,
+    "explicacion": "Antes de los trenes, la gente viajaba a caballo o en mula por caminos de tierra. Era muy lento y cansado, especialmente cruzando las montañas.",
+    "dato_curioso": "Un viaje a caballo de Caracas a La Guaira podía tomar horas por las montañas. ¡El tren lo hacía mucho más rápido y sin que te dolieran las piernas!"
+  },
+  {
+    "pregunta": "¿Qué producto venezolano era tan famoso en Europa que todos querían comprarlo?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Mazorcas de cacao abiertas mostrando sus semillas, con tazas de chocolate humeante al lado y una bandera venezolana pequeña. Fondo de selva tropical verde. Estilo ilustración infantil vibrante.",
+    "opciones": [
+      "Empanadas de queso",
+      "El cacao para hacer chocolate",
+      "Robots de cocina",
+      "Zapatos de plátano"
+    ],
+    "correcta": 1,
+    "explicacion": "El cacao venezolano era famosísimo en Europa porque con él hacían el mejor chocolate del mundo. Los trenes lo llevaban desde las fincas hasta los puertos.",
+    "dato_curioso": "El cacao venezolano se llama 'cacao fino de aroma' y todavía hoy es el más buscado por los chocolateros del mundo. ¡Venezuela tiene el mejor cacao del planeta!"
+  },
+  {
+    "pregunta": "¿Dónde vivía Guzmán Blanco cuando no estaba en Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "En la Luna",
+      "En París, Francia",
+      "Debajo del mar",
+      "En una cueva de oro"
+    ],
+    "correcta": 1,
+    "explicacion": "Guzmán Blanco vivía mucho tiempo en París, Francia. Le gustaba tanto esa ciudad que incluso gobernó Venezuela desde allá en varias ocasiones.",
+    "dato_curioso": "Guzmán Blanco murió en París en 1899 sin volver más a Venezuela. Fue enterrado en Francia, muy lejos del país que tanto cambió."
+  },
+  {
+    "pregunta": "¿Para qué servían los trenes venezolanos del siglo XIX?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un tren antiguo venezolano cargado con sacos de café, pieles de cuero y frutos de cacao, avanzando por paisajes de montaña hacia un puerto donde hay barcos esperando. Dibujo animado colorido.",
+    "opciones": [
+      "Para ir al parque de diversiones",
+      "Para llevar productos como café y cacao al mar",
+      "Para perseguir mariposas",
+      "Para transportar dinosaurios"
+    ],
+    "correcta": 1,
+    "explicacion": "Los trenes venezolanos transportaban productos del campo, como café, cacao y cuero, hasta los puertos del mar para venderlos en otros países.",
+    "dato_curioso": "El café venezolano también era muy famoso en Europa. Venezuela llegó a ser uno de los países que más café exportaba al mundo entero."
+  },
+  {
+    "pregunta": "¿Qué significa que Venezuela tenía más de 1.000 km de vías de tren?",
+    "tipo": "texto",
+    "opciones": [
+      "Que había trenes en casi todo el país",
+      "Que los trenes volaban muy alto",
+      "Que los rieles eran de chocolate",
+      "Que los trenes iban al espacio"
+    ],
+    "correcta": 0,
+    "explicacion": "Tener 1.000 km de vías significaba que los trenes podían llegar a muchas partes del país. Era una red grande que conectaba ciudades y campos.",
+    "dato_curioso": "1.000 kilómetros es la distancia que hay de Caracas hasta la selva amazónica de Venezuela. ¡Los trenes cubrían una distancia enorme!"
+  },
+  {
+    "pregunta": "¿Qué hacía especial al Panteón Nacional de Caracas?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Interior del Panteón Nacional con lápidas y medallones de héroes venezolanos en las paredes, arcos iluminados por velas y un sarcófago en el centro. Estilo ilustración suave y respetuosa.",
+    "opciones": [
+      "Que tenía una piscina de bolas",
+      "Que allí descansaban los héroes de Venezuela",
+      "Que vendía los mejores helados",
+      "Que era un parque de atracciones"
+    ],
+    "correcta": 1,
+    "explicacion": "El Panteón Nacional es muy especial porque en él están los restos de los héroes más importantes de Venezuela, incluyendo a Simón Bolívar. Es un lugar de mucho respeto.",
+    "dato_curioso": "Solo las personas más importantes de Venezuela pueden ser enterradas en el Panteón Nacional. Es el honor más grande que el país le puede dar a alguien."
+  },
+  {
+    "pregunta": "¿Cómo se llamaba el período en que Guzmán Blanco modernizó Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "La Era de los Dinosaurios",
+      "El Guzmancismo",
+      "La Época del Queso",
+      "El Período Espacial"
+    ],
+    "correcta": 1,
+    "explicacion": "Al tiempo en que Guzmán Blanco gobernó y construyó muchas cosas en Venezuela se le llama el Guzmancismo. Fue una época de muchos cambios.",
+    "dato_curioso": "Durante el Guzmancismo, Caracas cambió tanto que la gente que vivía en pueblos no la reconocía cuando venían de visita. ¡Creció y se modernizó muy rápido!"
+  },
+  {
+    "pregunta": "¿Qué tenía de especial el Teatro Municipal que construyó Guzmán Blanco?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Interior del Teatro Municipal de Caracas con butacas rojas, palcos dorados, un telón de terciopelo y una araña de cristal enorme en el techo. Estilo ilustración lujosa y colorida para niños.",
+    "opciones": [
+      "Tenía toboganes dentro",
+      "Era muy elegante con luces y palcos dorados",
+      "Estaba hecho de queso gouda",
+      "Tenía monos bailando en el escenario"
+    ],
+    "correcta": 1,
+    "explicacion": "El Teatro Municipal era un lugar muy elegante donde se presentaban óperas, obras de teatro y conciertos. Tenía palcos dorados y lujosas arañas de cristal.",
+    "dato_curioso": "El Teatro Municipal de Caracas fue inaugurado en 1881 y sigue funcionando hasta hoy. ¡Tiene más de 140 años dando espectáculos!"
+  },
+  {
+    "pregunta": "¿Qué significa que Guzmán Blanco quería que Caracas se pareciera a París?",
+    "tipo": "texto",
+    "opciones": [
+      "Que quería nieve en Caracas",
+      "Que quería edificios elegantes y calles bonitas",
+      "Que quería poner la Torre Eiffel en Caracas",
+      "Que quería hablar solo en francés"
+    ],
+    "correcta": 1,
+    "explicacion": "Guzmán Blanco quería que Caracas tuviera edificios hermosos, teatros, parques y calles amplias, igual que París. Por eso construyó tantas cosas bonitas.",
+    "dato_curioso": "París en el siglo XIX era considerada la ciudad más moderna y bella del mundo. Muchos presidentes latinoamericanos querían imitar su estilo."
+  },
+  {
+    "pregunta": "¿Qué ocurrió con los trenes de Venezuela con el paso del tiempo?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Una locomotora antigua abandonada y oxidada en medio de la naturaleza, con plantas trepando sobre ella y pájaros posados en el techo. Un cartel viejo dice '1983'. Estilo ilustración nostálgica para niños.",
+    "opciones": [
+      "Se convirtieron en superhéroes",
+      "Dejaron de funcionar y fueron abandonados",
+      "Se fueron a vivir al mar",
+      "Se transformaron en helicópteros"
+    ],
+    "correcta": 1,
+    "explicacion": "Con los años, los trenes venezolanos fueron dejando de funcionar. El último tren de pasajeros paró en 1983 y muchos rieles quedaron abandonados.",
+    "dato_curioso": "Hoy puedes encontrar rieles viejos de tren en varios lugares de Venezuela, cubiertos de plantas y hierba. Son como fósiles de una época pasada."
+  },
+  {
+    "pregunta": "¿Qué importancia tenía el puerto de La Guaira para Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Era un parque de dinosaurios",
+      "Era la puerta al mar para vender productos venezolanos",
+      "Era un volcán de chocolates",
+      "Era la capital del país"
+    ],
+    "correcta": 1,
+    "explicacion": "La Guaira es el puerto principal de Venezuela cerca de Caracas. Por ahí salían los barcos cargados de cacao, café y otros productos hacia Europa.",
+    "dato_curioso": "La Guaira está pegada a la montaña, muy cerca del mar. Desde Caracas hay que bajar una montaña enorme para llegar allá. ¡Por eso el tren era tan importante!"
+  },
+  {
+    "pregunta": "¿Qué tipo de cargas llevaban los trenes desde el interior de Venezuela hasta los puertos?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Vagones de tren abiertos llenos de sacos de café con la letra 'C' y 'CAFÉ', otro vagón con pieles de cuero enrolladas y otro con mazorcas de cacao. Paisaje venezolano de fondo. Ilustración colorida.",
+    "opciones": [
+      "Cohetes y platillos voladores",
+      "Café, cacao y cuero de animales",
+      "Pizzas y hamburguesas",
+      "Libros de magia"
+    ],
+    "correcta": 1,
+    "explicacion": "Los trenes cargaban café, cacao y cuero desde las haciendas del interior hasta los puertos del mar. Desde allí se enviaban a Europa y otros países.",
+    "dato_curioso": "El cuero venezolano venía del ganado que se criaba en los Llanos. Los europeos lo usaban para hacer zapatos y carteras muy finas."
+  },
+  {
+    "pregunta": "¿Cómo se llamaban los países de donde vinieron las locomotoras venezolanas?",
+    "tipo": "texto",
+    "opciones": [
+      "Llandia y Trenistán",
+      "Alemania e Inglaterra",
+      "Brasil y Argentina",
+      "Japón y Canadá"
+    ],
+    "correcta": 1,
+    "explicacion": "Las locomotoras del primer ferrocarril venezolano vinieron de Alemania e Inglaterra, que eran los países que mejor construían trenes en esa época.",
+    "dato_curioso": "En el siglo XIX, Inglaterra era el país número uno en tecnología de trenes. ¡Los inventaron ellos! Así que Venezuela usó las mejores locomotoras del mundo."
+  },
+  {
+    "pregunta": "¿Qué edificio importante construyó Guzmán Blanco donde hoy trabaja el gobierno venezolano?",
+    "tipo": "imagen",
+    "imagen_descripcion": "El Capitolio Nacional de Venezuela visto desde afuera, con su fachada amarilla, columnas blancas y la gran cúpula dorada brillando al sol, rodeado de una plaza con palmeras. Ilustración brillante.",
+    "opciones": [
+      "Un estadio de béisbol",
+      "El Capitolio Nacional",
+      "Una fábrica de carros",
+      "Un parque acuático"
+    ],
+    "correcta": 1,
+    "explicacion": "Guzmán Blanco mandó a construir el Capitolio Nacional, que es el edificio donde trabajan los legisladores de Venezuela. Tiene una cúpula dorada muy famosa.",
+    "dato_curioso": "Dentro del Capitolio hay una pintura enorme de la Batalla de Carabobo hecha por el pintor venezolano Martín Tovar y Tovar. ¡Mide más de 10 metros de largo!"
+  },
+  {
+    "pregunta": "¿Qué tan importante era el café de Venezuela en el siglo XIX?",
+    "tipo": "texto",
+    "opciones": [
+      "No le gustaba a nadie",
+      "Era uno de los principales productos de exportación",
+      "Solo se usaba para pintar casas",
+      "Era secreto y nadie lo conocía"
+    ],
+    "correcta": 1,
+    "explicacion": "El café venezolano era uno de los productos más importantes del país. Se exportaba a Europa y otros países, y los trenes lo ayudaban a llegar a los puertos.",
+    "dato_curioso": "Antes de que llegara el petróleo, Venezuela vivía principalmente del café y el cacao. Mucha gente trabajaba en las haciendas de café."
+  },
+  {
+    "pregunta": "¿Qué año fue especialmente importante para los trenes venezolanos?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un calendario antiguo con el año 1877 marcado con una estrella dorada, junto a una locomotora de vapor pequeña y banderines venezolanos. Estilo festivo e infantil.",
+    "opciones": [
+      "El año 2525",
+      "1877, cuando comenzó el primer ferrocarril",
+      "El año 0",
+      "El año del Dinosaurio"
+    ],
+    "correcta": 1,
+    "explicacion": "El año 1877 fue muy especial porque fue cuando empezó a funcionar el primer ferrocarril venezolano entre Caracas y La Guaira.",
+    "dato_curioso": "En 1877, Venezuela era todavía un país muy joven, pues la independencia había sido en 1821. ¡El tren llegó a Venezuela solo 56 años después de la independencia!"
+  },
+  {
+    "pregunta": "¿Cómo se sentía la gente cuando subía por primera vez a un tren?",
+    "tipo": "texto",
+    "opciones": [
+      "Aburrida y con sueño",
+      "Emocionada porque era algo nuevo y asombroso",
+      "Asustada de los caballos del tren",
+      "Confundida porque creían que era un dragón"
+    ],
+    "correcta": 1,
+    "explicacion": "Para mucha gente era la primera vez que veían una máquina tan grande y poderosa. Se emocionaban mucho al subir y sentir la velocidad del tren.",
+    "dato_curioso": "Cuentan que algunas personas lloraban de emoción la primera vez que viajaban en tren. ¡Era tan diferente a ir en caballo que parecía magia!"
+  },
+  {
+    "pregunta": "¿Por qué fue importante el tren entre Caracas y La Guaira para Venezuela?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Diagrama sencillo mostrando Caracas en las montañas y La Guaira junto al mar, conectados por una línea de tren. Flechas muestran productos bajando al puerto y mercancías subiendo a Caracas. Estilo infográfico infantil.",
+    "opciones": [
+      "Porque era el tren más lento del mundo",
+      "Porque conectó la capital con el puerto para mover mercancías",
+      "Porque volaba sobre las nubes",
+      "Porque era de color arcoiris"
+    ],
+    "correcta": 1,
+    "explicacion": "El tren era importantísimo porque conectó la capital con el puerto del mar. Así los productos podían llegar mucho más rápido a los barcos para exportarlos.",
+    "dato_curioso": "La carretera que va de Caracas a La Guaira atraviesa montañas muy empinadas. ¡Los ingenieros del siglo XIX construyeron el tren por esas montañas sin computadoras ni máquinas modernas!"
+  },
+  {
+    "pregunta": "¿Qué le pasó a Venezuela cuando Guzmán Blanco se fue a vivir a París para siempre?",
+    "tipo": "texto",
+    "opciones": [
+      "Venezuela se llenó de trenes nuevos",
+      "Otros presidentes siguieron gobernando sin él",
+      "Venezuela se convirtió en Francia",
+      "Todos se fueron a buscarle"
+    ],
+    "correcta": 1,
+    "explicacion": "Cuando Guzmán Blanco se fue a París y no regresó, otros presidentes tomaron el mando de Venezuela. El país siguió adelante con todo lo que él había construido.",
+    "dato_curioso": "Guzmán Blanco murió en París en 1899 sin volver a Venezuela. Dejó un país muy diferente al que había encontrado cuando empezó a gobernar."
+  },
+  {
+    "pregunta": "¿Cómo llegaban las locomotoras de Europa hasta Venezuela?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un barco de vapor enorme del siglo XIX cruzando el Atlántico con una locomotora visible en su cubierta, asegurada con cadenas. El barco tiene la bandera venezolana y el mar está azul con olas. Dibujo animado.",
+    "opciones": [
+      "Volando con alas de metal",
+      "En barcos de vapor a través del océano",
+      "Saltando de isla en isla",
+      "En cohetes espaciales"
+    ],
+    "correcta": 1,
+    "explicacion": "Las locomotoras eran demasiado grandes para volar, así que llegaban en barcos desde Europa cruzando el océano Atlántico hasta Venezuela.",
+    "dato_curioso": "Un viaje en barco de Europa a Venezuela tardaba varias semanas en el siglo XIX. ¡Las locomotoras viajaban en barco casi tanto tiempo como las personas!"
+  },
+  {
+    "pregunta": "¿Qué ciudad se convirtió en la más modernizada de Venezuela gracias a Guzmán Blanco?",
+    "tipo": "texto",
+    "opciones": [
+      "Mérida",
+      "Caracas",
+      "Marte City",
+      "El Dorado"
+    ],
+    "correcta": 1,
+    "explicacion": "Caracas, la capital de Venezuela, fue la ciudad que más cambió durante el gobierno de Guzmán Blanco. Recibió nuevos edificios, teatros y el primer ferrocarril.",
+    "dato_curioso": "En la época de Guzmán Blanco, Caracas tenía jardines, fuentes de agua y calles pavimentadas que la hacían ver muy diferente a las demás ciudades de Venezuela."
+  },
+  {
+    "pregunta": "¿Cuál es el monumento más famoso que tiene los restos de Simón Bolívar?",
+    "tipo": "imagen",
+    "imagen_descripcion": "El Panteón Nacional de Caracas iluminado de noche, con su fachada blanca y puertas de madera tallada. Una bandera venezolana ondea en lo alto. Estilo ilustración nocturna mágica y colorida.",
+    "opciones": [
+      "La Torre de Pizza",
+      "El Panteón Nacional de Caracas",
+      "El Castillo de la Arepa",
+      "El Gran Coliseo de Churros"
+    ],
+    "correcta": 1,
+    "explicacion": "El Panteón Nacional, construido por Guzmán Blanco, es donde están los restos de Simón Bolívar y otros héroes venezolanos. Es el lugar más sagrado de Venezuela.",
+    "dato_curioso": "Los restos de Simón Bolívar llegaron al Panteón Nacional en 1876, traídos desde la Catedral de Caracas. Fue una ceremonia muy importante para todo el país."
+  },
+  {
+    "pregunta": "¿En qué siglo modernizó Guzmán Blanco Venezuela con los trenes?",
+    "tipo": "texto",
+    "opciones": [
+      "En el siglo XXI",
+      "En el siglo XIX",
+      "En el siglo V antes de Cristo",
+      "En el siglo de los robots"
+    ],
+    "correcta": 1,
+    "explicacion": "Guzmán Blanco modernizó Venezuela en el siglo XIX, específicamente entre 1870 y 1888. Esos años fueron una época de muchos cambios para el país.",
+    "dato_curioso": "El siglo XIX fue un tiempo en que muchos países del mundo comenzaron a usar trenes. Venezuela fue uno de los primeros países de América del Sur en hacerlo."
+  },
+  {
+    "pregunta": "¿Qué hacía que los trenes fueran tan importantes para la economía venezolana?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Comparación lado a lado: un hombre a caballo cargando una bolsa pequeña de café vs. un tren cargado con cientos de sacos de café. Flechas muestran la diferencia de cantidad. Ilustración infantil cómica.",
+    "opciones": [
+      "Que servían para hacer deporte",
+      "Que podían mover grandes cantidades de productos muy rápido",
+      "Que eran muy bonitos para hacer fotos",
+      "Que hacían magia con la carga"
+    ],
+    "correcta": 1,
+    "explicacion": "Los trenes podían llevar mucha más carga que los caballos y mucho más rápido. Eso significaba que Venezuela podía vender más productos y ganar más dinero.",
+    "dato_curioso": "Un solo tren podía cargar lo que necesitarían cientos de mulas para transportar. ¡Los trenes cambiaron completamente cómo Venezuela hacía sus negocios!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cómo se llamaba el presidente que construyó el primer tren de Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Simón Bolívar",
+      "Don Arepaldo",
+      "El Capitán Churros",
+      "Antonio Guzmán Blanco"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: Antonio Guzmán Blanco fue el presidente que modernizó Venezuela con trenes y edificios bonitos. Fue presidente tres veces entre 1870 y 1888.",
+    "dato_curioso": "Repaso curioso: Guzmán Blanco vivía tanto en París que la gente decía que era más francés que venezolano. Le gustaba mucho esa ciudad con sus luces y boulevares."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: En qué año salió a rodar el primer tren de Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "3000",
+      "1955",
+      "1877",
+      "1492"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: El primer ferrocarril venezolano empezó a funcionar en 1877, uniendo Caracas con La Guaira. Era una ruta muy importante para llevar cosas al mar.",
+    "dato_curioso": "Repaso curioso: Las locomotoras del tren fueron traídas desde Alemania e Inglaterra en barcos enormes. ¡Imagínate cargar un tren en un barco!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué dos ciudades unía el primer ferrocarril de Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Caracas y La Guaira",
+      "Maracaibo y Valencia",
+      "El Dorado y La Luna",
+      "Mérida y Coro"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: El primer tren unía Caracas, la capital, con La Guaira, el puerto junto al mar. Así las cosas llegaban más rápido desde los barcos.",
+    "dato_curioso": "Repaso curioso: Antes del tren, la gente subía las montañas a caballo o a pie para ir de La Guaira a Caracas. ¡El tren lo hacía mucho más rápido y sin cansarse!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cuántos kilómetros de vías de tren llegó a tener Venezuela en su mejor momento?",
+    "tipo": "texto",
+    "opciones": [
+      "Exactamente 7 km",
+      "Un millón de km",
+      "Solo 10 km",
+      "Más de 1.000 km"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: Venezuela llegó a tener más de 1.000 kilómetros de vías de tren. Eso es como ir de Caracas a Maracaibo y un poco más.",
+    "dato_curioso": "Repaso curioso: Hoy casi no quedan trenes en Venezuela, pero en esa época los trenes eran como el internet de ahora: ¡todo se movía gracias a ellos!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: De qué países vinieron las locomotoras que usó Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "De Marte y Júpiter",
+      "De China y Brasil",
+      "Del fondo del mar",
+      "De Alemania e Inglaterra"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: Las locomotoras eran alemanas e inglesas, traídas en barcos hasta Venezuela. Eran las mejores del mundo en ese tiempo.",
+    "dato_curioso": "Repaso curioso: Una locomotora de vapor era como un dragón de metal que comía carbón y echaba humo por la chimenea. ¡Hacía un ruido fortísimo al avanzar!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué cosas llevaban los trenes venezolanos hasta los puertos?",
+    "tipo": "texto",
+    "opciones": [
+      "Pizzas y helados",
+      "Cacao, café y cuero",
+      "Nubes de algodón de azúcar",
+      "Juguetes y globos"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: Los trenes transportaban cacao, café y cuero desde las fincas hasta los puertos para venderlos en otros países. Eran los productos más importantes de Venezuela.",
+    "dato_curioso": "Repaso curioso: El cacao de Venezuela era tan famoso que los chocolates europeos más ricos se hacían con él. ¡Los europeos amaban el chocolate venezolano!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué famoso edificio del gobierno construyó Guzmán Blanco en Caracas?",
+    "tipo": "texto",
+    "opciones": [
+      "El Capitolio Nacional",
+      "La Torre Eiffel",
+      "El Castillo de la Arepa",
+      "Una pirámide de queso"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: Guzmán Blanco construyó el Capitolio Nacional, que es donde trabajan los políticos de Venezuela. Es un edificio precioso con una cúpula dorada.",
+    "dato_curioso": "Repaso curioso: La cúpula del Capitolio brilla como oro cuando le da el sol. Dentro hay pinturas gigantes que cuentan la historia de Venezuela."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué otro nombre famoso tiene el teatro que construyó Guzmán Blanco en Caracas?",
+    "tipo": "texto",
+    "opciones": [
+      "Salón de los Dragones",
+      "Circo de los Leones",
+      "Teatro Municipal",
+      "Teatro Magnífico"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: Guzmán Blanco construyó el Teatro Municipal de Caracas, donde cantantes y actores dan sus espectáculos. Es uno de los teatros más bonitos de Venezuela.",
+    "dato_curioso": "Repaso curioso: Cuando el Teatro Municipal abrió sus puertas, la gente se quedó boquiabierta de lo hermoso que era. Tenía luces de cristal que brillaban como estrellas."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué lugar especial construyó Guzmán Blanco para honrar a los héroes venezolanos?",
+    "tipo": "texto",
+    "opciones": [
+      "Una fábrica de arepas",
+      "Una piscina gigante",
+      "El Panteón Nacional",
+      "Un parque de diversiones"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: El Panteón Nacional es el lugar donde descansan los restos de los héroes más importantes de Venezuela, como Simón Bolívar. Es como un museo muy especial.",
+    "dato_curioso": "Repaso curioso: El Panteón Nacional tiene pinturas en el techo tan grandes que necesitas estirarte bien el cuello para verlas. ¡Es como leer un libro de historia mirando hacia arriba!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: A qué ciudad europea quería parecerse Caracas según los sueños de Guzmán Blanco?",
+    "tipo": "texto",
+    "opciones": [
+      "París",
+      "El Planeta de los Pasteles",
+      "Roma",
+      "Londres"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: Guzmán Blanco quería que Caracas se pareciera a París, la ciudad más elegante de Europa. Por eso construyó tantos edificios bonitos.",
+    "dato_curioso": "Repaso curioso: Guzmán Blanco pasaba tanto tiempo en París, Francia, que a veces gobernaba Venezuela desde allá por carta. ¡Imagínate mandar mensajes por carta desde tan lejos!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: En qué año dejó de funcionar el último tren de pasajeros en Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "1983",
+      "Caracas y La Guaira",
+      "1877",
+      "Antonio Guzmán Blanco"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: El último tren de pasajeros en Venezuela dejó de funcionar en 1983. Después de eso, la gente empezó a viajar solo en autobuses y carros.",
+    "dato_curioso": "Dato para profundizar: Venezuela fue uno de los primeros países de América del Sur en tener trenes, pero también fue uno de los primeros en perderlos. ¡Qué triste historia!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cuántas veces fue presidente Guzmán Blanco de Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Antonio Guzmán Blanco",
+      "1877",
+      "Tres veces",
+      "Caracas y La Guaira"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: Guzmán Blanco fue presidente de Venezuela tres veces entre 1870 y 1888. Era muy poderoso y le gustaba mandar.",
+    "dato_curioso": "Dato para profundizar: Guzmán Blanco se hacía llamar 'El Ilustre Americano'. Le gustaban mucho los títulos bonitos y que la gente lo admirara."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué tipo de máquina era una locomotora de vapor?",
+    "tipo": "texto",
+    "opciones": [
+      "Caracas y La Guaira",
+      "1877",
+      "Una máquina que jalaba el tren con vapor de agua",
+      "Antonio Guzmán Blanco"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: Una locomotora de vapor era una máquina que calentaba agua hasta que se convertía en vapor, y ese vapor hacía girar las ruedas del tren. ¡Era como una olla a presión gigante sobre ruedas!",
+    "dato_curioso": "Dato para profundizar: Las locomotoras de vapor necesitaban que alguien las alimentara con carbón todo el tiempo. Había una persona llamada 'fogonero' que echaba carbón al fuego durante todo el viaje."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué usaban las personas para viajar en Venezuela ANTES de que existieran los trenes?",
+    "tipo": "texto",
+    "opciones": [
+      "Caracas y La Guaira",
+      "1877",
+      "Caballos y mulas",
+      "Antonio Guzmán Blanco"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: Antes de los trenes, la gente viajaba a caballo o en mula por caminos de tierra. Era muy lento y cansado, especialmente cruzando las montañas.",
+    "dato_curioso": "Dato para profundizar: Un viaje a caballo de Caracas a La Guaira podía tomar horas por las montañas. ¡El tren lo hacía mucho más rápido y sin que te dolieran las piernas!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué producto venezolano era tan famoso en Europa que todos querían comprarlo?",
+    "tipo": "texto",
+    "opciones": [
+      "1877",
+      "Antonio Guzmán Blanco",
+      "El cacao para hacer chocolate",
+      "Caracas y La Guaira"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: El cacao venezolano era famosísimo en Europa porque con él hacían el mejor chocolate del mundo. Los trenes lo llevaban desde las fincas hasta los puertos.",
+    "dato_curioso": "Dato para profundizar: El cacao venezolano se llama 'cacao fino de aroma' y todavía hoy es el más buscado por los chocolateros del mundo. ¡Venezuela tiene el mejor cacao del planeta!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Dónde vivía Guzmán Blanco cuando no estaba en Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Caracas y La Guaira",
+      "Antonio Guzmán Blanco",
+      "1877",
+      "En París, Francia"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: Guzmán Blanco vivía mucho tiempo en París, Francia. Le gustaba tanto esa ciudad que incluso gobernó Venezuela desde allá en varias ocasiones.",
+    "dato_curioso": "Dato para profundizar: Guzmán Blanco murió en París en 1899 sin volver más a Venezuela. Fue enterrado en Francia, muy lejos del país que tanto cambió."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Para qué servían los trenes venezolanos del siglo XIX?",
+    "tipo": "texto",
+    "opciones": [
+      "Para llevar productos como café y cacao al mar",
+      "Caracas y La Guaira",
+      "1877",
+      "Antonio Guzmán Blanco"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: Los trenes venezolanos transportaban productos del campo, como café, cacao y cuero, hasta los puertos del mar para venderlos en otros países.",
+    "dato_curioso": "Dato para profundizar: El café venezolano también era muy famoso en Europa. Venezuela llegó a ser uno de los países que más café exportaba al mundo entero."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué significa que Venezuela tenía más de 1.000 km de vías de tren?",
+    "tipo": "texto",
+    "opciones": [
+      "Antonio Guzmán Blanco",
+      "1877",
+      "Caracas y La Guaira",
+      "Que había trenes en casi todo el país"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: Tener 1.000 km de vías significaba que los trenes podían llegar a muchas partes del país. Era una red grande que conectaba ciudades y campos.",
+    "dato_curioso": "Dato para profundizar: 1.000 kilómetros es la distancia que hay de Caracas hasta la selva amazónica de Venezuela. ¡Los trenes cubrían una distancia enorme!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué hacía especial al Panteón Nacional de Caracas?",
+    "tipo": "texto",
+    "opciones": [
+      "Que allí descansaban los héroes de Venezuela",
+      "Antonio Guzmán Blanco",
+      "Caracas y La Guaira",
+      "1877"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: El Panteón Nacional es muy especial porque en él están los restos de los héroes más importantes de Venezuela, incluyendo a Simón Bolívar. Es un lugar de mucho respeto.",
+    "dato_curioso": "Dato para profundizar: Solo las personas más importantes de Venezuela pueden ser enterradas en el Panteón Nacional. Es el honor más grande que el país le puede dar a alguien."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cómo se llamaba el período en que Guzmán Blanco modernizó Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "El Guzmancismo",
+      "Antonio Guzmán Blanco",
+      "1877",
+      "Caracas y La Guaira"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: Al tiempo en que Guzmán Blanco gobernó y construyó muchas cosas en Venezuela se le llama el Guzmancismo. Fue una época de muchos cambios.",
+    "dato_curioso": "Dato para profundizar: Durante el Guzmancismo, Caracas cambió tanto que la gente que vivía en pueblos no la reconocía cuando venían de visita. ¡Creció y se modernizó muy rápido!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué tenía de especial el Teatro Municipal que construyó Guzmán Blanco?",
+    "tipo": "texto",
+    "opciones": [
+      "Estaba hecho de queso gouda",
+      "Tenía toboganes dentro",
+      "Era muy elegante con luces y palcos dorados",
+      "Tenía monos bailando en el escenario"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: El Teatro Municipal era un lugar muy elegante donde se presentaban óperas, obras de teatro y conciertos. Tenía palcos dorados y lujosas arañas de cristal.",
+    "dato_curioso": "Ampliación histórica: El Teatro Municipal de Caracas fue inaugurado en 1881 y sigue funcionando hasta hoy. ¡Tiene más de 140 años dando espectáculos!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué significa que Guzmán Blanco quería que Caracas se pareciera a París?",
+    "tipo": "texto",
+    "opciones": [
+      "Que quería poner la Torre Eiffel en Caracas",
+      "Que quería edificios elegantes y calles bonitas",
+      "Que quería hablar solo en francés",
+      "Que quería nieve en Caracas"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: Guzmán Blanco quería que Caracas tuviera edificios hermosos, teatros, parques y calles amplias, igual que París. Por eso construyó tantas cosas bonitas.",
+    "dato_curioso": "Ampliación histórica: París en el siglo XIX era considerada la ciudad más moderna y bella del mundo. Muchos presidentes latinoamericanos querían imitar su estilo."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué ocurrió con los trenes de Venezuela con el paso del tiempo?",
+    "tipo": "texto",
+    "opciones": [
+      "Se transformaron en helicópteros",
+      "Se fueron a vivir al mar",
+      "Se convirtieron en superhéroes",
+      "Dejaron de funcionar y fueron abandonados"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: Con los años, los trenes venezolanos fueron dejando de funcionar. El último tren de pasajeros paró en 1983 y muchos rieles quedaron abandonados.",
+    "dato_curioso": "Ampliación histórica: Hoy puedes encontrar rieles viejos de tren en varios lugares de Venezuela, cubiertos de plantas y hierba. Son como fósiles de una época pasada."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué importancia tenía el puerto de La Guaira para Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Era la puerta al mar para vender productos venezolanos",
+      "Era un parque de dinosaurios",
+      "Era un volcán de chocolates",
+      "Era la capital del país"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: La Guaira es el puerto principal de Venezuela cerca de Caracas. Por ahí salían los barcos cargados de cacao, café y otros productos hacia Europa.",
+    "dato_curioso": "Ampliación histórica: La Guaira está pegada a la montaña, muy cerca del mar. Desde Caracas hay que bajar una montaña enorme para llegar allá. ¡Por eso el tren era tan importante!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué tipo de cargas llevaban los trenes desde el interior de Venezuela hasta los puertos?",
+    "tipo": "texto",
+    "opciones": [
+      "Libros de magia",
+      "Cohetes y platillos voladores",
+      "Café, cacao y cuero de animales",
+      "Pizzas y hamburguesas"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: Los trenes cargaban café, cacao y cuero desde las haciendas del interior hasta los puertos del mar. Desde allí se enviaban a Europa y otros países.",
+    "dato_curioso": "Ampliación histórica: El cuero venezolano venía del ganado que se criaba en los Llanos. Los europeos lo usaban para hacer zapatos y carteras muy finas."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cómo se llamaban los países de donde vinieron las locomotoras venezolanas?",
+    "tipo": "texto",
+    "opciones": [
+      "Brasil y Argentina",
+      "Alemania e Inglaterra",
+      "Llandia y Trenistán",
+      "Japón y Canadá"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: Las locomotoras del primer ferrocarril venezolano vinieron de Alemania e Inglaterra, que eran los países que mejor construían trenes en esa época.",
+    "dato_curioso": "Ampliación histórica: En el siglo XIX, Inglaterra era el país número uno en tecnología de trenes. ¡Los inventaron ellos! Así que Venezuela usó las mejores locomotoras del mundo."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué edificio importante construyó Guzmán Blanco donde hoy trabaja el gobierno venezolano?",
+    "tipo": "texto",
+    "opciones": [
+      "Una fábrica de carros",
+      "Un estadio de béisbol",
+      "El Capitolio Nacional",
+      "Un parque acuático"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: Guzmán Blanco mandó a construir el Capitolio Nacional, que es el edificio donde trabajan los legisladores de Venezuela. Tiene una cúpula dorada muy famosa.",
+    "dato_curioso": "Ampliación histórica: Dentro del Capitolio hay una pintura enorme de la Batalla de Carabobo hecha por el pintor venezolano Martín Tovar y Tovar. ¡Mide más de 10 metros de largo!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué tan importante era el café de Venezuela en el siglo XIX?",
+    "tipo": "texto",
+    "opciones": [
+      "No le gustaba a nadie",
+      "Era uno de los principales productos de exportación",
+      "Solo se usaba para pintar casas",
+      "Era secreto y nadie lo conocía"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: El café venezolano era uno de los productos más importantes del país. Se exportaba a Europa y otros países, y los trenes lo ayudaban a llegar a los puertos.",
+    "dato_curioso": "Ampliación histórica: Antes de que llegara el petróleo, Venezuela vivía principalmente del café y el cacao. Mucha gente trabajaba en las haciendas de café."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué año fue especialmente importante para los trenes venezolanos?",
+    "tipo": "texto",
+    "opciones": [
+      "1877, cuando comenzó el primer ferrocarril",
+      "El año del Dinosaurio",
+      "El año 0",
+      "El año 2525"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: El año 1877 fue muy especial porque fue cuando empezó a funcionar el primer ferrocarril venezolano entre Caracas y La Guaira.",
+    "dato_curioso": "Ampliación histórica: En 1877, Venezuela era todavía un país muy joven, pues la independencia había sido en 1821. ¡El tren llegó a Venezuela solo 56 años después de la independencia!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cómo se sentía la gente cuando subía por primera vez a un tren?",
+    "tipo": "texto",
+    "opciones": [
+      "Asustada de los caballos del tren",
+      "Confundida porque creían que era un dragón",
+      "Emocionada porque era algo nuevo y asombroso",
+      "Aburrida y con sueño"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: Para mucha gente era la primera vez que veían una máquina tan grande y poderosa. Se emocionaban mucho al subir y sentir la velocidad del tren.",
+    "dato_curioso": "Ampliación histórica: Cuentan que algunas personas lloraban de emoción la primera vez que viajaban en tren. ¡Era tan diferente a ir en caballo que parecía magia!"
+  }
+]

@@ -1,0 +1,888 @@
+[
+  {
+    "pregunta": "¿Cómo se llama la valiente señora que cargó agua y comida a los soldados en la batalla?",
+    "tipo": "texto",
+    "opciones": [
+      "Juana La Avanzadora",
+      "Josefa Camejo",
+      "Luisa Cáceres",
+      "La Señora Tortilla"
+    ],
+    "correcta": 0,
+    "explicacion": "¡Juana La Avanzadora corría bajo las balas enemigas para llevar agua, comida y municiones a los soldados! ¡Era superfuerte y supervaliente!",
+    "dato_curioso": "La gente la llamaba 'La Avanzadora' porque siempre avanzaba hacia el peligro sin miedo. ¡Era más valiente que muchos soldados!"
+  },
+  {
+    "pregunta": "¿En qué batalla famosa ayudó Juana La Avanzadora a los patriotas?",
+    "tipo": "texto",
+    "opciones": [
+      "La Batalla de la Pizza",
+      "La Batalla de las Estrellas",
+      "La Batalla de Alto de los Godos",
+      "La Batalla del Helado"
+    ],
+    "correcta": 2,
+    "explicacion": "¡Juana ayudó en la Batalla de Alto de los Godos! Corría llevando cosas importantes a los soldados mientras llovían balas.",
+    "dato_curioso": "Alto de los Godos está en el Estado Monagas, Venezuela. ¡Fue una batalla muy importante para ganar la independencia!"
+  },
+  {
+    "pregunta": "¿Qué cargaba Juana La Avanzadora para los soldados bajo el fuego enemigo?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración colorida de una mujer venezolana del siglo XIX con vestido de la época, cargando un cántaro de agua en una mano y una bolsa de comida en la otra, con explosiones y humo de batalla en el fondo. Expresión de valentía en su rostro.",
+    "opciones": [
+      "Pasteles y tortas",
+      "Flores y perfumes",
+      "Juguetes y dulces",
+      "Agua, comida y municiones"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Juana cargaba agua para que los soldados no se deshidrataran, comida para que tuvieran energía y municiones para que pudieran disparar!",
+    "dato_curioso": "¡Cargar esas cosas mientras todos disparaban era peligrosísimo! Pero Juana no se detuvo ni un solo segundo."
+  },
+  {
+    "pregunta": "¿Qué le pasó a Luisa Cáceres de Arismendi cuando la capturaron los españoles?",
+    "tipo": "texto",
+    "opciones": [
+      "La pusieron en prisión embarazada",
+      "La invitaron a tomar té",
+      "Le dieron un caballo",
+      "La mandaron de vacaciones"
+    ],
+    "correcta": 0,
+    "explicacion": "¡Luisa fue capturada cuando estaba embarazada y la metieron en una prisión muy fea! Pero nunca le dijo secretos a los enemigos.",
+    "dato_curioso": "¡Aunque Luisa sufrió muchísimo en prisión, jamás traicionó a sus amigos patriotas! Su valentía fue enorme y gigante."
+  },
+  {
+    "pregunta": "¿Qué perdió Luisa Cáceres de Arismendi mientras estaba presa?",
+    "tipo": "texto",
+    "opciones": [
+      "Sus zapatos de fiesta",
+      "Su receta de arepas",
+      "Su colección de muñecas",
+      "A su bebé recién nacido"
+    ],
+    "correcta": 3,
+    "explicacion": "Luisa perdió a su bebé mientras estaba en la prisión española. Fue algo muy triste, pero aun así nunca traicionó a los patriotas.",
+    "dato_curioso": "Luisa Cáceres de Arismendi es considerada una heroína nacional. ¡Hay calles, escuelas y hasta un estado que honran su nombre!"
+  },
+  {
+    "pregunta": "¿Qué nunca hizo Luisa Cáceres de Arismendi aunque la torturaron y la metieron presa?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de una mujer joven con vestido de la época colonial, encadenada en una celda de piedra oscura, mirando al frente con cara de determinación y valentía. Un soldado español enojado le señala con el dedo exigiéndole información.",
+    "opciones": [
+      "Nunca comió vegetales",
+      "Nunca aprendió a leer",
+      "Nunca traicionó a los patriotas",
+      "Nunca peinó su cabello"
+    ],
+    "correcta": 2,
+    "explicacion": "¡Luisa nunca le contó los secretos de los patriotas a los españoles! Prefirió sufrir antes que traicionar a su gente.",
+    "dato_curioso": "¡Su historia es tan poderosa que la pusieron en los libros de historia de Venezuela! Es una de las mujeres más valientes que ha existido."
+  },
+  {
+    "pregunta": "¿Qué hizo Josefa Camejo para ayudar a la independencia venezolana?",
+    "tipo": "texto",
+    "opciones": [
+      "Cocinó tamales gigantes",
+      "Lideró una guerrilla y liberó Paraguaná",
+      "Decoró el palacio presidencial",
+      "Organizó un carnaval enorme"
+    ],
+    "correcta": 1,
+    "explicacion": "¡Josefa Camejo fue jefa de un grupo de guerrilleros y liberó la región de Paraguaná en Falcón! ¡Era como una capitana de verdad!",
+    "dato_curioso": "¡Josefa fue tan valiente que la nombraron Teniente! Era muy raro que una mujer tuviera ese título militar en esa época."
+  },
+  {
+    "pregunta": "¿En qué parte de Venezuela luchó Josefa Camejo?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Mapa ilustrado y colorido de Venezuela resaltando la Península de Paraguaná en el estado Falcón, con una estrella brillante marcando la zona. Al lado, una pequeña ilustración de Josefa Camejo montada a caballo con una espada levantada.",
+    "opciones": [
+      "En la luna venezolana",
+      "En Paraguaná, Falcón",
+      "En el Orinoco submarino",
+      "En una nube de Caracas"
+    ],
+    "correcta": 1,
+    "explicacion": "¡Josefa luchó en la Península de Paraguaná, que está en el Estado Falcón! Liberó esa zona de los soldados españoles.",
+    "dato_curioso": "¡Paraguaná es una península que parece una isla porque casi está rodeada de mar! Josefa la liberó con mucho coraje."
+  },
+  {
+    "pregunta": "¿Qué título militar le dieron a Josefa Camejo por su valentía?",
+    "tipo": "texto",
+    "opciones": [
+      "Princesa del Caribe",
+      "Cocinera Mayor",
+      "Directora de Bailes",
+      "Teniente"
+    ],
+    "correcta": 3,
+    "explicacion": "¡A Josefa la nombraron Teniente! Ese es un rango militar de verdad. ¡Fue una de las primeras mujeres oficiales en la historia venezolana!",
+    "dato_curioso": "En esa época las mujeres casi no podían ser soldados. ¡Josefa rompió todas las reglas con su valentía increíble!"
+  },
+  {
+    "pregunta": "¿Dónde escondían los mensajes secretos algunas mujeres espías patriotas?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración divertida de una mujer del siglo XIX con cabello largo recogido, y un pequeño papel enrollado oculto entre su cabello. También tiene mensajes secretos doblados escondidos en los dobleces de su vestido. Expresión pícara y astuta.",
+    "opciones": [
+      "En el cabello y la ropa",
+      "En un dragón de papel",
+      "En una torta de cumpleaños",
+      "Dentro de un caimán"
+    ],
+    "correcta": 0,
+    "explicacion": "¡Las mujeres espías escondían mensajes enrolladitos en su cabello o dentro de los dobleces de su ropa para que los soldados enemigos no los encontraran!",
+    "dato_curioso": "¡Eran tan listas que los soldados españoles casi nunca las descubrían! Pasaban secretos importantísimos sin que nadie lo supiera."
+  },
+  {
+    "pregunta": "¿Cuántas mujeres aproximadamente participaron activamente en la independencia venezolana?",
+    "tipo": "texto",
+    "opciones": [
+      "Solo 3 mujeres",
+      "Una sola mujer famosa",
+      "Más de 200 mujeres",
+      "Cero mujeres, solo hombres"
+    ],
+    "correcta": 2,
+    "explicacion": "¡Más de 200 mujeres participaron activamente en la independencia de Venezuela! Eran soldadas, espías, enfermeras y mucho más.",
+    "dato_curioso": "¡Muchas de esas 200 mujeres no son tan famosas en los libros, pero fueron igualmente valientes! Sus historias merecen ser contadas."
+  },
+  {
+    "pregunta": "¿Qué hacían muchas mujeres en los campamentos de los soldados patriotas?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración colorida de un campamento patriota venezolano del siglo XIX con varias mujeres en primer plano: una cocinando en fogón, otra vendando la herida de un soldado, otra afilando un machete. Ambiente de trabajo y solidaridad.",
+    "opciones": [
+      "Pintaban cuadros elegantes",
+      "Preparaban comida y curaban a los heridos",
+      "Dormían todo el día",
+      "Jugaban videojuegos coloniales"
+    ],
+    "correcta": 1,
+    "explicacion": "¡Las mujeres en los campamentos cocinaban la comida para que los soldados tuvieran energía y curaban a los heridos después de las batallas!",
+    "dato_curioso": "¡Sin esas mujeres cocinando y curando, muchos soldados patriotas hubieran muerto de hambre o de sus heridas! Eran indispensables."
+  },
+  {
+    "pregunta": "¿Qué hacían algunas mujeres muy valientes para unirse directamente al ejército?",
+    "tipo": "texto",
+    "opciones": [
+      "Se ponían una capa mágica",
+      "Pedían permiso al rey de España",
+      "Inventaban un robot de guerra",
+      "Se disfrazaban de hombre"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Algunas mujeres se cortaban el pelo y se ponían ropa de hombre para poder unirse al ejército y pelear junto a los soldados!",
+    "dato_curioso": "¡Era muy peligroso porque si las descubrían podían meterlas presas! Pero su amor por la libertad era más grande que el miedo."
+  },
+  {
+    "pregunta": "¿Cómo se llamaba la señora que lideró guerrilleros en el estado Falcón?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Retrato ilustrado de Josefa Camejo, mujer venezolana del siglo XIX con uniforme militar sencillo y sombrero de la época, sosteniendo una espada y mirando al horizonte con expresión decidida y valiente. Fondo de campos verdes de Venezuela.",
+    "opciones": [
+      "Luisa La Guerrera",
+      "María Chocolatera",
+      "Juana La Avanzadora",
+      "Josefa Camejo"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Josefa Camejo fue la líder guerrillera que liberó Paraguaná en el estado Falcón! Era una jefa de verdad.",
+    "dato_curioso": "¡El 8 de marzo, Día Internacional de la Mujer, se recuerda especialmente a heroínas como Josefa! Su historia es un tesoro venezolano."
+  },
+  {
+    "pregunta": "¿Cuál era el trabajo más peligroso que hacía Juana La Avanzadora?",
+    "tipo": "texto",
+    "opciones": [
+      "Hornear pan caliente",
+      "Nadar con tiburones",
+      "Correr bajo las balas llevando suministros",
+      "Escalar el Pico Bolívar con hielo"
+    ],
+    "correcta": 2,
+    "explicacion": "¡Juana corría por el campo de batalla mientras los soldados españoles disparaban! Llevaba lo que los patriotas necesitaban sin parar.",
+    "dato_curioso": "¡Juana sobrevivió todas esas batallas! Su valentía le salvó la vida a muchos soldados patriotas venezolanos."
+  },
+  {
+    "pregunta": "¿De qué época es la historia de las heroínas de la independencia venezolana?",
+    "tipo": "texto",
+    "opciones": [
+      "Del año 1 después de Cristo",
+      "Del futuro año 3000",
+      "De la prehistoria de los dinosaurios",
+      "Entre 1810 y 1821"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Las heroínas de la independencia vivieron entre 1810 y 1821! Esos fueron los años en que Venezuela luchó para ser libre.",
+    "dato_curioso": "¡Venezuela declaró su independencia el 5 de julio de 1811! Ese día todavía lo celebramos con fuegos artificiales y fiestas."
+  },
+  {
+    "pregunta": "¿Cómo se llamaba el esposo de Luisa Cáceres de Arismendi?",
+    "tipo": "texto",
+    "opciones": [
+      "Juan Bautista Arismendi",
+      "Superman Arismendi",
+      "Pepe El Patriota",
+      "Bolívar Arismendi"
+    ],
+    "correcta": 0,
+    "explicacion": "¡El esposo de Luisa se llamaba Juan Bautista Arismendi y era un general patriota importante! Por eso los españoles capturaron a Luisa.",
+    "dato_curioso": "¡Los españoles pensaban que si capturaban a Luisa, su esposo el general se rendiría! Pero Luisa fue más fuerte que todos sus planes."
+  },
+  {
+    "pregunta": "¿Qué hacían las mujeres espías para pasar información sin ser descubiertas?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de dos mujeres venezolanas del siglo XIX susurrando en la calle colonial, una le pasa un pequeño papel doblado a la otra mientras finge ajustarse el vestido. Soldados españoles pasan de fondo sin notar nada.",
+    "opciones": [
+      "Usaban walkie-talkies de madera",
+      "Lanzaban palomas de chocolate",
+      "Pasaban mensajes secretos escondidos en ropa y cabello",
+      "Enviaban correos electrónicos coloniales"
+    ],
+    "correcta": 2,
+    "explicacion": "¡Las espías patriotas eran muy astutas! Escondían mensajes en su ropa o cabello y los pasaban disimuladamente para que nadie las descubriera.",
+    "dato_curioso": "¡Gracias a esas espías, los generales patriotas sabían los planes del enemigo! La información era un arma secreta poderosa."
+  },
+  {
+    "pregunta": "¿Qué libertad defendieron las mujeres de la independencia venezolana?",
+    "tipo": "texto",
+    "opciones": [
+      "La libertad de comer más helado",
+      "La libertad de Venezuela del dominio español",
+      "La libertad de los dragones voladores",
+      "La libertad de jugar videojuegos coloniales"
+    ],
+    "correcta": 1,
+    "explicacion": "¡Las mujeres lucharon para que Venezuela fuera libre de España! Querían que su país se gobernara solo, sin reyes extranjeros.",
+    "dato_curioso": "¡Venezuela logró su independencia definitiva en 1821 en la Batalla de Carabobo! Y las mujeres tuvieron mucho que ver en esa victoria."
+  },
+  {
+    "pregunta": "¿Qué imagen famosa representa a Juana La Avanzadora?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración dinámica de Juana La Avanzadora corriendo hacia adelante en plena batalla, con explosiones de cañón detrás, cargando un cántaro de agua y una bolsa de suministros, con expresión de determinación absoluta y cabello suelto al viento.",
+    "opciones": [
+      "Una señora durmiendo la siesta",
+      "Una cocinera haciendo arepas tranquila",
+      "Una mujer corriendo con suministros bajo el fuego enemigo",
+      "Una princesa en un castillo"
+    ],
+    "correcta": 2,
+    "explicacion": "¡La imagen más famosa de Juana es ella corriendo con agua y suministros mientras el campo de batalla ardía a su alrededor! Era increíblemente valiente.",
+    "dato_curioso": "¡Juana La Avanzadora tiene monumentos y estatuas en Venezuela! Su historia se enseña en las escuelas para inspirar a todos los niños."
+  },
+  {
+    "pregunta": "¿Qué apodo le pusieron a Juana por su valentía?",
+    "tipo": "texto",
+    "opciones": [
+      "Juana La Dormilona",
+      "Juana La Avanzadora",
+      "Juana La Cocinera",
+      "Juana La Bailarina"
+    ],
+    "correcta": 1,
+    "explicacion": "¡La llamaron Juana La Avanzadora porque siempre avanzaba hacia el peligro! Nunca retrocedía ni aunque todos dispararan.",
+    "dato_curioso": "¡Su nombre real era Juana Ramírez! El apodo La Avanzadora lo ganó por su valentía sin límites en las batallas patriotas."
+  },
+  {
+    "pregunta": "¿En qué estado de Venezuela está la Batalla de Alto de los Godos?",
+    "tipo": "texto",
+    "opciones": [
+      "En la luna venezolana",
+      "En el fondo del mar Caribe",
+      "En el Estado Monagas",
+      "En una estrella lejana"
+    ],
+    "correcta": 2,
+    "explicacion": "¡La Batalla de Alto de los Godos fue en el Estado Monagas! Allí fue donde Juana La Avanzadora demostró toda su valentía.",
+    "dato_curioso": "¡El Estado Monagas se llama así en honor al general José Tadeo Monagas! Tiene selvas bonitas y mucho petróleo venezolano."
+  },
+  {
+    "pregunta": "¿Qué hacía Luisa Cáceres en prisión para resistir al enemigo?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de Luisa Cáceres en una celda colonial con luz que entra por una pequeña ventana con rejas, sentada con postura erguida y digna, negando con la cabeza a un soldado español que intenta interrogarla con documentos en la mano.",
+    "opciones": [
+      "Le contaba todos los secretos al enemigo",
+      "Cocinaba tamales para los guardias",
+      "Cantaba canciones de cuna todo el día",
+      "Guardaba silencio y no traicionaba a nadie"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Luisa guardaba silencio y se negaba a hablar! Los españoles querían saber los secretos de los patriotas pero ella jamás los reveló.",
+    "dato_curioso": "¡Su resistencia en prisión duró meses y meses! Su fuerza de voluntad era tan grande como una montaña venezolana."
+  },
+  {
+    "pregunta": "¿Cómo comparamos la valentía de las mujeres patriotas con la de los soldados?",
+    "tipo": "texto",
+    "opciones": [
+      "Las mujeres eran mucho menos valientes",
+      "Solo los hombres eran valientes",
+      "Las mujeres no hacían nada importante",
+      "Su valentía era igual de grande que la de cualquier soldado"
+    ],
+    "correcta": 3,
+    "explicacion": "¡La valentía de las mujeres patriotas era tan enorme como la de cualquier soldado hombre! Ellas también arriesgaron su vida por Venezuela.",
+    "dato_curioso": "¡Hoy en Venezuela se reconoce que tanto hombres como mujeres construyeron la independencia juntos! Todos fueron igualmente importantes."
+  },
+  {
+    "pregunta": "¿Qué tienen en común Juana, Luisa y Josefa?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de tres mujeres venezolanas del siglo XIX lado a lado: Juana La Avanzadora con un cántaro, Luisa Cáceres con expresión de dignidad, y Josefa Camejo con uniforme militar. Las tres sosteniendo la bandera venezolana de la independencia juntas.",
+    "opciones": [
+      "Las tres fueron heroínas de la independencia venezolana",
+      "Las tres eran hadas mágicas",
+      "Las tres cocinaban las mejores arepas",
+      "Las tres tenían poderes de superhéroe"
+    ],
+    "correcta": 0,
+    "explicacion": "¡Juana, Luisa y Josefa fueron todas heroínas de la independencia! Cada una a su manera luchó para que Venezuela fuera libre.",
+    "dato_curioso": "¡Venezuela tiene muchas más heroínas que no son tan famosas! Pero poco a poco los historiadores las están descubriendo y contando su historia."
+  },
+  {
+    "pregunta": "¿Qué tipo de trabajo hacían las mujeres antes de que empezara la guerra de independencia?",
+    "tipo": "texto",
+    "opciones": [
+      "Eran astronautas coloniales",
+      "Dirigían el ejército español",
+      "Cuidaban el hogar y la familia principalmente",
+      "Manejaban automóviles del siglo XVIII"
+    ],
+    "correcta": 2,
+    "explicacion": "¡En esa época la mayoría de las mujeres cuidaban su casa y su familia! Por eso fue aún más sorprendente y valiente que se unieran a la guerra.",
+    "dato_curioso": "¡Cuando las mujeres decidieron luchar por la independencia, rompieron todas las reglas de su tiempo! Fueron verdaderamente revolucionarias."
+  },
+  {
+    "pregunta": "¿Cómo se llama la región que liberó Josefa Camejo?",
+    "tipo": "texto",
+    "opciones": [
+      "La Región de la Torta de Chocolate",
+      "La Isla de los Dinosaurios",
+      "El Valle de los Unicornios",
+      "La Península de Paraguaná"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Josefa Camejo liberó la Península de Paraguaná en el estado Falcón! Expulsó a los soldados españoles de esa región.",
+    "dato_curioso": "¡Paraguaná tiene las refinerías de petróleo más grandes del mundo! Hoy es un lugar muy importante para Venezuela."
+  },
+  {
+    "pregunta": "¿Qué les daban las mujeres a los soldados heridos en los campamentos?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración tierna de una mujer venezolana del siglo XIX vendando el brazo de un soldado patriota herido, sentado en una roca. En el fondo hay otros soldados descansando. La mujer tiene una expresión de cuidado y concentración.",
+    "opciones": [
+      "Cuidados médicos y vendajes para sus heridas",
+      "Juguetes de madera para animarlos",
+      "Chistes para hacerlos reír",
+      "Lecciones de baile para que sanaran bailando"
+    ],
+    "correcta": 0,
+    "explicacion": "¡Las mujeres de los campamentos eran como enfermeras! Limpiaban las heridas, las vendaban y daban medicamentos para que los soldados se mejoraran.",
+    "dato_curioso": "¡Sin esas mujeres que curaban heridas, muchos más soldados hubieran muerto en la guerra! Salvaron muchísimas vidas venezolanas."
+  },
+  {
+    "pregunta": "¿Por qué es importante recordar a las heroínas venezolanas hoy?",
+    "tipo": "texto",
+    "opciones": [
+      "Para ganar puntos en un videojuego",
+      "Porque aparecen en películas de Hollywood",
+      "Porque su valentía ayudó a construir Venezuela libre",
+      "Porque fabricaron las primeras arepas de Venezuela"
+    ],
+    "correcta": 2,
+    "explicacion": "¡Recordamos a las heroínas porque su valor y sacrificio fue lo que hizo posible que Venezuela fuera un país libre! Se lo debemos todo.",
+    "dato_curioso": "¡Cada vez más escuelas y parques llevan los nombres de estas heroínas! Así Venezuela nunca olvida a sus mujeres más valientes."
+  },
+  {
+    "pregunta": "¿Cómo se llamaba el esposo general de Luisa Cáceres de Arismendi?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Retrato ilustrado estilo colonial de dos personas: Juan Bautista Arismendi con uniforme de general patriota venezolano y sombrero militar, junto a Luisa Cáceres con vestido de la época. Fondo de una casa colonial venezolana.",
+    "opciones": [
+      "Simón Chocolívar",
+      "Juan Bautista Arismendi",
+      "Pedro El General Famoso",
+      "Carlos El Cocinero Militar"
+    ],
+    "correcta": 1,
+    "explicacion": "¡El esposo de Luisa era el General Juan Bautista Arismendi! Era uno de los generales más importantes de la independencia venezolana.",
+    "dato_curioso": "¡Los españoles capturaron a Luisa para presionar al general Arismendi! Pero ni Luisa habló ni el general se rindió. ¡Eran una familia de acero!"
+  },
+  {
+    "pregunta": "¿Cuántas mujeres aproximadamente se disfrazaron de hombre para pelear?",
+    "tipo": "texto",
+    "opciones": [
+      "Exactamente cero, eso era imposible",
+      "Miles y miles de ellas",
+      "Se sabe que algunas lo hicieron",
+      "Solo una mujer en todo el mundo"
+    ],
+    "correcta": 2,
+    "explicacion": "¡Se sabe que algunas mujeres sí se disfrazaron de hombre! No sabemos exactamente cuántas, pero su valentía fue real y documentada.",
+    "dato_curioso": "¡Ese tipo de coraje existió en muchos países durante las guerras de independencia de América! Las mujeres venezolanas no eran las únicas."
+  },
+  {
+    "pregunta": "¿Qué significa que Josefa fue nombrada Teniente?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de una ceremonia militar sencilla en campo abierto: un oficial patriota venezolano pone una charretera o insignia en el hombro del uniforme de Josefa Camejo mientras varios soldados observan y aplauden. Ambiente de orgullo y reconocimiento.",
+    "opciones": [
+      "Que la dejaron comer en la cantina militar",
+      "Que le dieron un caballo rosado de regalo",
+      "Que la nombraron reina de Venezuela",
+      "Que reconocieron su valentía con un rango militar oficial"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Que Josefa fuera Teniente significaba que los patriotas reconocieron oficialmente su mando y su valentía! Era un honor enorme en esa época.",
+    "dato_curioso": "¡Teniente es un grado militar que da autoridad sobre otros soldados! Josefa podía dar órdenes a hombres, lo cual era increíble para 1821."
+  },
+  {
+    "pregunta": "¿Cuál de estas mujeres fue capturada por los soldados españoles?",
+    "tipo": "texto",
+    "opciones": [
+      "Josefa Camejo",
+      "Juana La Avanzadora",
+      "Luisa Cáceres de Arismendi",
+      "Todas fueron capturadas al mismo tiempo"
+    ],
+    "correcta": 2,
+    "explicacion": "¡Luisa Cáceres de Arismendi fue la que capturaron los españoles! La metieron en la cárcel pero ella nunca habló ni traicionó a nadie.",
+    "dato_curioso": "¡Luisa fue capturada en la Isla Margarita! Esa isla hoy es famosa por sus playas hermosas y sus perlas preciosas."
+  },
+  {
+    "pregunta": "¿Para qué servían los mensajes que pasaban las mujeres espías?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de un general patriota venezolano leyendo un pequeño papel enrollado con expresión de sorpresa y alivio, rodeado de oficiales. En el fondo, una mujer patriota que acaba de entregar el mensaje espera de pie con discreción.",
+    "opciones": [
+      "Para informar sobre los movimientos y planes del enemigo",
+      "Para pedir recetas de cocina",
+      "Para invitar a fiestas de cumpleaños coloniales",
+      "Para pedir permiso para salir de paseo"
+    ],
+    "correcta": 0,
+    "explicacion": "¡Los mensajes secretos decían dónde estaban los soldados españoles y cuáles eran sus planes! Eso ayudaba a los patriotas a ganar las batallas.",
+    "dato_curioso": "¡La información secreta era tan valiosa como las armas! A veces un mensaje a tiempo podía salvar a todo un ejército entero."
+  },
+  {
+    "pregunta": "¿Qué sentimiento movía a las mujeres heroínas a arriesgar su vida?",
+    "tipo": "texto",
+    "opciones": [
+      "Querer ganar un trofeo de oro",
+      "Amor por Venezuela y deseo de libertad",
+      "Ganas de aparecer en las monedas",
+      "Aburrimiento de estar en casa"
+    ],
+    "correcta": 1,
+    "explicacion": "¡Las heroínas amaban tanto a Venezuela que prefirieron arriesgar su vida antes que vivir bajo el dominio español! El amor a la patria las hacía fuertes.",
+    "dato_curioso": "¡Ese mismo amor por Venezuela sigue vivo hoy en el corazón de todos los venezolanos! Las heroínas nos enseñaron que Venezuela vale la pena."
+  },
+  {
+    "pregunta": "¿Dónde está ubicada la Isla Margarita donde estuvo presa Luisa?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Mapa ilustrado de Venezuela con la Isla Margarita resaltada en color dorado en el Mar Caribe, al norte del país. El mapa tiene colores vivos y la isla tiene un pequeño dibujo de una fortaleza colonial y palmeras.",
+    "opciones": [
+      "En el Amazonas profundo",
+      "En el Lago de Maracaibo",
+      "En el Mar Caribe al norte de Venezuela",
+      "Flotando en el Océano Atlántico lejano"
+    ],
+    "correcta": 2,
+    "explicacion": "¡La Isla Margarita está en el Mar Caribe, al norte de Venezuela! Es famosa por sus playas y fue el lugar donde encerraron a Luisa.",
+    "dato_curioso": "¡Margarita se llama así por las perlas que los indígenas encontraban ahí! En latín, 'margarita' significa perla. ¡Hermoso nombre para una isla!"
+  },
+  {
+    "pregunta": "¿Qué lección nos enseñan las heroínas de la independencia venezolana?",
+    "tipo": "texto",
+    "opciones": [
+      "Que solo los hombres pueden ser valientes",
+      "Que la guerra es divertida y fácil",
+      "Que Venezuela nunca necesitó independencia",
+      "Que todos, sin importar quién seas, pueden luchar por la libertad"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Las heroínas nos enseñan que cualquier persona, hombre o mujer, puede ser valiente y luchar por lo que es justo y bueno!",
+    "dato_curioso": "¡Hoy en Venezuela las mujeres pueden hacer cualquier trabajo que quieran, incluyendo ser militares! Juana, Luisa y Josefa abrieron ese camino."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cómo se llama la valiente señora que cargó agua y comida a los soldados en la batalla?",
+    "tipo": "texto",
+    "opciones": [
+      "Josefa Camejo",
+      "Juana La Avanzadora",
+      "La Señora Tortilla",
+      "Luisa Cáceres"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: ¡Juana La Avanzadora corría bajo las balas enemigas para llevar agua, comida y municiones a los soldados! ¡Era superfuerte y supervaliente!",
+    "dato_curioso": "Repaso curioso: La gente la llamaba 'La Avanzadora' porque siempre avanzaba hacia el peligro sin miedo. ¡Era más valiente que muchos soldados!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: En qué batalla famosa ayudó Juana La Avanzadora a los patriotas?",
+    "tipo": "texto",
+    "opciones": [
+      "La Batalla de Alto de los Godos",
+      "La Batalla del Helado",
+      "La Batalla de las Estrellas",
+      "La Batalla de la Pizza"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: ¡Juana ayudó en la Batalla de Alto de los Godos! Corría llevando cosas importantes a los soldados mientras llovían balas.",
+    "dato_curioso": "Repaso curioso: Alto de los Godos está en el Estado Monagas, Venezuela. ¡Fue una batalla muy importante para ganar la independencia!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué cargaba Juana La Avanzadora para los soldados bajo el fuego enemigo?",
+    "tipo": "texto",
+    "opciones": [
+      "Pasteles y tortas",
+      "Flores y perfumes",
+      "Juguetes y dulces",
+      "Agua, comida y municiones"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: ¡Juana cargaba agua para que los soldados no se deshidrataran, comida para que tuvieran energía y municiones para que pudieran disparar!",
+    "dato_curioso": "Repaso curioso: ¡Cargar esas cosas mientras todos disparaban era peligrosísimo! Pero Juana no se detuvo ni un solo segundo."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué le pasó a Luisa Cáceres de Arismendi cuando la capturaron los españoles?",
+    "tipo": "texto",
+    "opciones": [
+      "Le dieron un caballo",
+      "La invitaron a tomar té",
+      "La pusieron en prisión embarazada",
+      "La mandaron de vacaciones"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: ¡Luisa fue capturada cuando estaba embarazada y la metieron en una prisión muy fea! Pero nunca le dijo secretos a los enemigos.",
+    "dato_curioso": "Repaso curioso: ¡Aunque Luisa sufrió muchísimo en prisión, jamás traicionó a sus amigos patriotas! Su valentía fue enorme y gigante."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué perdió Luisa Cáceres de Arismendi mientras estaba presa?",
+    "tipo": "texto",
+    "opciones": [
+      "A su bebé recién nacido",
+      "Su receta de arepas",
+      "Su colección de muñecas",
+      "Sus zapatos de fiesta"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: Luisa perdió a su bebé mientras estaba en la prisión española. Fue algo muy triste, pero aun así nunca traicionó a los patriotas.",
+    "dato_curioso": "Repaso curioso: Luisa Cáceres de Arismendi es considerada una heroína nacional. ¡Hay calles, escuelas y hasta un estado que honran su nombre!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué nunca hizo Luisa Cáceres de Arismendi aunque la torturaron y la metieron presa?",
+    "tipo": "texto",
+    "opciones": [
+      "Nunca aprendió a leer",
+      "Nunca comió vegetales",
+      "Nunca traicionó a los patriotas",
+      "Nunca peinó su cabello"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: ¡Luisa nunca le contó los secretos de los patriotas a los españoles! Prefirió sufrir antes que traicionar a su gente.",
+    "dato_curioso": "Repaso curioso: ¡Su historia es tan poderosa que la pusieron en los libros de historia de Venezuela! Es una de las mujeres más valientes que ha existido."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué hizo Josefa Camejo para ayudar a la independencia venezolana?",
+    "tipo": "texto",
+    "opciones": [
+      "Cocinó tamales gigantes",
+      "Organizó un carnaval enorme",
+      "Decoró el palacio presidencial",
+      "Lideró una guerrilla y liberó Paraguaná"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: ¡Josefa Camejo fue jefa de un grupo de guerrilleros y liberó la región de Paraguaná en Falcón! ¡Era como una capitana de verdad!",
+    "dato_curioso": "Repaso curioso: ¡Josefa fue tan valiente que la nombraron Teniente! Era muy raro que una mujer tuviera ese título militar en esa época."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: En qué parte de Venezuela luchó Josefa Camejo?",
+    "tipo": "texto",
+    "opciones": [
+      "En una nube de Caracas",
+      "En el Orinoco submarino",
+      "En la luna venezolana",
+      "En Paraguaná, Falcón"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: ¡Josefa luchó en la Península de Paraguaná, que está en el Estado Falcón! Liberó esa zona de los soldados españoles.",
+    "dato_curioso": "Repaso curioso: ¡Paraguaná es una península que parece una isla porque casi está rodeada de mar! Josefa la liberó con mucho coraje."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué título militar le dieron a Josefa Camejo por su valentía?",
+    "tipo": "texto",
+    "opciones": [
+      "Teniente",
+      "Princesa del Caribe",
+      "Directora de Bailes",
+      "Cocinera Mayor"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: ¡A Josefa la nombraron Teniente! Ese es un rango militar de verdad. ¡Fue una de las primeras mujeres oficiales en la historia venezolana!",
+    "dato_curioso": "Repaso curioso: En esa época las mujeres casi no podían ser soldados. ¡Josefa rompió todas las reglas con su valentía increíble!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Dónde escondían los mensajes secretos algunas mujeres espías patriotas?",
+    "tipo": "texto",
+    "opciones": [
+      "En un dragón de papel",
+      "En una torta de cumpleaños",
+      "En el cabello y la ropa",
+      "Dentro de un caimán"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: ¡Las mujeres espías escondían mensajes enrolladitos en su cabello o dentro de los dobleces de su ropa para que los soldados enemigos no los encontraran!",
+    "dato_curioso": "Repaso curioso: ¡Eran tan listas que los soldados españoles casi nunca las descubrían! Pasaban secretos importantísimos sin que nadie lo supiera."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cuántas mujeres aproximadamente participaron activamente en la independencia venezolana?",
+    "tipo": "texto",
+    "opciones": [
+      "Juana La Avanzadora",
+      "Más de 200 mujeres",
+      "La Batalla de Alto de los Godos",
+      "Agua, comida y municiones"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: ¡Más de 200 mujeres participaron activamente en la independencia de Venezuela! Eran soldadas, espías, enfermeras y mucho más.",
+    "dato_curioso": "Dato para profundizar: ¡Muchas de esas 200 mujeres no son tan famosas en los libros, pero fueron igualmente valientes! Sus historias merecen ser contadas."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué hacían muchas mujeres en los campamentos de los soldados patriotas?",
+    "tipo": "texto",
+    "opciones": [
+      "La Batalla de Alto de los Godos",
+      "Preparaban comida y curaban a los heridos",
+      "Agua, comida y municiones",
+      "Juana La Avanzadora"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: ¡Las mujeres en los campamentos cocinaban la comida para que los soldados tuvieran energía y curaban a los heridos después de las batallas!",
+    "dato_curioso": "Dato para profundizar: ¡Sin esas mujeres cocinando y curando, muchos soldados patriotas hubieran muerto de hambre o de sus heridas! Eran indispensables."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué hacían algunas mujeres muy valientes para unirse directamente al ejército?",
+    "tipo": "texto",
+    "opciones": [
+      "Agua, comida y municiones",
+      "La Batalla de Alto de los Godos",
+      "Se disfrazaban de hombre",
+      "Juana La Avanzadora"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: ¡Algunas mujeres se cortaban el pelo y se ponían ropa de hombre para poder unirse al ejército y pelear junto a los soldados!",
+    "dato_curioso": "Dato para profundizar: ¡Era muy peligroso porque si las descubrían podían meterlas presas! Pero su amor por la libertad era más grande que el miedo."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cómo se llamaba la señora que lideró guerrilleros en el estado Falcón?",
+    "tipo": "texto",
+    "opciones": [
+      "Juana La Avanzadora",
+      "Josefa Camejo",
+      "La Batalla de Alto de los Godos",
+      "Agua, comida y municiones"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: ¡Josefa Camejo fue la líder guerrillera que liberó Paraguaná en el estado Falcón! Era una jefa de verdad.",
+    "dato_curioso": "Dato para profundizar: ¡El 8 de marzo, Día Internacional de la Mujer, se recuerda especialmente a heroínas como Josefa! Su historia es un tesoro venezolano."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cuál era el trabajo más peligroso que hacía Juana La Avanzadora?",
+    "tipo": "texto",
+    "opciones": [
+      "Agua, comida y municiones",
+      "La Batalla de Alto de los Godos",
+      "Juana La Avanzadora",
+      "Correr bajo las balas llevando suministros"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: ¡Juana corría por el campo de batalla mientras los soldados españoles disparaban! Llevaba lo que los patriotas necesitaban sin parar.",
+    "dato_curioso": "Dato para profundizar: ¡Juana sobrevivió todas esas batallas! Su valentía le salvó la vida a muchos soldados patriotas venezolanos."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: De qué época es la historia de las heroínas de la independencia venezolana?",
+    "tipo": "texto",
+    "opciones": [
+      "La Batalla de Alto de los Godos",
+      "Juana La Avanzadora",
+      "Entre 1810 y 1821",
+      "Agua, comida y municiones"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: ¡Las heroínas de la independencia vivieron entre 1810 y 1821! Esos fueron los años en que Venezuela luchó para ser libre.",
+    "dato_curioso": "Dato para profundizar: ¡Venezuela declaró su independencia el 5 de julio de 1811! Ese día todavía lo celebramos con fuegos artificiales y fiestas."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cómo se llamaba el esposo de Luisa Cáceres de Arismendi?",
+    "tipo": "texto",
+    "opciones": [
+      "Agua, comida y municiones",
+      "La Batalla de Alto de los Godos",
+      "Juana La Avanzadora",
+      "Juan Bautista Arismendi"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: ¡El esposo de Luisa se llamaba Juan Bautista Arismendi y era un general patriota importante! Por eso los españoles capturaron a Luisa.",
+    "dato_curioso": "Dato para profundizar: ¡Los españoles pensaban que si capturaban a Luisa, su esposo el general se rendiría! Pero Luisa fue más fuerte que todos sus planes."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué hacían las mujeres espías para pasar información sin ser descubiertas?",
+    "tipo": "texto",
+    "opciones": [
+      "Pasaban mensajes secretos escondidos en ropa y cabello",
+      "Agua, comida y municiones",
+      "La Batalla de Alto de los Godos",
+      "Juana La Avanzadora"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: ¡Las espías patriotas eran muy astutas! Escondían mensajes en su ropa o cabello y los pasaban disimuladamente para que nadie las descubriera.",
+    "dato_curioso": "Dato para profundizar: ¡Gracias a esas espías, los generales patriotas sabían los planes del enemigo! La información era un arma secreta poderosa."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué libertad defendieron las mujeres de la independencia venezolana?",
+    "tipo": "texto",
+    "opciones": [
+      "La libertad de Venezuela del dominio español",
+      "La Batalla de Alto de los Godos",
+      "Juana La Avanzadora",
+      "Agua, comida y municiones"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: ¡Las mujeres lucharon para que Venezuela fuera libre de España! Querían que su país se gobernara solo, sin reyes extranjeros.",
+    "dato_curioso": "Dato para profundizar: ¡Venezuela logró su independencia definitiva en 1821 en la Batalla de Carabobo! Y las mujeres tuvieron mucho que ver en esa victoria."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué imagen famosa representa a Juana La Avanzadora?",
+    "tipo": "texto",
+    "opciones": [
+      "Una mujer corriendo con suministros bajo el fuego enemigo",
+      "Juana La Avanzadora",
+      "La Batalla de Alto de los Godos",
+      "Agua, comida y municiones"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: ¡La imagen más famosa de Juana es ella corriendo con agua y suministros mientras el campo de batalla ardía a su alrededor! Era increíblemente valiente.",
+    "dato_curioso": "Dato para profundizar: ¡Juana La Avanzadora tiene monumentos y estatuas en Venezuela! Su historia se enseña en las escuelas para inspirar a todos los niños."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué apodo le pusieron a Juana por su valentía?",
+    "tipo": "texto",
+    "opciones": [
+      "Juana La Dormilona",
+      "Juana La Cocinera",
+      "Juana La Bailarina",
+      "Juana La Avanzadora"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: ¡La llamaron Juana La Avanzadora porque siempre avanzaba hacia el peligro! Nunca retrocedía ni aunque todos dispararan.",
+    "dato_curioso": "Ampliación histórica: ¡Su nombre real era Juana Ramírez! El apodo La Avanzadora lo ganó por su valentía sin límites en las batallas patriotas."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: En qué estado de Venezuela está la Batalla de Alto de los Godos?",
+    "tipo": "texto",
+    "opciones": [
+      "En una estrella lejana",
+      "En el fondo del mar Caribe",
+      "En el Estado Monagas",
+      "En la luna venezolana"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: ¡La Batalla de Alto de los Godos fue en el Estado Monagas! Allí fue donde Juana La Avanzadora demostró toda su valentía.",
+    "dato_curioso": "Ampliación histórica: ¡El Estado Monagas se llama así en honor al general José Tadeo Monagas! Tiene selvas bonitas y mucho petróleo venezolano."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué hacía Luisa Cáceres en prisión para resistir al enemigo?",
+    "tipo": "texto",
+    "opciones": [
+      "Le contaba todos los secretos al enemigo",
+      "Cantaba canciones de cuna todo el día",
+      "Guardaba silencio y no traicionaba a nadie",
+      "Cocinaba tamales para los guardias"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: ¡Luisa guardaba silencio y se negaba a hablar! Los españoles querían saber los secretos de los patriotas pero ella jamás los reveló.",
+    "dato_curioso": "Ampliación histórica: ¡Su resistencia en prisión duró meses y meses! Su fuerza de voluntad era tan grande como una montaña venezolana."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cómo comparamos la valentía de las mujeres patriotas con la de los soldados?",
+    "tipo": "texto",
+    "opciones": [
+      "Las mujeres no hacían nada importante",
+      "Solo los hombres eran valientes",
+      "Las mujeres eran mucho menos valientes",
+      "Su valentía era igual de grande que la de cualquier soldado"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: ¡La valentía de las mujeres patriotas era tan enorme como la de cualquier soldado hombre! Ellas también arriesgaron su vida por Venezuela.",
+    "dato_curioso": "Ampliación histórica: ¡Hoy en Venezuela se reconoce que tanto hombres como mujeres construyeron la independencia juntos! Todos fueron igualmente importantes."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué tienen en común Juana, Luisa y Josefa?",
+    "tipo": "texto",
+    "opciones": [
+      "Las tres cocinaban las mejores arepas",
+      "Las tres eran hadas mágicas",
+      "Las tres tenían poderes de superhéroe",
+      "Las tres fueron heroínas de la independencia venezolana"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: ¡Juana, Luisa y Josefa fueron todas heroínas de la independencia! Cada una a su manera luchó para que Venezuela fuera libre.",
+    "dato_curioso": "Ampliación histórica: ¡Venezuela tiene muchas más heroínas que no son tan famosas! Pero poco a poco los historiadores las están descubriendo y contando su historia."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué tipo de trabajo hacían las mujeres antes de que empezara la guerra de independencia?",
+    "tipo": "texto",
+    "opciones": [
+      "Manejaban automóviles del siglo XVIII",
+      "Cuidaban el hogar y la familia principalmente",
+      "Eran astronautas coloniales",
+      "Dirigían el ejército español"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: ¡En esa época la mayoría de las mujeres cuidaban su casa y su familia! Por eso fue aún más sorprendente y valiente que se unieran a la guerra.",
+    "dato_curioso": "Ampliación histórica: ¡Cuando las mujeres decidieron luchar por la independencia, rompieron todas las reglas de su tiempo! Fueron verdaderamente revolucionarias."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cómo se llama la región que liberó Josefa Camejo?",
+    "tipo": "texto",
+    "opciones": [
+      "La Región de la Torta de Chocolate",
+      "El Valle de los Unicornios",
+      "La Península de Paraguaná",
+      "La Isla de los Dinosaurios"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: ¡Josefa Camejo liberó la Península de Paraguaná en el estado Falcón! Expulsó a los soldados españoles de esa región.",
+    "dato_curioso": "Ampliación histórica: ¡Paraguaná tiene las refinerías de petróleo más grandes del mundo! Hoy es un lugar muy importante para Venezuela."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué les daban las mujeres a los soldados heridos en los campamentos?",
+    "tipo": "texto",
+    "opciones": [
+      "Chistes para hacerlos reír",
+      "Cuidados médicos y vendajes para sus heridas",
+      "Juguetes de madera para animarlos",
+      "Lecciones de baile para que sanaran bailando"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: ¡Las mujeres de los campamentos eran como enfermeras! Limpiaban las heridas, las vendaban y daban medicamentos para que los soldados se mejoraran.",
+    "dato_curioso": "Ampliación histórica: ¡Sin esas mujeres que curaban heridas, muchos más soldados hubieran muerto en la guerra! Salvaron muchísimas vidas venezolanas."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Por qué es importante recordar a las heroínas venezolanas hoy?",
+    "tipo": "texto",
+    "opciones": [
+      "Para ganar puntos en un videojuego",
+      "Porque aparecen en películas de Hollywood",
+      "Porque fabricaron las primeras arepas de Venezuela",
+      "Porque su valentía ayudó a construir Venezuela libre"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: ¡Recordamos a las heroínas porque su valor y sacrificio fue lo que hizo posible que Venezuela fuera un país libre! Se lo debemos todo.",
+    "dato_curioso": "Ampliación histórica: ¡Cada vez más escuelas y parques llevan los nombres de estas heroínas! Así Venezuela nunca olvida a sus mujeres más valientes."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cómo se llamaba el esposo general de Luisa Cáceres de Arismendi?",
+    "tipo": "texto",
+    "opciones": [
+      "Pedro El General Famoso",
+      "Juan Bautista Arismendi",
+      "Carlos El Cocinero Militar",
+      "Simón Chocolívar"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: ¡El esposo de Luisa era el General Juan Bautista Arismendi! Era uno de los generales más importantes de la independencia venezolana.",
+    "dato_curioso": "Ampliación histórica: ¡Los españoles capturaron a Luisa para presionar al general Arismendi! Pero ni Luisa habló ni el general se rindió. ¡Eran una familia de acero!"
+  }
+]

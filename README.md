@@ -90,7 +90,7 @@ Vene-trivia/
 │   ├── Admin.tscn
 │   ├── menu-alumno.tscn
 │   ├── Opciones.tscn
-│   └── Nivel1.gd               # Script con la lógica pesada del juego
+│   └── Niveles.gd              # Script con la lógica pesada del juego
 ├── 🎮 Nivel 1.tscn / Nivel1.tscn # Escenas del nivel 1 (⚠️ Ver riesgos)
 ├── 🗺️ Mapa.tscn / mapa.gd       # Lógica y UI del mapa de niveles
 ├── 🌐 Scripts Globales/
@@ -177,7 +177,7 @@ iveles: Progreso (puntaje, aciertos, estrellas) mapeado por usuario.
 
 ## 🎮 Sistema de Preguntas y Nivel
 
-El núcleo del juego vive en Scenes/Nivel1.gd.
+El núcleo del juego vive en Scenes/Niveles.gd.
 
 - 📄 **Carga de Datos**: Lee de Jsons/Preguntas nivel 1.json.
 - 🧠 **Lógica**: Selecciona un pool de 15 preguntas dinámicas. Maneja tiempos, puntajes y UI.
@@ -193,7 +193,7 @@ El núcleo del juego vive en Scenes/Nivel1.gd.
 > 🔴 **ATENCIÓN DESARROLLADORES:** Las siguientes áreas representan deuda técnica o bugs conocidos que deben tratarse con prioridad.
 
 1. 💉 **Inyección SQL**: Consultas con strings interpolados usando inputs directos de usuarios (Ej. Login). Requiere usar sentencias parametrizadas.
-2. 🔢 **Métricas Inconsistentes**: En Nivel1.gd, en lugar de sumar "respuestas correctas", suma "puntos brutos" al contador de aciertos en la DB.
+2. 🔢 **Métricas Inconsistentes**: En Niveles.gd, en lugar de sumar "respuestas correctas", suma "puntos brutos" al contador de aciertos en la DB.
 3. 🔗 **Rutas Rotas**: El nivel 1 intenta enrutar a Scenes/Nivel2.tscn, el cual actualmente no existe.
 4. 👯 **Escenas Duplicadas**: Existen Nivel 1.tscn y Nivel1.tscn. Unificarlas es fuertemente recomendado.
 5. 🔓 **Seguridad de Claves**: Contraseñas almacenadas en texto plano.
@@ -209,7 +209,7 @@ El núcleo del juego vive en Scenes/Nivel1.gd.
 - **Signal**: Eventos que comunican nodos (ej. botón presionado).
 
 ### 🐛 Primer bug recomendado para ti
-Inicia tu recorrido corrigiendo la lógica de puntos en Scenes/Nivel1.gd.
+Inicia tu recorrido corrigiendo la lógica de puntos en Scenes/Niveles.gd.
 *¿Por qué?*
 - Es seguro.
 - Te obliga a leer todo el flujo de partida.

@@ -1,0 +1,890 @@
+[
+  {
+    "pregunta": "¿En qué ciudad se realizó el famoso Congreso de Angostura?",
+    "tipo": "texto",
+    "opciones": [
+      "En Caracas, la capital",
+      "En Angostura, hoy Ciudad Bolívar",
+      "En la luna venezolana",
+      "En Maracaibo submarino"
+    ],
+    "correcta": 1,
+    "explicacion": "¡El Congreso de Angostura fue en Angostura, que hoy se llama Ciudad Bolívar! Está en el Estado Bolívar, al sur de Venezuela.",
+    "dato_curioso": "¡La ciudad se llama Ciudad Bolívar en honor a Simón Bolívar! Es una de las ciudades más históricas e importantes de Venezuela."
+  },
+  {
+    "pregunta": "¿En qué fecha se realizó el Congreso de Angostura?",
+    "tipo": "texto",
+    "opciones": [
+      "El 15 de febrero de 1819",
+      "El 5 de julio de 1821",
+      "El 1 de enero del año 2000",
+      "El 25 de diciembre de 1776"
+    ],
+    "correcta": 0,
+    "explicacion": "¡El Congreso de Angostura fue el 15 de febrero de 1819! Esa fecha es muy importante para la historia de Venezuela y de toda América.",
+    "dato_curioso": "¡El 15 de febrero de 1819 es una fecha que todos los venezolanos deberían saber! Fue cuando Bolívar presentó su plan más ambicioso."
+  },
+  {
+    "pregunta": "¿Quién dio el discurso más famoso en el Congreso de Angostura?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de Simón Bolívar de pie ante una tribuna colonial, hablando con elocuencia ante una sala llena de diputados sentados en bancas de madera. Bolívar viste uniforme militar con condecoraciones, señalando hacia adelante con expresión apasionada.",
+    "opciones": [
+      "El presidente de España",
+      "Un robot del futuro",
+      "El rey de Francia en visita",
+      "Simón Bolívar"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Simón Bolívar dio el discurso más importante del Congreso de Angostura! Fue uno de los discursos políticos más brillantes de toda la historia.",
+    "dato_curioso": "¡El Discurso de Angostura sigue siendo estudiado hoy en universidades de todo el mundo! Bolívar era tan inteligente como valiente."
+  },
+  {
+    "pregunta": "¿Qué gran idea propuso Bolívar en el Congreso de Angostura?",
+    "tipo": "texto",
+    "opciones": [
+      "Construir la muralla más grande del mundo",
+      "Unir Venezuela, Colombia, Ecuador y Panamá en un solo país",
+      "Pintar todos los edificios de amarillo",
+      "Inventar el primer avión venezolano"
+    ],
+    "correcta": 1,
+    "explicacion": "¡Bolívar quería unir cuatro países en uno solo para ser más fuertes juntos! Ese gran país se llamaría La Gran Colombia.",
+    "dato_curioso": "¡Era una idea increíblemente ambiciosa para esa época! Bolívar soñaba con una América Latina unida y poderosa. ¡Era un verdadero visionario!"
+  },
+  {
+    "pregunta": "¿Cómo se llamó el gran país que quería crear Bolívar?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Mapa colorido de América del Sur que muestra los contornos de La Gran Colombia resaltados en dorado, incluyendo los territorios de Venezuela, Colombia, Ecuador y Panamá fusionados en uno solo. Una estrella brillante marca a Angostura como capital inicial.",
+    "opciones": [
+      "La Mega Venezuela",
+      "El Super País Latino",
+      "La Gran Colombia",
+      "El Imperio del Cacao"
+    ],
+    "correcta": 2,
+    "explicacion": "¡El gran país que soñó Bolívar se llamó La Gran Colombia! Era una nación enorme que juntaba Venezuela, Colombia, Ecuador y Panamá.",
+    "dato_curioso": "¡La Gran Colombia sería hoy uno de los países más grandes y poderosos de América del Sur! El sueño de Bolívar era gigantesco."
+  },
+  {
+    "pregunta": "¿Cuántos países quería unir Bolívar en La Gran Colombia?",
+    "tipo": "texto",
+    "opciones": [
+      "Todos los países del planeta",
+      "Solo Venezuela y nada más",
+      "Doscientos países juntos",
+      "Cuatro países: Venezuela, Colombia, Ecuador y Panamá"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Bolívar quería unir exactamente cuatro países! Venezuela, Colombia, Ecuador y Panamá serían uno solo y muy poderoso.",
+    "dato_curioso": "¡Imagínate si hoy esos cuatro países siguieran siendo uno! Sería un país enorme con costas en el Atlántico, el Pacífico y el Mar Caribe."
+  },
+  {
+    "pregunta": "¿Cuántos años duró La Gran Colombia antes de separarse?",
+    "tipo": "texto",
+    "opciones": [
+      "Solo 12 años, de 1819 a 1831",
+      "500 años felices",
+      "Solo un día muy corto",
+      "Todavía existe hoy"
+    ],
+    "correcta": 0,
+    "explicacion": "¡La Gran Colombia solo duró 12 años! Se formó en 1819 y se separó en 1831. El sueño de Bolívar no pudo mantenerse junto.",
+    "dato_curioso": "¡Bolívar quedó muy triste cuando La Gran Colombia se separó! Dijo una frase muy famosa y melancólica sobre ese fracaso."
+  },
+  {
+    "pregunta": "¿Qué triste frase dijo Bolívar cuando La Gran Colombia fracasó?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de un Simón Bolívar envejecido, sentado mirando al horizonte con expresión de tristeza y decepción. Tiene el uniforme deshecho y una mirada melancólica. Encima de él una nube con el texto de su famosa frase.",
+    "opciones": [
+      "¡Qué rico estuvo el desayuno!",
+      "¡Viva la pizza venezolana siempre!",
+      "He arado en el mar",
+      "Mañana lo intento de nuevo tranquilamente"
+    ],
+    "correcta": 2,
+    "explicacion": "¡Bolívar dijo 'He arado en el mar' para decir que todo su esfuerzo fue en vano, como si arar el mar sin tierra no sirviera para nada!",
+    "dato_curioso": "¡Arar en el mar significa trabajar sin que nada crezca! Bolívar murió decepcionado, pero su legado es inmenso e inmortal para siempre."
+  },
+  {
+    "pregunta": "¿Cómo se llama hoy la ciudad de Angostura?",
+    "tipo": "texto",
+    "opciones": [
+      "Angostura City modernamente",
+      "Ciudad Bolívar",
+      "Caracas del Sur",
+      "Angostura para siempre"
+    ],
+    "correcta": 1,
+    "explicacion": "¡Angostura se llama hoy Ciudad Bolívar! Le cambiaron el nombre en honor al gran libertador Simón Bolívar.",
+    "dato_curioso": "¡Ciudad Bolívar está a orillas del Río Orinoco, el río más largo de Venezuela! Es una ciudad muy antigua y llena de historia preciosa."
+  },
+  {
+    "pregunta": "¿En qué estado venezolano está Ciudad Bolívar?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Mapa ilustrado de Venezuela con el Estado Bolívar resaltado en color naranja brillante al sur del país. Ciudad Bolívar está marcada con una estrella dorada a orillas del Río Orinoco. El mapa tiene colores vivos y amigables para niños.",
+    "opciones": [
+      "En el Estado Zulia al oeste",
+      "En el Estado Mérida con nieve",
+      "En el Estado Luna que no existe",
+      "En el Estado Bolívar al sur"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Ciudad Bolívar está en el Estado Bolívar, al sur de Venezuela! Es un estado enorme que casi llega hasta Brasil.",
+    "dato_curioso": "¡El Estado Bolívar es el estado más grande de Venezuela! Tiene selvas increíbles, tepuyes mágicos y el Salto Ángel, la catarata más alta del mundo."
+  },
+  {
+    "pregunta": "¿Qué famosa bebida fue inventada en Angostura?",
+    "tipo": "texto",
+    "opciones": [
+      "El Bitter de Angostura",
+      "El jugo de dinosaurio rojo",
+      "La limonada de Bolívar especial",
+      "El guarapo de luna venezolana"
+    ],
+    "correcta": 0,
+    "explicacion": "¡El Bitter de Angostura fue inventado ahí mismo! Es una mezcla especial de plantas y hierbas que hoy usan cocineros en todo el mundo.",
+    "dato_curioso": "¡El Bitter de Angostura se usa en cocinas y bares de todo el planeta! Es uno de los inventos venezolanos más famosos del mundo entero."
+  },
+  {
+    "pregunta": "¿Dónde se usa hoy el famoso Bitter de Angostura?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración colorida de una botella pequeña y elegante de Bitter de Angostura con etiqueta amarilla característica, rodeada de iconos de banderas de diferentes países del mundo (EE.UU., Francia, Japón, etc.) indicando su uso global.",
+    "opciones": [
+      "Solo en Venezuela y en ningún otro lugar",
+      "Solo en la luna durante las fiestas",
+      "En los cohetes espaciales de la NASA",
+      "En todo el mundo en cocinas y barras"
+    ],
+    "correcta": 3,
+    "explicacion": "¡El Bitter de Angostura se usa hoy en restaurantes y cocinas de todo el mundo! Es famosísimo por su sabor especial a hierbas y especias.",
+    "dato_curioso": "¡La receta del Bitter de Angostura es un secreto que solo conocen muy pocas personas! Como la Coca-Cola, nadie sabe exactamente qué lleva."
+  },
+  {
+    "pregunta": "¿Para qué sirvió el Congreso de Angostura de 1819?",
+    "tipo": "texto",
+    "opciones": [
+      "Para organizar el campeonato de fútbol colonial",
+      "Para elegir al mejor cocinero de Venezuela",
+      "Para crear leyes y organizar el nuevo gobierno libre",
+      "Para repartir chocolates entre todos"
+    ],
+    "correcta": 2,
+    "explicacion": "¡El Congreso de Angostura sirvió para crear las leyes y organizar el gobierno de Venezuela libre! Era como redactar las reglas del nuevo país.",
+    "dato_curioso": "¡Un congreso es una reunión de representantes del pueblo para tomar las decisiones más importantes del país! Es la base de la democracia."
+  },
+  {
+    "pregunta": "¿Por qué el Discurso de Angostura es tan famoso hoy en el mundo?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de un libro abierto con el texto 'Discurso de Angostura' en la portada, rodeado de pequeñas ilustraciones de universidades de diferentes países del mundo: Harvard, Oxford, La Sorbona. Rayos de luz salen del libro como símbolo de conocimiento.",
+    "opciones": [
+      "Porque fue el discurso más cortito de la historia",
+      "Porque contiene ideas tan brillantes que se estudia en universidades del mundo",
+      "Porque lo escribió un niño de cinco años",
+      "Porque es el único discurso con chistes"
+    ],
+    "correcta": 1,
+    "explicacion": "¡El Discurso de Angostura tiene ideas tan inteligentes sobre gobierno y libertad que todavía hoy los estudiantes universitarios lo leen y estudian!",
+    "dato_curioso": "¡Bolívar escribió ese discurso con tanto cuidado que es considerado una obra maestra de la literatura política! Era tan escritor como guerrero."
+  },
+  {
+    "pregunta": "¿Quiénes asistieron al Congreso de Angostura?",
+    "tipo": "texto",
+    "opciones": [
+      "Los reyes de Europa en visita",
+      "Solo Bolívar y su gato mascota",
+      "Superhéroes de distintos países",
+      "Diputados representantes de todo el territorio patriota"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Al Congreso de Angostura asistieron diputados, que son representantes elegidos de los distintos territorios que ya eran libres! Todos juntos para construir la nación.",
+    "dato_curioso": "¡Un diputado es alguien que habla en nombre de la gente de su región! Juntos, los diputados toman las decisiones más importantes del país."
+  },
+  {
+    "pregunta": "¿Cómo llegó Bolívar a Angostura para el famoso congreso?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de Simón Bolívar llegando en barco por el Río Orinoco hacia la ciudad de Angostura, con sus oficiales a bordo. La ciudad colonial se ve en la orilla con gente reunida para recibirlo. Ambiente de expectativa y emoción patriótica.",
+    "opciones": [
+      "Llegó en avión privado supersónico",
+      "Llegó navegando por el Río Orinoco",
+      "Llegó montado en un dragón dorado",
+      "Llegó en submarino secreto patriota"
+    ],
+    "correcta": 1,
+    "explicacion": "¡Bolívar viajó por el majestuoso Río Orinoco para llegar a Angostura! En esa época los ríos eran los caminos principales de Venezuela.",
+    "dato_curioso": "¡El Río Orinoco es el río más largo de Venezuela y uno de los más largos del mundo! Tiene más de 2.000 kilómetros de extensión increíble."
+  },
+  {
+    "pregunta": "¿Qué propuso Bolívar sobre el tipo de gobierno en su discurso?",
+    "tipo": "texto",
+    "opciones": [
+      "Que un rey europeo gobernara Venezuela",
+      "Que un robot gobernara por computadora",
+      "Un gobierno republicano donde el pueblo tuviera poder",
+      "Que las vacas eligieran al presidente"
+    ],
+    "correcta": 2,
+    "explicacion": "¡Bolívar propuso una república donde la gente tuviera poder! No quería reyes ni tiranos, sino un gobierno para el pueblo y por el pueblo.",
+    "dato_curioso": "¡Una república es donde la gente elige a sus gobernantes! Hoy casi todos los países del mundo son repúblicas. Bolívar fue un gran pionero de esa idea."
+  },
+  {
+    "pregunta": "¿Qué sentía Bolívar por la unión de los pueblos latinoamericanos?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de Simón Bolívar con los brazos extendidos abrazando siluetas de personas que representan diferentes países de América Latina, con sus banderas pequeñas. Expresión de amor y sueño en su rostro. Fondo de cielo azul con nubes.",
+    "opciones": [
+      "Indiferencia total por sus vecinos",
+      "Un sueño enorme de verlos unidos y libres",
+      "Miedo de que fueran muy poderosos",
+      "Ganas de competir contra ellos siempre"
+    ],
+    "correcta": 1,
+    "explicacion": "¡Bolívar soñaba con una América Latina unida! Creía que juntos serían más fuertes y nadie podría volver a dominarlos jamás.",
+    "dato_curioso": "¡Por eso Bolívar liberó no solo Venezuela sino también Colombia, Ecuador, Perú y Bolivia! Le pusieron a ese último país su nombre en su honor."
+  },
+  {
+    "pregunta": "¿Qué significa el nombre 'Gran Colombia' para los países que la formaban?",
+    "tipo": "texto",
+    "opciones": [
+      "Que Colombia era más importante que Venezuela",
+      "Que era una gran nación formada por varios países juntos",
+      "Que solo hablaban español colombiano",
+      "Que Colombia le regaló su nombre a Venezuela"
+    ],
+    "correcta": 1,
+    "explicacion": "¡La palabra 'Gran' significaba que era una nación enorme formada por varios países! Era grande en tamaño y en el sueño de Bolívar para América.",
+    "dato_curioso": "¡El nombre 'Colombia' viene de Cristóbal Colón, el explorador que llegó a América en 1492! Era un homenaje al descubrimiento de América."
+  },
+  {
+    "pregunta": "¿Qué pasó con La Gran Colombia después de la muerte de Bolívar?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración del mapa de La Gran Colombia partiéndose en cuatro pedazos separados como un rompecabezas que se desarma, cada pedazo mostrando la bandera de Venezuela, Colombia, Ecuador y Panamá respectivamente. Fondo con colores tristes.",
+    "opciones": [
+      "Se dividió en cuatro países separados",
+      "Siguió unida y creció más todavía",
+      "La conquistó España de nuevo completamente",
+      "Se convirtió en el país más poderoso del mundo"
+    ],
+    "correcta": 0,
+    "explicacion": "¡La Gran Colombia se separó y volvió a ser cuatro países diferentes! Venezuela, Colombia, Ecuador y Panamá tomaron caminos distintos.",
+    "dato_curioso": "¡Hoy esos cuatro países son buenos amigos y vecinos! Aunque ya no son un solo país, comparten historia, idioma y muchas tradiciones hermosas."
+  },
+  {
+    "pregunta": "¿Por qué Bolívar murió decepcionado según los historiadores?",
+    "tipo": "texto",
+    "opciones": [
+      "Porque nunca probó el chocolate venezolano",
+      "Porque perdió todas las batallas militares",
+      "Porque La Gran Colombia se desintegró antes de que muriera",
+      "Porque nunca aprendió a montar a caballo"
+    ],
+    "correcta": 2,
+    "explicacion": "¡Bolívar murió muy triste porque vio cómo La Gran Colombia se rompía! Su sueño más grande se deshacía justo frente a sus ojos.",
+    "dato_curioso": "¡Bolívar murió en 1830 en Santa Marta, Colombia, lejos de su Venezuela querida! Murió enfermo y con el corazón roto por ver su sueño fracasar."
+  },
+  {
+    "pregunta": "¿Cómo se recuerda el Congreso de Angostura en Venezuela hoy?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de un salón histórico restaurado en Ciudad Bolívar, Venezuela, con mesas y sillas coloniales originales, cuadros de los diputados en las paredes y una pequeña bandera venezolana. Turistas admirando el lugar con guía explicando.",
+    "opciones": [
+      "Nadie lo recuerda porque fue aburrido",
+      "Como un error enorme que avergüenza a todos",
+      "Solo lo recuerdan en otros países lejanos",
+      "Como un evento histórico fundamental del que Venezuela está orgullosa"
+    ],
+    "correcta": 3,
+    "explicacion": "¡El Congreso de Angostura se recuerda con mucho orgullo! Fue el momento en que Venezuela empezó a construir su identidad como nación libre.",
+    "dato_curioso": "¡El salón donde se realizó el Congreso de Angostura todavía existe en Ciudad Bolívar! Puedes visitarlo y sentarte donde se hizo historia."
+  },
+  {
+    "pregunta": "¿Qué idioma usó Bolívar para dar su famoso discurso en Angostura?",
+    "tipo": "texto",
+    "opciones": [
+      "En inglés con acento americano",
+      "En español, su idioma natal venezolano",
+      "En latín como los romanos",
+      "En un idioma inventado por él mismo"
+    ],
+    "correcta": 1,
+    "explicacion": "¡Bolívar dio su discurso en español! Era su idioma venezolano, hermoso y poderoso como él mismo.",
+    "dato_curioso": "¡El español de Bolívar era muy elegante y literario! Escribía cartas y discursos con palabras tan bonitas que parecía un poeta además de militar."
+  },
+  {
+    "pregunta": "¿Qué río pasa cerca de Angostura donde se realizó el congreso?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración panorámica del Río Orinoco en su parte angosta cerca de Ciudad Bolívar, con el Puente de Angostura sobre él. Barcos navegan por el río marrón y extenso. Las riberas tienen vegetación tropical exuberante y verde.",
+    "opciones": [
+      "El Río Amazonas del Perú lejano",
+      "El Río Misisipi de los Estados Unidos",
+      "El Río Orinoco, el más largo de Venezuela",
+      "El Río Nilo de África lejana"
+    ],
+    "correcta": 2,
+    "explicacion": "¡El Río Orinoco pasa justo por Ciudad Bolívar! Por eso la ciudad también se llama Angostura, porque ahí el río se angosta y se vuelve más estrecho.",
+    "dato_curioso": "¡Angostura significa 'parte estrecha'! El río Orinoco es tan ancho como un lago en muchos lugares, pero en Ciudad Bolívar es más estrecho."
+  },
+  {
+    "pregunta": "¿Cuál fue el sueño más grande de Simón Bolívar para América Latina?",
+    "tipo": "texto",
+    "opciones": [
+      "Construir el edificio más alto del mundo",
+      "Ver a todos los países latinoamericanos unidos y libres",
+      "Tener la colección de sombreros más grande",
+      "Ser el campeón mundial de ajedrez colonial"
+    ],
+    "correcta": 1,
+    "explicacion": "¡El sueño más grande de Bolívar era ver a toda América Latina unida en libertad! Por eso luchó en tantos países diferentes.",
+    "dato_curioso": "¡Bolívar es el único líder en la historia que libertó cinco países diferentes: Venezuela, Colombia, Ecuador, Perú y Bolivia! ¡Un récord asombroso!"
+  },
+  {
+    "pregunta": "¿Qué se redactó en el Congreso de Angostura que dirigiría al nuevo país?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de varios diputados con plumas y tinteros redactando un gran documento en pergamino sobre una mesa colonial. El documento tiene el encabezado visible 'Constitución'. Los diputados discuten con expresiones concentradas y serias.",
+    "opciones": [
+      "Una lista de los mejores restaurantes venezolanos",
+      "Un mapa del tesoro pirata colonial",
+      "Las reglas del primer torneo de ajedrez venezolano",
+      "La Constitución o ley fundamental del nuevo país"
+    ],
+    "correcta": 3,
+    "explicacion": "¡En el Congreso de Angostura se redactó la Constitución! Es la ley más importante que dice cómo debe funcionar el gobierno y los derechos del pueblo.",
+    "dato_curioso": "¡Una Constitución es como las reglas del juego de un país! Dice lo que el gobierno puede y no puede hacer, y protege los derechos de todos."
+  },
+  {
+    "pregunta": "¿Por qué Bolívar eligió Angostura para el congreso y no Caracas?",
+    "tipo": "texto",
+    "opciones": [
+      "Porque en Angostura hacía mejor clima siempre",
+      "Porque lo eligió lanzando una moneda al aire",
+      "Porque en Angostura vendían mejores empanadas",
+      "Porque Caracas seguía bajo control español en ese momento"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Angostura fue elegida porque Caracas todavía estaba en manos de los españoles! Los patriotas necesitaban un lugar seguro y libre para reunirse.",
+    "dato_curioso": "¡Angostura era un lugar estratégico a orillas del Orinoco! Desde ahí los patriotas podían moverse fácilmente por toda Venezuela y Colombia."
+  },
+  {
+    "pregunta": "¿Qué título le dieron a Simón Bolívar en el Congreso de Angostura?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de Simón Bolívar sentado en una silla presidencial decorada en el salón del Congreso de Angostura, con diputados aplaudiendo alrededor. Bolívar tiene una banda presidencial y expresión solemne y orgullosa.",
+    "opciones": [
+      "Rey de Venezuela para siempre",
+      "Presidente de la República de Venezuela",
+      "Cocinero Mayor de los Llanos",
+      "Campeón de lucha libre colonial"
+    ],
+    "correcta": 1,
+    "explicacion": "¡En el Congreso de Angostura nombraron a Bolívar Presidente de la República! Era el líder máximo del nuevo gobierno venezolano libre.",
+    "dato_curioso": "¡Bolívar era tan respetado que algunos quisieron hacerlo rey! Pero él rechazó ese título porque creía en la república y no en la monarquía."
+  },
+  {
+    "pregunta": "¿Qué significa la palabra 'Congreso' en política?",
+    "tipo": "texto",
+    "opciones": [
+      "Un baile tradicional venezolano especial",
+      "Un torneo de danzas folclóricas regionales",
+      "Una reunión de representantes para crear leyes y tomar decisiones",
+      "Un mercado colonial de frutas tropicales"
+    ],
+    "correcta": 2,
+    "explicacion": "¡Un Congreso es una gran reunión donde los representantes del pueblo crean las leyes y toman las decisiones más importantes del país!",
+    "dato_curioso": "¡Venezuela tiene un Congreso hoy que se llama Asamblea Nacional! Ahí los diputados elegidos por el pueblo deciden las leyes que nos rigen a todos."
+  },
+  {
+    "pregunta": "¿Qué región del mundo quería inspirar Bolívar con La Gran Colombia?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Mapa de toda América Latina con flechas que apuntan desde La Gran Colombia hacia todos los demás países sudamericanos y centroamericanos, como si irradiara inspiración y libertad. Colores brillantes y alegres para todo el continente.",
+    "opciones": [
+      "A toda América Latina para que también se liberara",
+      "Solo a Venezuela y a nadie más",
+      "A Europa para que nos imitara",
+      "A los planetas del sistema solar"
+    ],
+    "correcta": 0,
+    "explicacion": "¡Bolívar quería que La Gran Colombia inspirara a toda América Latina a liberarse de los imperios europeos! Era un líder de todo un continente.",
+    "dato_curioso": "¡Y funcionó! Bolívar libró guerras en cinco países distintos. Hoy todos esos países son libres gracias en parte al ejemplo y la ayuda de Bolívar."
+  },
+  {
+    "pregunta": "¿En qué año se disolvió definitivamente La Gran Colombia?",
+    "tipo": "texto",
+    "opciones": [
+      "En 1999, hace muy poquito tiempo",
+      "En 1831, doce años después de su creación",
+      "En 1492 con Cristóbal Colón",
+      "Todavía no se ha disuelto, sigue existiendo"
+    ],
+    "correcta": 1,
+    "explicacion": "¡La Gran Colombia se disolvió en 1831! Solo duró 12 años. Cada país decidió ser independiente por separado.",
+    "dato_curioso": "¡Curiosamente, Bolívar murió en 1830, justo un año antes de que La Gran Colombia se disolviera oficialmente! No llegó a ver el final completo."
+  },
+  {
+    "pregunta": "¿Qué hizo famoso al Congreso de Angostura en la historia de Venezuela?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de un gran libro de historia venezolana abierto en la página del Congreso de Angostura, con dibujos del evento, la fecha '15 de febrero de 1819' resaltada en grande y brillante, y una estrella dorada marcando su importancia histórica.",
+    "opciones": [
+      "Que fue el congreso más pequeño de la historia",
+      "Que fue donde se sentaron las bases de Venezuela libre",
+      "Que fue el único congreso con piscina colonial",
+      "Que duró solo cinco minutos exactamente"
+    ],
+    "correcta": 1,
+    "explicacion": "¡El Congreso de Angostura es famoso porque fue ahí donde se pusieron las bases del gobierno de Venezuela libre! Fue el inicio oficial del país que somos hoy.",
+    "dato_curioso": "¡Sin el Congreso de Angostura no tendríamos constitución ni gobierno organizado! Fue el momento en que Venezuela pasó de ser una colonia a ser una nación."
+  },
+  {
+    "pregunta": "¿Dónde murió finalmente Simón Bolívar?",
+    "tipo": "texto",
+    "opciones": [
+      "En Caracas, su ciudad natal venezolana",
+      "En el fondo del Río Orinoco nadando",
+      "En Santa Marta, Colombia, lejos de Venezuela",
+      "En Madrid, España durante una visita"
+    ],
+    "correcta": 2,
+    "explicacion": "¡Bolívar murió en Santa Marta, Colombia, en 1830! Murió lejos de Venezuela, enfermo y muy triste por ver fracasar su sueño de unión.",
+    "dato_curioso": "¡Más tarde los restos de Bolívar fueron traídos a Venezuela! Hoy descansan en el Panteón Nacional de Caracas, el lugar más honroso del país."
+  },
+  {
+    "pregunta": "¿Qué inventaron en Angostura que hoy viaja por todo el mundo en las cocinas?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración colorida y divertida de la famosa botella de Bitter de Angostura con su etiqueta amarilla característica volando sobre un mapa del mundo, aterrizando en diferentes países como EE.UU., Europa y Asia con cocineros emocionados recibiéndola.",
+    "opciones": [
+      "Las arepas venezolanas volando por el mundo",
+      "El primer telescopio de Venezuela mirando las estrellas",
+      "El Bitter de Angostura que usan cocineros en todo el planeta",
+      "Los pantalones más cómodos de la historia colonial"
+    ],
+    "correcta": 2,
+    "explicacion": "¡El Bitter de Angostura es el invento venezolano que viaja por todo el mundo! Los mejores cocineros y chefs del planeta lo usan en sus recetas.",
+    "dato_curioso": "¡El Bitter de Angostura se inventó en 1824 como medicina! Luego descubrieron que también era delicioso en la cocina y se volvió mundialmente famoso."
+  },
+  {
+    "pregunta": "¿Qué lección nos deja el sueño de Bolívar de unir América Latina?",
+    "tipo": "texto",
+    "opciones": [
+      "Que los sueños grandes siempre son malas ideas",
+      "Que es mejor no tener sueños nunca jamás",
+      "Que solo los ricos pueden tener sueños importantes",
+      "Que soñar en grande vale la pena aunque no siempre salga bien"
+    ],
+    "correcta": 3,
+    "explicacion": "¡El sueño de Bolívar nos enseña que vale la pena soñar en grande! Aunque La Gran Colombia no duró, su visión cambió la historia de América para siempre.",
+    "dato_curioso": "¡Hoy existen organizaciones como la CELAC y la UNASUR que intentan unir a los países latinoamericanos, inspiradas en el sueño original de Bolívar!"
+  },
+  {
+    "pregunta": "¿Qué río angosto le dio nombre a la ciudad de Angostura?",
+    "tipo": "texto",
+    "opciones": [
+      "El Río Amazonas que pasa muy cerca",
+      "El Río Apure en los llanos venezolanos",
+      "El Río Orinoco que se estrecha ahí",
+      "Un río imaginario llamado El Angosto"
+    ],
+    "correcta": 2,
+    "explicacion": "¡El Río Orinoco se vuelve muy angosto o estrecho justo en ese lugar! Por eso la ciudad se llamó Angostura, que significa parte estrecha.",
+    "dato_curioso": "¡Ciudad Bolívar tiene el Puente de Angostura, uno de los puentes más largos de Venezuela! Cruza el Orinoco y conecta dos partes del país."
+  },
+  {
+    "pregunta": "¿Qué dejó Bolívar como legado más importante para Venezuela y América?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración del monumento ecuestre de Simón Bolívar en una plaza, con niños y adultos venezolanos mirándolo con admiración. Alrededor del monumento hay banderas de Venezuela, Colombia, Ecuador, Perú y Bolivia, los cinco países que liberó.",
+    "opciones": [
+      "Una receta secreta de hallacas navideñas",
+      "La construcción de cien carreteras venezolanas",
+      "Un tratado de paz con los piratas del Caribe",
+      "La libertad de cinco países y el sueño de América unida"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Bolívar dejó la libertad de cinco países y el sueño de una América unida! Ese legado sigue inspirando a millones de personas en todo el mundo hoy.",
+    "dato_curioso": "¡Bolívar es el único líder de la historia que tiene un país con su nombre: Bolivia! Es el homenaje más grande que un pueblo puede darle a alguien."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: En qué ciudad se realizó el famoso Congreso de Angostura?",
+    "tipo": "texto",
+    "opciones": [
+      "En Caracas, la capital",
+      "En Angostura, hoy Ciudad Bolívar",
+      "En la luna venezolana",
+      "En Maracaibo submarino"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: ¡El Congreso de Angostura fue en Angostura, que hoy se llama Ciudad Bolívar! Está en el Estado Bolívar, al sur de Venezuela.",
+    "dato_curioso": "Repaso curioso: ¡La ciudad se llama Ciudad Bolívar en honor a Simón Bolívar! Es una de las ciudades más históricas e importantes de Venezuela."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: En qué fecha se realizó el Congreso de Angostura?",
+    "tipo": "texto",
+    "opciones": [
+      "El 1 de enero del año 2000",
+      "El 5 de julio de 1821",
+      "El 25 de diciembre de 1776",
+      "El 15 de febrero de 1819"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: ¡El Congreso de Angostura fue el 15 de febrero de 1819! Esa fecha es muy importante para la historia de Venezuela y de toda América.",
+    "dato_curioso": "Repaso curioso: ¡El 15 de febrero de 1819 es una fecha que todos los venezolanos deberían saber! Fue cuando Bolívar presentó su plan más ambicioso."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Quién dio el discurso más famoso en el Congreso de Angostura?",
+    "tipo": "texto",
+    "opciones": [
+      "El presidente de España",
+      "Un robot del futuro",
+      "Simón Bolívar",
+      "El rey de Francia en visita"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: ¡Simón Bolívar dio el discurso más importante del Congreso de Angostura! Fue uno de los discursos políticos más brillantes de toda la historia.",
+    "dato_curioso": "Repaso curioso: ¡El Discurso de Angostura sigue siendo estudiado hoy en universidades de todo el mundo! Bolívar era tan inteligente como valiente."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué gran idea propuso Bolívar en el Congreso de Angostura?",
+    "tipo": "texto",
+    "opciones": [
+      "Pintar todos los edificios de amarillo",
+      "Construir la muralla más grande del mundo",
+      "Inventar el primer avión venezolano",
+      "Unir Venezuela, Colombia, Ecuador y Panamá en un solo país"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: ¡Bolívar quería unir cuatro países en uno solo para ser más fuertes juntos! Ese gran país se llamaría La Gran Colombia.",
+    "dato_curioso": "Repaso curioso: ¡Era una idea increíblemente ambiciosa para esa época! Bolívar soñaba con una América Latina unida y poderosa. ¡Era un verdadero visionario!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cómo se llamó el gran país que quería crear Bolívar?",
+    "tipo": "texto",
+    "opciones": [
+      "La Gran Colombia",
+      "La Mega Venezuela",
+      "El Imperio del Cacao",
+      "El Super País Latino"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: ¡El gran país que soñó Bolívar se llamó La Gran Colombia! Era una nación enorme que juntaba Venezuela, Colombia, Ecuador y Panamá.",
+    "dato_curioso": "Repaso curioso: ¡La Gran Colombia sería hoy uno de los países más grandes y poderosos de América del Sur! El sueño de Bolívar era gigantesco."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cuántos países quería unir Bolívar en La Gran Colombia?",
+    "tipo": "texto",
+    "opciones": [
+      "Doscientos países juntos",
+      "Todos los países del planeta",
+      "Solo Venezuela y nada más",
+      "Cuatro países: Venezuela, Colombia, Ecuador y Panamá"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: ¡Bolívar quería unir exactamente cuatro países! Venezuela, Colombia, Ecuador y Panamá serían uno solo y muy poderoso.",
+    "dato_curioso": "Repaso curioso: ¡Imagínate si hoy esos cuatro países siguieran siendo uno! Sería un país enorme con costas en el Atlántico, el Pacífico y el Mar Caribe."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cuántos años duró La Gran Colombia antes de separarse?",
+    "tipo": "texto",
+    "opciones": [
+      "Solo 12 años, de 1819 a 1831",
+      "500 años felices",
+      "Solo un día muy corto",
+      "Todavía existe hoy"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: ¡La Gran Colombia solo duró 12 años! Se formó en 1819 y se separó en 1831. El sueño de Bolívar no pudo mantenerse junto.",
+    "dato_curioso": "Repaso curioso: ¡Bolívar quedó muy triste cuando La Gran Colombia se separó! Dijo una frase muy famosa y melancólica sobre ese fracaso."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué triste frase dijo Bolívar cuando La Gran Colombia fracasó?",
+    "tipo": "texto",
+    "opciones": [
+      "¡Viva la pizza venezolana siempre!",
+      "Mañana lo intento de nuevo tranquilamente",
+      "¡Qué rico estuvo el desayuno!",
+      "He arado en el mar"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: ¡Bolívar dijo 'He arado en el mar' para decir que todo su esfuerzo fue en vano, como si arar el mar sin tierra no sirviera para nada!",
+    "dato_curioso": "Repaso curioso: ¡Arar en el mar significa trabajar sin que nada crezca! Bolívar murió decepcionado, pero su legado es inmenso e inmortal para siempre."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cómo se llama hoy la ciudad de Angostura?",
+    "tipo": "texto",
+    "opciones": [
+      "Angostura para siempre",
+      "Caracas del Sur",
+      "Ciudad Bolívar",
+      "Angostura City modernamente"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: ¡Angostura se llama hoy Ciudad Bolívar! Le cambiaron el nombre en honor al gran libertador Simón Bolívar.",
+    "dato_curioso": "Repaso curioso: ¡Ciudad Bolívar está a orillas del Río Orinoco, el río más largo de Venezuela! Es una ciudad muy antigua y llena de historia preciosa."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: En qué estado venezolano está Ciudad Bolívar?",
+    "tipo": "texto",
+    "opciones": [
+      "En el Estado Luna que no existe",
+      "En el Estado Bolívar al sur",
+      "En el Estado Mérida con nieve",
+      "En el Estado Zulia al oeste"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: ¡Ciudad Bolívar está en el Estado Bolívar, al sur de Venezuela! Es un estado enorme que casi llega hasta Brasil.",
+    "dato_curioso": "Repaso curioso: ¡El Estado Bolívar es el estado más grande de Venezuela! Tiene selvas increíbles, tepuyes mágicos y el Salto Ángel, la catarata más alta del mundo."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué famosa bebida fue inventada en Angostura?",
+    "tipo": "texto",
+    "opciones": [
+      "El 15 de febrero de 1819",
+      "En Angostura, hoy Ciudad Bolívar",
+      "El Bitter de Angostura",
+      "Simón Bolívar"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: ¡El Bitter de Angostura fue inventado ahí mismo! Es una mezcla especial de plantas y hierbas que hoy usan cocineros en todo el mundo.",
+    "dato_curioso": "Dato para profundizar: ¡El Bitter de Angostura se usa en cocinas y bares de todo el planeta! Es uno de los inventos venezolanos más famosos del mundo entero."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Dónde se usa hoy el famoso Bitter de Angostura?",
+    "tipo": "texto",
+    "opciones": [
+      "El 15 de febrero de 1819",
+      "En Angostura, hoy Ciudad Bolívar",
+      "En todo el mundo en cocinas y barras",
+      "Simón Bolívar"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: ¡El Bitter de Angostura se usa hoy en restaurantes y cocinas de todo el mundo! Es famosísimo por su sabor especial a hierbas y especias.",
+    "dato_curioso": "Dato para profundizar: ¡La receta del Bitter de Angostura es un secreto que solo conocen muy pocas personas! Como la Coca-Cola, nadie sabe exactamente qué lleva."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Para qué sirvió el Congreso de Angostura de 1819?",
+    "tipo": "texto",
+    "opciones": [
+      "El 15 de febrero de 1819",
+      "Simón Bolívar",
+      "Para crear leyes y organizar el nuevo gobierno libre",
+      "En Angostura, hoy Ciudad Bolívar"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: ¡El Congreso de Angostura sirvió para crear las leyes y organizar el gobierno de Venezuela libre! Era como redactar las reglas del nuevo país.",
+    "dato_curioso": "Dato para profundizar: ¡Un congreso es una reunión de representantes del pueblo para tomar las decisiones más importantes del país! Es la base de la democracia."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Por qué el Discurso de Angostura es tan famoso hoy en el mundo?",
+    "tipo": "texto",
+    "opciones": [
+      "El 15 de febrero de 1819",
+      "En Angostura, hoy Ciudad Bolívar",
+      "Simón Bolívar",
+      "Porque contiene ideas tan brillantes que se estudia en universidades del mundo"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: ¡El Discurso de Angostura tiene ideas tan inteligentes sobre gobierno y libertad que todavía hoy los estudiantes universitarios lo leen y estudian!",
+    "dato_curioso": "Dato para profundizar: ¡Bolívar escribió ese discurso con tanto cuidado que es considerado una obra maestra de la literatura política! Era tan escritor como guerrero."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Quiénes asistieron al Congreso de Angostura?",
+    "tipo": "texto",
+    "opciones": [
+      "El 15 de febrero de 1819",
+      "Diputados representantes de todo el territorio patriota",
+      "En Angostura, hoy Ciudad Bolívar",
+      "Simón Bolívar"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: ¡Al Congreso de Angostura asistieron diputados, que son representantes elegidos de los distintos territorios que ya eran libres! Todos juntos para construir la nación.",
+    "dato_curioso": "Dato para profundizar: ¡Un diputado es alguien que habla en nombre de la gente de su región! Juntos, los diputados toman las decisiones más importantes del país."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cómo llegó Bolívar a Angostura para el famoso congreso?",
+    "tipo": "texto",
+    "opciones": [
+      "En Angostura, hoy Ciudad Bolívar",
+      "Simón Bolívar",
+      "Llegó navegando por el Río Orinoco",
+      "El 15 de febrero de 1819"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: ¡Bolívar viajó por el majestuoso Río Orinoco para llegar a Angostura! En esa época los ríos eran los caminos principales de Venezuela.",
+    "dato_curioso": "Dato para profundizar: ¡El Río Orinoco es el río más largo de Venezuela y uno de los más largos del mundo! Tiene más de 2.000 kilómetros de extensión increíble."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué propuso Bolívar sobre el tipo de gobierno en su discurso?",
+    "tipo": "texto",
+    "opciones": [
+      "Un gobierno republicano donde el pueblo tuviera poder",
+      "Simón Bolívar",
+      "En Angostura, hoy Ciudad Bolívar",
+      "El 15 de febrero de 1819"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: ¡Bolívar propuso una república donde la gente tuviera poder! No quería reyes ni tiranos, sino un gobierno para el pueblo y por el pueblo.",
+    "dato_curioso": "Dato para profundizar: ¡Una república es donde la gente elige a sus gobernantes! Hoy casi todos los países del mundo son repúblicas. Bolívar fue un gran pionero de esa idea."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué sentía Bolívar por la unión de los pueblos latinoamericanos?",
+    "tipo": "texto",
+    "opciones": [
+      "Un sueño enorme de verlos unidos y libres",
+      "El 15 de febrero de 1819",
+      "En Angostura, hoy Ciudad Bolívar",
+      "Simón Bolívar"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: ¡Bolívar soñaba con una América Latina unida! Creía que juntos serían más fuertes y nadie podría volver a dominarlos jamás.",
+    "dato_curioso": "Dato para profundizar: ¡Por eso Bolívar liberó no solo Venezuela sino también Colombia, Ecuador, Perú y Bolivia! Le pusieron a ese último país su nombre en su honor."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué significa el nombre 'Gran Colombia' para los países que la formaban?",
+    "tipo": "texto",
+    "opciones": [
+      "Simón Bolívar",
+      "En Angostura, hoy Ciudad Bolívar",
+      "Que era una gran nación formada por varios países juntos",
+      "El 15 de febrero de 1819"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: ¡La palabra 'Gran' significaba que era una nación enorme formada por varios países! Era grande en tamaño y en el sueño de Bolívar para América.",
+    "dato_curioso": "Dato para profundizar: ¡El nombre 'Colombia' viene de Cristóbal Colón, el explorador que llegó a América en 1492! Era un homenaje al descubrimiento de América."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué pasó con La Gran Colombia después de la muerte de Bolívar?",
+    "tipo": "texto",
+    "opciones": [
+      "Se dividió en cuatro países separados",
+      "En Angostura, hoy Ciudad Bolívar",
+      "El 15 de febrero de 1819",
+      "Simón Bolívar"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: ¡La Gran Colombia se separó y volvió a ser cuatro países diferentes! Venezuela, Colombia, Ecuador y Panamá tomaron caminos distintos.",
+    "dato_curioso": "Dato para profundizar: ¡Hoy esos cuatro países son buenos amigos y vecinos! Aunque ya no son un solo país, comparten historia, idioma y muchas tradiciones hermosas."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Por qué Bolívar murió decepcionado según los historiadores?",
+    "tipo": "texto",
+    "opciones": [
+      "Porque nunca probó el chocolate venezolano",
+      "Porque perdió todas las batallas militares",
+      "Porque La Gran Colombia se desintegró antes de que muriera",
+      "Porque nunca aprendió a montar a caballo"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: ¡Bolívar murió muy triste porque vio cómo La Gran Colombia se rompía! Su sueño más grande se deshacía justo frente a sus ojos.",
+    "dato_curioso": "Ampliación histórica: ¡Bolívar murió en 1830 en Santa Marta, Colombia, lejos de su Venezuela querida! Murió enfermo y con el corazón roto por ver su sueño fracasar."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cómo se recuerda el Congreso de Angostura en Venezuela hoy?",
+    "tipo": "texto",
+    "opciones": [
+      "Como un evento histórico fundamental del que Venezuela está orgullosa",
+      "Solo lo recuerdan en otros países lejanos",
+      "Como un error enorme que avergüenza a todos",
+      "Nadie lo recuerda porque fue aburrido"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: ¡El Congreso de Angostura se recuerda con mucho orgullo! Fue el momento en que Venezuela empezó a construir su identidad como nación libre.",
+    "dato_curioso": "Ampliación histórica: ¡El salón donde se realizó el Congreso de Angostura todavía existe en Ciudad Bolívar! Puedes visitarlo y sentarte donde se hizo historia."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué idioma usó Bolívar para dar su famoso discurso en Angostura?",
+    "tipo": "texto",
+    "opciones": [
+      "En inglés con acento americano",
+      "En latín como los romanos",
+      "En un idioma inventado por él mismo",
+      "En español, su idioma natal venezolano"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: ¡Bolívar dio su discurso en español! Era su idioma venezolano, hermoso y poderoso como él mismo.",
+    "dato_curioso": "Ampliación histórica: ¡El español de Bolívar era muy elegante y literario! Escribía cartas y discursos con palabras tan bonitas que parecía un poeta además de militar."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué río pasa cerca de Angostura donde se realizó el congreso?",
+    "tipo": "texto",
+    "opciones": [
+      "El Río Nilo de África lejana",
+      "El Río Misisipi de los Estados Unidos",
+      "El Río Amazonas del Perú lejano",
+      "El Río Orinoco, el más largo de Venezuela"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: ¡El Río Orinoco pasa justo por Ciudad Bolívar! Por eso la ciudad también se llama Angostura, porque ahí el río se angosta y se vuelve más estrecho.",
+    "dato_curioso": "Ampliación histórica: ¡Angostura significa 'parte estrecha'! El río Orinoco es tan ancho como un lago en muchos lugares, pero en Ciudad Bolívar es más estrecho."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cuál fue el sueño más grande de Simón Bolívar para América Latina?",
+    "tipo": "texto",
+    "opciones": [
+      "Ver a todos los países latinoamericanos unidos y libres",
+      "Ser el campeón mundial de ajedrez colonial",
+      "Tener la colección de sombreros más grande",
+      "Construir el edificio más alto del mundo"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: ¡El sueño más grande de Bolívar era ver a toda América Latina unida en libertad! Por eso luchó en tantos países diferentes.",
+    "dato_curioso": "Ampliación histórica: ¡Bolívar es el único líder en la historia que libertó cinco países diferentes: Venezuela, Colombia, Ecuador, Perú y Bolivia! ¡Un récord asombroso!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué se redactó en el Congreso de Angostura que dirigiría al nuevo país?",
+    "tipo": "texto",
+    "opciones": [
+      "Un mapa del tesoro pirata colonial",
+      "La Constitución o ley fundamental del nuevo país",
+      "Una lista de los mejores restaurantes venezolanos",
+      "Las reglas del primer torneo de ajedrez venezolano"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: ¡En el Congreso de Angostura se redactó la Constitución! Es la ley más importante que dice cómo debe funcionar el gobierno y los derechos del pueblo.",
+    "dato_curioso": "Ampliación histórica: ¡Una Constitución es como las reglas del juego de un país! Dice lo que el gobierno puede y no puede hacer, y protege los derechos de todos."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Por qué Bolívar eligió Angostura para el congreso y no Caracas?",
+    "tipo": "texto",
+    "opciones": [
+      "Porque lo eligió lanzando una moneda al aire",
+      "Porque en Angostura hacía mejor clima siempre",
+      "Porque en Angostura vendían mejores empanadas",
+      "Porque Caracas seguía bajo control español en ese momento"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: ¡Angostura fue elegida porque Caracas todavía estaba en manos de los españoles! Los patriotas necesitaban un lugar seguro y libre para reunirse.",
+    "dato_curioso": "Ampliación histórica: ¡Angostura era un lugar estratégico a orillas del Orinoco! Desde ahí los patriotas podían moverse fácilmente por toda Venezuela y Colombia."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué título le dieron a Simón Bolívar en el Congreso de Angostura?",
+    "tipo": "texto",
+    "opciones": [
+      "Rey de Venezuela para siempre",
+      "Campeón de lucha libre colonial",
+      "Presidente de la República de Venezuela",
+      "Cocinero Mayor de los Llanos"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: ¡En el Congreso de Angostura nombraron a Bolívar Presidente de la República! Era el líder máximo del nuevo gobierno venezolano libre.",
+    "dato_curioso": "Ampliación histórica: ¡Bolívar era tan respetado que algunos quisieron hacerlo rey! Pero él rechazó ese título porque creía en la república y no en la monarquía."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué significa la palabra 'Congreso' en política?",
+    "tipo": "texto",
+    "opciones": [
+      "Un mercado colonial de frutas tropicales",
+      "Un torneo de danzas folclóricas regionales",
+      "Una reunión de representantes para crear leyes y tomar decisiones",
+      "Un baile tradicional venezolano especial"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: ¡Un Congreso es una gran reunión donde los representantes del pueblo crean las leyes y toman las decisiones más importantes del país!",
+    "dato_curioso": "Ampliación histórica: ¡Venezuela tiene un Congreso hoy que se llama Asamblea Nacional! Ahí los diputados elegidos por el pueblo deciden las leyes que nos rigen a todos."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué región del mundo quería inspirar Bolívar con La Gran Colombia?",
+    "tipo": "texto",
+    "opciones": [
+      "A Europa para que nos imitara",
+      "A los planetas del sistema solar",
+      "Solo a Venezuela y a nadie más",
+      "A toda América Latina para que también se liberara"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: ¡Bolívar quería que La Gran Colombia inspirara a toda América Latina a liberarse de los imperios europeos! Era un líder de todo un continente.",
+    "dato_curioso": "Ampliación histórica: ¡Y funcionó! Bolívar libró guerras en cinco países distintos. Hoy todos esos países son libres gracias en parte al ejemplo y la ayuda de Bolívar."
+  }
+]

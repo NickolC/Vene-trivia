@@ -1,0 +1,597 @@
+[
+  {
+    "pregunta": "¿En qué fecha ocurrió la Batalla de Carabobo?",
+    "tipo": "texto",
+    "opciones": [
+      "24 de junio de 1821",
+      "5 de julio de 1811",
+      "19 de abril de 1810",
+      "1 de enero de 1900"
+    ],
+    "correcta": 0,
+    "explicacion": "La Batalla de Carabobo ocurrió el 24 de junio de 1821. Ese día fue muy importante para la libertad de Venezuela.",
+    "dato_curioso": "Cada año, en junio, muchas personas recuerdan esta fecha con actos y desfiles."
+  },
+  {
+    "pregunta": "¿La Batalla de Carabobo fue una batalla decisiva para la independencia?",
+    "tipo": "texto",
+    "opciones": [
+      "No, no cambió nada",
+      "Sí, fue decisiva",
+      "Solo fue una práctica",
+      "Fue una fiesta"
+    ],
+    "correcta": 1,
+    "explicacion": "Sí, fue decisiva porque ayudó muchísimo a asegurar la independencia de Venezuela.",
+    "dato_curioso": "Cuando una batalla es decisiva, significa que cambia el rumbo de la historia."
+  },
+  {
+    "pregunta": "¿Cuánto duró aproximadamente la Batalla de Carabobo?",
+    "tipo": "texto",
+    "opciones": [
+      "Casi 1 hora",
+      "10 días",
+      "1 semana",
+      "Todo un mes"
+    ],
+    "correcta": 0,
+    "explicacion": "La batalla duró cerca de una hora. Fue corta, pero muy intensa.",
+    "dato_curioso": "A veces, un hecho muy corto puede dejar una huella enorme en un país."
+  },
+  {
+    "pregunta": "¿Cómo se llamaba el grupo de voluntarios extranjeros que ayudó en Carabobo?",
+    "tipo": "texto",
+    "opciones": [
+      "Legión Británica",
+      "Patrulla Andina",
+      "Brigada del Caribe",
+      "Equipo Libertad Azul"
+    ],
+    "correcta": 0,
+    "explicacion": "Se llamaba Legión Británica. Sus soldados apoyaron al ejército patriota en la batalla.",
+    "dato_curioso": "Muchos de ellos venían de lugares lejanos y lucharon por la libertad en América."
+  },
+  {
+    "pregunta": "¿Quién era Negro Primero?",
+    "tipo": "texto",
+    "opciones": [
+      "Pedro Camejo",
+      "Francisco de Miranda",
+      "José Antonio Páez",
+      "Simón Rodríguez"
+    ],
+    "correcta": 0,
+    "explicacion": "Negro Primero era Pedro Camejo, un valiente llanero que luchó por la independencia.",
+    "dato_curioso": "Su apodo era Negro Primero porque solía avanzar primero con gran valentía."
+  },
+  {
+    "pregunta": "¿Cómo se llamaba el perro que acompañó a los patriotas?",
+    "tipo": "texto",
+    "opciones": [
+      "Nevado",
+      "Copito",
+      "Relámpago",
+      "Trueno"
+    ],
+    "correcta": 0,
+    "explicacion": "El perro se llamaba Nevado y es recordado con cariño en la historia independentista.",
+    "dato_curioso": "Las mascotas también pueden convertirse en símbolos de valentía y compañía."
+  },
+  {
+    "pregunta": "¿Qué general patriota participó en Carabobo y se llamaba Ambrosio Plaza?",
+    "tipo": "texto",
+    "opciones": [
+      "Ambrosio Plaza",
+      "Rafael Urdaneta",
+      "Santiago Mariño",
+      "Manuel Piar"
+    ],
+    "correcta": 0,
+    "explicacion": "Ambrosio Plaza fue uno de los jefes patriotas presentes en esta batalla histórica.",
+    "dato_curioso": "Muchos oficiales patriotas venían de distintas regiones y trabajaban en equipo."
+  },
+  {
+    "pregunta": "En Carabobo, ¿qué lado del campo fue clave en la estrategia patriota?",
+    "tipo": "texto",
+    "opciones": [
+      "El flanco izquierdo",
+      "El techo del cuartel",
+      "La parte del río",
+      "La salida del pueblo"
+    ],
+    "correcta": 0,
+    "explicacion": "El flanco izquierdo fue muy importante para el avance patriota durante la batalla.",
+    "dato_curioso": "Flanco significa uno de los lados de una formación militar."
+  },
+  {
+    "pregunta": "¿La Batalla de Carabobo ocurrió dentro del contexto de independencia de Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Sí, formó parte de esa lucha",
+      "No, fue un torneo deportivo",
+      "No, fue en otro siglo",
+      "Fue una obra de teatro"
+    ],
+    "correcta": 0,
+    "explicacion": "Sí. Carabobo ocurrió en pleno proceso de independencia, cuando Venezuela luchaba por ser libre.",
+    "dato_curioso": "La independencia fue un proceso con varios pasos, no un solo día."
+  },
+  {
+    "pregunta": "¿Qué quería lograr el ejército patriota en Carabobo?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Niños viendo una ilustración de soldados patriotas con banderas de Venezuela en un campo abierto, cielo claro, ambiente heroico y didáctico.",
+    "opciones": [
+      "Conseguir más juguetes",
+      "Defender la libertad del país",
+      "Buscar un tesoro escondido",
+      "Hacer una carrera de caballos"
+    ],
+    "correcta": 1,
+    "explicacion": "Los patriotas luchaban para que Venezuela pudiera gobernarse sin dominio español.",
+    "dato_curioso": "La palabra patriota se usa para quienes defendían la independencia."
+  },
+  {
+    "pregunta": "¿En qué año fue la Batalla de Carabobo?",
+    "tipo": "texto",
+    "opciones": [
+      "1821",
+      "1492",
+      "1910",
+      "2001"
+    ],
+    "correcta": 0,
+    "explicacion": "Carabobo fue en 1821, durante las guerras de independencia.",
+    "dato_curioso": "Han pasado más de 200 años desde esa batalla."
+  },
+  {
+    "pregunta": "¿Quién fue conocido como un llanero muy valiente en Carabobo?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Llanero venezolano montado a caballo en uniforme de época, con expresión valiente, paisaje de sabana y montañas al fondo, estilo ilustración infantil.",
+    "opciones": [
+      "Pedro Camejo",
+      "Cristóbal Colón",
+      "Andrés Bello",
+      "Arturo Michelena"
+    ],
+    "correcta": 0,
+    "explicacion": "Pedro Camejo, llamado Negro Primero, es recordado por su gran coraje en combate.",
+    "dato_curioso": "Los llaneros eran jinetes expertos y muy importantes en las campañas."
+  },
+  {
+    "pregunta": "La Legión Británica ayudó a los patriotas porque...",
+    "tipo": "texto",
+    "opciones": [
+      "Quería apoyar la causa independentista",
+      "Buscaba abrir una escuela",
+      "Era una banda musical",
+      "Vendía alimentos"
+    ],
+    "correcta": 0,
+    "explicacion": "La Legión Británica apoyó militarmente la causa de la independencia.",
+    "dato_curioso": "En la historia de América, también hubo apoyo de personas nacidas en otros continentes."
+  },
+  {
+    "pregunta": "¿Cuál de estos nombres está ligado a Carabobo?",
+    "tipo": "texto",
+    "opciones": [
+      "Ambrosio Plaza",
+      "Leonardo da Vinci",
+      "Isaac Newton",
+      "Miguel de Cervantes"
+    ],
+    "correcta": 0,
+    "explicacion": "Ambrosio Plaza fue un militar patriota relacionado con la Batalla de Carabobo.",
+    "dato_curioso": "Aprender nombres de héroes ayuda a entender cómo se construyó un país."
+  },
+  {
+    "pregunta": "¿Qué detalle de tiempo aprendemos de Carabobo?",
+    "tipo": "texto",
+    "opciones": [
+      "Que duró aproximadamente una hora",
+      "Que duró todo un año",
+      "Que duró 30 minutos exactos",
+      "Que duró tres meses"
+    ],
+    "correcta": 0,
+    "explicacion": "Se estima que la batalla tuvo una duración cercana a una hora.",
+    "dato_curioso": "Aproximadamente significa que es un tiempo cercano, no exacto al segundo."
+  },
+  {
+    "pregunta": "Para recordar la fecha de Carabobo, ¿qué mes debemos pensar?",
+    "tipo": "texto",
+    "opciones": [
+      "Junio",
+      "Febrero",
+      "Octubre",
+      "Diciembre"
+    ],
+    "correcta": 0,
+    "explicacion": "La batalla fue el 24 de junio de 1821.",
+    "dato_curioso": "Junio también se asocia en Venezuela con homenajes al Ejército."
+  },
+  {
+    "pregunta": "¿Qué animal aparece en historias de la independencia junto a Bolívar y los patriotas?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Perro blanco llamado Nevado corriendo junto a soldados patriotas en un campo amplio, bandera tricolor ondeando, estilo dibujo para preescolar.",
+    "opciones": [
+      "Un perro llamado Nevado",
+      "Un elefante gigante",
+      "Un pingüino azul",
+      "Un tigre del desierto"
+    ],
+    "correcta": 0,
+    "explicacion": "Nevado es el perro más famoso de estas historias y simboliza fidelidad.",
+    "dato_curioso": "Muchos niños recuerdan más rápido la historia cuando aparece Nevado."
+  },
+  {
+    "pregunta": "¿Qué significa que Carabobo fue una batalla decisiva?",
+    "tipo": "texto",
+    "opciones": [
+      "Que ayudó a definir la victoria patriota",
+      "Que fue un juego sin importancia",
+      "Que nadie participó",
+      "Que se olvidó al día siguiente"
+    ],
+    "correcta": 0,
+    "explicacion": "Decisiva significa que fue clave para lograr la independencia.",
+    "dato_curioso": "La palabra clave nos ayuda a entender qué hecho cambió la historia."
+  },
+  {
+    "pregunta": "¿Quién era conocido con el apodo Negro Primero?",
+    "tipo": "texto",
+    "opciones": [
+      "Pedro Camejo",
+      "Simón Bolívar",
+      "Antonio José de Sucre",
+      "José Félix Ribas"
+    ],
+    "correcta": 0,
+    "explicacion": "Negro Primero era Pedro Camejo, un héroe de gran valentía.",
+    "dato_curioso": "Los apodos históricos ayudan a recordar personajes importantes."
+  },
+  {
+    "pregunta": "En una formación militar, ¿qué es el flanco izquierdo?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Dos filas de soldados de época vistas desde arriba como dibujo educativo, con una flecha señalando el lado izquierdo y colores claros para niños.",
+    "opciones": [
+      "El lado izquierdo del grupo",
+      "El centro exacto",
+      "La parte más alta del cerro",
+      "La zona detrás de la cocina"
+    ],
+    "correcta": 0,
+    "explicacion": "El flanco izquierdo es el lado izquierdo de una tropa cuando está formada.",
+    "dato_curioso": "En batallas antiguas, mover bien los flancos podía cambiar el resultado."
+  },
+  {
+    "pregunta": "¿Cuál de estas opciones pertenece al contexto de independencia?",
+    "tipo": "texto",
+    "opciones": [
+      "Luchar para gobernarse sin dominio español",
+      "Aprender a hacer cometas",
+      "Construir castillos de arena",
+      "Hacer una feria de frutas"
+    ],
+    "correcta": 0,
+    "explicacion": "El contexto de independencia trata sobre la búsqueda de libertad política.",
+    "dato_curioso": "Muchos pueblos de América vivieron procesos parecidos en esos años."
+  },
+  {
+    "pregunta": "¿Qué número completa la fecha 24 de junio de ____ en Carabobo?",
+    "tipo": "texto",
+    "opciones": [
+      "1821",
+      "1810",
+      "1830",
+      "1700"
+    ],
+    "correcta": 0,
+    "explicacion": "La fecha completa es 24 de junio de 1821.",
+    "dato_curioso": "Recordar año, mes y día ayuda a ubicar un hecho en la línea del tiempo."
+  },
+  {
+    "pregunta": "¿Qué grupo NO corresponde a la Batalla de Carabobo?",
+    "tipo": "texto",
+    "opciones": [
+      "Una banda de rock",
+      "Legión Británica",
+      "Patriotas venezolanos",
+      "Tropas independentistas"
+    ],
+    "correcta": 0,
+    "explicacion": "La banda de rock no pertenece al hecho histórico. Las otras sí están relacionadas con la lucha.",
+    "dato_curioso": "Cuando descartamos opciones raras, resolver preguntas es más fácil."
+  },
+  {
+    "pregunta": "¿Qué aprendemos sobre Ambrosio Plaza en esta batalla?",
+    "tipo": "texto",
+    "opciones": [
+      "Que fue un militar patriota",
+      "Que era un pintor",
+      "Que era un inventor de juguetes",
+      "Que era un navegante vikingo"
+    ],
+    "correcta": 0,
+    "explicacion": "Ambrosio Plaza fue un oficial patriota dentro de las campañas independentistas.",
+    "dato_curioso": "Los oficiales coordinaban a sus soldados para cumplir la estrategia."
+  },
+  {
+    "pregunta": "¿Cómo podríamos describir la duración de Carabobo a un niño?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Reloj grande marcando una hora junto a un campo de batalla ilustrado de manera suave y educativa, sin escenas fuertes.",
+    "opciones": [
+      "Duró más o menos lo que tarda una clase corta",
+      "Duró lo mismo que un año escolar",
+      "Duró dos meses completos",
+      "Duró desde enero hasta diciembre"
+    ],
+    "correcta": 0,
+    "explicacion": "La batalla duró alrededor de una hora, un tiempo breve para algo tan importante.",
+    "dato_curioso": "El tiempo de una hora puede sentirse largo o corto según lo que pase."
+  },
+  {
+    "pregunta": "Si escuchas Negro Primero, debes pensar en...",
+    "tipo": "texto",
+    "opciones": [
+      "Pedro Camejo",
+      "Un barco pirata",
+      "Una ciudad europea",
+      "Una montaña nevada"
+    ],
+    "correcta": 0,
+    "explicacion": "Negro Primero es el nombre con el que conocemos a Pedro Camejo.",
+    "dato_curioso": "Las historias de héroes se transmitían también de forma oral en los llanos."
+  },
+  {
+    "pregunta": "¿Cuál pareja está correctamente relacionada?",
+    "tipo": "texto",
+    "opciones": [
+      "Nevado - perro",
+      "Nevado - general",
+      "Ambrosio Plaza - mascota",
+      "Legión Británica - caballo"
+    ],
+    "correcta": 0,
+    "explicacion": "Nevado era un perro recordado en la época de independencia.",
+    "dato_curioso": "Relacionar nombre y función es una forma divertida de estudiar historia."
+  },
+  {
+    "pregunta": "¿Qué frase resume mejor el objetivo de la independencia en Carabobo?",
+    "tipo": "texto",
+    "opciones": [
+      "Buscar libertad para Venezuela",
+      "Aprender a nadar rápido",
+      "Sembrar flores gigantes",
+      "Jugar béisbol colonial"
+    ],
+    "correcta": 0,
+    "explicacion": "El objetivo era lograr libertad y soberanía para el país.",
+    "dato_curioso": "Soberanía significa poder tomar decisiones propias como nación."
+  },
+  {
+    "pregunta": "¿Qué parte del ejército recibió atención estratégica en Carabobo?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Mapa sencillo del campo de Carabobo con flechas de colores y una zona marcada como flanco izquierdo para explicar estrategia a niños.",
+    "opciones": [
+      "El flanco izquierdo",
+      "La cocina del campamento",
+      "La parte de los tambores",
+      "El camino del mercado"
+    ],
+    "correcta": 0,
+    "explicacion": "El flanco izquierdo fue un punto clave para maniobrar durante la batalla.",
+    "dato_curioso": "Una buena estrategia puede ser tan importante como la fuerza."
+  },
+  {
+    "pregunta": "¿Qué afirmación combina dos datos verdaderos de Carabobo?",
+    "tipo": "texto",
+    "opciones": [
+      "Fue el 24 de junio de 1821 y duró cerca de 1 hora",
+      "Fue en 1810 y duró un mes",
+      "Fue en diciembre y no hubo soldados",
+      "Fue una ceremonia escolar"
+    ],
+    "correcta": 0,
+    "explicacion": "La fecha correcta es 24 de junio de 1821 y su duración aproximada fue de una hora.",
+    "dato_curioso": "Unir dos datos en una sola frase ayuda a memorizar mejor."
+  },
+  {
+    "pregunta": "¿Qué personaje de Carabobo tiene un apodo famoso y también un nombre real?",
+    "tipo": "texto",
+    "opciones": [
+      "Negro Primero, llamado Pedro Camejo",
+      "Nevado, llamado Ambrosio",
+      "Legión Británica, llamada Camejo",
+      "Flanco izquierdo, llamado Plaza"
+    ],
+    "correcta": 0,
+    "explicacion": "Negro Primero es el apodo; su nombre real es Pedro Camejo.",
+    "dato_curioso": "En historia, muchos héroes son conocidos por apodos inolvidables."
+  },
+  {
+    "pregunta": "¿Cuál opción explica por qué Carabobo es recordada en la independencia?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Niños en un museo escolar mirando una pintura de la Batalla de Carabobo con una maestra señalando la palabra 'decisiva'.",
+    "opciones": [
+      "Porque fue una victoria clave para la libertad",
+      "Porque era un concurso de cocina",
+      "Porque fue una excursión de verano",
+      "Porque no tuvo importancia"
+    ],
+    "correcta": 0,
+    "explicacion": "Se recuerda porque fue una victoria decisiva en la lucha por la independencia.",
+    "dato_curioso": "Los museos y escuelas ayudan a mantener viva esta memoria histórica."
+  },
+  {
+    "pregunta": "Si una batalla dura aproximadamente una hora, significa que...",
+    "tipo": "texto",
+    "opciones": [
+      "No fue eterna y ocurrió en poco tiempo",
+      "Duró muchos años",
+      "Nunca terminó",
+      "Duró exactamente cinco minutos"
+    ],
+    "correcta": 0,
+    "explicacion": "Aproximadamente una hora indica un tiempo breve, no larguísimo.",
+    "dato_curioso": "Las batallas cortas también pueden ser muy importantes en la historia."
+  },
+  {
+    "pregunta": "¿Cuál elemento extranjero apoyó directamente en Carabobo?",
+    "tipo": "texto",
+    "opciones": [
+      "La Legión Británica",
+      "Los faraones de Egipto",
+      "Los samuráis de Japón",
+      "Los vikingos del norte"
+    ],
+    "correcta": 0,
+    "explicacion": "La Legión Británica fue el apoyo extranjero más conocido en esta batalla.",
+    "dato_curioso": "En esa legión participaron voluntarios con experiencia militar."
+  },
+  {
+    "pregunta": "¿Qué opción une personaje y rol de forma correcta?",
+    "tipo": "texto",
+    "opciones": [
+      "Ambrosio Plaza - general patriota",
+      "Nevado - ministro",
+      "Pedro Camejo - perro",
+      "Legión Británica - ciudad"
+    ],
+    "correcta": 0,
+    "explicacion": "Ambrosio Plaza fue un general patriota relacionado con Carabobo.",
+    "dato_curioso": "Conocer roles evita confundir personas, animales y grupos históricos."
+  },
+  {
+    "pregunta": "¿Qué describe mejor el contexto de independencia alrededor de 1821?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Mapa escolar de América del Sur en tonos suaves con varias banderas nacientes y flechas de procesos independentistas, enfoque en Venezuela.",
+    "opciones": [
+      "Pueblos buscando libertad y autogobierno",
+      "Países jugando carreras",
+      "Una competencia de castillos",
+      "Un desfile de disfraces"
+    ],
+    "correcta": 0,
+    "explicacion": "En ese contexto, muchos pueblos querían gobernarse por sí mismos.",
+    "dato_curioso": "Autogobierno significa que las decisiones las toma el propio país."
+  },
+  {
+    "pregunta": "¿Qué par de datos de Negro Primero es correcto?",
+    "tipo": "texto",
+    "opciones": [
+      "Su nombre era Pedro Camejo y luchó por la independencia",
+      "Era un perro y se llamaba Nevado",
+      "Era una legión extranjera",
+      "Era el nombre del flanco izquierdo"
+    ],
+    "correcta": 0,
+    "explicacion": "Negro Primero fue Pedro Camejo, un combatiente patriota.",
+    "dato_curioso": "Los llaneros como Camejo aportaron rapidez y valentía en combate."
+  },
+  {
+    "pregunta": "¿Cuál enunciado está totalmente bien escrito sobre Carabobo?",
+    "tipo": "texto",
+    "opciones": [
+      "Fue el 24 de junio de 1821 y fue decisiva",
+      "Fue en 1921 y fue una fiesta",
+      "No tuvo fecha conocida",
+      "Duró tres años"
+    ],
+    "correcta": 0,
+    "explicacion": "La frase correcta indica la fecha real y su carácter decisivo.",
+    "dato_curioso": "Repetir frases completas correctas fortalece la memoria histórica."
+  },
+  {
+    "pregunta": "Si te preguntan por una mascota famosa de esta época, ¿qué respondes?",
+    "tipo": "texto",
+    "opciones": [
+      "El perro Nevado",
+      "El gato lunar",
+      "El loro real",
+      "El pez dorado"
+    ],
+    "correcta": 0,
+    "explicacion": "La mascota más conocida en estas historias es el perro Nevado.",
+    "dato_curioso": "En clase, Nevado suele ser uno de los personajes favoritos de los niños."
+  },
+  {
+    "pregunta": "¿Qué elección muestra una idea estratégica militar real?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Tablero escolar con fichas de colores representando tropas; una maestra señala cómo mover el flanco izquierdo en una estrategia sencilla.",
+    "opciones": [
+      "Mover y proteger el flanco izquierdo",
+      "Pintar las botas de colores",
+      "Guardar tambores en cajas",
+      "Cambiar banderas por globos"
+    ],
+    "correcta": 0,
+    "explicacion": "La estrategia militar sí incluye mover y cuidar flancos durante un combate.",
+    "dato_curioso": "Muchas estrategias se estudian con mapas y dibujos antes de actuar."
+  },
+  {
+    "pregunta": "¿Cuál respuesta identifica al apoyo internacional de los patriotas?",
+    "tipo": "texto",
+    "opciones": [
+      "Legión Británica",
+      "Escuadra Marciana",
+      "Tribu de dragones",
+      "Ejército de robots"
+    ],
+    "correcta": 0,
+    "explicacion": "El apoyo internacional mencionado en Carabobo fue la Legión Británica.",
+    "dato_curioso": "Internacional quiere decir que venían de otros países."
+  },
+  {
+    "pregunta": "¿Qué personaje debes asociar con el nombre Ambrosio Plaza?",
+    "tipo": "texto",
+    "opciones": [
+      "Un oficial patriota en la independencia",
+      "Un músico moderno",
+      "Un científico espacial",
+      "Un explorador submarino"
+    ],
+    "correcta": 0,
+    "explicacion": "Ambrosio Plaza fue un militar patriota ligado a la campaña independentista.",
+    "dato_curioso": "Sus acciones se estudian junto a otros líderes de la época."
+  },
+  {
+    "pregunta": "En una frase, ¿qué fue Carabobo para Venezuela?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Bandera de Venezuela iluminada por el sol sobre un campo histórico de Carabobo, estilo ilustración educativa y esperanzadora.",
+    "opciones": [
+      "Una victoria decisiva en la independencia",
+      "Un paseo de vacaciones",
+      "Una carrera de bicicletas",
+      "Un juego de mesa"
+    ],
+    "correcta": 0,
+    "explicacion": "Carabobo fue una victoria decisiva para consolidar la independencia venezolana.",
+    "dato_curioso": "Consolidar significa fortalecer algo para que quede firme y seguro."
+  },
+  {
+    "pregunta": "¿Qué opción tiene los dos nombres correctos de la misma persona?",
+    "tipo": "texto",
+    "opciones": [
+      "Negro Primero - Pedro Camejo",
+      "Nevado - Pedro Camejo",
+      "Ambrosio Plaza - Nevado",
+      "Legión Británica - Negro Primero"
+    ],
+    "correcta": 0,
+    "explicacion": "Negro Primero y Pedro Camejo son dos formas de nombrar al mismo héroe.",
+    "dato_curioso": "En historia es común ver apodo y nombre real juntos en los libros."
+  },
+  {
+    "pregunta": "¿Qué opción recuerda correctamente fecha y sentido histórico?",
+    "tipo": "texto",
+    "opciones": [
+      "24 de junio de 1821, batalla clave de independencia",
+      "24 de junio de 1921, fiesta escolar",
+      "15 de agosto de 1700, invento mecánico",
+      "31 de diciembre de 2000, evento deportivo"
+    ],
+    "correcta": 0,
+    "explicacion": "La frase correcta une la fecha verdadera con su importancia histórica.",
+    "dato_curioso": "Cuando una respuesta trae fecha y significado, suele ser más completa."
+  }
+]

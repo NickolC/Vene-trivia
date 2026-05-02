@@ -1,0 +1,587 @@
+[
+  {
+    "pregunta": "¿Como se llamaba la compania que controlaba gran parte del comercio en Venezuela colonial?",
+    "tipo": "texto",
+    "opciones": [
+      "Compania Guipuzcoana",
+      "Compania de Helados",
+      "Liga de Piratas",
+      "Compania del Espacio"
+    ],
+    "correcta": 0,
+    "explicacion": "La Compania Guipuzcoana fue una empresa espanola autorizada para manejar el comercio, sobre todo del cacao.",
+    "dato_curioso": "Su nombre viene de Guipuzcoa, una region del Pais Vasco en Espana."
+  },
+  {
+    "pregunta": "¿Que producto venezolano era muy buscado en Europa en la epoca colonial?",
+    "tipo": "texto",
+    "opciones": [
+      "Cacao",
+      "Plastico",
+      "Petroleo",
+      "Computadoras"
+    ],
+    "correcta": 0,
+    "explicacion": "El cacao venezolano tenia gran calidad y se vendia muy bien para fabricar chocolate en Europa.",
+    "dato_curioso": "En algunos puertos, el cacao se guardaba en sacos enormes listos para viajar en barco."
+  },
+  {
+    "pregunta": "¿Por que muchos agricultores se molestaron con la Compania Guipuzcoana?",
+    "tipo": "texto",
+    "opciones": [
+      "Porque cobraba y compraba con precios injustos",
+      "Porque regalaba demasiado dinero",
+      "Porque no existia el cacao",
+      "Porque cerraba las escuelas"
+    ],
+    "correcta": 0,
+    "explicacion": "La compania imponia condiciones de compra y venta que afectaban a los productores locales.",
+    "dato_curioso": "Ese descontento ayudo a impulsar varias protestas en el siglo XVIII."
+  },
+  {
+    "pregunta": "¿Como se llamo la rebelion liderada por Juan Francisco de Leon en 1749?",
+    "tipo": "texto",
+    "opciones": [
+      "Rebelion de Juan Francisco de Leon",
+      "La Gran Carrera",
+      "Marcha de los Piratas",
+      "Rebelion de los Roboticos"
+    ],
+    "correcta": 0,
+    "explicacion": "Juan Francisco de Leon lidero una rebelion contra los abusos comerciales de la Compania Guipuzcoana.",
+    "dato_curioso": "La protesta reunio a campesinos, comerciantes y habitantes de distintas zonas."
+  },
+  {
+    "pregunta": "¿En que ano ocurrio la rebelion de Juan Francisco de Leon?",
+    "tipo": "texto",
+    "opciones": [
+      "1749",
+      "1810",
+      "1492",
+      "2000"
+    ],
+    "correcta": 0,
+    "explicacion": "La rebelion ocurrio en 1749, varias decadas antes de la independencia de Venezuela.",
+    "dato_curioso": "Fue una de las primeras grandes expresiones de rechazo al control economico colonial."
+  },
+  {
+    "pregunta": "¿Que zona de Venezuela estuvo muy ligada al cultivo y comercio del cacao colonial?",
+    "tipo": "texto",
+    "opciones": [
+      "La costa central",
+      "La Antartida",
+      "El Everest",
+      "El Sahara"
+    ],
+    "correcta": 0,
+    "explicacion": "La costa central, con puertos cercanos, fue clave para exportar cacao hacia Europa.",
+    "dato_curioso": "Las haciendas cacaoteras crecieron mucho cerca de valles y zonas humedas."
+  },
+  {
+    "pregunta": "¿Que puerto fue clave para la salida de productos coloniales cerca de Caracas?",
+    "tipo": "texto",
+    "opciones": [
+      "La Guaira",
+      "Puerto de la Luna",
+      "Puerto Robot",
+      "Puerto del Hielo"
+    ],
+    "correcta": 0,
+    "explicacion": "La Guaira conectaba a Caracas con rutas maritimas de comercio internacional.",
+    "dato_curioso": "Muchos bienes entraban y salian por La Guaira, incluyendo telas, herramientas y cacao."
+  },
+  {
+    "pregunta": "¿Que buscaba controlar la Compania Guipuzcoana?",
+    "tipo": "texto",
+    "opciones": [
+      "El comercio legal de la provincia",
+      "Las fiestas patronales",
+      "Los equipos de beisbol",
+      "Los volcanes"
+    ],
+    "correcta": 0,
+    "explicacion": "La compania queria monopolizar el comercio, es decir, ser casi la unica autorizada para comprar y vender.",
+    "dato_curioso": "Cuando hay monopolio, los productores suelen tener menos opciones para negociar mejores precios."
+  },
+  {
+    "pregunta": "¿Que fue el contrabando en la Venezuela colonial?",
+    "tipo": "texto",
+    "opciones": [
+      "Comercio sin autorizacion oficial",
+      "Un baile tipico",
+      "Una moneda antigua",
+      "Un fuerte militar"
+    ],
+    "correcta": 0,
+    "explicacion": "El contrabando era vender o comprar productos fuera de las rutas permitidas por la Corona.",
+    "dato_curioso": "Muchos productores usaban el contrabando para escapar de precios muy bajos impuestos por monopolios."
+  },
+  {
+    "pregunta": "¿Que grupo social participaba mucho en el trabajo de las haciendas coloniales?",
+    "tipo": "texto",
+    "opciones": [
+      "Personas esclavizadas y trabajadores locales",
+      "Astronautas",
+      "Magos",
+      "Piratas espaciales"
+    ],
+    "correcta": 0,
+    "explicacion": "En las haciendas trabajaban personas esclavizadas y tambien habitantes locales en tareas agricolas.",
+    "dato_curioso": "El trabajo en haciendas era duro y estaba ligado al sistema economico colonial."
+  },
+  {
+    "pregunta": "¿Que idea comenzo a crecer despues de tantas tensiones economicas coloniales?",
+    "tipo": "texto",
+    "opciones": [
+      "La busqueda de mayor autonomia",
+      "Mudarse todos al mar",
+      "Suspender el comercio para siempre",
+      "Cambiar el idioma oficial a latin"
+    ],
+    "correcta": 0,
+    "explicacion": "Las injusticias economicas ayudaron a que creciera la idea de gobernarse con mas libertad.",
+    "dato_curioso": "Las protestas economicas fueron un antecedente importante de los movimientos independentistas."
+  },
+  {
+    "pregunta": "¿Que institucion representaba el poder de la Corona espanola en America?",
+    "tipo": "texto",
+    "opciones": [
+      "El gobierno colonial",
+      "El club de lectura",
+      "El consejo de videojuegos",
+      "La liga de inventores"
+    ],
+    "correcta": 0,
+    "explicacion": "El gobierno colonial aplicaba las ordenes de la Corona en las provincias americanas.",
+    "dato_curioso": "Las decisiones economicas y politicas importantes venian desde Espana."
+  },
+  {
+    "pregunta": "¿Quien gobernaba oficialmente Venezuela antes de la independencia?",
+    "tipo": "texto",
+    "opciones": [
+      "La Corona espanola",
+      "Francia",
+      "Brasil",
+      "Inglaterra"
+    ],
+    "correcta": 0,
+    "explicacion": "Antes de la independencia, Venezuela formaba parte del Imperio espanol.",
+    "dato_curioso": "La organizacion colonial cambio varias veces antes de llegar a la Capitania General de Venezuela."
+  },
+  {
+    "pregunta": "¿Como se llamaba la principal unidad politica creada en 1777 para organizar Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Capitania General de Venezuela",
+      "Reino del Cacao",
+      "Federacion de Piratas",
+      "Provincia del Hielo"
+    ],
+    "correcta": 0,
+    "explicacion": "En 1777 se creo la Capitania General de Venezuela para centralizar la administracion del territorio.",
+    "dato_curioso": "Esa reorganizacion ayudo a formar una identidad politica mas unificada."
+  },
+  {
+    "pregunta": "¿Que relacion tiene la rebelion de 1749 con la independencia de 1810-1811?",
+    "tipo": "texto",
+    "opciones": [
+      "Fue un antecedente de descontento contra el sistema colonial",
+      "No tiene ninguna relacion",
+      "Fue una guerra mundial",
+      "Fue un torneo deportivo"
+    ],
+    "correcta": 0,
+    "explicacion": "La rebelion mostro que ya existia rechazo a ciertas politicas coloniales mucho antes de la independencia.",
+    "dato_curioso": "Los procesos historicos suelen empezar con pequenas tensiones que crecen con el tiempo."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Como se llamaba la compania que controlaba gran parte del comercio en Venezuela colonial?",
+    "tipo": "texto",
+    "opciones": [
+      "Compania del Espacio",
+      "Compania de Helados",
+      "Compania Guipuzcoana",
+      "Liga de Piratas"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: La Compania Guipuzcoana fue una empresa espanola autorizada para manejar el comercio, sobre todo del cacao.",
+    "dato_curioso": "Repaso curioso: Su nombre viene de Guipuzcoa, una region del Pais Vasco en Espana."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Que producto venezolano era muy buscado en Europa en la epoca colonial?",
+    "tipo": "texto",
+    "opciones": [
+      "Cacao",
+      "Petroleo",
+      "Plastico",
+      "Computadoras"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: El cacao venezolano tenia gran calidad y se vendia muy bien para fabricar chocolate en Europa.",
+    "dato_curioso": "Repaso curioso: En algunos puertos, el cacao se guardaba en sacos enormes listos para viajar en barco."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Por que muchos agricultores se molestaron con la Compania Guipuzcoana?",
+    "tipo": "texto",
+    "opciones": [
+      "Porque cerraba las escuelas",
+      "Porque cobraba y compraba con precios injustos",
+      "Porque regalaba demasiado dinero",
+      "Porque no existia el cacao"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: La compania imponia condiciones de compra y venta que afectaban a los productores locales.",
+    "dato_curioso": "Repaso curioso: Ese descontento ayudo a impulsar varias protestas en el siglo XVIII."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Como se llamo la rebelion liderada por Juan Francisco de Leon en 1749?",
+    "tipo": "texto",
+    "opciones": [
+      "La Gran Carrera",
+      "Marcha de los Piratas",
+      "Rebelion de los Roboticos",
+      "Rebelion de Juan Francisco de Leon"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: Juan Francisco de Leon lidero una rebelion contra los abusos comerciales de la Compania Guipuzcoana.",
+    "dato_curioso": "Repaso curioso: La protesta reunio a campesinos, comerciantes y habitantes de distintas zonas."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: En que ano ocurrio la rebelion de Juan Francisco de Leon?",
+    "tipo": "texto",
+    "opciones": [
+      "2000",
+      "1810",
+      "1492",
+      "1749"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: La rebelion ocurrio en 1749, varias decadas antes de la independencia de Venezuela.",
+    "dato_curioso": "Repaso curioso: Fue una de las primeras grandes expresiones de rechazo al control economico colonial."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Que zona de Venezuela estuvo muy ligada al cultivo y comercio del cacao colonial?",
+    "tipo": "texto",
+    "opciones": [
+      "El Everest",
+      "La Antartida",
+      "El Sahara",
+      "La costa central"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: La costa central, con puertos cercanos, fue clave para exportar cacao hacia Europa.",
+    "dato_curioso": "Repaso curioso: Las haciendas cacaoteras crecieron mucho cerca de valles y zonas humedas."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Que puerto fue clave para la salida de productos coloniales cerca de Caracas?",
+    "tipo": "texto",
+    "opciones": [
+      "Puerto del Hielo",
+      "La Guaira",
+      "Puerto Robot",
+      "Puerto de la Luna"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: La Guaira conectaba a Caracas con rutas maritimas de comercio internacional.",
+    "dato_curioso": "Repaso curioso: Muchos bienes entraban y salian por La Guaira, incluyendo telas, herramientas y cacao."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Que buscaba controlar la Compania Guipuzcoana?",
+    "tipo": "texto",
+    "opciones": [
+      "Los equipos de beisbol",
+      "Los volcanes",
+      "Las fiestas patronales",
+      "El comercio legal de la provincia"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: La compania queria monopolizar el comercio, es decir, ser casi la unica autorizada para comprar y vender.",
+    "dato_curioso": "Repaso curioso: Cuando hay monopolio, los productores suelen tener menos opciones para negociar mejores precios."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Que fue el contrabando en la Venezuela colonial?",
+    "tipo": "texto",
+    "opciones": [
+      "Una moneda antigua",
+      "Un fuerte militar",
+      "Un baile tipico",
+      "Comercio sin autorizacion oficial"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: El contrabando era vender o comprar productos fuera de las rutas permitidas por la Corona.",
+    "dato_curioso": "Repaso curioso: Muchos productores usaban el contrabando para escapar de precios muy bajos impuestos por monopolios."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Que grupo social participaba mucho en el trabajo de las haciendas coloniales?",
+    "tipo": "texto",
+    "opciones": [
+      "Magos",
+      "Piratas espaciales",
+      "Astronautas",
+      "Personas esclavizadas y trabajadores locales"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: En las haciendas trabajaban personas esclavizadas y tambien habitantes locales en tareas agricolas.",
+    "dato_curioso": "Repaso curioso: El trabajo en haciendas era duro y estaba ligado al sistema economico colonial."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Que idea comenzo a crecer despues de tantas tensiones economicas coloniales?",
+    "tipo": "texto",
+    "opciones": [
+      "Cacao",
+      "Porque cobraba y compraba con precios injustos",
+      "Compania Guipuzcoana",
+      "La busqueda de mayor autonomia"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: Las injusticias economicas ayudaron a que creciera la idea de gobernarse con mas libertad.",
+    "dato_curioso": "Dato para profundizar: Las protestas economicas fueron un antecedente importante de los movimientos independentistas."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Que institucion representaba el poder de la Corona espanola en America?",
+    "tipo": "texto",
+    "opciones": [
+      "Porque cobraba y compraba con precios injustos",
+      "El gobierno colonial",
+      "Compania Guipuzcoana",
+      "Cacao"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: El gobierno colonial aplicaba las ordenes de la Corona en las provincias americanas.",
+    "dato_curioso": "Dato para profundizar: Las decisiones economicas y politicas importantes venian desde Espana."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Quien gobernaba oficialmente Venezuela antes de la independencia?",
+    "tipo": "texto",
+    "opciones": [
+      "Porque cobraba y compraba con precios injustos",
+      "Cacao",
+      "La Corona espanola",
+      "Compania Guipuzcoana"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: Antes de la independencia, Venezuela formaba parte del Imperio espanol.",
+    "dato_curioso": "Dato para profundizar: La organizacion colonial cambio varias veces antes de llegar a la Capitania General de Venezuela."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Como se llamaba la principal unidad politica creada en 1777 para organizar Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Compania Guipuzcoana",
+      "Porque cobraba y compraba con precios injustos",
+      "Cacao",
+      "Capitania General de Venezuela"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: En 1777 se creo la Capitania General de Venezuela para centralizar la administracion del territorio.",
+    "dato_curioso": "Dato para profundizar: Esa reorganizacion ayudo a formar una identidad politica mas unificada."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Que relacion tiene la rebelion de 1749 con la independencia de 1810-1811?",
+    "tipo": "texto",
+    "opciones": [
+      "Cacao",
+      "Porque cobraba y compraba con precios injustos",
+      "Fue un antecedente de descontento contra el sistema colonial",
+      "Compania Guipuzcoana"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: La rebelion mostro que ya existia rechazo a ciertas politicas coloniales mucho antes de la independencia.",
+    "dato_curioso": "Dato para profundizar: Los procesos historicos suelen empezar con pequenas tensiones que crecen con el tiempo."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Como se llamaba la compania que controlaba gran parte del comercio en Venezuela colonial?",
+    "tipo": "texto",
+    "opciones": [
+      "Compania Guipuzcoana",
+      "Porque cobraba y compraba con precios injustos",
+      "Rebelion de Juan Francisco de Leon",
+      "Cacao"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: La Compania Guipuzcoana fue una empresa espanola autorizada para manejar el comercio, sobre todo del cacao.",
+    "dato_curioso": "Dato para profundizar: Su nombre viene de Guipuzcoa, una region del Pais Vasco en Espana."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Que producto venezolano era muy buscado en Europa en la epoca colonial?",
+    "tipo": "texto",
+    "opciones": [
+      "Compania Guipuzcoana",
+      "Porque cobraba y compraba con precios injustos",
+      "Cacao",
+      "Rebelion de Juan Francisco de Leon"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: El cacao venezolano tenia gran calidad y se vendia muy bien para fabricar chocolate en Europa.",
+    "dato_curioso": "Dato para profundizar: En algunos puertos, el cacao se guardaba en sacos enormes listos para viajar en barco."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Por que muchos agricultores se molestaron con la Compania Guipuzcoana?",
+    "tipo": "texto",
+    "opciones": [
+      "Cacao",
+      "Porque cobraba y compraba con precios injustos",
+      "Compania Guipuzcoana",
+      "Rebelion de Juan Francisco de Leon"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: La compania imponia condiciones de compra y venta que afectaban a los productores locales.",
+    "dato_curioso": "Dato para profundizar: Ese descontento ayudo a impulsar varias protestas en el siglo XVIII."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Como se llamo la rebelion liderada por Juan Francisco de Leon en 1749?",
+    "tipo": "texto",
+    "opciones": [
+      "Rebelion de Juan Francisco de Leon",
+      "Compania Guipuzcoana",
+      "Porque cobraba y compraba con precios injustos",
+      "Cacao"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: Juan Francisco de Leon lidero una rebelion contra los abusos comerciales de la Compania Guipuzcoana.",
+    "dato_curioso": "Dato para profundizar: La protesta reunio a campesinos, comerciantes y habitantes de distintas zonas."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: En que ano ocurrio la rebelion de Juan Francisco de Leon?",
+    "tipo": "texto",
+    "opciones": [
+      "1749",
+      "Porque cobraba y compraba con precios injustos",
+      "Cacao",
+      "Compania Guipuzcoana"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: La rebelion ocurrio en 1749, varias decadas antes de la independencia de Venezuela.",
+    "dato_curioso": "Dato para profundizar: Fue una de las primeras grandes expresiones de rechazo al control economico colonial."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Que zona de Venezuela estuvo muy ligada al cultivo y comercio del cacao colonial?",
+    "tipo": "texto",
+    "opciones": [
+      "La costa central",
+      "El Everest",
+      "La Antartida",
+      "El Sahara"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: La costa central, con puertos cercanos, fue clave para exportar cacao hacia Europa.",
+    "dato_curioso": "Ampliación histórica: Las haciendas cacaoteras crecieron mucho cerca de valles y zonas humedas."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Que puerto fue clave para la salida de productos coloniales cerca de Caracas?",
+    "tipo": "texto",
+    "opciones": [
+      "Puerto de la Luna",
+      "La Guaira",
+      "Puerto Robot",
+      "Puerto del Hielo"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: La Guaira conectaba a Caracas con rutas maritimas de comercio internacional.",
+    "dato_curioso": "Ampliación histórica: Muchos bienes entraban y salian por La Guaira, incluyendo telas, herramientas y cacao."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Que buscaba controlar la Compania Guipuzcoana?",
+    "tipo": "texto",
+    "opciones": [
+      "Los volcanes",
+      "Los equipos de beisbol",
+      "Las fiestas patronales",
+      "El comercio legal de la provincia"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: La compania queria monopolizar el comercio, es decir, ser casi la unica autorizada para comprar y vender.",
+    "dato_curioso": "Ampliación histórica: Cuando hay monopolio, los productores suelen tener menos opciones para negociar mejores precios."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Que fue el contrabando en la Venezuela colonial?",
+    "tipo": "texto",
+    "opciones": [
+      "Una moneda antigua",
+      "Comercio sin autorizacion oficial",
+      "Un fuerte militar",
+      "Un baile tipico"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: El contrabando era vender o comprar productos fuera de las rutas permitidas por la Corona.",
+    "dato_curioso": "Ampliación histórica: Muchos productores usaban el contrabando para escapar de precios muy bajos impuestos por monopolios."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Que grupo social participaba mucho en el trabajo de las haciendas coloniales?",
+    "tipo": "texto",
+    "opciones": [
+      "Astronautas",
+      "Magos",
+      "Personas esclavizadas y trabajadores locales",
+      "Piratas espaciales"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: En las haciendas trabajaban personas esclavizadas y tambien habitantes locales en tareas agricolas.",
+    "dato_curioso": "Ampliación histórica: El trabajo en haciendas era duro y estaba ligado al sistema economico colonial."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Que idea comenzo a crecer despues de tantas tensiones economicas coloniales?",
+    "tipo": "texto",
+    "opciones": [
+      "Suspender el comercio para siempre",
+      "Cambiar el idioma oficial a latin",
+      "La busqueda de mayor autonomia",
+      "Mudarse todos al mar"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: Las injusticias economicas ayudaron a que creciera la idea de gobernarse con mas libertad.",
+    "dato_curioso": "Ampliación histórica: Las protestas economicas fueron un antecedente importante de los movimientos independentistas."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Que institucion representaba el poder de la Corona espanola en America?",
+    "tipo": "texto",
+    "opciones": [
+      "El club de lectura",
+      "El consejo de videojuegos",
+      "El gobierno colonial",
+      "La liga de inventores"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: El gobierno colonial aplicaba las ordenes de la Corona en las provincias americanas.",
+    "dato_curioso": "Ampliación histórica: Las decisiones economicas y politicas importantes venian desde Espana."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Quien gobernaba oficialmente Venezuela antes de la independencia?",
+    "tipo": "texto",
+    "opciones": [
+      "Brasil",
+      "La Corona espanola",
+      "Inglaterra",
+      "Francia"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: Antes de la independencia, Venezuela formaba parte del Imperio espanol.",
+    "dato_curioso": "Ampliación histórica: La organizacion colonial cambio varias veces antes de llegar a la Capitania General de Venezuela."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Como se llamaba la principal unidad politica creada en 1777 para organizar Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Federacion de Piratas",
+      "Reino del Cacao",
+      "Provincia del Hielo",
+      "Capitania General de Venezuela"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: En 1777 se creo la Capitania General de Venezuela para centralizar la administracion del territorio.",
+    "dato_curioso": "Ampliación histórica: Esa reorganizacion ayudo a formar una identidad politica mas unificada."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Que relacion tiene la rebelion de 1749 con la independencia de 1810-1811?",
+    "tipo": "texto",
+    "opciones": [
+      "No tiene ninguna relacion",
+      "Fue una guerra mundial",
+      "Fue un antecedente de descontento contra el sistema colonial",
+      "Fue un torneo deportivo"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: La rebelion mostro que ya existia rechazo a ciertas politicas coloniales mucho antes de la independencia.",
+    "dato_curioso": "Ampliación histórica: Los procesos historicos suelen empezar con pequenas tensiones que crecen con el tiempo."
+  }
+]

@@ -1,0 +1,861 @@
+[
+  {
+    "pregunta": "¿Cómo se llamaba la primera ciudad europea construida en Sudamérica?",
+    "tipo": "texto",
+    "opciones": [
+      "Nueva Cádiz",
+      "Ciudad Tamalito",
+      "Villa Chocolata",
+      "Pueblo Arcoíris"
+    ],
+    "correcta": 0,
+    "explicacion": "La primera ciudad europea en Sudamérica se llamó Nueva Cádiz. Estaba en la isla de Cubagua, en Venezuela, mucho antes de que existiera Caracas.",
+    "dato_curioso": "Nueva Cádiz existió antes que muchas ciudades famosas de América. ¡Venezuela tiene la ciudad más antigua del continente sudamericano!"
+  },
+  {
+    "pregunta": "¿En qué isla venezolana estaba ubicada Nueva Cádiz?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Mapa ilustrado del estado Nueva Esparta en Venezuela, con la pequeña isla de Cubagua marcada con una estrella brillante cerca de Margarita. El mar es turquesa y el fondo es colorido. Estilo infantil educativo.",
+    "opciones": [
+      "En la isla del tesoro pirata",
+      "En Cubagua",
+      "En la isla de los dinosaurios",
+      "En la isla de los helados flotantes"
+    ],
+    "correcta": 1,
+    "explicacion": "Nueva Cádiz estaba en la isla de Cubagua, en el estado Nueva Esparta de Venezuela. Era una pequeña isla que se volvió muy famosa por sus perlas.",
+    "dato_curioso": "Cubagua es una isla tan pequeña y seca que hoy casi nadie vive allí. ¡Pero hace 500 años era uno de los lugares más ricos del mundo!"
+  },
+  {
+    "pregunta": "¿Cuándo vivieron los españoles en Nueva Cádiz, isla de Cubagua?",
+    "tipo": "texto",
+    "opciones": [
+      "En el siglo XXI",
+      "En la época de los dinosaurios",
+      "En el siglo XVI, en los años 1500",
+      "El año pasado"
+    ],
+    "correcta": 2,
+    "explicacion": "Los españoles vivieron en Nueva Cádiz durante el siglo XVI, que son los años 1500. Fue hace más de 500 años.",
+    "dato_curioso": "Hace 500 años no había electricidad, computadoras ni autos. ¡Los españoles viajaron a Venezuela en barcos de vela cruzando todo el océano Atlántico!"
+  },
+  {
+    "pregunta": "¿Quiénes eran los Guaiquerí?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración colorida de un indígena Guaiquerí buceando bajo el mar azul cristalino, rodeado de ostras perleras en el fondo marino. El agua es transparente y hay peces de colores. Estilo ilustración infantil.",
+    "opciones": [
+      "Los robots pescadores del futuro",
+      "Los superhéroes del espacio marino",
+      "Los piratas con sombreros de perlas",
+      "Los indígenas buceadores expertos de Cubagua"
+    ],
+    "correcta": 3,
+    "explicacion": "Los Guaiquerí eran un pueblo indígena que vivía en esa región. Eran buceadores increíbles que sumergían al fondo del mar a buscar ostras con perlas.",
+    "dato_curioso": "Los Guaiquerí podían ver perfectamente bajo el agua sin gafas de buceo. ¡Sus ojos estaban adaptados de tanto practicar desde que eran niños pequeños!"
+  },
+  {
+    "pregunta": "¿Cuánto tiempo podían aguantar sin respirar los buzos Guaiquerí?",
+    "tipo": "texto",
+    "opciones": [
+      "Hasta 2 minutos bajo el agua",
+      "Solo dos segundos",
+      "Una hora entera",
+      "Nunca necesitaban respirar"
+    ],
+    "correcta": 0,
+    "explicacion": "Los Guaiquerí podían aguantar hasta 2 minutos sin respirar bajo el agua. ¡Eso es mucho tiempo! La mayoría de las personas solo aguantan unos 30 segundos.",
+    "dato_curioso": "Para aguantar 2 minutos sin respirar hay que entrenarse mucho. Los niños Guaiquerí aprendían a bucear desde muy pequeños, como tú aprendes a andar en bici."
+  },
+  {
+    "pregunta": "¿Qué buscaban los Guaiquerí en el fondo del mar de Cubagua?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ostras perleras abiertas mostrando perlas brillantes blancas y rosadas en el fondo del mar azul. Hay varias ostras en el lecho marino con estrellas de mar y corales de colores. Ilustración vívida para niños.",
+    "opciones": [
+      "Tesoros piratas con calaveras",
+      "Ostras con perlas brillantes",
+      "Videojuegos acuáticos perdidos",
+      "Pizzas con queso submarino"
+    ],
+    "correcta": 1,
+    "explicacion": "Los Guaiquerí buscaban ostras que guardaban perlas muy valiosas. Esas perlas brillantes y redondas valían muchísimo dinero en Europa.",
+    "dato_curioso": "No todas las ostras tienen perla. Los Guaiquerí abrían cientos de ostras para encontrar solo algunas con perlas. ¡Era como buscar un tesoro escondido!"
+  },
+  {
+    "pregunta": "¿Para quiénes trabajaban principalmente los buzos Guaiquerí?",
+    "tipo": "texto",
+    "opciones": [
+      "Para los magos del circo acuático",
+      "Para los aliens del océano",
+      "Para los conquistadores españoles",
+      "Para los pingüinos del Caribe"
+    ],
+    "correcta": 2,
+    "explicacion": "Los Guaiquerí buceaban y sacaban las perlas, pero eran los conquistadores españoles quienes las vendían y se quedaban con la riqueza.",
+    "dato_curioso": "Muchos Guaiquerí eran obligados a trabajar de buceadores. Era un trabajo muy duro y peligroso, con tiburones, corrientes y frío en el fondo del mar."
+  },
+  {
+    "pregunta": "¿Qué tan valiosas eran las perlas venezolanas en España?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Corona real de oro brillante decorada con perlas blancas y piedras preciosas, sobre un cojín de terciopelo rojo. Estilo ilustración majestuosa y colorida para niños.",
+    "opciones": [
+      "No valían nada, a nadie le gustaban",
+      "Eran premios en concursos de baile",
+      "Se usaban para jugar canicas gigantes",
+      "Decoraban las coronas de los reyes de España"
+    ],
+    "correcta": 3,
+    "explicacion": "Las perlas venezolanas eran tan valiosas que decoraban las coronas y joyas de los reyes y reinas de España. ¡Eran símbolo de riqueza y poder!",
+    "dato_curioso": "La reina Isabel de Castilla usaba perlas venezolanas en sus vestidos y joyas. ¡Las perlas de Cubagua estuvieron en la cabeza de la familia real española!"
+  },
+  {
+    "pregunta": "¿Qué le pasó a las ostras perleras de Cubagua con el tiempo?",
+    "tipo": "texto",
+    "opciones": [
+      "Se agotaron porque pescaron demasiadas en 30 años",
+      "Se hicieron más grandes y felices",
+      "Se mudaron a la luna",
+      "Se convirtieron en ostras de chocolate"
+    ],
+    "correcta": 0,
+    "explicacion": "En solo 30 años, los españoles y los Guaiquerí sacaron tantas ostras que las agotaron completamente. No quedó ninguna ostra perlera en el mar de Cubagua.",
+    "dato_curioso": "Agotar todos los animales de un lugar se llama sobreexplotación. Hoy en día los científicos advierten que no debemos repetir ese error con otros animales marinos."
+  },
+  {
+    "pregunta": "¿Cuántos años tardaron en agotar todas las ostras perleras de Cubagua?",
+    "tipo": "texto",
+    "opciones": [
+      "Cinco siglos",
+      "Treinta años",
+      "Solo un día",
+      "Doscientos años"
+    ],
+    "correcta": 1,
+    "explicacion": "En solo 30 años de pesca intensa, agotaron todas las ostras del mar de Cubagua. Fue muy rápido para destruir algo que tardó miles de años en formarse.",
+    "dato_curioso": "¡Treinta años parece mucho pero no lo es para la naturaleza! Un árbol grande tarda más de 100 años en crecer. La naturaleza es lenta pero los humanos somos rápidos."
+  },
+  {
+    "pregunta": "¿Qué desastre natural destruyó la ciudad de Nueva Cádiz en 1541?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración dramática de una ciudad colonial siendo destruida simultáneamente por un terremoto que agrieta el suelo y un huracán con vientos poderosos. Mar agitado alrededor de la isla. Estilo ilustración infantil pero intensa.",
+    "opciones": [
+      "Una lluvia de caramelos ácidos",
+      "Un ataque de gaviotas gigantes",
+      "Un terremoto y un huracán juntos",
+      "Un volcán de mayonesa"
+    ],
+    "correcta": 2,
+    "explicacion": "En 1541 un terremoto sacudió la isla y luego llegó un huracán feroz. Juntos destruyeron completamente la ciudad de Nueva Cádiz.",
+    "dato_curioso": "Que un terremoto y un huracán ocurran casi al mismo tiempo en el mismo lugar es muy raro. ¡Los habitantes de Nueva Cádiz tuvieron la peor suerte del siglo XVI!"
+  },
+  {
+    "pregunta": "¿Qué queda hoy de la ciudad de Nueva Cádiz en Cubagua?",
+    "tipo": "texto",
+    "opciones": [
+      "Un parque de diversiones gigante",
+      "Un supermercado muy antiguo",
+      "Un castillo encantado",
+      "Solo ruinas y restos de edificios"
+    ],
+    "correcta": 3,
+    "explicacion": "Hoy solo quedan ruinas en la isla de Cubagua. Las paredes caídas y los cimientos son todo lo que sobrevivió de esa ciudad tan importante.",
+    "dato_curioso": "Los arqueólogos han excavado las ruinas de Nueva Cádiz y encontraron ollas, monedas, joyas y herramientas de los años 1500. ¡Como un tesoro enterrado!"
+  },
+  {
+    "pregunta": "¿Cómo usaban las perlas los conquistadores españoles?",
+    "tipo": "texto",
+    "opciones": [
+      "Como dinero y señal de riqueza y poder",
+      "Las usaban como pelotas de fútbol",
+      "Para hacer collares para sus perros",
+      "Como adorno para sus espadas láser"
+    ],
+    "correcta": 0,
+    "explicacion": "Las perlas eran usadas como dinero y como símbolo de que eras muy rico e importante. Mientras más perlas tenías, más poderoso eras.",
+    "dato_curioso": "En la época de Nueva Cádiz, una perla grande valía más que una casa entera. ¡Imagina pagar tu casa con una bolita brillante que encontraste en el mar!"
+  },
+  {
+    "pregunta": "¿En qué estado venezolano se encuentra la isla de Cubagua hoy?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Mapa colorido del estado Nueva Esparta con sus tres islas: Margarita grande y verde, Coche más pequeña, y Cubagua la más pequeña y árida marcada con una flecha. Mar turquesa alrededor. Estilo mapa educativo para niños.",
+    "opciones": [
+      "En el estado Zulia",
+      "En Nueva Esparta",
+      "En el estado Amazonas",
+      "En el estado Caramelo"
+    ],
+    "correcta": 1,
+    "explicacion": "Cubagua está en el estado Nueva Esparta, que también incluye la famosa isla de Margarita. Es una zona del oriente de Venezuela rodeada de mar Caribe.",
+    "dato_curioso": "Nueva Esparta se llama así en honor a la antigua ciudad griega de Esparta, famosa por sus guerreros. ¡Los españoles querían que su nueva tierra sonara poderosa!"
+  },
+  {
+    "pregunta": "¿Qué tan grande era la isla de Cubagua?",
+    "tipo": "texto",
+    "opciones": [
+      "Tan grande como Brasil",
+      "Del tamaño de un estadio de fútbol",
+      "Muy pequeña, de solo 24 kilómetros cuadrados",
+      "Tan grande como Venezuela entera"
+    ],
+    "correcta": 2,
+    "explicacion": "Cubagua es una isla muy pequeña, de solo 24 kilómetros cuadrados. ¡Pero fue tan famosa por sus perlas que todo el mundo en Europa la conocía!",
+    "dato_curioso": "A pesar de ser pequeñísima, Cubagua fue en su momento la ciudad más rica de todo el continente americano. ¡El tamaño no importa cuando tienes tesoros!"
+  },
+  {
+    "pregunta": "¿Qué hacían los Guaiquerí para prepararse para bucear?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Jóvenes indígenas Guaiquerí practicando buceo y natación en aguas turquesas poco profundas del Caribe. Algunos practican aguantar la respiración y otros nadan bajo el agua entre corales. Ilustración vibrante para niños.",
+    "opciones": [
+      "Veían tutoriales de internet",
+      "Tomaban poción mágica de pulpo",
+      "Usaban tanques de oxígeno espaciales",
+      "Se entrenaban desde niños nadando y aguantando la respiración"
+    ],
+    "correcta": 3,
+    "explicacion": "Los Guaiquerí se entrenaban desde pequeños para bucear. Practicaban nadar y aguantar la respiración hasta volverse expertos en el mar Caribe.",
+    "dato_curioso": "El agua del Caribe cerca de Cubagua es tan clara que podías ver el fondo desde arriba. Los Guaiquerí podían ver las ostras desde la superficie antes de sumergirse."
+  },
+  {
+    "pregunta": "¿Por qué Cubagua se volvió tan famosa en Europa?",
+    "tipo": "texto",
+    "opciones": [
+      "Por las perlas que producía y que llegaron a las cortes reales",
+      "Por su famosa receta de arepas de perlas",
+      "Por tener el parque de diversiones más grande",
+      "Por tener las mejores pizzas del Caribe"
+    ],
+    "correcta": 0,
+    "explicacion": "Cubagua se hizo famosa porque sus perlas llegaron hasta las cortes de los reyes de España y Europa. Todo el mundo quería las hermosas perlas venezolanas.",
+    "dato_curioso": "Las noticias de las perlas de Cubagua se extendieron tan rápido que en pocos años, barcos de toda España venían a buscar riquezas a esa pequeña isla."
+  },
+  {
+    "pregunta": "¿Qué otras cosas hacían los españoles en Nueva Cádiz además de comerciar perlas?",
+    "tipo": "texto",
+    "opciones": [
+      "Solo dormían todo el día",
+      "Construyeron casas, iglesias y organizaron una ciudad",
+      "Hacían conciertos de guitarra flamenca",
+      "Criaban unicornios del Caribe"
+    ],
+    "correcta": 1,
+    "explicacion": "Los españoles construyeron casas, iglesias, almacenes y organizaron una ciudad completa en Cubagua. Era una ciudad de verdad, no solo un campamento.",
+    "dato_curioso": "Nueva Cádiz tenía hasta una iglesia pequeña y mercados. ¡En menos de 30 años construyeron toda una ciudad en una isla sin agua dulce ni ríos!"
+  },
+  {
+    "pregunta": "¿Cómo obtenían agua dulce los habitantes de Nueva Cádiz si la isla no tenía ríos?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Barcos coloniales españoles del siglo XVI transportando barriles grandes de agua dulce desde tierra firme venezolana hacia la pequeña isla de Cubagua. El mar es turquesa. Estilo ilustración histórica para niños.",
+    "opciones": [
+      "La fabricaban con magia de hada",
+      "La sacaban de los cactus con pajitas",
+      "La traían en barcos desde tierra firme",
+      "Bebían solo jugo de perlas"
+    ],
+    "correcta": 2,
+    "explicacion": "Como Cubagua no tenía agua dulce, debían traerla en barriles desde tierra firme en barcos. Era un trabajo enorme solo para beber agua.",
+    "dato_curioso": "Hoy tenemos agua potable en nuestra casa fácilmente. Pero en Cubagua, hace 500 años, cada gotita de agua valía mucho porque había que traerla en barco."
+  },
+  {
+    "pregunta": "¿Cuál era el nombre completo y formal de la ciudad fundada en Cubagua?",
+    "tipo": "texto",
+    "opciones": [
+      "Villa Super Perla del Caribe",
+      "San Pepito de las Ostras",
+      "Ciudad Diamante Brillante",
+      "Nueva Cádiz de Cubagua"
+    ],
+    "correcta": 3,
+    "explicacion": "La ciudad se llamaba Nueva Cádiz, nombrada en honor a la ciudad española de Cádiz. Los colonizadores le ponían nombres de ciudades de España a sus nuevos territorios.",
+    "dato_curioso": "Cádiz es una ciudad portuaria en España de donde partían muchos barcos hacia América. ¡Tenía sentido que los marineros le pusieran ese nombre a su nueva ciudad!"
+  },
+  {
+    "pregunta": "¿Qué simbolizaba tener perlas en la época colonial venezolana?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de una noble española del siglo XVI con un vestido elegante decorado con perlas blancas brillantes, collares de perlas y una tiara adornada. Pose majestuosa en un palacio. Estilo ilustración histórica colorida para niños.",
+    "opciones": [
+      "Riqueza, poder y elegancia social",
+      "Que eras fanático del fútbol",
+      "Que eras buen cocinero",
+      "Que tenías muchas mascotas"
+    ],
+    "correcta": 0,
+    "explicacion": "Tener perlas era señal de que eras rico, poderoso y elegante. Las personas más importantes de Europa querían perlas venezolanas para mostrar su riqueza.",
+    "dato_curioso": "Las perlas de Venezuela eran consideradas las más hermosas del mundo en el siglo XVI. ¡Los reyes europeos preferían las perlas del Caribe sobre cualquier otra joya!"
+  },
+  {
+    "pregunta": "¿Qué ocurrió con la población de Cubagua después de 1541?",
+    "tipo": "texto",
+    "opciones": [
+      "Se hizo más grande y poderosa",
+      "Se abandonó completamente porque no quedaba nada",
+      "Se convirtió en la capital de Venezuela",
+      "Se transformó en un parque nacional lunar"
+    ],
+    "correcta": 1,
+    "explicacion": "Después del terremoto y el huracán de 1541, y con las ostras agotadas, la gente abandonó completamente Cubagua. La isla quedó desierta.",
+    "dato_curioso": "Hoy Cubagua es Parque Nacional y muy poca gente vive ahí. Está protegida para conservar las ruinas de Nueva Cádiz para que los futuros estudiantes puedan aprender."
+  },
+  {
+    "pregunta": "¿Qué tipo de embarcaciones usaban los españoles para llegar a Cubagua?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Carabelas y galeones españoles del siglo XVI con velas blancas desplegadas navegando el mar Caribe turquesa bajo un cielo azul con nubes. Tienen la bandera española. Estilo ilustración histórica colorida para niños.",
+    "opciones": [
+      "Aviones de papel gigantes",
+      "Motos acuáticas del siglo XV",
+      "Barcos de vela como carabelas y galeones",
+      "Balsas inflables de colores"
+    ],
+    "correcta": 2,
+    "explicacion": "Los españoles viajaban en grandes barcos de vela llamados carabelas y galeones. Cruzaban el océano Atlántico para llegar a las costas venezolanas.",
+    "dato_curioso": "Un viaje desde España a Venezuela en barco de vela tardaba entre 6 y 8 semanas. ¡Imagina estar dos meses en el mar sin ver tierra, sin internet y comiendo galletas duras!"
+  },
+  {
+    "pregunta": "¿Cuál era el trabajo más peligroso en Cubagua para los Guaiquerí?",
+    "tipo": "texto",
+    "opciones": [
+      "Hacer pasteles de cumpleaños",
+      "Jugar videojuegos bajo el agua",
+      "Pasear en bicicleta por la playa",
+      "Bucear profundo en el mar a buscar ostras"
+    ],
+    "correcta": 3,
+    "explicacion": "Bucear profundo era muy peligroso. Los Guaiquerí enfrentaban tiburones, corrientes fuertes, presión del agua y podían ahogarse si no subían a tiempo.",
+    "dato_curioso": "Algunos buzos Guaiquerí sufrían problemas de oídos y visión por bucear tanto. Era un trabajo que dejaba marcas en el cuerpo de por vida."
+  },
+  {
+    "pregunta": "¿Por qué se dice que Venezuela fue la primera en tener una ciudad europea en Sudamérica?",
+    "tipo": "texto",
+    "opciones": [
+      "Porque Nueva Cádiz en Cubagua fue fundada antes que otras ciudades sudamericanas",
+      "Porque tenemos la mejor arepa del continente",
+      "Porque inventamos el chocolate",
+      "Porque ganamos el primer Mundial de Fútbol"
+    ],
+    "correcta": 0,
+    "explicacion": "Nueva Cádiz fue fundada alrededor de 1500, antes que ciudades como Lima o Bogotá. Por eso Venezuela tiene el honor de haber tenido la primera ciudad europea en Sudamérica.",
+    "dato_curioso": "Muchos venezolanos no saben este dato tan importante. ¡Venezuela tiene una historia increíble que pocos conocen y que deberíamos estar muy orgullosos de contar!"
+  },
+  {
+    "pregunta": "¿Qué hacían los españoles con las perlas que traían los buzos Guaiquerí?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Mercaderes españoles del siglo XVI en un mercado colorido intercambiando bolsas llenas de perlas brillantes por monedas de oro. Hay barriles, telas y especias alrededor. Estilo ilustración histórica viva para niños.",
+    "opciones": [
+      "Las tiraban al mar de regreso",
+      "Las vendían o regalaban a nobles y reyes en Europa",
+      "Las usaban como adornos de Navidad",
+      "Las cocinaban en una sopa especial"
+    ],
+    "correcta": 1,
+    "explicacion": "Los españoles vendían las perlas en Europa por muchísimo dinero o las regalaban a nobles y reyes como símbolo de riqueza. Se hicieron muy ricos con ellas.",
+    "dato_curioso": "Las perlas de Cubagua eran tan valiosas que con pocas perlas podías comprar propiedades enteras en España. ¡Cada bolita brillante era una pequeña fortuna!"
+  },
+  {
+    "pregunta": "¿Qué animales peligrosos enfrentaban los buzos Guaiquerí en el mar?",
+    "tipo": "texto",
+    "opciones": [
+      "Leones con aletas de pez",
+      "Perros marinos con corbata",
+      "Tiburones y rayas",
+      "Dragones de agua azul"
+    ],
+    "correcta": 2,
+    "explicacion": "Los Guaiquerí podían encontrar tiburones y rayas peligrosas mientras buceaban. Era un riesgo real que enfrentaban cada vez que se sumergían.",
+    "dato_curioso": "Las rayas tienen en su cola un aguijón venenoso que puede ser muy doloroso. ¡Los Guaiquerí aprendieron a nadar junto a ellas con mucho cuidado y habilidad!"
+  },
+  {
+    "pregunta": "¿Cómo se forma una perla dentro de una ostra?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Diagrama ilustrado y colorido mostrando el interior de una ostra con una perla formándose en capas nacaradas brillantes alrededor de un granito de arena. Estilo ilustración científica divertida para niños.",
+    "opciones": [
+      "La perla cae del cielo dentro de la ostra dormida",
+      "Un hada la planta dentro de la ostra por la noche",
+      "La ostra la fabrica con magia marina",
+      "Un granito de arena entra a la ostra y esta lo cubre con capas brillantes"
+    ],
+    "correcta": 3,
+    "explicacion": "Cuando un granito de arena entra a la ostra, le molesta. Para protegerse, la ostra lo cubre con capas brillantes y suaves. Con el tiempo, ¡esas capas forman una perla!",
+    "dato_curioso": "Una perla puede tardar entre 2 y 5 años en formarse completamente. Por eso son tan valiosas, ¡la naturaleza tarda mucho tiempo en hacerlas!"
+  },
+  {
+    "pregunta": "¿Qué queda hoy en Cubagua que los arqueólogos investigan?",
+    "tipo": "texto",
+    "opciones": [
+      "Las ruinas de Nueva Cádiz con objetos del siglo XVI",
+      "Nada, la isla desapareció en el mar",
+      "Una fábrica de perlas moderna",
+      "El mapa del tesoro del capitán pirata"
+    ],
+    "correcta": 0,
+    "explicacion": "En Cubagua se pueden ver las ruinas de Nueva Cádiz. Los arqueólogos han encontrado allí objetos como ollas, monedas y cimientos de edificios de hace 500 años.",
+    "dato_curioso": "Los arqueólogos que trabajan en Cubagua bucean para encontrar objetos bajo el mar. ¡Es como ser buzo y detective al mismo tiempo!"
+  },
+  {
+    "pregunta": "¿Cómo afectó la sobreexplotación perlera al ecosistema marino de Cubagua?",
+    "tipo": "texto",
+    "opciones": [
+      "Lo mejoró mucho, había más ostras que antes",
+      "Destruyó los bancos de ostras que tardaron siglos en formarse",
+      "No pasó nada, el mar se recuperó al día siguiente",
+      "Las ostras se mudaron a otro planeta"
+    ],
+    "correcta": 1,
+    "explicacion": "Pescar tantas ostras en solo 30 años destruyó los bancos de ostras que la naturaleza tardó siglos en crear. El ecosistema marino de Cubagua quedó devastado.",
+    "dato_curioso": "Hoy en día, 500 años después, las ostras perleras todavía no han vuelto en grandes cantidades al mar de Cubagua. ¡El daño que causaron fue muy grave y duradero!"
+  },
+  {
+    "pregunta": "¿Qué lección nos enseña la historia de Cubagua sobre el medio ambiente?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración con dos escenas: a la izquierda el mar de Cubagua lleno de ostras y vida marina colorida en el pasado; a la derecha el mismo mar vacío y opaco después de la sobreexplotación. Estilo ilustración educativa para niños.",
+    "opciones": [
+      "Que debemos pescar más rápido antes que otros",
+      "Que el mar se llena solo de magia",
+      "Que si usamos demasiado los recursos naturales, los destruimos para siempre",
+      "Que las ostras son inagotables como el agua del grifo"
+    ],
+    "correcta": 2,
+    "explicacion": "Cubagua nos enseña que si tomamos más de lo que la naturaleza puede reponer, la agotamos para siempre. Debemos cuidar y usar los recursos con responsabilidad.",
+    "dato_curioso": "Esta lección de hace 500 años es más importante que nunca hoy. Muchos mares del mundo enfrentan el mismo problema que vivió Cubagua con sus perlas."
+  },
+  {
+    "pregunta": "¿Cuántos años antes de que ocurriera la destrucción, fue fundada Nueva Cádiz aproximadamente?",
+    "tipo": "texto",
+    "opciones": [
+      "Solo 2 años antes",
+      "La noche anterior",
+      "500 años antes",
+      "Aproximadamente 40 años antes de su destrucción en 1541"
+    ],
+    "correcta": 3,
+    "explicacion": "Nueva Cádiz fue fundada alrededor de 1500 y destruida en 1541, así que duró aproximadamente 40 años. Fue una ciudad muy próspera pero de corta vida.",
+    "dato_curioso": "En esos 40 años, Nueva Cádiz pasó de ser una pequeña aldea de buscadores de perlas a ser una ciudad rica e importante. ¡Creció muy rápido gracias a las perlas!"
+  },
+  {
+    "pregunta": "¿Qué mes y año ocurrió la destrucción de Nueva Cádiz por terremoto y huracán?",
+    "tipo": "texto",
+    "opciones": [
+      "En 1541",
+      "En enero del año 1000",
+      "El próximo año",
+      "En el año 2000"
+    ],
+    "correcta": 0,
+    "explicacion": "En el año 1541, un terremoto y un huracán destruyeron Nueva Cádiz. Con las ostras agotadas y la ciudad destruida, los españoles abandonaron la isla para siempre.",
+    "dato_curioso": "Que una ciudad sea destruida por dos desastres naturales casi al mismo tiempo es extraordinariamente raro. Cubagua tuvo una historia tan gloriosa como trágica."
+  },
+  {
+    "pregunta": "¿Por qué los Guaiquerí son considerados héroes en la historia venezolana?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración heroica de un buzo Guaiquerí emergiendo del mar con una ostra en la mano, con el sol caribeño de fondo y el horizonte azul. Tiene una expresión orgullosa y determinada. Estilo mural venezolano vibrante.",
+    "opciones": [
+      "Porque inventaron las arepas submarinas",
+      "Porque eran valientes y hábiles en condiciones muy difíciles",
+      "Porque ganaron el campeonato de natación interplanetario",
+      "Porque descubrieron las perlas en Marte"
+    ],
+    "correcta": 1,
+    "explicacion": "Los Guaiquerí eran valientes y habilidosos trabajando en condiciones muy difíciles y peligrosas. Su historia merece ser recordada y reconocida con orgullo.",
+    "dato_curioso": "Aunque los españoles se llevaron la riqueza, fueron los Guaiquerí quienes arriesgaron su vida buceando. La historia de Venezuela incluye el esfuerzo de sus pueblos indígenas."
+  },
+  {
+    "pregunta": "¿Qué deberías hacer si visitas la isla de Cubagua hoy?",
+    "tipo": "texto",
+    "opciones": [
+      "Llevarte todas las piedras y ruinas como recuerdo",
+      "Construir una casa nueva encima de las ruinas",
+      "Respetar las ruinas y no tocar ni llevarte nada",
+      "Buscar ostras para hacerte rico como los españoles"
+    ],
+    "correcta": 2,
+    "explicacion": "Las ruinas de Cubagua son Patrimonio de Venezuela y deben respetarse. No se puede tocar, mover ni llevarse nada para que futuras generaciones puedan aprender también.",
+    "dato_curioso": "Destruir o robar objetos de un sitio arqueológico es un delito en Venezuela. ¡Las ruinas pertenecen a todos los venezolanos, no a una sola persona!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cómo se llamaba la primera ciudad europea construida en Sudamérica?",
+    "tipo": "texto",
+    "opciones": [
+      "Villa Chocolata",
+      "Pueblo Arcoíris",
+      "Ciudad Tamalito",
+      "Nueva Cádiz"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: La primera ciudad europea en Sudamérica se llamó Nueva Cádiz. Estaba en la isla de Cubagua, en Venezuela, mucho antes de que existiera Caracas.",
+    "dato_curioso": "Repaso curioso: Nueva Cádiz existió antes que muchas ciudades famosas de América. ¡Venezuela tiene la ciudad más antigua del continente sudamericano!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: En qué isla venezolana estaba ubicada Nueva Cádiz?",
+    "tipo": "texto",
+    "opciones": [
+      "En la isla de los helados flotantes",
+      "En la isla de los dinosaurios",
+      "En Cubagua",
+      "En la isla del tesoro pirata"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: Nueva Cádiz estaba en la isla de Cubagua, en el estado Nueva Esparta de Venezuela. Era una pequeña isla que se volvió muy famosa por sus perlas.",
+    "dato_curioso": "Repaso curioso: Cubagua es una isla tan pequeña y seca que hoy casi nadie vive allí. ¡Pero hace 500 años era uno de los lugares más ricos del mundo!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cuándo vivieron los españoles en Nueva Cádiz, isla de Cubagua?",
+    "tipo": "texto",
+    "opciones": [
+      "El año pasado",
+      "En el siglo XXI",
+      "En la época de los dinosaurios",
+      "En el siglo XVI, en los años 1500"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: Los españoles vivieron en Nueva Cádiz durante el siglo XVI, que son los años 1500. Fue hace más de 500 años.",
+    "dato_curioso": "Repaso curioso: Hace 500 años no había electricidad, computadoras ni autos. ¡Los españoles viajaron a Venezuela en barcos de vela cruzando todo el océano Atlántico!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Quiénes eran los Guaiquerí?",
+    "tipo": "texto",
+    "opciones": [
+      "Los indígenas buceadores expertos de Cubagua",
+      "Los superhéroes del espacio marino",
+      "Los piratas con sombreros de perlas",
+      "Los robots pescadores del futuro"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: Los Guaiquerí eran un pueblo indígena que vivía en esa región. Eran buceadores increíbles que sumergían al fondo del mar a buscar ostras con perlas.",
+    "dato_curioso": "Repaso curioso: Los Guaiquerí podían ver perfectamente bajo el agua sin gafas de buceo. ¡Sus ojos estaban adaptados de tanto practicar desde que eran niños pequeños!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cuánto tiempo podían aguantar sin respirar los buzos Guaiquerí?",
+    "tipo": "texto",
+    "opciones": [
+      "Una hora entera",
+      "Nunca necesitaban respirar",
+      "Solo dos segundos",
+      "Hasta 2 minutos bajo el agua"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: Los Guaiquerí podían aguantar hasta 2 minutos sin respirar bajo el agua. ¡Eso es mucho tiempo! La mayoría de las personas solo aguantan unos 30 segundos.",
+    "dato_curioso": "Repaso curioso: Para aguantar 2 minutos sin respirar hay que entrenarse mucho. Los niños Guaiquerí aprendían a bucear desde muy pequeños, como tú aprendes a andar en bici."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué buscaban los Guaiquerí en el fondo del mar de Cubagua?",
+    "tipo": "texto",
+    "opciones": [
+      "Tesoros piratas con calaveras",
+      "Pizzas con queso submarino",
+      "Ostras con perlas brillantes",
+      "Videojuegos acuáticos perdidos"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: Los Guaiquerí buscaban ostras que guardaban perlas muy valiosas. Esas perlas brillantes y redondas valían muchísimo dinero en Europa.",
+    "dato_curioso": "Repaso curioso: No todas las ostras tienen perla. Los Guaiquerí abrían cientos de ostras para encontrar solo algunas con perlas. ¡Era como buscar un tesoro escondido!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Para quiénes trabajaban principalmente los buzos Guaiquerí?",
+    "tipo": "texto",
+    "opciones": [
+      "Para los aliens del océano",
+      "Para los conquistadores españoles",
+      "Para los magos del circo acuático",
+      "Para los pingüinos del Caribe"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: Los Guaiquerí buceaban y sacaban las perlas, pero eran los conquistadores españoles quienes las vendían y se quedaban con la riqueza.",
+    "dato_curioso": "Repaso curioso: Muchos Guaiquerí eran obligados a trabajar de buceadores. Era un trabajo muy duro y peligroso, con tiburones, corrientes y frío en el fondo del mar."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué tan valiosas eran las perlas venezolanas en España?",
+    "tipo": "texto",
+    "opciones": [
+      "Se usaban para jugar canicas gigantes",
+      "No valían nada, a nadie le gustaban",
+      "Eran premios en concursos de baile",
+      "Decoraban las coronas de los reyes de España"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: Las perlas venezolanas eran tan valiosas que decoraban las coronas y joyas de los reyes y reinas de España. ¡Eran símbolo de riqueza y poder!",
+    "dato_curioso": "Repaso curioso: La reina Isabel de Castilla usaba perlas venezolanas en sus vestidos y joyas. ¡Las perlas de Cubagua estuvieron en la cabeza de la familia real española!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué le pasó a las ostras perleras de Cubagua con el tiempo?",
+    "tipo": "texto",
+    "opciones": [
+      "Se mudaron a la luna",
+      "Se hicieron más grandes y felices",
+      "Se convirtieron en ostras de chocolate",
+      "Se agotaron porque pescaron demasiadas en 30 años"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: En solo 30 años, los españoles y los Guaiquerí sacaron tantas ostras que las agotaron completamente. No quedó ninguna ostra perlera en el mar de Cubagua.",
+    "dato_curioso": "Repaso curioso: Agotar todos los animales de un lugar se llama sobreexplotación. Hoy en día los científicos advierten que no debemos repetir ese error con otros animales marinos."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cuántos años tardaron en agotar todas las ostras perleras de Cubagua?",
+    "tipo": "texto",
+    "opciones": [
+      "Doscientos años",
+      "Treinta años",
+      "Solo un día",
+      "Cinco siglos"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: En solo 30 años de pesca intensa, agotaron todas las ostras del mar de Cubagua. Fue muy rápido para destruir algo que tardó miles de años en formarse.",
+    "dato_curioso": "Repaso curioso: ¡Treinta años parece mucho pero no lo es para la naturaleza! Un árbol grande tarda más de 100 años en crecer. La naturaleza es lenta pero los humanos somos rápidos."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué desastre natural destruyó la ciudad de Nueva Cádiz en 1541?",
+    "tipo": "texto",
+    "opciones": [
+      "En el siglo XVI, en los años 1500",
+      "Un terremoto y un huracán juntos",
+      "Nueva Cádiz",
+      "En Cubagua"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: En 1541 un terremoto sacudió la isla y luego llegó un huracán feroz. Juntos destruyeron completamente la ciudad de Nueva Cádiz.",
+    "dato_curioso": "Dato para profundizar: Que un terremoto y un huracán ocurran casi al mismo tiempo en el mismo lugar es muy raro. ¡Los habitantes de Nueva Cádiz tuvieron la peor suerte del siglo XVI!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué queda hoy de la ciudad de Nueva Cádiz en Cubagua?",
+    "tipo": "texto",
+    "opciones": [
+      "Nueva Cádiz",
+      "En Cubagua",
+      "En el siglo XVI, en los años 1500",
+      "Solo ruinas y restos de edificios"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: Hoy solo quedan ruinas en la isla de Cubagua. Las paredes caídas y los cimientos son todo lo que sobrevivió de esa ciudad tan importante.",
+    "dato_curioso": "Dato para profundizar: Los arqueólogos han excavado las ruinas de Nueva Cádiz y encontraron ollas, monedas, joyas y herramientas de los años 1500. ¡Como un tesoro enterrado!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cómo usaban las perlas los conquistadores españoles?",
+    "tipo": "texto",
+    "opciones": [
+      "En el siglo XVI, en los años 1500",
+      "Como dinero y señal de riqueza y poder",
+      "En Cubagua",
+      "Nueva Cádiz"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: Las perlas eran usadas como dinero y como símbolo de que eras muy rico e importante. Mientras más perlas tenías, más poderoso eras.",
+    "dato_curioso": "Dato para profundizar: En la época de Nueva Cádiz, una perla grande valía más que una casa entera. ¡Imagina pagar tu casa con una bolita brillante que encontraste en el mar!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: En qué estado venezolano se encuentra la isla de Cubagua hoy?",
+    "tipo": "texto",
+    "opciones": [
+      "Nueva Cádiz",
+      "En Nueva Esparta",
+      "En el siglo XVI, en los años 1500",
+      "En Cubagua"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: Cubagua está en el estado Nueva Esparta, que también incluye la famosa isla de Margarita. Es una zona del oriente de Venezuela rodeada de mar Caribe.",
+    "dato_curioso": "Dato para profundizar: Nueva Esparta se llama así en honor a la antigua ciudad griega de Esparta, famosa por sus guerreros. ¡Los españoles querían que su nueva tierra sonara poderosa!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué tan grande era la isla de Cubagua?",
+    "tipo": "texto",
+    "opciones": [
+      "Muy pequeña, de solo 24 kilómetros cuadrados",
+      "En Cubagua",
+      "En el siglo XVI, en los años 1500",
+      "Nueva Cádiz"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: Cubagua es una isla muy pequeña, de solo 24 kilómetros cuadrados. ¡Pero fue tan famosa por sus perlas que todo el mundo en Europa la conocía!",
+    "dato_curioso": "Dato para profundizar: A pesar de ser pequeñísima, Cubagua fue en su momento la ciudad más rica de todo el continente americano. ¡El tamaño no importa cuando tienes tesoros!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué hacían los Guaiquerí para prepararse para bucear?",
+    "tipo": "texto",
+    "opciones": [
+      "En el siglo XVI, en los años 1500",
+      "En Cubagua",
+      "Se entrenaban desde niños nadando y aguantando la respiración",
+      "Nueva Cádiz"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: Los Guaiquerí se entrenaban desde pequeños para bucear. Practicaban nadar y aguantar la respiración hasta volverse expertos en el mar Caribe.",
+    "dato_curioso": "Dato para profundizar: El agua del Caribe cerca de Cubagua es tan clara que podías ver el fondo desde arriba. Los Guaiquerí podían ver las ostras desde la superficie antes de sumergirse."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Por qué Cubagua se volvió tan famosa en Europa?",
+    "tipo": "texto",
+    "opciones": [
+      "En el siglo XVI, en los años 1500",
+      "Nueva Cádiz",
+      "En Cubagua",
+      "Por las perlas que producía y que llegaron a las cortes reales"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: Cubagua se hizo famosa porque sus perlas llegaron hasta las cortes de los reyes de España y Europa. Todo el mundo quería las hermosas perlas venezolanas.",
+    "dato_curioso": "Dato para profundizar: Las noticias de las perlas de Cubagua se extendieron tan rápido que en pocos años, barcos de toda España venían a buscar riquezas a esa pequeña isla."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué otras cosas hacían los españoles en Nueva Cádiz además de comerciar perlas?",
+    "tipo": "texto",
+    "opciones": [
+      "Construyeron casas, iglesias y organizaron una ciudad",
+      "En el siglo XVI, en los años 1500",
+      "Nueva Cádiz",
+      "En Cubagua"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: Los españoles construyeron casas, iglesias, almacenes y organizaron una ciudad completa en Cubagua. Era una ciudad de verdad, no solo un campamento.",
+    "dato_curioso": "Dato para profundizar: Nueva Cádiz tenía hasta una iglesia pequeña y mercados. ¡En menos de 30 años construyeron toda una ciudad en una isla sin agua dulce ni ríos!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cómo obtenían agua dulce los habitantes de Nueva Cádiz si la isla no tenía ríos?",
+    "tipo": "texto",
+    "opciones": [
+      "En Cubagua",
+      "La traían en barcos desde tierra firme",
+      "En el siglo XVI, en los años 1500",
+      "Nueva Cádiz"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: Como Cubagua no tenía agua dulce, debían traerla en barriles desde tierra firme en barcos. Era un trabajo enorme solo para beber agua.",
+    "dato_curioso": "Dato para profundizar: Hoy tenemos agua potable en nuestra casa fácilmente. Pero en Cubagua, hace 500 años, cada gotita de agua valía mucho porque había que traerla en barco."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cuál era el nombre completo y formal de la ciudad fundada en Cubagua?",
+    "tipo": "texto",
+    "opciones": [
+      "Nueva Cádiz de Cubagua",
+      "En el siglo XVI, en los años 1500",
+      "En Cubagua",
+      "Nueva Cádiz"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: La ciudad se llamaba Nueva Cádiz, nombrada en honor a la ciudad española de Cádiz. Los colonizadores le ponían nombres de ciudades de España a sus nuevos territorios.",
+    "dato_curioso": "Dato para profundizar: Cádiz es una ciudad portuaria en España de donde partían muchos barcos hacia América. ¡Tenía sentido que los marineros le pusieran ese nombre a su nueva ciudad!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué simbolizaba tener perlas en la época colonial venezolana?",
+    "tipo": "texto",
+    "opciones": [
+      "Que tenías muchas mascotas",
+      "Que eras buen cocinero",
+      "Que eras fanático del fútbol",
+      "Riqueza, poder y elegancia social"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: Tener perlas era señal de que eras rico, poderoso y elegante. Las personas más importantes de Europa querían perlas venezolanas para mostrar su riqueza.",
+    "dato_curioso": "Ampliación histórica: Las perlas de Venezuela eran consideradas las más hermosas del mundo en el siglo XVI. ¡Los reyes europeos preferían las perlas del Caribe sobre cualquier otra joya!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué ocurrió con la población de Cubagua después de 1541?",
+    "tipo": "texto",
+    "opciones": [
+      "Se convirtió en la capital de Venezuela",
+      "Se abandonó completamente porque no quedaba nada",
+      "Se transformó en un parque nacional lunar",
+      "Se hizo más grande y poderosa"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: Después del terremoto y el huracán de 1541, y con las ostras agotadas, la gente abandonó completamente Cubagua. La isla quedó desierta.",
+    "dato_curioso": "Ampliación histórica: Hoy Cubagua es Parque Nacional y muy poca gente vive ahí. Está protegida para conservar las ruinas de Nueva Cádiz para que los futuros estudiantes puedan aprender."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué tipo de embarcaciones usaban los españoles para llegar a Cubagua?",
+    "tipo": "texto",
+    "opciones": [
+      "Barcos de vela como carabelas y galeones",
+      "Balsas inflables de colores",
+      "Aviones de papel gigantes",
+      "Motos acuáticas del siglo XV"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: Los españoles viajaban en grandes barcos de vela llamados carabelas y galeones. Cruzaban el océano Atlántico para llegar a las costas venezolanas.",
+    "dato_curioso": "Ampliación histórica: Un viaje desde España a Venezuela en barco de vela tardaba entre 6 y 8 semanas. ¡Imagina estar dos meses en el mar sin ver tierra, sin internet y comiendo galletas duras!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cuál era el trabajo más peligroso en Cubagua para los Guaiquerí?",
+    "tipo": "texto",
+    "opciones": [
+      "Pasear en bicicleta por la playa",
+      "Hacer pasteles de cumpleaños",
+      "Bucear profundo en el mar a buscar ostras",
+      "Jugar videojuegos bajo el agua"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: Bucear profundo era muy peligroso. Los Guaiquerí enfrentaban tiburones, corrientes fuertes, presión del agua y podían ahogarse si no subían a tiempo.",
+    "dato_curioso": "Ampliación histórica: Algunos buzos Guaiquerí sufrían problemas de oídos y visión por bucear tanto. Era un trabajo que dejaba marcas en el cuerpo de por vida."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Por qué se dice que Venezuela fue la primera en tener una ciudad europea en Sudamérica?",
+    "tipo": "texto",
+    "opciones": [
+      "Porque Nueva Cádiz en Cubagua fue fundada antes que otras ciudades sudamericanas",
+      "Porque inventamos el chocolate",
+      "Porque tenemos la mejor arepa del continente",
+      "Porque ganamos el primer Mundial de Fútbol"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: Nueva Cádiz fue fundada alrededor de 1500, antes que ciudades como Lima o Bogotá. Por eso Venezuela tiene el honor de haber tenido la primera ciudad europea en Sudamérica.",
+    "dato_curioso": "Ampliación histórica: Muchos venezolanos no saben este dato tan importante. ¡Venezuela tiene una historia increíble que pocos conocen y que deberíamos estar muy orgullosos de contar!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué hacían los españoles con las perlas que traían los buzos Guaiquerí?",
+    "tipo": "texto",
+    "opciones": [
+      "Las vendían o regalaban a nobles y reyes en Europa",
+      "Las tiraban al mar de regreso",
+      "Las cocinaban en una sopa especial",
+      "Las usaban como adornos de Navidad"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: Los españoles vendían las perlas en Europa por muchísimo dinero o las regalaban a nobles y reyes como símbolo de riqueza. Se hicieron muy ricos con ellas.",
+    "dato_curioso": "Ampliación histórica: Las perlas de Cubagua eran tan valiosas que con pocas perlas podías comprar propiedades enteras en España. ¡Cada bolita brillante era una pequeña fortuna!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué animales peligrosos enfrentaban los buzos Guaiquerí en el mar?",
+    "tipo": "texto",
+    "opciones": [
+      "Tiburones y rayas",
+      "Perros marinos con corbata",
+      "Leones con aletas de pez",
+      "Dragones de agua azul"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: Los Guaiquerí podían encontrar tiburones y rayas peligrosas mientras buceaban. Era un riesgo real que enfrentaban cada vez que se sumergían.",
+    "dato_curioso": "Ampliación histórica: Las rayas tienen en su cola un aguijón venenoso que puede ser muy doloroso. ¡Los Guaiquerí aprendieron a nadar junto a ellas con mucho cuidado y habilidad!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cómo se forma una perla dentro de una ostra?",
+    "tipo": "texto",
+    "opciones": [
+      "La ostra la fabrica con magia marina",
+      "Un hada la planta dentro de la ostra por la noche",
+      "La perla cae del cielo dentro de la ostra dormida",
+      "Un granito de arena entra a la ostra y esta lo cubre con capas brillantes"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: Cuando un granito de arena entra a la ostra, le molesta. Para protegerse, la ostra lo cubre con capas brillantes y suaves. Con el tiempo, ¡esas capas forman una perla!",
+    "dato_curioso": "Ampliación histórica: Una perla puede tardar entre 2 y 5 años en formarse completamente. Por eso son tan valiosas, ¡la naturaleza tarda mucho tiempo en hacerlas!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué queda hoy en Cubagua que los arqueólogos investigan?",
+    "tipo": "texto",
+    "opciones": [
+      "Nada, la isla desapareció en el mar",
+      "Una fábrica de perlas moderna",
+      "El mapa del tesoro del capitán pirata",
+      "Las ruinas de Nueva Cádiz con objetos del siglo XVI"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: En Cubagua se pueden ver las ruinas de Nueva Cádiz. Los arqueólogos han encontrado allí objetos como ollas, monedas y cimientos de edificios de hace 500 años.",
+    "dato_curioso": "Ampliación histórica: Los arqueólogos que trabajan en Cubagua bucean para encontrar objetos bajo el mar. ¡Es como ser buzo y detective al mismo tiempo!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cómo afectó la sobreexplotación perlera al ecosistema marino de Cubagua?",
+    "tipo": "texto",
+    "opciones": [
+      "Las ostras se mudaron a otro planeta",
+      "Destruyó los bancos de ostras que tardaron siglos en formarse",
+      "No pasó nada, el mar se recuperó al día siguiente",
+      "Lo mejoró mucho, había más ostras que antes"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: Pescar tantas ostras en solo 30 años destruyó los bancos de ostras que la naturaleza tardó siglos en crear. El ecosistema marino de Cubagua quedó devastado.",
+    "dato_curioso": "Ampliación histórica: Hoy en día, 500 años después, las ostras perleras todavía no han vuelto en grandes cantidades al mar de Cubagua. ¡El daño que causaron fue muy grave y duradero!"
+  }
+]

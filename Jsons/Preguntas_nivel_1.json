@@ -1,0 +1,874 @@
+[
+  {
+    "pregunta": "¿Cómo se llaman las casas que construyeron los Añú sobre el agua?",
+    "tipo": "texto",
+    "opciones": [
+      "Castillos flotantes",
+      "Palafitos",
+      "Submarinos de madera",
+      "Casas de nubes"
+    ],
+    "correcta": 1,
+    "explicacion": "¡Los palafitos son casas de madera puestas encima de palos largos metidos en el agua! Los Añú eran muy muy listos.",
+    "dato_curioso": "¡Los palafitos del Lago de Maracaibo todavía existen hoy! Puedes ir a verlos y hay gente que vive ahí."
+  },
+  {
+    "pregunta": "¿Dónde vivían los indígenas Añú?",
+    "tipo": "texto",
+    "opciones": [
+      "En la luna",
+      "En el desierto de arena",
+      "Sobre el Lago de Maracaibo",
+      "En una nube rosada"
+    ],
+    "correcta": 2,
+    "explicacion": "¡Los Añú construyeron sus casas encima del agua del Lago de Maracaibo! ¡Vivir sobre el lago era su superpoder!",
+    "dato_curioso": "Los Añú llevan miles y miles de años viviendo en ese lago. ¡Son uno de los grupos indígenas más antiguos de Venezuela!"
+  },
+  {
+    "pregunta": "¿Cómo se llama el lago más grande de Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Lago de Maracaibo",
+      "Lago de Chocolate",
+      "Lago Cristal",
+      "Lago Titicaca"
+    ],
+    "correcta": 0,
+    "explicacion": "¡El Lago de Maracaibo es el más grande de Venezuela y también uno de los más grandes de toda América!",
+    "dato_curioso": "El Lago de Maracaibo tiene relámpagos casi todas las noches. ¡Es como una fiesta de luces en el cielo!"
+  },
+  {
+    "pregunta": "¿Quién vio los palafitos y pensó en la ciudad de Venecia?",
+    "tipo": "texto",
+    "opciones": [
+      "Simón Bolívar",
+      "Un pirata muy famoso",
+      "El rey de España",
+      "Américo Vespucio"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Américo Vespucio era un explorador que llegó en barco y vio las casas flotantes! Pensó: '¡Esto parece Venecia!'",
+    "dato_curioso": "Américo Vespucio era de Italia, igual que Venecia. ¡Por eso conocía esa ciudad tan bien y las comparó!"
+  },
+  {
+    "pregunta": "¿Qué ciudad famosa de Italia le recordó los palafitos a Vespucio?",
+    "tipo": "texto",
+    "opciones": [
+      "Roma",
+      "Venecia",
+      "París",
+      "Ciudad de los Helados"
+    ],
+    "correcta": 1,
+    "explicacion": "¡Venecia es una ciudad de Italia donde las calles son de agua! Vespucio dijo que el lago le parecía igualito.",
+    "dato_curioso": "En Venecia la gente se mueve en barquitas especiales llamadas góndolas en vez de en carros. ¡Imagínate!"
+  },
+  {
+    "pregunta": "¿Qué aprendían los niños Añú antes de aprender a caminar?",
+    "tipo": "texto",
+    "opciones": [
+      "A volar",
+      "A cocinar arepas",
+      "A nadar",
+      "A usar computadoras"
+    ],
+    "correcta": 2,
+    "explicacion": "¡Como vivían sobre el agua, los bebés Añú aprendían a nadar antes de dar sus primeros pasos! ¡Qué valientes!",
+    "dato_curioso": "Para un niño Añú, caerse al lago no era un problema. ¡Sabían nadar perfectamente desde muy chiquititos!"
+  },
+  {
+    "pregunta": "¿De qué estaban hechas las canoas de los Añú?",
+    "tipo": "texto",
+    "opciones": [
+      "De un solo tronco de árbol",
+      "De plástico de colores",
+      "De nubes apretadas",
+      "De papas fritas pegadas"
+    ],
+    "correcta": 0,
+    "explicacion": "¡Las canoas de los Añú se hacían vaciando un tronco muy grande de árbol! Era duro pero quedaban perfectas.",
+    "dato_curioso": "Hacer una canoa de un tronco podía tardar semanas de trabajo. ¡Era el objeto más valioso de la familia Añú!"
+  },
+  {
+    "pregunta": "¿Cómo se llamaban los indígenas que vivían en el Lago de Maracaibo?",
+    "tipo": "texto",
+    "opciones": [
+      "Los Aztecas",
+      "Los Añú",
+      "Los Pingüinos",
+      "Los Superhéroes del Lago"
+    ],
+    "correcta": 1,
+    "explicacion": "¡Los Añú son los indígenas que inventaron los palafitos! También se les llama 'Paraujanos'. ¡Son parte de Venezuela!",
+    "dato_curioso": "¡Los Añú todavía viven hoy cerca del Lago de Maracaibo! Han vivido ahí por miles y miles de años."
+  },
+  {
+    "pregunta": "¿Qué palabra escribió Vespucio para llamar a este lugar?",
+    "tipo": "texto",
+    "opciones": [
+      "Venezuela Grande",
+      "Lago Bonito",
+      "Isla del Tesoro",
+      "Venezziola"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Vespucio escribió 'Venezziola' que en italiano significa 'pequeña Venecia'! Con el tiempo se convirtió en Venezuela.",
+    "dato_curioso": "¡'Venezziola' suena como el nombre de una canción! El idioma italiano es muy musical y bonito."
+  },
+  {
+    "pregunta": "¿Todavía existen palafitos en el Lago de Maracaibo hoy?",
+    "tipo": "texto",
+    "opciones": [
+      "Sí, todavía existen",
+      "No, se los comieron los peces",
+      "No, desaparecieron",
+      "Se convirtieron en rascacielos"
+    ],
+    "correcta": 0,
+    "explicacion": "¡Sí! Hoy puedes ver palafitos reales en el Lago de Maracaibo. ¡Las familias siguen viviendo en esas casas flotantes!",
+    "dato_curioso": "Los palafitos de hoy ya no son solo de madera — ¡algunos tienen luz eléctrica y televisión! Los tiempos cambian."
+  },
+  {
+    "pregunta": "¿Con qué pescaban los Añú en el lago?",
+    "tipo": "texto",
+    "opciones": [
+      "Con imanes gigantes",
+      "Con canciones de cuna",
+      "Con trampas de fibra vegetal",
+      "Con robots pescadores"
+    ],
+    "correcta": 2,
+    "explicacion": "¡Los Añú hacían trampas tejiendo fibras de plantas como una canasta! Los peces entraban y ¡ya no podían salir!",
+    "dato_curioso": "¡En el Lago de Maracaibo viven más de 100 tipos diferentes de peces! Es como un acuario gigantísimo."
+  },
+  {
+    "pregunta": "¿Qué sostiene las casas palafito sobre el agua?",
+    "tipo": "texto",
+    "opciones": [
+      "Globos de colores",
+      "Los pilotes de madera",
+      "Magia de los Añú",
+      "Ballenas gigantes"
+    ],
+    "correcta": 1,
+    "explicacion": "¡Los pilotes son palos muy largos que llegan hasta el fondo del lago! Son como las patas de una mesa muy alta.",
+    "dato_curioso": "Algunos pilotes de palafito miden más de 5 metros de largo. ¡Son tan altos como dos jirafas una encima de otra!"
+  },
+  {
+    "pregunta": "¿Qué significa la palabra 'Venezziola'?",
+    "tipo": "texto",
+    "opciones": [
+      "Pequeña Venecia",
+      "Gran monstruo de agua",
+      "Tierra de peces voladores",
+      "País de las tortugas"
+    ],
+    "correcta": 0,
+    "explicacion": "'Venezziola' en italiano quiere decir 'pequeña Venecia'. ¡De ahí viene la palabra Venezuela que usamos hoy!",
+    "dato_curioso": "¡Somos el único país del mundo cuyo nombre viene de compararlo con una ciudad italiana! ¡Qué especiales somos!"
+  },
+  {
+    "pregunta": "¿Por qué los Añú construían sus casas sobre el agua?",
+    "tipo": "texto",
+    "opciones": [
+      "Porque les gustaba mojarse los pies",
+      "Porque el suelo era de caramelo",
+      "Porque perdieron el mapa",
+      "Para estar cerca del pescado y protegerse"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Vivir sobre el agua los protegía de animales peligrosos y les daba fácil acceso a los peces! ¡Muy inteligentes!",
+    "dato_curioso": "Las casas sobre el agua son más frescas porque el viento del lago las enfría. ¡Los Añú no necesitaban aire acondicionado!"
+  },
+  {
+    "pregunta": "¿En qué estado de Venezuela está el Lago de Maracaibo?",
+    "tipo": "texto",
+    "opciones": [
+      "Zulia",
+      "Marte",
+      "Caracas",
+      "Bolívar"
+    ],
+    "correcta": 0,
+    "explicacion": "¡El Lago de Maracaibo está en el estado Zulia, al noroeste de Venezuela! Maracaibo es su ciudad más importante.",
+    "dato_curioso": "El estado Zulia produce muchísimo petróleo de Venezuela. ¡El lago tiene petróleo debajo del agua!"
+  },
+  {
+    "pregunta": "¿De qué material eran los pilotes de los palafitos?",
+    "tipo": "texto",
+    "opciones": [
+      "De caramelo duro",
+      "De papel mojado",
+      "De madera muy dura y resistente",
+      "De hierro del espacio"
+    ],
+    "correcta": 2,
+    "explicacion": "¡Los pilotes eran troncos de madera muy resistente que aguantaban el peso de toda la casa! Los Añú los cortaban ellos mismos.",
+    "dato_curioso": "Algunas maderas venezolanas son tan duras que no se hunden en el agua. ¡Los Añú las conocían todas!"
+  },
+  {
+    "pregunta": "¿Qué usaban los Añú para visitar a sus vecinos en el lago?",
+    "tipo": "texto",
+    "opciones": [
+      "Canoas de madera",
+      "Patines de hielo",
+      "Cohetes pequeños",
+      "Trampolines acuáticos"
+    ],
+    "correcta": 0,
+    "explicacion": "¡Los Añú usaban canoas para visitar vecinos, pescar y moverse! Era su carro, su bus y su bicicleta al mismo tiempo.",
+    "dato_curioso": "Una canoa tallada de un tronco podía durar más de 20 años si la cuidaban bien. ¡Los Añú la trataban con mucho amor!"
+  },
+  {
+    "pregunta": "¿Es el Lago de Maracaibo uno de los más grandes de América?",
+    "tipo": "texto",
+    "opciones": [
+      "Sí, es uno de los más grandes",
+      "No, es el más pequeño del mundo",
+      "No, ese lago no existe",
+      "Es un río muy largo disfrazado"
+    ],
+    "correcta": 0,
+    "explicacion": "¡Sí! El Lago de Maracaibo es enorme. ¡Tiene más de 13.000 km², más grande que muchos países del mundo!",
+    "dato_curioso": "El Lago de Maracaibo está conectado al mar. ¡Es especial porque tiene agua dulce y también agua salada!"
+  },
+  {
+    "pregunta": "¿De qué eran las trampas de pesca de los Añú?",
+    "tipo": "texto",
+    "opciones": [
+      "De oro y plata",
+      "De Wi-Fi y electricidad",
+      "De algodón de azúcar",
+      "De fibras de plantas tejidas"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Los Añú tejían fibras de plantas para hacer trampas como una canasta! Los peces entraban y ¡no podían salir!",
+    "dato_curioso": "Esta forma de pescar con trampas vegetales se usa en Venezuela desde hace miles de años. ¡El saber se pasa de padres a hijos!"
+  },
+  {
+    "pregunta": "¿Cuántos troncos necesitaban los Añú para hacer una canoa?",
+    "tipo": "texto",
+    "opciones": [
+      "Cien troncos pequeños",
+      "Veinte troncos medianos",
+      "Solo uno muy grande",
+      "Ninguno, las compraban"
+    ],
+    "correcta": 2,
+    "explicacion": "¡Solo uno! Elegían un árbol muy grande, lo tumbaban y lo vaciaban por dentro. ¡Quedaba perfecta para navegar!",
+    "dato_curioso": "A estas canoas de un solo tronco se les llama 'monóxilas'. ¡Los indígenas de toda América las hacían igual!"
+  },
+  {
+    "pregunta": "¿Cómo recibió Venezuela su nombre?",
+    "tipo": "texto",
+    "opciones": [
+      "Vespucio vio palafitos y pensó en Venecia",
+      "Un rey español lo inventó de la nada",
+      "Bolívar lo decidió en una batalla",
+      "Salió de un libro de cuentos mágico"
+    ],
+    "correcta": 0,
+    "explicacion": "¡Américo Vespucio vio las casas sobre el agua y pensó en Venecia! Escribió 'Venezziola' y de ahí nació Venezuela.",
+    "dato_curioso": "¡Nuestro nombre tiene más de 500 años! Vespucio llegó alrededor del año 1499 y desde entonces nos llamamos Venezuela."
+  },
+  {
+    "pregunta": "¿Para qué servían los pilotes de los palafitos?",
+    "tipo": "texto",
+    "opciones": [
+      "Para sostener la casa sobre el agua",
+      "Para secar la ropa mojada",
+      "Son antenas de televisión",
+      "Son lápices gigantes de los Añú"
+    ],
+    "correcta": 0,
+    "explicacion": "¡Los pilotes son como las patas de una mesa! Sin ellos la casa se caería al agua. Llegaban hasta el fondo del lago.",
+    "dato_curioso": "Los Añú elegían los árboles más duros del bosque para los pilotes. ¡Una madera débil podía hundir la casa entera!"
+  },
+  {
+    "pregunta": "¿Cómo se llaman estas casas especiales que ves sobre el agua?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración colorida y amigable de palafitos sobre el agua: casas de madera con techos de palma, elevadas sobre pilotes largos de madera, con canoas atadas debajo y niños asomados sonriendo.",
+    "opciones": [
+      "Castillos de arena",
+      "Palafitos",
+      "Casas submarinas",
+      "Torres espaciales"
+    ],
+    "correcta": 1,
+    "explicacion": "¡Se llaman palafitos! Son casas de madera puestas sobre palos largos metidos en el agua. ¡Los Añú las inventaron!",
+    "dato_curioso": "¡Los palafitos son Patrimonio Cultural de Venezuela! Son tan especiales que la ley los protege."
+  },
+  {
+    "pregunta": "¿Quiénes construyeron los primeros palafitos de Venezuela?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de indígenas Añú con vestimenta tradicional construyendo un palafito: unos en canoas colocando pilotes de madera en el lago, otros arriba construyendo las paredes de la casa.",
+    "opciones": [
+      "Los indígenas Añú",
+      "Los astronautas venezolanos",
+      "Los piratas del Caribe",
+      "Los dinosaurios del lago"
+    ],
+    "correcta": 0,
+    "explicacion": "¡Los Añú fueron los genios que inventaron los palafitos! Hace miles de años decidieron vivir sobre el agua.",
+    "dato_curioso": "¡Los Añú también se llaman 'Paraujanos'! Llevan miles de años en el lago y son parte importante de Venezuela."
+  },
+  {
+    "pregunta": "¿Quién es el explorador que le puso nombre a Venezuela?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración amigable de Américo Vespucio: explorador europeo del siglo XV con ropa de navegante, sombrero y catalejo, mirando el lago con cara de sorpresa desde su barco.",
+    "opciones": [
+      "Cristóbal Colón",
+      "El Capitán Garfio",
+      "Américo Vespucio",
+      "Simón Bolívar"
+    ],
+    "correcta": 2,
+    "explicacion": "¡Américo Vespucio fue el explorador que vio los palafitos y pensó en Venecia! ¡Así nos quedamos con el nombre Venezuela!",
+    "dato_curioso": "¡Todo un continente también se llama América por este señor! Américo Vespucio dio nombre a muchísimas cosas."
+  },
+  {
+    "pregunta": "¿Cómo se movilizaban los Añú dentro del lago?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de un indígena Añú remando una canoa de madera tallada de un solo tronco en el lago, con palafitos de fondo y agua azul brillante alrededor.",
+    "opciones": [
+      "En bicicletas acuáticas",
+      "En patines de ruedas",
+      "En helicópteros de palma",
+      "En canoas de madera"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Los Añú remaban en canoas hechas de un solo tronco de árbol! Era su transporte, como el carro de hoy en día.",
+    "dato_curioso": "Remar en una canoa monóxila requiere mucho equilibrio. ¡Los niños Añú aprendían a remar desde muy pequeños!"
+  },
+  {
+    "pregunta": "¿Qué lago grandísimo se ve en este mapa?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Mapa ilustrado y colorido de Venezuela con el Lago de Maracaibo resaltado en azul brillante en la región noroeste del país, con una estrella sobre la ciudad de Maracaibo y el nombre del lago escrito.",
+    "opciones": [
+      "El Lago de Maracaibo",
+      "El Mar Caribe",
+      "La piscina más grande del mundo",
+      "El Océano Atlántico"
+    ],
+    "correcta": 0,
+    "explicacion": "¡Es el Lago de Maracaibo! Es el lago más grande de Venezuela y uno de los más grandes de toda América Latina.",
+    "dato_curioso": "¡El Lago de Maracaibo tiene más de 13.000 km² de agua! Es tan grande que dentro cabrían muchos países pequeños."
+  },
+  {
+    "pregunta": "¿Qué ciudad italiana se parece al lago con palafitos?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de la ciudad de Venecia, Italia: canales de agua turquesa entre casas coloridas de varios pisos, con góndolas y puentecitos. Ambiente festivo y alegre.",
+    "opciones": [
+      "Madrid, España",
+      "Venecia, Italia",
+      "París, Francia",
+      "Ciudad de los Caramelos"
+    ],
+    "correcta": 1,
+    "explicacion": "¡Venecia en Italia tiene canales en vez de calles! Vespucio vio los palafitos y dijo: '¡Esto se parece a Venecia!'",
+    "dato_curioso": "Venecia tiene más de 400 puentes y 177 canales de agua. ¡Es una de las ciudades más raras y bonitas del mundo!"
+  },
+  {
+    "pregunta": "¿Qué hacían los niños Añú en el lago desde bebés?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración alegre de niños indígenas Añú nadando y jugando felices en las aguas del lago, salpicándose con agua y riéndose, con palafitos coloridos de fondo.",
+    "opciones": [
+      "Jugaban videojuegos",
+      "Manejaban carros de carreras",
+      "Nadaban desde muy pequeños",
+      "Hacían pizzas flotantes"
+    ],
+    "correcta": 2,
+    "explicacion": "¡Los niños Añú aprendían a nadar antes de aprender a caminar! Vivir sobre el agua los hacía expertos nadadores.",
+    "dato_curioso": "Para un niño Añú, caerse al lago no era un susto. ¡Sabían nadar perfectamente y el agua era su patio de juegos!"
+  },
+  {
+    "pregunta": "¿Cómo pescaban los Añú sus alimentos?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de indígenas Añú en canoas colocando trampas de pesca tejidas con fibras vegetales en el agua del lago. Las trampas tienen forma de canasta redonda con pequeña entrada.",
+    "opciones": [
+      "Con trampas de plantas tejidas",
+      "Con dinamita mágica",
+      "Con imanes gigantes",
+      "Con una red de Wi-Fi"
+    ],
+    "correcta": 0,
+    "explicacion": "¡Los Añú tejían trampas con fibras de plantas para atrapar los peces del lago! Los peces entraban y no podían salir.",
+    "dato_curioso": "Este tipo de pesca no hace daño al lago ni a los peces pequeños. ¡Los Añú cuidaban mucho la naturaleza!"
+  },
+  {
+    "pregunta": "¿Qué animal daba el alimento más importante a los Añú?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración colorida de varios tipos de peces tropicales nadando en las aguas azules y brillantes del lago, con detalles de algas, burbujas y luz solar entrando al agua.",
+    "opciones": [
+      "Los leones de agua",
+      "Los dragones del lago",
+      "Los caramelos con aletas",
+      "Los peces del lago"
+    ],
+    "correcta": 3,
+    "explicacion": "¡Los peces del lago eran el alimento más importante de los Añú! Los pescaban todos los días con sus trampas y canoas.",
+    "dato_curioso": "¡En el Lago de Maracaibo viven más de 100 especies de peces diferentes! Es como un acuario gigantísimo natural."
+  },
+  {
+    "pregunta": "¿Cómo era por dentro la canoa de los Añú?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración de una canoa monóxila (de un solo tronco) vista desde arriba y de lado: el tronco está vaciado por dentro, con paredes de madera y remos de madera simple al lado.",
+    "opciones": [
+      "Tenía motor eléctrico",
+      "Hecha de un solo tronco vaciado",
+      "Era de plástico azul",
+      "Tenía ruedas para la tierra"
+    ],
+    "correcta": 1,
+    "explicacion": "¡Las canoas eran troncos de árbol vaciados por dentro! Los Añú tallaban la madera con mucha paciencia y fuerza.",
+    "dato_curioso": "A estas canoas se les llama 'monóxilas'. ¡Los indígenas de Venezuela, Brasil, Colombia y más países las hacían igual!"
+  },
+  {
+    "pregunta": "¿Qué construían los Añú para vivir encima del agua?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Vista panorámica ilustrada de un grupo de palafitos sobre el Lago de Maracaibo al atardecer: casas de madera conectadas por puentes, pilotes en el agua, canoas atadas, cielo naranja y rosado.",
+    "opciones": [
+      "Palafitos con pilotes en el agua",
+      "Piscinas gigantes",
+      "Barcos de guerra",
+      "Torres de chocolate"
+    ],
+    "correcta": 0,
+    "explicacion": "¡Los Añú construían palafitos: casas de madera sobre pilotes largos metidos en el lago! ¡Un vecindario flotante!",
+    "dato_curioso": "A veces varios palafitos se conectaban con puentes de madera. ¡Era como un vecindario flotante encima del agua!"
+  },
+  {
+    "pregunta": "¿En qué parte de Venezuela vivían los indígenas Añú?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Mapa ilustrado de Venezuela con una flecha y círculo resaltando el noroeste del país — el estado Zulia y el Lago de Maracaibo — con una pequeña ilustración de palafitos dentro del círculo.",
+    "opciones": [
+      "En el centro del país",
+      "Al sur, cerca de Brasil",
+      "Al noroeste, en el estado Zulia",
+      "En el planeta Júpiter"
+    ],
+    "correcta": 2,
+    "explicacion": "¡Los Añú vivían al noroeste de Venezuela, en el estado Zulia! Allí está el Lago de Maracaibo, su hogar de siempre.",
+    "dato_curioso": "El estado Zulia tiene el Lago de Maracaibo, el petróleo y los Añú. ¡Es uno de los estados más especiales de Venezuela!"
+  },
+  {
+    "pregunta": "¿Cómo era la trampa de pesca de los Añú?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración detallada de una trampa de pesca indígena tejida con fibras vegetales: una estructura de canasta cilíndrica con una entrada cónica, hecha de junco o fibra de palma, sumergida en agua azul.",
+    "opciones": [
+      "Una red eléctrica",
+      "Tejida con fibras de plantas",
+      "Una caja de metal pesada",
+      "Un imán de arco iris"
+    ],
+    "correcta": 1,
+    "explicacion": "¡Los Añú tejían fibras de plantas para hacer trampas de pesca! Como tejer una canasta pero para atrapar peces.",
+    "dato_curioso": "Este conocimiento de tejer trampas se pasaba de abuelos a nietos. ¡Los niños Añú aprendían desde pequeños!"
+  },
+  {
+    "pregunta": "¿Qué le recordó a Vespucio los palafitos que vio en el lago?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Ilustración dividida en dos partes: a la izquierda, palafitos del Lago de Maracaibo con indígenas Añú; a la derecha, la ciudad de Venecia con sus canales y casas coloridas. Una flecha conecta las dos imágenes.",
+    "opciones": [
+      "La ciudad de Venecia, Italia",
+      "Un cuento de hadas",
+      "Las pirámides de Egipto",
+      "Una película de robots"
+    ],
+    "correcta": 0,
+    "explicacion": "¡Las casas sobre el agua le recordaron a Venecia, Italia! Por eso escribió 'Venezziola' y de ahí nació Venezuela.",
+    "dato_curioso": "¡Vespucio llegó al lago hace más de 500 años! Y ese momento cambió para siempre el nombre de nuestro país."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cómo se llaman las casas que construyeron los Añú sobre el agua?",
+    "tipo": "texto",
+    "opciones": [
+      "Casas de nubes",
+      "Submarinos de madera",
+      "Castillos flotantes",
+      "Palafitos"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: ¡Los palafitos son casas de madera puestas encima de palos largos metidos en el agua! Los Añú eran muy muy listos.",
+    "dato_curioso": "Repaso curioso: ¡Los palafitos del Lago de Maracaibo todavía existen hoy! Puedes ir a verlos y hay gente que vive ahí."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Dónde vivían los indígenas Añú?",
+    "tipo": "texto",
+    "opciones": [
+      "Sobre el Lago de Maracaibo",
+      "En una nube rosada",
+      "En el desierto de arena",
+      "En la luna"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: ¡Los Añú construyeron sus casas encima del agua del Lago de Maracaibo! ¡Vivir sobre el lago era su superpoder!",
+    "dato_curioso": "Repaso curioso: Los Añú llevan miles y miles de años viviendo en ese lago. ¡Son uno de los grupos indígenas más antiguos de Venezuela!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cómo se llama el lago más grande de Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Lago Titicaca",
+      "Lago Cristal",
+      "Lago de Chocolate",
+      "Lago de Maracaibo"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: ¡El Lago de Maracaibo es el más grande de Venezuela y también uno de los más grandes de toda América!",
+    "dato_curioso": "Repaso curioso: El Lago de Maracaibo tiene relámpagos casi todas las noches. ¡Es como una fiesta de luces en el cielo!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Quién vio los palafitos y pensó en la ciudad de Venecia?",
+    "tipo": "texto",
+    "opciones": [
+      "Simón Bolívar",
+      "El rey de España",
+      "Américo Vespucio",
+      "Un pirata muy famoso"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: ¡Américo Vespucio era un explorador que llegó en barco y vio las casas flotantes! Pensó: '¡Esto parece Venecia!'",
+    "dato_curioso": "Repaso curioso: Américo Vespucio era de Italia, igual que Venecia. ¡Por eso conocía esa ciudad tan bien y las comparó!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué ciudad famosa de Italia le recordó los palafitos a Vespucio?",
+    "tipo": "texto",
+    "opciones": [
+      "Venecia",
+      "París",
+      "Roma",
+      "Ciudad de los Helados"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: ¡Venecia es una ciudad de Italia donde las calles son de agua! Vespucio dijo que el lago le parecía igualito.",
+    "dato_curioso": "Repaso curioso: En Venecia la gente se mueve en barquitas especiales llamadas góndolas en vez de en carros. ¡Imagínate!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué aprendían los niños Añú antes de aprender a caminar?",
+    "tipo": "texto",
+    "opciones": [
+      "A usar computadoras",
+      "A nadar",
+      "A cocinar arepas",
+      "A volar"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: ¡Como vivían sobre el agua, los bebés Añú aprendían a nadar antes de dar sus primeros pasos! ¡Qué valientes!",
+    "dato_curioso": "Repaso curioso: Para un niño Añú, caerse al lago no era un problema. ¡Sabían nadar perfectamente desde muy chiquititos!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: De qué estaban hechas las canoas de los Añú?",
+    "tipo": "texto",
+    "opciones": [
+      "De plástico de colores",
+      "De nubes apretadas",
+      "De un solo tronco de árbol",
+      "De papas fritas pegadas"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: ¡Las canoas de los Añú se hacían vaciando un tronco muy grande de árbol! Era duro pero quedaban perfectas.",
+    "dato_curioso": "Repaso curioso: Hacer una canoa de un tronco podía tardar semanas de trabajo. ¡Era el objeto más valioso de la familia Añú!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cómo se llamaban los indígenas que vivían en el Lago de Maracaibo?",
+    "tipo": "texto",
+    "opciones": [
+      "Los Añú",
+      "Los Pingüinos",
+      "Los Superhéroes del Lago",
+      "Los Aztecas"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: ¡Los Añú son los indígenas que inventaron los palafitos! También se les llama 'Paraujanos'. ¡Son parte de Venezuela!",
+    "dato_curioso": "Repaso curioso: ¡Los Añú todavía viven hoy cerca del Lago de Maracaibo! Han vivido ahí por miles y miles de años."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué palabra escribió Vespucio para llamar a este lugar?",
+    "tipo": "texto",
+    "opciones": [
+      "Lago Bonito",
+      "Venezziola",
+      "Isla del Tesoro",
+      "Venezuela Grande"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: ¡Vespucio escribió 'Venezziola' que en italiano significa 'pequeña Venecia'! Con el tiempo se convirtió en Venezuela.",
+    "dato_curioso": "Repaso curioso: ¡'Venezziola' suena como el nombre de una canción! El idioma italiano es muy musical y bonito."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Todavía existen palafitos en el Lago de Maracaibo hoy?",
+    "tipo": "texto",
+    "opciones": [
+      "Se convirtieron en rascacielos",
+      "Sí, todavía existen",
+      "No, desaparecieron",
+      "No, se los comieron los peces"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: ¡Sí! Hoy puedes ver palafitos reales en el Lago de Maracaibo. ¡Las familias siguen viviendo en esas casas flotantes!",
+    "dato_curioso": "Repaso curioso: Los palafitos de hoy ya no son solo de madera — ¡algunos tienen luz eléctrica y televisión! Los tiempos cambian."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Con qué pescaban los Añú en el lago?",
+    "tipo": "texto",
+    "opciones": [
+      "Con trampas de fibra vegetal",
+      "Sobre el Lago de Maracaibo",
+      "Lago de Maracaibo",
+      "Palafitos"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: ¡Los Añú hacían trampas tejiendo fibras de plantas como una canasta! Los peces entraban y ¡ya no podían salir!",
+    "dato_curioso": "Dato para profundizar: ¡En el Lago de Maracaibo viven más de 100 tipos diferentes de peces! Es como un acuario gigantísimo."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué sostiene las casas palafito sobre el agua?",
+    "tipo": "texto",
+    "opciones": [
+      "Sobre el Lago de Maracaibo",
+      "Lago de Maracaibo",
+      "Palafitos",
+      "Los pilotes de madera"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: ¡Los pilotes son palos muy largos que llegan hasta el fondo del lago! Son como las patas de una mesa muy alta.",
+    "dato_curioso": "Dato para profundizar: Algunos pilotes de palafito miden más de 5 metros de largo. ¡Son tan altos como dos jirafas una encima de otra!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué significa la palabra 'Venezziola'?",
+    "tipo": "texto",
+    "opciones": [
+      "Palafitos",
+      "Sobre el Lago de Maracaibo",
+      "Lago de Maracaibo",
+      "Pequeña Venecia"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: 'Venezziola' en italiano quiere decir 'pequeña Venecia'. ¡De ahí viene la palabra Venezuela que usamos hoy!",
+    "dato_curioso": "Dato para profundizar: ¡Somos el único país del mundo cuyo nombre viene de compararlo con una ciudad italiana! ¡Qué especiales somos!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Por qué los Añú construían sus casas sobre el agua?",
+    "tipo": "texto",
+    "opciones": [
+      "Sobre el Lago de Maracaibo",
+      "Palafitos",
+      "Lago de Maracaibo",
+      "Para estar cerca del pescado y protegerse"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: ¡Vivir sobre el agua los protegía de animales peligrosos y les daba fácil acceso a los peces! ¡Muy inteligentes!",
+    "dato_curioso": "Dato para profundizar: Las casas sobre el agua son más frescas porque el viento del lago las enfría. ¡Los Añú no necesitaban aire acondicionado!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: En qué estado de Venezuela está el Lago de Maracaibo?",
+    "tipo": "texto",
+    "opciones": [
+      "Zulia",
+      "Lago de Maracaibo",
+      "Sobre el Lago de Maracaibo",
+      "Palafitos"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: ¡El Lago de Maracaibo está en el estado Zulia, al noroeste de Venezuela! Maracaibo es su ciudad más importante.",
+    "dato_curioso": "Dato para profundizar: El estado Zulia produce muchísimo petróleo de Venezuela. ¡El lago tiene petróleo debajo del agua!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: De qué material eran los pilotes de los palafitos?",
+    "tipo": "texto",
+    "opciones": [
+      "Palafitos",
+      "Lago de Maracaibo",
+      "Sobre el Lago de Maracaibo",
+      "De madera muy dura y resistente"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: ¡Los pilotes eran troncos de madera muy resistente que aguantaban el peso de toda la casa! Los Añú los cortaban ellos mismos.",
+    "dato_curioso": "Dato para profundizar: Algunas maderas venezolanas son tan duras que no se hunden en el agua. ¡Los Añú las conocían todas!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué usaban los Añú para visitar a sus vecinos en el lago?",
+    "tipo": "texto",
+    "opciones": [
+      "Canoas de madera",
+      "Sobre el Lago de Maracaibo",
+      "Lago de Maracaibo",
+      "Palafitos"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: ¡Los Añú usaban canoas para visitar vecinos, pescar y moverse! Era su carro, su bus y su bicicleta al mismo tiempo.",
+    "dato_curioso": "Dato para profundizar: Una canoa tallada de un tronco podía durar más de 20 años si la cuidaban bien. ¡Los Añú la trataban con mucho amor!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Es el Lago de Maracaibo uno de los más grandes de América?",
+    "tipo": "texto",
+    "opciones": [
+      "Sí, es uno de los más grandes",
+      "Palafitos",
+      "Sobre el Lago de Maracaibo",
+      "Lago de Maracaibo"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: ¡Sí! El Lago de Maracaibo es enorme. ¡Tiene más de 13.000 km², más grande que muchos países del mundo!",
+    "dato_curioso": "Dato para profundizar: El Lago de Maracaibo está conectado al mar. ¡Es especial porque tiene agua dulce y también agua salada!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: De qué eran las trampas de pesca de los Añú?",
+    "tipo": "texto",
+    "opciones": [
+      "Sobre el Lago de Maracaibo",
+      "Palafitos",
+      "Lago de Maracaibo",
+      "De fibras de plantas tejidas"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: ¡Los Añú tejían fibras de plantas para hacer trampas como una canasta! Los peces entraban y ¡no podían salir!",
+    "dato_curioso": "Dato para profundizar: Esta forma de pescar con trampas vegetales se usa en Venezuela desde hace miles de años. ¡El saber se pasa de padres a hijos!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cuántos troncos necesitaban los Añú para hacer una canoa?",
+    "tipo": "texto",
+    "opciones": [
+      "Sobre el Lago de Maracaibo",
+      "Solo uno muy grande",
+      "Lago de Maracaibo",
+      "Palafitos"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: ¡Solo uno! Elegían un árbol muy grande, lo tumbaban y lo vaciaban por dentro. ¡Quedaba perfecta para navegar!",
+    "dato_curioso": "Dato para profundizar: A estas canoas de un solo tronco se les llama 'monóxilas'. ¡Los indígenas de toda América las hacían igual!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cómo recibió Venezuela su nombre?",
+    "tipo": "texto",
+    "opciones": [
+      "Un rey español lo inventó de la nada",
+      "Bolívar lo decidió en una batalla",
+      "Salió de un libro de cuentos mágico",
+      "Vespucio vio palafitos y pensó en Venecia"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: ¡Américo Vespucio vio las casas sobre el agua y pensó en Venecia! Escribió 'Venezziola' y de ahí nació Venezuela.",
+    "dato_curioso": "Ampliación histórica: ¡Nuestro nombre tiene más de 500 años! Vespucio llegó alrededor del año 1499 y desde entonces nos llamamos Venezuela."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Para qué servían los pilotes de los palafitos?",
+    "tipo": "texto",
+    "opciones": [
+      "Para sostener la casa sobre el agua",
+      "Para secar la ropa mojada",
+      "Son lápices gigantes de los Añú",
+      "Son antenas de televisión"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: ¡Los pilotes son como las patas de una mesa! Sin ellos la casa se caería al agua. Llegaban hasta el fondo del lago.",
+    "dato_curioso": "Ampliación histórica: Los Añú elegían los árboles más duros del bosque para los pilotes. ¡Una madera débil podía hundir la casa entera!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cómo se llaman estas casas especiales que ves sobre el agua?",
+    "tipo": "texto",
+    "opciones": [
+      "Palafitos",
+      "Castillos de arena",
+      "Casas submarinas",
+      "Torres espaciales"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: ¡Se llaman palafitos! Son casas de madera puestas sobre palos largos metidos en el agua. ¡Los Añú las inventaron!",
+    "dato_curioso": "Ampliación histórica: ¡Los palafitos son Patrimonio Cultural de Venezuela! Son tan especiales que la ley los protege."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Quiénes construyeron los primeros palafitos de Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Los dinosaurios del lago",
+      "Los astronautas venezolanos",
+      "Los indígenas Añú",
+      "Los piratas del Caribe"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: ¡Los Añú fueron los genios que inventaron los palafitos! Hace miles de años decidieron vivir sobre el agua.",
+    "dato_curioso": "Ampliación histórica: ¡Los Añú también se llaman 'Paraujanos'! Llevan miles de años en el lago y son parte importante de Venezuela."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Quién es el explorador que le puso nombre a Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "El Capitán Garfio",
+      "Simón Bolívar",
+      "Cristóbal Colón",
+      "Américo Vespucio"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: ¡Américo Vespucio fue el explorador que vio los palafitos y pensó en Venecia! ¡Así nos quedamos con el nombre Venezuela!",
+    "dato_curioso": "Ampliación histórica: ¡Todo un continente también se llama América por este señor! Américo Vespucio dio nombre a muchísimas cosas."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cómo se movilizaban los Añú dentro del lago?",
+    "tipo": "texto",
+    "opciones": [
+      "En canoas de madera",
+      "En helicópteros de palma",
+      "En bicicletas acuáticas",
+      "En patines de ruedas"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: ¡Los Añú remaban en canoas hechas de un solo tronco de árbol! Era su transporte, como el carro de hoy en día.",
+    "dato_curioso": "Ampliación histórica: Remar en una canoa monóxila requiere mucho equilibrio. ¡Los niños Añú aprendían a remar desde muy pequeños!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué lago grandísimo se ve en este mapa?",
+    "tipo": "texto",
+    "opciones": [
+      "El Océano Atlántico",
+      "La piscina más grande del mundo",
+      "El Lago de Maracaibo",
+      "El Mar Caribe"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: ¡Es el Lago de Maracaibo! Es el lago más grande de Venezuela y uno de los más grandes de toda América Latina.",
+    "dato_curioso": "Ampliación histórica: ¡El Lago de Maracaibo tiene más de 13.000 km² de agua! Es tan grande que dentro cabrían muchos países pequeños."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué ciudad italiana se parece al lago con palafitos?",
+    "tipo": "texto",
+    "opciones": [
+      "Ciudad de los Caramelos",
+      "Madrid, España",
+      "París, Francia",
+      "Venecia, Italia"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: ¡Venecia en Italia tiene canales en vez de calles! Vespucio vio los palafitos y dijo: '¡Esto se parece a Venecia!'",
+    "dato_curioso": "Ampliación histórica: Venecia tiene más de 400 puentes y 177 canales de agua. ¡Es una de las ciudades más raras y bonitas del mundo!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué hacían los niños Añú en el lago desde bebés?",
+    "tipo": "texto",
+    "opciones": [
+      "Hacían pizzas flotantes",
+      "Jugaban videojuegos",
+      "Nadaban desde muy pequeños",
+      "Manejaban carros de carreras"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: ¡Los niños Añú aprendían a nadar antes de aprender a caminar! Vivir sobre el agua los hacía expertos nadadores.",
+    "dato_curioso": "Ampliación histórica: Para un niño Añú, caerse al lago no era un susto. ¡Sabían nadar perfectamente y el agua era su patio de juegos!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cómo pescaban los Añú sus alimentos?",
+    "tipo": "texto",
+    "opciones": [
+      "Con imanes gigantes",
+      "Con dinamita mágica",
+      "Con trampas de plantas tejidas",
+      "Con una red de Wi-Fi"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: ¡Los Añú tejían trampas con fibras de plantas para atrapar los peces del lago! Los peces entraban y no podían salir.",
+    "dato_curioso": "Ampliación histórica: Este tipo de pesca no hace daño al lago ni a los peces pequeños. ¡Los Añú cuidaban mucho la naturaleza!"
+  }
+]

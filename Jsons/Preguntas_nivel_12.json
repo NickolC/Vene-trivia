@@ -1,0 +1,892 @@
+[
+  {
+    "pregunta": "¿Cómo se llamaba el primer pozo de petróleo comercial de Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Petróleo 1",
+      "Zumaque I",
+      "Pozo Mágico",
+      "El Gran Chorrito"
+    ],
+    "correcta": 1,
+    "explicacion": "El primer pozo de petróleo comercial de Venezuela se llamó Zumaque I. Empezó a producir petróleo en 1914, en Mene Grande, en el estado Zulia.",
+    "dato_curioso": "La palabra 'zumaque' es el nombre de una planta que crecía en el área donde perforaron el pozo. ¡Un árbol le dio nombre al pozo que cambió Venezuela para siempre!"
+  },
+  {
+    "pregunta": "¿En qué estado de Venezuela está Mene Grande, donde se encontró el primer petróleo?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Mapa colorido de Venezuela con el estado Zulia resaltado en amarillo dorado, una señal de 'X' marcando Mene Grande junto a una gota de petróleo negra brillante. El lago de Maracaibo visible en azul. Estilo ilustración infantil.",
+    "opciones": [
+      "En Mérida",
+      "En el estado Zulia",
+      "En Caracas",
+      "En la Luna venezolana"
+    ],
+    "correcta": 1,
+    "explicacion": "El primer petróleo comercial de Venezuela se encontró en Mene Grande, en el estado Zulia, al occidente del país, cerca del lago de Maracaibo.",
+    "dato_curioso": "Zulia es uno de los estados más ricos en petróleo de Venezuela. Debajo del lago de Maracaibo hay petróleo, y por eso hay miles de taladros metidos en el lago."
+  },
+  {
+    "pregunta": "¿Cómo se llamaba el pozo que en 1922 explotó lanzando petróleo al aire?",
+    "tipo": "texto",
+    "opciones": [
+      "Barroso II",
+      "SuperPozo 9000",
+      "El Reventón Loco",
+      "Chorrito del Diablo"
+    ],
+    "correcta": 0,
+    "explicacion": "El Barroso II fue el pozo que en 1922 explotó sin control, lanzando petróleo al aire. Fue el momento en que el mundo entero supo que Venezuela tenía mucho petróleo.",
+    "dato_curioso": "El Barroso II echó petróleo al aire sin parar durante 9 días. El petróleo manchó todo lo que había cerca y se podía ver y oler desde muy lejos."
+  },
+  {
+    "pregunta": "¿Cuántos barriles de petróleo lanzó al aire el pozo Barroso II cada día?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un pozo petrolero antiguo disparando un chorro enorme de petróleo negro hacia el cielo, con trabajadores pequeños mirando asombrados alrededor y el número '100.000 BARRILES' escrito en grande. Estilo cómic dramático.",
+    "opciones": [
+      "Solo 5 barriles",
+      "100.000 barriles por día",
+      "Un barril por semana",
+      "Tres gotitas"
+    ],
+    "correcta": 1,
+    "explicacion": "El Barroso II lanzaba 100.000 barriles de petróleo por día. Era una cantidad enorme que nadie había visto antes en América del Sur.",
+    "dato_curioso": "100.000 barriles de petróleo son suficientes para llenar más de 15 piscinas olímpicas. ¡Imagínate esa cantidad de líquido negro chorreando sin parar!"
+  },
+  {
+    "pregunta": "¿Cuántos días estuvo el pozo Barroso II lanzando petróleo sin control?",
+    "tipo": "texto",
+    "opciones": [
+      "9 días",
+      "1 año",
+      "Solo 2 minutos",
+      "500 días"
+    ],
+    "correcta": 0,
+    "explicacion": "El Barroso II estuvo 9 días lanzando petróleo sin que nadie pudiera pararlo. Fue un evento que asombró al mundo entero.",
+    "dato_curioso": "Para detener un pozo desbocado, los trabajadores tenían que acercarse con barro y cemento especial bajo el chorro de petróleo. Era muy peligroso y difícil."
+  },
+  {
+    "pregunta": "¿Qué producto era el más importante de Venezuela ANTES del petróleo?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Imagen comparativa: a la izquierda, una plantación de café con granos rojos y bolsas exportadas al mundo, y a la derecha una torre de petróleo. Una flecha grande dice 'ANTES' y 'DESPUÉS'. Estilo educativo colorido.",
+    "opciones": [
+      "Las computadoras",
+      "El café",
+      "Los cohetes",
+      "El queso de mano"
+    ],
+    "correcta": 1,
+    "explicacion": "Antes del petróleo, Venezuela era el mayor exportador de café del mundo. El país vivía del café, el cacao y el cuero.",
+    "dato_curioso": "Venezuela llegó a ser el tercer productor de café del mundo, ¡antes que Brasil! Pero cuando llegó el petróleo, la gente dejó las fincas de café para trabajar en los pozos."
+  },
+  {
+    "pregunta": "¿Cómo transformó el petróleo las aldeas rurales de Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Las convirtió en ciudades en menos de 10 años",
+      "Las hizo desaparecer bajo el mar",
+      "Las pintó de color rosa",
+      "Las llenó de elefantes"
+    ],
+    "correcta": 0,
+    "explicacion": "El petróleo transformó aldeas pequeñas en ciudades grandes en menos de 10 años. Llegaron trabajadores, empresas y construcciones de todas partes.",
+    "dato_curioso": "Maracaibo era un pueblo tranquilo antes del petróleo. Con la llegada del 'oro negro', se convirtió en una ciudad enorme con rascacielos y avenidas en muy poco tiempo."
+  },
+  {
+    "pregunta": "¿En qué posición estaba Venezuela en exportaciones de petróleo durante los años 1920?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un podio de ganadores con Venezuela en el primer lugar, representada por su bandera amarilla, azul y roja. El trofeo tiene forma de barril de petróleo. Otros países en segundo y tercer lugar. Estilo festivo.",
+    "opciones": [
+      "En el último lugar",
+      "Era el mayor exportador del mundo",
+      "En el puesto 50",
+      "No exportaba nada"
+    ],
+    "correcta": 1,
+    "explicacion": "En los años 1920, Venezuela se convirtió en el mayor exportador de petróleo del mundo. ¡Era número uno!",
+    "dato_curioso": "Venezuela superó a los Estados Unidos como mayor exportador de petróleo en 1928. Fue un logro enorme para un país tan pequeño comparado con EE.UU."
+  },
+  {
+    "pregunta": "¿Cómo se le llama al petróleo por su color y valor?",
+    "tipo": "texto",
+    "opciones": [
+      "Oro negro",
+      "Chocolate líquido",
+      "Agua de dragón",
+      "Jugo de roca"
+    ],
+    "correcta": 0,
+    "explicacion": "Al petróleo se le llama 'oro negro' porque es de color negro y vale tanto dinero como el oro. Es el recurso más valioso de Venezuela.",
+    "dato_curioso": "El petróleo se formó durante millones de años bajo la tierra a partir de plantas y animales prehistóricos. ¡Llenar tu carro de gasolina es como usar dinosaurios viejos!"
+  },
+  {
+    "pregunta": "¿De qué países vinieron las empresas que buscaban petróleo en Venezuela?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Barcos con banderas de Estados Unidos, Inglaterra y Holanda llegando a costas venezolanas, con ingenieros con cascos amarillos bajando con equipos. El fondo muestra palmeras y una torre de petróleo. Ilustración colorida.",
+    "opciones": [
+      "Del planeta Saturno",
+      "De Estados Unidos y Europa",
+      "Del fondo del océano",
+      "De la Antártida"
+    ],
+    "correcta": 1,
+    "explicacion": "Empresas de Estados Unidos y Europa llegaron a Venezuela a buscar petróleo. Eran compañías muy grandes que tenían el dinero y los equipos para perforar la tierra.",
+    "dato_curioso": "Compañías como Shell (holandesa-inglesa) y Standard Oil (americana) fueron las primeras en llegar a Venezuela a explorar por petróleo. Vinieron desde muy lejos."
+  },
+  {
+    "pregunta": "¿Quién era el presidente de Venezuela cuando ocurrió el gran reventón del Barroso II?",
+    "tipo": "texto",
+    "opciones": [
+      "Simón Bolívar",
+      "Juan Vicente Gómez",
+      "El Rey del Petróleo",
+      "Capitán Petróleo"
+    ],
+    "correcta": 1,
+    "explicacion": "Juan Vicente Gómez era el presidente de Venezuela cuando ocurrió el reventón del Barroso II en 1922. Él gobernó Venezuela por 27 años.",
+    "dato_curioso": "Juan Vicente Gómez fue uno de los presidentes más poderosos de Venezuela. Con el petróleo, el país se hizo rico, pero mucho de ese dinero no llegaba a la gente del pueblo."
+  },
+  {
+    "pregunta": "¿Qué es un barril de petróleo?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un barril metálico negro y brillante estándar de petróleo, con la bandera venezolana en el costado y el texto '159 litros' escrito. Al lado, una comparación con botellas de agua para mostrar la cantidad. Estilo educativo infantil.",
+    "opciones": [
+      "Un tambor para hacer música",
+      "Un recipiente para guardar petróleo",
+      "Una pelota de béisbol gigante",
+      "Una taza de café enorme"
+    ],
+    "correcta": 1,
+    "explicacion": "Un barril es el recipiente que se usa para medir y guardar petróleo. Cada barril contiene 159 litros de petróleo crudo.",
+    "dato_curioso": "Aunque hoy el petróleo viaja por tuberías y barcos enormes, la unidad de medida sigue siendo 'barriles'. ¡Es una tradición que viene de cuando lo transportaban en barriles de madera!"
+  },
+  {
+    "pregunta": "¿Qué cosa famosa rodea el lago de Maracaibo en Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Castillos medievales",
+      "Miles de taladros petroleros",
+      "Volcanes de lava roja",
+      "Circos flotantes"
+    ],
+    "correcta": 1,
+    "explicacion": "El lago de Maracaibo está rodeado de miles de taladros petroleros que sacan petróleo desde debajo del lago. Se pueden ver desde el avión.",
+    "dato_curioso": "El lago de Maracaibo es uno de los lagos más antiguos del mundo y tiene el petróleo más accesible de Venezuela. Hay taladros en el agua desde hace más de 100 años."
+  },
+  {
+    "pregunta": "¿Qué año es especialmente importante para el inicio del petróleo en Venezuela?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un cartel festivo que dice '1914: PRIMER PETRÓLEO' con el pozo Zumaque I brotando petróleo, rodeado de confeti y banderas venezolanas. Un hombre con casco amarillo sonriente levanta los brazos. Estilo ilustración festiva.",
+    "opciones": [
+      "El año 500",
+      "1914",
+      "El año 3000",
+      "1492"
+    ],
+    "correcta": 1,
+    "explicacion": "El año 1914 es muy importante porque fue cuando el pozo Zumaque I comenzó a producir petróleo comercialmente. Ese año cambió la historia de Venezuela.",
+    "dato_curioso": "El mismo año que empezó el petróleo en Venezuela, 1914, también comenzó la Primera Guerra Mundial en Europa. Fue un año de grandes cambios en el mundo entero."
+  },
+  {
+    "pregunta": "¿Cómo cambió la vida de los venezolanos con el petróleo?",
+    "tipo": "texto",
+    "opciones": [
+      "Todo siguió igual que siempre",
+      "La gente dejó las fincas y fue a trabajar en el petróleo",
+      "Todos se volvieron piratas",
+      "La gente aprendió a volar"
+    ],
+    "correcta": 1,
+    "explicacion": "Con el petróleo, muchos venezolanos dejaron las fincas de café y cacao para ir a trabajar en los campos petroleros. Las ciudades crecieron muy rápido.",
+    "dato_curioso": "Antes del petróleo, la mayoría de venezolanos vivían en el campo cultivando la tierra. El petróleo fue la razón por la que Venezuela se convirtió en un país de ciudades."
+  },
+  {
+    "pregunta": "¿Qué es un taladro petrolero?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Una torre de taladro petrolero en el lago de Maracaibo, con trabajadores con cascos en la plataforma. La torre tiene luces y el fondo es un amanecer naranja sobre el agua. Estilo ilustración educativa vibrante.",
+    "opciones": [
+      "Una herramienta para hacer muebles",
+      "Una máquina enorme que perfora la tierra para sacar petróleo",
+      "Un telescopio gigante",
+      "Una antena para ver televisión"
+    ],
+    "correcta": 1,
+    "explicacion": "Un taladro petrolero es una máquina muy grande que perfora la tierra o el fondo del lago para llegar hasta el petróleo que está muy adentro.",
+    "dato_curioso": "Los taladros del lago de Maracaibo tienen que perforar a través del agua y luego a través del suelo del lago para llegar al petróleo. ¡Es como hacer un agujero muy profundo en una piscina!"
+  },
+  {
+    "pregunta": "¿Qué tenía Venezuela antes del petróleo que la hacía famosa en el mundo?",
+    "tipo": "texto",
+    "opciones": [
+      "Robots voladores",
+      "Era el mayor exportador de café del mundo",
+      "Tenía los mejores dinosaurios",
+      "Tenía el sol más brillante"
+    ],
+    "correcta": 1,
+    "explicacion": "Venezuela era famosa por ser el mayor exportador de café del mundo antes de que llegara el petróleo. El café venezolano era conocido en todo el planeta.",
+    "dato_curioso": "El café venezolano de los Andes todavía es muy famoso. Las montañas de Mérida y Trujillo producen café delicioso que se exporta al mundo."
+  },
+  {
+    "pregunta": "¿Qué es el petróleo en realidad?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Corte transversal de la tierra mostrando capas de roca con una capa negra de petróleo atrapada muy profundo. Dinosaurios y plantas prehistóricas en la superficie de hace millones de años. Flechas muestran cómo se formó. Estilo educativo infantil.",
+    "opciones": [
+      "Chocolate derretido de la tierra",
+      "Un líquido que se formó de animales y plantas de hace millones de años",
+      "Pintura negra de las nubes",
+      "Jugo de uvas muy viejas"
+    ],
+    "correcta": 1,
+    "explicacion": "El petróleo es un líquido que se formó durante millones de años bajo la tierra, a partir de organismos prehistóricos que se comprimieron con el calor y la presión.",
+    "dato_curioso": "El petróleo que usamos hoy tardó entre 10 y 600 millones de años en formarse. Cuando lo gastamos, no podemos reponer esa cantidad. ¡Por eso hay que cuidarlo!"
+  },
+  {
+    "pregunta": "¿Dónde exactamente está Mene Grande, el lugar del primer petróleo venezolano?",
+    "tipo": "texto",
+    "opciones": [
+      "Cerca del Lago de Maracaibo, en Zulia",
+      "En los Andes de Mérida",
+      "En el Amazonas venezolano",
+      "En el fondo del mar Caribe"
+    ],
+    "correcta": 0,
+    "explicacion": "Mene Grande está en el estado Zulia, cerca del lago de Maracaibo. Es una zona rica en petróleo donde todavía se perforan pozos.",
+    "dato_curioso": "La palabra 'mene' en idiomas indígenas significa petróleo. Los indígenas venezolanos ya conocían el petróleo mucho antes de que llegaran las empresas extranjeras."
+  },
+  {
+    "pregunta": "¿Para qué sirve el petróleo que se saca de la tierra?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Diagrama circular mostrando el petróleo crudo en el centro y flechas apuntando a gasolina para carros, plásticos, telas sintéticas, medicamentos y electricidad. Cada producto representado con un ícono divertido. Estilo infográfico colorido.",
+    "opciones": [
+      "Solo para pintar paredes de negro",
+      "Para hacer gasolina, plásticos y muchas otras cosas útiles",
+      "Para hacer sopa negra",
+      "Para apagar incendios"
+    ],
+    "correcta": 1,
+    "explicacion": "Del petróleo se hacen muchísimas cosas: la gasolina de los carros, los plásticos, las telas sintéticas y hasta algunos medicamentos. Es un recurso muy versátil.",
+    "dato_curioso": "Más de 6.000 productos que usas todos los días están hechos con petróleo. Desde la ropa deportiva hasta el chicle que masticas. ¡El petróleo está en todas partes!"
+  },
+  {
+    "pregunta": "¿Qué pasó con las aldeas venezolanas que estaban cerca de los yacimientos de petróleo?",
+    "tipo": "texto",
+    "opciones": [
+      "Se volvieron ciudades gigantes en poco tiempo",
+      "Desaparecieron bajo el petróleo",
+      "Se quedaron exactamente igual",
+      "Se mudaron a la Luna"
+    ],
+    "correcta": 0,
+    "explicacion": "Las aldeas pequeñas que estaban cerca del petróleo se convirtieron en ciudades grandes en menos de 10 años. La gente llegaba de todos lados buscando trabajo.",
+    "dato_curioso": "Cabimas, una ciudad del Zulia, era un pequeño caserío antes del petróleo. Con los pozos, creció tan rápido que en pocos años tenía hospitales, escuelas y edificios altos."
+  },
+  {
+    "pregunta": "¿Cómo llegaron los equipos de perforación de petróleo hasta Venezuela?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Barcos enormes cargados con maquinaria pesada de petróleo, grúas y tuberías, llegando al puerto de Maracaibo. Trabajadores con cascos bajando el equipo. Mar del lago de Maracaibo en el fondo. Ilustración dramática y colorida.",
+    "opciones": [
+      "Volando en globos de colores",
+      "En barcos grandes desde Estados Unidos y Europa",
+      "Aparecieron mágicamente de la nada",
+      "Llegaron en triciclos"
+    ],
+    "correcta": 1,
+    "explicacion": "Los equipos de perforación llegaron en barcos grandes desde Estados Unidos y Europa. Eran máquinas enormes que no existían en Venezuela.",
+    "dato_curioso": "Para meter los equipos petroleros al lago de Maracaibo, primero había que ampliar el canal de acceso al lago. ¡Tuvieron que hacer el canal más profundo para que cupieran los barcos grandes!"
+  },
+  {
+    "pregunta": "¿Qué significó el petróleo para la economía de Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Que Venezuela se volvió muy rico muy rápido",
+      "Que Venezuela se quedó sin dinero",
+      "Que Venezuela tuvo que vender su tierra",
+      "Que Venezuela dejó de existir"
+    ],
+    "correcta": 0,
+    "explicacion": "El petróleo hizo que Venezuela se volviera muy rico de manera muy rápida. El dinero del petróleo llegó a financiar escuelas, hospitales y carreteras.",
+    "dato_curioso": "En los años 1970, Venezuela era tan rica por el petróleo que el gobierno compraba aviones Concorde y la gente viajaba a comprar de shopping en Miami. ¡Se decía que el venezolano era 'tá barato, dame dos'!"
+  },
+  {
+    "pregunta": "¿Cuál era el gran problema del petróleo siendo un recurso natural?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un barril de petróleo con un reloj de arena encima mostrando que se va vaciando lentamente. Al lado, un árbol que crece rápido. Texto que dice 'No se renueva'. Estilo ilustración educativa amigable.",
+    "opciones": [
+      "Que era muy barato",
+      "Que algún día se puede acabar porque no se renueva",
+      "Que hacía ruido de noche",
+      "Que le tenía miedo al agua"
+    ],
+    "correcta": 1,
+    "explicacion": "El petróleo es un recurso no renovable, lo que significa que cuando se acabe no se puede reponer. Por eso es importante usarlo con cuidado y buscar otras fuentes de energía.",
+    "dato_curioso": "Los científicos creen que el petróleo que queda en la Tierra podría durar entre 50 y 100 años más si seguimos usándolo al ritmo actual. ¡Por eso es importante buscar energías limpias!"
+  },
+  {
+    "pregunta": "¿Qué es el lago de Maracaibo?",
+    "tipo": "texto",
+    "opciones": [
+      "Un lago de petróleo puro",
+      "El lago más grande de Suramérica y lleno de petróleo debajo",
+      "Un mar de chocolate",
+      "Una laguna de limonada"
+    ],
+    "correcta": 1,
+    "explicacion": "El lago de Maracaibo es el lago más grande de América del Sur. Debajo de sus aguas hay enormes reservas de petróleo que Venezuela ha explotado por más de 100 años.",
+    "dato_curioso": "El lago de Maracaibo tiene algo muy especial: hay rayos eléctricos casi todas las noches en el lugar donde entra el río Catatumbo. ¡Se le llama el Relámpago del Catatumbo y se puede ver desde muy lejos!"
+  },
+  {
+    "pregunta": "¿Qué pasó después del reventón del Barroso II en el mundo?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Periódicos de varios países con titulares que dicen 'VENEZUELA TIENE PETRÓLEO!' en inglés, español y otros idiomas. Empresarios con maletines corren hacia un barco con bandera venezolana. Estilo cómic dramático.",
+    "opciones": [
+      "Nadie se enteró de nada",
+      "El mundo entero supo que Venezuela tenía petróleo enorme",
+      "Venezuela se cerró para siempre",
+      "Todos se asustaron y se fueron"
+    ],
+    "correcta": 1,
+    "explicacion": "Después del Barroso II, el mundo entero supo que Venezuela tenía enormes reservas de petróleo. Empresas de todos lados vinieron corriendo a Venezuela.",
+    "dato_curioso": "Las noticias del Barroso II llegaron a los periódicos de Nueva York, Londres y París. ¡De un día para otro Venezuela estaba en las portadas del mundo!"
+  },
+  {
+    "pregunta": "¿Cómo afectó el petróleo al campo venezolano y a los agricultores?",
+    "tipo": "texto",
+    "opciones": [
+      "El campo creció más fuerte que nunca",
+      "Mucha gente abandonó el campo para ir a trabajar al petróleo",
+      "Los agricultores se volvieron más ricos",
+      "Nada cambió para los agricultores"
+    ],
+    "correcta": 1,
+    "explicacion": "Con el petróleo, mucha gente dejó las fincas para ir a trabajar en los campos petroleros. El campo se quedó sin trabajadores y Venezuela empezó a importar comida.",
+    "dato_curioso": "Venezuela, que antes producía mucho de lo que comía, empezó a importar alimentos cuando la gente se fue al petróleo. Esta dependencia del petróleo se convirtió en un problema grande con los años."
+  },
+  {
+    "pregunta": "¿En qué año fue el gran reventón del pozo Barroso II?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un pozo de petróleo vintage con el año 1922 escrito grande arriba, con petróleo chorreando como una fuente oscura. Trabajadores sorprendidos alrededor con ojos muy abiertos. Estilo caricatura dramática.",
+    "opciones": [
+      "En el año 2000",
+      "En 1922",
+      "En 1492",
+      "En 1800"
+    ],
+    "correcta": 1,
+    "explicacion": "El gran reventón del Barroso II ocurrió en 1922. Ese año marcó el inicio de la era petrolera moderna de Venezuela.",
+    "dato_curioso": "Entre 1914, cuando empezó el Zumaque I, y 1922, con el Barroso II, Venezuela tardó solo 8 años en convertirse en el mayor exportador de petróleo del mundo. ¡Qué rapidez!"
+  },
+  {
+    "pregunta": "¿Qué nombre recibe el lugar donde hay petróleo debajo de la tierra?",
+    "tipo": "texto",
+    "opciones": [
+      "Yacimiento",
+      "Cocina de petróleo",
+      "Lago escondido",
+      "Tesoro de roca"
+    ],
+    "correcta": 0,
+    "explicacion": "Al lugar donde hay petróleo atrapado bajo la tierra o bajo el agua se le llama yacimiento. Venezuela tiene los yacimientos más grandes del mundo.",
+    "dato_curioso": "Venezuela tiene las reservas de petróleo más grandes del mundo, más que Arabia Saudita. ¡Debajo de Venezuela hay más petróleo que en ningún otro país del planeta!"
+  },
+  {
+    "pregunta": "¿Qué es una refinería de petróleo?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Una refinería de petróleo con torres altas, tuberías plateadas y llamas en las antorchas. El petróleo negro crudo entra por un lado y del otro salen gasolina, diesel y plásticos en frascos de colores. Estilo educativo colorido.",
+    "opciones": [
+      "Un lugar para hacer pasteles negros",
+      "Una fábrica donde el petróleo crudo se convierte en gasolina y otros productos",
+      "Un parque de diversiones",
+      "Una escuela para petróleo"
+    ],
+    "correcta": 1,
+    "explicacion": "Una refinería es una fábrica gigante donde el petróleo crudo y negro se procesa y se convierte en gasolina, diesel y muchos otros productos útiles.",
+    "dato_curioso": "Venezuela tiene una de las refinerías más grandes del mundo en Amuay, en el estado Falcón. Es tan grande que se puede ver desde las imágenes del satélite espacial."
+  },
+  {
+    "pregunta": "¿Cómo se llama la empresa nacional de petróleo de Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "PetroVenezuela",
+      "PDVSA",
+      "OilCorp Venezuela",
+      "Petróleo y Arepas S.A."
+    ],
+    "correcta": 1,
+    "explicacion": "La empresa nacional de petróleo de Venezuela se llama PDVSA, que significa Petróleos de Venezuela S.A. Fue creada en 1976 cuando Venezuela nacionalizó el petróleo.",
+    "dato_curioso": "En 1976, Venezuela decidió que el petróleo era del pueblo venezolano y no de las empresas extranjeras. Ese día de nationalización se celebró como una gran fiesta en todo el país."
+  },
+  {
+    "pregunta": "¿Cómo olía el lugar cerca del pozo Barroso II durante su reventón?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Una nube oscura y viscosa sobre campos venezolanos, con personas tapándose la nariz y los ojos llorosos. El petróleo cubre plantas y animales cercanos. El sol se ve naranja a través de la niebla de petróleo. Estilo cómic dramático.",
+    "opciones": [
+      "Olía a rosas y flores",
+      "Olía fuerte a petróleo crudo por kilómetros a la redonda",
+      "Olía a tortas recién horneadas",
+      "Olía a mar tropical"
+    ],
+    "correcta": 1,
+    "explicacion": "El petróleo del Barroso II tenía un olor muy fuerte que se sentía desde kilómetros de distancia. El petróleo crudo huele muy intenso y puede ser tóxico en grandes cantidades.",
+    "dato_curioso": "El petróleo crudo mancha absolutamente todo lo que toca: tierra, plantas, animales y personas. Los trabajadores del Barroso II quedaron totalmente negros y tuvieron que bañarse con solventes especiales."
+  },
+  {
+    "pregunta": "¿Por qué fue tan importante que Venezuela tuviera tanto petróleo?",
+    "tipo": "texto",
+    "opciones": [
+      "Porque el petróleo mueve la mayoría de las cosas del mundo moderno",
+      "Porque el petróleo era para hacer maquillaje",
+      "Porque era muy bonito de ver",
+      "Porque los extranjeros querían pinturas negras"
+    ],
+    "correcta": 0,
+    "explicacion": "El petróleo era tan importante porque mueve carros, barcos, aviones y fábricas. Todo el mundo lo necesitaba y Venezuela lo tenía en enormes cantidades.",
+    "dato_curioso": "En los años 1920, el mundo estaba aprendiendo a usar carros y aviones. El petróleo era el combustible de ese nuevo mundo, y Venezuela tenía de sobra para venderle a todos."
+  },
+  {
+    "pregunta": "¿Qué símbolo se usa para representar al petróleo?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un barril de petróleo negro con una gota brillante negra encima y el signo de dólar dorado, representando el valor del petróleo. Fondo con la bandera venezolana. Estilo ilustración económica infantil.",
+    "opciones": [
+      "Una flecha azul",
+      "Un barril negro con una gota de petróleo",
+      "Un diamante rojo",
+      "Una pizza entera"
+    ],
+    "correcta": 1,
+    "explicacion": "El símbolo del petróleo es el barril negro y la gota de líquido oscuro. Se usa en mapas, noticias y libros para indicar dónde hay petróleo.",
+    "dato_curioso": "El precio del petróleo en el mundo se mide en dólares por barril. Cuando sube el precio, Venezuela gana más dinero; cuando baja, Venezuela gana menos. ¡El bienestar de Venezuela dependía mucho de ese número!"
+  },
+  {
+    "pregunta": "¿Qué quiere decir que el petróleo se llama 'oro negro'?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Una comparación visual entre una pepita de oro amarillo brillante y un barril de petróleo negro brillante, del mismo tamaño y con el mismo signo de dólar. El texto dice 'Los dos valen mucho'. Estilo ilustración educativa para niños.",
+    "opciones": [
+      "Que el petróleo es negro como el carbón pero valioso como el oro",
+      "Que el oro se puede mezclar con petróleo",
+      "Que el petróleo cambia de color a dorado",
+      "Que los barriles están pintados de dorado"
+    ],
+    "correcta": 0,
+    "explicacion": "Al petróleo lo llaman 'oro negro' porque, al igual que el oro, es muy valioso. Es negro por su color natural, y vale tanto dinero que muchos países se han hecho ricos con él.",
+    "dato_curioso": "En algunos países de Medio Oriente, el petróleo era tan abundante que brotaba solo de la tierra sin necesidad de perforar. ¡Imagínate encontrar un charco negro en tu jardín que vale millones!"
+  },
+  {
+    "pregunta": "¿Cómo afectó el petróleo venezolano a los trabajadores extranjeros que llegaron al país?",
+    "tipo": "texto",
+    "opciones": [
+      "Muchos inmigrantes vinieron a Venezuela a trabajar en el petróleo",
+      "Los extranjeros solo miraban desde lejos",
+      "Venezuela cerró sus fronteras a todos",
+      "Los extranjeros solo comían arepas"
+    ],
+    "correcta": 0,
+    "explicacion": "El boom del petróleo atrajo a Venezuela a miles de trabajadores de Europa, Estados Unidos y otros países latinoamericanos que venían a trabajar en las empresas petroleras.",
+    "dato_curioso": "Venezuela recibió inmigrantes de Italia, España, Portugal y muchos otros países durante el siglo XX. Esos inmigrantes construyeron familias venezolanas y enriquecieron la cultura del país."
+  },
+  {
+    "pregunta": "¿Cuál fue el impacto más grande del petróleo en la educación venezolana?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Dinero de petróleo (barriles y billetes) transformándose en escuelas, universidades y libros en Venezuela. Flechas de barriles apuntan a edificios escolares. Niños estudiando felices. Estilo infográfico infantil colorido.",
+    "opciones": [
+      "El petróleo no tuvo impacto en la educación",
+      "El dinero del petróleo financió escuelas y universidades para todos",
+      "Los estudiantes trabajaban en los pozos",
+      "El petróleo pagaba solo las clases de química"
+    ],
+    "correcta": 1,
+    "explicacion": "El dinero del petróleo le permitió al gobierno venezolano construir escuelas y universidades en todo el país. Muchos niños venezolanos pudieron estudiar gratis gracias al petróleo.",
+    "dato_curioso": "Venezuela llegó a tener una de las tasas de alfabetización más altas de América Latina gracias a la inversión del dinero petrolero en educación. El 'oro negro' abrió las puertas de los libros para millones."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cómo se llamaba el primer pozo de petróleo comercial de Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Zumaque I",
+      "El Gran Chorrito",
+      "Pozo Mágico",
+      "Petróleo 1"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: El primer pozo de petróleo comercial de Venezuela se llamó Zumaque I. Empezó a producir petróleo en 1914, en Mene Grande, en el estado Zulia.",
+    "dato_curioso": "Repaso curioso: La palabra 'zumaque' es el nombre de una planta que crecía en el área donde perforaron el pozo. ¡Un árbol le dio nombre al pozo que cambió Venezuela para siempre!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: En qué estado de Venezuela está Mene Grande, donde se encontró el primer petróleo?",
+    "tipo": "texto",
+    "opciones": [
+      "En Mérida",
+      "En Caracas",
+      "En el estado Zulia",
+      "En la Luna venezolana"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: El primer petróleo comercial de Venezuela se encontró en Mene Grande, en el estado Zulia, al occidente del país, cerca del lago de Maracaibo.",
+    "dato_curioso": "Repaso curioso: Zulia es uno de los estados más ricos en petróleo de Venezuela. Debajo del lago de Maracaibo hay petróleo, y por eso hay miles de taladros metidos en el lago."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cómo se llamaba el pozo que en 1922 explotó lanzando petróleo al aire?",
+    "tipo": "texto",
+    "opciones": [
+      "Chorrito del Diablo",
+      "SuperPozo 9000",
+      "El Reventón Loco",
+      "Barroso II"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: El Barroso II fue el pozo que en 1922 explotó sin control, lanzando petróleo al aire. Fue el momento en que el mundo entero supo que Venezuela tenía mucho petróleo.",
+    "dato_curioso": "Repaso curioso: El Barroso II echó petróleo al aire sin parar durante 9 días. El petróleo manchó todo lo que había cerca y se podía ver y oler desde muy lejos."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cuántos barriles de petróleo lanzó al aire el pozo Barroso II cada día?",
+    "tipo": "texto",
+    "opciones": [
+      "100.000 barriles por día",
+      "Un barril por semana",
+      "Tres gotitas",
+      "Solo 5 barriles"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: El Barroso II lanzaba 100.000 barriles de petróleo por día. Era una cantidad enorme que nadie había visto antes en América del Sur.",
+    "dato_curioso": "Repaso curioso: 100.000 barriles de petróleo son suficientes para llenar más de 15 piscinas olímpicas. ¡Imagínate esa cantidad de líquido negro chorreando sin parar!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cuántos días estuvo el pozo Barroso II lanzando petróleo sin control?",
+    "tipo": "texto",
+    "opciones": [
+      "500 días",
+      "9 días",
+      "1 año",
+      "Solo 2 minutos"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: El Barroso II estuvo 9 días lanzando petróleo sin que nadie pudiera pararlo. Fue un evento que asombró al mundo entero.",
+    "dato_curioso": "Repaso curioso: Para detener un pozo desbocado, los trabajadores tenían que acercarse con barro y cemento especial bajo el chorro de petróleo. Era muy peligroso y difícil."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Qué producto era el más importante de Venezuela ANTES del petróleo?",
+    "tipo": "texto",
+    "opciones": [
+      "Los cohetes",
+      "El queso de mano",
+      "El café",
+      "Las computadoras"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: Antes del petróleo, Venezuela era el mayor exportador de café del mundo. El país vivía del café, el cacao y el cuero.",
+    "dato_curioso": "Repaso curioso: Venezuela llegó a ser el tercer productor de café del mundo, ¡antes que Brasil! Pero cuando llegó el petróleo, la gente dejó las fincas de café para trabajar en los pozos."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cómo transformó el petróleo las aldeas rurales de Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Las llenó de elefantes",
+      "Las pintó de color rosa",
+      "Las convirtió en ciudades en menos de 10 años",
+      "Las hizo desaparecer bajo el mar"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: El petróleo transformó aldeas pequeñas en ciudades grandes en menos de 10 años. Llegaron trabajadores, empresas y construcciones de todas partes.",
+    "dato_curioso": "Repaso curioso: Maracaibo era un pueblo tranquilo antes del petróleo. Con la llegada del 'oro negro', se convirtió en una ciudad enorme con rascacielos y avenidas en muy poco tiempo."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: En qué posición estaba Venezuela en exportaciones de petróleo durante los años 1920?",
+    "tipo": "texto",
+    "opciones": [
+      "En el último lugar",
+      "No exportaba nada",
+      "En el puesto 50",
+      "Era el mayor exportador del mundo"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: En los años 1920, Venezuela se convirtió en el mayor exportador de petróleo del mundo. ¡Era número uno!",
+    "dato_curioso": "Repaso curioso: Venezuela superó a los Estados Unidos como mayor exportador de petróleo en 1928. Fue un logro enorme para un país tan pequeño comparado con EE.UU."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cómo se le llama al petróleo por su color y valor?",
+    "tipo": "texto",
+    "opciones": [
+      "Jugo de roca",
+      "Agua de dragón",
+      "Oro negro",
+      "Chocolate líquido"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: Al petróleo se le llama 'oro negro' porque es de color negro y vale tanto dinero como el oro. Es el recurso más valioso de Venezuela.",
+    "dato_curioso": "Repaso curioso: El petróleo se formó durante millones de años bajo la tierra a partir de plantas y animales prehistóricos. ¡Llenar tu carro de gasolina es como usar dinosaurios viejos!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: De qué países vinieron las empresas que buscaban petróleo en Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Del planeta Saturno",
+      "Del fondo del océano",
+      "De la Antártida",
+      "De Estados Unidos y Europa"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: Empresas de Estados Unidos y Europa llegaron a Venezuela a buscar petróleo. Eran compañías muy grandes que tenían el dinero y los equipos para perforar la tierra.",
+    "dato_curioso": "Repaso curioso: Compañías como Shell (holandesa-inglesa) y Standard Oil (americana) fueron las primeras en llegar a Venezuela a explorar por petróleo. Vinieron desde muy lejos."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Quién era el presidente de Venezuela cuando ocurrió el gran reventón del Barroso II?",
+    "tipo": "texto",
+    "opciones": [
+      "Barroso II",
+      "En el estado Zulia",
+      "Juan Vicente Gómez",
+      "Zumaque I"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: Juan Vicente Gómez era el presidente de Venezuela cuando ocurrió el reventón del Barroso II en 1922. Él gobernó Venezuela por 27 años.",
+    "dato_curioso": "Dato para profundizar: Juan Vicente Gómez fue uno de los presidentes más poderosos de Venezuela. Con el petróleo, el país se hizo rico, pero mucho de ese dinero no llegaba a la gente del pueblo."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué es un barril de petróleo?",
+    "tipo": "texto",
+    "opciones": [
+      "Barroso II",
+      "Un recipiente para guardar petróleo",
+      "En el estado Zulia",
+      "Zumaque I"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: Un barril es el recipiente que se usa para medir y guardar petróleo. Cada barril contiene 159 litros de petróleo crudo.",
+    "dato_curioso": "Dato para profundizar: Aunque hoy el petróleo viaja por tuberías y barcos enormes, la unidad de medida sigue siendo 'barriles'. ¡Es una tradición que viene de cuando lo transportaban en barriles de madera!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué cosa famosa rodea el lago de Maracaibo en Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Miles de taladros petroleros",
+      "Zumaque I",
+      "En el estado Zulia",
+      "Barroso II"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: El lago de Maracaibo está rodeado de miles de taladros petroleros que sacan petróleo desde debajo del lago. Se pueden ver desde el avión.",
+    "dato_curioso": "Dato para profundizar: El lago de Maracaibo es uno de los lagos más antiguos del mundo y tiene el petróleo más accesible de Venezuela. Hay taladros en el agua desde hace más de 100 años."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué año es especialmente importante para el inicio del petróleo en Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "En el estado Zulia",
+      "Zumaque I",
+      "1914",
+      "Barroso II"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: El año 1914 es muy importante porque fue cuando el pozo Zumaque I comenzó a producir petróleo comercialmente. Ese año cambió la historia de Venezuela.",
+    "dato_curioso": "Dato para profundizar: El mismo año que empezó el petróleo en Venezuela, 1914, también comenzó la Primera Guerra Mundial en Europa. Fue un año de grandes cambios en el mundo entero."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cómo cambió la vida de los venezolanos con el petróleo?",
+    "tipo": "texto",
+    "opciones": [
+      "La gente dejó las fincas y fue a trabajar en el petróleo",
+      "Barroso II",
+      "En el estado Zulia",
+      "Zumaque I"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: Con el petróleo, muchos venezolanos dejaron las fincas de café y cacao para ir a trabajar en los campos petroleros. Las ciudades crecieron muy rápido.",
+    "dato_curioso": "Dato para profundizar: Antes del petróleo, la mayoría de venezolanos vivían en el campo cultivando la tierra. El petróleo fue la razón por la que Venezuela se convirtió en un país de ciudades."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué es un taladro petrolero?",
+    "tipo": "texto",
+    "opciones": [
+      "Una máquina enorme que perfora la tierra para sacar petróleo",
+      "En el estado Zulia",
+      "Barroso II",
+      "Zumaque I"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: Un taladro petrolero es una máquina muy grande que perfora la tierra o el fondo del lago para llegar hasta el petróleo que está muy adentro.",
+    "dato_curioso": "Dato para profundizar: Los taladros del lago de Maracaibo tienen que perforar a través del agua y luego a través del suelo del lago para llegar al petróleo. ¡Es como hacer un agujero muy profundo en una piscina!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué tenía Venezuela antes del petróleo que la hacía famosa en el mundo?",
+    "tipo": "texto",
+    "opciones": [
+      "Barroso II",
+      "En el estado Zulia",
+      "Era el mayor exportador de café del mundo",
+      "Zumaque I"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: Venezuela era famosa por ser el mayor exportador de café del mundo antes de que llegara el petróleo. El café venezolano era conocido en todo el planeta.",
+    "dato_curioso": "Dato para profundizar: El café venezolano de los Andes todavía es muy famoso. Las montañas de Mérida y Trujillo producen café delicioso que se exporta al mundo."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué es el petróleo en realidad?",
+    "tipo": "texto",
+    "opciones": [
+      "En el estado Zulia",
+      "Zumaque I",
+      "Un líquido que se formó de animales y plantas de hace millones de años",
+      "Barroso II"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: El petróleo es un líquido que se formó durante millones de años bajo la tierra, a partir de organismos prehistóricos que se comprimieron con el calor y la presión.",
+    "dato_curioso": "Dato para profundizar: El petróleo que usamos hoy tardó entre 10 y 600 millones de años en formarse. Cuando lo gastamos, no podemos reponer esa cantidad. ¡Por eso hay que cuidarlo!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Dónde exactamente está Mene Grande, el lugar del primer petróleo venezolano?",
+    "tipo": "texto",
+    "opciones": [
+      "Zumaque I",
+      "Barroso II",
+      "Cerca del Lago de Maracaibo, en Zulia",
+      "En el estado Zulia"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: Mene Grande está en el estado Zulia, cerca del lago de Maracaibo. Es una zona rica en petróleo donde todavía se perforan pozos.",
+    "dato_curioso": "Dato para profundizar: La palabra 'mene' en idiomas indígenas significa petróleo. Los indígenas venezolanos ya conocían el petróleo mucho antes de que llegaran las empresas extranjeras."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Para qué sirve el petróleo que se saca de la tierra?",
+    "tipo": "texto",
+    "opciones": [
+      "En el estado Zulia",
+      "Barroso II",
+      "Zumaque I",
+      "Para hacer gasolina, plásticos y muchas otras cosas útiles"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: Del petróleo se hacen muchísimas cosas: la gasolina de los carros, los plásticos, las telas sintéticas y hasta algunos medicamentos. Es un recurso muy versátil.",
+    "dato_curioso": "Dato para profundizar: Más de 6.000 productos que usas todos los días están hechos con petróleo. Desde la ropa deportiva hasta el chicle que masticas. ¡El petróleo está en todas partes!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué pasó con las aldeas venezolanas que estaban cerca de los yacimientos de petróleo?",
+    "tipo": "texto",
+    "opciones": [
+      "Desaparecieron bajo el petróleo",
+      "Se quedaron exactamente igual",
+      "Se volvieron ciudades gigantes en poco tiempo",
+      "Se mudaron a la Luna"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: Las aldeas pequeñas que estaban cerca del petróleo se convirtieron en ciudades grandes en menos de 10 años. La gente llegaba de todos lados buscando trabajo.",
+    "dato_curioso": "Ampliación histórica: Cabimas, una ciudad del Zulia, era un pequeño caserío antes del petróleo. Con los pozos, creció tan rápido que en pocos años tenía hospitales, escuelas y edificios altos."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cómo llegaron los equipos de perforación de petróleo hasta Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "En barcos grandes desde Estados Unidos y Europa",
+      "Volando en globos de colores",
+      "Aparecieron mágicamente de la nada",
+      "Llegaron en triciclos"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: Los equipos de perforación llegaron en barcos grandes desde Estados Unidos y Europa. Eran máquinas enormes que no existían en Venezuela.",
+    "dato_curioso": "Ampliación histórica: Para meter los equipos petroleros al lago de Maracaibo, primero había que ampliar el canal de acceso al lago. ¡Tuvieron que hacer el canal más profundo para que cupieran los barcos grandes!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué significó el petróleo para la economía de Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Que Venezuela se volvió muy rico muy rápido",
+      "Que Venezuela tuvo que vender su tierra",
+      "Que Venezuela dejó de existir",
+      "Que Venezuela se quedó sin dinero"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: El petróleo hizo que Venezuela se volviera muy rico de manera muy rápida. El dinero del petróleo llegó a financiar escuelas, hospitales y carreteras.",
+    "dato_curioso": "Ampliación histórica: En los años 1970, Venezuela era tan rica por el petróleo que el gobierno compraba aviones Concorde y la gente viajaba a comprar de shopping en Miami. ¡Se decía que el venezolano era 'tá barato, dame dos'!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cuál era el gran problema del petróleo siendo un recurso natural?",
+    "tipo": "texto",
+    "opciones": [
+      "Que algún día se puede acabar porque no se renueva",
+      "Que hacía ruido de noche",
+      "Que le tenía miedo al agua",
+      "Que era muy barato"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: El petróleo es un recurso no renovable, lo que significa que cuando se acabe no se puede reponer. Por eso es importante usarlo con cuidado y buscar otras fuentes de energía.",
+    "dato_curioso": "Ampliación histórica: Los científicos creen que el petróleo que queda en la Tierra podría durar entre 50 y 100 años más si seguimos usándolo al ritmo actual. ¡Por eso es importante buscar energías limpias!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué es el lago de Maracaibo?",
+    "tipo": "texto",
+    "opciones": [
+      "Una laguna de limonada",
+      "Un mar de chocolate",
+      "El lago más grande de Suramérica y lleno de petróleo debajo",
+      "Un lago de petróleo puro"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: El lago de Maracaibo es el lago más grande de América del Sur. Debajo de sus aguas hay enormes reservas de petróleo que Venezuela ha explotado por más de 100 años.",
+    "dato_curioso": "Ampliación histórica: El lago de Maracaibo tiene algo muy especial: hay rayos eléctricos casi todas las noches en el lugar donde entra el río Catatumbo. ¡Se le llama el Relámpago del Catatumbo y se puede ver desde muy lejos!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué pasó después del reventón del Barroso II en el mundo?",
+    "tipo": "texto",
+    "opciones": [
+      "El mundo entero supo que Venezuela tenía petróleo enorme",
+      "Venezuela se cerró para siempre",
+      "Todos se asustaron y se fueron",
+      "Nadie se enteró de nada"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: Después del Barroso II, el mundo entero supo que Venezuela tenía enormes reservas de petróleo. Empresas de todos lados vinieron corriendo a Venezuela.",
+    "dato_curioso": "Ampliación histórica: Las noticias del Barroso II llegaron a los periódicos de Nueva York, Londres y París. ¡De un día para otro Venezuela estaba en las portadas del mundo!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cómo afectó el petróleo al campo venezolano y a los agricultores?",
+    "tipo": "texto",
+    "opciones": [
+      "Mucha gente abandonó el campo para ir a trabajar al petróleo",
+      "Los agricultores se volvieron más ricos",
+      "Nada cambió para los agricultores",
+      "El campo creció más fuerte que nunca"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: Con el petróleo, mucha gente dejó las fincas para ir a trabajar en los campos petroleros. El campo se quedó sin trabajadores y Venezuela empezó a importar comida.",
+    "dato_curioso": "Ampliación histórica: Venezuela, que antes producía mucho de lo que comía, empezó a importar alimentos cuando la gente se fue al petróleo. Esta dependencia del petróleo se convirtió en un problema grande con los años."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: En qué año fue el gran reventón del pozo Barroso II?",
+    "tipo": "texto",
+    "opciones": [
+      "En el año 2000",
+      "En 1492",
+      "En 1800",
+      "En 1922"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: El gran reventón del Barroso II ocurrió en 1922. Ese año marcó el inicio de la era petrolera moderna de Venezuela.",
+    "dato_curioso": "Ampliación histórica: Entre 1914, cuando empezó el Zumaque I, y 1922, con el Barroso II, Venezuela tardó solo 8 años en convertirse en el mayor exportador de petróleo del mundo. ¡Qué rapidez!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué nombre recibe el lugar donde hay petróleo debajo de la tierra?",
+    "tipo": "texto",
+    "opciones": [
+      "Cocina de petróleo",
+      "Lago escondido",
+      "Tesoro de roca",
+      "Yacimiento"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: Al lugar donde hay petróleo atrapado bajo la tierra o bajo el agua se le llama yacimiento. Venezuela tiene los yacimientos más grandes del mundo.",
+    "dato_curioso": "Ampliación histórica: Venezuela tiene las reservas de petróleo más grandes del mundo, más que Arabia Saudita. ¡Debajo de Venezuela hay más petróleo que en ningún otro país del planeta!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué es una refinería de petróleo?",
+    "tipo": "texto",
+    "opciones": [
+      "Una escuela para petróleo",
+      "Un parque de diversiones",
+      "Un lugar para hacer pasteles negros",
+      "Una fábrica donde el petróleo crudo se convierte en gasolina y otros productos"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: Una refinería es una fábrica gigante donde el petróleo crudo y negro se procesa y se convierte en gasolina, diesel y muchos otros productos útiles.",
+    "dato_curioso": "Ampliación histórica: Venezuela tiene una de las refinerías más grandes del mundo en Amuay, en el estado Falcón. Es tan grande que se puede ver desde las imágenes del satélite espacial."
+  }
+]

@@ -1,0 +1,892 @@
+[
+  {
+    "pregunta": "¿Quién inventó el bisturí de punta de diamante en Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Humberto Fernández-Morán",
+      "Doctor Arepa",
+      "Un dentista de Maracaibo",
+      "El Señor Diamante"
+    ],
+    "correcta": 0,
+    "explicacion": "Humberto Fernández-Morán fue el científico venezolano que inventó el bisturí de punta de diamante en 1955. Cambió la microcirugía en todo el mundo.",
+    "dato_curioso": "Fernández-Morán nació en Maracaibo en 1925. Era tan inteligente que estudió en varios países y aprendió a hablar más de 10 idiomas. ¡Era un genio de verdad!"
+  },
+  {
+    "pregunta": "¿En qué año inventó Fernández-Morán el bisturí de diamante?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un bisturí médico con una punta de diamante brillante, sobre fondo azul claro de hospital. El año '1955' escrito en grande y una ilustración de diamante real al lado. Estilo ilustración científica amigable para niños.",
+    "opciones": [
+      "En el año 2000",
+      "En 1955",
+      "En 1492",
+      "El próximo año"
+    ],
+    "correcta": 1,
+    "explicacion": "El bisturí de punta de diamante fue inventado en 1955. Fue una de las invenciones médicas más importantes del siglo XX.",
+    "dato_curioso": "El diamante es el material más duro que existe en la naturaleza. Por eso el bisturí con punta de diamante puede cortar partes del cuerpo tan pequeñas como células, con una precisión imposible para el metal normal."
+  },
+  {
+    "pregunta": "¿Para qué sirve el bisturí de punta de diamante?",
+    "tipo": "texto",
+    "opciones": [
+      "Para operar partes muy pequeñas del cuerpo con precisión",
+      "Para cortar pizzas perfectamente",
+      "Para tallar esculturas de hielo",
+      "Para hacer joyería de diamantes"
+    ],
+    "correcta": 0,
+    "explicacion": "El bisturí de punta de diamante sirve para hacer operaciones en partes del cuerpo muy pequeñas, como el ojo o el cerebro. Es tan fino que puede cortar cosas más pequeñas que un cabello.",
+    "dato_curioso": "Antes del bisturí de diamante, los cirujanos usaban metal común que se desgastaba rápido. El diamante dura muchísimo más y corta con una perfección que no tiene igual."
+  },
+  {
+    "pregunta": "¿Cuál es la invención venezolana que nos permite comer arepas en minutos?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Una bolsa amarilla de Harina Pan sobre una mesa de cocina, con una arepa recién hecha y humeante al lado. Una persona sonriente la sostiene. Fondo de cocina venezolana colorida. Estilo ilustración festiva.",
+    "opciones": [
+      "La maquina de arepas robot",
+      "La harina de maíz precocida (Harina Pan)",
+      "Los aliens de la arepa",
+      "La cocina mágica automática"
+    ],
+    "correcta": 1,
+    "explicacion": "La harina de maíz precocida, conocida como Harina Pan, fue inventada por Luis Caballero Mejías. Gracias a ella podemos hacer arepas en pocos minutos sin remojar maíz toda la noche.",
+    "dato_curioso": "Antes de la Harina Pan, hacer arepas era un proceso largo: había que remojar el maíz, pelarlo y molerlo. ¡Podía tomar horas! Caballero Mejías lo simplificó a solo mezclar con agua."
+  },
+  {
+    "pregunta": "¿En qué año fue industrializada la harina de maíz precocida?",
+    "tipo": "texto",
+    "opciones": [
+      "En 1954",
+      "En el año 2025",
+      "En 1800",
+      "En 1492"
+    ],
+    "correcta": 0,
+    "explicacion": "Luis Caballero Mejías industrializó la harina de maíz precocida en 1954. Ese año nació la Harina Pan y cambió para siempre la cocina venezolana.",
+    "dato_curioso": "Hoy Harina Pan se vende en más de 60 países del mundo. ¡Venezolanos y amantes de la comida venezolana en todo el planeta la usan para hacer arepas en casa!"
+  },
+  {
+    "pregunta": "¿Quién es Luis Caballero Mejías y por qué es famoso?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Caricatura amigable de Luis Caballero Mejías con casco de ingeniero, sosteniendo una arepa en una mano y una bolsa de harina en la otra. Fondo de maíz dorado. Estilo ilustración heroica y colorida.",
+    "opciones": [
+      "Un cantante de vallenato",
+      "El ingeniero que industrializó la harina de maíz precocida",
+      "Un astronauta venezolano",
+      "El inventor del queso amarillo"
+    ],
+    "correcta": 1,
+    "explicacion": "Luis Caballero Mejías fue el ingeniero venezolano que logró industrializar la harina de maíz precocida en 1954. Gracias a él, la arepa se puede hacer rápido en todo el mundo.",
+    "dato_curioso": "Caballero Mejías murió en un accidente de avión en 1961, muy joven, sin saber todo el impacto que tendría su invención. Hoy su legado alimenta a millones de personas."
+  },
+  {
+    "pregunta": "¿En qué año creó José Antonio Abreu El Sistema Nacional de Orquestas?",
+    "tipo": "texto",
+    "opciones": [
+      "En 1975",
+      "En 2010",
+      "En 1900",
+      "En el año de los dinosaurios"
+    ],
+    "correcta": 0,
+    "explicacion": "José Antonio Abreu fundó El Sistema Nacional de Orquestas en 1975 con solo 11 niños en un garaje. Hoy hay miles de músicos formados gracias a él.",
+    "dato_curioso": "El primer ensayo de El Sistema fue en un garaje de Caracas con 11 niños y algunas sillas prestadas. De ese pequeño comienzo nació un movimiento musical que cambió el mundo."
+  },
+  {
+    "pregunta": "¿Por qué es tan especial El Sistema Nacional de Orquestas de Venezuela?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Niños venezolanos de diferentes edades tocando violines, cellos y trompetas en una orquesta, con caras muy concentradas y felices. El director al frente con la batuta. Estilo ilustración cálida y vibrante.",
+    "opciones": [
+      "Porque toca solo música de robots",
+      "Porque enseña música gratis a niños de escasos recursos",
+      "Porque tiene la orquesta más ruidosa del mundo",
+      "Porque los músicos tocan con los pies"
+    ],
+    "correcta": 1,
+    "explicacion": "El Sistema es especial porque enseña música clásica gratis a niños de familias pobres. La música les cambia la vida y les abre puertas al mundo entero.",
+    "dato_curioso": "Abreu decía que la música era un escudo contra la pobreza y la violencia. Muchos niños que vivían en barrios difíciles encontraron en la música un camino diferente para su vida."
+  },
+  {
+    "pregunta": "¿Cuántos países del mundo copiaron El Sistema de Orquestas venezolano?",
+    "tipo": "texto",
+    "opciones": [
+      "Más de 60 países",
+      "Solo 2 países",
+      "Ningún otro país",
+      "Todos los países de Marte"
+    ],
+    "correcta": 0,
+    "explicacion": "Más de 60 países del mundo copiaron el modelo de El Sistema para enseñar música a niños en situación de pobreza. Venezuela inventó algo que el mundo quiso imitar.",
+    "dato_curioso": "En Estados Unidos, Canadá, Brasil, Portugal y hasta en países de Asia hay programas inspirados en El Sistema venezolano. ¡Venezuela exportó su modelo musical a todo el planeta!"
+  },
+  {
+    "pregunta": "¿Cuántos músicos ha formado El Sistema de Orquestas en Venezuela?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Una infografía con el número '1.000.000+' en grande y dorado, con siluetas de músicos tocando instrumentos alrededor. Una bandera venezolana y el logo de El Sistema. Estilo infográfico infantil festivo.",
+    "opciones": [
+      "Solo 11 músicos",
+      "Más de un millón de músicos",
+      "Exactamente 5 músicos",
+      "Tres músicos muy buenos"
+    ],
+    "correcta": 1,
+    "explicacion": "El Sistema ha formado a más de un millón de músicos venezolanos. Niños de todos los estados de Venezuela han pasado por sus núcleos de música.",
+    "dato_curioso": "Un millón de músicos es más que todos los habitantes de muchas ciudades. ¡El Sistema formó músicos suficientes para llenar una ciudad entera de personas que tocan instrumentos!"
+  },
+  {
+    "pregunta": "¿Quién es Luis Aparicio y por qué es famoso?",
+    "tipo": "texto",
+    "opciones": [
+      "El primer venezolano en el Salón de la Fama del Béisbol de EE.UU.",
+      "El mejor cocinero de arepas de Venezuela",
+      "El primer venezolano en la Luna",
+      "El inventordel petróleo"
+    ],
+    "correcta": 0,
+    "explicacion": "Luis Aparicio fue el primer venezolano en ser admitido al Salón de la Fama del Béisbol de Estados Unidos. Fue un campocorto extraordinario.",
+    "dato_curioso": "Luis Aparicio fue tan bueno en el béisbol que lo llaman simplemente 'Little Louie'. Era pequeño de estatura pero enorme en talento. ¡Nadie lo igualaba en la posición de campocorto!"
+  },
+  {
+    "pregunta": "¿De dónde es originario Luis Aparicio?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Luis Aparicio en uniforme de béisbol, sosteniendo un bate y guante, con el mapa del estado Zulia y la ciudad de Maracaibo resaltada atrás. Una bandera venezolana y americana juntas. Estilo ilustración deportiva vibrante.",
+    "opciones": [
+      "De Caracas",
+      "De Maracaibo, estado Zulia",
+      "De la isla de Cuba",
+      "De Nueva York"
+    ],
+    "correcta": 1,
+    "explicacion": "Luis Aparicio es de Maracaibo, en el estado Zulia. Es el maracucho más famoso del mundo del béisbol y un orgullo para Venezuela.",
+    "dato_curioso": "El papá de Luis Aparicio, Luis Aparicio Sr., también fue un beisbolista famoso en Venezuela. ¡El talento para el béisbol fue hereditario en esa familia maracucha!"
+  },
+  {
+    "pregunta": "¿En qué año ingresó Luis Aparicio al Salón de la Fama del Béisbol?",
+    "tipo": "texto",
+    "opciones": [
+      "En 1984",
+      "En el año 2000",
+      "En 1955",
+      "En 2024"
+    ],
+    "correcta": 0,
+    "explicacion": "Luis Aparicio ingresó al Salón de la Fama del Béisbol de Estados Unidos en 1984. Fue un momento histórico para Venezuela y para el béisbol.",
+    "dato_curioso": "El Salón de la Fama del Béisbol está en Cooperstown, Nueva York. Es el honor más grande que puede recibir un beisbolista. Solo los mejores de todos los tiempos entran allí."
+  },
+  {
+    "pregunta": "¿Cuál es la posición de béisbol que jugaba Luis Aparicio?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un campo de béisbol con la posición de campocorto (shortstop) marcada con una estrella dorada. Luis Aparicio en acción atrapando una pelota en esa posición. Un cartel dice 'SHORTSTOP = EL MEJOR'. Estilo ilustración deportiva colorida.",
+    "opciones": [
+      "Pitcher (lanzador)",
+      "Campocorto o shortstop",
+      "El que vende palomitas",
+      "Portero de fútbol"
+    ],
+    "correcta": 1,
+    "explicacion": "Luis Aparicio jugaba de campocorto, que en inglés se dice shortstop. Es una de las posiciones más difíciles del béisbol porque tienes que ser muy rápido y preciso.",
+    "dato_curioso": "Aparicio ganó el premio al mejor campocorto (Guante de Oro) nada menos que 9 veces en su carrera. ¡Nadie lo ha igualado en esa posición hasta hoy!"
+  },
+  {
+    "pregunta": "¿Qué hace al bisturí de diamante tan especial para las cirugías?",
+    "tipo": "texto",
+    "opciones": [
+      "Que puede cortar cosas más finas que un cabello humano",
+      "Que brilla mucho en el quirófano",
+      "Que es muy barato",
+      "Que lo pueden usar niños"
+    ],
+    "correcta": 0,
+    "explicacion": "El bisturí de diamante puede cortar partes del cuerpo más finas que un cabello, lo cual es imposible con bisturíes normales. Eso lo hace invaluable para operaciones muy delicadas.",
+    "dato_curioso": "Un cabello humano tiene un grosor de entre 60 y 80 micrómetros. El bisturí de diamante puede cortar con una precisión de menos de un micrómetro. ¡Increíblemente pequeño!"
+  },
+  {
+    "pregunta": "¿Cuántos músicos venezolanos comenzaron El Sistema al principio?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Once niños sentados en sillas prestadas en un garaje pequeño, con instrumentos de diferentes tamaños. Algunos sillas son de plástico del comedor. El año '1975' escrito en la pared con tiza. Estilo ilustración tierna y nostálgica.",
+    "opciones": [
+      "Mil músicos",
+      "Solo 11 niños",
+      "Quinientos jóvenes",
+      "Un solo músico famoso"
+    ],
+    "correcta": 1,
+    "explicacion": "El Sistema empezó con solo 11 niños en un garaje en 1975. De ese humilde comienzo creció hasta convertirse en un modelo musical copiado por el mundo entero.",
+    "dato_curioso": "Abreu usó su propio dinero para comprar los primeros instrumentos. Creía tanto en su proyecto que lo arriesgó todo. Y tuvo razón: cambió millones de vidas."
+  },
+  {
+    "pregunta": "¿Qué premio importante ganó Luis Aparicio durante su carrera en el béisbol?",
+    "tipo": "texto",
+    "opciones": [
+      "El Guante de Oro de campocorto 9 veces",
+      "Una pizza gratis todos los días",
+      "Un carro deportivo rojo",
+      "El título de rey del béisbol"
+    ],
+    "correcta": 0,
+    "explicacion": "Luis Aparicio ganó el Guante de Oro al mejor campocorto defensivo nada menos que 9 veces. Es el récord para esa posición en la Liga Americana.",
+    "dato_curioso": "El Guante de Oro se entrega al mejor jugador defensivo de cada posición. Ganar 9 veces el mismo premio muestra que Aparicio fue el mejor campocorto de su generación."
+  },
+  {
+    "pregunta": "¿Por qué la harina de maíz precocida fue tan revolucionaria?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Dos escenas lado a lado: izquierda, una abuela despierta de noche remojando maíz en un recipiente (ANTES). Derecha, una persona moderna mezclando harina con agua en un bol en 5 minutos (DESPUÉS). Estilo cómic divertido.",
+    "opciones": [
+      "Porque es de color amarillo brillante",
+      "Porque redujo el tiempo de preparar arepas de horas a minutos",
+      "Porque viene en caja de regalo",
+      "Porque se puede comer sin agua"
+    ],
+    "correcta": 1,
+    "explicacion": "La harina precocida fue revolucionaria porque cambió el proceso de hacer arepas de algo que tomaba horas en algo que toma solo minutos. Simplificó la vida de millones de familias.",
+    "dato_curioso": "Para hacer arepas con maíz natural hay que remojar el maíz, hervirlo, pelarlo y molerlo. Con Harina Pan solo mezclas con agua. ¡Ahorraste horas de trabajo en un instante!"
+  },
+  {
+    "pregunta": "¿Dónde está ubicado el Salón de la Fama del Béisbol de EE.UU.?",
+    "tipo": "texto",
+    "opciones": [
+      "En Cooperstown, Nueva York",
+      "En Miami, Florida",
+      "En Maracaibo, Venezuela",
+      "En la Luna"
+    ],
+    "correcta": 0,
+    "explicacion": "El Salón de la Fama del Béisbol está en Cooperstown, un pueblo pequeño del estado de Nueva York. Allí están los trofeos y las fotos de los mejores beisbolistas de la historia.",
+    "dato_curioso": "Cooperstown es un pueblo tan pequeño que solo tiene unos 2.000 habitantes, pero recibe más de 350.000 visitantes al año por su Salón de la Fama. ¡Todo por el béisbol!"
+  },
+  {
+    "pregunta": "¿Cómo se llama el director de orquesta venezolano más famoso del mundo hoy?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Gustavo Dudamel dirigiendo una orquesta, con la batuta en alto y cara de intensa emoción musical. El fondo muestra músicos con sus instrumentos. Una pequeña bandera venezolana en la solapa de su traje. Estilo ilustración artística.",
+    "opciones": [
+      "Carlos Cruz-Diez",
+      "Gustavo Dudamel",
+      "Simón Bolívar Junior",
+      "Maestro Arepa"
+    ],
+    "correcta": 1,
+    "explicacion": "Gustavo Dudamel es el director de orquesta venezolano más famoso del mundo. Fue formado por El Sistema y hoy dirige las mejores orquestas del planeta.",
+    "dato_curioso": "Dudamel empezó a tocar violín en El Sistema cuando era niño en Barquisimeto. Hoy dirige la Filarmónica de Los Ángeles. ¡El niño de Venezuela llegó a lo más alto del mundo musical!"
+  },
+  {
+    "pregunta": "¿Qué otro invento importante hizo Fernández-Morán además del bisturí de diamante?",
+    "tipo": "texto",
+    "opciones": [
+      "Mejoró el microscopio electrónico para ver cosas muy muy pequeñas",
+      "Inventó el televisor de colores",
+      "Creó el primer carro volador",
+      "Construyó el primer satélite venezolano"
+    ],
+    "correcta": 0,
+    "explicacion": "Fernández-Morán también hizo grandes contribuciones al desarrollo del microscopio electrónico, que permite ver cosas increíblemente pequeñas que el ojo no puede ver.",
+    "dato_curioso": "Fernández-Morán usó su bisturí de diamante junto con su trabajo en microscopía para estudiar el cerebro y el sistema nervioso a niveles que nadie había visto antes."
+  },
+  {
+    "pregunta": "¿Qué es la arepa y por qué es importante para Venezuela?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Una arepa venezolana partida por la mitad mostrando su relleno de queso, carne y aguacate. Al fondo, un mapa de Venezuela con arepas flotando encima de cada estado. El texto dice 'El alimento nacional'. Estilo ilustración apetitosa.",
+    "opciones": [
+      "Una empanada italiana",
+      "El alimento más importante de Venezuela",
+      "Una torta de cumpleaños pequeña",
+      "Un frisbee comestible"
+    ],
+    "correcta": 1,
+    "explicacion": "La arepa es el alimento más importante de Venezuela. Se come en el desayuno, almuerzo y cena. Es hecha de maíz y tiene miles de años de historia en Venezuela.",
+    "dato_curioso": "Los indígenas venezolanos ya comían arepas hace más de 3.000 años, mucho antes de la llegada de los europeos. La arepa es uno de los alimentos con más historia de América."
+  },
+  {
+    "pregunta": "¿Por qué la música de El Sistema ayuda a los niños venezolanos?",
+    "tipo": "texto",
+    "opciones": [
+      "Les enseña disciplina, trabajo en equipo y les abre oportunidades",
+      "Los pone a dormir bien",
+      "Los hace más altos",
+      "Les enseña a cocinar mejor"
+    ],
+    "correcta": 0,
+    "explicacion": "La música de El Sistema enseña a los niños disciplina, trabajo en equipo y esfuerzo. También les abre puertas para estudiar fuera de Venezuela y mejorar su vida.",
+    "dato_curioso": "Estudios científicos han demostrado que los niños que aprenden música tienen mejor desempeño en matemáticas y en otras materias de la escuela. ¡La música hace el cerebro más poderoso!"
+  },
+  {
+    "pregunta": "¿Cuál es el récord de Luis Aparicio que lo hace el mejor campocorto de la historia?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un trofeo del Guante de Oro dorado con el número '9' grabado encima. Alrededor hay nueve pequeños guantes dorados formando un círculo. Una cinta venezolana rodea la base. Estilo ilustración trofeo brillante.",
+    "opciones": [
+      "Que bateó más jonrones",
+      "Que ganó 9 Guantes de Oro como campocorto",
+      "Que jugó 100 años seguidos",
+      "Que nunca se cayó al correr"
+    ],
+    "correcta": 1,
+    "explicacion": "Luis Aparicio ganó 9 Guantes de Oro como mejor campocorto, un récord sin igual en la Liga Americana. Eso demuestra que era el mejor jugador defensivo de su posición.",
+    "dato_curioso": "Aparicio también robó más de 500 bases en su carrera, lo cual era extraordinario. Era tan rápido corriendo que la gente lo llamaba 'el ladrón de bases'."
+  },
+  {
+    "pregunta": "¿En cuántos países del mundo se puede comprar Harina Pan hoy?",
+    "tipo": "texto",
+    "opciones": [
+      "En más de 60 países",
+      "Solo en Venezuela",
+      "En 3 países",
+      "En ningún otro país"
+    ],
+    "correcta": 0,
+    "explicacion": "Harina Pan se vende en más de 60 países del mundo. Venezolanos y amantes de la comida latina la usan para hacer arepas en todo el planeta.",
+    "dato_curioso": "En ciudades como Miami, Madrid, Bogotá y hasta en algunas tiendas de Japón puedes encontrar Harina Pan. ¡La arepa venezolana conquistó el mundo gracias a esa invención!"
+  },
+  {
+    "pregunta": "¿Qué hacía Fernández-Morán con el microscopio electrónico mejorado?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un científico venezolano con bata blanca mirando por un microscopio electrónico enorme, con imágenes de células y partículas microscópicas proyectadas en una pantalla detrás. Estilo ilustración científica colorida.",
+    "opciones": [
+      "Ver las estrellas más grandes del universo",
+      "Estudiar partes del cuerpo tan pequeñas que el ojo no puede ver",
+      "Ver el petróleo bajo la tierra",
+      "Mirar a sus vecinos desde lejos"
+    ],
+    "correcta": 1,
+    "explicacion": "Con el microscopio electrónico mejorado, Fernández-Morán podía estudiar las partes más pequeñas de las células, como las membranas y las proteínas. Era como explorar un universo invisible.",
+    "dato_curioso": "Fernández-Morán fue el primero en obtener imágenes claras de las mitocondrias, que son las 'baterías' de las células. ¡Un venezolano descubrió cómo funcionan las pilas de nuestro cuerpo!"
+  },
+  {
+    "pregunta": "¿Qué tienen en común los cuatro personajes del nivel 14?",
+    "tipo": "texto",
+    "opciones": [
+      "Todos son venezolanos que cambiaron el mundo con su talento",
+      "Todos son jugadores de béisbol",
+      "Todos nacieron el mismo día",
+      "Todos inventaron arepas diferentes"
+    ],
+    "correcta": 0,
+    "explicacion": "Fernández-Morán, Caballero Mejías, Abreu y Aparicio son venezolanos que con su talento e inteligencia cambiaron el mundo. Cada uno en su área dejó un legado enorme.",
+    "dato_curioso": "Venezuela ha dado al mundo inventores, músicos, deportistas y científicos de primer nivel. Estos cuatro son solo algunos de los venezolanos que dejaron su huella en la historia mundial."
+  },
+  {
+    "pregunta": "¿Qué necesita un niño para entrar a El Sistema de Orquestas?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un niño con ropa sencilla llegando a un 'Núcleo de El Sistema' con una mochila, siendo recibido con una sonrisa por un profesor con un violín. La entrada tiene un cartel que dice 'TODOS SON BIENVENIDOS - GRATIS'. Estilo ilustración cálida.",
+    "opciones": [
+      "Mucho dinero para pagar",
+      "Solo querer aprender: la inscripción es gratuita",
+      "Un instrumento propio",
+      "Un promedio de 20 en la escuela"
+    ],
+    "correcta": 1,
+    "explicacion": "Para entrar a El Sistema solo hace falta querer aprender música. La inscripción es completamente gratuita y los instrumentos son prestados. No importa si eres pobre.",
+    "dato_curioso": "Abreu siempre dijo que la música no era privilegio de los ricos. Por eso El Sistema es gratis: para que cualquier niño de Venezuela, sin importar de dónde venga, pueda tocar en una orquesta."
+  },
+  {
+    "pregunta": "¿Qué pasó con la carrera de béisbol de Aparicio después de Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Jugó en las Grandes Ligas de EE.UU. por más de 18 años",
+      "Nunca salió de Venezuela",
+      "Se fue a jugar fútbol en España",
+      "Dejó el béisbol para ser cocinero"
+    ],
+    "correcta": 0,
+    "explicacion": "Luis Aparicio jugó en las Grandes Ligas de Béisbol de EE.UU. por más de 18 años con equipos como los White Sox de Chicago y los Orioles de Baltimore.",
+    "dato_curioso": "Aparicio empezó a jugar en las Grandes Ligas en 1956. Casi dos décadas después, se retiró siendo considerado el mejor campocorto de todos los tiempos. ¡Una carrera increíble!"
+  },
+  {
+    "pregunta": "¿Cómo se llama el lugar donde se enseña música en El Sistema en cada ciudad?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un edificio colorido con el cartel 'NÚCLEO DE EL SISTEMA' en la entrada, niños entrando con instrumentos, maestros en la puerta. Hay notas musicales pintadas en las paredes exteriores. Estilo ilustración comunitaria vibrante.",
+    "opciones": [
+      "Estación de música",
+      "Núcleo",
+      "Cueva de los sonidos",
+      "Fábrica de notas"
+    ],
+    "correcta": 1,
+    "explicacion": "En El Sistema, cada centro donde se enseña música se llama 'Núcleo'. Hay núcleos en ciudades y pueblos de toda Venezuela para que los niños puedan llegar fácilmente.",
+    "dato_curioso": "Hay más de 400 núcleos de El Sistema distribuidos por todo Venezuela. Desde Caracas hasta los pueblos más alejados de la Amazonía venezolana, hay niños aprendiendo música gratis."
+  },
+  {
+    "pregunta": "¿Qué convirtió a Humberto Fernández-Morán en un científico de talla mundial?",
+    "tipo": "texto",
+    "opciones": [
+      "Sus inventos médicos y científicos usados en todo el mundo",
+      "Que era muy simpático",
+      "Que hablaba en televisión",
+      "Que tenía un laboratorio muy grande"
+    ],
+    "correcta": 0,
+    "explicacion": "Fernández-Morán fue reconocido mundialmente porque sus inventos, como el bisturí de diamante y sus mejoras al microscopio electrónico, fueron adoptados por científicos de todo el planeta.",
+    "dato_curioso": "Fernández-Morán recibió premios científicos en varios países, incluyendo Europa y EE.UU. Era un venezolano que competía y ganaba al lado de los mejores científicos del mundo."
+  },
+  {
+    "pregunta": "¿Por qué el béisbol es tan popular en Venezuela?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un estadio de béisbol venezolano lleno de fanáticos con gorras y camisetas de sus equipos favoritos. Los colores de los equipos llenan las graderías. Un jugador venezolano batea en el campo. Estilo ilustración festiva y colorida.",
+    "opciones": [
+      "Porque lo inventaron los venezolanos",
+      "Porque llegó desde Cuba y EE.UU. y se convirtió en el deporte nacional",
+      "Porque es el único deporte que se puede jugar en el calor",
+      "Porque los balones de béisbol son de oro"
+    ],
+    "correcta": 1,
+    "explicacion": "El béisbol llegó a Venezuela a finales del siglo XIX y se convirtió en el deporte favorito del país. Hoy Venezuela produce algunos de los mejores beisbolistas del mundo.",
+    "dato_curioso": "Venezuela tiene la Liga Venezolana de Béisbol Profesional (LVBP), que juega en invierno cuando la liga de EE.UU. está de vacaciones. Muchos jugadores de las Grandes Ligas vienen a Venezuela a mantenerse en forma."
+  },
+  {
+    "pregunta": "¿Qué ciudad de Venezuela es la cuna del béisbol profesional venezolano?",
+    "tipo": "imagen",
+    "imagen_descripcion": "El estadio Luis Aparicio El Grande de Maracaibo lleno de fanáticos, con una pancarta enorme de Luis Aparicio en la entrada. La ciudad de Maracaibo y el lago de fondo. Estilo ilustración deportiva festiva.",
+    "opciones": [
+      "Caracas",
+      "Maracaibo",
+      "Mérida",
+      "La Ciudad del Béisbol Mágico"
+    ],
+    "correcta": 1,
+    "explicacion": "Maracaibo es la cuna del béisbol en Venezuela. De allí salió Luis Aparicio y muchos otros grandes beisbolistas venezolanos que llegaron a las Grandes Ligas.",
+    "dato_curioso": "El estadio de béisbol de Maracaibo se llama 'Luis Aparicio El Grande' en honor al ídolo maracucho. Cada vez que los Águilas del Zulia juegan allí, la gente recuerda al mejor campocorto de la historia."
+  },
+  {
+    "pregunta": "¿Qué tan importante es la música en la cultura venezolana?",
+    "tipo": "texto",
+    "opciones": [
+      "Es fundamental y forma parte de la identidad del país",
+      "No le gusta a nadie en Venezuela",
+      "Solo la escuchan los presidentes",
+      "Es solo para los ricos"
+    ],
+    "correcta": 0,
+    "explicacion": "La música es fundamental para Venezuela. Desde el joropo llanero hasta las orquestas de El Sistema, la música forma parte del alma venezolana.",
+    "dato_curioso": "El joropo es el género musical nacional de Venezuela. Se toca con arpa, cuatro y maracas y representa los Llanos venezolanos. El 'Alma Llanera' es considerado el segundo himno del país."
+  },
+  {
+    "pregunta": "¿Qué otros beisbolistas venezolanos han seguido los pasos de Luis Aparicio?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Una galería de retratos de beisbolistas venezolanos con uniformes de equipos de las Grandes Ligas: Ozzie Guillén, Omar Vizquel, Johan Santana, Miguel Cabrera. La bandera venezolana detrás. Estilo ilustración deportiva colorida.",
+    "opciones": [
+      "Ningún otro",
+      "Muchos como Cabrera, Santana y Vizquel también llegaron a las Grandes Ligas",
+      "Solo el hijo de Aparicio",
+      "Solo beisbolistas de Caracas"
+    ],
+    "correcta": 1,
+    "explicacion": "Después de Aparicio, Venezuela produjo muchos grandes beisbolistas como Miguel Cabrera, Johan Santana y Omar Vizquel, que también brillaron en las Grandes Ligas.",
+    "dato_curioso": "Miguel Cabrera es el último jugador en la historia del béisbol en ganar la Triple Corona (liderar en bateo, jonrones y carreras impulsadas en la misma temporada). ¡Otro venezolano en la historia del béisbol!"
+  },
+  {
+    "pregunta": "¿Por qué el invento de Caballero Mejías fue tan importante para la identidad venezolana?",
+    "tipo": "texto",
+    "opciones": [
+      "Porque hizo que las arepas, el alimento nacional, fueran accesibles para todos",
+      "Porque inventó un nuevo deporte nacional",
+      "Porque cambió el himno nacional",
+      "Porque pintó la bandera de un color nuevo"
+    ],
+    "correcta": 0,
+    "explicacion": "La harina precocida fue clave para la identidad venezolana porque hizo que la arepa, el alimento más venezolano, pudiera prepararse rápido y barato en cualquier hogar.",
+    "dato_curioso": "Antes de la harina precocida, las arepas eran comida de todos los días en el campo, pero en la ciudad era más difícil prepararlas. Caballero Mejías democratizó la arepa para todo el país."
+  },
+  {
+    "pregunta": "¿Qué pasaría si hoy no existiera el bisturí de diamante de Fernández-Morán?",
+    "tipo": "imagen",
+    "imagen_descripcion": "Un médico cirujano de ojos usando el bisturí de diamante bajo un microscopio para una operación delicada. A la derecha, un ojo con visión clara. El texto dice 'Gracias al bisturí de diamante venezolano'. Estilo médico amigable.",
+    "opciones": [
+      "Nada cambiaría en la medicina",
+      "Muchas operaciones delicadas del ojo y cerebro serían imposibles",
+      "Los médicos usarían cuchillos de cocina",
+      "Las cirugías serían más rápidas sin él"
+    ],
+    "correcta": 1,
+    "explicacion": "Sin el bisturí de diamante, muchas operaciones muy delicadas del ojo y del sistema nervioso serían imposibles. Millones de personas en el mundo han podido recuperar la vista gracias a este invento venezolano.",
+    "dato_curioso": "La cirugía de cataratas, que restaura la vista a personas mayores, usa bisturíes de diamante. Más de 20 millones de estas cirugías se hacen al año en el mundo. ¡Un venezolano hace ver a millones!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Quién inventó el bisturí de punta de diamante en Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Doctor Arepa",
+      "El Señor Diamante",
+      "Un dentista de Maracaibo",
+      "Humberto Fernández-Morán"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: Humberto Fernández-Morán fue el científico venezolano que inventó el bisturí de punta de diamante en 1955. Cambió la microcirugía en todo el mundo.",
+    "dato_curioso": "Repaso curioso: Fernández-Morán nació en Maracaibo en 1925. Era tan inteligente que estudió en varios países y aprendió a hablar más de 10 idiomas. ¡Era un genio de verdad!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: En qué año inventó Fernández-Morán el bisturí de diamante?",
+    "tipo": "texto",
+    "opciones": [
+      "En 1492",
+      "El próximo año",
+      "En 1955",
+      "En el año 2000"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: El bisturí de punta de diamante fue inventado en 1955. Fue una de las invenciones médicas más importantes del siglo XX.",
+    "dato_curioso": "Repaso curioso: El diamante es el material más duro que existe en la naturaleza. Por eso el bisturí con punta de diamante puede cortar partes del cuerpo tan pequeñas como células, con una precisión imposible para el metal normal."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Para qué sirve el bisturí de punta de diamante?",
+    "tipo": "texto",
+    "opciones": [
+      "Para hacer joyería de diamantes",
+      "Para operar partes muy pequeñas del cuerpo con precisión",
+      "Para tallar esculturas de hielo",
+      "Para cortar pizzas perfectamente"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: El bisturí de punta de diamante sirve para hacer operaciones en partes del cuerpo muy pequeñas, como el ojo o el cerebro. Es tan fino que puede cortar cosas más pequeñas que un cabello.",
+    "dato_curioso": "Repaso curioso: Antes del bisturí de diamante, los cirujanos usaban metal común que se desgastaba rápido. El diamante dura muchísimo más y corta con una perfección que no tiene igual."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cuál es la invención venezolana que nos permite comer arepas en minutos?",
+    "tipo": "texto",
+    "opciones": [
+      "La harina de maíz precocida (Harina Pan)",
+      "La cocina mágica automática",
+      "Los aliens de la arepa",
+      "La maquina de arepas robot"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: La harina de maíz precocida, conocida como Harina Pan, fue inventada por Luis Caballero Mejías. Gracias a ella podemos hacer arepas en pocos minutos sin remojar maíz toda la noche.",
+    "dato_curioso": "Repaso curioso: Antes de la Harina Pan, hacer arepas era un proceso largo: había que remojar el maíz, pelarlo y molerlo. ¡Podía tomar horas! Caballero Mejías lo simplificó a solo mezclar con agua."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: En qué año fue industrializada la harina de maíz precocida?",
+    "tipo": "texto",
+    "opciones": [
+      "En el año 2025",
+      "En 1492",
+      "En 1800",
+      "En 1954"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: Luis Caballero Mejías industrializó la harina de maíz precocida en 1954. Ese año nació la Harina Pan y cambió para siempre la cocina venezolana.",
+    "dato_curioso": "Repaso curioso: Hoy Harina Pan se vende en más de 60 países del mundo. ¡Venezolanos y amantes de la comida venezolana en todo el planeta la usan para hacer arepas en casa!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Quién es Luis Caballero Mejías y por qué es famoso?",
+    "tipo": "texto",
+    "opciones": [
+      "El inventor del queso amarillo",
+      "Un astronauta venezolano",
+      "Un cantante de vallenato",
+      "El ingeniero que industrializó la harina de maíz precocida"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: Luis Caballero Mejías fue el ingeniero venezolano que logró industrializar la harina de maíz precocida en 1954. Gracias a él, la arepa se puede hacer rápido en todo el mundo.",
+    "dato_curioso": "Repaso curioso: Caballero Mejías murió en un accidente de avión en 1961, muy joven, sin saber todo el impacto que tendría su invención. Hoy su legado alimenta a millones de personas."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: En qué año creó José Antonio Abreu El Sistema Nacional de Orquestas?",
+    "tipo": "texto",
+    "opciones": [
+      "En 1975",
+      "En el año de los dinosaurios",
+      "En 2010",
+      "En 1900"
+    ],
+    "correcta": 0,
+    "explicacion": "Respuesta fácil: José Antonio Abreu fundó El Sistema Nacional de Orquestas en 1975 con solo 11 niños en un garaje. Hoy hay miles de músicos formados gracias a él.",
+    "dato_curioso": "Repaso curioso: El primer ensayo de El Sistema fue en un garaje de Caracas con 11 niños y algunas sillas prestadas. De ese pequeño comienzo nació un movimiento musical que cambió el mundo."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Por qué es tan especial El Sistema Nacional de Orquestas de Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Porque los músicos tocan con los pies",
+      "Porque toca solo música de robots",
+      "Porque tiene la orquesta más ruidosa del mundo",
+      "Porque enseña música gratis a niños de escasos recursos"
+    ],
+    "correcta": 3,
+    "explicacion": "Respuesta fácil: El Sistema es especial porque enseña música clásica gratis a niños de familias pobres. La música les cambia la vida y les abre puertas al mundo entero.",
+    "dato_curioso": "Repaso curioso: Abreu decía que la música era un escudo contra la pobreza y la violencia. Muchos niños que vivían en barrios difíciles encontraron en la música un camino diferente para su vida."
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cuántos países del mundo copiaron El Sistema de Orquestas venezolano?",
+    "tipo": "texto",
+    "opciones": [
+      "Todos los países de Marte",
+      "Más de 60 países",
+      "Solo 2 países",
+      "Ningún otro país"
+    ],
+    "correcta": 1,
+    "explicacion": "Respuesta fácil: Más de 60 países del mundo copiaron el modelo de El Sistema para enseñar música a niños en situación de pobreza. Venezuela inventó algo que el mundo quiso imitar.",
+    "dato_curioso": "Repaso curioso: En Estados Unidos, Canadá, Brasil, Portugal y hasta en países de Asia hay programas inspirados en El Sistema venezolano. ¡Venezuela exportó su modelo musical a todo el planeta!"
+  },
+  {
+    "pregunta": "¿Cuál es la opción correcta sobre este tema: Cuántos músicos ha formado El Sistema de Orquestas en Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Exactamente 5 músicos",
+      "Tres músicos muy buenos",
+      "Más de un millón de músicos",
+      "Solo 11 músicos"
+    ],
+    "correcta": 2,
+    "explicacion": "Respuesta fácil: El Sistema ha formado a más de un millón de músicos venezolanos. Niños de todos los estados de Venezuela han pasado por sus núcleos de música.",
+    "dato_curioso": "Repaso curioso: Un millón de músicos es más que todos los habitantes de muchas ciudades. ¡El Sistema formó músicos suficientes para llenar una ciudad entera de personas que tocan instrumentos!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Quién es Luis Aparicio y por qué es famoso?",
+    "tipo": "texto",
+    "opciones": [
+      "Humberto Fernández-Morán",
+      "El primer venezolano en el Salón de la Fama del Béisbol de EE.UU.",
+      "En 1955",
+      "Para operar partes muy pequeñas del cuerpo con precisión"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: Luis Aparicio fue el primer venezolano en ser admitido al Salón de la Fama del Béisbol de Estados Unidos. Fue un campocorto extraordinario.",
+    "dato_curioso": "Dato para profundizar: Luis Aparicio fue tan bueno en el béisbol que lo llaman simplemente 'Little Louie'. Era pequeño de estatura pero enorme en talento. ¡Nadie lo igualaba en la posición de campocorto!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: De dónde es originario Luis Aparicio?",
+    "tipo": "texto",
+    "opciones": [
+      "De Maracaibo, estado Zulia",
+      "Para operar partes muy pequeñas del cuerpo con precisión",
+      "En 1955",
+      "Humberto Fernández-Morán"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: Luis Aparicio es de Maracaibo, en el estado Zulia. Es el maracucho más famoso del mundo del béisbol y un orgullo para Venezuela.",
+    "dato_curioso": "Dato para profundizar: El papá de Luis Aparicio, Luis Aparicio Sr., también fue un beisbolista famoso en Venezuela. ¡El talento para el béisbol fue hereditario en esa familia maracucha!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: En qué año ingresó Luis Aparicio al Salón de la Fama del Béisbol?",
+    "tipo": "texto",
+    "opciones": [
+      "En 1984",
+      "Humberto Fernández-Morán",
+      "Para operar partes muy pequeñas del cuerpo con precisión",
+      "En 1955"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: Luis Aparicio ingresó al Salón de la Fama del Béisbol de Estados Unidos en 1984. Fue un momento histórico para Venezuela y para el béisbol.",
+    "dato_curioso": "Dato para profundizar: El Salón de la Fama del Béisbol está en Cooperstown, Nueva York. Es el honor más grande que puede recibir un beisbolista. Solo los mejores de todos los tiempos entran allí."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cuál es la posición de béisbol que jugaba Luis Aparicio?",
+    "tipo": "texto",
+    "opciones": [
+      "Campocorto o shortstop",
+      "En 1955",
+      "Humberto Fernández-Morán",
+      "Para operar partes muy pequeñas del cuerpo con precisión"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel medio: Luis Aparicio jugaba de campocorto, que en inglés se dice shortstop. Es una de las posiciones más difíciles del béisbol porque tienes que ser muy rápido y preciso.",
+    "dato_curioso": "Dato para profundizar: Aparicio ganó el premio al mejor campocorto (Guante de Oro) nada menos que 9 veces en su carrera. ¡Nadie lo ha igualado en esa posición hasta hoy!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué hace al bisturí de diamante tan especial para las cirugías?",
+    "tipo": "texto",
+    "opciones": [
+      "Para operar partes muy pequeñas del cuerpo con precisión",
+      "En 1955",
+      "Que puede cortar cosas más finas que un cabello humano",
+      "Humberto Fernández-Morán"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: El bisturí de diamante puede cortar partes del cuerpo más finas que un cabello, lo cual es imposible con bisturíes normales. Eso lo hace invaluable para operaciones muy delicadas.",
+    "dato_curioso": "Dato para profundizar: Un cabello humano tiene un grosor de entre 60 y 80 micrómetros. El bisturí de diamante puede cortar con una precisión de menos de un micrómetro. ¡Increíblemente pequeño!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cuántos músicos venezolanos comenzaron El Sistema al principio?",
+    "tipo": "texto",
+    "opciones": [
+      "En 1955",
+      "Humberto Fernández-Morán",
+      "Para operar partes muy pequeñas del cuerpo con precisión",
+      "Solo 11 niños"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: El Sistema empezó con solo 11 niños en un garaje en 1975. De ese humilde comienzo creció hasta convertirse en un modelo musical copiado por el mundo entero.",
+    "dato_curioso": "Dato para profundizar: Abreu usó su propio dinero para comprar los primeros instrumentos. Creía tanto en su proyecto que lo arriesgó todo. Y tuvo razón: cambió millones de vidas."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Qué premio importante ganó Luis Aparicio durante su carrera en el béisbol?",
+    "tipo": "texto",
+    "opciones": [
+      "Humberto Fernández-Morán",
+      "En 1955",
+      "El Guante de Oro de campocorto 9 veces",
+      "Para operar partes muy pequeñas del cuerpo con precisión"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel medio: Luis Aparicio ganó el Guante de Oro al mejor campocorto defensivo nada menos que 9 veces. Es el récord para esa posición en la Liga Americana.",
+    "dato_curioso": "Dato para profundizar: El Guante de Oro se entrega al mejor jugador defensivo de cada posición. Ganar 9 veces el mismo premio muestra que Aparicio fue el mejor campocorto de su generación."
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Por qué la harina de maíz precocida fue tan revolucionaria?",
+    "tipo": "texto",
+    "opciones": [
+      "Para operar partes muy pequeñas del cuerpo con precisión",
+      "Porque redujo el tiempo de preparar arepas de horas a minutos",
+      "Humberto Fernández-Morán",
+      "En 1955"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: La harina precocida fue revolucionaria porque cambió el proceso de hacer arepas de algo que tomaba horas en algo que toma solo minutos. Simplificó la vida de millones de familias.",
+    "dato_curioso": "Dato para profundizar: Para hacer arepas con maíz natural hay que remojar el maíz, hervirlo, pelarlo y molerlo. Con Harina Pan solo mezclas con agua. ¡Ahorraste horas de trabajo en un instante!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Dónde está ubicado el Salón de la Fama del Béisbol de EE.UU.?",
+    "tipo": "texto",
+    "opciones": [
+      "En 1955",
+      "En Cooperstown, Nueva York",
+      "Para operar partes muy pequeñas del cuerpo con precisión",
+      "Humberto Fernández-Morán"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel medio: El Salón de la Fama del Béisbol está en Cooperstown, un pueblo pequeño del estado de Nueva York. Allí están los trofeos y las fotos de los mejores beisbolistas de la historia.",
+    "dato_curioso": "Dato para profundizar: Cooperstown es un pueblo tan pequeño que solo tiene unos 2.000 habitantes, pero recibe más de 350.000 visitantes al año por su Salón de la Fama. ¡Todo por el béisbol!"
+  },
+  {
+    "pregunta": "¿En contexto histórico, cuál afirmación describe mejor lo siguiente: Cómo se llama el director de orquesta venezolano más famoso del mundo hoy?",
+    "tipo": "texto",
+    "opciones": [
+      "Para operar partes muy pequeñas del cuerpo con precisión",
+      "En 1955",
+      "Humberto Fernández-Morán",
+      "Gustavo Dudamel"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel medio: Gustavo Dudamel es el director de orquesta venezolano más famoso del mundo. Fue formado por El Sistema y hoy dirige las mejores orquestas del planeta.",
+    "dato_curioso": "Dato para profundizar: Dudamel empezó a tocar violín en El Sistema cuando era niño en Barquisimeto. Hoy dirige la Filarmónica de Los Ángeles. ¡El niño de Venezuela llegó a lo más alto del mundo musical!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué otro invento importante hizo Fernández-Morán además del bisturí de diamante?",
+    "tipo": "texto",
+    "opciones": [
+      "Inventó el televisor de colores",
+      "Mejoró el microscopio electrónico para ver cosas muy muy pequeñas",
+      "Creó el primer carro volador",
+      "Construyó el primer satélite venezolano"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: Fernández-Morán también hizo grandes contribuciones al desarrollo del microscopio electrónico, que permite ver cosas increíblemente pequeñas que el ojo no puede ver.",
+    "dato_curioso": "Ampliación histórica: Fernández-Morán usó su bisturí de diamante junto con su trabajo en microscopía para estudiar el cerebro y el sistema nervioso a niveles que nadie había visto antes."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué es la arepa y por qué es importante para Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Una torta de cumpleaños pequeña",
+      "Una empanada italiana",
+      "El alimento más importante de Venezuela",
+      "Un frisbee comestible"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: La arepa es el alimento más importante de Venezuela. Se come en el desayuno, almuerzo y cena. Es hecha de maíz y tiene miles de años de historia en Venezuela.",
+    "dato_curioso": "Ampliación histórica: Los indígenas venezolanos ya comían arepas hace más de 3.000 años, mucho antes de la llegada de los europeos. La arepa es uno de los alimentos con más historia de América."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Por qué la música de El Sistema ayuda a los niños venezolanos?",
+    "tipo": "texto",
+    "opciones": [
+      "Les enseña a cocinar mejor",
+      "Los pone a dormir bien",
+      "Los hace más altos",
+      "Les enseña disciplina, trabajo en equipo y les abre oportunidades"
+    ],
+    "correcta": 3,
+    "explicacion": "Nivel difícil: La música de El Sistema enseña a los niños disciplina, trabajo en equipo y esfuerzo. También les abre puertas para estudiar fuera de Venezuela y mejorar su vida.",
+    "dato_curioso": "Ampliación histórica: Estudios científicos han demostrado que los niños que aprenden música tienen mejor desempeño en matemáticas y en otras materias de la escuela. ¡La música hace el cerebro más poderoso!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cuál es el récord de Luis Aparicio que lo hace el mejor campocorto de la historia?",
+    "tipo": "texto",
+    "opciones": [
+      "Que ganó 9 Guantes de Oro como campocorto",
+      "Que jugó 100 años seguidos",
+      "Que bateó más jonrones",
+      "Que nunca se cayó al correr"
+    ],
+    "correcta": 0,
+    "explicacion": "Nivel difícil: Luis Aparicio ganó 9 Guantes de Oro como mejor campocorto, un récord sin igual en la Liga Americana. Eso demuestra que era el mejor jugador defensivo de su posición.",
+    "dato_curioso": "Ampliación histórica: Aparicio también robó más de 500 bases en su carrera, lo cual era extraordinario. Era tan rápido corriendo que la gente lo llamaba 'el ladrón de bases'."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: En cuántos países del mundo se puede comprar Harina Pan hoy?",
+    "tipo": "texto",
+    "opciones": [
+      "Solo en Venezuela",
+      "En ningún otro país",
+      "En más de 60 países",
+      "En 3 países"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: Harina Pan se vende en más de 60 países del mundo. Venezolanos y amantes de la comida latina la usan para hacer arepas en todo el planeta.",
+    "dato_curioso": "Ampliación histórica: En ciudades como Miami, Madrid, Bogotá y hasta en algunas tiendas de Japón puedes encontrar Harina Pan. ¡La arepa venezolana conquistó el mundo gracias a esa invención!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué hacía Fernández-Morán con el microscopio electrónico mejorado?",
+    "tipo": "texto",
+    "opciones": [
+      "Ver las estrellas más grandes del universo",
+      "Estudiar partes del cuerpo tan pequeñas que el ojo no puede ver",
+      "Mirar a sus vecinos desde lejos",
+      "Ver el petróleo bajo la tierra"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: Con el microscopio electrónico mejorado, Fernández-Morán podía estudiar las partes más pequeñas de las células, como las membranas y las proteínas. Era como explorar un universo invisible.",
+    "dato_curioso": "Ampliación histórica: Fernández-Morán fue el primero en obtener imágenes claras de las mitocondrias, que son las 'baterías' de las células. ¡Un venezolano descubrió cómo funcionan las pilas de nuestro cuerpo!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué tienen en común los cuatro personajes del nivel 14?",
+    "tipo": "texto",
+    "opciones": [
+      "Todos son jugadores de béisbol",
+      "Todos son venezolanos que cambiaron el mundo con su talento",
+      "Todos inventaron arepas diferentes",
+      "Todos nacieron el mismo día"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: Fernández-Morán, Caballero Mejías, Abreu y Aparicio son venezolanos que con su talento e inteligencia cambiaron el mundo. Cada uno en su área dejó un legado enorme.",
+    "dato_curioso": "Ampliación histórica: Venezuela ha dado al mundo inventores, músicos, deportistas y científicos de primer nivel. Estos cuatro son solo algunos de los venezolanos que dejaron su huella en la historia mundial."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué necesita un niño para entrar a El Sistema de Orquestas?",
+    "tipo": "texto",
+    "opciones": [
+      "Un instrumento propio",
+      "Solo querer aprender: la inscripción es gratuita",
+      "Mucho dinero para pagar",
+      "Un promedio de 20 en la escuela"
+    ],
+    "correcta": 1,
+    "explicacion": "Nivel difícil: Para entrar a El Sistema solo hace falta querer aprender música. La inscripción es completamente gratuita y los instrumentos son prestados. No importa si eres pobre.",
+    "dato_curioso": "Ampliación histórica: Abreu siempre dijo que la música no era privilegio de los ricos. Por eso El Sistema es gratis: para que cualquier niño de Venezuela, sin importar de dónde venga, pueda tocar en una orquesta."
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Qué pasó con la carrera de béisbol de Aparicio después de Venezuela?",
+    "tipo": "texto",
+    "opciones": [
+      "Nunca salió de Venezuela",
+      "Se fue a jugar fútbol en España",
+      "Jugó en las Grandes Ligas de EE.UU. por más de 18 años",
+      "Dejó el béisbol para ser cocinero"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: Luis Aparicio jugó en las Grandes Ligas de Béisbol de EE.UU. por más de 18 años con equipos como los White Sox de Chicago y los Orioles de Baltimore.",
+    "dato_curioso": "Ampliación histórica: Aparicio empezó a jugar en las Grandes Ligas en 1956. Casi dos décadas después, se retiró siendo considerado el mejor campocorto de todos los tiempos. ¡Una carrera increíble!"
+  },
+  {
+    "pregunta": "¿Con mayor precisión, qué opción responde correctamente a esta idea del nivel: Cómo se llama el lugar donde se enseña música en El Sistema en cada ciudad?",
+    "tipo": "texto",
+    "opciones": [
+      "Fábrica de notas",
+      "Estación de música",
+      "Núcleo",
+      "Cueva de los sonidos"
+    ],
+    "correcta": 2,
+    "explicacion": "Nivel difícil: En El Sistema, cada centro donde se enseña música se llama 'Núcleo'. Hay núcleos en ciudades y pueblos de toda Venezuela para que los niños puedan llegar fácilmente.",
+    "dato_curioso": "Ampliación histórica: Hay más de 400 núcleos de El Sistema distribuidos por todo Venezuela. Desde Caracas hasta los pueblos más alejados de la Amazonía venezolana, hay niños aprendiendo música gratis."
+  }
+]
