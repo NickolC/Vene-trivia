@@ -71,8 +71,21 @@ static func _table_exists(database: SQLite, table_name: String) -> bool:
 static func ensure_alumnos_activo_column(database: SQLite) -> void:
 	if database == null:
 		return
-	# ADD COLUMN falla silenciosamente si la columna ya existe — comportamiento esperado
-	database.query("ALTER TABLE Alumnos ADD COLUMN SW_ACTIVO INTEGER NOT NULL DEFAULT 1;")
+		# 1. Consultar la estructura actual de la tabla
+		database.query("PRAGMA table_info(Alumnos);")
+		
+		var existe = false
+		for columna in database.query_result:
+			if columna["name"] == "SW_ACTIVO":
+				existe = true
+			break
+			
+			# 2. Solo agregarla si no existe
+			if not existe:
+				database.query("ALTER TABLE Alumnos ADD COLUMN SW_ACTIVO INTEGER NOT NULL DEFAULT 1;")
+				print("Columna SW_ACTIVO agregada con éxito.")
+	else:
+		print("La columna SW_ACTIVO ya existe, saltando...")
 
 static func ensure_minijuegos_table(database: SQLite) -> void:
 	if database == null:

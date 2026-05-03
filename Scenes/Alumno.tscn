@@ -383,6 +383,7 @@ theme_override_colors/font_pressed_color = Color(1, 1, 1, 0)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
 theme_override_styles/normal = SubResource("StyleBoxFlat_nkck7")
 icon = ExtResource("5_7tn0i")
+flat = true
 
 [node name="Transicion" type="Sprite2D" parent="." unique_id=1021836498]
 visible = false

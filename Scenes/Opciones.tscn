@@ -472,7 +472,6 @@ autowrap_trim_flags = 192
 icon_alignment = 1
 
 [node name="TextureRect3" type="TextureRect" parent="." unique_id=1441154183]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.9990001
@@ -745,13 +744,10 @@ selected = 0
 allow_reselect = true
 item_count = 3
 popup/item_0/text = "1920x1080"
-popup/item_0/icon = ExtResource("7_ycbjo")
 popup/item_0/id = 0
 popup/item_1/text = "1280x720"
-popup/item_1/icon = ExtResource("7_ycbjo")
 popup/item_1/id = 1
 popup/item_2/text = "640x480"
-popup/item_2/icon = ExtResource("7_ycbjo")
 popup/item_2/id = 2
 
 [node name="Brillo2" type="Label" parent="TextureRect3" unique_id=722223386]

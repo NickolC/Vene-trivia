@@ -107,9 +107,10 @@ theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 28
 text = "Desde aqui puedes:
-- Crear cuentas de Docente
+- Crear o borrar cuentas de Docentes
 - Ver actividad de Alumnos
 - Ver actividad de Docentes
+- Desactivar alumnos
 
 Acceso exclusivo para personal autorizado."
 horizontal_alignment = 1
@@ -260,6 +261,7 @@ offset_right = 68.709
 offset_bottom = 67.81494
 theme_override_styles/normal = SubResource("StyleBoxFlat_transparent")
 icon = ExtResource("4_back")
+flat = true
 
 [connection signal="pressed" from="TextureRect/login-super-admin" to="." method="_on_login_super_admin_pressed"]
 [connection signal="pressed" from="TextureRect/atras" to="." method="_on_atras_pressed"]

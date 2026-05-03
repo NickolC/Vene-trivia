@@ -334,8 +334,8 @@ func _refresh_logros(alumno_id: int) -> void:
 	else:
 		var query_fallback := "SELECT COUNT(*) AS niveles, SUM(CASE WHEN NU_ESTRELLAS = 3 THEN 1 ELSE 0 END) AS perfectos FROM niveles WHERE NU_USU = %d;" % alumno_id
 		if db.query(query_fallback) and not db.query_result.is_empty():
-			var niveles := int(db.query_result[0].get("niveles", 0))
-			var perfectos := int(db.query_result[0].get("perfectos", 0))
+			var niveles := int(str(db.query_result[0].get("niveles", 0)))
+			var perfectos := int(str(db.query_result[0].get("perfectos", 0)))
 			if niveles > 0:
 				lineas.append("- Explorador Historico (completo al menos un nivel)")
 			if perfectos >= 3:

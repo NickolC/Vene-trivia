@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://dkh3v6b2gaqm1"]
 
-[ext_resource type="Script" path="res://Scenes/super_admin_alumnos.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://cg2bcm1hpie5y" path="res://Scenes/super_admin_alumnos.gd" id="1_script"]
 [ext_resource type="Texture2D" uid="uid://dfyubnkjhps84" path="res://GFX/superadmin.png" id="2_bg"]
 [ext_resource type="FontFile" uid="uid://cn65q6b06tv8u" path="res://font/Minecraft.ttf" id="3_font"]
+[ext_resource type="Texture2D" uid="uid://bwci2gcq7wc8u" path="res://GFX/boton-extras.png" id="4_uk775"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
 bg_color = Color(0.9529412, 0.8666667, 0.7176471, 0.94)
@@ -27,18 +28,6 @@ corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button"]
-bg_color = Color(0.88235295, 0.7019608, 0.49019608, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.5058824, 0.28627452, 0.23137255, 0.85)
-corner_radius_top_left = 6
-corner_radius_top_right = 6
-corner_radius_bottom_right = 6
-corner_radius_bottom_left = 6
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_list"]
 bg_color = Color(0.94509804, 0.8666667, 0.73333335, 1)
@@ -76,7 +65,19 @@ corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 
-[node name="SuperAdminAlumnos" type="Control"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button"]
+bg_color = Color(0.88235295, 0.7019608, 0.49019608, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5058824, 0.28627452, 0.23137255, 0.85)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="SuperAdminAlumnos" type="Control" unique_id=605615556]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -85,7 +86,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_script")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=1103143872]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -95,7 +96,7 @@ grow_vertical = 2
 texture = ExtResource("2_bg")
 stretch_mode = 6
 
-[node name="Overlay" type="ColorRect" parent="."]
+[node name="Overlay" type="ColorRect" parent="." unique_id=1637092771]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -104,29 +105,36 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.1)
 
-[node name="MainPanel" type="PanelContainer" parent="."]
+[node name="MainPanel" type="PanelContainer" parent="." unique_id=1647442250]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.055
+anchor_left = 0.049000002
 anchor_top = 0.055
-anchor_right = 0.945
-anchor_bottom = 0.945
+anchor_right = 0.952
+anchor_bottom = 0.947
+offset_left = -0.2290039
+offset_top = -9.955017
+offset_right = -0.592041
+offset_bottom = -0.007019043
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
 
-[node name="Margin" type="MarginContainer" parent="MainPanel"]
+[node name="Margin" type="MarginContainer" parent="MainPanel" unique_id=305340058]
 layout_mode = 2
 theme_override_constants/margin_left = 28
 theme_override_constants/margin_top = 22
 theme_override_constants/margin_right = 28
 theme_override_constants/margin_bottom = 22
 
-[node name="VBox" type="VBoxContainer" parent="MainPanel/Margin"]
+[node name="VBox" type="VBoxContainer" parent="MainPanel/Margin" unique_id=1450412196]
+clip_contents = true
+custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 theme_override_constants/separation = 14
+alignment = 1
 
-[node name="Titulo" type="Label" parent="MainPanel/Margin/VBox"]
+[node name="Titulo" type="Label" parent="MainPanel/Margin/VBox" unique_id=804331182]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
@@ -134,7 +142,7 @@ theme_override_font_sizes/font_size = 58
 text = "GESTION DE ALUMNOS"
 horizontal_alignment = 1
 
-[node name="Subtitulo" type="Label" parent="MainPanel/Margin/VBox"]
+[node name="Subtitulo" type="Label" parent="MainPanel/Margin/VBox" unique_id=623526235]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.15, 0.15, 0.15, 1)
 theme_override_fonts/font = ExtResource("3_font")
@@ -142,30 +150,30 @@ theme_override_font_sizes/font_size = 26
 text = "Activar y desactivar cuentas de alumnos registrados"
 horizontal_alignment = 1
 
-[node name="Content" type="HBoxContainer" parent="MainPanel/Margin/VBox"]
+[node name="Content" type="HBoxContainer" parent="MainPanel/Margin/VBox" unique_id=706526598]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 16
 
-[node name="ListaPanel" type="PanelContainer" parent="MainPanel/Margin/VBox/Content"]
+[node name="ListaPanel" type="PanelContainer" parent="MainPanel/Margin/VBox/Content" unique_id=192039583]
 custom_minimum_size = Vector2(520, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_card")
 
-[node name="Margin" type="MarginContainer" parent="MainPanel/Margin/VBox/Content/ListaPanel"]
+[node name="Margin" type="MarginContainer" parent="MainPanel/Margin/VBox/Content/ListaPanel" unique_id=1719058377]
 layout_mode = 2
 theme_override_constants/margin_left = 18
 theme_override_constants/margin_top = 18
 theme_override_constants/margin_right = 18
 theme_override_constants/margin_bottom = 18
 
-[node name="ListaVBox" type="VBoxContainer" parent="MainPanel/Margin/VBox/Content/ListaPanel/Margin"]
+[node name="ListaVBox" type="VBoxContainer" parent="MainPanel/Margin/VBox/Content/ListaPanel/Margin" unique_id=1801267743]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="ListaLabel" type="Label" parent="MainPanel/Margin/VBox/Content/ListaPanel/Margin/ListaVBox"]
+[node name="ListaLabel" type="Label" parent="MainPanel/Margin/VBox/Content/ListaPanel/Margin/ListaVBox" unique_id=956152972]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
@@ -173,7 +181,7 @@ theme_override_font_sizes/font_size = 34
 text = "Alumnos Registrados"
 horizontal_alignment = 1
 
-[node name="ListaAlumnos" type="ItemList" parent="MainPanel/Margin/VBox/Content/ListaPanel/Margin/ListaVBox"]
+[node name="ListaAlumnos" type="ItemList" parent="MainPanel/Margin/VBox/Content/ListaPanel/Margin/ListaVBox" unique_id=1968525618]
 custom_minimum_size = Vector2(0, 460)
 layout_mode = 2
 size_flags_vertical = 3
@@ -182,24 +190,24 @@ theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 26
 theme_override_styles/panel = SubResource("StyleBoxFlat_list")
 
-[node name="AccionesPanel" type="PanelContainer" parent="MainPanel/Margin/VBox/Content"]
+[node name="AccionesPanel" type="PanelContainer" parent="MainPanel/Margin/VBox/Content" unique_id=1613067490]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_card")
 
-[node name="Margin" type="MarginContainer" parent="MainPanel/Margin/VBox/Content/AccionesPanel"]
+[node name="Margin" type="MarginContainer" parent="MainPanel/Margin/VBox/Content/AccionesPanel" unique_id=1287331287]
 layout_mode = 2
 theme_override_constants/margin_left = 18
 theme_override_constants/margin_top = 18
 theme_override_constants/margin_right = 18
 theme_override_constants/margin_bottom = 18
 
-[node name="AccionesVBox" type="VBoxContainer" parent="MainPanel/Margin/VBox/Content/AccionesPanel/Margin"]
+[node name="AccionesVBox" type="VBoxContainer" parent="MainPanel/Margin/VBox/Content/AccionesPanel/Margin" unique_id=1991815834]
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="AccionesLabel" type="Label" parent="MainPanel/Margin/VBox/Content/AccionesPanel/Margin/AccionesVBox"]
+[node name="AccionesLabel" type="Label" parent="MainPanel/Margin/VBox/Content/AccionesPanel/Margin/AccionesVBox" unique_id=210653845]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
@@ -207,63 +215,98 @@ theme_override_font_sizes/font_size = 34
 text = "Acciones"
 horizontal_alignment = 1
 
-[node name="InstruccionLabel" type="Label" parent="MainPanel/Margin/VBox/Content/AccionesPanel/Margin/AccionesVBox"]
+[node name="InstruccionLabel" type="Label" parent="MainPanel/Margin/VBox/Content/AccionesPanel/Margin/AccionesVBox" unique_id=1037837761]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.25, 0.25, 0.25, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 22
-text = "Selecciona un alumno\nde la lista y elige\nuna accion."
+text = "Selecciona un alumno
+de la lista y elige
+una accion."
 horizontal_alignment = 1
 
-[node name="HSep" type="HSeparator" parent="MainPanel/Margin/VBox/Content/AccionesPanel/Margin/AccionesVBox"]
+[node name="HSep" type="HSeparator" parent="MainPanel/Margin/VBox/Content/AccionesPanel/Margin/AccionesVBox" unique_id=428666268]
 layout_mode = 2
 
-[node name="BtnDesactivar" type="Button" parent="MainPanel/Margin/VBox/Content/AccionesPanel/Margin/AccionesVBox"]
+[node name="BtnDesactivar" type="Button" parent="MainPanel/Margin/VBox/Content/AccionesPanel/Margin/AccionesVBox" unique_id=1702400572]
+custom_minimum_size = Vector2(160, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_danger")
-text = "DESACTIVAR"
 disabled = true
+text = "DESACTIVAR"
+icon = ExtResource("4_uk775")
+flat = true
+autowrap_trim_flags = 192
+clip_text = true
+icon_alignment = 1
+expand_icon = true
 
-[node name="BtnActivar" type="Button" parent="MainPanel/Margin/VBox/Content/AccionesPanel/Margin/AccionesVBox"]
+[node name="BtnActivar" type="Button" parent="MainPanel/Margin/VBox/Content/AccionesPanel/Margin/AccionesVBox" unique_id=1553934447]
+custom_minimum_size = Vector2(160, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_success")
-text = "REACTIVAR"
 disabled = true
+text = "REACTIVAR"
+icon = ExtResource("4_uk775")
+flat = true
+autowrap_trim_flags = 192
+clip_text = true
+icon_alignment = 1
+expand_icon = true
 
-[node name="BtnActualizar" type="Button" parent="MainPanel/Margin/VBox/Content/AccionesPanel/Margin/AccionesVBox"]
+[node name="BtnActualizar" type="Button" parent="MainPanel/Margin/VBox/Content/AccionesPanel/Margin/AccionesVBox" unique_id=1252238949]
+clip_contents = true
+custom_minimum_size = Vector2(270, 65)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxFlat_button")
 text = "ACTUALIZAR LISTA"
+icon = ExtResource("4_uk775")
+flat = true
+autowrap_trim_flags = 192
+clip_text = true
+icon_alignment = 1
+expand_icon = true
 
-[node name="EstadoLabel" type="Label" parent="MainPanel/Margin/VBox/Content/AccionesPanel/Margin/AccionesVBox"]
+[node name="EstadoLabel" type="Label" parent="MainPanel/Margin/VBox/Content/AccionesPanel/Margin/AccionesVBox" unique_id=97179709]
+custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 22
-text = ""
-autowrap_mode = 2
 horizontal_alignment = 1
+autowrap_mode = 2
 
-[node name="Actions" type="HBoxContainer" parent="MainPanel/Margin/VBox"]
+[node name="Actions" type="HBoxContainer" parent="MainPanel/Margin/VBox" unique_id=235771567]
+clip_contents = true
+custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 alignment = 1
 
-[node name="BtnVolver" type="Button" parent="MainPanel/Margin/VBox/Actions"]
+[node name="BtnVolver" type="Button" parent="MainPanel/Margin/VBox/Actions" unique_id=1471890257]
+clip_contents = true
+custom_minimum_size = Vector2(300, 150)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_button")
 text = "VOLVER AL PANEL"
+icon = ExtResource("4_uk775")
+flat = true
+autowrap_mode = 2
+autowrap_trim_flags = 192
+clip_text = true
+icon_alignment = 1
+expand_icon = true
 
 [connection signal="item_selected" from="MainPanel/Margin/VBox/Content/ListaPanel/Margin/ListaVBox/ListaAlumnos" to="." method="_on_lista_alumnos_item_selected"]
 [connection signal="pressed" from="MainPanel/Margin/VBox/Content/AccionesPanel/Margin/AccionesVBox/BtnDesactivar" to="." method="_on_btn_desactivar_pressed"]

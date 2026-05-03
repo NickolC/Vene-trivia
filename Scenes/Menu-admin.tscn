@@ -1,8 +1,14 @@
 [gd_scene format=3 uid="uid://bc7n4p8sw2jqe"]
 
-[ext_resource type="Script" path="res://Scenes/menu_admin.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://bwgypbudyte4s" path="res://Scenes/menu_admin.gd" id="1_script"]
 [ext_resource type="Texture2D" uid="uid://dfyubnkjhps84" path="res://GFX/superadmin.png" id="2_bg"]
 [ext_resource type="FontFile" uid="uid://cn65q6b06tv8u" path="res://font/Minecraft.ttf" id="3_font"]
+[ext_resource type="Texture2D" uid="uid://bubif1mdng528" path="res://GFX/barra-docente.png" id="4_if1v6"]
+[ext_resource type="Texture2D" uid="uid://631qvgdiuyjl" path="res://GFX/boton rendimiento.png" id="5_3tm7v"]
+[ext_resource type="Texture2D" uid="uid://bjvqfd4tcnhsf" path="res://GFX/volver login boton.png" id="6_n8hur"]
+[ext_resource type="Texture2D" uid="uid://ds3ob0n747k7x" path="res://GFX/guardar boton.png" id="7_3uoyo"]
+[ext_resource type="Texture2D" uid="uid://c0044vn6u6qqy" path="res://GFX/seleccion multiple docente.png" id="8_khudr"]
+[ext_resource type="Texture2D" uid="uid://cha36bpw5nat7" path="res://GFX/actualizar boton admin.png" id="9_erpvl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
 bg_color = Color(0.9529412, 0.8666667, 0.7176471, 0.94)
@@ -52,7 +58,7 @@ corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 
-[node name="MenuAdmin" type="Control"]
+[node name="MenuAdmin" type="Control" unique_id=1137095191]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -61,7 +67,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_script")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=2077508356]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -71,7 +77,7 @@ grow_vertical = 2
 texture = ExtResource("2_bg")
 stretch_mode = 6
 
-[node name="Overlay" type="ColorRect" parent="."]
+[node name="Overlay" type="ColorRect" parent="." unique_id=1203199000]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -80,29 +86,33 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.1)
 
-[node name="MainPanel" type="PanelContainer" parent="."]
+[node name="MainPanel" type="PanelContainer" parent="." unique_id=1638327578]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.04
-anchor_top = 0.04
-anchor_right = 0.96
-anchor_bottom = 0.96
+anchor_left = 0.037
+anchor_top = 0.003
+anchor_right = 0.96000004
+anchor_bottom = 1.006
+offset_left = -0.3769989
+offset_top = -7.693001
+offset_right = 0.8399658
+offset_bottom = 6.3639526
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
 
-[node name="Margin" type="MarginContainer" parent="MainPanel"]
+[node name="Margin" type="MarginContainer" parent="MainPanel" unique_id=1825768890]
 layout_mode = 2
-theme_override_constants/margin_left = 28
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 28
-theme_override_constants/margin_bottom = 20
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
 
-[node name="VBox" type="VBoxContainer" parent="MainPanel/Margin"]
+[node name="VBox" type="VBoxContainer" parent="MainPanel/Margin" unique_id=374842214]
 layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="Titulo" type="Label" parent="MainPanel/Margin/VBox"]
+[node name="Titulo" type="Label" parent="MainPanel/Margin/VBox" unique_id=475119713]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
@@ -110,7 +120,7 @@ theme_override_font_sizes/font_size = 56
 text = "PANEL DOCENTE"
 horizontal_alignment = 1
 
-[node name="Subtitulo" type="Label" parent="MainPanel/Margin/VBox"]
+[node name="Subtitulo" type="Label" parent="MainPanel/Margin/VBox" unique_id=353311124]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.15, 0.15, 0.15, 1)
 theme_override_fonts/font = ExtResource("3_font")
@@ -118,47 +128,64 @@ theme_override_font_sizes/font_size = 26
 text = "Reporte de rendimiento de alumnos"
 horizontal_alignment = 1
 
-[node name="NavBar" type="HBoxContainer" parent="MainPanel/Margin/VBox"]
+[node name="NavBar" type="HBoxContainer" parent="MainPanel/Margin/VBox" unique_id=798699439]
 layout_mode = 2
-alignment = 1
 theme_override_constants/separation = 10
+alignment = 1
 
-[node name="BtnCanvasGestion" type="Button" parent="MainPanel/Margin/VBox/NavBar"]
+[node name="BtnCanvasGestion" type="Button" parent="MainPanel/Margin/VBox/NavBar" unique_id=2143282693]
+clip_contents = true
+custom_minimum_size = Vector2(120, 40)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxFlat_button")
 text = "GESTION"
+icon = ExtResource("4_if1v6")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
-[node name="BtnCanvasAuditoria" type="Button" parent="MainPanel/Margin/VBox/NavBar"]
+[node name="BtnCanvasAuditoria" type="Button" parent="MainPanel/Margin/VBox/NavBar" unique_id=302545278]
+clip_contents = true
+custom_minimum_size = Vector2(140, 44)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxFlat_button")
 text = "AUDITORIA"
+icon = ExtResource("4_if1v6")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
-[node name="BtnCanvasRendimiento" type="Button" parent="MainPanel/Margin/VBox/NavBar"]
+[node name="BtnCanvasRendimiento" type="Button" parent="MainPanel/Margin/VBox/NavBar" unique_id=2029230317]
+custom_minimum_size = Vector2(170, 48)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxFlat_button")
 text = "RENDIMIENTO"
+icon = ExtResource("5_3tm7v")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
-[node name="FiltroBar" type="HBoxContainer" parent="MainPanel/Margin/VBox"]
+[node name="FiltroBar" type="HBoxContainer" parent="MainPanel/Margin/VBox" unique_id=1440177564]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="FiltroLabel" type="Label" parent="MainPanel/Margin/VBox/FiltroBar"]
+[node name="FiltroLabel" type="Label" parent="MainPanel/Margin/VBox/FiltroBar" unique_id=1459055772]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 24
 text = "Buscar:"
 
-[node name="FiltroInput" type="LineEdit" parent="MainPanel/Margin/VBox/FiltroBar"]
+[node name="FiltroInput" type="LineEdit" parent="MainPanel/Margin/VBox/FiltroBar" unique_id=1788859455]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
@@ -170,25 +197,33 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_input")
 theme_override_styles/focus = SubResource("StyleBoxFlat_input")
 placeholder_text = "Nombre del alumno..."
 
-[node name="BtnActualizar" type="Button" parent="MainPanel/Margin/VBox/FiltroBar"]
+[node name="BtnActualizar" type="Button" parent="MainPanel/Margin/VBox/FiltroBar" unique_id=317491588]
+clip_contents = true
+custom_minimum_size = Vector2(166, 49)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_button")
 text = "ACTUALIZAR"
+icon = ExtResource("5_3tm7v")
+flat = true
+autowrap_trim_flags = 0
+icon_alignment = 1
+expand_icon = true
 
-[node name="ResumenLabel" type="Label" parent="MainPanel/Margin/VBox"]
+[node name="ResumenLabel" type="Label" parent="MainPanel/Margin/VBox" unique_id=1628379837]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.12, 0.12, 0.12, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 22
-text = ""
 
-[node name="ArbolAlumnos" type="Tree" parent="MainPanel/Margin/VBox"]
+[node name="ArbolAlumnos" type="Tree" parent="MainPanel/Margin/VBox" unique_id=615459497]
 custom_minimum_size = Vector2(0, 420)
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.056291588, 0.056291603, 0.056291595, 1)
+theme_override_colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 22
 theme_override_styles/panel = SubResource("StyleBoxFlat_tree")
@@ -196,29 +231,29 @@ columns = 7
 column_titles_visible = true
 hide_root = true
 
-[node name="PanelEdicion" type="PanelContainer" parent="MainPanel/Margin/VBox"]
+[node name="PanelEdicion" type="PanelContainer" parent="MainPanel/Margin/VBox" unique_id=1430325694]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_tree")
 
-[node name="Margin" type="MarginContainer" parent="MainPanel/Margin/VBox/PanelEdicion"]
+[node name="Margin" type="MarginContainer" parent="MainPanel/Margin/VBox/PanelEdicion" unique_id=788075456]
 layout_mode = 2
 theme_override_constants/margin_left = 12
-theme_override_constants/margin_top = 10
+theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
-theme_override_constants/margin_bottom = 10
+theme_override_constants/margin_bottom = 12
 
-[node name="EdicionVBox" type="VBoxContainer" parent="MainPanel/Margin/VBox/PanelEdicion/Margin"]
+[node name="EdicionVBox" type="VBoxContainer" parent="MainPanel/Margin/VBox/PanelEdicion/Margin" unique_id=1057526870]
 layout_mode = 2
-theme_override_constants/separation = 8
+theme_override_constants/separation = 10
 
-[node name="AlumnoSeleccionado" type="Label" parent="MainPanel/Margin/VBox/PanelEdicion/Margin/EdicionVBox"]
+[node name="AlumnoSeleccionado" type="Label" parent="MainPanel/Margin/VBox/PanelEdicion/Margin/EdicionVBox" unique_id=426768731]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.12, 0.12, 0.12, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 20
 text = "Alumno seleccionado: ninguno"
 
-[node name="InputEditarUsuario" type="LineEdit" parent="MainPanel/Margin/VBox/PanelEdicion/Margin/EdicionVBox"]
+[node name="InputEditarUsuario" type="LineEdit" parent="MainPanel/Margin/VBox/PanelEdicion/Margin/EdicionVBox" unique_id=61066154]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_colors/font_placeholder_color = Color(0.3, 0.3, 0.3, 0.8)
@@ -229,7 +264,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_input")
 theme_override_styles/focus = SubResource("StyleBoxFlat_input")
 placeholder_text = "Nuevo usuario"
 
-[node name="InputEditarClave" type="LineEdit" parent="MainPanel/Margin/VBox/PanelEdicion/Margin/EdicionVBox"]
+[node name="InputEditarClave" type="LineEdit" parent="MainPanel/Margin/VBox/PanelEdicion/Margin/EdicionVBox" unique_id=1165159398]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_colors/font_placeholder_color = Color(0.3, 0.3, 0.3, 0.8)
@@ -240,40 +275,47 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_input")
 theme_override_styles/focus = SubResource("StyleBoxFlat_input")
 placeholder_text = "Nueva clave"
 
-[node name="BtnGuardarEdicion" type="Button" parent="MainPanel/Margin/VBox/PanelEdicion/Margin/EdicionVBox"]
+[node name="BtnGuardarEdicion" type="Button" parent="MainPanel/Margin/VBox/PanelEdicion/Margin/EdicionVBox" unique_id=1266702554]
+clip_contents = true
+custom_minimum_size = Vector2(10, 35)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxFlat_button")
 text = "GUARDAR CAMBIOS"
+icon = ExtResource("7_3uoyo")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
-[node name="EstadoEdicion" type="Label" parent="MainPanel/Margin/VBox/PanelEdicion/Margin/EdicionVBox"]
+[node name="EstadoEdicion" type="Label" parent="MainPanel/Margin/VBox/PanelEdicion/Margin/EdicionVBox" unique_id=351342420]
+custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.12, 0.12, 0.12, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 20
 autowrap_mode = 2
 
-[node name="CanvasAuditoria" type="PanelContainer" parent="MainPanel/Margin/VBox"]
+[node name="CanvasAuditoria" type="PanelContainer" parent="MainPanel/Margin/VBox" unique_id=1998436807]
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_tree")
 
-[node name="Margin" type="MarginContainer" parent="MainPanel/Margin/VBox/CanvasAuditoria"]
+[node name="Margin" type="MarginContainer" parent="MainPanel/Margin/VBox/CanvasAuditoria" unique_id=207245811]
 layout_mode = 2
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 12
 theme_override_constants/margin_bottom = 10
 
-[node name="AuditoriaVBox" type="VBoxContainer" parent="MainPanel/Margin/VBox/CanvasAuditoria/Margin"]
+[node name="AuditoriaVBox" type="VBoxContainer" parent="MainPanel/Margin/VBox/CanvasAuditoria/Margin" unique_id=1187999877]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 8
 
-[node name="FiltroAuditoria" type="LineEdit" parent="MainPanel/Margin/VBox/CanvasAuditoria/Margin/AuditoriaVBox"]
+[node name="FiltroAuditoria" type="LineEdit" parent="MainPanel/Margin/VBox/CanvasAuditoria/Margin/AuditoriaVBox" unique_id=1713096250]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_colors/font_placeholder_color = Color(0.3, 0.3, 0.3, 0.8)
@@ -284,15 +326,20 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_input")
 theme_override_styles/focus = SubResource("StyleBoxFlat_input")
 placeholder_text = "Filtrar por usuario de alumno"
 
-[node name="BtnActualizarAuditoria" type="Button" parent="MainPanel/Margin/VBox/CanvasAuditoria/Margin/AuditoriaVBox"]
+[node name="BtnActualizarAuditoria" type="Button" parent="MainPanel/Margin/VBox/CanvasAuditoria/Margin/AuditoriaVBox" unique_id=350026916]
+clip_contents = true
+custom_minimum_size = Vector2(100, 35)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxFlat_button")
 text = "ACTUALIZAR AUDITORIA"
+icon = ExtResource("7_3uoyo")
+flat = true
+icon_alignment = 1
 
-[node name="TextoAuditoria" type="RichTextLabel" parent="MainPanel/Margin/VBox/CanvasAuditoria/Margin/AuditoriaVBox"]
+[node name="TextoAuditoria" type="RichTextLabel" parent="MainPanel/Margin/VBox/CanvasAuditoria/Margin/AuditoriaVBox" unique_id=1304130529]
 custom_minimum_size = Vector2(0, 420)
 layout_mode = 2
 size_flags_vertical = 3
@@ -300,93 +347,130 @@ theme_override_colors/default_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/normal_font = ExtResource("3_font")
 theme_override_font_sizes/normal_font_size = 20
 
-[node name="CanvasRendimiento" type="PanelContainer" parent="MainPanel/Margin/VBox"]
+[node name="CanvasRendimiento" type="PanelContainer" parent="MainPanel/Margin/VBox" unique_id=1201855649]
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_tree")
 
-[node name="Margin" type="MarginContainer" parent="MainPanel/Margin/VBox/CanvasRendimiento"]
+[node name="Margin" type="MarginContainer" parent="MainPanel/Margin/VBox/CanvasRendimiento" unique_id=1262811268]
 layout_mode = 2
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 12
 theme_override_constants/margin_bottom = 10
 
-[node name="RendimientoVBox" type="VBoxContainer" parent="MainPanel/Margin/VBox/CanvasRendimiento/Margin"]
+[node name="RendimientoVBox" type="VBoxContainer" parent="MainPanel/Margin/VBox/CanvasRendimiento/Margin" unique_id=747192608]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 8
 
-[node name="ArbolRendimientoGeneral" type="Tree" parent="MainPanel/Margin/VBox/CanvasRendimiento/Margin/RendimientoVBox"]
+[node name="ArbolRendimientoGeneral" type="Tree" parent="MainPanel/Margin/VBox/CanvasRendimiento/Margin/RendimientoVBox" unique_id=625443702]
 custom_minimum_size = Vector2(0, 220)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.05490196, 0.05490196, 0.05490196, 1)
+theme_override_colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/panel = SubResource("StyleBoxFlat_tree")
 hide_root = true
 
-[node name="DetalleFiltros" type="HBoxContainer" parent="MainPanel/Margin/VBox/CanvasRendimiento/Margin/RendimientoVBox"]
+[node name="DetalleFiltros" type="HBoxContainer" parent="MainPanel/Margin/VBox/CanvasRendimiento/Margin/RendimientoVBox" unique_id=313158044]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="SelectorAlumnoDetalle" type="OptionButton" parent="MainPanel/Margin/VBox/CanvasRendimiento/Margin/RendimientoVBox/DetalleFiltros"]
+[node name="SelectorAlumnoDetalle" type="OptionButton" parent="MainPanel/Margin/VBox/CanvasRendimiento/Margin/RendimientoVBox/DetalleFiltros" unique_id=132401980]
+clip_contents = true
+custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 20
+theme_override_icons/icon = ExtResource("8_khudr")
+flat = true
+alignment = 1
+autowrap_trim_flags = 0
+icon_alignment = 1
 
-[node name="SelectorNivelDetalle" type="OptionButton" parent="MainPanel/Margin/VBox/CanvasRendimiento/Margin/RendimientoVBox/DetalleFiltros"]
+[node name="SelectorNivelDetalle" type="OptionButton" parent="MainPanel/Margin/VBox/CanvasRendimiento/Margin/RendimientoVBox/DetalleFiltros" unique_id=972974639]
+clip_contents = true
+custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 20
+theme_override_icons/icon = ExtResource("8_khudr")
+flat = true
+alignment = 1
+autowrap_trim_flags = 0
+icon_alignment = 1
 
-[node name="BtnActualizarRendimiento" type="Button" parent="MainPanel/Margin/VBox/CanvasRendimiento/Margin/RendimientoVBox/DetalleFiltros"]
+[node name="BtnActualizarRendimiento" type="Button" parent="MainPanel/Margin/VBox/CanvasRendimiento/Margin/RendimientoVBox/DetalleFiltros" unique_id=1408168333]
+clip_contents = true
+custom_minimum_size = Vector2(150, 44)
+layout_direction = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_button")
 text = "ACTUALIZAR"
+icon = ExtResource("9_erpvl")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
-[node name="ArbolRendimientoDetalle" type="Tree" parent="MainPanel/Margin/VBox/CanvasRendimiento/Margin/RendimientoVBox"]
+[node name="ArbolRendimientoDetalle" type="Tree" parent="MainPanel/Margin/VBox/CanvasRendimiento/Margin/RendimientoVBox" unique_id=1752571860]
 custom_minimum_size = Vector2(0, 220)
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.05490196, 0.05490196, 0.05490196, 1)
+theme_override_colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/panel = SubResource("StyleBoxFlat_tree")
 hide_root = true
 
-[node name="TextoLogros" type="RichTextLabel" parent="MainPanel/Margin/VBox/CanvasRendimiento/Margin/RendimientoVBox"]
+[node name="TextoLogros" type="RichTextLabel" parent="MainPanel/Margin/VBox/CanvasRendimiento/Margin/RendimientoVBox" unique_id=1045337983]
 custom_minimum_size = Vector2(0, 130)
 layout_mode = 2
 theme_override_colors/default_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/normal_font = ExtResource("3_font")
 theme_override_font_sizes/normal_font_size = 20
 
-[node name="Actions" type="HBoxContainer" parent="MainPanel/Margin/VBox"]
+[node name="Actions" type="HBoxContainer" parent="MainPanel/Margin/VBox" unique_id=980798131]
 layout_mode = 2
 alignment = 1
 
-[node name="BtnVolver" type="Button" parent="MainPanel/Margin/VBox/Actions"]
+[node name="BtnVolver" type="Button" parent="MainPanel/Margin/VBox/Actions" unique_id=913092659]
+clip_contents = true
+custom_minimum_size = Vector2(260, 48)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_button")
 text = "VOLVER A LOGIN"
+icon = ExtResource("6_n8hur")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
-[connection signal="text_submitted" from="MainPanel/Margin/VBox/FiltroBar/FiltroInput" to="." method="_on_filtro_text_submitted"]
-[connection signal="pressed" from="MainPanel/Margin/VBox/FiltroBar/BtnActualizar" to="." method="_on_btn_actualizar_pressed"]
 [connection signal="pressed" from="MainPanel/Margin/VBox/NavBar/BtnCanvasGestion" to="." method="_on_btn_canvas_gestion_pressed"]
 [connection signal="pressed" from="MainPanel/Margin/VBox/NavBar/BtnCanvasAuditoria" to="." method="_on_btn_canvas_auditoria_pressed"]
 [connection signal="pressed" from="MainPanel/Margin/VBox/NavBar/BtnCanvasRendimiento" to="." method="_on_btn_canvas_rendimiento_pressed"]
+[connection signal="text_submitted" from="MainPanel/Margin/VBox/FiltroBar/FiltroInput" to="." method="_on_filtro_text_submitted"]
+[connection signal="pressed" from="MainPanel/Margin/VBox/FiltroBar/BtnActualizar" to="." method="_on_btn_actualizar_pressed"]
 [connection signal="item_selected" from="MainPanel/Margin/VBox/ArbolAlumnos" to="." method="_on_arbol_alumnos_item_selected"]
 [connection signal="pressed" from="MainPanel/Margin/VBox/PanelEdicion/Margin/EdicionVBox/BtnGuardarEdicion" to="." method="_on_btn_guardar_edicion_pressed"]
 [connection signal="pressed" from="MainPanel/Margin/VBox/CanvasAuditoria/Margin/AuditoriaVBox/BtnActualizarAuditoria" to="." method="_on_btn_actualizar_auditoria_pressed"]
-[connection signal="pressed" from="MainPanel/Margin/VBox/CanvasRendimiento/Margin/RendimientoVBox/DetalleFiltros/BtnActualizarRendimiento" to="." method="_on_btn_actualizar_rendimiento_pressed"]
 [connection signal="item_selected" from="MainPanel/Margin/VBox/CanvasRendimiento/Margin/RendimientoVBox/DetalleFiltros/SelectorAlumnoDetalle" to="." method="_on_selector_alumno_detalle_item_selected"]
 [connection signal="item_selected" from="MainPanel/Margin/VBox/CanvasRendimiento/Margin/RendimientoVBox/DetalleFiltros/SelectorNivelDetalle" to="." method="_on_selector_nivel_detalle_item_selected"]
+[connection signal="pressed" from="MainPanel/Margin/VBox/CanvasRendimiento/Margin/RendimientoVBox/DetalleFiltros/BtnActualizarRendimiento" to="." method="_on_btn_actualizar_rendimiento_pressed"]
 [connection signal="pressed" from="MainPanel/Margin/VBox/Actions/BtnVolver" to="." method="_on_btn_volver_pressed"]

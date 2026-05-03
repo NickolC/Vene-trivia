@@ -61,6 +61,18 @@ _data = {
 &"RESET": SubResource("Animation_ma218")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q81js"]
+bg_color = Color(0.9529412, 0.8666667, 0.7176471, 0.9)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5647059, 0.35686275, 0.29803923, 0.75)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
 [node name="Control" type="Control" unique_id=1878241871]
 layout_mode = 3
 anchors_preset = 15
@@ -75,6 +87,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_erc62")
 
 [node name="Inicio" type="Label" parent="TextureRect" unique_id=1858791336]
@@ -207,6 +221,7 @@ theme_override_colors/font_pressed_color = Color(1, 1, 1, 0)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
 theme_override_styles/normal = SubResource("StyleBoxFlat_cptub")
 icon = ExtResource("5_ffa2m")
+flat = true
 
 [node name="Transicion" type="Sprite2D" parent="TextureRect" unique_id=1967975706]
 visible = false
@@ -217,6 +232,55 @@ texture = ExtResource("5_2lcph")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect/Transicion" unique_id=1235401159]
 libraries/ = SubResource("AnimationLibrary_ffa2m")
 autoplay = &"Fade_out"
+
+[node name="InfoPanel" type="PanelContainer" parent="TextureRect" unique_id=979332353]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.26900002
+anchor_top = 0.31500003
+anchor_right = 0.26900002
+anchor_bottom = 0.31500003
+offset_left = -290.84903
+offset_top = -161.24503
+offset_right = 289.15097
+offset_bottom = 160.75497
+theme_override_styles/panel = SubResource("StyleBoxFlat_q81js")
+
+[node name="Margin" type="MarginContainer" parent="TextureRect/InfoPanel" unique_id=1012847812]
+layout_mode = 2
+theme_override_constants/margin_left = 22
+theme_override_constants/margin_top = 22
+theme_override_constants/margin_right = 22
+theme_override_constants/margin_bottom = 22
+
+[node name="InfoVBox" type="VBoxContainer" parent="TextureRect/InfoPanel/Margin" unique_id=1847230150]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="InfoTitulo" type="Label" parent="TextureRect/InfoPanel/Margin/InfoVBox" unique_id=1748833076]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
+theme_override_fonts/font = ExtResource("2_f6jdh")
+theme_override_font_sizes/font_size = 44
+text = "Panel Docente"
+horizontal_alignment = 1
+
+[node name="InfoDescripcion" type="Label" parent="TextureRect/InfoPanel/Margin/InfoVBox" unique_id=998386476]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.1, 0.1, 0.1, 1)
+theme_override_fonts/font = ExtResource("2_f6jdh")
+theme_override_font_sizes/font_size = 28
+text = "Desde aqui puedes:
+- Editar registro de alumnos
+- Ver actividad de Alumnos
+- Ver progreso de los alumnos
+
+Acceso exclusivo para Docentes especializados"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [connection signal="pressed" from="TextureRect/login-docente" to="." method="_on_logindocente_pressed"]
 [connection signal="pressed" from="TextureRect/atras" to="." method="_on_atras_pressed"]

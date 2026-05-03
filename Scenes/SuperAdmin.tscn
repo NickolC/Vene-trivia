@@ -3,6 +3,12 @@
 [ext_resource type="Script" uid="uid://b8dxm0o423npl" path="res://Scenes/super_admin.gd" id="1_script"]
 [ext_resource type="Texture2D" uid="uid://dfyubnkjhps84" path="res://GFX/superadmin.png" id="2_q7lkx"]
 [ext_resource type="FontFile" uid="uid://cn65q6b06tv8u" path="res://font/Minecraft.ttf" id="3_font"]
+[ext_resource type="Texture2D" uid="uid://cy4fh73rp0s4a" path="res://GFX/docente boton.png" id="4_hmt4v"]
+[ext_resource type="Texture2D" uid="uid://bpfag2513657f" path="res://GFX/boton ver.png" id="5_6m6rl"]
+[ext_resource type="Texture2D" uid="uid://bjvqfd4tcnhsf" path="res://GFX/volver login boton.png" id="6_81yo4"]
+[ext_resource type="Texture2D" uid="uid://cha36bpw5nat7" path="res://GFX/actualizar boton admin.png" id="6_lqjqi"]
+[ext_resource type="Texture2D" uid="uid://bwci2gcq7wc8u" path="res://GFX/boton-extras.png" id="7_8pkdd"]
+[ext_resource type="Texture2D" uid="uid://ds3ob0n747k7x" path="res://GFX/guardar boton.png" id="8_ttdr7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
 bg_color = Color(0.9529412, 0.8666667, 0.7176471, 0.94)
@@ -98,6 +104,8 @@ anchor_left = 0.055
 anchor_top = 0.055
 anchor_right = 0.945
 anchor_bottom = 0.945
+offset_top = -71.45502
+offset_bottom = 77.45502
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
@@ -184,20 +192,33 @@ placeholder_text = "Clave docente"
 secret = true
 
 [node name="CrearDocente" type="Button" parent="MainPanel/Margin/VBox/Content/CrearDocentePanel/Margin/CrearDocenteVBox" unique_id=703518942]
+clip_contents = true
+custom_minimum_size = Vector2(0, 45)
+layout_direction = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_button")
 text = "CREAR DOCENTE"
+icon = ExtResource("4_hmt4v")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="EliminarDocente" type="Button" parent="MainPanel/Margin/VBox/Content/CrearDocentePanel/Margin/CrearDocenteVBox" unique_id=1833102244]
+clip_contents = true
+custom_minimum_size = Vector2(0, 45)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_button")
 text = "ELIMINAR DOCENTE"
+icon = ExtResource("4_hmt4v")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="EstadoOperacion" type="Label" parent="MainPanel/Margin/VBox/Content/CrearDocentePanel/Margin/CrearDocenteVBox" unique_id=1160736528]
 custom_minimum_size = Vector2(10, 0)
@@ -250,12 +271,18 @@ text = "Actividad del Sistema"
 horizontal_alignment = 1
 
 [node name="ActualizarActividad" type="Button" parent="MainPanel/Margin/VBox/Content/ActividadPanel/Margin/ActividadVBox" unique_id=1702174175]
+clip_contents = true
+custom_minimum_size = Vector2(0, 45)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_button")
 text = "ACTUALIZAR ACTIVIDAD"
+icon = ExtResource("4_hmt4v")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="ActividadTexto" type="RichTextLabel" parent="MainPanel/Margin/VBox/Content/ActividadPanel/Margin/ActividadVBox" unique_id=1384730787]
 custom_minimum_size = Vector2(0, 460)
@@ -321,38 +348,59 @@ layout_mode = 2
 theme_override_constants/separation = 10
 
 [node name="BtnOcultarRegistro" type="Button" parent="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox/AlumnosActions" unique_id=1217563748]
+custom_minimum_size = Vector2(275, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_button")
 text = "OCULTAR REGISTRO"
+icon = ExtResource("6_81yo4")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="BtnRestaurarRegistro" type="Button" parent="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox/AlumnosActions" unique_id=297663843]
+custom_minimum_size = Vector2(165, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_button")
 text = "RESTAURAR"
+icon = ExtResource("6_lqjqi")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="BtnToggleInactivos" type="Button" parent="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox/AlumnosActions" unique_id=1308822559]
+custom_minimum_size = Vector2(285, 55)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_button")
 text = "MOSTRAR INACTIVOS"
+icon = ExtResource("7_8pkdd")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="BtnRefrescarAlumnos" type="Button" parent="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox" unique_id=2118408876]
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_button")
 text = "ACTUALIZAR"
+icon = ExtResource("8_ttdr7")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="EstadoAlumnos" type="Label" parent="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox" unique_id=1572943904]
+custom_minimum_size = Vector2(10, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
@@ -360,42 +408,60 @@ theme_override_font_sizes/font_size = 22
 autowrap_mode = 2
 
 [node name="BtnVolverPrincipal" type="Button" parent="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox" unique_id=1623318022]
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_button")
 text = "VOLVER AL PANEL PRINCIPAL"
+icon = ExtResource("8_ttdr7")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="Actions" type="HBoxContainer" parent="MainPanel/Margin/VBox" unique_id=405238516]
 layout_mode = 2
-alignment = 1
 theme_override_constants/separation = 12
+alignment = 1
 
 [node name="GestionarAlumnos" type="Button" parent="MainPanel/Margin/VBox/Actions" unique_id=1701234567]
+clip_contents = true
+custom_minimum_size = Vector2(215, 42)
+layout_direction = 4
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_button")
 text = "VER ALUMNOS"
+icon = ExtResource("5_6m6rl")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="VolverLogin" type="Button" parent="MainPanel/Margin/VBox/Actions" unique_id=1108390858]
+custom_minimum_size = Vector2(270, 45)
+layout_direction = 4
 layout_mode = 2
 theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_fonts/font = ExtResource("3_font")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_button")
 text = "VOLVER A LOGIN"
+icon = ExtResource("6_81yo4")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [connection signal="pressed" from="MainPanel/Margin/VBox/Content/CrearDocentePanel/Margin/CrearDocenteVBox/CrearDocente" to="." method="_on_crear_docente_pressed"]
 [connection signal="pressed" from="MainPanel/Margin/VBox/Content/CrearDocentePanel/Margin/CrearDocenteVBox/EliminarDocente" to="." method="_on_eliminar_docente_pressed"]
 [connection signal="pressed" from="MainPanel/Margin/VBox/Content/ActividadPanel/Margin/ActividadVBox/ActualizarActividad" to="." method="_on_actualizar_actividad_pressed"]
-[connection signal="pressed" from="MainPanel/Margin/VBox/Actions/GestionarAlumnos" to="." method="_on_gestionar_alumnos_pressed"]
-[connection signal="pressed" from="MainPanel/Margin/VBox/Actions/VolverLogin" to="." method="_on_volver_login_pressed"]
 [connection signal="item_selected" from="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox/ListaAlumnosAdmin" to="." method="_on_lista_alumnos_admin_item_selected"]
 [connection signal="pressed" from="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox/AlumnosActions/BtnOcultarRegistro" to="." method="_on_btn_ocultar_registro_pressed"]
 [connection signal="pressed" from="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox/AlumnosActions/BtnRestaurarRegistro" to="." method="_on_btn_restaurar_registro_pressed"]
 [connection signal="pressed" from="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox/AlumnosActions/BtnToggleInactivos" to="." method="_on_btn_toggle_inactivos_pressed"]
 [connection signal="pressed" from="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox/BtnRefrescarAlumnos" to="." method="_on_btn_refrescar_alumnos_pressed"]
 [connection signal="pressed" from="MainPanel/Margin/VBox/AlumnosCanvas/Margin/AlumnosVBox/BtnVolverPrincipal" to="." method="_on_btn_volver_principal_pressed"]
+[connection signal="pressed" from="MainPanel/Margin/VBox/Actions/GestionarAlumnos" to="." method="_on_gestionar_alumnos_pressed"]
+[connection signal="pressed" from="MainPanel/Margin/VBox/Actions/VolverLogin" to="." method="_on_volver_login_pressed"]
