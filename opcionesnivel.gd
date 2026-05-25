@@ -1,26 +1,18 @@
 extends "res://Scripts/opciones_base.gd"
 
-func _get_return_scene_path() -> String:
-	return "res://Nivel 1.tscn"
+const SQLiteHelper = preload("res://Scripts/sqlite_helper.gd")
 
-@onready var slider_brillo = $"TextureRect3/Guardar/Volumen Maestro/Brillo"
-@onready var slider_gamma = $"TextureRect3/Guardar/Volumen Maestro/Brillo/Gamma"
-@onready var check_full = $"TextureRect3/Pantalla Completa"
-@onready var option_res = $TextureRect3/Resolucion
+var db: SQLite
+var nivel_actual: int = GlobalUsuario.nivel_maximo
+var costopor: int
+var costopub: int
+var costomid: int
 
-@onready var volumen_maestro = $"TextureRect3/Guardar/Volumen Maestro"
-@onready var musica = $"TextureRect3/Guardar/Volumen Maestro/Musica"
-@onready var efectos = $"TextureRect3/Guardar/Volumen Maestro/Musica/Efectos"
-
-# Creamos un diccionario para asociar el índice del botón con una resolución real
-const RESOLUTIONS: Dictionary = {
-	0: Vector2i(1920, 1080),
-	1: Vector2i(1280, 720),
-	2: Vector2i(640, 480)
-}
+@onready var volumen_maestro = $"TextureRect3/Volumen Maestro2"
+@onready var musica = $TextureRect3/Musica2
+@onready var efectos = $TextureRect3/Efectos
 
 func _ready():
-	
 	# En el script de tu Nivel o Escena de Juego
 	db = SQLite.new()
 	db.path = "res://DB/venetrivia.db"
@@ -36,16 +28,53 @@ func _ready():
 		print("Sesión iniciada como: ", GlobalUsuario.nombre_alumno)
 	else:
 		print("El alumno no existe en la base de datos.")
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	
+	# Conectamos manualmente el slider de Brillo
+	var slider_brillo = get_node_or_null("TextureRect3/Brillo")
+	if slider_brillo:
+		if slider_brillo.value_changed.is_connected(_on_brillo_value_changed):
+			slider_brillo.value_changed.disconnect(_on_brillo_value_changed)
+		slider_brillo.value_changed.connect(_on_brillo_value_changed)
+		
+	# Conectamos manualmente el slider de Gamma (revisa la nueva ruta tras sacarlo de Brillo)
+	var slider_gamma = get_node_or_null("TextureRect3/Gamma")
+	if slider_gamma:
+		if slider_gamma.value_changed.is_connected(_on_gamma_value_changed):
+			slider_gamma.value_changed.disconnect(_on_gamma_value_changed)
+		slider_gamma.value_changed.connect(_on_gamma_value_changed)
+		
 	# Al abrir el menú, cargamos lo que ya estaba guardado
 	Configuracion.cargar_ajustes()
 	actualizar_ui_con_valores()
-	# Opcional: Seleccionar por defecto la resolución actual al abrir el menú
-	_on_resolucion_item_selected(0)
+	
+# 1. Comprobamos si el jugador ya tiene un índice de resolución guardado válido
+	# (Asumiendo que por defecto inicializas Configuracion.res_index en un valor negativo como -1 si es nuevo)
+	if "res_index" in Configuracion and Configuracion.res_index >= 0:
+		# Si ya hay una guardada, seleccionamos ese ítem en el OptionButton
+		option_res.selected = Configuracion.res_index
+		_on_resolucion_item_selected(Configuracion.res_index)
+	else:
+		# 2. Si es la primera vez (no hay guardada), detectamos la resolución máxima del monitor
+		var resolucion_pantalla: Vector2i = DisplayServer.screen_get_size()
+		var indice_ideal: int = 0 # Por si acaso, dejamos el 0 de respaldo
+		
+		# Recorremos tu diccionario RESOLUTIONS para buscar la que mejor se adapte sin pasarse
+		for index in RESOLUTIONS:
+			var res_posible: Vector2i = RESOLUTIONS[index]
+			# Buscamos la primera resolución en tu lista que sea igual o menor a la del monitor
+			if res_posible.x <= resolucion_pantalla.x and res_posible.y <= resolucion_pantalla.y:
+				indice_ideal = index
+				break # Rompemos el ciclo porque tu lista va de mayor a menor
+		
+		# 3. Aplicamos el índice ideal detectado automáticamente
+		option_res.selected = indice_ideal
+		Configuracion.res_index = indice_ideal # Lo guardamos en memoria
+		_on_resolucion_item_selected(indice_ideal)
 	# Revisa si ya estamos en pantalla completa y marca el botón
 	var es_full = DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN
 	$"TextureRect3/Pantalla Completa".button_pressed = es_full
-	
+
 func actualizar_ui_con_valores():
 	# Sincronizamos los nodos visuales con las variables del Singleton
 	slider_brillo.value = Configuracion.brillo
@@ -64,7 +93,7 @@ func aplicar_todo():
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 	
 	# Aplicar a WorldEnvironment (ajusta la ruta según tu escena)
-	var env = get_tree().root.find_child("WorldEnvironment", true, false)
+	var env = get_tree().root.find_child("res://Scenes/menu-alumno.tscn/$Fondo/WorldGamma", true, false)
 	if env:
 		env.environment.adjustments_enabled = true
 		env.environment.adjustment_brightness = Configuracion.brillo
@@ -118,15 +147,15 @@ func _on_gamma_value_changed(value: float) -> void:
 func _on_guardar_pressed() -> void:
 	# Antes de guardar, capturamos los valores actuales de la UI
 	Configuracion.brillo = slider_brillo.value
+	Configuracion.brillo = slider_gamma.value
 	Configuracion.saturacion = slider_gamma.value
 	Configuracion.contraste = slider_gamma.value
 	Configuracion.fullscreen = check_full.button_pressed
 	Configuracion.res_index = option_res.selected
-	
 	Configuracion.guardar_ajustes()
+	cerrar_opciones()
 	Alertas.mostrar_alerta("Ajustes guardados con éxito.", 1.0)
 	print("Ajustes guardados con éxito.")
-	pass # Replace with function body.
 
 # --- BOTÓN RESTABLECER ---
 func _on_restablecer_pressed() -> void:
@@ -139,10 +168,19 @@ func _on_restablecer_pressed() -> void:
 	
 	# Actualizamos la visualización de los sliders/botones
 	actualizar_ui_con_valores()
-	Alertas.mostrar_alerta("Ajustes restablecidos con éxito.", 1.0)
+	Alertas.mostrar_alerta("Ajustes restablecidas con éxito.", 1.0)
 	print("Ajustes guardados con éxito.")
 	pass # Replace with function body.
-
+	
+func cerrar_opciones() -> void:
+	# Buscamos al nodo padre (que es el CanvasLayer "Menupausa" del nivel)
+	var menu_pausa = get_parent()
+	if menu_pausa:
+		# Volvemos a hacer visible el menú de pausa original
+		menu_pausa.get_node("CenterContainer").visible = true
+	
+	# Eliminamos esta escena de opciones de la memoria
+	queue_free()
 
 func _on_cancelar_pressed() -> void:
 	$TextureRect3.visible = false
@@ -158,18 +196,11 @@ func _on_opciones_pressed() -> void:
 
 
 func _on_volvermenu_pressed() -> void:
-	# 1. Llamamos a la función que guarda los datos en el archivo .cfg o .json
-	# Esta es la misma función que usa tu botón "Guardar"
-	guardar_todo()
-	
-	# 2. (Opcional) Puedes mostrar un mensaje rápido o esperar un frame
-	Alertas.mostrar_alerta("Ajustes guardados automáticamente.", 1.0)
-	print("Ajustes guardados automáticamente.")
-	
-	
+	cerrar_opciones()
+
 	
 	# Esta es la función que ya deberías tener para tu botón de "Guardar"
-func guardar_todo():
+func guardar_ajustes():
 	# Actualizamos las variables del Singleton (Autoload) con los valores de la UI
 	Configuracion.brillo = slider_brillo.value
 	Configuracion.saturacion = slider_gamma.value
@@ -182,12 +213,9 @@ func guardar_todo():
 	
 	# Llamamos al método del Singleton que escribe el archivo en el disco (user://)
 	Configuracion.guardar_ajustes()
-	
-	# 3. Cambiamos de escena
-	Configuracion.change_scene_to_file("res://Nivel 1.tscn")
-
-	pass # Replace with function body.
-
 
 func _on_salir_pressed() -> void:
 	Configuracion.change_scene_to_file("res://Mapa.tscn")
+
+func _get_return_scene_path() -> String:
+	return "res://Nivel 1.tscn"

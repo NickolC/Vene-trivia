@@ -1,19 +1,18 @@
-[gd_scene format=3 uid="uid://cbqqr0mpwpnmi"]
+[gd_scene format=3 uid="uid://b4woteu24k3qa"]
 
-[ext_resource type="Script" uid="uid://djk17gyktdxdq" path="res://mapa.gd" id="1_622qf"]
-[ext_resource type="Texture2D" uid="uid://b3wfnscgwckc" path="res://GFX/mapa.png" id="2_rml5n"]
-[ext_resource type="FontFile" uid="uid://cn65q6b06tv8u" path="res://font/Minecraft.ttf" id="3_a5oks"]
-[ext_resource type="Texture2D" uid="uid://cw1e38yqqo464" path="res://GFX/atras.png" id="3_udyo2"]
-[ext_resource type="Texture2D" uid="uid://c6lyanccndncf" path="res://GFX/PARTE 1.png" id="4_ifyfn"]
-[ext_resource type="Texture2D" uid="uid://dnhq0pjjktsnc" path="res://GFX/PARTE 2.png" id="5_exdis"]
-[ext_resource type="Texture2D" uid="uid://biqpgrbcqetrr" path="res://GFX/PARTE 3.png" id="6_7cr2c"]
-[ext_resource type="Texture2D" uid="uid://cldrkor4ic7f4" path="res://GFX/prev de niveles.png" id="8_mcjhm"]
-[ext_resource type="Texture2D" uid="uid://dnioaxk5hbyiq" path="res://GFX/salir prev.png" id="9_nlmqr"]
-[ext_resource type="Texture2D" uid="uid://bcbiusdltcitv" path="res://GFX/WhatsApp Image 2026-05-02 at 19.48.34.jpeg" id="10_4rtms"]
-[ext_resource type="Texture2D" uid="uid://b8gm66fhgisay" path="res://GFX/nivelpasado.png" id="10_a42f6"]
-[ext_resource type="Texture2D" uid="uid://01taw8awlxsh" path="res://GFX/jugar nivel.png" id="10_oofgc"]
-[ext_resource type="FontFile" uid="uid://2s1p28deo8oy" path="res://GFX/Minecraft.ttf" id="11_a42f6"]
-[ext_resource type="Texture2D" uid="uid://bxd6kbqnokrvp" path="res://GFX/black.png" id="12_nlmqr"]
+[ext_resource type="Texture2D" uid="uid://b3wfnscgwckc" path="res://GFX/mapa.png" id="1_w3g5u"]
+[ext_resource type="FontFile" uid="uid://cn65q6b06tv8u" path="res://font/Minecraft.ttf" id="2_hq6ga"]
+[ext_resource type="Texture2D" uid="uid://c6lyanccndncf" path="res://GFX/PARTE 1.png" id="3_4dbew"]
+[ext_resource type="Texture2D" uid="uid://dnhq0pjjktsnc" path="res://GFX/PARTE 2.png" id="4_cm2wj"]
+[ext_resource type="Texture2D" uid="uid://biqpgrbcqetrr" path="res://GFX/PARTE 3.png" id="5_qbube"]
+[ext_resource type="Texture2D" uid="uid://cw1e38yqqo464" path="res://GFX/atras.png" id="6_0tm8i"]
+[ext_resource type="Texture2D" uid="uid://cldrkor4ic7f4" path="res://GFX/prev de niveles.png" id="7_yqhp3"]
+[ext_resource type="FontFile" uid="uid://2s1p28deo8oy" path="res://GFX/Minecraft.ttf" id="8_hjmuu"]
+[ext_resource type="Texture2D" uid="uid://bcbiusdltcitv" path="res://GFX/WhatsApp Image 2026-05-02 at 19.48.34.jpeg" id="9_jcspb"]
+[ext_resource type="Texture2D" uid="uid://b8gm66fhgisay" path="res://GFX/nivelpasado.png" id="10_b7qkq"]
+[ext_resource type="Texture2D" uid="uid://dnioaxk5hbyiq" path="res://GFX/salir prev.png" id="11_h5uml"]
+[ext_resource type="Texture2D" uid="uid://01taw8awlxsh" path="res://GFX/jugar nivel.png" id="12_3ow0j"]
+[ext_resource type="Texture2D" uid="uid://bxd6kbqnokrvp" path="res://GFX/black.png" id="13_t40kj"]
 
 [sub_resource type="Animation" id="Animation_s2c3o"]
 resource_name = "Fade_out"
@@ -58,7 +57,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_622qf")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1122689724]
 layout_mode = 1
@@ -69,7 +67,7 @@ offset_right = -1.0
 offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_rml5n")
+texture = ExtResource("1_w3g5u")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1576942291]
 layout_mode = 1
@@ -95,10 +93,10 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_a5oks")
+theme_override_fonts/font = ExtResource("2_hq6ga")
 theme_override_font_sizes/font_size = 40
 text = "1"
-icon = ExtResource("4_ifyfn")
+icon = ExtResource("3_4dbew")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -107,11 +105,10 @@ expand_icon = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_a5oks")
+theme_override_fonts/font = ExtResource("2_hq6ga")
 theme_override_font_sizes/font_size = 40
-disabled = true
 text = "2"
-icon = ExtResource("4_ifyfn")
+icon = ExtResource("3_4dbew")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -120,11 +117,10 @@ expand_icon = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_a5oks")
+theme_override_fonts/font = ExtResource("2_hq6ga")
 theme_override_font_sizes/font_size = 40
-disabled = true
 text = "3"
-icon = ExtResource("4_ifyfn")
+icon = ExtResource("3_4dbew")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -133,11 +129,10 @@ expand_icon = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_a5oks")
+theme_override_fonts/font = ExtResource("2_hq6ga")
 theme_override_font_sizes/font_size = 40
-disabled = true
 text = "4"
-icon = ExtResource("4_ifyfn")
+icon = ExtResource("3_4dbew")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -146,11 +141,10 @@ expand_icon = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_a5oks")
+theme_override_fonts/font = ExtResource("2_hq6ga")
 theme_override_font_sizes/font_size = 40
-disabled = true
 text = "5"
-icon = ExtResource("4_ifyfn")
+icon = ExtResource("3_4dbew")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -164,11 +158,10 @@ theme_override_constants/separation = 50
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_a5oks")
+theme_override_fonts/font = ExtResource("2_hq6ga")
 theme_override_font_sizes/font_size = 40
-disabled = true
 text = "6"
-icon = ExtResource("5_exdis")
+icon = ExtResource("4_cm2wj")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -177,11 +170,10 @@ expand_icon = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_a5oks")
+theme_override_fonts/font = ExtResource("2_hq6ga")
 theme_override_font_sizes/font_size = 40
-disabled = true
 text = "7"
-icon = ExtResource("5_exdis")
+icon = ExtResource("4_cm2wj")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -190,11 +182,10 @@ expand_icon = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_a5oks")
+theme_override_fonts/font = ExtResource("2_hq6ga")
 theme_override_font_sizes/font_size = 40
-disabled = true
 text = "8"
-icon = ExtResource("5_exdis")
+icon = ExtResource("4_cm2wj")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -203,11 +194,10 @@ expand_icon = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_a5oks")
+theme_override_fonts/font = ExtResource("2_hq6ga")
 theme_override_font_sizes/font_size = 40
-disabled = true
 text = "9"
-icon = ExtResource("5_exdis")
+icon = ExtResource("4_cm2wj")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -216,11 +206,10 @@ expand_icon = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_a5oks")
+theme_override_fonts/font = ExtResource("2_hq6ga")
 theme_override_font_sizes/font_size = 40
-disabled = true
 text = "10"
-icon = ExtResource("5_exdis")
+icon = ExtResource("4_cm2wj")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -234,11 +223,11 @@ theme_override_constants/separation = 50
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_a5oks")
+theme_override_fonts/font = ExtResource("2_hq6ga")
 theme_override_font_sizes/font_size = 40
 disabled = true
 text = "11"
-icon = ExtResource("6_7cr2c")
+icon = ExtResource("5_qbube")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -247,11 +236,11 @@ expand_icon = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_a5oks")
+theme_override_fonts/font = ExtResource("2_hq6ga")
 theme_override_font_sizes/font_size = 40
 disabled = true
 text = "12"
-icon = ExtResource("6_7cr2c")
+icon = ExtResource("5_qbube")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -260,11 +249,11 @@ expand_icon = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_a5oks")
+theme_override_fonts/font = ExtResource("2_hq6ga")
 theme_override_font_sizes/font_size = 40
 disabled = true
 text = "13"
-icon = ExtResource("6_7cr2c")
+icon = ExtResource("5_qbube")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -273,11 +262,11 @@ expand_icon = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_a5oks")
+theme_override_fonts/font = ExtResource("2_hq6ga")
 theme_override_font_sizes/font_size = 40
 disabled = true
 text = "14"
-icon = ExtResource("6_7cr2c")
+icon = ExtResource("5_qbube")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -286,11 +275,11 @@ expand_icon = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_a5oks")
+theme_override_fonts/font = ExtResource("2_hq6ga")
 theme_override_font_sizes/font_size = 40
 disabled = true
 text = "15"
-icon = ExtResource("6_7cr2c")
+icon = ExtResource("5_qbube")
 flat = true
 icon_alignment = 1
 expand_icon = true
@@ -302,7 +291,7 @@ offset_top = 11.0
 offset_right = 160.0
 offset_bottom = 161.0
 size_flags_horizontal = 3
-icon = ExtResource("3_udyo2")
+icon = ExtResource("6_0tm8i")
 flat = true
 
 [node name="PrevNiveles" type="CanvasLayer" parent="." unique_id=343237252]
@@ -326,7 +315,7 @@ offset_left = -472.85803
 offset_top = -441.57602
 offset_right = 474.14197
 offset_bottom = 441.42398
-texture = ExtResource("8_mcjhm")
+texture = ExtResource("7_yqhp3")
 
 [node name="Label2" type="Label" parent="PrevNiveles" unique_id=758959000]
 anchors_preset = -1
@@ -341,7 +330,7 @@ offset_bottom = 49.938995
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 25
-theme_override_fonts/font = ExtResource("11_a42f6")
+theme_override_fonts/font = ExtResource("8_hjmuu")
 theme_override_font_sizes/font_size = 100
 text = "NIVEL *"
 
@@ -373,7 +362,7 @@ theme_override_constants/margin_bottom = 20
 [node name="TextureRect" type="TextureRect" parent="PrevNiveles/MarginContainer/VBoxContainer/MarginContainer" unique_id=1761267475]
 custom_minimum_size = Vector2(250, 300)
 layout_mode = 2
-texture = ExtResource("10_4rtms")
+texture = ExtResource("9_jcspb")
 expand_mode = 1
 
 [node name="MarginContainer2" type="MarginContainer" parent="PrevNiveles/MarginContainer/VBoxContainer" unique_id=282200642]
@@ -389,7 +378,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 25
-theme_override_fonts/font = ExtResource("3_a5oks")
+theme_override_fonts/font = ExtResource("2_hq6ga")
 theme_override_font_sizes/font_size = 40
 text = "Tema:"
 horizontal_alignment = 1
@@ -413,21 +402,21 @@ alignment = 1
 [node name="TextureRect" type="TextureRect" parent="PrevNiveles/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer" unique_id=909573777]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-texture = ExtResource("10_a42f6")
+texture = ExtResource("10_b7qkq")
 expand_mode = 5
 stretch_mode = 5
 
 [node name="TextureRect2" type="TextureRect" parent="PrevNiveles/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer" unique_id=237653963]
 custom_minimum_size = Vector2(130, 100)
 layout_mode = 2
-texture = ExtResource("10_a42f6")
+texture = ExtResource("10_b7qkq")
 expand_mode = 5
 stretch_mode = 5
 
 [node name="TextureRect3" type="TextureRect" parent="PrevNiveles/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer" unique_id=1605213213]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-texture = ExtResource("10_a42f6")
+texture = ExtResource("10_b7qkq")
 expand_mode = 5
 stretch_mode = 5
 
@@ -439,20 +428,20 @@ alignment = 1
 
 [node name="Button4" type="Button" parent="PrevNiveles/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=158616237]
 layout_mode = 2
-icon = ExtResource("9_nlmqr")
+icon = ExtResource("11_h5uml")
 flat = true
 
 [node name="Button" type="Button" parent="PrevNiveles/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1194936695]
 layout_mode = 2
 theme_override_constants/outline_size = 10
-icon = ExtResource("10_oofgc")
+icon = ExtResource("12_3ow0j")
 flat = true
 
 [node name="Transicion" type="Sprite2D" parent="." unique_id=818918941]
 visible = false
 position = Vector2(917, 488.00012)
 scale = Vector2(0.9484375, 0.90833336)
-texture = ExtResource("12_nlmqr")
+texture = ExtResource("13_t40kj")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Transicion" unique_id=579936666]
 libraries/ = SubResource("AnimationLibrary_oofgc")

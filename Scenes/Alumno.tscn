@@ -92,9 +92,12 @@ grow_vertical = 2
 script = ExtResource("1_6r77h")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=2141308733]
-layout_mode = 0
-offset_right = 1821.0
-offset_bottom = 981.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_dyp3p")
 
 [node name="Registro" type="Label" parent="TextureRect" unique_id=1883045783]
@@ -182,6 +185,23 @@ theme_override_font_sizes/font_size = 40
 text = "Repita la clave:"
 horizontal_alignment = 1
 
+[node name="Ini-Clave" type="Label" parent="TextureRect" unique_id=1372158259]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.624
+anchor_top = 0.507
+anchor_right = 0.624
+anchor_bottom = 0.507
+offset_left = -83.30408
+offset_top = -28.367035
+offset_right = 84.69592
+offset_bottom = 27.632965
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_qy7yc")
+theme_override_font_sizes/font_size = 55
+text = "Clave:"
+horizontal_alignment = 1
+
 [node name="Ini-Usuario" type="Label" parent="TextureRect" unique_id=1946684234]
 layout_mode = 1
 anchors_preset = -1
@@ -197,23 +217,6 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_qy7yc")
 theme_override_font_sizes/font_size = 55
 text = "Usuario:"
-horizontal_alignment = 1
-
-[node name="Ini-Clave" type="Label" parent="TextureRect/Ini-Usuario" unique_id=1372158259]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.41300002
-anchor_top = 3.571
-anchor_right = 0.41300002
-anchor_bottom = 3.571
-offset_left = -83.969
-offset_top = -27.976013
-offset_right = 84.031
-offset_bottom = 28.023987
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_qy7yc")
-theme_override_font_sizes/font_size = 55
-text = "Clave:"
 horizontal_alignment = 1
 
 [node name="login-alumno" type="Button" parent="TextureRect" unique_id=2140703245]
@@ -255,14 +258,14 @@ flat = true
 [node name="RegIngresaUsu" type="LineEdit" parent="TextureRect" unique_id=50356321]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.26500002
-anchor_top = 0.38000003
-anchor_right = 0.26500002
-anchor_bottom = 0.38000003
-offset_left = -243.56503
-offset_top = -20.78003
-offset_right = 243.43497
-offset_bottom = 20.21997
+anchor_left = 0.264
+anchor_top = 0.37800002
+anchor_right = 0.264
+anchor_bottom = 0.37800002
+offset_left = -253.74399
+offset_top = -26.818024
+offset_right = 255.25601
+offset_bottom = 26.181976
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.6)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
@@ -277,14 +280,14 @@ max_length = 10
 [node name="RegIngresaClv" type="LineEdit" parent="TextureRect" unique_id=229965910]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.266
-anchor_top = 0.53400004
-anchor_right = 0.266
-anchor_bottom = 0.53400004
-offset_left = -244.38602
-offset_top = -20.854065
-offset_right = 242.61398
-offset_bottom = 20.145935
+anchor_left = 0.264
+anchor_top = 0.531
+anchor_right = 0.264
+anchor_bottom = 0.531
+offset_left = -253.74399
+offset_top = -26.91101
+offset_right = 255.25601
+offset_bottom = 26.08899
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.6)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
@@ -301,14 +304,14 @@ secret = true
 [node name="IniIngresaUsu" type="LineEdit" parent="TextureRect" unique_id=862477362]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.74300003
-anchor_top = 0.40300003
-anchor_right = 0.74300003
-anchor_bottom = 0.40300003
-offset_left = -310.00305
-offset_top = -29.343018
-offset_right = 308.99695
-offset_bottom = 29.656982
+anchor_left = 0.744
+anchor_top = 0.395
+anchor_right = 0.744
+anchor_bottom = 0.395
+offset_left = -320.82397
+offset_top = -37.495026
+offset_right = 322.17603
+offset_bottom = 37.504974
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.6)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
@@ -323,14 +326,14 @@ max_length = 10
 [node name="IniIngresaClv" type="LineEdit" parent="TextureRect" unique_id=1019867699]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.74300003
-anchor_top = 0.57600003
-anchor_right = 0.74300003
-anchor_bottom = 0.57600003
-offset_left = -310.00305
-offset_top = -29.05603
-offset_right = 308.99695
-offset_bottom = 29.94397
+anchor_left = 0.744
+anchor_top = 0.569
+anchor_right = 0.744
+anchor_bottom = 0.569
+offset_left = -320.82397
+offset_top = -37.189026
+offset_right = 322.17603
+offset_bottom = 36.810974
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.6)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
@@ -344,17 +347,17 @@ max_length = 10
 virtual_keyboard_type = 6
 secret = true
 
-[node name="RegRepiteClv" type="LineEdit" parent="." unique_id=2113335907]
+[node name="RegRepiteClv" type="LineEdit" parent="TextureRect" unique_id=2113335907]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.263
-anchor_top = 0.647
+anchor_top = 0.643
 anchor_right = 0.263
-anchor_bottom = 0.647
-offset_left = -243.92303
-offset_top = -19.707031
-offset_right = 243.07697
-offset_bottom = 19.292969
+anchor_bottom = 0.643
+offset_left = -254.92303
+offset_top = -26.78302
+offset_right = 254.07697
+offset_bottom = 26.21698
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_placeholder_color = Color(0, 0, 0, 0.6)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)

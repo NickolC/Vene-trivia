@@ -12,10 +12,12 @@
 [ext_resource type="Texture2D" uid="uid://c1kl4rivf47ii" path="res://GFX/amigo.png" id="8_s8diq"]
 [ext_resource type="Texture2D" uid="uid://dy47jo5uk8" path="res://GFX/pausa.png" id="11_xtmmw"]
 [ext_resource type="Texture2D" uid="uid://bjmn2uaofj2dl" path="res://GFX/estrella vacia.png" id="12_kjnei"]
+[ext_resource type="Texture2D" uid="uid://cldrkor4ic7f4" path="res://GFX/prev de niveles.png" id="12_qlfj7"]
 [ext_resource type="Texture2D" uid="uid://bltu0nyjlegap" path="res://GFX/reintentar.png" id="13_qlfj7"]
 [ext_resource type="Texture2D" uid="uid://dqc410iysu5x" path="res://GFX/menu principal.png" id="14_0dssg"]
 [ext_resource type="Texture2D" uid="uid://cu52xaf7patgc" path="res://GFX/selector de nivel.png" id="15_t0hmt"]
 [ext_resource type="Texture2D" uid="uid://bg00f8gp2cclh" path="res://GFX/siguiente.png" id="16_4royb"]
+[ext_resource type="Texture2D" uid="uid://bxd6kbqnokrvp" path="res://GFX/black.png" id="18_0dssg"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dtf27"]
 texture = ExtResource("8_lwbsc")
@@ -62,7 +64,43 @@ texture_margin_bottom = 10.0
 load_path = "res://.godot/imported/boton-extras.png-4c47e73584a05b804668f9947712cb02.ctex"
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s1sph"]
-texture = ExtResource("8_lwbsc")
+texture = ExtResource("12_qlfj7")
+
+[sub_resource type="Animation" id="Animation_s2c3o"]
+resource_name = "Fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ma218"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t0hmt"]
+_data = {
+&"Fade_out": SubResource("Animation_s2c3o"),
+&"RESET": SubResource("Animation_ma218")
+}
 
 [node name="Control" type="Control" unique_id=1264270267]
 layout_mode = 3
@@ -209,14 +247,15 @@ clip_text = true
 icon_alignment = 1
 
 [node name="Timer" type="Timer" parent="CanvasLayer2" unique_id=837652393]
+process_mode = 1
 wait_time = 15.0
 one_shot = true
 
 [node name="ProgressBar" type="ProgressBar" parent="CanvasLayer2/Timer" unique_id=2017558069]
-offset_left = 225.0
-offset_top = 653.0
-offset_right = 1587.0
-offset_bottom = 663.0
+offset_left = 202.0
+offset_top = 684.0
+offset_right = 1564.0
+offset_bottom = 694.0
 theme_override_styles/background = SubResource("StyleBoxFlat_1boc4")
 theme_override_styles/fill = SubResource("StyleBoxFlat_suadl")
 max_value = 10.0
@@ -255,6 +294,7 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="TimerInactividad" type="Timer" parent="." unique_id=227903929]
+process_mode = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1425992360]
 visible = false
@@ -503,7 +543,7 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="Menupausa" type="CanvasLayer" parent="." unique_id=748825626]
-process_mode = 3
+process_mode = 2
 visible = false
 
 [node name="ColorRect" type="ColorRect" parent="Menupausa" unique_id=2138301330]
@@ -649,11 +689,16 @@ icon_alignment = 1
 
 [node name="Buttonpausa" type="Button" parent="." unique_id=1318700079]
 process_mode = 3
-layout_mode = 0
-offset_left = -9.0
-offset_top = 5.0
-offset_right = 113.0
-offset_bottom = 123.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.033
+anchor_top = 0.065000005
+anchor_right = 0.033
+anchor_bottom = 0.065000005
+offset_left = -61.093
+offset_top = -58.765003
+offset_right = 60.907
+offset_bottom = 59.234997
 icon = ExtResource("11_xtmmw")
 flat = true
 icon_alignment = 1
@@ -688,19 +733,29 @@ mouse_filter = 2
 color = Color(0, 0, 0, 0.7764706)
 
 [node name="Panel" type="Panel" parent="PantallaResultados" unique_id=1970438590]
-offset_left = 424.0
-offset_top = 36.0
-offset_right = 1374.0
-offset_bottom = 902.0
+anchors_preset = -1
+anchor_left = 0.49400002
+anchor_top = 0.47800002
+anchor_right = 0.49400002
+anchor_bottom = 0.47800002
+offset_left = -466.57404
+offset_top = -419.91803
+offset_right = 483.42596
+offset_bottom = 446.08197
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_s1sph")
 
 [node name="Label" type="Label" parent="PantallaResultados/Panel" unique_id=1416811804]
-layout_mode = 0
-offset_left = 290.0
-offset_top = 18.0
-offset_right = 684.0
-offset_bottom = 118.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.517
+anchor_top = 0.079
+anchor_right = 0.517
+anchor_bottom = 0.079
+offset_left = -197.15002
+offset_top = -50.414
+offset_right = 196.84998
+offset_bottom = 49.586
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 25
@@ -709,11 +764,16 @@ theme_override_font_sizes/font_size = 100
 text = "NIVEL 1"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PantallaResultados/Panel" unique_id=36370206]
-layout_mode = 0
-offset_left = 133.0
-offset_top = 121.0
-offset_right = 816.0
-offset_bottom = 321.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.499
+anchor_top = 0.25500003
+anchor_right = 0.499
+anchor_bottom = 0.25500003
+offset_left = -341.05002
+offset_top = -105.83002
+offset_right = 341.94998
+offset_bottom = 105.16998
 mouse_filter = 2
 
 [node name="TextureRect" type="TextureRect" parent="PantallaResultados/Panel/HBoxContainer" unique_id=1711245786]
@@ -735,11 +795,16 @@ texture = ExtResource("12_kjnei")
 expand_mode = 5
 
 [node name="Label2" type="Label" parent="PantallaResultados/Panel" unique_id=1833093755]
-layout_mode = 0
-offset_left = 202.0
-offset_top = 409.0
-offset_right = 516.0
-offset_bottom = 469.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35900003
+anchor_top = 0.48700002
+anchor_right = 0.35900003
+anchor_bottom = 0.48700002
+offset_left = -157.05002
+offset_top = -29.742004
+offset_right = 156.94998
+offset_bottom = 30.257996
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 25
@@ -748,11 +813,16 @@ theme_override_font_sizes/font_size = 60
 text = "Puntos: *"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="PantallaResultados/Panel" unique_id=355517911]
-layout_mode = 0
-offset_left = 133.0
-offset_top = 584.0
-offset_right = 807.0
-offset_bottom = 720.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.503
+anchor_top = 0.77500004
+anchor_right = 0.503
+anchor_bottom = 0.77500004
+offset_left = -336.85
+offset_top = -68.150024
+offset_right = 337.15
+offset_bottom = 67.849976
 mouse_filter = 2
 alignment = 1
 
@@ -776,6 +846,16 @@ flat = true
 layout_mode = 2
 icon = ExtResource("16_4royb")
 flat = true
+
+[node name="Transicion" type="Sprite2D" parent="." unique_id=2063918586]
+visible = false
+position = Vector2(916.4999, 488.00012)
+scale = Vector2(0.9640625, 0.90833336)
+texture = ExtResource("18_0dssg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Transicion" unique_id=1801015553]
+libraries/ = SubResource("AnimationLibrary_t0hmt")
+autoplay = &"Fade_out"
 
 [connection signal="pressed" from="Buttoncomodin" to="." method="_on_buttoncomodin_pressed"]
 [connection signal="pressed" from="Buttonpublico" to="." method="_on_buttonpublico_pressed"]

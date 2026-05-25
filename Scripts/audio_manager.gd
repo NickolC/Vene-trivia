@@ -107,7 +107,7 @@ func _load_looped_stream(path: String) -> AudioStream:
 
 	return stream
 
-func _on_scene_changed(_scene_root: Node) -> void:
+func _on_scene_changed(_scene_root: Node = null) -> void:
 	call_deferred("_sync_with_current_scene")
 
 func _sync_with_current_scene() -> void:

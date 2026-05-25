@@ -2,19 +2,10 @@ extends "res://Scripts/opciones_base.gd"
 
 var db : SQLite
 var nivel_actual: int 
-var costopor: int
-var costopub: int
-var costomid: int
 
-@onready var label_dinero = $TextureRect2/HBoxContainer/moneda
-@onready var precioPor = $TextureRect2/VBoxContainer/Precio
-@onready var precioPub = $TextureRect2/VBoxContainer2/Precio
-@onready var precioMid = $TextureRect2/VBoxContainer3/Precio
-
-@onready var volumen_maestro = $"TextureRect3/Guardar/Volumen Maestro"
-@onready var musica = $"TextureRect3/Guardar/Volumen Maestro/Musica"
-@onready var efectos = $"TextureRect3/Guardar/Volumen Maestro/Musica/Efectos"
-@onready var compra = $TextureRect2/confrimarcomodines/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Label
+@onready var volumen_maestro = $"TextureRect3/Volumen Maestro"
+@onready var musica = $"TextureRect3/Musica"
+@onready var efectos = $"TextureRect3/Efectos"
 
 
 func _ready():
@@ -37,20 +28,33 @@ func _ready():
 	# Al abrir el menú, cargamos lo que ya estaba guardado
 	Configuracion.cargar_ajustes()
 	actualizar_ui_con_valores()
-	# Opcional: Seleccionar por defecto la resolución actual al abrir el menú
-	_on_resolucion_item_selected(0)
+	
+# 1. Comprobamos si el jugador ya tiene un índice de resolución guardado válido
+	# (Asumiendo que por defecto inicializas Configuracion.res_index en un valor negativo como -1 si es nuevo)
+	if "res_index" in Configuracion and Configuracion.res_index >= 0:
+		# Si ya hay una guardada, seleccionamos ese ítem en el OptionButton
+		option_res.selected = Configuracion.res_index
+		_on_resolucion_item_selected(Configuracion.res_index)
+	else:
+		# 2. Si es la primera vez (no hay guardada), detectamos la resolución máxima del monitor
+		var resolucion_pantalla: Vector2i = DisplayServer.screen_get_size()
+		var indice_ideal: int = 0 # Por si acaso, dejamos el 0 de respaldo
+		
+		# Recorremos tu diccionario RESOLUTIONS para buscar la que mejor se adapte sin pasarse
+		for index in RESOLUTIONS:
+			var res_posible: Vector2i = RESOLUTIONS[index]
+			# Buscamos la primera resolución en tu lista que sea igual o menor a la del monitor
+			if res_posible.x <= resolucion_pantalla.x and res_posible.y <= resolucion_pantalla.y:
+				indice_ideal = index
+				break # Rompemos el ciclo porque tu lista va de mayor a menor
+		
+		# 3. Aplicamos el índice ideal detectado automáticamente
+		option_res.selected = indice_ideal
+		Configuracion.res_index = indice_ideal # Lo guardamos en memoria
+		_on_resolucion_item_selected(indice_ideal)
 	# Revisa si ya estamos en pantalla completa y marca el botón
 	var es_full = DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN
 	$"TextureRect3/Pantalla Completa".button_pressed = es_full
-	costopor =100
-	costopub = 150
-	costomid = 200
-	
-	precioPor.text = str(costopor) + "Bs."
-	precioPub.text = str(costopub) + "Bs."
-	precioMid.text = str(costomid) + "Bs."
-	
-	actualizar_dinero_visual()
 
 
 func actualizar_ui_con_valores():
@@ -156,8 +160,6 @@ func _on_restablecer_pressed() -> void:
 
 
 func _on_cancelar_pressed() -> void:
-	#$TextureRect.visible = false
-	$TextureRect2.visible = false
 	$TextureRect3.visible = false
 	$TextureRect4.visible = true
 	
@@ -165,8 +167,6 @@ func _on_cancelar_pressed() -> void:
 
 
 func _on_opciones_pressed() -> void:
-	#$TextureRect.visible = false
-	$TextureRect2.visible = false
 	$TextureRect3.visible = true
 	$TextureRect4.visible = false
 	pass # Replace with function body.
@@ -197,7 +197,7 @@ func guardar_ajustes():
 	Configuracion.guardar_ajustes()
 
 func _on_salir_pressed() -> void:
-	Configuracion.change_scene_to_file("res://Scenes/Alumno.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Login.tscn")
 
 func _get_return_scene_path() -> String:
 	return "res://Scenes/menu-alumno.tscn"
@@ -205,107 +205,3 @@ func _get_return_scene_path() -> String:
 
 func _get_exit_scene_path() -> String:
 	return "res://Scenes/Login.tscn"
-
-func _on_tienda_pressed() -> void:
-	#$TextureRect.visible = false
-	$TextureRect2.visible = true
-	$TextureRect3.visible = false
-	$TextureRect4.visible = false
-	actualizar_dinero_visual()
-
-func actualizar_dinero_visual():
-	var id_usu = GlobalUsuario.usuario_actual_id
-	
-	# 1. Consultamos el campo de dinero (PUNTOS_TOTALES) en la tabla Alumnos
-	var query = "SELECT NU_DINERO FROM Alumnos WHERE NU_USU = %d" % id_usu
-	db.query(query)
-	
-	# 2. Verificamos que la consulta devolvió resultados
-	if db.query_result.size() > 0:
-		var dinero_actual = db.query_result[0]["NU_DINERO"]
-		
-		# 3. Formateamos el texto del Label
-		# Usamos str() para convertir el número a texto
-		label_dinero.text = str(dinero_actual) + "Bs."
-		
-		print("Dinero cargado en interfaz: ", dinero_actual)
-	else:
-		label_dinero.text = "0 Bs."
-		print("No se encontraron datos para el usuario.")
-
-
-func _on_perfil_pressed() -> void:
-	#$TextureRect.visible = true
-	$TextureRect2.visible = false
-	$TextureRect3.visible = false
-	$TextureRect4.visible = false
-
-func _on_buttonporcentaje_pressed() -> void:
-	$TextureRect2/confrimarcomodines.visible = true
-	compra.text = "
-	
-	¿Deseas comprar el comodin de Votacion del publico? el precio es de " + precioPor.text + "
-	
-	"
-
-
-func _on_aceptar_pressed(costo: int):
-	var id_usu = GlobalUsuario.usuario_actual_id
-	# 1. Obtenemos el dinero actualizado directamente de la base de datos
-	var query_puntos = "SELECT NU_DINERO FROM Alumnos WHERE NU_USU = %d" % id_usu
-	db.query(query_puntos)
-	if db.query_result.size() > 0:
-		# Extraemos el valor del diccionario resultante
-		var puntos_en_db = db.query_result[0]["NU_DINERO"]
-		# 2. Ahora sí hacemos la comparación con el campo de la tabla
-		if puntos_en_db >= costo:
-			# Proceder con la compra...
-			print("Compra autorizada. Puntos actuales: ", puntos_en_db)
-			# Aquí vendría tu UPDATE para restar el costo
-			var query_restar = "UPDATE Alumnos SET NU_DINERO = NU_DINERO - %d WHERE NU_USU = %d" % [costo, id_usu]
-			db.query(query_restar)
-			Alertas.mostrar_alerta("Compra realizada con éxito", 1.0)
-			actualizar_dinero_visual()
-		else:
-			Alertas.mostrar_alerta("No tienes suficientes puntos acumulados", 1.0)
-	else:
-		print("Error: No se encontró al usuario en la base de datos.")
-
-func comprar_nivel_extra(tipo: String, num_nivel: int, costo: int):
-	costo = 500
-	var id_usu = GlobalUsuario.usuario_actual_id
-	# 1. Verificar si ya lo compró anteriormente
-	var query_check = "SELECT * FROM Tienda WHERE NU_USU = %d AND TP_MINIJUEGO = '%s' AND NV_EXTRA = %d" % [id_usu, tipo, num_nivel]
-	db.query(query_check)
-	if db.query_result.size() > 0:
-		Alertas.mostrar_alerta("Ya posees este nivel", 1.0)
-		return
-		# 2. Si no lo tiene, verificar puntos y comprar
-	var query_puntos = "SELECT NU_DINERO FROM Alumnos WHERE NU_USU = %d" % id_usu
-	db.query(query_puntos)
-	if db.query_result.size() > 0:
-		# Extraemos el valor del diccionario resultante
-		var puntos_en_db = db.query_result[0]["NU_DINERO"]
-		# 2. Ahora sí hacemos la comparación con el campo de la tabla
-		if puntos_en_db >= costo:
-			# Proceder con la compra...
-			print("Compra autorizada. Puntos actuales: ", puntos_en_db)
-			# Insertar en inventario
-			var query_insert = "INSERT INTO Tienda (NU_USU, TP_MINIJUEGO, NV_EXTRA) VALUES (%d, '%s', %d)" % [id_usu, tipo, num_nivel]
-			db.query(query_insert)
-			# Aquí vendría tu UPDATE para restar el costo
-			var query_restar = "UPDATE Alumnos SET NU_DINERO = NU_DINERO - %d WHERE NU_USU = %d" % [costo, id_usu]
-			db.query(query_restar)
-			Alertas.mostrar_alerta("Compra realizada con éxito", 1.0)
-			actualizar_dinero_visual()
-		else:
-			Alertas.mostrar_alerta("No tienes suficientes puntos acumulados", 1.0)
-	else:
-		print("Error: No se encontró al usuario en la base de datos.")
-
-
-func _on_cancelar2_pressed() -> void:
-	$TextureRect2/confrimarcomodines.visible = false
-	
-func _on_cancelar3_pressed() -> void:
-	$TextureRect2/confirmarniveles.visible = false

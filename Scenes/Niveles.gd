@@ -102,7 +102,7 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	menu_pausa.process_mode = Node.PROCESS_MODE_ALWAYS
 	capa_confirmacion.process_mode = Node.PROCESS_MODE_ALWAYS
-
+	$CanvasLayer2/CenterContainer/PanelContainer/MarginContainer.queue_sort()
 	db = SQLiteHelper.open_db_connection()
 	_cargar_usuario_actual()
 	numero_de_nivel = _obtener_nivel_actual()
@@ -228,6 +228,7 @@ func _input(event):
 func _on_boton_pausa_visual_pressed():
 	# El botón visual hace lo mismo que la tecla ESC
 	gestionar_pausa()
+	get_tree().paused = true
 
 func gestionar_pausa():
 	var estado_pausa = !get_tree().paused # Invierte el estado actual
@@ -236,16 +237,28 @@ func gestionar_pausa():
 	# Si quitamos la pausa, ocultamos también el cuadro de confirmación
 	if not estado_pausa:
 		capa_confirmacion.hide()
+	
 
 # --- BOTONES DEL MENÚ ---
 
 func _on_continuar_pressed():
 	gestionar_pausa()
+	get_tree().paused = false
+
+const ESCENA_OPCIONES = preload("res://Opcionesnivel.tscn")
 
 func _on_opciones_pressed():
 	get_tree().paused = false
-	get_tree().change_scene_to_file("res://Scenes/Opciones.tscn")
-	# Aquí cargarías tu escena o panel de opciones
+	# 1. Ocultamos momentáneamente los botones del menú de pausa principal
+	$Menupausa/CenterContainer.visible = false
+	# 2. Creamos una instancia de la escena de opciones
+	var opciones_instancia = ESCENA_OPCIONES.instantiate()
+	# 3. Le asignamos un nombre único para encontrarla fácilmente después
+	opciones_instancia.name = "MenuOpcionesDinamico"
+	# 4. La añadimos como hija del CanvasLayer de pausa para que se muestre arriba
+	$Menupausa.add_child(opciones_instancia)
+	get_tree().paused = true
+
 
 func _on_salir_pressed():
 	# Mostrar el cuadro de confirmación antes de salir
@@ -354,7 +367,7 @@ func mostrar_pregunta():
 		var texto_respuesta: String = datos_pregunta["opciones"][i]
 		boton.text = texto_respuesta
 		if texto_respuesta.length() > 25:
-			boton.add_theme_font_size_override("font_size", 18)
+			boton.add_theme_font_size_override("font_size", 20)
 		else:
 			boton.add_theme_font_size_override("font_size", 24)
 		

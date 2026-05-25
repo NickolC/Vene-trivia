@@ -40,8 +40,7 @@ func _on_extras_pressed() -> void:
 
 
 func _on_cuenta_pressed() -> void:
-
-	pass # Replace with function body.
+	Configuracion.change_scene_to_file("res://perfil.tscn")
 
 
 func _on_button_pressed() -> void:

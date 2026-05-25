@@ -6,7 +6,7 @@ var db: SQLite
 
 @onready var input_registro_usuario: LineEdit = $TextureRect/RegIngresaUsu
 @onready var input_registro_clave: LineEdit = $TextureRect/RegIngresaClv
-@onready var input_registro_confirmar: LineEdit = $RegRepiteClv
+@onready var input_registro_confirmar: LineEdit = $TextureRect/RegRepiteClv
 @onready var input_login_usuario: LineEdit = $TextureRect/IniIngresaUsu
 @onready var input_login_clave: LineEdit = $TextureRect/IniIngresaClv
 

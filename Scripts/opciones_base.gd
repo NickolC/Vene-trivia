@@ -2,12 +2,25 @@ extends Control
 
 const RESOLUTIONS: Dictionary = {
 	0: Vector2i(1920, 1080),
-	1: Vector2i(1280, 720),
-	2: Vector2i(640, 480)
+	1: Vector2i(1680, 1050),
+	2: Vector2i(1600, 900),
+	3: Vector2i(1440, 900),
+	4: Vector2i(1400, 1050),
+	5: Vector2i(1366, 768),
+	6: Vector2i(1360, 768),
+	7: Vector2i(1280, 1024),
+	8: Vector2i(1280, 960),
+	9: Vector2i(1280, 800),
+	10: Vector2i(1280, 768),
+	11: Vector2i(1280, 720),
+	12: Vector2i(1280, 600),
+	13: Vector2i(1152, 864),
+	14: Vector2i(1024, 768),
+	15: Vector2i(800,600)
 }
 
-@onready var slider_brillo: HSlider = $"TextureRect3/Guardar/Volumen Maestro/Brillo"
-@onready var slider_gamma: HSlider = $"TextureRect3/Guardar/Volumen Maestro/Brillo/Gamma"
+@onready var slider_brillo: HSlider = $"TextureRect3/Brillo"
+@onready var slider_gamma: HSlider = $"TextureRect3/Gamma"
 @onready var check_full: CheckButton = $"TextureRect3/Pantalla Completa"
 @onready var option_res: OptionButton = $TextureRect3/Resolucion
 
@@ -19,19 +32,37 @@ func actualizar_ui_con_valores() -> void:
 	slider_brillo.value = Configuracion.brillo
 	slider_gamma.value = Configuracion.saturacion
 	check_full.button_pressed = Configuracion.fullscreen
-	var safe_index := clampi(Configuracion.res_index, 0, RESOLUTIONS.size() - 1)
-	option_res.select(safe_index)
-	Configuracion.res_index = safe_index
+	
+# Sincronizar el interruptor de pantalla completa
+	if check_full and "fullscreen" in Configuracion:
+		check_full.button_pressed = Configuracion.fullscreen
+		
+	# Sincronizar el desplegable de resolución
+	if option_res and "res_index" in Configuracion:
+		option_res.selected = Configuracion.res_index
+		# Si estaba guardado como pantalla completa, congelamos el desplegable
+		option_res.disabled = Configuracion.fullscreen
 	aplicar_todo()
 
 func aplicar_todo() -> void:
 	if Configuracion.fullscreen:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
+		# OPCIONAL: Desactivar visualmente el OptionButton porque en Fullscreen no aplica
+		if option_res:
+			option_res.disabled = true 
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-
-	_on_resolucion_item_selected(Configuracion.res_index)
-	Configuracion.aplicar_ajustes_actuales()
+		if option_res:
+			option_res.disabled = false
+		
+		# 2. SOLO si está en modo ventana, le exigimos a la pantalla cambiar su tamaño
+		if RESOLUTIONS.has(Configuracion.res_index):
+			var nueva_resolucion: Vector2i = RESOLUTIONS[Configuracion.res_index]
+			DisplayServer.window_set_size(nueva_resolucion)
+			
+			# Centrar la ventana en el monitor para que no quede cortada abajo/derecha
+			var screen_center = DisplayServer.screen_get_position() + (DisplayServer.screen_get_size() / 2) - (nueva_resolucion / 2)
+			DisplayServer.window_set_position(screen_center)
 
 func _on_resolucion_item_selected(index: int) -> void:
 	if not RESOLUTIONS.has(index):
@@ -48,7 +79,18 @@ func _on_resolucion_item_selected(index: int) -> void:
 
 func _on_pantalla_completa_toggled(toggled_on: bool) -> void:
 	Configuracion.fullscreen = toggled_on
-	aplicar_todo()
+	
+	if toggled_on:
+		option_res.disabled = true
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
+	else:
+		option_res.disabled = false
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		
+		# Forzar a recuperar la resolución de la lista al quitar la pantalla completa
+		if RESOLUTIONS.has(option_res.selected):
+			var res = RESOLUTIONS[option_res.selected]
+			DisplayServer.window_set_size(res)
 
 func _on_brillo_value_changed(value: float) -> void:
 	Configuracion.brillo = value

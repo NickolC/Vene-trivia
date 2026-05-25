@@ -5,6 +5,39 @@ const SQLiteHelper = preload("res://Scripts/sqlite_helper.gd")
 var db: SQLite
 var nivel_actual: int = GlobalUsuario.nivel_maximo
 
+const ESTRELLA_LLENA = preload("res://GFX/nivelpasadolleno.png")
+const ESTRELLA_VACIA = preload("res://GFX/nivelpasado.png")
+
+# Referencias a los 3 TextureRect que están dentro de tu CanvasLayer de previsualización
+# (Ajusta la ruta exacta según cómo se llamen en tu árbol de escenas)
+@onready var estrella_1: TextureRect = $PrevNiveles/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer/TextureRect
+@onready var estrella_2: TextureRect = $PrevNiveles/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer/TextureRect2
+@onready var estrella_3: TextureRect = $PrevNiveles/MarginContainer/VBoxContainer/MarginContainer3/HBoxContainer/TextureRect3
+
+# NUEVA VARIABLE: Guardará el nivel que el jugador seleccionó temporalmente
+var nivel_seleccionado_temp: int = -1
+
+# Diccionario con los temas de cada nivel para automatizar la previsualización
+const TEMAS_NIVELES: Dictionary = {
+	1: "Tema: El Reino del Agua",
+	2: "Tema: Amalivaca y el Orinoco",
+	3: "Tema: Las Perlas de Cubagua",
+	4: "Tema: Piratas en el Caribe",
+	5: "Tema: Miranda, el Viajero",
+	6: "Tema: El 19 de Abril",
+	7: "Tema: La Batalla de Carabobo",
+	8: "Tema: Las Heroinas",
+	9: "Tema: El Congreso de Angostura",
+	10: "Tema: La Abolición",
+	11: "Tema: El Tren de Guzmán Blanco",
+	12: "Tema: El Reventón Petrolero",
+	13: "Tema: La Ciudad Universitaria",
+	14: "Tema: Inventores Venezolanos",
+	15: "Tema: Venezuela en el Mundo"
+}
+
+@onready var Prevnivel = $PrevNiveles/Label2
+@onready var prevtema = $PrevNiveles/MarginContainer/VBoxContainer/MarginContainer2/Label
 @onready var contenedor1: HBoxContainer = $VBoxContainer/HBoxContainer
 @onready var contenedor2: HBoxContainer = $VBoxContainer/HBoxContainer2
 @onready var contenedor3: HBoxContainer = $VBoxContainer/HBoxContainer3
@@ -12,6 +45,7 @@ var nivel_actual: int = GlobalUsuario.nivel_maximo
 func _ready() -> void:
 	db = SQLiteHelper.open_db_connection()
 	_cargar_usuario_actual()
+	$PrevNiveles.hide() # Nos aseguramos de que empiece oculto
 	configurar_selector()
 
 func _exit_tree() -> void:
@@ -45,31 +79,78 @@ func configurar_selector() -> void:
 func desbloquear_boton(btn: Button, num: int) -> void:
 	btn.disabled = false
 	btn.modulate = Color.WHITE
-	var callback := Callable(self, "_ir_al_nivel").bind(num)
+	var callback := Callable(self, "_on_nivel_seleccionado_desde_mapa").bind(num)
 	if not btn.pressed.is_connected(callback):
 		btn.pressed.connect(callback)
-
-	# OPCIONAL: Consultar si ya tiene estrellas para mostrarlas bajo el botón
-	var q_estrellas := ""
-	if GlobalUsuario.usuario_actual_id > 0:
-		q_estrellas = "SELECT NU_ESTRELLAS FROM niveles WHERE NU_NIVEL = %d AND NU_USU = %d LIMIT 1;" % [num, GlobalUsuario.usuario_actual_id]
-	else:
-		q_estrellas = "SELECT NU_ESTRELLAS FROM niveles WHERE NU_NIVEL = %d AND NM_ALUMNO = '%s' LIMIT 1;" % [num, SQLiteHelper.escape(GlobalUsuario.nombre_alumno)]
-	db.query(q_estrellas)
-	if db.query_result.size() > 0:
-		var cant_estrellas = db.query_result[0]["NU_ESTRELLAS"]
-		# Aquí podrías llamar a una función para pintar estrellas en el botón
-		print("Nivel ", num, " tiene ", cant_estrellas, " estrellas")
 
 func bloquear_boton(btn: Button):
 	btn.disabled = true
 	btn.modulate = Color(0.3, 0.3, 0.3, 0.8)
 
+# NUEVA FUNCIÓN INTERMEDIA: Se activa al tocar cualquier botón de nivel del mapa
+func _on_nivel_seleccionado_desde_mapa(num: int) -> void:
+	nivel_seleccionado_temp = num # Guardamos el número de nivel
+	
+	# Buscamos el tema correspondiente en nuestro diccionario o ponemos uno por defecto
+	var tema: String = TEMAS_NIVELES.get(num, "Tema Desconocido")
+	
+	# Cambiamos los textos del panel de previsualización
+	Prevnivel.text = "NIVEL " + str(num)
+	prevtema.text = tema
+	
+# 2. CONSULTA SQL: Averiguar cuántas estrellas tiene este nivel específico
+	var cant_estrellas: int = 0 # Empezamos asumiendo que tiene 0
+	var q_estrellas := ""
+	
+	if GlobalUsuario.usuario_actual_id > 0:
+		q_estrellas = "SELECT NU_ESTRELLAS FROM niveles WHERE NU_NIVEL = %d AND NU_USU = %d LIMIT 1;" % [num, GlobalUsuario.usuario_actual_id]
+	else:
+		q_estrellas = "SELECT NU_ESTRELLAS FROM niveles WHERE NU_NIVEL = %d AND NM_ALUMNO = '%s' LIMIT 1;" % [num, SQLiteHelper.escape(GlobalUsuario.nombre_alumno)]
+	
+	db.query(q_estrellas)
+	if db.query_result.size() > 0:
+		cant_estrellas = int(db.query_result[0]["NU_ESTRELLAS"])
+		print("Nivel ", num, " tiene ", cant_estrellas, " estrellas asignadas.")
+	
+	# 3. CAMBIO VISUAL DE LOS PNG: Evaluamos y asignamos las texturas
+	# Estrella 1: Se llena si tiene 1 o más estrellas
+	if estrella_1:
+		estrella_1.texture = ESTRELLA_LLENA if cant_estrellas >= 1 else ESTRELLA_VACIA
+		
+	# Estrella 2: Se llena si tiene 2 o más estrellas
+	if estrella_2:
+		estrella_2.texture = ESTRELLA_LLENA if cant_estrellas >= 2 else ESTRELLA_VACIA
+		
+	# Estrella 3: Se llena únicamente si tiene las 3 estrellas
+	if estrella_3:
+		estrella_3.texture = ESTRELLA_LLENA if cant_estrellas == 3 else ESTRELLA_VACIA
+		
+	$PrevNiveles/MarginContainer.queue_sort()
+	# Mostramos el Canvas de previsualización
+	$PrevNiveles.show()
+
+# BOTÓN DE COMENZAR (Tu señal original _on_button_pressed)
+func _on_button_pressed() -> void:
+	if nivel_seleccionado_temp != -1:
+		# Si hay un nivel seleccionado en memoria, ejecutamos la carga definitiva del nivel
+		_ir_al_nivel(nivel_seleccionado_temp)
+	else:
+		print("Error: No se ha seleccionado ningún nivel válido.")
+
+# BOTÓN CANCELAR/CERRAR PREVISUALIZACIÓN (Tu señal _on_button_4_pressed)
+func _on_button_4_pressed() -> void:
+	nivel_seleccionado_temp = -1 # Limpiamos la memoria
+	$PrevNiveles.hide()
+
+# FUNCIÓN DEFINITIVA DE CAMBIO DE ESCENA
 func _ir_al_nivel(n: int) -> void:
 	GlobalUsuario.nivel_seleccionado = n
 	if db:
 		SQLiteHelper.close_db_connection(db)
 		db = null 
+	
+	# Aquí puedes cambiar la ruta dinámicamente si tus niveles se llaman diferente, 
+	# por ahora va a tu archivo fijo "Nivel 1.tscn" como lo tenías programado:
 	Configuracion.change_scene_to_file("res://Nivel 1.tscn")
 
 func _cargar_usuario_actual() -> void:
