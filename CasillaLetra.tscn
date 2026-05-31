@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://qukvs4q6ou5v"]
+
+[node name="Button" type="Button" unique_id=1075254539]
+custom_minimum_size = Vector2(70, 70)
+anchors_preset = -1
+anchor_left = 0.019000001
+anchor_top = 0.036000002
+anchor_right = 0.019000001
+anchor_bottom = 0.036000002
+offset_left = -34.599003
+offset_top = -35.316
+offset_right = -26.599003
+offset_bottom = -27.316002
+
+[node name="Label" type="Label" parent="." unique_id=2060724961]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.514
+anchor_right = 0.5
+anchor_bottom = 0.514
+offset_left = -24.0
+offset_top = -24.98
+offset_right = 24.0
+offset_bottom = 25.02
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1

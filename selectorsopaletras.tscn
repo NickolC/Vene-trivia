@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://x4b6tvvsgv1a"]
 
+[ext_resource type="Script" uid="uid://ck07ui3fi5fhf" path="res://selectorsopaletras.gd" id="1_yfbjm"]
 [ext_resource type="Texture2D" uid="uid://b3wfnscgwckc" path="res://GFX/mapa.png" id="2_k6fxh"]
 [ext_resource type="FontFile" uid="uid://cn65q6b06tv8u" path="res://font/Minecraft.ttf" id="3_hhip3"]
 [ext_resource type="Texture2D" uid="uid://c6lyanccndncf" path="res://GFX/PARTE 1.png" id="4_ldoay"]
@@ -57,6 +58,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_yfbjm")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1122689724]
 layout_mode = 1
@@ -295,7 +297,6 @@ icon = ExtResource("7_05uyu")
 flat = true
 
 [node name="PrevNiveles" type="CanvasLayer" parent="." unique_id=343237252]
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="PrevNiveles" unique_id=829677381]
 anchors_preset = 15

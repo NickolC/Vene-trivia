@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://b62dqjhby4lay"]
+
+[ext_resource type="Script" uid="uid://cuw6wcibfy61k" path="res://nivelmemoria.gd" id="1_5mush"]
+[ext_resource type="Texture2D" uid="uid://b3wfnscgwckc" path="res://GFX/mapa.png" id="2_qovs0"]
+[ext_resource type="Texture2D" uid="uid://cbvp25frb7syk" path="res://GFX/Text.png" id="3_r6eu6"]
+[ext_resource type="FontFile" uid="uid://2s1p28deo8oy" path="res://GFX/Minecraft.ttf" id="4_o2mmk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4evmm"]
+texture = ExtResource("3_r6eu6")
+
+[node name="Control" type="Control" unique_id=1912207602]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5mush")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1078615498]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+texture = ExtResource("2_qovs0")
+
+[node name="ContenedorCartas" type="GridContainer" parent="." unique_id=2113984631]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.62200004
+anchor_top = 0.72200006
+anchor_right = 0.62200004
+anchor_bottom = 0.72200006
+offset_left = -579.6621
+offset_top = -411.28204
+offset_right = 581.3379
+offset_bottom = 410.71796
+columns = 10
+
+[node name="capapersonaje" type="CanvasLayer" parent="." unique_id=1985885730]
+visible = false
+
+[node name="SpritePersonaje" type="TextureRect" parent="capapersonaje" unique_id=450693865]
+anchors_preset = -1
+anchor_left = 0.69100004
+anchor_top = 0.127
+anchor_right = 0.69100004
+anchor_bottom = 0.127
+offset_left = -99.311035
+offset_top = -68.587006
+offset_right = 100.688965
+offset_bottom = 69.412994
+
+[node name="PanelContainer" type="PanelContainer" parent="capapersonaje" unique_id=1275233202]
+anchors_preset = -1
+anchor_left = 0.77400005
+anchor_top = 0.73
+anchor_right = 0.77400005
+anchor_bottom = 0.73
+offset_left = -255.4541
+offset_top = -112.130005
+offset_right = 254.5459
+offset_bottom = 112.869995
+theme_override_styles/panel = SubResource("StyleBoxTexture_4evmm")
+
+[node name="MarginContainer" type="MarginContainer" parent="capapersonaje/PanelContainer" unique_id=1263690886]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 25
+
+[node name="Label" type="Label" parent="capapersonaje/PanelContainer/MarginContainer" unique_id=718827382]
+z_index = 1
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_o2mmk")
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1

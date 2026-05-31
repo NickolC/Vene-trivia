@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bv2inqjwwmcaq"]
+
+[ext_resource type="Script" uid="uid://dd3kgacga254w" path="res://carta_memoria.gd" id="1_7vg57"]
+
+[node name="Button" type="Button" unique_id=999441893]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_7vg57")

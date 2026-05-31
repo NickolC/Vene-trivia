@@ -31,14 +31,14 @@ func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	
 	# Conectamos manualmente el slider de Brillo
-	var slider_brillo = get_node_or_null("TextureRect3/Brillo")
+	#var slider_brillo = get_node_or_null("TextureRect3/Brillo")
 	if slider_brillo:
 		if slider_brillo.value_changed.is_connected(_on_brillo_value_changed):
 			slider_brillo.value_changed.disconnect(_on_brillo_value_changed)
 		slider_brillo.value_changed.connect(_on_brillo_value_changed)
 		
 	# Conectamos manualmente el slider de Gamma (revisa la nueva ruta tras sacarlo de Brillo)
-	var slider_gamma = get_node_or_null("TextureRect3/Gamma")
+	#var slider_gamma = get_node_or_null("TextureRect3/Gamma")
 	if slider_gamma:
 		if slider_gamma.value_changed.is_connected(_on_gamma_value_changed):
 			slider_gamma.value_changed.disconnect(_on_gamma_value_changed)
