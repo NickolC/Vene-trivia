@@ -39,6 +39,7 @@ grow_vertical = 2
 script = ExtResource("1_bhy87")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1837596454]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0

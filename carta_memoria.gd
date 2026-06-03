@@ -31,14 +31,20 @@ func mostrar_boca_abajo() -> void:
 	if completada: return
 	volteada = false
 	text = ""
-	icon = textura_dorso
-	expand_icon = true
-	add_theme_font_size_override("font_size", 24)
+	icon = null # Limpiamos el icono para que se vea el fondo
+	
+	# 🌟 Ahora cargamos el recurso .tres que sí es un StyleBox válido
+	add_theme_stylebox_override("normal", load("res://GFX/estrella vacia.png"))
+	
 	modulate = Color.WHITE
 
 func voltear_boca_arriba() -> void:
 	if volteada or completada: return
 	volteada = true
+	icon = null
+	
+	# Cambiar el fondo a la carta descubierta
+	add_theme_stylebox_override("normal", load("res://GFX/estrella completada.png"))
 	
 	if es_texto:
 		icon = null
