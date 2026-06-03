@@ -1,0 +1,77 @@
+{
+  "1": {
+    "1": {"titulo": "Nivel 1 - Tema 1: Simbolos patrios", "parejas": [{"izq": "Amarillo", "der": "Riqueza"}, {"izq": "Azul", "der": "Mar Caribe"}, {"izq": "Rojo", "der": "Sangre heroica"}, {"izq": "Turpial", "der": "Ave nacional"}]},
+    "2": {"titulo": "Nivel 1 - Tema 2: Inicio independentista", "parejas": [{"izq": "19 de Abril", "der": "Junta de Caracas"}, {"izq": "5 de Julio", "der": "Firma del Acta"}, {"izq": "Cabildo", "der": "Institucion colonial"}, {"izq": "Miranda", "der": "Precursor"}]},
+    "3": {"titulo": "Nivel 1 - Tema 3: Geografia basica", "parejas": [{"izq": "Caracas", "der": "Capital"}, {"izq": "Orinoco", "der": "Gran rio"}, {"izq": "Andes", "der": "Cordillera"}, {"izq": "Margarita", "der": "Isla oriental"}]}
+  },
+  "2": {
+    "1": {"titulo": "Nivel 2 - Tema 1: Proceres", "parejas": [{"izq": "Bolivar", "der": "El Libertador"}, {"izq": "Sucre", "der": "Gran Mariscal"}, {"izq": "Paez", "der": "Lider llanero"}, {"izq": "Ribas", "der": "La Victoria"}]},
+    "2": {"titulo": "Nivel 2 - Tema 2: Batallas", "parejas": [{"izq": "Carabobo", "der": "1821"}, {"izq": "Boyaca", "der": "1819"}, {"izq": "Ayacucho", "der": "1824"}, {"izq": "Las Queseras", "der": "Lanceros"}]},
+    "3": {"titulo": "Nivel 2 - Tema 3: Regiones", "parejas": [{"izq": "Llanos", "der": "Sabanas"}, {"izq": "Guayana", "der": "Suroriente"}, {"izq": "Costa", "der": "Litoral"}, {"izq": "Delta", "der": "Bocas del Orinoco"}]}
+  },
+  "3": {
+    "1": {"titulo": "Nivel 3 - Tema 1: Vida republicana", "parejas": [{"izq": "Constitucion", "der": "Ley suprema"}, {"izq": "Congreso", "der": "Poder legislativo"}, {"izq": "Republica", "der": "Forma de gobierno"}, {"izq": "Ciudadania", "der": "Derechos civiles"}]},
+    "2": {"titulo": "Nivel 3 - Tema 2: Economia", "parejas": [{"izq": "Cacao", "der": "Cultivo colonial"}, {"izq": "Cafe", "der": "Exportacion historica"}, {"izq": "Petroleo", "der": "Recurso energetico"}, {"izq": "Aduana", "der": "Control comercial"}]},
+    "3": {"titulo": "Nivel 3 - Tema 3: Cultura", "parejas": [{"izq": "Joropo", "der": "Musica llanera"}, {"izq": "Cuatro", "der": "Instrumento"}, {"izq": "Arepa", "der": "Comida tipica"}, {"izq": "Gaita", "der": "Genero zuliano"}]}
+  },
+  "4": {
+    "1": {"titulo": "Nivel 4 - Tema 1: Fechas claves", "parejas": [{"izq": "1810", "der": "19 de Abril"}, {"izq": "1811", "der": "5 de Julio"}, {"izq": "1821", "der": "Carabobo"}, {"izq": "1830", "der": "Separacion de Colombia"}]},
+    "2": {"titulo": "Nivel 4 - Tema 2: Instituciones", "parejas": [{"izq": "Cabildo", "der": "Gobierno local"}, {"izq": "Panteon", "der": "Heroes nacionales"}, {"izq": "Archivo", "der": "Documentos historicos"}, {"izq": "Museo", "der": "Patrimonio"}]},
+    "3": {"titulo": "Nivel 4 - Tema 3: Espacios", "parejas": [{"izq": "Avila", "der": "Montana caraquena"}, {"izq": "Los Roques", "der": "Archipielago"}, {"izq": "Merida", "der": "Ciudad andina"}, {"izq": "Maracaibo", "der": "Lago y ciudad"}]}
+  },
+  "5": {
+    "1": {"titulo": "Nivel 5 - Tema 1: Pensamiento", "parejas": [{"izq": "Andres Bello", "der": "Humanista"}, {"izq": "Rodriguez", "der": "Maestro de Bolivar"}, {"izq": "Miranda", "der": "Proyecto continental"}, {"izq": "Bolivar", "der": "Carta de Jamaica"}]},
+    "2": {"titulo": "Nivel 5 - Tema 2: Sociedad", "parejas": [{"izq": "Abolicion", "der": "Fin de esclavitud"}, {"izq": "Escuela", "der": "Formacion"}, {"izq": "Sufragio", "der": "Voto"}, {"izq": "Reforma", "der": "Cambio legal"}]},
+    "3": {"titulo": "Nivel 5 - Tema 3: Naturaleza", "parejas": [{"izq": "Angel", "der": "Salto mas alto"}, {"izq": "Morrocoy", "der": "Parque nacional"}, {"izq": "Orinoco", "der": "Cuenca fluvial"}, {"izq": "Llanos", "der": "Biodiversidad"}]}
+  },
+  "6": {
+    "1": {"titulo": "Nivel 6 - Tema 1: Modernizacion", "parejas": [{"izq": "Ferrocarril", "der": "Transporte en rieles"}, {"izq": "Telegrafo", "der": "Comunicacion"}, {"izq": "Puerto", "der": "Intercambio maritimo"}, {"izq": "Puente", "der": "Infraestructura"}]},
+    "2": {"titulo": "Nivel 6 - Tema 2: Energia", "parejas": [{"izq": "Barroso", "der": "Pozo de 1922"}, {"izq": "Zulia", "der": "Zona petrolera"}, {"izq": "Refineria", "der": "Procesa crudo"}, {"izq": "PDVSA", "der": "Empresa estatal"}]},
+    "3": {"titulo": "Nivel 6 - Tema 3: Ciudades", "parejas": [{"izq": "Valencia", "der": "Capital de Carabobo"}, {"izq": "Barquisimeto", "der": "Capital de Lara"}, {"izq": "Maturin", "der": "Capital de Monagas"}, {"izq": "San Cristobal", "der": "Capital de Tachira"}]}
+  },
+  "7": {
+    "1": {"titulo": "Nivel 7 - Tema 1: Cultura nacional", "parejas": [{"izq": "Hallaca", "der": "Plato navideno"}, {"izq": "Parranda", "der": "Fiesta musical"}, {"izq": "Tambor", "der": "Ritmo afrovenezolano"}, {"izq": "Artesania", "der": "Trabajo manual"}]},
+    "2": {"titulo": "Nivel 7 - Tema 2: Educacion", "parejas": [{"izq": "UCV", "der": "Universidad Central"}, {"izq": "Vargas", "der": "Rector historico"}, {"izq": "Aula", "der": "Espacio de clase"}, {"izq": "Investigacion", "der": "Produccion de conocimiento"}]},
+    "3": {"titulo": "Nivel 7 - Tema 3: Identidad", "parejas": [{"izq": "Bandera", "der": "Tricolor nacional"}, {"izq": "Escudo", "der": "Emblema oficial"}, {"izq": "Himno", "der": "Gloria al Bravo Pueblo"}, {"izq": "Patria", "der": "Sentido de pertenencia"}]}
+  },
+  "8": {
+    "1": {"titulo": "Nivel 8 - Tema 1: Relaciones internacionales", "parejas": [{"izq": "Diplomacia", "der": "Relacion entre estados"}, {"izq": "Embajada", "der": "Representacion oficial"}, {"izq": "Tratado", "der": "Acuerdo formal"}, {"izq": "Integracion", "der": "Cooperacion regional"}]},
+    "2": {"titulo": "Nivel 8 - Tema 2: Innovacion", "parejas": [{"izq": "Convit", "der": "Medico cientifico"}, {"izq": "Vacuna", "der": "Prevencion"}, {"izq": "Laboratorio", "der": "Experimentacion"}, {"izq": "Tecnologia", "der": "Aplicacion practica"}]},
+    "3": {"titulo": "Nivel 8 - Tema 3: Desarrollo", "parejas": [{"izq": "Industria", "der": "Produccion"}, {"izq": "Servicios", "der": "Sector terciario"}, {"izq": "Agricultura", "der": "Cultivo"}, {"izq": "Comercio", "der": "Intercambio"}]}
+  },
+  "9": {
+    "1": {"titulo": "Nivel 9 - Tema 1: Patrimonio", "parejas": [{"izq": "Ciudad Universitaria", "der": "Obra de Villanueva"}, {"izq": "UNESCO", "der": "Patrimonio mundial"}, {"izq": "Monumento", "der": "Memoria historica"}, {"izq": "Museo", "der": "Resguardo cultural"}]},
+    "2": {"titulo": "Nivel 9 - Tema 2: Musica", "parejas": [{"izq": "Abreu", "der": "Fundador de El Sistema"}, {"izq": "Orquesta", "der": "Ensamble sinfonico"}, {"izq": "Director", "der": "Guia musical"}, {"izq": "Talento", "der": "Capacidad artistica"}]},
+    "3": {"titulo": "Nivel 9 - Tema 3: Turismo", "parejas": [{"izq": "Canaima", "der": "Parque nacional"}, {"izq": "Medanos", "der": "Dunas de Coro"}, {"izq": "Mochima", "der": "Parque marino"}, {"izq": "Posada", "der": "Hospedaje turistico"}]}
+  },
+  "10": {
+    "1": {"titulo": "Nivel 10 - Tema 1: Ciudadania", "parejas": [{"izq": "Derechos", "der": "Garantias fundamentales"}, {"izq": "Deberes", "der": "Responsabilidades"}, {"izq": "Participacion", "der": "Accion civica"}, {"izq": "Comunidad", "der": "Organizacion social"}]},
+    "2": {"titulo": "Nivel 10 - Tema 2: Estado", "parejas": [{"izq": "Ejecutivo", "der": "Administra gobierno"}, {"izq": "Legislativo", "der": "Crea leyes"}, {"izq": "Judicial", "der": "Imparte justicia"}, {"izq": "Constitucion", "der": "Marco legal"}]},
+    "3": {"titulo": "Nivel 10 - Tema 3: Historia reciente", "parejas": [{"izq": "Democracia", "der": "Eleccion popular"}, {"izq": "Reforma", "der": "Cambio institucional"}, {"izq": "Dialogo", "der": "Resolucion pacifica"}, {"izq": "Pluralidad", "der": "Diversidad politica"}]}
+  },
+  "11": {
+    "1": {"titulo": "Nivel 11 - Tema 1: Avanzado I", "parejas": [{"izq": "Angostura", "der": "Discurso de 1819"}, {"izq": "Jamaica", "der": "Carta politica"}, {"izq": "Coro", "der": "Desembarco de Miranda"}, {"izq": "Quito", "der": "Campanas de liberacion"}]},
+    "2": {"titulo": "Nivel 11 - Tema 2: Avanzado II", "parejas": [{"izq": "Confederacion", "der": "Union de estados"}, {"izq": "Federalismo", "der": "Distribucion territorial"}, {"izq": "Caudillismo", "der": "Liderazgo personalista"}, {"izq": "Concordia", "der": "Acuerdo politico"}]},
+    "3": {"titulo": "Nivel 11 - Tema 3: Avanzado III", "parejas": [{"izq": "Cartografia", "der": "Representacion del territorio"}, {"izq": "Toponimia", "der": "Nombres de lugares"}, {"izq": "Cuenca", "der": "Area drenada por un rio"}, {"izq": "Relieve", "der": "Formas del terreno"}]}
+  },
+  "12": {
+    "1": {"titulo": "Nivel 12 - Tema 1: Avanzado I", "parejas": [{"izq": "Mercosur", "der": "Bloque regional"}, {"izq": "ALBA", "der": "Mecanismo de cooperacion"}, {"izq": "UNASUR", "der": "Integracion sudamericana"}, {"izq": "CARICOM", "der": "Comunidad caribena"}]},
+    "2": {"titulo": "Nivel 12 - Tema 2: Avanzado II", "parejas": [{"izq": "Soberania", "der": "Autonomia nacional"}, {"izq": "Frontera", "der": "Limite territorial"}, {"izq": "Tratado", "der": "Acuerdo internacional"}, {"izq": "Arbitraje", "der": "Solucion de controversias"}]},
+    "3": {"titulo": "Nivel 12 - Tema 3: Avanzado III", "parejas": [{"izq": "Exportacion", "der": "Venta externa"}, {"izq": "Importacion", "der": "Compra externa"}, {"izq": "Balanza", "der": "Registro comercial"}, {"izq": "Divisas", "der": "Moneda extranjera"}]}
+  },
+  "13": {
+    "1": {"titulo": "Nivel 13 - Tema 1: Avanzado I", "parejas": [{"izq": "Hidroenergia", "der": "Electricidad por agua"}, {"izq": "Embalse", "der": "Reserva hidrica"}, {"izq": "Guri", "der": "Complejo electrico"}, {"izq": "Distribucion", "der": "Red de suministro"}]},
+    "2": {"titulo": "Nivel 13 - Tema 2: Avanzado II", "parejas": [{"izq": "Biodiversidad", "der": "Variedad de especies"}, {"izq": "Conservacion", "der": "Proteccion ambiental"}, {"izq": "Reforestacion", "der": "Recuperacion de bosques"}, {"izq": "Sustentable", "der": "Uso responsable"}]},
+    "3": {"titulo": "Nivel 13 - Tema 3: Avanzado III", "parejas": [{"izq": "Arqueologia", "der": "Estudio de culturas antiguas"}, {"izq": "Etnografia", "der": "Estudio de pueblos"}, {"izq": "Tradicion oral", "der": "Memoria comunitaria"}, {"izq": "Patrimonio", "der": "Herencia historica"}]}
+  },
+  "14": {
+    "1": {"titulo": "Nivel 14 - Tema 1: Avanzado I", "parejas": [{"izq": "Planificacion", "der": "Organizacion de metas"}, {"izq": "Gestion", "der": "Ejecucion de recursos"}, {"izq": "Indicador", "der": "Medida de resultados"}, {"izq": "Evaluacion", "der": "Revision del avance"}]},
+    "2": {"titulo": "Nivel 14 - Tema 2: Avanzado II", "parejas": [{"izq": "Innovacion", "der": "Nuevas soluciones"}, {"izq": "Emprendimiento", "der": "Creacion de proyectos"}, {"izq": "Productividad", "der": "Eficiencia de produccion"}, {"izq": "Competitividad", "der": "Capacidad de destacar"}]},
+    "3": {"titulo": "Nivel 14 - Tema 3: Avanzado III", "parejas": [{"izq": "Educacion tecnica", "der": "Formacion aplicada"}, {"izq": "Universidad", "der": "Educacion superior"}, {"izq": "Beca", "der": "Apoyo economico"}, {"izq": "Investigacion", "der": "Generacion de conocimiento"}]}
+  },
+  "15": {
+    "1": {"titulo": "Nivel 15 - Tema 1: Avanzado I", "parejas": [{"izq": "Globalizacion", "der": "Interconexion mundial"}, {"izq": "Cooperacion", "der": "Trabajo entre paises"}, {"izq": "Sostenibilidad", "der": "Equilibrio a largo plazo"}, {"izq": "Agenda", "der": "Plan de prioridades"}]},
+    "2": {"titulo": "Nivel 15 - Tema 2: Avanzado II", "parejas": [{"izq": "Talento venezolano", "der": "Aporte internacional"}, {"izq": "Ciencia", "der": "Produccion de conocimiento"}, {"izq": "Arte", "der": "Expresion cultural"}, {"izq": "Deporte", "der": "Representacion nacional"}]},
+    "3": {"titulo": "Nivel 15 - Tema 3: Avanzado III", "parejas": [{"izq": "Identidad", "der": "Sentido de pertenencia"}, {"izq": "Memoria historica", "der": "Aprendizaje del pasado"}, {"izq": "Ciudadania", "der": "Participacion responsable"}, {"izq": "Futuro", "der": "Vision de desarrollo"}]}
+  }
+}

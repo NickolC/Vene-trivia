@@ -4,6 +4,7 @@ const SQLiteHelper = preload("res://Scripts/sqlite_helper.gd")
 
 var db: SQLite
 var nivel_actual: int = GlobalUsuario.nivel_maximo
+var niveles_tienda_principal: Array[int] = [11, 12, 13, 14, 15]
 
 const ESTRELLA_LLENA = preload("res://GFX/nivelpasadolleno.png")
 const ESTRELLA_VACIA = preload("res://GFX/nivelpasado.png")
@@ -70,8 +71,13 @@ func configurar_selector() -> void:
 		var btn := todos_los_botones[i] as Button
 		if btn == null:
 			continue
-		
-		if n_nivel <= nivel_disponible:
+
+		if n_nivel in niveles_tienda_principal:
+			if SQLiteHelper.nivel_principal_comprado(db, GlobalUsuario.usuario_actual_id, n_nivel):
+				desbloquear_boton(btn, n_nivel)
+			else:
+				configurar_boton_nivel_tienda_bloqueado(btn, n_nivel)
+		elif n_nivel <= nivel_disponible:
 			desbloquear_boton(btn, n_nivel)
 		else:
 			bloquear_boton(btn)
@@ -79,13 +85,32 @@ func configurar_selector() -> void:
 func desbloquear_boton(btn: Button, num: int) -> void:
 	btn.disabled = false
 	btn.modulate = Color.WHITE
+	_desconectar_senales_boton(btn)
 	var callback := Callable(self, "_on_nivel_seleccionado_desde_mapa").bind(num)
-	if not btn.pressed.is_connected(callback):
-		btn.pressed.connect(callback)
+	btn.pressed.connect(callback)
+
+func configurar_boton_nivel_tienda_bloqueado(btn: Button, num: int) -> void:
+	btn.disabled = false
+	btn.modulate = Color(0.4, 0.4, 0.4, 0.9)
+	_desconectar_senales_boton(btn)
+	var callback := Callable(self, "_on_nivel_principal_bloqueado_tienda_pressed").bind(num)
+	btn.pressed.connect(callback)
 
 func bloquear_boton(btn: Button):
 	btn.disabled = true
 	btn.modulate = Color(0.3, 0.3, 0.3, 0.8)
+
+func _desconectar_senales_boton(btn: Button) -> void:
+	for conexion in btn.pressed.get_connections():
+		btn.pressed.disconnect(conexion.callable)
+
+func _on_nivel_principal_bloqueado_tienda_pressed(num: int) -> void:
+	var pack := "A"
+	if num in [13, 14]:
+		pack = "B"
+	elif num == 15:
+		pack = "C"
+	_mostrar_alerta("Nivel %d bloqueado. Compra el Pack %s en la tienda (1000 Bs)." % [num, pack])
 
 # NUEVA FUNCIÓN INTERMEDIA: Se activa al tocar cualquier botón de nivel del mapa
 func _on_nivel_seleccionado_desde_mapa(num: int) -> void:

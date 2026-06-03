@@ -1,0 +1,152 @@
+{
+  "1": [
+    {"termino": "El Libertador", "pista": "Titulo de Simon Bolivar"},
+    {"termino": "19 de Abril", "pista": "Inicio del proceso independentista"},
+    {"termino": "Caracas", "pista": "Ciudad capital de Venezuela"},
+    {"termino": "Bandera", "pista": "Simbolo patrio tricolor"},
+    {"termino": "Turpial", "pista": "Ave nacional"},
+    {"termino": "Araguaney", "pista": "Arbol nacional"},
+    {"termino": "Carabobo", "pista": "Batalla clave de 1821"},
+    {"termino": "Miranda", "pista": "Precursor de la independencia"}
+  ],
+  "2": [
+    {"termino": "Amalivaca", "pista": "Figura mitica del Orinoco"},
+    {"termino": "Orinoco", "pista": "Rio mas largo de Venezuela"},
+    {"termino": "Cubagua", "pista": "Isla asociada a las perlas"},
+    {"termino": "Cumanacoa", "pista": "Zona historica oriental"},
+    {"termino": "Margarita", "pista": "Isla del Caribe venezolano"},
+    {"termino": "Pueblo indigena", "pista": "Primeros habitantes"},
+    {"termino": "Cacique", "pista": "Jefe indigena"},
+    {"termino": "Mito", "pista": "Relato tradicional"}
+  ],
+  "3": [
+    {"termino": "Bolivar", "pista": "Libertador de cinco naciones"},
+    {"termino": "Sucre", "pista": "Gran Mariscal de Ayacucho"},
+    {"termino": "Urdaneta", "pista": "Procer zuliano"},
+    {"termino": "Paez", "pista": "Lider de los llanos"},
+    {"termino": "Ribas", "pista": "Vencedor de La Victoria"},
+    {"termino": "Boves", "pista": "Caudillo realista"},
+    {"termino": "Carabobo", "pista": "Batalla decisiva"},
+    {"termino": "Boyaca", "pista": "Batalla en Nueva Granada"}
+  ],
+  "4": [
+    {"termino": "Acta", "pista": "Documento de independencia"},
+    {"termino": "Congreso", "pista": "Asamblea legislativa"},
+    {"termino": "Constitucion", "pista": "Norma juridica principal"},
+    {"termino": "Republica", "pista": "Forma de gobierno"},
+    {"termino": "Cabildo", "pista": "Institucion municipal colonial"},
+    {"termino": "Junta", "pista": "Gobierno provisional"},
+    {"termino": "Federal", "pista": "Modelo politico territorial"},
+    {"termino": "Central", "pista": "Modelo con poder concentrado"}
+  ],
+  "5": [
+    {"termino": "Petroleo", "pista": "Principal recurso energetico"},
+    {"termino": "Barroso", "pista": "Pozo emblematico de 1922"},
+    {"termino": "PDVSA", "pista": "Empresa petrolera estatal"},
+    {"termino": "Zulia", "pista": "Estado de alta produccion"},
+    {"termino": "Orinoco", "pista": "Faja petrolifera"},
+    {"termino": "Refineria", "pista": "Procesa crudo"},
+    {"termino": "Exportacion", "pista": "Venta al exterior"},
+    {"termino": "Ingresos", "pista": "Renta nacional"}
+  ],
+  "6": [
+    {"termino": "UCV", "pista": "Universidad Central de Venezuela"},
+    {"termino": "Andres Bello", "pista": "Humanista venezolano"},
+    {"termino": "Vargas", "pista": "Primer rector republicano"},
+    {"termino": "Convit", "pista": "Cientifico y medico"},
+    {"termino": "Villanueva", "pista": "Arquitecto de la Ciudad UCV"},
+    {"termino": "Orquesta", "pista": "Sistema Nacional de Musica"},
+    {"termino": "Abreu", "pista": "Fundador de El Sistema"},
+    {"termino": "Investigacion", "pista": "Base del desarrollo cientifico"}
+  ],
+  "7": [
+    {"termino": "Parque Nacional", "pista": "Area natural protegida"},
+    {"termino": "Angel", "pista": "Salto mas alto del mundo"},
+    {"termino": "Llanos", "pista": "Region de sabanas"},
+    {"termino": "Andes", "pista": "Cordillera occidental"},
+    {"termino": "Delta", "pista": "Zona de desembocadura del Orinoco"},
+    {"termino": "Caribe", "pista": "Mar al norte de Venezuela"},
+    {"termino": "Guayana", "pista": "Region sur oriental"},
+    {"termino": "Pico Bolivar", "pista": "Cima mas alta nacional"}
+  ],
+  "8": [
+    {"termino": "Arepa", "pista": "Plato tradicional de maiz"},
+    {"termino": "Joropo", "pista": "Genero musical llanero"},
+    {"termino": "Cuatro", "pista": "Instrumento nacional"},
+    {"termino": "Tambor", "pista": "Ritmo afrovenezolano"},
+    {"termino": "Gaita", "pista": "Genero zuliano"},
+    {"termino": "Hallaca", "pista": "Comida tipica decembrina"},
+    {"termino": "Parranda", "pista": "Celebracion musical navidena"},
+    {"termino": "Tradicion", "pista": "Costumbre transmitida"}
+  ],
+  "9": [
+    {"termino": "Guerrilla", "pista": "Estrategia militar irregular"},
+    {"termino": "Ejercito", "pista": "Fuerza militar terrestre"},
+    {"termino": "Campana Admirable", "pista": "Operacion liderada por Bolivar"},
+    {"termino": "Llaneros", "pista": "Combatientes de las sabanas"},
+    {"termino": "Patriotas", "pista": "Defensores de la independencia"},
+    {"termino": "Realistas", "pista": "Leales a la corona"},
+    {"termino": "Estrategia", "pista": "Plan para lograr la victoria"},
+    {"termino": "Batallon", "pista": "Unidad militar"}
+  ],
+  "10": [
+    {"termino": "Abolicion", "pista": "Fin de la esclavitud"},
+    {"termino": "Ciudadania", "pista": "Condicion de derechos civiles"},
+    {"termino": "Educacion", "pista": "Base de movilidad social"},
+    {"termino": "Sufragio", "pista": "Derecho al voto"},
+    {"termino": "Democracia", "pista": "Sistema de participacion politica"},
+    {"termino": "Constituyente", "pista": "Asamblea para redactar cartas"},
+    {"termino": "Reforma", "pista": "Cambio legal o institucional"},
+    {"termino": "Derechos", "pista": "Garantias fundamentales"}
+  ],
+  "11": [
+    {"termino": "Ferrocarril", "pista": "Transporte sobre rieles"},
+    {"termino": "Telegrafo", "pista": "Comunicacion electrica historica"},
+    {"termino": "Puente", "pista": "Infraestructura de conexion"},
+    {"termino": "Puerto", "pista": "Intercambio maritimo"},
+    {"termino": "Aduana", "pista": "Control de mercancias"},
+    {"termino": "Comercio", "pista": "Intercambio economico"},
+    {"termino": "Modernizacion", "pista": "Proceso de actualizacion"},
+    {"termino": "Obra publica", "pista": "Proyecto financiado por el Estado"}
+  ],
+  "12": [
+    {"termino": "Caracas", "pista": "Distrito capital"},
+    {"termino": "Maracaibo", "pista": "Ciudad del occidente"},
+    {"termino": "Valencia", "pista": "Capital de Carabobo"},
+    {"termino": "Barquisimeto", "pista": "Capital de Lara"},
+    {"termino": "Maturin", "pista": "Capital de Monagas"},
+    {"termino": "Merida", "pista": "Ciudad andina"},
+    {"termino": "Puerto La Cruz", "pista": "Ciudad costera oriental"},
+    {"termino": "San Cristobal", "pista": "Capital tachirense"}
+  ],
+  "13": [
+    {"termino": "Nacionalizacion", "pista": "Control estatal de un sector"},
+    {"termino": "Industrializacion", "pista": "Crecimiento del sector fabril"},
+    {"termino": "Urbanizacion", "pista": "Expasion de ciudades"},
+    {"termino": "Migracion", "pista": "Movimiento de poblacion"},
+    {"termino": "Infraestructura", "pista": "Obras para servicios"},
+    {"termino": "Servicios", "pista": "Actividades terciarias"},
+    {"termino": "Agricultura", "pista": "Cultivo de la tierra"},
+    {"termino": "Tecnologia", "pista": "Aplicacion de conocimiento"}
+  ],
+  "14": [
+    {"termino": "Panteon", "pista": "Lugar de heroes nacionales"},
+    {"termino": "Museo", "pista": "Institucion de preservacion"},
+    {"termino": "Archivo", "pista": "Repositorio documental"},
+    {"termino": "Biblioteca", "pista": "Centro de libros"},
+    {"termino": "Cronica", "pista": "Relato historico"},
+    {"termino": "Patrimonio", "pista": "Herencia cultural"},
+    {"termino": "Monumento", "pista": "Obra conmemorativa"},
+    {"termino": "Memoria", "pista": "Recuerdo colectivo"}
+  ],
+  "15": [
+    {"termino": "Integracion", "pista": "Trabajo en conjunto regional"},
+    {"termino": "Diplomacia", "pista": "Relacion entre estados"},
+    {"termino": "Exportacion", "pista": "Venta internacional"},
+    {"termino": "Cultura", "pista": "Identidad y expresion social"},
+    {"termino": "Turismo", "pista": "Actividad economica por visitantes"},
+    {"termino": "Innovacion", "pista": "Creacion de nuevas soluciones"},
+    {"termino": "Talento", "pista": "Capacidad destacada"},
+    {"termino": "Venezuela", "pista": "Pais de nuestra trivia"}
+  ]
+}

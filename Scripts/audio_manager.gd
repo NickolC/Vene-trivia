@@ -68,6 +68,7 @@ func _process(_delta: float) -> void:
 func _setup_players() -> void:
 	_music_player = AudioStreamPlayer.new()
 	_music_player.name = "MusicPlayer"
+	_music_player.bus = &"Music"
 	_music_player.volume_db = -8.0
 	_menu_music_stream = _load_looped_stream(MENU_MUSIC_PATH)
 	_music_player.stream = _menu_music_stream
@@ -75,12 +76,14 @@ func _setup_players() -> void:
 
 	_button_sfx_player = AudioStreamPlayer.new()
 	_button_sfx_player.name = "ButtonSfxPlayer"
+	_button_sfx_player.bus = &"SFX"
 	_button_sfx_player.volume_db = -10.0
 	_button_sfx_player.stream = load(BUTTON_SFX_PATH)
 	add_child(_button_sfx_player)
 
 	_transition_sfx_player = AudioStreamPlayer.new()
 	_transition_sfx_player.name = "TransitionSfxPlayer"
+	_transition_sfx_player.bus = &"SFX"
 	_transition_sfx_player.volume_db = -7.0
 	_transition_sfx_player.stream = load(TRANSITION_SFX_PATH)
 	add_child(_transition_sfx_player)

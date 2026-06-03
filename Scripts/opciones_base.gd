@@ -1,24 +1,5 @@
 extends Control
 
-const RESOLUTIONS: Dictionary = {
-	0: Vector2i(1920, 1080),
-	1: Vector2i(1680, 1050),
-	2: Vector2i(1600, 900),
-	3: Vector2i(1440, 900),
-	4: Vector2i(1400, 1050),
-	5: Vector2i(1366, 768),
-	6: Vector2i(1360, 768),
-	7: Vector2i(1280, 1024),
-	8: Vector2i(1280, 960),
-	9: Vector2i(1280, 800),
-	10: Vector2i(1280, 768),
-	11: Vector2i(1280, 720),
-	12: Vector2i(1280, 600),
-	13: Vector2i(1152, 864),
-	14: Vector2i(1024, 768),
-	15: Vector2i(800,600)
-}
-
 @onready var slider_brillo: HSlider = $"TextureRect3/Brillo"
 @onready var slider_gamma: HSlider = $"TextureRect3/Gamma"
 @onready var check_full: CheckButton = $"TextureRect3/Pantalla Completa"
@@ -56,8 +37,8 @@ func aplicar_todo() -> void:
 			option_res.disabled = false
 		
 		# 2. SOLO si está en modo ventana, le exigimos a la pantalla cambiar su tamaño
-		if RESOLUTIONS.has(Configuracion.res_index):
-			var nueva_resolucion: Vector2i = RESOLUTIONS[Configuracion.res_index]
+		if Configuracion.RESOLUTIONS.has(Configuracion.res_index):
+			var nueva_resolucion: Vector2i = Configuracion.RESOLUTIONS[Configuracion.res_index]
 			DisplayServer.window_set_size(nueva_resolucion)
 			
 			# Centrar la ventana en el monitor para que no quede cortada abajo/derecha
@@ -65,11 +46,11 @@ func aplicar_todo() -> void:
 			DisplayServer.window_set_position(screen_center)
 
 func _on_resolucion_item_selected(index: int) -> void:
-	if not RESOLUTIONS.has(index):
+	if not Configuracion.RESOLUTIONS.has(index):
 		return
 
 	Configuracion.res_index = index
-	var target_resolution: Vector2i = RESOLUTIONS[index]
+	var target_resolution: Vector2i = Configuracion.RESOLUTIONS[index]
 	DisplayServer.window_set_size(target_resolution)
 
 	if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_WINDOWED:
@@ -88,8 +69,8 @@ func _on_pantalla_completa_toggled(toggled_on: bool) -> void:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 		
 		# Forzar a recuperar la resolución de la lista al quitar la pantalla completa
-		if RESOLUTIONS.has(option_res.selected):
-			var res = RESOLUTIONS[option_res.selected]
+		if Configuracion.RESOLUTIONS.has(option_res.selected):
+			var res = Configuracion.RESOLUTIONS[option_res.selected]
 			DisplayServer.window_set_size(res)
 
 func _on_brillo_value_changed(value: float) -> void:

@@ -3,68 +3,52 @@ extends "res://Scripts/opciones_base.gd"
 var db : SQLite
 var nivel_actual: int 
 
-@onready var volumen_maestro = $"TextureRect3/Volumen Maestro"
-@onready var musica = $"TextureRect3/Musica"
+@onready var volumen_maestro = $"TextureRect3/Volumen Maestro2"
+@onready var musica = $"TextureRect3/Musica2"
 @onready var efectos = $"TextureRect3/Efectos"
 
 
 func _ready():
-	# En el script de tu Nivel o Escena de Juego
-	db = SQLite.new()
-	db.path = "res://DB/venetrivia.db"
-	db.open_db()
-	
-	var query = ("SELECT * FROM Alumnos WHERE NM_ALUMNO = '%s';" % GlobalUsuario.nombre_alumno)
-	db.query(query)
-	
-	var resultado = db.query_result # Esto devuelve un Array de Diccionarios
-	if resultado.size() > 0:
-		# ¡Éxito! El primer elemento [0] tiene nuestro ID
-		GlobalUsuario.nombre_alumno = resultado[0]["NM_ALUMNO"]
-		print("Sesión iniciada como: ", GlobalUsuario.nombre_alumno)
-	else:
-		print("El alumno no existe en la base de datos.")
-	
-	# Al abrir el menú, cargamos lo que ya estaba guardado
 	Configuracion.cargar_ajustes()
 	actualizar_ui_con_valores()
-	
-# 1. Comprobamos si el jugador ya tiene un índice de resolución guardado válido
-	# (Asumiendo que por defecto inicializas Configuracion.res_index en un valor negativo como -1 si es nuevo)
+
+	if volumen_maestro and not volumen_maestro.value_changed.is_connected(_on_volumen_maestro_value_changed):
+		volumen_maestro.value_changed.connect(_on_volumen_maestro_value_changed)
+	if musica and not musica.value_changed.is_connected(_on_musica_value_changed):
+		musica.value_changed.connect(_on_musica_value_changed)
+	if efectos and not efectos.value_changed.is_connected(_on_efectos_value_changed):
+		efectos.value_changed.connect(_on_efectos_value_changed)
+
 	if "res_index" in Configuracion and Configuracion.res_index >= 0:
-		# Si ya hay una guardada, seleccionamos ese ítem en el OptionButton
 		option_res.selected = Configuracion.res_index
 		_on_resolucion_item_selected(Configuracion.res_index)
 	else:
-		# 2. Si es la primera vez (no hay guardada), detectamos la resolución máxima del monitor
 		var resolucion_pantalla: Vector2i = DisplayServer.screen_get_size()
-		var indice_ideal: int = 0 # Por si acaso, dejamos el 0 de respaldo
-		
-		# Recorremos tu diccionario RESOLUTIONS para buscar la que mejor se adapte sin pasarse
-		for index in RESOLUTIONS:
-			var res_posible: Vector2i = RESOLUTIONS[index]
-			# Buscamos la primera resolución en tu lista que sea igual o menor a la del monitor
+		var indice_ideal: int = 0
+		for index in Configuracion.RESOLUTIONS:
+			var res_posible: Vector2i = Configuracion.RESOLUTIONS[index]
 			if res_posible.x <= resolucion_pantalla.x and res_posible.y <= resolucion_pantalla.y:
 				indice_ideal = index
-				break # Rompemos el ciclo porque tu lista va de mayor a menor
-		
-		# 3. Aplicamos el índice ideal detectado automáticamente
+				break
 		option_res.selected = indice_ideal
-		Configuracion.res_index = indice_ideal # Lo guardamos en memoria
+		Configuracion.res_index = indice_ideal
 		_on_resolucion_item_selected(indice_ideal)
-	# Revisa si ya estamos en pantalla completa y marca el botón
+
 	var es_full = DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN
 	$"TextureRect3/Pantalla Completa".button_pressed = es_full
 
 
 func actualizar_ui_con_valores():
-	# Sincronizamos los nodos visuales con las variables del Singleton
 	slider_brillo.value = Configuracion.brillo
 	slider_gamma.value = Configuracion.saturacion
 	check_full.button_pressed = Configuracion.fullscreen
 	option_res.selected = Configuracion.res_index
-	
-	# Aplicamos los cambios al motor (opcional, si quieres que se vea al instante)
+	if volumen_maestro:
+		volumen_maestro.value = Configuracion.volumen_maestro * 100.0
+	if musica:
+		musica.value = Configuracion.volumen_musica * 100.0
+	if efectos:
+		efectos.value = Configuracion.volumen_sfx * 100.0
 	aplicar_todo()
 
 func aplicar_todo():
@@ -84,7 +68,7 @@ func aplicar_todo():
 
 func _on_resolucion_item_selected(index: int) -> void:
 	# Obtenemos la resolución del diccionario usando el índice seleccionado
-	var target_resolution = RESOLUTIONS[index]
+	var target_resolution = Configuracion.RESOLUTIONS[index]
 	
 	# Cambiamos el tamaño de la ventana (Solo Godot 4+)
 	DisplayServer.window_set_size(target_resolution)
@@ -107,23 +91,28 @@ func _on_pantalla_completa_toggled(toggled_on: bool) -> void:
 	pass # Replace with function body.
 
 func _on_brillo_value_changed(value: float) -> void:
-	# Guardamos el valor globalmente
 	Configuracion.brillo = value
-	
-	# Buscamos el WorldEnvironment que esté vivo en la escena actual
 	var world_env = get_tree().root.find_child("WorldGamma", true, false)
 	if world_env:
 		Configuracion.aplicar_ajustes(world_env.environment)
-	pass # Replace with function body.
 
 func _on_gamma_value_changed(value: float) -> void:
-	# Guardamos el valor globalmente
 	Configuracion.saturacion = value
-	# Buscamos el WorldEnvironment que esté vivo en la escena actual
 	var world_env = get_tree().root.find_child("WorldGamma", true, false)
 	if world_env:
 		Configuracion.aplicar_ajustes(world_env.environment)
-	pass # Replace with function body.
+
+func _on_volumen_maestro_value_changed(value: float) -> void:
+	Configuracion.volumen_maestro = value / 100.0
+	Configuracion.aplicar_volumenes()
+
+func _on_musica_value_changed(value: float) -> void:
+	Configuracion.volumen_musica = value / 100.0
+	Configuracion.aplicar_volumenes()
+
+func _on_efectos_value_changed(value: float) -> void:
+	Configuracion.volumen_sfx = value / 100.0
+	Configuracion.aplicar_volumenes()
 
 # --- BOTÓN GUARDAR ---
 func _on_guardar_pressed() -> void:
@@ -183,17 +172,18 @@ func _on_volvermenu_pressed() -> void:
 	
 	# Esta es la función que ya deberías tener para tu botón de "Guardar"
 func guardar_ajustes():
-	# Actualizamos las variables del Singleton (Autoload) con los valores de la UI
-	Configuracion.brillo = slider_brillo.value
-	Configuracion.saturacion = slider_gamma.value
-	Configuracion.contraste = slider_gamma.value
-	Configuracion.volumen_maestro = volumen_maestro.value
-	Configuracion.volumen_musica = musica.value
-	Configuracion.volumen_sfx = efectos.value
-	Configuracion.fullscreen = check_full.button_pressed
-	Configuracion.res_index = option_res.selected
-	
-	# Llamamos al método del Singleton que escribe el archivo en el disco (user://)
+	Configuracion.brillo          = slider_brillo.value
+	Configuracion.saturacion      = slider_gamma.value
+	Configuracion.contraste       = slider_gamma.value
+	Configuracion.fullscreen      = check_full.button_pressed
+	Configuracion.res_index       = option_res.selected
+	if volumen_maestro:
+		Configuracion.volumen_maestro = volumen_maestro.value / 100.0
+	if musica:
+		Configuracion.volumen_musica  = musica.value / 100.0
+	if efectos:
+		Configuracion.volumen_sfx     = efectos.value / 100.0
+	Configuracion.aplicar_volumenes()
 	Configuracion.guardar_ajustes()
 
 func _on_salir_pressed() -> void:

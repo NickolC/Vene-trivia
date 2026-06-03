@@ -1,6 +1,7 @@
 extends Control
 
 const SQLiteHelper = preload("res://Scripts/sqlite_helper.gd")
+const ReporteDocente = preload("res://Scripts/reporte_docente.gd")
 
 enum VistaDocente {
 	GESTION,
@@ -51,6 +52,7 @@ func _ready() -> void:
 	_setup_tree_rendimiento_detalle()
 	_setup_selectores_detalle()
 	_set_vista(VistaDocente.GESTION)
+	_agregar_botones_reporte()
 
 func _exit_tree() -> void:
 	SQLiteHelper.close_db_connection(db)
@@ -439,3 +441,91 @@ func _on_btn_volver_pressed() -> void:
 func _set_estado_edicion(mensaje: String, color: Color) -> void:
 	label_estado_edicion.text = mensaje
 	label_estado_edicion.modulate = color
+
+func _agregar_botones_reporte() -> void:
+	var navbar := get_node_or_null("MainPanel/Margin/VBox/NavBar")
+	if navbar == null:
+		return
+
+	var btn_general := Button.new()
+	btn_general.text = "REPORTE GENERAL"
+	_estilizar_boton_reporte(btn_general)
+	btn_general.pressed.connect(_on_btn_reporte_general_pressed)
+	navbar.add_child(btn_general)
+
+	var btn_alumno := Button.new()
+	btn_alumno.text = "REPORTE ALUMNO"
+	_estilizar_boton_reporte(btn_alumno)
+	btn_alumno.pressed.connect(_on_btn_reporte_alumno_pressed)
+	navbar.add_child(btn_alumno)
+
+func _estilizar_boton_reporte(btn: Button) -> void:
+	btn.clip_contents = true
+	btn.custom_minimum_size = Vector2(220, 48)
+	btn.flat = true
+	btn.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+	btn.add_theme_color_override("font_color", Color(0.08, 0.08, 0.08, 1.0))
+	btn.add_theme_color_override("font_hover_color", Color(0.12, 0.12, 0.12, 1.0))
+	btn.add_theme_color_override("font_pressed_color", Color(0.08, 0.08, 0.08, 1.0))
+	btn.add_theme_color_override("font_disabled_color", Color(0.56, 0.47, 0.40, 0.85))
+
+	var font := btn_canvas_rendimiento.get_theme_font("font")
+	if font:
+		btn.add_theme_font_override("font", font)
+	btn.add_theme_font_size_override("font_size", 20)
+
+	btn.add_theme_stylebox_override("normal", _crear_stylebox_reporte(Color(0.882, 0.702, 0.490, 1.0), Color(0.506, 0.286, 0.231, 0.90)))
+	btn.add_theme_stylebox_override("hover", _crear_stylebox_reporte(Color(0.925, 0.760, 0.560, 1.0), Color(0.506, 0.286, 0.231, 1.0)))
+	btn.add_theme_stylebox_override("pressed", _crear_stylebox_reporte(Color(0.790, 0.610, 0.430, 1.0), Color(0.400, 0.220, 0.170, 1.0)))
+	btn.add_theme_stylebox_override("disabled", _crear_stylebox_reporte(Color(0.860, 0.790, 0.690, 0.95), Color(0.580, 0.470, 0.390, 0.70)))
+
+func _crear_stylebox_reporte(color_fondo: Color, color_borde: Color) -> StyleBoxFlat:
+	var estilo := StyleBoxFlat.new()
+	estilo.bg_color = color_fondo
+	estilo.border_width_left = 2
+	estilo.border_width_top = 2
+	estilo.border_width_right = 2
+	estilo.border_width_bottom = 2
+	estilo.border_color = color_borde
+	estilo.corner_radius_top_left = 6
+	estilo.corner_radius_top_right = 6
+	estilo.corner_radius_bottom_right = 6
+	estilo.corner_radius_bottom_left = 6
+	return estilo
+
+func _on_btn_reporte_general_pressed() -> void:
+	if db == null:
+		Alertas.mostrar_alerta("Sin conexion a la base de datos.", 2.0)
+		return
+	var html := ReporteDocente.generar_general(db)
+	ReporteDocente.guardar_y_abrir(html, "reporte_general.html")
+	Alertas.mostrar_alerta("Reporte general generado (HTML + PDF).", 2.0)
+	SQLiteHelper.log_activity(db, "docente", _docente_nombre, "genero_reporte_general")
+
+func _on_btn_reporte_alumno_pressed() -> void:
+	if db == null:
+		Alertas.mostrar_alerta("Sin conexion a la base de datos.", 2.0)
+		return
+	var alumno_id := -1
+	var alumno_nombre := ""
+
+	if _alumno_seleccionado_id > 0:
+		alumno_id = _alumno_seleccionado_id
+		db.query("SELECT NM_ALUMNO FROM Alumnos WHERE NU_USU = %d LIMIT 1;" % alumno_id)
+		if not db.query_result.is_empty():
+			alumno_nombre = str(db.query_result[0].get("NM_ALUMNO", "alumno"))
+	else:
+		var sel_id := selector_alumno_detalle.get_selected_id()
+		if sel_id > 0:
+			alumno_id = sel_id
+			alumno_nombre = selector_alumno_detalle.get_item_text(selector_alumno_detalle.get_selected())
+
+	if alumno_id <= 0:
+		Alertas.mostrar_alerta("Selecciona un alumno primero.", 2.0)
+		return
+
+	var html := ReporteDocente.generar_por_alumno(db, alumno_id, alumno_nombre)
+	var archivo := "reporte_%s.html" % alumno_nombre.to_lower().replace(" ", "_")
+	ReporteDocente.guardar_y_abrir(html, archivo)
+	Alertas.mostrar_alerta("Reporte de %s generado (HTML + PDF)." % alumno_nombre, 2.0)
+	SQLiteHelper.log_activity(db, "docente", _docente_nombre, "genero_reporte_alumno:%d" % alumno_id)

@@ -1,8 +1,6 @@
 # Godot 4+ specific ignores
 .godot/
-<<<<<<< HEAD
 /android/
-=======
 .nomedia
 
 # Godot-specific ignores
@@ -17,4 +15,8 @@ export_credentials.cfg
 .mono/
 data_*/
 mono_crash.*.json
->>>>>>> 2cc3d55831823e1922b8b802b98f6115c5ed579e
+
+# Godot MCP tooling
+.env
+godot-mcp/node_modules/
+godot-mcp/build/

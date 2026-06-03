@@ -156,20 +156,20 @@ theme_override_fonts/font = ExtResource("2_1boc4")
 theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
-autowrap_mode = 1
+autowrap_mode = 3
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=126761877]
 
 [node name="CenterContainer" type="CenterContainer" parent="CanvasLayer2" unique_id=855366649]
 anchors_preset = -1
-anchor_left = 0.499
-anchor_top = 0.61
-anchor_right = 0.499
-anchor_bottom = 0.61
-offset_left = -59.179016
-offset_top = -51.10901
-offset_right = 60.820984
-offset_bottom = 50.89099
+anchor_left = 0.05
+anchor_top = 0.55
+anchor_right = 0.95
+anchor_bottom = 0.72
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -185,12 +185,13 @@ theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 15
 
 [node name="Label" type="Label" parent="CanvasLayer2/CenterContainer/PanelContainer/MarginContainer" unique_id=1656261507]
-custom_minimum_size = Vector2(60, 0)
+custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_1boc4")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 28
 text = "*"
+autowrap_mode = 3
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -253,9 +254,9 @@ one_shot = true
 
 [node name="ProgressBar" type="ProgressBar" parent="CanvasLayer2/Timer" unique_id=2017558069]
 offset_left = 202.0
-offset_top = 684.0
+offset_top = 630.0
 offset_right = 1564.0
-offset_bottom = 694.0
+offset_bottom = 642.0
 theme_override_styles/background = SubResource("StyleBoxFlat_1boc4")
 theme_override_styles/fill = SubResource("StyleBoxFlat_suadl")
 max_value = 10.0
@@ -263,9 +264,14 @@ show_percentage = false
 
 [node name="Buttoncomodin" type="Button" parent="." unique_id=607848530]
 layout_mode = 0
-offset_left = 1578.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+offset_left = -243.0
 offset_top = 6.0
-offset_right = 1713.0
+offset_right = -108.0
 offset_bottom = 129.0
 icon = ExtResource("5_oyj17")
 flat = true
@@ -274,9 +280,14 @@ expand_icon = true
 
 [node name="Buttonpublico" type="Button" parent="." unique_id=735381661]
 layout_mode = 0
-offset_left = 1446.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+offset_left = -375.0
 offset_top = 5.0
-offset_right = 1577.0
+offset_right = -244.0
 offset_bottom = 130.0
 icon = ExtResource("6_3mvlh")
 flat = true
@@ -285,8 +296,13 @@ expand_icon = true
 
 [node name="Buttonporcentaje" type="Button" parent="." unique_id=2075701579]
 layout_mode = 0
-offset_left = 1311.0
-offset_right = 1442.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+offset_left = -510.0
+offset_right = -379.0
 offset_bottom = 135.0
 icon = ExtResource("7_012ah")
 flat = true
@@ -706,9 +722,14 @@ expand_icon = true
 
 [node name="Labelpuntaje" type="Label" parent="." unique_id=2039098977]
 layout_mode = 0
-offset_left = 1711.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+offset_left = -110.0
 offset_top = 19.0
-offset_right = 1809.0
+offset_right = -12.0
 offset_bottom = 124.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -811,6 +832,27 @@ theme_override_constants/outline_size = 25
 theme_override_fonts/font = ExtResource("2_1boc4")
 theme_override_font_sizes/font_size = 60
 text = "Puntos: *"
+
+
+[node name="LabelDinero" type="Label" parent="PantallaResultados/Panel" unique_id=2100000001]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35900003
+anchor_top = 0.605
+anchor_right = 0.35900003
+anchor_bottom = 0.605
+offset_left = -157.05002
+offset_top = -22.0
+offset_right = 156.94998
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(1, 0.87, 0.2, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("2_1boc4")
+theme_override_font_sizes/font_size = 42
+text = ""
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="PantallaResultados/Panel" unique_id=355517911]
 layout_mode = 1

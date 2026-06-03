@@ -8,6 +8,12 @@ static func open_db_connection() -> SQLite:
 	database.open_db()
 	ensure_niveles_table(database)
 	ensure_niveles_intentos_table(database)
+	ensure_minijuegos_table(database)
+	ensure_logros_table(database)
+	ensure_sopa_tables(database)
+	ensure_columnas_tables(database)
+	ensure_memoria_tables(database)
+	ensure_alumnos_minijuego_columns(database)
 	return database
 
 static func escape(value: String) -> String:
@@ -134,6 +140,185 @@ static func ensure_niveles_intentos_table(database: SQLite) -> void:
 	"FE_INTENTO TEXT NOT NULL);"
 	database.query(query)
 	database.query("CREATE INDEX IF NOT EXISTS idx_niveles_intentos_usu_nivel ON niveles_intentos (NU_USU, NU_NIVEL);")
+
+static func mirror_minijuegos_resultados(database: SQLite, id_usu: int, nombre: String, minijuego: String, pts: int, estrellas: int) -> void:
+	if database == null:
+		return
+	var fecha := Time.get_datetime_string_from_system().replace("T", " ")
+	database.query(
+		"SELECT NU_ID, NU_INTENTOS, NU_PUNTOS, NU_ESTRELLAS FROM minijuegos_resultados WHERE NU_USU = %d AND NM_MINIJUEGO = '%s' LIMIT 1;" % [id_usu, escape(minijuego)]
+	)
+	if database.query_result.is_empty():
+		database.query(
+			"INSERT INTO minijuegos_resultados (NU_USU, NM_ALUMNO, NM_MINIJUEGO, NU_INTENTOS, NU_PUNTOS, NU_ESTRELLAS, FE_ULTIMO) VALUES (%d, '%s', '%s', 1, %d, %d, '%s');" % [id_usu, escape(nombre), escape(minijuego), pts, estrellas, escape(fecha)]
+		)
+	else:
+		var row := database.query_result[0]
+		var intentos := int(row.get("NU_INTENTOS", 0)) + 1
+		var mejor_pts := maxi(pts, int(row.get("NU_PUNTOS", 0)))
+		var mejor_est := maxi(estrellas, int(row.get("NU_ESTRELLAS", 0)))
+		var nu_id := int(row.get("NU_ID", 0))
+		database.query(
+			"UPDATE minijuegos_resultados SET NU_INTENTOS = %d, NU_PUNTOS = %d, NU_ESTRELLAS = %d, FE_ULTIMO = '%s' WHERE NU_ID = %d;" % [intentos, mejor_pts, mejor_est, escape(fecha), nu_id]
+		)
+
+static func nivel_comprado(database: SQLite, id_usu: int, tp_minijuego: String, nv: int) -> bool:
+	if database == null:
+		return false
+	var q := "SELECT 1 FROM Tienda WHERE NU_USU = %d AND TP_MINIJUEGO = '%s' AND NV_EXTRA = %d LIMIT 1;" % [id_usu, escape(tp_minijuego), nv]
+	database.query(q)
+	return not database.query_result.is_empty()
+
+static func nivel_principal_comprado(database: SQLite, id_usu: int, nv: int) -> bool:
+	return nivel_comprado(database, id_usu, "niveles", nv)
+
+static func get_pack_niveles(pack_id: int) -> Array[int]:
+	match pack_id:
+		1:
+			return [11, 12]
+		2:
+			return [13, 14]
+		3:
+			return [15]
+		_:
+			return []
+
+static func pack_niveles_comprado(database: SQLite, id_usu: int, pack_id: int) -> bool:
+	if database == null:
+		return false
+	var niveles := get_pack_niveles(pack_id)
+	if niveles.is_empty():
+		return false
+	for nivel in niveles:
+		if not nivel_principal_comprado(database, id_usu, nivel):
+			return false
+	return true
+
+static func puede_comprar_pack_niveles(database: SQLite, id_usu: int, pack_id: int) -> bool:
+	if database == null:
+		return false
+	if pack_id < 1 or pack_id > 3:
+		return false
+	if pack_niveles_comprado(database, id_usu, pack_id):
+		return false
+	if pack_id == 1:
+		return true
+	return pack_niveles_comprado(database, id_usu, pack_id - 1)
+
+static func comprar_pack_niveles(database: SQLite, id_usu: int, costo: int, pack_id: int) -> Dictionary:
+	if database == null:
+		return {"ok": false, "mensaje": "Sin conexion de base de datos."}
+	if not puede_comprar_pack_niveles(database, id_usu, pack_id):
+		if pack_niveles_comprado(database, id_usu, pack_id):
+			return {"ok": false, "mensaje": "Ese pack ya fue comprado."}
+		return {"ok": false, "mensaje": "Debes comprar los packs anteriores primero."}
+
+	var niveles := get_pack_niveles(pack_id)
+	if niveles.is_empty():
+		return {"ok": false, "mensaje": "Pack invalido."}
+
+	database.query("SELECT NU_DINERO FROM Alumnos WHERE NU_USU = %d LIMIT 1;" % id_usu)
+	if database.query_result.is_empty():
+		return {"ok": false, "mensaje": "No se encontro el alumno."}
+
+	var dinero := int(database.query_result[0].get("NU_DINERO", 0))
+	if dinero < costo:
+		return {"ok": false, "mensaje": "No tienes suficiente dinero. Necesitas %d Bs." % costo}
+
+	for nivel in niveles:
+		database.query("INSERT OR IGNORE INTO Tienda (NU_USU, TP_MINIJUEGO, NV_EXTRA) VALUES (%d, 'niveles', %d);" % [id_usu, nivel])
+
+	database.query("UPDATE Alumnos SET NU_DINERO = NU_DINERO - %d WHERE NU_USU = %d;" % [costo, id_usu])
+	return {"ok": true, "mensaje": "Pack comprado con exito.", "niveles": niveles}
+
+static func ensure_sopa_tables(database: SQLite) -> void:
+	if database == null:
+		return
+	database.query(
+		"CREATE TABLE IF NOT EXISTS sopa_intentos (" +
+		"NU_INTENTO INTEGER PRIMARY KEY AUTOINCREMENT, " +
+		"NU_USU INTEGER NOT NULL, " +
+		"NM_ALUMNO TEXT NOT NULL, " +
+		"NU_NIVEL INTEGER NOT NULL, " +
+		"NU_PUNTOS INTEGER NOT NULL DEFAULT 0, " +
+		"NU_ESTRELLAS INTEGER NOT NULL DEFAULT 0, " +
+		"SW_COM INTEGER NOT NULL DEFAULT 0, " +
+		"FE_INTENTO TEXT NOT NULL);"
+	)
+	database.query(
+		"CREATE TABLE IF NOT EXISTS sopa_niveles (" +
+		"NU_NIVEL INTEGER NOT NULL, " +
+		"NU_USU INTEGER NOT NULL, " +
+		"NM_ALUMNO TEXT NOT NULL, " +
+		"NU_PUNTOS INTEGER NOT NULL DEFAULT 0, " +
+		"NU_ESTRELLAS INTEGER NOT NULL DEFAULT 0, " +
+		"SW_COM INTEGER NOT NULL DEFAULT 0, " +
+		"PRIMARY KEY (NU_NIVEL, NU_USU));"
+	)
+
+static func ensure_columnas_tables(database: SQLite) -> void:
+	if database == null:
+		return
+	database.query(
+		"CREATE TABLE IF NOT EXISTS columnas_intentos (" +
+		"NU_INTENTO INTEGER PRIMARY KEY AUTOINCREMENT, " +
+		"NU_USU INTEGER NOT NULL, " +
+		"NM_ALUMNO TEXT NOT NULL, " +
+		"NU_NIVEL INTEGER NOT NULL, " +
+		"NU_PUNTOS INTEGER NOT NULL DEFAULT 0, " +
+		"NU_ESTRELLAS INTEGER NOT NULL DEFAULT 0, " +
+		"SW_COM INTEGER NOT NULL DEFAULT 0, " +
+		"FE_INTENTO TEXT NOT NULL);"
+	)
+	database.query(
+		"CREATE TABLE IF NOT EXISTS columnas_niveles (" +
+		"NU_NIVEL INTEGER NOT NULL, " +
+		"NU_USU INTEGER NOT NULL, " +
+		"NM_ALUMNO TEXT NOT NULL, " +
+		"NU_PUNTOS INTEGER NOT NULL DEFAULT 0, " +
+		"NU_ESTRELLAS INTEGER NOT NULL DEFAULT 0, " +
+		"SW_COM INTEGER NOT NULL DEFAULT 0, " +
+		"PRIMARY KEY (NU_NIVEL, NU_USU));"
+	)
+
+static func ensure_memoria_tables(database: SQLite) -> void:
+	if database == null:
+		return
+	database.query(
+		"CREATE TABLE IF NOT EXISTS memoria_intentos (" +
+		"NU_INTENTO INTEGER PRIMARY KEY AUTOINCREMENT, " +
+		"NU_USU INTEGER NOT NULL, " +
+		"NM_ALUMNO TEXT NOT NULL, " +
+		"NU_NIVEL INTEGER NOT NULL, " +
+		"NU_PUNTOS INTEGER NOT NULL DEFAULT 0, " +
+		"NU_ESTRELLAS INTEGER NOT NULL DEFAULT 0, " +
+		"SW_COM INTEGER NOT NULL DEFAULT 0, " +
+		"FE_INTENTO TEXT NOT NULL);"
+	)
+	database.query(
+		"CREATE TABLE IF NOT EXISTS memoria_niveles (" +
+		"NU_NIVEL INTEGER NOT NULL, " +
+		"NU_USU INTEGER NOT NULL, " +
+		"NM_ALUMNO TEXT NOT NULL, " +
+		"NU_PUNTOS INTEGER NOT NULL DEFAULT 0, " +
+		"NU_ESTRELLAS INTEGER NOT NULL DEFAULT 0, " +
+		"SW_COM INTEGER NOT NULL DEFAULT 0, " +
+		"PRIMARY KEY (NU_NIVEL, NU_USU));"
+	)
+
+static func ensure_alumnos_minijuego_columns(database: SQLite) -> void:
+	if database == null:
+		return
+	database.query("PRAGMA table_info(Alumnos);")
+	var columnas_existentes: Array = []
+	for col in database.query_result:
+		columnas_existentes.append(col["name"])
+	if not "NU_NIVEL_MAX_SOPA" in columnas_existentes:
+		database.query("ALTER TABLE Alumnos ADD COLUMN NU_NIVEL_MAX_SOPA INTEGER DEFAULT 1;")
+	if not "NU_NIVEL_MAX_COLUMNAS" in columnas_existentes:
+		database.query("ALTER TABLE Alumnos ADD COLUMN NU_NIVEL_MAX_COLUMNAS INTEGER DEFAULT 1;")
+	if not "NU_NIVEL_MAX_MEMORIA" in columnas_existentes:
+		database.query("ALTER TABLE Alumnos ADD COLUMN NU_NIVEL_MAX_MEMORIA INTEGER DEFAULT 1;")
 
 static func log_activity(database: SQLite, tipo_usuario: String, usuario: String, accion: String) -> void:
 	if database == null:

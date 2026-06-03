@@ -11,13 +11,6 @@ var nivel_maximo_sopa: int = 1
 # Lista de IDs de niveles especiales que se compran en la tienda
 var niveles_tienda: Array[int] = [11, 12, 13, 14, 15]
 
-# Simulación de niveles comprados (Cuando hagas la tienda, estas variables se cargarán de la base de datos o un Global)
-# Por ahora los iniciamos en 'false'. Si se cambia a 'true', el nivel se desbloqueará normalmente.
-var nivel_11_comprado: bool = false
-var nivel_12_comprado: bool = false
-var nivel_13_comprado: bool = false
-var nivel_14_comprado: bool = false
-var nivel_15_comprado: bool = false
 
 const ESTRELLA_LLENA = preload("res://GFX/nivelpasadolleno.png")
 const ESTRELLA_VACIA = preload("res://GFX/nivelpasado.png")
@@ -68,9 +61,6 @@ func _on_atras_pressed() -> void:
 
 # LÓGICA DE CONFIGURACIÓN ADAPTADA
 func configurar_selector() -> void:
-	# Podrías cargar 'nivel_maximo_sopa' desde otra columna de la base de datos si fuese necesario.
-	var nivel_disponible := maxi(1, nivel_maximo_sopa)
-	
 	var todos_los_botones: Array[Node] = []
 	todos_los_botones.append_array(contenedor1.get_children())
 	todos_los_botones.append_array(contenedor2.get_children())
@@ -81,27 +71,11 @@ func configurar_selector() -> void:
 		var btn := todos_los_botones[i] as Button
 		if btn == null:
 			continue
-		
-		# --- CASO 1: Niveles de la Tienda (11 al 15) ---
-		if n_nivel in niveles_tienda:
-			var esta_comprado: bool = _verificar_si_nivel_esta_comprado(n_nivel)
-			
-			if esta_comprado:
-				# Si ya lo compró, se comporta como un nivel normal desbloqueado
-				desbloquear_boton(btn, n_nivel)
-			else:
-				# Si NO lo ha comprado, lo dejamos habilitado visualmente pero con tono de bloqueo
-				# y le asignamos una señal especial para avisarle que vaya a la tienda.
-				configurar_boton_bloqueado_tienda(btn, n_nivel)
-				
-		# --- CASO 2: Niveles Base (1 al 10) ---
+
+		if n_nivel <= 15:
+			desbloquear_boton(btn, n_nivel)
 		else:
-			if n_nivel <= 10:
-				# Forzamos a que los 10 primeros niveles siempre estén disponibles
-				desbloquear_boton(btn, n_nivel)
-			else:
-				# Si por alguna razón añades más niveles intermedios bloqueados por progreso:
-				bloquear_boton_por_progreso(btn)
+			bloquear_boton_por_progreso(btn)
 
 func desbloquear_boton(btn: Button, num: int) -> void:
 	btn.disabled = false
@@ -125,17 +99,8 @@ func bloquear_boton_por_progreso(btn: Button):
 	btn.disabled = true
 	btn.modulate = Color(0.3, 0.3, 0.3, 0.8)
 
-# NUEVA FUNCIÓN AUXILIAR: Evalúa qué niveles han sido comprados
 func _verificar_si_nivel_esta_comprado(num: int) -> bool:
-	# Cuando crees tu sistema de base de datos o tienda, aquí harás la consulta SQL o leerás tu script Global.
-	# Por ahora, lee las variables temporales del inicio:
-	match num:
-		11: return nivel_11_comprado
-		12: return nivel_12_comprado
-		13: return nivel_13_comprado
-		14: return nivel_14_comprado
-		15: return nivel_15_comprado
-	return false
+	return SQLiteHelper.nivel_comprado(db, GlobalUsuario.usuario_actual_id, "sopa", num)
 
 # NUEVA FUNCIÓN INTERMEDIA: Se ejecuta al presionar un nivel de pago no adquirido
 func _on_nivel_bloqueado_tienda_pressed(num: int) -> void:
@@ -158,9 +123,9 @@ func _on_nivel_seleccionado_desde_mapa(num: int) -> void:
 	var q_estrellas := ""
 	
 	if GlobalUsuario.usuario_actual_id > 0:
-		q_estrellas = "SELECT NU_ESTRELLAS FROM niveles WHERE NU_NIVEL = %d AND NU_USU = %d LIMIT 1;" % [num, GlobalUsuario.usuario_actual_id]
+		q_estrellas = "SELECT NU_ESTRELLAS FROM sopa_niveles WHERE NU_NIVEL = %d AND NU_USU = %d LIMIT 1;" % [num, GlobalUsuario.usuario_actual_id]
 	else:
-		q_estrellas = "SELECT NU_ESTRELLAS FROM niveles WHERE NU_NIVEL = %d AND NM_ALUMNO = '%s' LIMIT 1;" % [num, SQLiteHelper.escape(GlobalUsuario.nombre_alumno)]
+		q_estrellas = "SELECT NU_ESTRELLAS FROM sopa_niveles WHERE NU_NIVEL = %d AND NM_ALUMNO = '%s' LIMIT 1;" % [num, SQLiteHelper.escape(GlobalUsuario.nombre_alumno)]
 	
 	db.query(q_estrellas)
 	if db.query_result.size() > 0:
@@ -217,7 +182,7 @@ func _cargar_usuario_actual() -> void:
 	print("Sesion iniciada como: ", GlobalUsuario.nombre_alumno)
 
 func _mostrar_alerta(mensaje: String) -> void:
-	var alertas := get_node_or_null("/root/Alertas")
+	var alertas: Node = get_node_or_null("/root/Alertas")
 	if alertas and alertas.has_method("mostrar_alerta"):
 		alertas.mostrar_alerta(mensaje, 1.0)
 	print(mensaje)

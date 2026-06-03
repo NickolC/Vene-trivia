@@ -3,8 +3,8 @@ class_name CartaMemoria
 
 var id_pareja: int = 0
 var es_texto: bool = false
-var texto_asociado: String = ""
-var imagen_asociada: Texture2D = null
+var termino_asociado: String = ""
+var pista_asociada: String = ""
 
 var volteada: bool = false
 var completada: bool = false
@@ -15,40 +15,40 @@ var textura_dorso = preload("res://GFX/estrella vacia.png") # Imagen de la carta
 signal carta_seleccionada(carta)
 
 func _ready() -> void:
-	custom_minimum_size = Vector2(120, 160) # Tamaño ideal para que quepan 20 en pantalla
+	custom_minimum_size = Vector2(185, 135)
+	autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+	icon_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	mostrar_boca_abajo()
 
-func configurar(id: int, texto: String, imagen: Texture2D, tipo_texto: bool) -> void:
+func configurar(id: int, termino: String, pista: String, tipo_texto: bool) -> void:
 	self.id_pareja = id
-	self.texto_asociado = texto
-	self.imagen_asociada = imagen
+	self.termino_asociado = termino
+	self.pista_asociada = pista
 	self.es_texto = tipo_texto
 
 func mostrar_boca_abajo() -> void:
 	if completada: return
 	volteada = false
 	text = ""
-	icon = null # Limpiamos el icono para que se vea el fondo
-	
-	# 🌟 Ahora cargamos el recurso .tres que sí es un StyleBox válido
-	add_theme_stylebox_override("normal", load("res://GFX/estrella vacia.png"))
-	
+	icon = textura_dorso
+	expand_icon = true
+	add_theme_font_size_override("font_size", 24)
 	modulate = Color.WHITE
 
 func voltear_boca_arriba() -> void:
 	if volteada or completada: return
 	volteada = true
-	icon = null
-	
-	# Cambiar el fondo a la carta descubierta
-	add_theme_stylebox_override("normal", load("res://GFX/estrella completada.png"))
 	
 	if es_texto:
-		text = texto_asociado
-		# Configuración opcional de fuente
+		icon = null
+		text = pista_asociada
+		add_theme_font_size_override("font_size", 20)
 	else:
-		icon = imagen_asociada
-		expand_icon = true
+		text = ""
+		icon = null
+		text = termino_asociado
+		add_theme_font_size_override("font_size", 26)
 
 func marcar_error() -> void:
 	modulate = Color.RED

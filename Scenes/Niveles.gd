@@ -6,6 +6,12 @@ const PUNTOS_RESPUESTA_CORRECTA := 5
 const UMBRAL_2_ESTRELLAS := 10
 const UMBRAL_1_ESTRELLA := 5
 const RUTA_ESCENA_NIVEL := "res://Nivel 1.tscn"
+const ANCHO_PREGUNTA_RATIO := 0.50
+const ALTO_PREGUNTA_BASE_RATIO := 0.16
+const ALTO_PREGUNTA_EXTRA_RATIO := 0.07
+const TOP_PREGUNTA_RATIO := 0.50
+const ESPACIO_ENTRE_PREGUNTA_Y_RESPUESTAS := 0.02
+const ALTO_RESPUESTAS_RATIO := 0.22
 
 var numero_de_nivel: int = 1
 var nombre_estudiante: String
@@ -31,6 +37,11 @@ var comodin_usado = false
 var comodin_llamada_usado = false
 var comodin_publico_usado = false
 
+var stock_mitad: int = 0
+var stock_publico: int = 0
+var stock_probabilidad: int = 0
+var dinero_ganado_ultimo: int = 0
+
 var lista_circulos = [] # Aquí guardaremos los iconos
 
 @onready var sprite_personaje = $capapersonaje/SpritePersonaje
@@ -49,6 +60,7 @@ var pose_pensativo = preload("res://GFX/pensativo.png")
 @onready var textura_roja = preload("res://GFX/rojo.png")
 
 # Referencia de los nodos de la UI
+@onready var contenedor_pregunta = $CanvasLayer2/CenterContainer
 @onready var fondo_pregunta = $CanvasLayer2/CenterContainer/PanelContainer
 @onready var label_pregunta = $CanvasLayer2/CenterContainer/PanelContainer/MarginContainer/Label
 @onready var contenedor_botones = $CanvasLayer2/GridContainer
@@ -102,6 +114,9 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	menu_pausa.process_mode = Node.PROCESS_MODE_ALWAYS
 	capa_confirmacion.process_mode = Node.PROCESS_MODE_ALWAYS
+	if not get_viewport().size_changed.is_connected(_on_viewport_size_changed):
+		get_viewport().size_changed.connect(_on_viewport_size_changed)
+	_ajustar_layout_pregunta()
 	$CanvasLayer2/CenterContainer/PanelContainer/MarginContainer.queue_sort()
 	db = SQLiteHelper.open_db_connection()
 	_cargar_usuario_actual()
@@ -143,7 +158,49 @@ func _ready() -> void:
 
 	label_dialogo.get_parent().hide()
 	_mostrar_ui_juego()
+	_actualizar_botones_comodines()
 	comenzar_nivel()
+
+func _on_viewport_size_changed() -> void:
+	_ajustar_layout_pregunta()
+
+func _ajustar_layout_pregunta() -> void:
+	var viewport_size: Vector2 = get_viewport().get_visible_rect().size
+	var factor_texto_largo: float = clampf((float(label_pregunta.text.length()) - 90.0) / 120.0, 0.0, 1.0)
+	var ancho_minimo: float = minf(640.0, viewport_size.x * 0.90)
+	var ancho_pregunta: float = clampf(viewport_size.x * ANCHO_PREGUNTA_RATIO, ancho_minimo, 1040.0)
+	var alto_pregunta: float = clampf(
+		viewport_size.y * (ALTO_PREGUNTA_BASE_RATIO + ALTO_PREGUNTA_EXTRA_RATIO * factor_texto_largo),
+		150.0,
+		260.0
+	)
+
+	fondo_pregunta.custom_minimum_size = Vector2(ancho_pregunta, alto_pregunta)
+	label_pregunta.custom_minimum_size = Vector2(ancho_pregunta - 30.0, alto_pregunta - 30.0)
+
+	var top_pregunta: float = clampf(TOP_PREGUNTA_RATIO - (factor_texto_largo * 0.03), 0.40, 0.52)
+	var bottom_pregunta: float = top_pregunta + (alto_pregunta / viewport_size.y)
+
+	contenedor_pregunta.anchor_top = top_pregunta
+	contenedor_pregunta.anchor_bottom = bottom_pregunta
+
+	contenedor_botones.anchor_top = clampf(bottom_pregunta + ESPACIO_ENTRE_PREGUNTA_Y_RESPUESTAS, 0.68, 0.78)
+	contenedor_botones.anchor_bottom = clampf(contenedor_botones.anchor_top + ALTO_RESPUESTAS_RATIO, 0.90, 0.98)
+
+func _ajustar_fuente_pregunta(texto: String) -> void:
+	var longitud := texto.length()
+	var tamano_fuente := 28
+
+	if longitud > 180:
+		tamano_fuente = 20
+	elif longitud > 140:
+		tamano_fuente = 22
+	elif longitud > 105:
+		tamano_fuente = 24
+	elif longitud > 80:
+		tamano_fuente = 26
+
+	label_pregunta.add_theme_font_size_override("font_size", tamano_fuente)
 
 func _exit_tree() -> void:
 	SQLiteHelper.close_db_connection(db)
@@ -151,9 +208,9 @@ func _exit_tree() -> void:
 func _cargar_usuario_actual() -> void:
 	var query := ""
 	if GlobalUsuario.usuario_actual_id > 0:
-		query = "SELECT NU_USU, NM_ALUMNO, NU_NIVEL_MAX FROM Alumnos WHERE NU_USU = %d;" % GlobalUsuario.usuario_actual_id
+		query = "SELECT NU_USU, NM_ALUMNO, NU_NIVEL_MAX, NU_MITAD, NU_PUBLICO, NU_PROBABILIDAD FROM Alumnos WHERE NU_USU = %d;" % GlobalUsuario.usuario_actual_id
 	elif not GlobalUsuario.nombre_alumno.is_empty():
-		query = "SELECT NU_USU, NM_ALUMNO, NU_NIVEL_MAX FROM Alumnos WHERE NM_ALUMNO = '%s';" % SQLiteHelper.escape(GlobalUsuario.nombre_alumno)
+		query = "SELECT NU_USU, NM_ALUMNO, NU_NIVEL_MAX, NU_MITAD, NU_PUBLICO, NU_PROBABILIDAD FROM Alumnos WHERE NM_ALUMNO = '%s';" % SQLiteHelper.escape(GlobalUsuario.nombre_alumno)
 	else:
 		return
 
@@ -166,6 +223,17 @@ func _cargar_usuario_actual() -> void:
 	GlobalUsuario.usuario_actual_id = int(resultado.get("NU_USU", GlobalUsuario.usuario_actual_id))
 	GlobalUsuario.nombre_alumno = str(resultado.get("NM_ALUMNO", GlobalUsuario.nombre_alumno))
 	GlobalUsuario.nivel_maximo = int(resultado.get("NU_NIVEL_MAX", GlobalUsuario.nivel_maximo))
+	_cargar_stock_comodines(resultado)
+
+func _cargar_stock_comodines(fila: Dictionary) -> void:
+	stock_mitad = int(fila.get("NU_MITAD", 0))
+	stock_publico = int(fila.get("NU_PUBLICO", 0))
+	stock_probabilidad = int(fila.get("NU_PROBABILIDAD", 0))
+
+func _actualizar_botones_comodines() -> void:
+	$Buttoncomodin.disabled = comodin_usado or stock_mitad <= 0
+	$Buttonpublico.disabled = comodin_llamada_usado or stock_publico <= 0
+	$Buttonporcentaje.disabled = comodin_publico_usado or stock_probabilidad <= 0
 
 func _ocultar_ui_juego() -> void:
 	$CanvasLayer2/CenterContainer.hide()
@@ -348,14 +416,11 @@ func mostrar_pregunta():
 		# inmediatamente según el nuevo texto del Label.
 	var datos_pregunta = preguntas_partida_actual[indice_actual]
 	label_pregunta.text = datos_pregunta["pregunta"]
+	_ajustar_fuente_pregunta(label_pregunta.text)
+	_ajustar_layout_pregunta()
 	
-	# 1. Indicamos que el punto de crecimiento es el centro
 	fondo_pregunta.pivot_offset = fondo_pregunta.size / 2
-	
-	# 2. Forzamos al Label a calcular su tamaño real con el texto nuevo
-	# Esto evita que el fondo se quede pequeño
-	fondo_pregunta.reset_size() 
-	
+
 	# Se limpian los botones anteriores
 	botones_respuesta.clear()
 	for n in contenedor_botones.get_children():
@@ -604,10 +669,11 @@ func _on_buttoncomodin_pressed() -> void:
 		# Opción B (Si quieres que desaparezca el espacio):
 		# boton.visible = false 
 	
-	# Desactivar el botón de comodín para que no se use de nuevo
 	comodin_usado = true
+	stock_mitad -= 1
+	db.query("UPDATE Alumnos SET NU_MITAD = NU_MITAD - 1 WHERE NU_USU = %d AND NU_MITAD > 0;" % GlobalUsuario.usuario_actual_id)
 	$Buttoncomodin.disabled = true
-	$Buttoncomodin.modulate = Color.DARK_GRAY # Feedback visual de usado
+	$Buttoncomodin.modulate = Color.DARK_GRAY
 
 func generar_respuesta_amigo():
 	var pregunta_actual = preguntas_partida_actual[indice_actual]
@@ -649,6 +715,8 @@ func _on_buttonpublico_pressed() -> void:
 	if comodin_llamada_usado: return
 	
 	comodin_llamada_usado = true
+	stock_publico -= 1
+	db.query("UPDATE Alumnos SET NU_PUBLICO = NU_PUBLICO - 1 WHERE NU_USU = %d AND NU_PUBLICO > 0;" % GlobalUsuario.usuario_actual_id)
 	$Buttonpublico.disabled = true
 	#timer_pregunta.paused = true # Pausamos el tiempo del juego
 	
@@ -736,6 +804,8 @@ func _on_buttonporcentaje_pressed() -> void:
 	
 	if comodin_publico_usado: return
 	comodin_publico_usado = true
+	stock_probabilidad -= 1
+	db.query("UPDATE Alumnos SET NU_PROBABILIDAD = NU_PROBABILIDAD - 1 WHERE NU_USU = %d AND NU_PROBABILIDAD > 0;" % GlobalUsuario.usuario_actual_id)
 	$Buttonporcentaje.disabled = true
 	
 	timer_pregunta.paused = true
@@ -792,9 +862,10 @@ func mostrar_resultados(respuestas_correctas: int) -> void:
 	puntaje_total = (respuestas_correctas * 100) + bono
 	$PantallaResultados/Panel/Label2.text = "Puntaje Total: " + str(puntaje_total)
 	
+	$PantallaResultados/Panel/LabelDinero.text = "Dinero ganado: %d Bs." % dinero_ganado_ultimo
 	actualizar_estrellas_visual(estrellas_ganadas)
 	configurar_botones(estrellas_ganadas)
-	
+
 	if indice_actual >= TOTAL_PREGUNTAS_RONDA:
 		$PantallaResultados.show()
 		
@@ -917,11 +988,18 @@ func guardar_final_nivel(total_preg: int, correctas: int, punto: int, estrellas:
 		]
 		check_alumno = db.query(query_alumno)
 
+	dinero_ganado_ultimo = correctas * 10 + estrellas * 25
+	db.query("UPDATE Alumnos SET NU_DINERO = NU_DINERO + %d WHERE NU_USU = %d;" % [dinero_ganado_ultimo, id_actual])
+	db.query("SELECT NU_DINERO FROM Alumnos WHERE NU_USU = %d;" % id_actual)
+	var dinero_total: int = 0
+	if not db.query_result.is_empty():
+		dinero_total = int(db.query_result[0].get("NU_DINERO", 0))
+
+	Logros.evaluar_post_nivel(estrellas, punto, dinero_total)
 	if check_intento and check_nivel and check_alumno:
 		SQLiteHelper.log_activity(db, "alumno", GlobalUsuario.nombre_alumno, "nivel_%d_estrellas_%d_puntos_%d" % [nivel, estrellas, punto])
 		if estrellas_referencia > 0:
 			GlobalUsuario.nivel_maximo = maxi(GlobalUsuario.nivel_maximo, proximo_nivel)
-		print("Datos guardados con exito en la DB.")
 		print("Nivel guardado:", nivel, " para el ID:", id_actual)
 	else:
 		print("Error en los queries. Revisa nombres de tablas/columnas.")

@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dnioaxk5hbyiq" path="res://GFX/salir prev.png" id="11_6vx0j"]
 [ext_resource type="Texture2D" uid="uid://01taw8awlxsh" path="res://GFX/jugar nivel.png" id="12_1vauk"]
 [ext_resource type="Texture2D" uid="uid://bxd6kbqnokrvp" path="res://GFX/black.png" id="13_x4gf4"]
+[ext_resource type="Script" path="res://Scripts/selector_minijuego_json.gd" id="14_cj0uj"]
 
 [sub_resource type="Animation" id="Animation_s2c3o"]
 resource_name = "Fade_out"
@@ -57,6 +58,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("14_cj0uj")
+minijuego_id = "completar_frases"
+minijuego_nombre = "Completar Frases"
+scene_juego = "res://Scenes/minijuego_textual.tscn"
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1122689724]
 layout_mode = 1

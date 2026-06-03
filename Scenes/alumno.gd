@@ -19,7 +19,7 @@ func cerrar_db_seguro():
 		db = null
 
 func _exit_tree() -> void:
-	SQLiteHelper.close_db_connection(db)
+	cerrar_db_seguro()
 
 #REGISTRO DE ALUMNO	
 func _on_loginalumno_pressed() -> void:
