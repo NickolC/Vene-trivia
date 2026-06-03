@@ -4,7 +4,8 @@ extends Control
 const CASILLA_ESCENA = preload("res://CasillaLetra.tscn")
 const MI_FUENTE_PERSONALIZADA = preload("res://font/Minecraft.ttf")
 const SQLiteHelper = preload("res://Scripts/sqlite_helper.gd")
-const RUTA_ESCENA_NIVEL := "res://selectorsopaletras.tscn"
+const RUTA_ESCENA_NIVEL := "res://Scenes/Minijuegos.tscn"
+const RUTA_DATOS_SOPA := "res://Data/minijuegos/sopa.json"
 
 # Recompensas económicas base
 const RECOMPENSA_BASE_PUNTOS := 100
@@ -69,6 +70,8 @@ var tamaño_tablero: int = 10
 var matriz_letras: Array = [] 
 var palabras_objetivo: Array[String] = []
 var referencias_lista_ui: Dictionary = {}
+var casillas_por_coordenada: Dictionary = {}
+var palabras_encontradas: Dictionary = {}
 
 var seleccionando: bool = false
 var casillas_seleccionadas: Array[Button] = []
@@ -100,6 +103,8 @@ const BANCO_PALABRAS_NIVELES: Dictionary = {
 	15: ["MUNDO", "VENEZUELA", "TALENTO", "PAIS", "BANDERA", "ORQUESTA", "EXITO"]
 }
 
+var banco_palabras_niveles_runtime: Dictionary = BANCO_PALABRAS_NIVELES.duplicate(true)
+
 func _ready() -> void:
 	if menu_pausa: 
 		menu_pausa.process_mode = Node.PROCESS_MODE_ALWAYS
@@ -118,6 +123,7 @@ func _ready() -> void:
 	capa_confirmacion.hide()
 	pantalla_resultados.hide()
 	_ocultar_ui_juego()
+	_cargar_banco_sopa_desde_archivo()
 	
 	_conectar_botones_seguros()
 
@@ -185,11 +191,47 @@ func _exit_tree() -> void:
 		SQLiteHelper.close_db_connection(db)
 
 func _cargar_palabras_del_nivel_actual() -> void:
-	var palabras_base: Array = BANCO_PALABRAS_NIVELES.get(numero_de_nivel, ["DISEÑO", "NODO", "MOTOR"]).duplicate()
+	var palabras_base: Array = banco_palabras_niveles_runtime.get(numero_de_nivel, ["DISENO", "NODO", "MOTOR"]).duplicate()
 	palabras_base.shuffle()
 	palabras_objetivo.clear()
+	palabras_encontradas.clear()
 	for p in palabras_base:
-		palabras_objetivo.append(p.to_upper())
+		var normalizada := _normalizar_palabra(str(p))
+		if normalizada.is_empty():
+			continue
+		if palabras_objetivo.has(normalizada):
+			continue
+		palabras_objetivo.append(normalizada)
+
+func _cargar_banco_sopa_desde_archivo() -> void:
+	if not FileAccess.file_exists(RUTA_DATOS_SOPA):
+		return
+	var archivo := FileAccess.open(RUTA_DATOS_SOPA, FileAccess.READ)
+	if archivo == null:
+		return
+	var parsed: Variant = JSON.parse_string(archivo.get_as_text())
+	if typeof(parsed) != TYPE_DICTIONARY:
+		return
+	var parsed_dict: Dictionary = parsed
+
+	var nuevo_banco: Dictionary = {}
+	for clave in parsed_dict.keys():
+		var nivel := int(str(clave))
+		if nivel <= 0:
+			continue
+		var palabras: Array[String] = []
+		var palabras_raw: Variant = parsed_dict[clave]
+		if typeof(palabras_raw) != TYPE_ARRAY:
+			continue
+		for palabra in palabras_raw:
+			var normalizada := _normalizar_palabra(str(palabra))
+			if not normalizada.is_empty() and not palabras.has(normalizada):
+				palabras.append(normalizada)
+		if not palabras.is_empty():
+			nuevo_banco[nivel] = palabras
+
+	if not nuevo_banco.is_empty():
+		banco_palabras_niveles_runtime = nuevo_banco
 
 func _cargar_usuario_actual() -> void:
 	var query := ""
@@ -249,12 +291,20 @@ func cambiar_pose(nueva_textura):
 		t.tween_property(sprite_personaje, "scale", Vector2(1.0, 1.0), 0.2).set_trans(Tween.TRANS_BACK)
 
 func verificar_palabra_formada() -> void:
-	var palabra_construida = ""
-	for casilla in casillas_seleccionadas:
-		palabra_construida += casilla.get_node("Label").text
+	var seleccion_lineal := _normalizar_seleccion_lineal(casillas_seleccionadas)
+	if seleccion_lineal.is_empty():
+		for casilla in casillas_seleccionadas:
+			if is_instance_valid(casilla) and not casilla.disabled:
+				casilla.modulate = Color.WHITE
+		casillas_seleccionadas.clear()
+		return
+
+	var palabra_construida := ""
+	for casilla in seleccion_lineal:
+		palabra_construida += str(casilla.get_node("Label").text)
 		
-	var palabra_invertida = palabra_construida.reverse()
-	var palabra_valida = ""
+	var palabra_invertida := palabra_construida.reverse()
+	var palabra_valida := ""
 	
 	if palabras_objetivo.has(palabra_construida):
 		palabra_valida = palabra_construida
@@ -262,11 +312,13 @@ func verificar_palabra_formada() -> void:
 		palabra_valida = palabra_invertida
 
 	if not palabra_valida.is_empty():
-		for casilla in casillas_seleccionadas:
+		for casilla in seleccion_lineal:
 			casilla.modulate = Color.GREEN
 			casilla.disabled = true
-		tachar_palabra_en_lista(palabra_valida)
-		palabras_encontradas_contador += 1
+		if not palabras_encontradas.has(palabra_valida):
+			palabras_encontradas[palabra_valida] = true
+			tachar_palabra_en_lista(palabra_valida)
+			palabras_encontradas_contador += 1
 		actualizar_contador_ui()
 		casillas_seleccionadas.clear()
 		
@@ -278,14 +330,14 @@ func verificar_palabra_formada() -> void:
 			juego_activo = false
 			finalizar_nivel()
 	else:
-		for casilla in casillas_seleccionadas:
+		for casilla in seleccion_lineal:
 			casilla.modulate = Color.RED
 		
 		cambiar_pose(pose_preocupado)
 		var frases_fail = ["Mmm... esa combinación no es válida.", "¡Sigue buscando, no te rindas!"]
 		decir_mensaje(frases_fail.pick_random(), 2.0)
 		
-		var copia_fallidos = casillas_seleccionadas.duplicate()
+		var copia_fallidos = seleccion_lineal.duplicate()
 		casillas_seleccionadas.clear()
 		await get_tree().create_timer(0.4).timeout
 		for casilla in copia_fallidos:
@@ -359,32 +411,39 @@ func finalizar_nivel() -> void:
 	pantalla_resultados.show()
 
 func guardar_datos_progreso(puntos_totales: int, estrellas: int) -> void:
-	if db == null or estrellas == 0: return # Si es 0 estrellas no guardamos avance de nivel superior
-	
+	if db == null: return
+
 	var id_alumno := GlobalUsuario.usuario_actual_id
 	var nombre_alumno := SQLiteHelper.escape(GlobalUsuario.nombre_alumno)
 	var completado_flag := 1 if estrellas == 3 else 0
 	var timestamp := Time.get_datetime_string_from_system().replace("T", " ")
-	
-	var sql_intento := "INSERT INTO sopa_intentos (NU_USU, NM_ALUMNO, NU_NIVEL, NU_PUNTOS, NU_ESTRELLAS, SW_COM, FE_INTENTO) " + \
-					   "VALUES (%d, '%s', %d, %d, %d, %d, '%s');" % [id_alumno, nombre_alumno, numero_de_nivel, puntos_totales, estrellas, completado_flag, timestamp]
-	db.query(sql_intento)
-	
-	db.query("SELECT NU_ESTRELLAS FROM sopa_niveles WHERE NU_USU = %d AND NU_NIVEL = %d;" % [id_alumno, numero_de_nivel])
-	if db.query_result.is_empty():
-		var sql_insert := "INSERT INTO sopa_niveles (NU_NIVEL, NU_USU, NM_ALUMNO, NU_PUNTOS, NU_ESTRELLAS, SW_COM) " + \
-						  "VALUES (%d, %d, '%s', %d, %d, %d);" % [numero_de_nivel, id_alumno, nombre_alumno, puntos_totales, estrellas, completado_flag]
-		db.query(sql_insert)
-	else:
-		var estrellas_viejas = int(db.query_result[0].get("NU_ESTRELLAS", 0))
-		if estrellas > estrellas_viejas:
-			var sql_update := "UPDATE sopa_niveles SET NU_PUNTOS = %d, NU_ESTRELLAS = %d, SW_COM = %d WHERE NU_NIVEL = %d AND NU_USU = %d;" % [puntos_totales, estrellas, completado_flag, numero_de_nivel, id_alumno]
-			db.query(sql_update)
-			
+
+	db.query(
+		"INSERT INTO sopa_intentos (NU_USU, NM_ALUMNO, NU_NIVEL, NU_PUNTOS, NU_ESTRELLAS, SW_COM, FE_INTENTO) VALUES (%d, '%s', %d, %d, %d, %d, '%s');" % [id_alumno, nombre_alumno, numero_de_nivel, puntos_totales, estrellas, completado_flag, timestamp]
+	)
+
 	if estrellas > 0:
+		db.query("SELECT NU_ESTRELLAS FROM sopa_niveles WHERE NU_USU = %d AND NU_NIVEL = %d;" % [id_alumno, numero_de_nivel])
+		if db.query_result.is_empty():
+			db.query(
+				"INSERT INTO sopa_niveles (NU_NIVEL, NU_USU, NM_ALUMNO, NU_PUNTOS, NU_ESTRELLAS, SW_COM) VALUES (%d, %d, '%s', %d, %d, %d);" % [numero_de_nivel, id_alumno, nombre_alumno, puntos_totales, estrellas, completado_flag]
+			)
+		else:
+			var prev := int(db.query_result[0].get("NU_ESTRELLAS", 0))
+			if estrellas > prev:
+				db.query(
+					"UPDATE sopa_niveles SET NU_PUNTOS = %d, NU_ESTRELLAS = %d, SW_COM = %d WHERE NU_NIVEL = %d AND NU_USU = %d;" % [puntos_totales, estrellas, completado_flag, numero_de_nivel, id_alumno]
+				)
 		var sgte_lvl := numero_de_nivel + 1
-		var sql_alumno := "UPDATE Alumnos SET NU_NIVEL_MAX_SOPA = %d WHERE NU_USU = %d AND NU_NIVEL_MAX_SOPA < %d;" % [sgte_lvl, id_alumno, sgte_lvl]
-		db.query(sql_alumno)
+		db.query("UPDATE Alumnos SET NU_NIVEL_MAX_SOPA = %d WHERE NU_USU = %d AND NU_NIVEL_MAX_SOPA < %d;" % [sgte_lvl, id_alumno, sgte_lvl])
+
+	SQLiteHelper.mirror_minijuegos_resultados(db, id_alumno, GlobalUsuario.nombre_alumno, "sopa", puntos_totales, estrellas)
+
+	db.query("SELECT NU_DINERO FROM Alumnos WHERE NU_USU = %d;" % id_alumno)
+	var dinero_total := 0
+	if not db.query_result.is_empty():
+		dinero_total = int(db.query_result[0].get("NU_DINERO", 0))
+	Logros.evaluar_post_nivel(estrellas, puntos_totales, dinero_total)
 
 func _on_btn_siguiente_pressed() -> void:
 	var prox = numero_de_nivel + 1
@@ -420,7 +479,7 @@ func crear_lista_palabras_visual() -> void:
 		referencias_lista_ui[palabra] = nuevo_label
 
 func actualizar_contador_ui() -> void:
-	label_contador.text = "Palabras: %d / %d" % [palabras_encontradas_contador, total_palabras]
+	label_contador.text = "Palabras encontradas %d/%d" % [palabras_encontradas_contador, total_palabras]
 
 func _on_casilla_gui_input(event: InputEvent, casilla: Button) -> void:
 	if not juego_activo: return
@@ -461,28 +520,67 @@ func tachar_palabra_en_lista(palabra: String) -> void:
 
 func inicializar_matriz() -> void:
 	matriz_letras.clear()
+	casillas_por_coordenada.clear()
 	for x in range(tamaño_tablero):
 		var fila = []
 		for y in range(tamaño_tablero): fila.append("-")
 		matriz_letras.append(fila)
 
 func insertar_palabras_aleatorias() -> void:
-	var direcciones = [Vector2i(1, 0), Vector2i(0, 1)] 
-	for palabra in palabras_objetivo:
-		var colocada = false
-		var intentos = 0
-		while not colocada and intentos < 100:
-			intentos += 1
-			var dir = direcciones.pick_random()
-			var limite_x = tamaño_tablero - (palabra.length() if dir.x == 1 else 0)
-			var limite_y = tamaño_tablero - (palabra.length() if dir.y == 1 else 0)
-			var start_x = 0 if limite_x <= 1 else randi() % limite_x
-			var start_y = 0 if limite_y <= 1 else randi() % limite_y
-			if palabra.length() > tamaño_tablero: break 
-			if verificar_espacio_libre(palabra, start_x, start_y, dir):
-				for i in range(palabra.length()):
-					matriz_letras[start_x + (dir.x * i)][start_y + (dir.y * i)] = palabra[i]
-				colocada = true
+	var direcciones: Array[Vector2i] = [
+		Vector2i(1, 0), Vector2i(-1, 0),
+		Vector2i(0, 1), Vector2i(0, -1),
+		Vector2i(1, 1), Vector2i(-1, -1),
+		Vector2i(1, -1), Vector2i(-1, 1)
+	]
+
+	var palabras_ordenadas: Array[String] = palabras_objetivo.duplicate()
+	palabras_ordenadas.sort_custom(_ordenar_palabras_por_longitud_desc)
+
+	for palabra in palabras_ordenadas:
+		if palabra.length() > tamaño_tablero:
+			continue
+
+		var mejor_solucion: Dictionary = {}
+		var mejor_solape := -1
+		for intento in range(220):
+			var dir: Vector2i = direcciones.pick_random()
+			var rango_x: Vector2i = _rango_inicio(palabra.length(), dir.x)
+			var rango_y: Vector2i = _rango_inicio(palabra.length(), dir.y)
+			if rango_x.y < rango_x.x or rango_y.y < rango_y.x:
+				continue
+
+			var sx: int = randi_range(rango_x.x, rango_x.y)
+			var sy: int = randi_range(rango_y.x, rango_y.y)
+			var solape: int = _evaluar_colocacion(palabra, sx, sy, dir)
+			if solape < 0:
+				continue
+			if solape > mejor_solape:
+				mejor_solape = solape
+				mejor_solucion = {"sx": sx, "sy": sy, "dir": dir}
+				if mejor_solape >= 2:
+					break
+
+		if mejor_solucion.is_empty():
+			for dir in direcciones:
+				var rango_x: Vector2i = _rango_inicio(palabra.length(), dir.x)
+				var rango_y: Vector2i = _rango_inicio(palabra.length(), dir.y)
+				for sx in range(rango_x.x, rango_x.y + 1):
+					for sy in range(rango_y.x, rango_y.y + 1):
+						if _evaluar_colocacion(palabra, sx, sy, dir) >= 0:
+							mejor_solucion = {"sx": sx, "sy": sy, "dir": dir}
+							break
+					if not mejor_solucion.is_empty():
+						break
+				if not mejor_solucion.is_empty():
+					break
+
+		if not mejor_solucion.is_empty():
+			var sx: int = int(mejor_solucion["sx"])
+			var sy: int = int(mejor_solucion["sy"])
+			var dir: Vector2i = mejor_solucion.get("dir", Vector2i(1, 0))
+			for i in range(palabra.length()):
+				matriz_letras[sx + (dir.x * i)][sy + (dir.y * i)] = palabra[i]
 
 func verificar_espacio_libre(palabra: String, sx: int, sy: int, dir: Vector2i) -> bool:
 	for i in range(palabra.length()):
@@ -490,6 +588,31 @@ func verificar_espacio_libre(palabra: String, sx: int, sy: int, dir: Vector2i) -
 		var cy = sy + (dir.y * i)
 		if matriz_letras[cx][cy] != "-" and matriz_letras[cx][cy] != palabra[i]: return false
 	return true
+
+func _evaluar_colocacion(palabra: String, sx: int, sy: int, dir: Vector2i) -> int:
+	var solapes := 0
+	for i in range(palabra.length()):
+		var cx: int = sx + (dir.x * i)
+		var cy: int = sy + (dir.y * i)
+		if cx < 0 or cy < 0 or cx >= tamaño_tablero or cy >= tamaño_tablero:
+			return -1
+		var actual: String = str(matriz_letras[cx][cy])
+		if actual == "-":
+			continue
+		if actual != palabra[i]:
+			return -1
+		solapes += 1
+	return solapes
+
+func _rango_inicio(longitud: int, delta: int) -> Vector2i:
+	if delta == 1:
+		return Vector2i(0, tamaño_tablero - longitud)
+	if delta == -1:
+		return Vector2i(longitud - 1, tamaño_tablero - 1)
+	return Vector2i(0, tamaño_tablero - 1)
+
+func _ordenar_palabras_por_longitud_desc(a: String, b: String) -> bool:
+	return a.length() > b.length()
 
 func rellenar_espacios_vacios() -> void:
 	var abecedario = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
@@ -499,6 +622,7 @@ func rellenar_espacios_vacios() -> void:
 
 func dibujar_tablero_en_pantalla() -> void:
 	for hijo in cuadracula.get_children(): hijo.queue_free()
+	casillas_por_coordenada.clear()
 	for x in range(tamaño_tablero):
 		for y in range(tamaño_tablero):
 			var nueva_casilla = CASILLA_ESCENA.instantiate() as Button
@@ -506,7 +630,64 @@ func dibujar_tablero_en_pantalla() -> void:
 			nueva_casilla.get_node("Label").text = matriz_letras[x][y]
 			nueva_casilla.set_meta("coor_x", x)
 			nueva_casilla.set_meta("coor_y", y)
+			casillas_por_coordenada[_coord_key(x, y)] = nueva_casilla
 			nueva_casilla.gui_input.connect(_on_casilla_gui_input.bind(nueva_casilla))
+
+func _coord_key(x: int, y: int) -> String:
+	return "%d,%d" % [x, y]
+
+func _obtener_casilla_por_coord(x: int, y: int) -> Button:
+	return casillas_por_coordenada.get(_coord_key(x, y), null) as Button
+
+func _normalizar_seleccion_lineal(seleccion: Array[Button]) -> Array[Button]:
+	var resultado: Array[Button] = []
+	if seleccion.is_empty():
+		return resultado
+	if seleccion.size() == 1:
+		return resultado
+
+	var inicio := seleccion[0]
+	var fin := seleccion[seleccion.size() - 1]
+	if inicio == null or fin == null:
+		return resultado
+
+	var sx: int = int(inicio.get_meta("coor_x", -1))
+	var sy: int = int(inicio.get_meta("coor_y", -1))
+	var ex: int = int(fin.get_meta("coor_x", -1))
+	var ey: int = int(fin.get_meta("coor_y", -1))
+	if sx < 0 or sy < 0 or ex < 0 or ey < 0:
+		return resultado
+
+	var dx: int = signi(ex - sx)
+	var dy: int = signi(ey - sy)
+	var dist_x: int = absi(ex - sx)
+	var dist_y: int = absi(ey - sy)
+	if not (dx == 0 or dy == 0 or dist_x == dist_y):
+		return resultado
+
+	var cx := sx
+	var cy := sy
+	while true:
+		var casilla := _obtener_casilla_por_coord(cx, cy)
+		if casilla == null:
+			resultado.clear()
+			return resultado
+		resultado.append(casilla)
+		if cx == ex and cy == ey:
+			break
+		cx += dx
+		cy += dy
+
+	return resultado
+
+func _normalizar_palabra(texto: String) -> String:
+	var t := texto.to_upper().strip_edges().replace(" ", "")
+	t = t.replace("Á", "A")
+	t = t.replace("É", "E")
+	t = t.replace("Í", "I")
+	t = t.replace("Ó", "O")
+	t = t.replace("Ú", "U")
+	return t
 
 # Detectar la tecla de escape o el botón de pausa
 func _input(event):
@@ -570,8 +751,7 @@ func _on_boton_salir_pressed():
 func _on_boton_si_confirmar_salir_pressed():
 	get_tree().paused = false
 	GlobalUsuario.nivel_seleccionado = numero_de_nivel
-	# Reemplaza con la ruta real de tu escena de mapa
-	get_tree().change_scene_to_file("res://selectorsopaletras.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Minijuegos.tscn")
 
 func _on_boton_no_cancelar_pressed():
 	# Si se arrepiente, cerramos la confirmación y VOLVEMOS al menú de pausa

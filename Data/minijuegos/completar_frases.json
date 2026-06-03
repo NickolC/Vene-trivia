@@ -1,0 +1,92 @@
+{
+  "1": [
+    {"frase": "El 19 de abril de 1810 se instalo la ____ de Caracas.", "opciones": ["Junta", "Monarquia", "Audiencia"], "correcta": 0, "explicacion": "Se conformo la Junta Suprema de Caracas."},
+    {"frase": "Simon Bolivar es conocido como ____.", "opciones": ["Precursor", "El Libertador", "Mariscal"], "correcta": 1, "explicacion": "Ese es su titulo historico mas difundido."},
+    {"frase": "El ave nacional de Venezuela es el ____.", "opciones": ["Condor", "Turpial", "Loro"], "correcta": 1, "explicacion": "El turpial es simbolo patrio."},
+    {"frase": "La independencia se declaro el 5 de ____ de 1811.", "opciones": ["Julio", "Junio", "Mayo"], "correcta": 0, "explicacion": "La firma del acta fue el 5 de julio."}
+  ],
+  "2": [
+    {"frase": "La Batalla de Carabobo ocurrio en el ano ____.", "opciones": ["1810", "1821", "1830"], "correcta": 1, "explicacion": "Se libro el 24 de junio de 1821."},
+    {"frase": "Francisco de Miranda es llamado el ____ de la independencia.", "opciones": ["Fundador", "Precursor", "Conquistador"], "correcta": 1, "explicacion": "Miranda es el Precursor."},
+    {"frase": "El arbol nacional es el ____.", "opciones": ["Cedro", "Araguaney", "Mangle"], "correcta": 1, "explicacion": "El araguaney es arbol nacional."},
+    {"frase": "El himno nacional se llama Gloria al Bravo ____.", "opciones": ["Pueblo", "Soldado", "Suelo"], "correcta": 0, "explicacion": "Ese es el titulo oficial."}
+  ],
+  "3": [
+    {"frase": "Antonio Jose de Sucre fue el Gran ____ de Ayacucho.", "opciones": ["Precursor", "Mariscal", "Gobernador"], "correcta": 1, "explicacion": "Sucre recibio ese titulo."},
+    {"frase": "El rio Orinoco desemboca en el oceano ____.", "opciones": ["Pacifico", "Atlantico", "Indico"], "correcta": 1, "explicacion": "Desemboca en el Atlantico."},
+    {"frase": "La Carta de Jamaica fue escrita por ____.", "opciones": ["Bolivar", "Miranda", "Paez"], "correcta": 0, "explicacion": "Bolivar la redacto en 1815."},
+    {"frase": "La ciudad capital de Venezuela es ____.", "opciones": ["Valencia", "Caracas", "Merida"], "correcta": 1, "explicacion": "Caracas es la capital."}
+  ],
+  "4": [
+    {"frase": "El Congreso de ____ reunio ideas politicas para la republica.", "opciones": ["Angostura", "Valencia", "Coro"], "correcta": 0, "explicacion": "Fue un hito de 1819."},
+    {"frase": "La abolicion de la esclavitud se decreto en ____.", "opciones": ["1854", "1811", "1900"], "correcta": 0, "explicacion": "Se decreto en 1854."},
+    {"frase": "El Salto Angel esta en el Parque Nacional ____.", "opciones": ["Mochima", "Canaima", "Morrocoy"], "correcta": 1, "explicacion": "Canaima alberga el salto."},
+    {"frase": "El genero llanero mas representativo es el ____.", "opciones": ["Vals", "Joropo", "Bolero"], "correcta": 1, "explicacion": "El joropo es emblematico."}
+  ],
+  "5": [
+    {"frase": "El escudo, la bandera y el himno son simbolos ____.", "opciones": ["Regionales", "Patrios", "Locales"], "correcta": 1, "explicacion": "Conforman los simbolos patrios."},
+    {"frase": "Jose Antonio Paez tuvo liderazgo en los ____.", "opciones": ["Llanos", "Andes", "Islas"], "correcta": 0, "explicacion": "Fue lider llanero."},
+    {"frase": "La economia petrolera tomo fuerza en el siglo ____.", "opciones": ["XX", "XVIII", "XVI"], "correcta": 0, "explicacion": "Se consolido en el siglo XX."},
+    {"frase": "El turpial pertenece a la fauna ____.", "opciones": ["Nacional", "Extranjera", "Mitica"], "correcta": 0, "explicacion": "Es ave nacional."}
+  ],
+  "6": [
+    {"frase": "Barroso II fue un pozo petrolero en ____.", "opciones": ["Zulia", "Sucre", "Lara"], "correcta": 0, "explicacion": "Se ubica en la region zuliana."},
+    {"frase": "PDVSA es la empresa ____ de hidrocarburos.", "opciones": ["Privada", "Estatal", "Comunal"], "correcta": 1, "explicacion": "Es empresa estatal."},
+    {"frase": "La Ciudad Universitaria de Caracas fue disenada por ____.", "opciones": ["Villanueva", "Convit", "Bello"], "correcta": 0, "explicacion": "Obra de Carlos Raul Villanueva."},
+    {"frase": "El cuatro es un instrumento tradicional ____.", "opciones": ["Venezolano", "Canadiense", "Africano"], "correcta": 0, "explicacion": "Es iconico en musica venezolana."}
+  ],
+  "7": [
+    {"frase": "La gaita es un genero ligado al estado ____.", "opciones": ["Zulia", "Apure", "Merida"], "correcta": 0, "explicacion": "Es musica tipica zuliana."},
+    {"frase": "El Panteon Nacional honra a los ____.", "opciones": ["Conquistadores", "Heroes", "Comerciantes"], "correcta": 1, "explicacion": "Es un sitio de memoria nacional."},
+    {"frase": "El pico mas alto de Venezuela es el ____.", "opciones": ["Humboldt", "Bolivar", "Naiguata"], "correcta": 1, "explicacion": "Es el Pico Bolivar."},
+    {"frase": "La participacion ciudadana fortalece la ____.", "opciones": ["Democracia", "Anarquia", "Censura"], "correcta": 0, "explicacion": "Es parte de una sociedad democratica."}
+  ],
+  "8": [
+    {"frase": "La region de sabanas extensas se conoce como los ____.", "opciones": ["Llanos", "Valles", "Paramos"], "correcta": 0, "explicacion": "Es una region natural y cultural importante."},
+    {"frase": "La batallas de independencia integran la memoria ____.", "opciones": ["Historica", "Ficticia", "Privada"], "correcta": 0, "explicacion": "Son parte del relato nacional."},
+    {"frase": "El derecho al voto tambien se llama ____.", "opciones": ["Cabildo", "Sufragio", "Prelacion"], "correcta": 1, "explicacion": "Sufragio es el termino correcto."},
+    {"frase": "El mar al norte de Venezuela es el ____.", "opciones": ["Caribe", "Rojo", "Negro"], "correcta": 0, "explicacion": "Limita al norte del territorio."}
+  ],
+  "9": [
+    {"frase": "Andres Bello fue un gran ____ y educador.", "opciones": ["Humanista", "Conquistador", "Pirata"], "correcta": 0, "explicacion": "Destaco en letras y derecho."},
+    {"frase": "Jose Gregorio Hernandez fue un medico ____.", "opciones": ["Venezolano", "Brasileno", "Peruano"], "correcta": 0, "explicacion": "Figura cientifica y social venezolana."},
+    {"frase": "El patrimonio cultural incluye bienes ____ e inmateriales.", "opciones": ["Materiales", "Artificiales", "Virtuales"], "correcta": 0, "explicacion": "Incluye objetos, lugares y tradiciones."},
+    {"frase": "La cooperacion regional puede impulsar el ____.", "opciones": ["Desarrollo", "Atraso", "Aislamiento"], "correcta": 0, "explicacion": "Favorece intercambio y crecimiento."}
+  ],
+  "10": [
+    {"frase": "El comercio exterior se relaciona con ____ e importaciones.", "opciones": ["Exportaciones", "Tradiciones", "Constituciones"], "correcta": 0, "explicacion": "Son operaciones internacionales."},
+    {"frase": "La historia usa fuentes para construir ____.", "opciones": ["Interpretaciones", "Adivinanzas", "Recetas"], "correcta": 0, "explicacion": "Se basa en evidencias verificables."},
+    {"frase": "La geografia influye en la distribucion de ____.", "opciones": ["Recursos", "Silencios", "Mitos"], "correcta": 0, "explicacion": "Condiciona economia y poblamiento."},
+    {"frase": "La constitucion define derechos y ____.", "opciones": ["Deberes", "Caprichos", "Rumores"], "correcta": 0, "explicacion": "Marco juridico del Estado."}
+  ],
+  "11": [
+    {"frase": "La integracion internacional demanda ____ y acuerdos.", "opciones": ["Dialogo", "Aislamiento", "Silencio"], "correcta": 0, "explicacion": "El dialogo es clave en diplomacia."},
+    {"frase": "La biodiversidad es la variedad de ____ en un ecosistema.", "opciones": ["Especies", "Monedas", "Edificios"], "correcta": 0, "explicacion": "Describe riqueza natural."},
+    {"frase": "Una aduana controla el flujo de ____.", "opciones": ["Mercancias", "Canciones", "Cartas"], "correcta": 0, "explicacion": "Funcion comercial y fiscal."},
+    {"frase": "La memoria historica fortalece la identidad ____.", "opciones": ["Colectiva", "Aleatoria", "Temporal"], "correcta": 0, "explicacion": "Construye sentido de pertenencia."}
+  ],
+  "12": [
+    {"frase": "Un museo preserva y difunde bienes de valor ____.", "opciones": ["Cultural", "Bancario", "Privado"], "correcta": 0, "explicacion": "Su funcion es educativa y patrimonial."},
+    {"frase": "Las obras publicas mejoran servicios de ____.", "opciones": ["Infraestructura", "Adivinacion", "Decoracion"], "correcta": 0, "explicacion": "Incluye vialidad, puentes y puertos."},
+    {"frase": "El Lago de Maracaibo esta en el ____ del pais.", "opciones": ["Noroeste", "Sureste", "Centro"], "correcta": 0, "explicacion": "Ubicado en el estado Zulia."},
+    {"frase": "La innovacion implica crear soluciones ____.", "opciones": ["Nuevas", "Antiguas", "Inutiles"], "correcta": 0, "explicacion": "Busca mejorar procesos y resultados."}
+  ],
+  "13": [
+    {"frase": "La diplomacia gestiona relaciones entre ____.", "opciones": ["Estados", "Barrios", "Familias"], "correcta": 0, "explicacion": "Ambito internacional entre paises."},
+    {"frase": "La educacion tecnica prepara para competencias ____.", "opciones": ["Aplicadas", "Abstractas", "Secretas"], "correcta": 0, "explicacion": "Enfocada en campo laboral y practico."},
+    {"frase": "El archivo historico conserva ____ primarias.", "opciones": ["Fuentes", "Opiniones", "Leyendas"], "correcta": 0, "explicacion": "Documentos utiles para investigacion."},
+    {"frase": "La cultura nacional se expresa en musica, cocina y ____.", "opciones": ["Tradiciones", "Silencios", "Aislamientos"], "correcta": 0, "explicacion": "Las tradiciones son parte central."}
+  ],
+  "14": [
+    {"frase": "El desarrollo sostenible busca equilibrio entre economia y ____.", "opciones": ["Ambiente", "Ruido", "Moda"], "correcta": 0, "explicacion": "Integra crecimiento y cuidado ambiental."},
+    {"frase": "Las exportaciones generan ingreso de ____.", "opciones": ["Divisas", "Anecdotas", "Riesgos"], "correcta": 0, "explicacion": "Aportan moneda extranjera."},
+    {"frase": "La ciudadania activa requiere informacion y ____.", "opciones": ["Participacion", "Pasividad", "Indiferencia"], "correcta": 0, "explicacion": "Sin participacion no hay incidencia social."},
+    {"frase": "La historia ayuda a comprender procesos del ____.", "opciones": ["Presente", "Vacio", "Azar"], "correcta": 0, "explicacion": "Conecta pasado y presente."}
+  ],
+  "15": [
+    {"frase": "La identidad venezolana se construye con memoria, cultura y ____.", "opciones": ["Territorio", "Silencio", "Aislamiento"], "correcta": 0, "explicacion": "Es una identidad historica y geografica."},
+    {"frase": "El aprendizaje historico orienta decisiones de ____.", "opciones": ["Futuro", "Azar", "Rutina"], "correcta": 0, "explicacion": "Permite proyectar soluciones con contexto."},
+    {"frase": "La cooperacion fortalece proyectos de alcance ____.", "opciones": ["Regional", "Individual", "Invisible"], "correcta": 0, "explicacion": "Mejora capacidades compartidas."},
+    {"frase": "El conocimiento civico promueve convivencia y ____.", "opciones": ["Responsabilidad", "Desorden", "Negacion"], "correcta": 0, "explicacion": "Base para vida democratica."}
+  ]
+}

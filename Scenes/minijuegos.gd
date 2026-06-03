@@ -1,6 +1,33 @@
 extends Control
 
 const SQLiteHelper = preload("res://Scripts/sqlite_helper.gd")
+const ICON_CANVAS_SIZE := 256
+const MINIJUEGOS := {
+	"VBoxContainer/HBoxContainer/Level 1": {
+		"icono": "res://GFX/Minijuegos/Sopa.png",
+		"nombre": "NIVELES DE SOPA",
+	},
+	"VBoxContainer/HBoxContainer/Level 2": {
+		"icono": "res://GFX/Minijuegos/Memoria.png",
+		"nombre": "NIVELES DE MEMORIA",
+	},
+	"VBoxContainer/HBoxContainer/Level 3": {
+		"icono": "res://GFX/Minijuegos/Columnas.png",
+		"nombre": "NIVELES DE COLUMNAS",
+	},
+	"VBoxContainer/HBoxContainer3/Level 11": {
+		"icono": "res://GFX/Minijuegos/TrueorFalse.png",
+		"nombre": "NIVELES DE VERDADERO O FALSO",
+	},
+	"VBoxContainer/HBoxContainer3/Level 12": {
+		"icono": "res://GFX/Minijuegos/Completar.png",
+		"nombre": "NIVELES DE COMPLETAR FRASES",
+	},
+	"VBoxContainer/HBoxContainer3/Level 13": {
+		"icono": "res://GFX/Minijuegos/Ahorcado.png",
+		"nombre": "NIVELES DE AHORCADO",
+	},
+}
 
 var db: SQLite
 var nivel_actual: int = GlobalUsuario.nivel_maximo
@@ -8,6 +35,7 @@ var nivel_actual: int = GlobalUsuario.nivel_maximo
 func _ready() -> void:
 	db = SQLiteHelper.open_db_connection()
 	_cargar_usuario_actual()
+	_configurar_iconos_minijuegos()
 
 func _exit_tree() -> void:
 	if db:
@@ -39,31 +67,136 @@ func _cargar_usuario_actual() -> void:
 	print("Sesion iniciada como: ", GlobalUsuario.nombre_alumno)
 
 func _mostrar_alerta(mensaje: String) -> void:
-	var alertas := get_node_or_null("/root/Alertas")
+	var alertas: Node = get_node_or_null("/root/Alertas")
 	if alertas and alertas.has_method("mostrar_alerta"):
 		alertas.mostrar_alerta(mensaje, 1.0)
 	print(mensaje)
 
 
+func _configurar_iconos_minijuegos() -> void:
+	for ruta_boton in MINIJUEGOS.keys():
+		var boton := get_node_or_null(ruta_boton) as Button
+		if boton == null:
+			continue
+
+		var datos := MINIJUEGOS[ruta_boton] as Dictionary
+		var textura := _crear_icono_normalizado(str(datos.get("icono", "")))
+		if textura == null:
+			continue
+
+		_configurar_tarjeta_minijuego(boton, textura, str(datos.get("nombre", "")))
+
+
+func _configurar_tarjeta_minijuego(boton: Button, textura: Texture2D, titulo: String) -> void:
+	var fondo_vacio := StyleBoxEmpty.new()
+	boton.flat = true
+	boton.text = ""
+	boton.icon = null
+	boton.add_theme_stylebox_override("normal", fondo_vacio)
+	boton.add_theme_stylebox_override("hover", fondo_vacio)
+	boton.add_theme_stylebox_override("pressed", fondo_vacio)
+	boton.add_theme_stylebox_override("focus", fondo_vacio)
+
+	var icono := boton.get_node_or_null("Icono") as TextureRect
+	if icono == null:
+		icono = TextureRect.new()
+		icono.name = "Icono"
+		icono.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		boton.add_child(icono)
+
+	icono.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	icono.offset_left = 8.0
+	icono.offset_top = 8.0
+	icono.offset_right = -8.0
+	icono.offset_bottom = -52.0
+	icono.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	icono.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	icono.texture = textura
+
+	var etiqueta := boton.get_node_or_null("Titulo") as Label
+	if etiqueta == null:
+		etiqueta = Label.new()
+		etiqueta.name = "Titulo"
+		etiqueta.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		boton.add_child(etiqueta)
+
+	etiqueta.anchor_left = 0.0
+	etiqueta.anchor_right = 1.0
+	etiqueta.anchor_top = 1.0
+	etiqueta.anchor_bottom = 1.0
+	etiqueta.offset_left = 0.0
+	etiqueta.offset_right = 0.0
+	etiqueta.offset_top = -44.0
+	etiqueta.offset_bottom = -8.0
+	etiqueta.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	etiqueta.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	etiqueta.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	etiqueta.add_theme_color_override("font_color", Color(1, 1, 1, 1))
+	etiqueta.add_theme_color_override("font_outline_color", Color(0, 0, 0, 0.9))
+	etiqueta.add_theme_constant_override("outline_size", 4)
+	etiqueta.add_theme_font_size_override("font_size", 24)
+	etiqueta.text = titulo
+
+
+func _crear_icono_normalizado(ruta_textura: String) -> Texture2D:
+	if not FileAccess.file_exists(ruta_textura):
+		push_warning("No se encontro icono: %s" % ruta_textura)
+		return null
+
+	var imagen := Image.new()
+	var err := imagen.load(ruta_textura)
+	if err != OK:
+		push_warning("No se pudo cargar icono: %s" % ruta_textura)
+		return null
+
+	var recorte_usado := imagen.get_used_rect()
+	if recorte_usado.size.x <= 0 or recorte_usado.size.y <= 0:
+		recorte_usado = Rect2i(Vector2i.ZERO, imagen.get_size())
+
+	var recortada := imagen.get_region(recorte_usado)
+	var lado := maxi(recortada.get_width(), recortada.get_height())
+	var cuadrada := Image.create(lado, lado, false, Image.FORMAT_RGBA8)
+	cuadrada.fill(Color(0, 0, 0, 0))
+
+	var destino := Vector2i((lado - recortada.get_width()) / 2, (lado - recortada.get_height()) / 2)
+	cuadrada.blit_rect(recortada, Rect2i(Vector2i.ZERO, recortada.get_size()), destino)
+	cuadrada.resize(ICON_CANVAS_SIZE, ICON_CANVAS_SIZE, Image.INTERPOLATE_LANCZOS)
+
+	return ImageTexture.create_from_image(cuadrada)
+
+
 func _on_level_1_pressed() -> void:
-	Configuracion.change_scene_to_file("res://selectorsopaletras.tscn")
+	GlobalUsuario.nivel_seleccionado = _nivel_minijuego_por_defecto()
+	Configuracion.change_scene_to_file("res://nivelsopa.tscn")
 
 
 func _on_level_2_pressed() -> void:
-	Configuracion.change_scene_to_file("res://selectormemoria.tscn")
+	GlobalUsuario.nivel_seleccionado = _nivel_minijuego_por_defecto()
+	Configuracion.change_scene_to_file("res://nivelmemoria.tscn")
 
 
 func _on_level_3_pressed() -> void:
-	Configuracion.change_scene_to_file("res://selectorelacioncolumn.tscn")
+	GlobalUsuario.nivel_seleccionado = _nivel_minijuego_por_defecto()
+	Configuracion.change_scene_to_file("res://nivel columna.tscn")
 
 
 func _on_level_11_pressed() -> void:
-	Configuracion.change_scene_to_file("res://selectorverdfal.tscn")
+	GlobalUsuario.minijuego_actual = "verdadero_falso"
+	GlobalUsuario.nivel_seleccionado = _nivel_minijuego_por_defecto()
+	Configuracion.change_scene_to_file("res://Scenes/minijuego_textual.tscn")
 
 
 func _on_level_12_pressed() -> void:
-	Configuracion.change_scene_to_file("res://selectorcomfrases.tscn")
+	GlobalUsuario.minijuego_actual = "completar_frases"
+	GlobalUsuario.nivel_seleccionado = _nivel_minijuego_por_defecto()
+	Configuracion.change_scene_to_file("res://Scenes/minijuego_textual.tscn")
 
 
 func _on_level_13_pressed() -> void:
-	Configuracion.change_scene_to_file("res://selectorordenfrases.tscn")
+	GlobalUsuario.minijuego_actual = "ahorcado"
+	GlobalUsuario.nivel_seleccionado = _nivel_minijuego_por_defecto()
+	Configuracion.change_scene_to_file("res://Scenes/minijuego_textual.tscn")
+
+
+func _nivel_minijuego_por_defecto() -> int:
+	return clampi(GlobalUsuario.nivel_maximo, 1, 15)

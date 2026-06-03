@@ -13,7 +13,8 @@ class ParejaRelacion:
 # --- CONFIGURACIÓN DE RECOMPENSAS BASE ---
 const RECOMPENSA_BASE_PUNTOS := 100
 const MONEDAS_POR_ESTRELLA := 50
-const RUTA_ESCENA_SELECCION := "res://selectorcolumnas.tscn"
+const RUTA_ESCENA_SELECCION := "res://Scenes/Minijuegos.tscn"
+const RUTA_DATOS_COLUMNAS := "res://Data/minijuegos/columnas.json"
 
 # --- NUEVO DICCIONARIO: TIEMPOS MÁXIMOS POR NIVEL (Máx 8 min = 480s) ---
 const TIEMPOS_POR_NIVEL: Dictionary = {
@@ -341,6 +342,7 @@ func _ready() -> void:
 			capa_confirmacion.process_mode = Node.PROCESS_MODE_ALWAYS
 	
 	db = SQLiteHelper.open_db_connection()
+	_cargar_banco_columnas_desde_archivo()
 	_cargar_usuario_actual()
 	numero_de_nivel = maxi(1, int(GlobalUsuario.nivel_seleccionado))
 	
@@ -351,6 +353,63 @@ func _ready() -> void:
 			return
 			
 	_inicializar_entorno()
+
+func _cargar_banco_columnas_desde_archivo() -> void:
+	if not FileAccess.file_exists(RUTA_DATOS_COLUMNAS):
+		return
+	var archivo := FileAccess.open(RUTA_DATOS_COLUMNAS, FileAccess.READ)
+	if archivo == null:
+		return
+	var parsed: Variant = JSON.parse_string(archivo.get_as_text())
+	if typeof(parsed) != TYPE_DICTIONARY:
+		return
+
+	var banco_convertido: Dictionary = {}
+	for nivel_key in parsed.keys():
+		var nivel := int(str(nivel_key))
+		if nivel <= 0:
+			continue
+		var temas_raw: Variant = parsed[nivel_key]
+		if typeof(temas_raw) != TYPE_DICTIONARY:
+			continue
+		var temas_dict: Dictionary = temas_raw
+
+		var temas_convertidos: Dictionary = {}
+		for tema_key in temas_dict.keys():
+			var tema := int(str(tema_key))
+			if tema <= 0:
+				continue
+			var data_tema_raw: Variant = temas_dict[tema_key]
+			if typeof(data_tema_raw) != TYPE_DICTIONARY:
+				continue
+			var data_tema: Dictionary = data_tema_raw
+
+			var titulo := str(data_tema.get("titulo", "Nivel %d - Tema %d" % [nivel, tema]))
+			var filas := data_tema.get("parejas", [])
+			if typeof(filas) != TYPE_ARRAY:
+				continue
+
+			var parejas: Array[ParejaRelacion] = []
+			var id_base := (nivel * 100) + (tema * 10)
+			var index := 0
+			for fila in filas:
+				if typeof(fila) != TYPE_DICTIONARY:
+					continue
+				var texto_izq := str(fila.get("izq", "")).strip_edges()
+				var texto_der := str(fila.get("der", "")).strip_edges()
+				if texto_izq.is_empty() or texto_der.is_empty():
+					continue
+				parejas.append(ParejaRelacion.new(id_base + index, texto_izq, texto_der))
+				index += 1
+
+			if not parejas.is_empty():
+				temas_convertidos[tema] = {"titulo": titulo, "parejas": parejas}
+
+		if not temas_convertidos.is_empty():
+			banco_convertido[nivel] = temas_convertidos
+
+	if not banco_convertido.is_empty():
+		BANCO_NIVELES_GLOBAL = banco_convertido
 
 func _inicializar_entorno() -> void:
 	tiempo_maximo_nivel = TIEMPOS_POR_NIVEL.get(numero_de_nivel, 480.0)
@@ -565,12 +624,7 @@ func _mostrar_pantalla_resultados_visual(pts: int, mon: int, estrellas: int) -> 
 
 # --- VALIDACIONES COMPLEMENTARIAS ---
 func _verificar_nivel_desbloqueado_en_tienda(lvl: int) -> bool:
-	# Realiza un Query a la tabla que uses para gestionar tus compras en la tienda
-	var query := "SELECT SW_COMPRADO FROM tienda_desbloqueos WHERE NU_NIVEL = %d AND NU_USU = %d;" % [lvl, GlobalUsuario.usuario_actual_id]
-	db.query(query)
-	if not db.query_result.is_empty():
-		return int(db.query_result[0].get("SW_COMPRADO", 0)) == 1
-	return false # Por defecto bloqueado si no hay registro
+	return SQLiteHelper.nivel_comprado(db, GlobalUsuario.usuario_actual_id, "columnas", lvl)
 
 func _bloquear_por_no_comprado() -> void:
 	juego_activo = false
@@ -638,18 +692,27 @@ func _guardar_progreso_db(pts: int, estrellas: int) -> void:
 	var usr_name = SQLiteHelper.escape(GlobalUsuario.nombre_alumno)
 	var time_str = Time.get_datetime_string_from_system().replace("T", " ")
 	
-	db.query("INSERT INTO columnas_intentos (NU_USU, NM_ALUMNO, NU_NIVEL, NU_PUNTOS, NU_ESTRELLAS, FE_INTENTO) VALUES (%d, '%s', %d, %d, %d, '%s');" % [id_user, usr_name, numero_de_nivel, pts, estrellas, time_str])
+	var completado_col := 1 if estrellas == 3 else 0
+	db.query("INSERT INTO columnas_intentos (NU_USU, NM_ALUMNO, NU_NIVEL, NU_PUNTOS, NU_ESTRELLAS, SW_COM, FE_INTENTO) VALUES (%d, '%s', %d, %d, %d, %d, '%s');" % [id_user, usr_name, numero_de_nivel, pts, estrellas, completado_col, time_str])
 	
 	db.query("SELECT NU_ESTRELLAS FROM columnas_niveles WHERE NU_USU = %d AND NU_NIVEL = %d;" % [id_user, numero_de_nivel])
 	if db.query_result.is_empty():
-		db.query("INSERT INTO columnas_niveles (NU_NIVEL, NU_USU, NM_ALUMNO, NU_PUNTOS, NU_ESTRELLAS) VALUES (%d, %d, '%s', %d, %d);" % [numero_de_nivel, id_user, usr_name, pts, estrellas])
+		db.query("INSERT INTO columnas_niveles (NU_NIVEL, NU_USU, NM_ALUMNO, NU_PUNTOS, NU_ESTRELLAS, SW_COM) VALUES (%d, %d, '%s', %d, %d, %d);" % [numero_de_nivel, id_user, usr_name, pts, estrellas, completado_col])
 	else:
-		var previas = int(db.query_result[0].get("NU_ESTRELLAS", 0))
+		var previas := int(db.query_result[0].get("NU_ESTRELLAS", 0))
 		if estrellas > previas:
-			db.query("UPDATE columnas_niveles SET NU_PUNTOS = %d, NU_ESTRELLAS = %d WHERE NU_NIVEL = %d AND NU_USU = %d;" % [pts, estrellas, numero_de_nivel, id_user])
+			db.query("UPDATE columnas_niveles SET NU_PUNTOS = %d, NU_ESTRELLAS = %d, SW_COM = %d WHERE NU_NIVEL = %d AND NU_USU = %d;" % [pts, estrellas, completado_col, numero_de_nivel, id_user])
 			
-	var prox = numero_de_nivel + 1
+	var prox := numero_de_nivel + 1
 	db.query("UPDATE Alumnos SET NU_NIVEL_MAX_COLUMNAS = %d WHERE NU_USU = %d AND NU_NIVEL_MAX_COLUMNAS < %d;" % [prox, id_user, prox])
+
+	SQLiteHelper.mirror_minijuegos_resultados(db, id_user, GlobalUsuario.nombre_alumno, "columnas", pts, estrellas)
+
+	db.query("SELECT NU_DINERO FROM Alumnos WHERE NU_USU = %d;" % id_user)
+	var dinero_total := 0
+	if not db.query_result.is_empty():
+		dinero_total = int(db.query_result[0].get("NU_DINERO", 0))
+	Logros.evaluar_post_nivel(estrellas, pts, dinero_total)
 
 func _cargar_usuario_actual() -> void:
 	if GlobalUsuario.usuario_actual_id > 0:
@@ -745,8 +808,7 @@ func _on_boton_salir_pressed():
 func _on_boton_si_confirmar_salir_pressed():
 	get_tree().paused = false
 	GlobalUsuario.nivel_seleccionado = numero_de_nivel
-	# Reemplaza con la ruta real de tu escena de mapa
-	get_tree().change_scene_to_file("res://selectorelacioncolumn.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Minijuegos.tscn")
 
 func _on_boton_no_cancelar_pressed():
 	# Si se arrepiente, cerramos la confirmación y VOLVEMOS al menú de pausa

@@ -1,0 +1,107 @@
+{
+  "1": [
+    {"texto": "El 19 de abril de 1810 inicio el proceso de independencia en Caracas.", "respuesta": true, "explicacion": "Ese dia se formo la Junta Suprema de Caracas."},
+    {"texto": "La Batalla de Carabobo ocurrio en 1821.", "respuesta": true, "explicacion": "Fue clave para consolidar la independencia."},
+    {"texto": "El turpial es el arbol nacional de Venezuela.", "respuesta": false, "explicacion": "El turpial es el ave nacional; el arbol es el araguaney."},
+    {"texto": "Simon Bolivar es conocido como El Libertador.", "respuesta": true, "explicacion": "Es su titulo historico mas reconocido."},
+    {"texto": "El Orinoco es un rio de Venezuela.", "respuesta": true, "explicacion": "Es uno de los rios mas importantes del pais."}
+  ],
+  "2": [
+    {"texto": "Francisco de Miranda participo en procesos independentistas en America y Europa.", "respuesta": true, "explicacion": "Miranda tuvo una trayectoria internacional."},
+    {"texto": "La declaracion de independencia de Venezuela se firmo en 1811.", "respuesta": true, "explicacion": "Se firmo el 5 de julio de 1811."},
+    {"texto": "Sucre fue conocido como el Precursor.", "respuesta": false, "explicacion": "El Precursor fue Miranda; Sucre fue Gran Mariscal de Ayacucho."},
+    {"texto": "La ciudad de Caracas esta en la region central del pais.", "respuesta": true, "explicacion": "Caracas se ubica en la zona centro-norte."},
+    {"texto": "El escudo nacional no forma parte de los simbolos patrios.", "respuesta": false, "explicacion": "Bandera, escudo e himno son simbolos patrios."}
+  ],
+  "3": [
+    {"texto": "La Batalla de Ayacucho fue decisiva para la independencia sudamericana.", "respuesta": true, "explicacion": "Consolido la derrota del poder colonial en la region."},
+    {"texto": "Jose Antonio Paez fue un lider llanero.", "respuesta": true, "explicacion": "Tuvo un papel relevante en la independencia y la republica."},
+    {"texto": "El Lago de Maracaibo esta en el estado Zulia.", "respuesta": true, "explicacion": "Es uno de los cuerpos de agua mas importantes del pais."},
+    {"texto": "El araguaney es el ave nacional.", "respuesta": false, "explicacion": "El araguaney es el arbol nacional."},
+    {"texto": "El himno nacional se llama Gloria al Bravo Pueblo.", "respuesta": true, "explicacion": "Es el nombre oficial del himno venezolano."}
+  ],
+  "4": [
+    {"texto": "El Congreso de Angostura se realizo en 1819.", "respuesta": true, "explicacion": "Fue un momento politico central liderado por Bolivar."},
+    {"texto": "La abolicion de la esclavitud en Venezuela se decreto en 1854.", "respuesta": true, "explicacion": "Fue un paso social y juridico importante."},
+    {"texto": "El Pico Bolivar esta en los Andes venezolanos.", "respuesta": true, "explicacion": "Es la cima mas alta del pais."},
+    {"texto": "El joropo es un genero musical tipico de los llanos.", "respuesta": true, "explicacion": "Es una expresion cultural tradicional."},
+    {"texto": "Cubagua fue famosa por su produccion de cafe.", "respuesta": false, "explicacion": "Cubagua fue historicamente conocida por las perlas."}
+  ],
+  "5": [
+    {"texto": "La Carta de Jamaica fue escrita por Simon Bolivar.", "respuesta": true, "explicacion": "Es un documento politico de 1815."},
+    {"texto": "Antonio Jose de Sucre participo en la Batalla de Carabobo.", "respuesta": true, "explicacion": "Fue una figura militar destacada del proceso."},
+    {"texto": "El Sistema Nacional de Orquestas fue impulsado por Jose Antonio Abreu.", "respuesta": true, "explicacion": "Proyecto cultural de gran impacto internacional."},
+    {"texto": "La UCV no tiene valor patrimonial reconocido.", "respuesta": false, "explicacion": "La Ciudad Universitaria de Caracas es patrimonio mundial."},
+    {"texto": "El petroleo paso a ser clave en la economia venezolana en el siglo XX.", "respuesta": true, "explicacion": "Transformo el modelo economico del pais."}
+  ],
+  "6": [
+    {"texto": "Barroso II fue un pozo petrolero historico en Zulia.", "respuesta": true, "explicacion": "Es un hito del desarrollo petrolero."},
+    {"texto": "PDVSA es la empresa petrolera estatal.", "respuesta": true, "explicacion": "Administra buena parte de la industria nacional."},
+    {"texto": "Andres Bello fue un cientifico petrolero.", "respuesta": false, "explicacion": "Andres Bello fue humanista, jurista y educador."},
+    {"texto": "Canaima es un parque nacional venezolano.", "respuesta": true, "explicacion": "Alli se encuentra el Salto Angel."},
+    {"texto": "El Salto Angel es la caida de agua mas alta del mundo.", "respuesta": true, "explicacion": "Es un simbolo natural de Venezuela."}
+  ],
+  "7": [
+    {"texto": "Miranda participo en la Revolucion Francesa.", "respuesta": true, "explicacion": "Su trayectoria politica fue internacional."},
+    {"texto": "La Primera Republica de Venezuela inicio en 1811.", "respuesta": true, "explicacion": "Comenzo tras la firma del acta de independencia."},
+    {"texto": "El turpial es un simbolo de identidad nacional.", "respuesta": true, "explicacion": "Es el ave nacional de Venezuela."},
+    {"texto": "El Orinoco desemboca en el oceano Pacifico.", "respuesta": false, "explicacion": "Desemboca en el oceano Atlantico."},
+    {"texto": "Los llanos son una region caracterizada por sabanas extensas.", "respuesta": true, "explicacion": "Es una region clave para la ganaderia y la cultura."}
+  ],
+  "8": [
+    {"texto": "El 5 de julio se conmemora la independencia de Venezuela.", "respuesta": true, "explicacion": "Es una fecha patria principal."},
+    {"texto": "La gaita zuliana se asocia especialmente con diciembre.", "respuesta": true, "explicacion": "Es un genero muy presente en la epoca navidena."},
+    {"texto": "El araguaney florece con flores amarillas.", "respuesta": true, "explicacion": "Es una de sus caracteristicas mas conocidas."},
+    {"texto": "El Panteon Nacional alberga heroes de la independencia.", "respuesta": true, "explicacion": "Es un sitio historico y simbolico."},
+    {"texto": "La Batalla de Boyaca ocurrio dentro del territorio venezolano actual.", "respuesta": false, "explicacion": "Ocurrio en la actual Colombia."}
+  ],
+  "9": [
+    {"texto": "La Campana Admirable fue liderada por Bolivar.", "respuesta": true, "explicacion": "Fue una operacion militar destacada de 1813."},
+    {"texto": "La ciudad de Angostura actualmente se llama Ciudad Bolivar.", "respuesta": true, "explicacion": "Cambio de nombre en honor a El Libertador."},
+    {"texto": "La hallaca es un plato tipico asociado a la navidad.", "respuesta": true, "explicacion": "Es parte de la tradicion familiar decembrina."},
+    {"texto": "El escudo nacional no contiene un caballo.", "respuesta": false, "explicacion": "El caballo es un elemento central del escudo."},
+    {"texto": "El Mar Caribe limita al norte con Venezuela.", "respuesta": true, "explicacion": "Forma parte del litoral venezolano."}
+  ],
+  "10": [
+    {"texto": "La Constitucion organiza los poderes publicos del Estado.", "respuesta": true, "explicacion": "Define estructura institucional y derechos."},
+    {"texto": "La participacion ciudadana es parte de la vida democratica.", "respuesta": true, "explicacion": "Incluye voto, organizacion y control social."},
+    {"texto": "El petroleo fue siempre la principal actividad economica desde la colonia.", "respuesta": false, "explicacion": "En colonia destacaron cacao y cafe, entre otros."},
+    {"texto": "La region andina incluye estados como Merida y Tachira.", "respuesta": true, "explicacion": "Es una zona montanosa del occidente."},
+    {"texto": "Simon Rodriguez fue maestro de Bolivar.", "respuesta": true, "explicacion": "Influyo en su formacion intelectual."}
+  ],
+  "11": [
+    {"texto": "El ferrocarril fue parte de los procesos de modernizacion del siglo XIX.", "respuesta": true, "explicacion": "Impulso transporte y comercio."},
+    {"texto": "La aduana se relaciona con el control de mercancias.", "respuesta": true, "explicacion": "Gestiona ingreso y salida comercial."},
+    {"texto": "La nacionalizacion del petroleo ocurrio en 1976.", "respuesta": true, "explicacion": "Fue una decision economica de gran impacto."},
+    {"texto": "El telegrafo era una tecnologia de internet.", "respuesta": false, "explicacion": "Fue un sistema electrico de mensajes previo a internet."},
+    {"texto": "La infraestructura publica incluye carreteras, puentes y puertos.", "respuesta": true, "explicacion": "Son obras para servicios y conectividad."}
+  ],
+  "12": [
+    {"texto": "La ciudad universitaria de Caracas fue disenada por Carlos Raul Villanueva.", "respuesta": true, "explicacion": "Es una obra de referencia arquitectonica."},
+    {"texto": "La biodiversidad venezolana incluye ecosistemas andinos, llaneros y amazonicos.", "respuesta": true, "explicacion": "El pais tiene gran variedad natural."},
+    {"texto": "El Lago de Maracaibo esta al sur de la Amazonia.", "respuesta": false, "explicacion": "Se ubica en el noroeste, en Zulia."},
+    {"texto": "La geografia influye en la economia regional.", "respuesta": true, "explicacion": "Recursos y clima condicionan actividades productivas."},
+    {"texto": "La memoria historica ayuda a comprender el presente.", "respuesta": true, "explicacion": "Permite interpretar procesos sociales y politicos."}
+  ],
+  "13": [
+    {"texto": "La innovacion puede aplicarse a educacion, salud y produccion.", "respuesta": true, "explicacion": "No se limita a un solo sector."},
+    {"texto": "Las exportaciones no aportan divisas al pais.", "respuesta": false, "explicacion": "Si aportan ingreso de moneda extranjera."},
+    {"texto": "La cooperacion internacional favorece intercambio academico y cultural.", "respuesta": true, "explicacion": "Fortalece proyectos y aprendizaje compartido."},
+    {"texto": "El patrimonio cultural solo incluye edificios.", "respuesta": false, "explicacion": "Tambien incluye practicas, tradiciones y saberes."},
+    {"texto": "La ciencia historica se apoya en fuentes y evidencias.", "respuesta": true, "explicacion": "Analiza documentos, objetos y testimonios."}
+  ],
+  "14": [
+    {"texto": "Los archivos historicos preservan documentos para investigacion.", "respuesta": true, "explicacion": "Son esenciales para estudios de historia."},
+    {"texto": "La ciudadania no implica responsabilidades.", "respuesta": false, "explicacion": "Implica derechos y deberes."},
+    {"texto": "Los monumentos conmemoran hechos o figuras relevantes.", "respuesta": true, "explicacion": "Cumplen funcion de memoria publica."},
+    {"texto": "El dialogo social puede ayudar a resolver conflictos.", "respuesta": true, "explicacion": "Es una herramienta de convivencia democratica."},
+    {"texto": "La historia nacional no tiene relacion con la historia regional.", "respuesta": false, "explicacion": "Se conectan y se explican mutuamente."}
+  ],
+  "15": [
+    {"texto": "La identidad nacional se construye con historia, cultura y territorio.", "respuesta": true, "explicacion": "Es un proceso colectivo y dinamico."},
+    {"texto": "El conocimiento historico puede fortalecer la participacion ciudadana.", "respuesta": true, "explicacion": "Ayuda a tomar decisiones informadas."},
+    {"texto": "El talento venezolano ha tenido impacto en ciencia, arte y deporte.", "respuesta": true, "explicacion": "Existen aportes reconocidos internacionalmente."},
+    {"texto": "La cooperacion regional impide todo desarrollo local.", "respuesta": false, "explicacion": "Puede complementar y potenciar capacidades locales."},
+    {"texto": "Aprender historia tambien sirve para proyectar el futuro.", "respuesta": true, "explicacion": "Permite identificar retos y oportunidades."}
+  ]
+}

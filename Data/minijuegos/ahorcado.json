@@ -1,0 +1,92 @@
+{
+  "1": [
+    {"palabra": "BOLIVAR", "pista": "Libertador de Venezuela"},
+    {"palabra": "MIRANDA", "pista": "Precursor de la independencia"},
+    {"palabra": "CARACAS", "pista": "Capital de Venezuela"},
+    {"palabra": "TURPIAL", "pista": "Ave nacional"}
+  ],
+  "2": [
+    {"palabra": "CARABOBO", "pista": "Batalla clave de 1821"},
+    {"palabra": "ORINOCO", "pista": "Gran rio venezolano"},
+    {"palabra": "BANDERA", "pista": "Simbolo patrio tricolor"},
+    {"palabra": "JUNTA", "pista": "Gobierno provisional de 1810"}
+  ],
+  "3": [
+    {"palabra": "ARAGUANEY", "pista": "Arbol nacional"},
+    {"palabra": "AYACUCHO", "pista": "Batalla de Sucre"},
+    {"palabra": "ANGOSTURA", "pista": "Congreso de 1819"},
+    {"palabra": "LLANOS", "pista": "Region de sabanas"}
+  ],
+  "4": [
+    {"palabra": "INDEPENDENCIA", "pista": "Meta politica del proceso de 1810-1821"},
+    {"palabra": "SUCRE", "pista": "Gran Mariscal"},
+    {"palabra": "PANTEON", "pista": "Lugar de heroes nacionales"},
+    {"palabra": "JOROPO", "pista": "Genero musical llanero"}
+  ],
+  "5": [
+    {"palabra": "ABOLICION", "pista": "Fin de la esclavitud"},
+    {"palabra": "CONSTITUCION", "pista": "Norma juridica suprema"},
+    {"palabra": "CABILDO", "pista": "Institucion municipal colonial"},
+    {"palabra": "MARGARITA", "pista": "Isla del Caribe venezolano"}
+  ],
+  "6": [
+    {"palabra": "PETROLEO", "pista": "Recurso clave en el siglo XX"},
+    {"palabra": "BARROSO", "pista": "Pozo historico de 1922"},
+    {"palabra": "ZULIA", "pista": "Estado con gran actividad petrolera"},
+    {"palabra": "REFINERIA", "pista": "Procesa crudo"}
+  ],
+  "7": [
+    {"palabra": "UCV", "pista": "Universidad Central de Venezuela"},
+    {"palabra": "VILLANUEVA", "pista": "Arquitecto de la Ciudad Universitaria"},
+    {"palabra": "CONVIT", "pista": "Cientifico venezolano"},
+    {"palabra": "ORQUESTA", "pista": "Formacion musical de El Sistema"}
+  ],
+  "8": [
+    {"palabra": "ABREU", "pista": "Fundador de El Sistema"},
+    {"palabra": "GAITA", "pista": "Genero zuliano"},
+    {"palabra": "HALLACA", "pista": "Plato navideno tradicional"},
+    {"palabra": "CUATRO", "pista": "Instrumento musical venezolano"}
+  ],
+  "9": [
+    {"palabra": "CANAIMA", "pista": "Parque nacional del Salto Angel"},
+    {"palabra": "ANDES", "pista": "Cordillera occidental"},
+    {"palabra": "MORROCOY", "pista": "Parque costero"},
+    {"palabra": "MERIDA", "pista": "Ciudad andina"}
+  ],
+  "10": [
+    {"palabra": "CIUDADANIA", "pista": "Condicion de derechos y deberes"},
+    {"palabra": "DEMOCRACIA", "pista": "Sistema politico participativo"},
+    {"palabra": "SUFRAGIO", "pista": "Derecho al voto"},
+    {"palabra": "PARTICIPACION", "pista": "Accion civica de la poblacion"}
+  ],
+  "11": [
+    {"palabra": "FERROCARRIL", "pista": "Transporte de modernizacion"},
+    {"palabra": "TELEGRAFO", "pista": "Comunicacion electrica antigua"},
+    {"palabra": "ADUANA", "pista": "Control de mercancias"},
+    {"palabra": "INFRAESTRUCTURA", "pista": "Obras y servicios publicos"}
+  ],
+  "12": [
+    {"palabra": "EXPORTACION", "pista": "Venta de bienes al exterior"},
+    {"palabra": "DIVISAS", "pista": "Moneda extranjera"},
+    {"palabra": "INTEGRACION", "pista": "Cooperacion entre paises"},
+    {"palabra": "DIPLOMACIA", "pista": "Gestion de relaciones internacionales"}
+  ],
+  "13": [
+    {"palabra": "PATRIMONIO", "pista": "Herencia cultural e historica"},
+    {"palabra": "ARCHIVO", "pista": "Resguarda documentos historicos"},
+    {"palabra": "MUSEO", "pista": "Preserva y exhibe cultura"},
+    {"palabra": "MEMORIA", "pista": "Recuerdo colectivo"}
+  ],
+  "14": [
+    {"palabra": "INNOVACION", "pista": "Nuevas soluciones para problemas"},
+    {"palabra": "TECNOLOGIA", "pista": "Aplicacion practica del conocimiento"},
+    {"palabra": "INVESTIGACION", "pista": "Produccion de conocimiento"},
+    {"palabra": "SOSTENIBLE", "pista": "Equilibrio entre desarrollo y ambiente"}
+  ],
+  "15": [
+    {"palabra": "VENEZUELA", "pista": "Pais protagonista del juego"},
+    {"palabra": "TALENTO", "pista": "Capacidad destacada de su gente"},
+    {"palabra": "FUTURO", "pista": "Proyeccion de desarrollo"},
+    {"palabra": "IDENTIDAD", "pista": "Sentido de pertenencia nacional"}
+  ]
+}
