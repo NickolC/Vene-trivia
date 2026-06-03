@@ -426,21 +426,6 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="BtnActualizarRendimiento2" type="Button" parent="MainPanel/Margin/VBox/CanvasRendimiento/Margin/RendimientoVBox/DetalleFiltros" unique_id=1925244616]
-clip_contents = true
-custom_minimum_size = Vector2(150, 44)
-layout_direction = 1
-layout_mode = 2
-theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
-theme_override_fonts/font = ExtResource("3_font")
-theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxFlat_button")
-text = "REPORTE"
-icon = ExtResource("9_erpvl")
-flat = true
-icon_alignment = 1
-expand_icon = true
-
 [node name="ArbolRendimientoDetalle" type="Tree" parent="MainPanel/Margin/VBox/CanvasRendimiento/Margin/RendimientoVBox" unique_id=1752571860]
 custom_minimum_size = Vector2(0, 220)
 layout_mode = 2
@@ -477,20 +462,6 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="BtnVolver2" type="Button" parent="MainPanel/Margin/VBox/Actions" unique_id=599302180]
-clip_contents = true
-custom_minimum_size = Vector2(260, 48)
-layout_mode = 2
-theme_override_colors/font_color = Color(0.08, 0.08, 0.08, 1)
-theme_override_fonts/font = ExtResource("3_font")
-theme_override_font_sizes/font_size = 28
-theme_override_styles/normal = SubResource("StyleBoxFlat_button")
-text = "REPORTE TOTAL"
-icon = ExtResource("6_n8hur")
-flat = true
-icon_alignment = 1
-expand_icon = true
-
 [connection signal="pressed" from="MainPanel/Margin/VBox/NavBar/BtnCanvasGestion" to="." method="_on_btn_canvas_gestion_pressed"]
 [connection signal="pressed" from="MainPanel/Margin/VBox/NavBar/BtnCanvasAuditoria" to="." method="_on_btn_canvas_auditoria_pressed"]
 [connection signal="pressed" from="MainPanel/Margin/VBox/NavBar/BtnCanvasRendimiento" to="." method="_on_btn_canvas_rendimiento_pressed"]
@@ -502,6 +473,4 @@ expand_icon = true
 [connection signal="item_selected" from="MainPanel/Margin/VBox/CanvasRendimiento/Margin/RendimientoVBox/DetalleFiltros/SelectorAlumnoDetalle" to="." method="_on_selector_alumno_detalle_item_selected"]
 [connection signal="item_selected" from="MainPanel/Margin/VBox/CanvasRendimiento/Margin/RendimientoVBox/DetalleFiltros/SelectorNivelDetalle" to="." method="_on_selector_nivel_detalle_item_selected"]
 [connection signal="pressed" from="MainPanel/Margin/VBox/CanvasRendimiento/Margin/RendimientoVBox/DetalleFiltros/BtnActualizarRendimiento" to="." method="_on_btn_actualizar_rendimiento_pressed"]
-[connection signal="pressed" from="MainPanel/Margin/VBox/CanvasRendimiento/Margin/RendimientoVBox/DetalleFiltros/BtnActualizarRendimiento2" to="." method="_on_btn_actualizar_rendimiento_pressed"]
 [connection signal="pressed" from="MainPanel/Margin/VBox/Actions/BtnVolver" to="." method="_on_btn_volver_pressed"]
-[connection signal="pressed" from="MainPanel/Margin/VBox/Actions/BtnVolver2" to="." method="_on_btn_volver_pressed"]

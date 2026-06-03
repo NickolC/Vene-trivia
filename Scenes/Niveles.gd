@@ -60,12 +60,12 @@ var pose_pensativo = preload("res://GFX/pensativo.png")
 @onready var textura_roja = preload("res://GFX/rojo.png")
 
 # Referencia de los nodos de la UI
-@onready var contenedor_pregunta = $CanvasLayer2/CenterContainer
-@onready var fondo_pregunta = $CanvasLayer2/CenterContainer/PanelContainer
-@onready var label_pregunta = $CanvasLayer2/CenterContainer/PanelContainer/MarginContainer/Label
-@onready var contenedor_botones = $CanvasLayer2/GridContainer
-@onready var timer_pregunta = $CanvasLayer2/Timer
-@onready var barra_tiempo = $CanvasLayer2/Timer/ProgressBar
+@onready var contenedor_pregunta = $CanvasLayer2/VBoxContainer/CenterContainer
+@onready var fondo_pregunta = $CanvasLayer2/VBoxContainer/CenterContainer/PanelContainer
+@onready var label_pregunta = $CanvasLayer2/VBoxContainer/CenterContainer/PanelContainer/MarginContainer/Label
+@onready var contenedor_botones = $CanvasLayer2/VBoxContainer/GridContainer
+@onready var timer_pregunta = $CanvasLayer2/VBoxContainer/Timer
+@onready var barra_tiempo = $CanvasLayer2/VBoxContainer/ProgressBar
 
 @onready var panel_llamada = $CanvasLayer/CenterContainer/PanelContainer
 @onready var texto_llamada = $CanvasLayer/CenterContainer/PanelContainer/MarginContainer/HBoxContainer/Label
@@ -117,7 +117,7 @@ func _ready() -> void:
 	if not get_viewport().size_changed.is_connected(_on_viewport_size_changed):
 		get_viewport().size_changed.connect(_on_viewport_size_changed)
 	_ajustar_layout_pregunta()
-	$CanvasLayer2/CenterContainer/PanelContainer/MarginContainer.queue_sort()
+	$CanvasLayer2/VBoxContainer/CenterContainer/PanelContainer/MarginContainer.queue_sort()
 	db = SQLiteHelper.open_db_connection()
 	_cargar_usuario_actual()
 	numero_de_nivel = _obtener_nivel_actual()
@@ -236,26 +236,26 @@ func _actualizar_botones_comodines() -> void:
 	$Buttonporcentaje.disabled = comodin_publico_usado or stock_probabilidad <= 0
 
 func _ocultar_ui_juego() -> void:
-	$CanvasLayer2/CenterContainer.hide()
-	$CanvasLayer2/GridContainer.hide()
+	$CanvasLayer2/VBoxContainer/CenterContainer.hide()
+	$CanvasLayer2/VBoxContainer/GridContainer.hide()
 	$Buttoncomodin.hide()
 	$Buttonpublico.hide()
 	$Buttonporcentaje.hide()
 	$Buttonpausa.hide()
 	$Labelpuntaje.hide()
 	$barraprogreso.hide()
-	$CanvasLayer2/Timer/ProgressBar.hide()
+	$CanvasLayer2/VBoxContainer/ProgressBar.hide()
 
 func _mostrar_ui_juego() -> void:
-	$CanvasLayer2/CenterContainer.show()
-	$CanvasLayer2/GridContainer.show()
+	$CanvasLayer2/VBoxContainer/CenterContainer.show()
+	$CanvasLayer2/VBoxContainer/GridContainer.show()
 	$Buttoncomodin.show()
 	$Buttonpublico.show()
 	$Buttonporcentaje.show()
 	$Buttonpausa.show()
 	$Labelpuntaje.show()
 	$barraprogreso.show()
-	$CanvasLayer2/Timer/ProgressBar.show()
+	$CanvasLayer2/VBoxContainer/ProgressBar.show()
 
 func crear_barra_progreso(cantidad):
 	# Limpiamos por si acaso

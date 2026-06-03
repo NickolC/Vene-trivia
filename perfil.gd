@@ -88,7 +88,7 @@ func _crear_panel_packs_niveles() -> void:
 	_panel_packs_niveles = PanelContainer.new()
 	_panel_packs_niveles.name = "PanelPacksNiveles"
 	_panel_packs_niveles.layout_mode = 1
-	_panel_packs_niveles.anchor_left = 0.22
+	_panel_packs_niveles.anchor_left = 0.30
 	_panel_packs_niveles.anchor_top = 0.70
 	_panel_packs_niveles.anchor_right = 0.83
 	_panel_packs_niveles.anchor_bottom = 0.93
@@ -101,7 +101,7 @@ func _crear_panel_packs_niveles() -> void:
 
 	var margin := MarginContainer.new()
 	margin.layout_mode = 2
-	margin.add_theme_constant_override("margin_left", 12)
+	margin.add_theme_constant_override("margin_left", 30)
 	margin.add_theme_constant_override("margin_top", 10)
 	margin.add_theme_constant_override("margin_right", 12)
 	margin.add_theme_constant_override("margin_bottom", 10)

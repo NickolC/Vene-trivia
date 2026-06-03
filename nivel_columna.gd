@@ -385,7 +385,7 @@ func _cargar_banco_columnas_desde_archivo() -> void:
 			var data_tema: Dictionary = data_tema_raw
 
 			var titulo := str(data_tema.get("titulo", "Nivel %d - Tema %d" % [nivel, tema]))
-			var filas := data_tema.get("parejas", [])
+			var filas: Array = data_tema.get("parejas", [])
 			if typeof(filas) != TYPE_ARRAY:
 				continue
 

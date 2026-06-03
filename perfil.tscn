@@ -77,7 +77,6 @@ offset_bottom = 54.01999
 flat = true
 
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=740966751]
-visible = false
 clip_contents = true
 layout_mode = 1
 anchors_preset = -1
