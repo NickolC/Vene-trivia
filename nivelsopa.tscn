@@ -332,7 +332,6 @@ icon_alignment = 1
 
 [node name="PantallaResultados" type="CanvasLayer" parent="." unique_id=1319402423]
 layer = 10
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="PantallaResultados" unique_id=1407604459]
 anchors_preset = 15
@@ -483,5 +482,5 @@ vertical_alignment = 1
 [connection signal="pressed" from="confrimar/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/cancelar" to="." method="_on_boton_no_cancelar_pressed"]
 [connection signal="pressed" from="PantallaResultados/Panel/HBoxContainer2/Button3" to="." method="_on_btn_repetir_pressed"]
 [connection signal="pressed" from="PantallaResultados/Panel/HBoxContainer2/Button2" to="." method="_on_btn_menu_pressed"]
-[connection signal="pressed" from="PantallaResultados/Panel/HBoxContainer2/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="PantallaResultados/Panel/HBoxContainer2/Button4" to="." method="_on_btn_selector_pressed"]
 [connection signal="pressed" from="PantallaResultados/Panel/HBoxContainer2/Button" to="." method="_on_btn_siguiente_pressed"]

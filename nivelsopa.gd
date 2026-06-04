@@ -458,7 +458,7 @@ func _on_btn_repetir_pressed() -> void:
 
 func _on_btn_selector_pressed() -> void:
 	get_tree().paused = false
-	get_tree().change_scene_to_file(RUTA_ESCENA_NIVEL)
+	get_tree().change_scene_to_file("res://selectorsopaletras.tscn")
 
 func _on_btn_menu_pressed() -> void:
 	get_tree().paused = false
