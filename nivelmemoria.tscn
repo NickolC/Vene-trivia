@@ -4,9 +4,21 @@
 [ext_resource type="Texture2D" uid="uid://b3wfnscgwckc" path="res://GFX/mapa.png" id="2_qovs0"]
 [ext_resource type="Texture2D" uid="uid://cbvp25frb7syk" path="res://GFX/Text.png" id="3_r6eu6"]
 [ext_resource type="FontFile" uid="uid://2s1p28deo8oy" path="res://GFX/Minecraft.ttf" id="4_o2mmk"]
+[ext_resource type="Texture2D" uid="uid://dy47jo5uk8" path="res://GFX/pausa.png" id="5_qovs0"]
+[ext_resource type="Texture2D" uid="uid://bwci2gcq7wc8u" path="res://GFX/boton-extras.png" id="6_r6eu6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4evmm"]
 texture = ExtResource("3_r6eu6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o2mmk"]
+texture = ExtResource("3_r6eu6")
+texture_margin_left = 20.0
+texture_margin_top = 10.0
+texture_margin_right = 20.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4evmm"]
+load_path = "res://.godot/imported/boton-extras.png-4c47e73584a05b804668f9947712cb02.ctex"
 
 [node name="Control" type="Control" unique_id=1912207602]
 layout_mode = 3
@@ -15,6 +27,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("1_5mush")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1078615498]
@@ -82,3 +95,173 @@ theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 1
+
+[node name="Buttonpausa" type="Button" parent="." unique_id=2099809676]
+process_mode = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.033
+anchor_top = 0.066
+anchor_right = 0.033
+anchor_bottom = 0.066
+offset_left = -60.125996
+offset_top = -58.811
+offset_right = 61.874004
+offset_bottom = 59.188995
+icon = ExtResource("5_qovs0")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Menupausa" type="CanvasLayer" parent="." unique_id=1473032059]
+process_mode = 3
+layer = 20
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Menupausa" unique_id=1936408476]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7764706)
+
+[node name="CenterContainer" type="CenterContainer" parent="Menupausa" unique_id=1017588765]
+offset_left = 481.00003
+offset_top = 92.0
+offset_right = 1018.0
+offset_bottom = 643.0
+scale = Vector2(1.5, 1.5)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menupausa/CenterContainer" unique_id=447891739]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Label" type="Label" parent="Menupausa/CenterContainer/VBoxContainer" unique_id=1670025019]
+custom_minimum_size = Vector2(5, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_o2mmk")
+theme_override_font_sizes/font_size = 55
+text = "JUEGO EN PAUSA"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="Button" type="Button" parent="Menupausa/CenterContainer/VBoxContainer" unique_id=1123838595]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_o2mmk")
+theme_override_font_sizes/font_size = 45
+text = "Reanudar"
+icon = ExtResource("6_r6eu6")
+flat = true
+autowrap_mode = 1
+autowrap_trim_flags = 192
+icon_alignment = 1
+
+[node name="Button2" type="Button" parent="Menupausa/CenterContainer/VBoxContainer" unique_id=764267791]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_o2mmk")
+theme_override_font_sizes/font_size = 45
+text = "Opciones"
+icon = ExtResource("6_r6eu6")
+flat = true
+autowrap_mode = 1
+autowrap_trim_flags = 192
+icon_alignment = 1
+
+[node name="Button3" type="Button" parent="Menupausa/CenterContainer/VBoxContainer" unique_id=1151035193]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_o2mmk")
+theme_override_font_sizes/font_size = 45
+text = "Salir"
+icon = ExtResource("6_r6eu6")
+flat = true
+autowrap_mode = 1
+autowrap_trim_flags = 192
+icon_alignment = 1
+
+[node name="confrimar" type="CanvasLayer" parent="." unique_id=636903263]
+process_mode = 3
+layer = 20
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="confrimar" unique_id=1159436726]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.9990001
+offset_bottom = -0.019042969
+color = Color(0, 0, 0, 0.7764706)
+
+[node name="CenterContainer" type="CenterContainer" parent="confrimar" unique_id=2095499679]
+offset_left = 303.0
+offset_top = 183.0
+offset_right = 1481.0
+offset_bottom = 845.0
+
+[node name="PanelContainer" type="PanelContainer" parent="confrimar/CenterContainer" unique_id=347508795]
+custom_minimum_size = Vector2(1000, 600)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_o2mmk")
+
+[node name="MarginContainer" type="MarginContainer" parent="confrimar/CenterContainer/PanelContainer" unique_id=1131978694]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="confrimar/CenterContainer/PanelContainer/MarginContainer" unique_id=36695834]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="confrimar/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1424980079]
+custom_minimum_size = Vector2(5, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_o2mmk")
+theme_override_font_sizes/font_size = 44
+text = "
+
+¿Estás seguro de salir? Perderás todo el progreso de este nivel
+
+"
+horizontal_alignment = 1
+vertical_alignment = 2
+autowrap_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="confrimar/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1713276041]
+layout_mode = 2
+
+[node name="aceptar" type="Button" parent="confrimar/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1658702154]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_o2mmk")
+theme_override_font_sizes/font_size = 30
+text = "Si"
+icon = SubResource("CompressedTexture2D_4evmm")
+flat = true
+autowrap_mode = 1
+autowrap_trim_flags = 192
+icon_alignment = 1
+
+[node name="cancelar" type="Button" parent="confrimar/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2140199241]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_o2mmk")
+theme_override_font_sizes/font_size = 30
+text = "NO"
+icon = ExtResource("6_r6eu6")
+flat = true
+autowrap_mode = 1
+autowrap_trim_flags = 192
+icon_alignment = 1
+
+[connection signal="pressed" from="Menupausa/CenterContainer/VBoxContainer/Button" to="." method="_on_continuar_pressed"]
+[connection signal="pressed" from="Menupausa/CenterContainer/VBoxContainer/Button2" to="." method="_on_opciones_pressed"]
+[connection signal="pressed" from="Menupausa/CenterContainer/VBoxContainer/Button3" to="." method="_on_salir_pressed"]
+[connection signal="pressed" from="confrimar/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/aceptar" to="." method="_on_boton_si_confirmar_salir_pressed"]
+[connection signal="pressed" from="confrimar/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/cancelar" to="." method="_on_boton_no_cancelar_pressed"]

@@ -35,7 +35,7 @@ func desbloquear(clave: String) -> void:
 		return
 
 	var database := _get_db()
-	var id_usu := GlobalUsuario.usuario_actual_id
+	var id_usu : int = GlobalUsuario.usuario_actual_id
 	var nombre := SQLiteHelper.escape(GlobalUsuario.nombre_alumno)
 
 	database.query("SELECT 1 FROM logros_alumno WHERE NU_USU = %d AND TX_LOGRO = '%s' LIMIT 1;" % [id_usu, SQLiteHelper.escape(clave)])
@@ -55,7 +55,7 @@ func evaluar_post_nivel(estrellas: int, puntos: int, dinero_total: int) -> void:
 		return
 
 	var database := _get_db()
-	var id_usu := GlobalUsuario.usuario_actual_id
+	var id_usu : int = GlobalUsuario.usuario_actual_id
 
 	database.query("SELECT COUNT(*) AS cnt FROM niveles WHERE NU_USU = %d AND NU_ESTRELLAS > 0;" % id_usu)
 	var niveles_con_estrella: int = 0

@@ -738,7 +738,7 @@ func _on_btn_repetir_pressed() -> void:
 
 func _on_btn_selector_pressed() -> void:
 	get_tree().paused = false
-	get_tree().change_scene_to_file(RUTA_ESCENA_SELECCION)
+	get_tree().change_scene_to_file("res://selectorelacioncolumn.tscn")
 
 func _on_btn_menu_pressed() -> void:
 	get_tree().paused = false
@@ -815,7 +815,7 @@ func _on_boton_salir_pressed():
 func _on_boton_si_confirmar_salir_pressed():
 	get_tree().paused = false
 	GlobalUsuario.nivel_seleccionado = numero_de_nivel
-	get_tree().change_scene_to_file("res://Scenes/Minijuegos.tscn")
+	get_tree().change_scene_to_file("res://selectorelacioncolumn.tscn")
 
 func _on_boton_no_cancelar_pressed():
 	# Si se arrepiente, cerramos la confirmación y VOLVEMOS al menú de pausa

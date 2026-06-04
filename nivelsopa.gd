@@ -413,7 +413,7 @@ func finalizar_nivel() -> void:
 func guardar_datos_progreso(puntos_totales: int, estrellas: int) -> void:
 	if db == null: return
 
-	var id_alumno := GlobalUsuario.usuario_actual_id
+	var id_alumno: int = GlobalUsuario.usuario_actual_id
 	var nombre_alumno := SQLiteHelper.escape(GlobalUsuario.nombre_alumno)
 	var completado_flag := 1 if estrellas == 3 else 0
 	var timestamp := Time.get_datetime_string_from_system().replace("T", " ")
@@ -751,9 +751,13 @@ func _on_boton_salir_pressed():
 func _on_boton_si_confirmar_salir_pressed():
 	get_tree().paused = false
 	GlobalUsuario.nivel_seleccionado = numero_de_nivel
-	get_tree().change_scene_to_file("res://Scenes/Minijuegos.tscn")
+	get_tree().change_scene_to_file("res://selectorsopaletras.tscn")
 
 func _on_boton_no_cancelar_pressed():
 	# Si se arrepiente, cerramos la confirmación y VOLVEMOS al menú de pausa
 	capa_confirmacion.hide()
 	menu_pausa.show()
+
+func _on_button_4_pressed() -> void:
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://selectorsopaletras.tscn")

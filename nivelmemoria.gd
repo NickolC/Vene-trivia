@@ -34,11 +34,32 @@ var numero_de_nivel: int = 1
 var _tiempo_inicio_ms: int = 0
 var _errores: int = 0
 
+@onready var menu_pausa = $Menupausa
+@onready var capa_confirmacion = $confrimar
+@onready var boton_pausa_visual = $Buttonpausa # ⬅️ Asegúrate de que este nombre y ruta coincidan con tu botón en la escena
+
 func _ready() -> void:
+	# Obligar a este script a procesar el _input() SIEMPRE, incluso en pausa
+	self.process_mode = Node.PROCESS_MODE_ALWAYS
+	
+	# Forzar a los menús flotantes por código
+	if menu_pausa: 
+		menu_pausa.process_mode = Node.PROCESS_MODE_ALWAYS
+		menu_pausa.hide()
+	if capa_confirmacion:
+		capa_confirmacion.process_mode = Node.PROCESS_MODE_ALWAYS
+		capa_confirmacion.hide()
+		
+	# 🌟 LA SOLUCIÓN AQUÍ: Conectar el botón visual por código de forma segura
+	if boton_pausa_visual:
+		boton_pausa_visual.process_mode = Node.PROCESS_MODE_ALWAYS # Crucial para que responda en pausa si es necesario
+		boton_pausa_visual.pressed.connect(_on_boton_pausa_visual_pressed)
+	
 	db = SQLiteHelper.open_db_connection()
 	numero_de_nivel = maxi(1, int(GlobalUsuario.nivel_seleccionado))
 	_cargar_banco_memoria_desde_archivo()
 	banco_parejas = _obtener_parejas_del_nivel(numero_de_nivel)
+	
 	if banco_parejas.is_empty():
 		Alertas.mostrar_alerta("No hay contenido configurado para este nivel.", 2.5)
 		Configuracion.change_scene_to_file(RUTA_SELECTOR)
@@ -124,7 +145,7 @@ func _calcular_estrellas(tiempo_seg: float) -> int:
 func _guardar_progreso(puntos: int, estrellas: int) -> void:
 	if db == null:
 		return
-	var id := GlobalUsuario.usuario_actual_id
+	var id: int = GlobalUsuario.usuario_actual_id
 	var nombre := SQLiteHelper.escape(GlobalUsuario.nombre_alumno)
 	var completado := 1 if estrellas == 3 else 0
 	var fecha := Time.get_datetime_string_from_system().replace("T", " ")
@@ -192,3 +213,68 @@ func _obtener_parejas_del_nivel(nivel: int) -> Array[ParMemoria]:
 		id_local += 1
 
 	return resultado
+
+# Detectar la tecla de escape o el botón de pausa
+# Detectar la tecla de escape o el botón de pausa
+func _input(event):
+	if event.is_action_pressed("ui_cancel"):
+		if capa_confirmacion and capa_confirmacion.visible:
+			# Si el menú de confirmación está abierto, la tecla atrás lo cierra
+			_on_confirmar_no_quedarme_pressed()
+		else:
+			gestionar_pausa()
+
+func _on_boton_pausa_visual_pressed():
+	gestionar_pausa()
+
+func gestionar_pausa():
+	var nuevo_estado_pausa = !get_tree().paused
+	get_tree().paused = nuevo_estado_pausa
+	
+	if menu_pausa:
+		menu_pausa.visible = nuevo_estado_pausa
+		
+	if not nuevo_estado_pausa:
+		if capa_confirmacion:
+			capa_confirmacion.hide()
+
+# --- BOTONES DEL MENÚ DE PAUSA ---
+
+func _on_continuar_pressed():
+	# 🌟 SOLUCIÓN CRÍTICA 2: Sincronizar quitando la pausa limpiamente
+	gestionar_pausa()
+
+const ESCENA_OPCIONES = preload("res://Opcionesnivel.tscn")
+
+func _on_opciones_pressed():
+	$Menupausa/CenterContainer.visible = false
+	var opciones_instancia = ESCENA_OPCIONES.instantiate()
+	opciones_instancia.name = "MenuOpcionesDinamico"
+	opciones_instancia.process_mode = Node.PROCESS_MODE_ALWAYS
+	$Menupausa.add_child(opciones_instancia)
+
+func _on_salir_pressed():
+	if menu_pausa: menu_pausa.hide()
+	if capa_confirmacion: capa_confirmacion.show()
+	
+func _on_confirmar_no_quedarme_pressed():
+	if capa_confirmacion: capa_confirmacion.hide()
+	if menu_pausa: menu_pausa.show()
+
+func _on_boton_salir_pressed():
+	if menu_pausa: menu_pausa.hide()
+	if capa_confirmacion: capa_confirmacion.show()
+
+# --- BOTONES DE LA CAPA DE CONFIRMACIÓN ---
+
+func _on_boton_si_confirmar_salir_pressed():
+	get_tree().paused = false
+	if db:
+		SQLiteHelper.close_db_connection(db)
+		db = null
+	GlobalUsuario.nivel_seleccionado = numero_de_nivel
+	get_tree().change_scene_to_file("res://selectormemoria.tscn") # 🌟 Corregido de .gd a .tscn
+
+func _on_boton_no_cancelar_pressed():
+	if capa_confirmacion: capa_confirmacion.hide()
+	if menu_pausa: menu_pausa.show()
