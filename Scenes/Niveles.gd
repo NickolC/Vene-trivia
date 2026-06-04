@@ -425,7 +425,8 @@ func mostrar_pregunta():
 	botones_respuesta.clear()
 	for n in contenedor_botones.get_children():
 		n.queue_free()
-		
+	
+	await get_tree().process_frame
 	# Se crean los 4 botones de respuesta
 	for i in range(datos_pregunta["opciones"].size()):
 		var boton := Button.new()
@@ -931,7 +932,7 @@ func guardar_final_nivel(total_preg: int, correctas: int, punto: int, estrellas:
 		return
 
 	var incorrectas := total_preg - correctas
-	var id_actual := GlobalUsuario.usuario_actual_id
+	var id_actual: int = GlobalUsuario.usuario_actual_id
 	var nombre_actual := SQLiteHelper.escape(GlobalUsuario.nombre_alumno)
 	var completado_100 := 1 if estrellas == 3 else 0
 	var nivel: int = maxi(1, numero_de_nivel)
