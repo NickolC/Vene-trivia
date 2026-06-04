@@ -712,6 +712,13 @@ func _guardar_progreso_db(pts: int, estrellas: int) -> void:
 	var dinero_total := 0
 	if not db.query_result.is_empty():
 		dinero_total = int(db.query_result[0].get("NU_DINERO", 0))
+		
+	print("🤖 Verificando Singleton Logros: ", Logros)
+	if Logros == null:
+		print("🚨 Alerta extrema: Logros sigue siendo completamente NULL en el motor.")
+	else:
+		print("✅ El objeto existe. Sus métodos disponibles son: ", Logros.get_method_list())
+		
 	Logros.evaluar_post_nivel(estrellas, pts, dinero_total)
 
 func _cargar_usuario_actual() -> void:

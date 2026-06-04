@@ -17,6 +17,7 @@ config/icon="uid://losj62la8r65"
 
 [autoload]
 
+Logros="*res://Scripts/logros.gd"
 GlobalUsuario="*uid://dpqob34rkqj6u"
 Configuracion="*uid://bx3m16y1dgt8n"
 Alertas="*uid://blldaak4ms224"
@@ -38,7 +39,7 @@ project/assembly_name="Vene-trivia"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot-sqlite/plugin.cfg", "res://addons/godot_mcp/plugin.cfg")
+enabled=PackedStringArray("res://addons/godot-sqlite/plugin.cfg")
 
 [physics]
 

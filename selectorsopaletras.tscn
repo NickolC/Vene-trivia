@@ -297,6 +297,7 @@ icon = ExtResource("7_05uyu")
 flat = true
 
 [node name="PrevNiveles" type="CanvasLayer" parent="." unique_id=343237252]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="PrevNiveles" unique_id=829677381]
 anchors_preset = 15

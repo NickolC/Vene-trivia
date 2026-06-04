@@ -105,12 +105,12 @@ func _configurar_tarjeta_minijuego(boton: Button, textura: Texture2D, titulo: St
 		boton.add_child(icono)
 
 	icono.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	icono.offset_left = 8.0
-	icono.offset_top = 8.0
-	icono.offset_right = -8.0
+	icono.offset_left = 0.0
+	icono.offset_top = 0.0
+	icono.offset_right = 0.0
 	icono.offset_bottom = -52.0
 	icono.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-	icono.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	icono.stretch_mode = TextureRect.STRETCH_SCALE
 	icono.texture = textura
 
 	var etiqueta := boton.get_node_or_null("Titulo") as Label
@@ -149,35 +149,24 @@ func _crear_icono_normalizado(ruta_textura: String) -> Texture2D:
 		push_warning("No se pudo cargar icono: %s" % ruta_textura)
 		return null
 
-	var recorte_usado := imagen.get_used_rect()
-	if recorte_usado.size.x <= 0 or recorte_usado.size.y <= 0:
-		recorte_usado = Rect2i(Vector2i.ZERO, imagen.get_size())
+	imagen.resize(ICON_CANVAS_SIZE, ICON_CANVAS_SIZE, Image.INTERPOLATE_NEAREST)
 
-	var recortada := imagen.get_region(recorte_usado)
-	var lado := maxi(recortada.get_width(), recortada.get_height())
-	var cuadrada := Image.create(lado, lado, false, Image.FORMAT_RGBA8)
-	cuadrada.fill(Color(0, 0, 0, 0))
-
-	var destino := Vector2i((lado - recortada.get_width()) / 2, (lado - recortada.get_height()) / 2)
-	cuadrada.blit_rect(recortada, Rect2i(Vector2i.ZERO, recortada.get_size()), destino)
-	cuadrada.resize(ICON_CANVAS_SIZE, ICON_CANVAS_SIZE, Image.INTERPOLATE_LANCZOS)
-
-	return ImageTexture.create_from_image(cuadrada)
+	return ImageTexture.create_from_image(imagen)
 
 
 func _on_level_1_pressed() -> void:
 	GlobalUsuario.nivel_seleccionado = _nivel_minijuego_por_defecto()
-	Configuracion.change_scene_to_file("res://nivelsopa.tscn")
+	Configuracion.change_scene_to_file("res://selectorsopaletras.tscn")
 
 
 func _on_level_2_pressed() -> void:
 	GlobalUsuario.nivel_seleccionado = _nivel_minijuego_por_defecto()
-	Configuracion.change_scene_to_file("res://nivelmemoria.tscn")
+	Configuracion.change_scene_to_file("res://selectormemoria.tscn")
 
 
 func _on_level_3_pressed() -> void:
 	GlobalUsuario.nivel_seleccionado = _nivel_minijuego_por_defecto()
-	Configuracion.change_scene_to_file("res://nivel columna.tscn")
+	Configuracion.change_scene_to_file("res://selectorelacioncolumn.tscn")
 
 
 func _on_level_11_pressed() -> void:

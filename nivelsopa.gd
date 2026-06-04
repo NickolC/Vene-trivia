@@ -33,7 +33,7 @@ const TIEMPOS_POR_NIVEL: Dictionary = {
 # Nodos de la Cuadrícula e Interfaz del Juego
 @onready var cuadracula = $Panel/GridContainer
 @onready var lista_palabras_ui = $VBoxContainer
-@onready var label_contador = $Label2  
+@onready var label_contador = $Label 
 @onready var menu_pausa = $Menupausa
 @onready var capa_confirmacion = $confrimar
 

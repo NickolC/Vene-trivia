@@ -2,6 +2,7 @@ extends Control
 
 const SQLiteHelper = preload("res://Scripts/sqlite_helper.gd")
 const PerfilStats  = preload("res://Scripts/perfil_stats.gd")
+const Logros       = preload("res://Scripts/logros.gd")
 
 var db: SQLite
 var costopor: int = 100
@@ -88,10 +89,12 @@ func _crear_panel_packs_niveles() -> void:
 	_panel_packs_niveles = PanelContainer.new()
 	_panel_packs_niveles.name = "PanelPacksNiveles"
 	_panel_packs_niveles.layout_mode = 1
-	_panel_packs_niveles.anchor_left = 0.30
-	_panel_packs_niveles.anchor_top = 0.70
-	_panel_packs_niveles.anchor_right = 0.83
-	_panel_packs_niveles.anchor_bottom = 0.93
+	_panel_packs_niveles.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_WIDE)
+	
+	_panel_packs_niveles.anchor_left = 0.19
+	_panel_packs_niveles.anchor_top = 0.59
+	_panel_packs_niveles.anchor_right = 0.79
+	_panel_packs_niveles.anchor_bottom = 0.85
 	_panel_packs_niveles.offset_left = 0
 	_panel_packs_niveles.offset_top = 0
 	_panel_packs_niveles.offset_right = 0
@@ -101,15 +104,15 @@ func _crear_panel_packs_niveles() -> void:
 
 	var margin := MarginContainer.new()
 	margin.layout_mode = 2
-	margin.add_theme_constant_override("margin_left", 30)
+	margin.add_theme_constant_override("margin_left", 24)
 	margin.add_theme_constant_override("margin_top", 10)
-	margin.add_theme_constant_override("margin_right", 12)
+	margin.add_theme_constant_override("margin_right", 24)
 	margin.add_theme_constant_override("margin_bottom", 10)
 	_panel_packs_niveles.add_child(margin)
 
 	var vbox := VBoxContainer.new()
 	vbox.layout_mode = 2
-	vbox.add_theme_constant_override("separation", 8)
+	vbox.add_theme_constant_override("separation", 25)
 	margin.add_child(vbox)
 
 	var fuente := load("res://GFX/Minecraft.ttf") as FontFile
@@ -128,7 +131,7 @@ func _crear_panel_packs_niveles() -> void:
 		var fila := HBoxContainer.new()
 		fila.layout_mode = 2
 		fila.alignment = BoxContainer.ALIGNMENT_CENTER
-		fila.add_theme_constant_override("separation", 12)
+		fila.add_theme_constant_override("separation", 20)
 		vbox.add_child(fila)
 
 		var label := Label.new()
@@ -230,27 +233,27 @@ func _crear_panel_perfil() -> void:
 	layout.name = "PerfilLayout"
 	layout.layout_mode = 1
 	layout.anchors_preset = -1
-	layout.anchor_left = 0.08
-	layout.anchor_top = 0.11
-	layout.anchor_right = 0.83
-	layout.anchor_bottom = 0.90
-	layout.add_theme_constant_override("margin_left", 8)
-	layout.add_theme_constant_override("margin_top", 8)
-	layout.add_theme_constant_override("margin_right", 8)
-	layout.add_theme_constant_override("margin_bottom", 8)
+	layout.anchor_left = 0.10
+	layout.anchor_top = 0.12
+	layout.anchor_right = 0.86
+	layout.anchor_bottom = 0.88
+	layout.add_theme_constant_override("margin_left", 130)
+	layout.add_theme_constant_override("margin_top", 10)
+	layout.add_theme_constant_override("margin_right", 108)
+	layout.add_theme_constant_override("margin_bottom", 60)
 	rect.add_child(layout)
 
 	var cuerpo := HBoxContainer.new()
 	cuerpo.layout_mode = 2
-	cuerpo.add_theme_constant_override("separation", 18)
+	cuerpo.add_theme_constant_override("separation", 46)
 	layout.add_child(cuerpo)
 
 	var columna_izq := VBoxContainer.new()
 	columna_izq.layout_mode = 2
 	columna_izq.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	columna_izq.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	columna_izq.custom_minimum_size = Vector2(450, 0)
-	columna_izq.add_theme_constant_override("separation", 14)
+	#columna_izq.custom_minimum_size = Vector2(450, 0)
+	columna_izq.add_theme_constant_override("separation", 20)
 	cuerpo.add_child(columna_izq)
 
 	var columna_der := VBoxContainer.new()
@@ -502,7 +505,7 @@ func _cargar_logros(id: int) -> void:
 	_vbox_logros.add_child(titulo)
 
 	var desbloqueados := PerfilStats.logros_desbloqueados(db, id)
-
+	
 	for clave in Logros.CATALOGO:
 		var lbl := Label.new()
 		var texto: String = Logros.CATALOGO[clave]
