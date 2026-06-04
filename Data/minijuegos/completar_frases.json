@@ -6,7 +6,7 @@
     {"frase": "La independencia se declaro el 5 de ____ de 1811.", "opciones": ["Julio", "Junio", "Mayo"], "correcta": 0, "explicacion": "La firma del acta fue el 5 de julio."}
   ],
   "2": [
-    {"frase": "La Batalla de Carabobo ocurrio en el ano ____.", "opciones": ["1810", "1821", "1830"], "correcta": 1, "explicacion": "Se libro el 24 de junio de 1821."},
+    {"frase": "La Batalla de Carabobo ocurrio en el año ____.", "opciones": ["1810", "1821", "1830"], "correcta": 1, "explicacion": "Se libro el 24 de junio de 1821."},
     {"frase": "Francisco de Miranda es llamado el ____ de la independencia.", "opciones": ["Fundador", "Precursor", "Conquistador"], "correcta": 1, "explicacion": "Miranda es el Precursor."},
     {"frase": "El arbol nacional es el ____.", "opciones": ["Cedro", "Araguaney", "Mangle"], "correcta": 1, "explicacion": "El araguaney es arbol nacional."},
     {"frase": "El himno nacional se llama Gloria al Bravo ____.", "opciones": ["Pueblo", "Soldado", "Suelo"], "correcta": 0, "explicacion": "Ese es el titulo oficial."}
