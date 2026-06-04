@@ -4,13 +4,24 @@ static func puntaje_total(database: SQLite, id: int) -> int:
 	database.query("SELECT SUM(NU_PUNTOS) AS total FROM niveles WHERE NU_USU = %d;" % id)
 	if database.query_result.is_empty():
 		return 0
-	return int(database.query_result[0].get("total", 0))
+		
+	# Extraemos el valor puro devuelto por la base de datos
+	var valor = database.query_result[0].get("total")
+	# Si la columna es NULL o no existe, retornamos 0 de forma segura
+	if valor == null:
+		return 0
+	return int(valor)
 
 static func estrellas_totales(database: SQLite, id: int) -> int:
 	database.query("SELECT SUM(NU_ESTRELLAS) AS total FROM niveles WHERE NU_USU = %d;" % id)
 	if database.query_result.is_empty():
 		return 0
-	return int(database.query_result[0].get("total", 0))
+		
+	# Aplicamos la misma validación preventiva para el NULL de SQL
+	var valor = database.query_result[0].get("total")
+	if valor == null:
+		return 0
+	return int(valor)
 
 static func niveles_perfectos(database: SQLite, id: int) -> int:
 	database.query("SELECT COUNT(*) AS cnt FROM niveles WHERE NU_USU = %d AND NU_ESTRELLAS = 3;" % id)
