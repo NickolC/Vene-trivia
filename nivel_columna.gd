@@ -16,7 +16,6 @@ const MONEDAS_POR_ESTRELLA := 50
 const RUTA_ESCENA_SELECCION := "res://Scenes/Minijuegos.tscn"
 const RUTA_DATOS_COLUMNAS := "res://Data/minijuegos/columnas.json"
 
-# Diccionario de tiempos máximos por nivel (8 minutos = 480 segundos)
 const TIEMPOS_POR_NIVEL: Dictionary = {
 	1: 480.0, 2: 480.0, 3: 480.0, 4: 480.0, 5: 480.0,
 	6: 480.0, 7: 480.0, 8: 480.0, 9: 480.0, 10: 480.0,
@@ -34,7 +33,7 @@ var banco_relaciones: Array[ParejaRelacion] = []
 @onready var label_cronometro: Label = $InterfazJuego/Control/Label2
 
 # --- 🌟 NUEVAS REFERENCIAS PARA LA PANTALLA DE RESULTADOS 🌟 ---
-# Asegúrate de crear este Panel o CanvasLayer en tu escena con estos nombres exactos
+# --- REFERENCIAS PARA LA PANTALLA DE RESULTADOS ---
 @onready var panel_resultados = $PantallaResultados
 @onready var res_label_nivel = $PantallaResultados/Panel/nivel
 @onready var res_label_puntos = $PantallaResultados/Panel/puntos
@@ -69,12 +68,13 @@ var tematica_actual: int = 1
 
 # Variables de control de tiempo y progreso
 var tiempo_restante: float = 480.0
+var tiempo_total_nivel: float = 480.0 # Guardará el tiempo límite original
 var juego_activo: bool = false
-var _tiempo_inicio_ms: int = 0
 var _errores: int = 0
 var parejas_restantes: int = 0
 var total_parejas_nivel: int = 0
 var parejas_correctas_totales: int = 0
+var bloqueando_clicks: bool = false # Evita que interactúen durante los mensajes
 
 @onready var capa_confirmacion = $confrimar
 @onready var menu_pausa = $Menupausa
@@ -83,12 +83,12 @@ func _ready() -> void:
 	db = SQLiteHelper.open_db_connection()
 	numero_de_nivel = maxi(1, int(GlobalUsuario.nivel_seleccionado))
 	
-	tiempo_restante = TIEMPOS_POR_NIVEL.get(numero_de_nivel, 480.0)
+	tiempo_total_nivel = TIEMPOS_POR_NIVEL.get(numero_de_nivel, 480.0)
+	tiempo_restante = tiempo_total_nivel
 	_actualizar_interfaz_cronometro()
 	
 	_cargar_banco_columnas_desde_archivo()
 	
-	# Ocultamos la UI del juego y el panel de resultados al inicio
 	if interfaz_juego: interfaz_juego.hide()
 	if menu_pausa: menu_pausa.hide()
 	if capa_confirmacion: capa_confirmacion.hide()
@@ -108,7 +108,6 @@ func _ready() -> void:
 	parejas_restantes = banco_relaciones.size()
 	
 	if interfaz_juego: interfaz_juego.show()
-	_tiempo_inicio_ms = Time.get_ticks_msec()
 	juego_activo = true 
 	inicializar_tablero()
 	
@@ -123,7 +122,7 @@ func _process(delta: float) -> void:
 			tiempo_restante = 0.0
 			juego_activo = false
 			_actualizar_interfaz_cronometro()
-			_procesar_fin_del_juego(true) # Fin por derrota de tiempo
+			_procesar_fin_del_juego(true)
 		else:
 			_actualizar_interfaz_cronometro()
 
@@ -138,6 +137,7 @@ func _actualizar_interfaz_cronometro() -> void:
 
 func decir_mensaje(texto: String, tiempo: float = 3.0) -> void:
 	if label_dialogo == null or panel_dialogo == null: return
+	bloqueando_clicks = true # Bloqueamos clics en el tablero
 	label_dialogo.show() 
 	if label_dialogo.get_parent(): label_dialogo.get_parent().show()
 	label_dialogo.text = texto
@@ -145,14 +145,15 @@ func decir_mensaje(texto: String, tiempo: float = 3.0) -> void:
 	var tween = create_tween()
 	panel_dialogo.modulate.a = 0
 	panel_dialogo.show()
-	tween.tween_property(panel_dialogo, "modulate:a", 1.0, 0.3)
+	tween.tween_property(panel_dialogo, "modulate:a", 1.0, 0.2)
 	
 	await get_tree().create_timer(tiempo).timeout
 	
 	var tween_out = create_tween()
-	tween_out.tween_property(panel_dialogo, "modulate:a", 0.0, 0.3)
+	tween_out.tween_property(panel_dialogo, "modulate:a", 0.0, 0.2)
 	await tween_out.finished
 	panel_dialogo.hide()
+	bloqueando_clicks = false # Liberamos los clics
 
 func cambiar_pose(nueva_textura: Texture2D) -> void:
 	if sprite_personaje == null or nueva_textura == null: return
@@ -262,6 +263,9 @@ func inicializar_tablero() -> void:
 # --- MECÁNICA DE JUEGO ---
 
 func _on_item_seleccionado(btn: Button) -> void:
+	# SOLUCIÓN: Si está corriendo un diálogo de explicación, ignoramos por completo cualquier click
+	if bloqueando_clicks: return
+	
 	var es_izq: bool = btn.get_meta("es_columna_izquierda", false)
 	
 	if es_izq:
@@ -288,23 +292,28 @@ func _on_item_seleccionado(btn: Button) -> void:
 		var texto_izq = boton_izq_seleccionado.text
 		var texto_der = boton_der_seleccionado.text
 		
+		# Guardamos referencias temporales locales de los botones seleccionados
+		var b_izq_temp = boton_izq_seleccionado
+		var b_der_temp = boton_der_seleccionado
+		
+		# SOLUCIÓN: Limpiamos los punteros globales inmediatamente para evitar bugs de desmarcado en clicks futuros
+		boton_izq_seleccionado = null
+		boton_der_seleccionado = null
+		
 		if id_izq == id_der:
-			boton_izq_seleccionado.modulate = Color.GREEN
-			boton_der_seleccionado.modulate = Color.GREEN
-			boton_izq_seleccionado.disabled = true
-			boton_der_seleccionado.disabled = true
+			b_izq_temp.modulate = Color.GREEN
+			b_der_temp.modulate = Color.GREEN
+			b_izq_temp.disabled = true
+			b_der_temp.disabled = true
 			
-			conexiones_establecidas[boton_izq_seleccionado] = boton_der_seleccionado
-			if has_node("LineasCanvas"): get_node("LineasCanvas").queue_redraw()
+			conexiones_establecidas[b_izq_temp] = b_der_temp
+			if has_node("Node2D"): get_node("Node2D").queue_redraw()
 			
-			boton_izq_seleccionado = null
-			boton_der_seleccionado = null
 			parejas_restantes -= 1
 			parejas_correctas_totales += 1
 			
 			cambiar_pose(pose_feliz)
 			
-			# --- 5 VARIACIONES DE EXPLICACIÓN CORRECTA ---
 			var indice_explicacion = randi() % 5
 			var mensaje_correcto = ""
 			match indice_explicacion:
@@ -320,22 +329,19 @@ func _on_item_seleccionado(btn: Button) -> void:
 				_comprobar_victoria_tematica()
 		else:
 			_errores += 1
-			boton_izq_seleccionado.modulate = Color.RED
-			boton_der_seleccionado.modulate = Color.RED
+			b_izq_temp.modulate = Color.RED
+			b_der_temp.modulate = Color.RED
 			
 			cambiar_pose(pose_preocupado)
 			
-			# --- 5 VARIACIONES DE PISTAS ANTE ERRORES ---
-			var indice_pista = randi() % 5
-			var mensaje_pista = ""
-			
-			# Buscamos la respuesta real que correspondía a la izquierda para poder armar la pista analítica
 			var respuesta_esperada = ""
 			for par in banco_relaciones:
 				if par.texto_izq == texto_izq:
 					respuesta_esperada = par.texto_der
 					break
 					
+			var indice_pista = randi() % 5
+			var mensaje_pista = ""
 			match indice_pista:
 				0: mensaje_pista = "¡Oh, no es correcto! Piensa un poco: para '%s', debes buscar algo más relacionado con: '%s'." % [texto_izq, respuesta_esperada]
 				1: mensaje_pista = "Eso no coincide. Recuerda que el concepto '%s' guarda un vínculo estrecho con '%s'." % [texto_izq, respuesta_esperada]
@@ -345,17 +351,13 @@ func _on_item_seleccionado(btn: Button) -> void:
 				
 			await decir_mensaje(mensaje_pista, 4.0)
 			
-			var b_izq = boton_izq_seleccionado
-			var b_der = boton_der_seleccionado
-			boton_izq_seleccionado = null
-			boton_der_seleccionado = null
-			
-			await get_tree().create_timer(0.4).timeout
-			if is_instance_valid(b_izq) and not b_izq.disabled: b_izq.modulate = Color.WHITE
-			if is_instance_valid(b_der) and not b_der.disabled: b_der.modulate = Color.WHITE
+			# Regresar a color blanco después del diálogo sin alterar selecciones nuevas
+			if is_instance_valid(b_izq_temp) and not b_izq_temp.disabled: b_izq_temp.modulate = Color.WHITE
+			if is_instance_valid(b_der_temp) and not b_der_temp.disabled: b_der_temp.modulate = Color.WHITE
 
 func _comprobar_victoria_tematica() -> void:
 	tematica_actual += 1
+	# SOLUCIÓN: Validamos estrictamente que no se salte temas procesando de forma secuencial limpia
 	if tematica_actual <= 3:
 		cambiar_pose(pose_feliz)
 		await decir_mensaje("¡Grandioso! Has completado esta temática correctamente.", 2.0)
@@ -373,15 +375,16 @@ func _comprobar_victoria_tematica() -> void:
 		inicializar_tablero()
 	else:
 		juego_activo = false 
-		_procesar_fin_del_juego(false) # Fin completado con éxito
+		_procesar_fin_del_juego(false)
 
-# --- 🌟 NUEVA FUNCIÓN MAESTRA: PROCESAR FIN DEL JUEGO CON DIÁLOGOS Y RESULTADOS 🌟 ---
+# --- PROCESAR FIN DEL JUEGO CON DIÁLOGOS Y RESULTADOS ---
 
 func _procesar_fin_del_juego(por_tiempo_agotado: bool) -> void:
 	juego_activo = false
 	if interfaz_juego: interfaz_juego.hide()
 
-	var tiempo_seg := float(Time.get_ticks_msec() - _tiempo_inicio_ms) / 1000.0
+	# SOLUCIÓN MATEMÁTICA: Tiempo empleado = Tiempo total del nivel - Tiempo restante real en el reloj
+	var tiempo_seg := tiempo_total_nivel - tiempo_restante
 	var estrellas := 0
 	
 	if not por_tiempo_agotado:
@@ -437,7 +440,7 @@ func _mostrar_pantalla_resultados(estrellas: int, puntos: int, monedas: int, tie
 	
 	panel_resultados.show()
 
-# --- 🌟 LOGICA DE LOS 4 BOTONES DE LA PANTALLA DE RESULTADOS 🌟 ---
+# --- LOGICA DE LOS 4 BOTONES DE LA PANTALLA DE RESULTADOS ---
 
 func _on_btn_repetir_nivel_pressed() -> void:
 	_cerrar_db_seguro()
@@ -453,7 +456,6 @@ func _on_btn_selector_columnas_pressed() -> void:
 
 func _on_btn_siguiente_nivel_pressed() -> void:
 	_cerrar_db_seguro()
-	# Incrementamos el nivel seleccionado globalmente antes de recargar
 	GlobalUsuario.nivel_seleccionado = int(GlobalUsuario.nivel_seleccionado) + 1
 	get_tree().reload_current_scene()
 
@@ -503,9 +505,7 @@ func gestionar_pausa():
 	if menu_pausa: menu_pausa.visible = nuevo_estado_pausa
 	if not nuevo_estado_pausa: if capa_confirmacion: capa_confirmacion.hide()
 
-func _on_continuar_pressed(): 
-	gestionar_pausa()
-
+func _on_continuar_pressed(): gestionar_pausa()
 func _on_salir_pressed():
 	if menu_pausa: menu_pausa.hide()
 	if capa_confirmacion: capa_confirmacion.show()
@@ -516,18 +516,3 @@ func _on_boton_si_confirmar_salir_pressed():
 	get_tree().paused = false
 	_cerrar_db_seguro()
 	Configuracion.change_scene_to_file("res://selectorelacioncolumn.tscn")
-
-const ESCENA_OPCIONES = preload("res://Opcionesnivel.tscn")
-
-func _on_opciones_pressed():
-	# 1. Ocultamos momentáneamente los botones del menú de pausa principal
-	$Menupausa/CenterContainer.visible = false
-	# 2. Creamos una instancia de la escena de opciones
-	var opciones_instancia = ESCENA_OPCIONES.instantiate()
-	# 3. Le asignamos un nombre único
-	opciones_instancia.name = "MenuOpcionesDinamico"
-	
-	# ¡IMPORTANTE!: Forzar a la nueva ventana de opciones a procesar en pausa
-	opciones_instancia.process_mode = Node.PROCESS_MODE_ALWAYS
-	# 4. La añadimos como hija del CanvasLayer de pausa
-	$Menupausa.add_child(opciones_instancia)
