@@ -31,8 +31,8 @@ var banco_relaciones: Array[ParejaRelacion] = []
 @onready var contenedor_der: VBoxContainer = $InterfazJuego/Control/Panel/HBoxContainer/VBoxContainer2
 @onready var label_titulo_tematica: Label = $InterfazJuego/Control/Label
 @onready var label_cronometro: Label = $InterfazJuego/Control/Label2
+@onready var label_progreso_relaciones: Label = $InterfazJuego/Control/progreso
 
-# --- 🌟 NUEVAS REFERENCIAS PARA LA PANTALLA DE RESULTADOS 🌟 ---
 # --- REFERENCIAS PARA LA PANTALLA DE RESULTADOS ---
 @onready var panel_resultados = $PantallaResultados
 @onready var res_label_nivel = $PantallaResultados/Panel/nivel
@@ -48,7 +48,6 @@ var banco_relaciones: Array[ParejaRelacion] = []
 @onready var panel_dialogo = $capapersonaje/PanelContainer
 @onready var label_dialogo = $capapersonaje/PanelContainer/MarginContainer/Label
 
-# Texturas del personaje y estrellas
 var pose_normal = preload("res://GFX/normal.png")
 var pose_feliz = preload("res://GFX/Feliz.png")
 var pose_preocupado = preload("res://GFX/preocupado.png")
@@ -68,13 +67,13 @@ var tematica_actual: int = 1
 
 # Variables de control de tiempo y progreso
 var tiempo_restante: float = 480.0
-var tiempo_total_nivel: float = 480.0 # Guardará el tiempo límite original
+var tiempo_total_nivel: float = 480.0 
 var juego_activo: bool = false
 var _errores: int = 0
 var parejas_restantes: int = 0
 var total_parejas_nivel: int = 0
 var parejas_correctas_totales: int = 0
-var bloqueando_clicks: bool = false # Evita que interactúen durante los mensajes
+var bloqueando_clicks: bool = false 
 
 @onready var capa_confirmacion = $confrimar
 @onready var menu_pausa = $Menupausa
@@ -111,6 +110,8 @@ func _ready() -> void:
 	juego_activo = true 
 	inicializar_tablero()
 	
+	_actualizar_interfaz_progreso_tematica()
+	
 	self.process_mode = Node.PROCESS_MODE_ALWAYS
 	if menu_pausa: menu_pausa.process_mode = Node.PROCESS_MODE_ALWAYS
 	if capa_confirmacion: capa_confirmacion.process_mode = Node.PROCESS_MODE_ALWAYS
@@ -125,6 +126,22 @@ func _process(delta: float) -> void:
 			_procesar_fin_del_juego(true)
 		else:
 			_actualizar_interfaz_cronometro()
+			
+		# SOLUCIÓN: Si hay algún botón individual seleccionado, redibujamos continuamente las líneas
+		# para actualizar el trazo interactivo/temporal que sigue al cursor del mouse.
+		if (boton_izq_seleccionado != null and boton_der_seleccionado == null) or (boton_der_seleccionado != null and boton_izq_seleccionado == null):
+			if has_node("Node2D"):
+				get_node("Node2D").queue_redraw()
+
+func _actualizar_interfaz_progreso_tematica() -> void:
+	if label_progreso_relaciones == null: return
+	
+	var total_parejas_tematica := banco_relaciones.size()
+	# Las correctas de ESTA temática son el total menos las que faltan por responder
+	var correctas_tematica := total_parejas_tematica - parejas_restantes
+	
+	# Cambia el texto para mostrar algo como: "Progreso: 2 / 5"
+	label_progreso_relaciones.text = "Progreso: %d / %d" % [correctas_tematica, total_parejas_tematica]
 
 func _actualizar_interfaz_cronometro() -> void:
 	if label_cronometro == null: return
@@ -137,7 +154,7 @@ func _actualizar_interfaz_cronometro() -> void:
 
 func decir_mensaje(texto: String, tiempo: float = 3.0) -> void:
 	if label_dialogo == null or panel_dialogo == null: return
-	bloqueando_clicks = true # Bloqueamos clics en el tablero
+	bloqueando_clicks = true 
 	label_dialogo.show() 
 	if label_dialogo.get_parent(): label_dialogo.get_parent().show()
 	label_dialogo.text = texto
@@ -153,7 +170,7 @@ func decir_mensaje(texto: String, tiempo: float = 3.0) -> void:
 	tween_out.tween_property(panel_dialogo, "modulate:a", 0.0, 0.2)
 	await tween_out.finished
 	panel_dialogo.hide()
-	bloqueando_clicks = false # Liberamos los clics
+	bloqueando_clicks = false 
 
 func cambiar_pose(nueva_textura: Texture2D) -> void:
 	if sprite_personaje == null or nueva_textura == null: return
@@ -263,7 +280,6 @@ func inicializar_tablero() -> void:
 # --- MECÁNICA DE JUEGO ---
 
 func _on_item_seleccionado(btn: Button) -> void:
-	# SOLUCIÓN: Si está corriendo un diálogo de explicación, ignoramos por completo cualquier click
 	if bloqueando_clicks: return
 	
 	var es_izq: bool = btn.get_meta("es_columna_izquierda", false)
@@ -284,6 +300,9 @@ func _on_item_seleccionado(btn: Button) -> void:
 			if boton_der_seleccionado: boton_der_seleccionado.modulate = Color.WHITE
 			boton_der_seleccionado = btn
 			boton_der_seleccionado.modulate = Color.YELLOW
+	
+	# Forzar redibujado instantáneo de la línea temporal o conexiones establecidas
+	if has_node("Node2D"): get_node("Node2D").queue_redraw()
 			
 	if boton_izq_seleccionado and boton_der_seleccionado:
 		var id_izq: int = boton_izq_seleccionado.get_meta("id_pareja", -1)
@@ -292,11 +311,9 @@ func _on_item_seleccionado(btn: Button) -> void:
 		var texto_izq = boton_izq_seleccionado.text
 		var texto_der = boton_der_seleccionado.text
 		
-		# Guardamos referencias temporales locales de los botones seleccionados
 		var b_izq_temp = boton_izq_seleccionado
 		var b_der_temp = boton_der_seleccionado
 		
-		# SOLUCIÓN: Limpiamos los punteros globales inmediatamente para evitar bugs de desmarcado en clicks futuros
 		boton_izq_seleccionado = null
 		boton_der_seleccionado = null
 		
@@ -311,6 +328,8 @@ func _on_item_seleccionado(btn: Button) -> void:
 			
 			parejas_restantes -= 1
 			parejas_correctas_totales += 1
+			
+			_actualizar_interfaz_progreso_tematica()
 			
 			cambiar_pose(pose_feliz)
 			
@@ -332,6 +351,7 @@ func _on_item_seleccionado(btn: Button) -> void:
 			b_izq_temp.modulate = Color.RED
 			b_der_temp.modulate = Color.RED
 			
+			if has_node("Node2D"): get_node("Node2D").queue_redraw()
 			cambiar_pose(pose_preocupado)
 			
 			var respuesta_esperada = ""
@@ -351,13 +371,12 @@ func _on_item_seleccionado(btn: Button) -> void:
 				
 			await decir_mensaje(mensaje_pista, 4.0)
 			
-			# Regresar a color blanco después del diálogo sin alterar selecciones nuevas
 			if is_instance_valid(b_izq_temp) and not b_izq_temp.disabled: b_izq_temp.modulate = Color.WHITE
 			if is_instance_valid(b_der_temp) and not b_der_temp.disabled: b_der_temp.modulate = Color.WHITE
+			if has_node("Node2D"): get_node("Node2D").queue_redraw()
 
 func _comprobar_victoria_tematica() -> void:
 	tematica_actual += 1
-	# SOLUCIÓN: Validamos estrictamente que no se salte temas procesando de forma secuencial limpia
 	if tematica_actual <= 3:
 		cambiar_pose(pose_feliz)
 		await decir_mensaje("¡Grandioso! Has completado esta temática correctamente.", 2.0)
@@ -373,6 +392,7 @@ func _comprobar_victoria_tematica() -> void:
 		_cargar_tematica(tematica_actual)
 		parejas_restantes = banco_relaciones.size()
 		inicializar_tablero()
+		_actualizar_interfaz_progreso_tematica()
 	else:
 		juego_activo = false 
 		_procesar_fin_del_juego(false)
@@ -381,9 +401,17 @@ func _comprobar_victoria_tematica() -> void:
 
 func _procesar_fin_del_juego(por_tiempo_agotado: bool) -> void:
 	juego_activo = false
+	
+	# SOLUCIÓN CRUCIAL: Limpiamos por completo las líneas establecidas y redibujamos el canvas vacío
+	# ANTES de ocultar la interfaz y antes de iniciar los diálogos para que no queden flotando.
+	conexiones_establecidas.clear()
+	boton_izq_seleccionado = null
+	boton_der_seleccionado = null
+	if has_node("Node2D"):
+		get_node("Node2D").queue_redraw()
+		
 	if interfaz_juego: interfaz_juego.hide()
 
-	# SOLUCIÓN MATEMÁTICA: Tiempo empleado = Tiempo total del nivel - Tiempo restante real en el reloj
 	var tiempo_seg := tiempo_total_nivel - tiempo_restante
 	var estrellas := 0
 	
@@ -430,9 +458,9 @@ func _mostrar_pantalla_resultados(estrellas: int, puntos: int, monedas: int, tie
 	if res_label_puntos: res_label_puntos.text = str(puntos) + " PTS"
 	if res_label_dinero: res_label_dinero.text = "+$" + str(monedas)
 	
-	var minutos := int(tiempo_seg) / 60
+	var minutes := int(tiempo_seg) / 60
 	var segundos := int(tiempo_seg) % 60
-	if res_label_tiempo: res_label_tiempo.text = "%02d:%02d" % [minutos, segundos]
+	if res_label_tiempo: res_label_tiempo.text = "%02d:%02d" % [minutes, segundos]
 	
 	if res_estrella1: res_estrella1.texture = img_estrella_llena if estrellas >= 1 else img_estrella_vacia
 	if res_estrella2: res_estrella2.texture = img_estrella_llena if estrellas >= 2 else img_estrella_vacia
