@@ -177,7 +177,7 @@ func _on_nivel_seleccionado_desde_mapa(num: int) -> void:
 	nivel_seleccionado_temp = num 
 	var tema: String = TEMAS_NIVELES.get(num, "Tema Desconocido")
 	
-	Prevnivel.text = "nivelsopa"
+	Prevnivel.text = "Nivel " + str(num)
 	prevtema.text = tema
 	
 	var cant_estrellas: int = 0 

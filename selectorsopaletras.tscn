@@ -321,13 +321,13 @@ texture = ExtResource("8_c3d5w")
 
 [node name="Label2" type="Label" parent="PrevNiveles" unique_id=758959000]
 anchors_preset = -1
-anchor_left = 0.508
+anchor_left = 0.522
 anchor_top = 0.08400001
-anchor_right = 0.508
+anchor_right = 0.522
 anchor_bottom = 0.08400001
-offset_left = -196.61908
+offset_left = -196.11304
 offset_top = -50.061005
-offset_right = 197.38092
+offset_right = 197.88696
 offset_bottom = 49.938995
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)

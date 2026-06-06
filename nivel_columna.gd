@@ -111,6 +111,16 @@ func _ready() -> void:
 	inicializar_tablero()
 	
 	_actualizar_interfaz_progreso_tematica()
+	var boton_pausa_visual = get_node_or_null("InterfazJuego/Control/Buttonpausa")
+	
+	if boton_pausa_visual:
+		# 2. Forzamos a que el botón funcione INCLUSO cuando el juego esté pausado
+		boton_pausa_visual.process_mode = Node.PROCESS_MODE_ALWAYS
+		
+		# 3. Conectamos la señal 'pressed' a tu función existente por código
+		boton_pausa_visual.pressed.connect(_on_boton_pausa_visual_pressed)
+	else:
+		print("ERROR: No se encontró el botón de pausa visual en la ruta especificada.")
 	
 	self.process_mode = Node.PROCESS_MODE_ALWAYS
 	if menu_pausa: menu_pausa.process_mode = Node.PROCESS_MODE_ALWAYS
@@ -244,7 +254,12 @@ func inicializar_tablero() -> void:
 	contenedor_der = get_node_or_null("InterfazJuego/Control/Panel/HBoxContainer/VBoxContainer2")
 	
 	if contenedor_izq == null or contenedor_der == null: return
-		
+	
+	for hijo in contenedor_izq.get_children():
+		hijo.free() # Usamos free() aquí para eliminarlos instantáneamente antes de continuar
+	for hijo in contenedor_der.get_children():
+		hijo.free()
+	
 	var lista_izq: Array[Button] = []
 	var lista_der: Array[Button] = []
 	var mi_fuente = null
@@ -456,12 +471,12 @@ func _mostrar_pantalla_resultados(estrellas: int, puntos: int, monedas: int, tie
 	if panel_resultados == null: return
 	
 	if res_label_nivel: res_label_nivel.text = "NIVEL " + str(numero_de_nivel)
-	if res_label_puntos: res_label_puntos.text = str(puntos) + " PTS"
-	if res_label_dinero: res_label_dinero.text = "+$" + str(monedas)
+	if res_label_puntos: res_label_puntos.text = " Puntaje Total: " + str(puntos)
+	if res_label_dinero: res_label_dinero.text = "Dinero Ganado: " + str(monedas)
 	
 	var minutes := int(tiempo_seg) / 60
 	var segundos := int(tiempo_seg) % 60
-	if res_label_tiempo: res_label_tiempo.text = "%02d:%02d" % [minutes, segundos]
+	if res_label_tiempo: res_label_tiempo.text = "Tiempo resuelto: %02d:%02d" % [minutes, segundos]
 	
 	if res_estrella1: res_estrella1.texture = img_estrella_llena if estrellas >= 1 else img_estrella_vacia
 	if res_estrella2: res_estrella2.texture = img_estrella_llena if estrellas >= 2 else img_estrella_vacia
