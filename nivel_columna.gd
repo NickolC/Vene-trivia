@@ -115,6 +115,7 @@ func _ready() -> void:
 	self.process_mode = Node.PROCESS_MODE_ALWAYS
 	if menu_pausa: menu_pausa.process_mode = Node.PROCESS_MODE_ALWAYS
 	if capa_confirmacion: capa_confirmacion.process_mode = Node.PROCESS_MODE_ALWAYS
+	if interfaz_juego: interfaz_juego.process_mode = Node.PROCESS_MODE_ALWAYS
 
 func _process(delta: float) -> void:
 	if juego_activo and not get_tree().paused:
@@ -544,3 +545,18 @@ func _on_boton_si_confirmar_salir_pressed():
 	get_tree().paused = false
 	_cerrar_db_seguro()
 	Configuracion.change_scene_to_file("res://selectorelacioncolumn.tscn")
+
+const ESCENA_OPCIONES = preload("res://Opcionesnivel.tscn")
+
+func _on_opciones_pressed():
+	# 1. Ocultamos momentáneamente los botones del menú de pausa principal
+	$Menupausa/CenterContainer.visible = false
+	# 2. Creamos una instancia de la escena de opciones
+	var opciones_instancia = ESCENA_OPCIONES.instantiate()
+	# 3. Le asignamos un nombre único
+	opciones_instancia.name = "MenuOpcionesDinamico"
+	
+	# ¡IMPORTANTE!: Forzar a la nueva ventana de opciones a procesar en pausa
+	opciones_instancia.process_mode = Node.PROCESS_MODE_ALWAYS
+	# 4. La añadimos como hija del CanvasLayer de pausa
+	$Menupausa.add_child(opciones_instancia)
