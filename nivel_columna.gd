@@ -352,11 +352,11 @@ func _on_item_seleccionado(btn: Button) -> void:
 			var indice_explicacion = randi() % 5
 			var mensaje_correcto = ""
 			match indice_explicacion:
-				0: mensaje_correcto = "¡Excelente! '%s' corresponde con '%s' porque representa su definición conceptual exacta." % [texto_izq, texto_der]
-				1: mensaje_correcto = "¡Es correcto! Relacionamos '%s' directamente con '%s', siendo su característica o fecha más relevante." % [texto_izq, texto_der]
-				2: mensaje_correcto = "¡Muy bien analizado! '%s' se vincula con '%s' dado que forman parte del mismo contexto temático." % [texto_izq, texto_der]
-				3: mensaje_correcto = "¡Perfecto! El elemento '%s' tiene como respuesta idónea a '%s', demostrando una asociación correcta." % [texto_izq, texto_der]
-				4: mensaje_correcto = "¡Acertaste! Existe una relación lógica e histórica directa entre '%s' y '%s'." % [texto_izq, texto_der]
+				0: mensaje_correcto = "¡Excelente relacion!"
+				1: mensaje_correcto = "¡Eso es correcto!"
+				2: mensaje_correcto = "¡Muy bien analizado!"
+				3: mensaje_correcto = "¡Perfecto, relacionaste una columna!"
+				4: mensaje_correcto = "¡Acertaste, sigue asi!"
 				
 			await decir_mensaje(mensaje_correcto, 3.2)
 			
@@ -379,11 +379,11 @@ func _on_item_seleccionado(btn: Button) -> void:
 			var indice_pista = randi() % 5
 			var mensaje_pista = ""
 			match indice_pista:
-				0: mensaje_pista = "¡Oh, no es correcto! Piensa un poco: para '%s', debes buscar algo más relacionado con: '%s'." % [texto_izq, respuesta_esperada]
-				1: mensaje_pista = "Eso no coincide. Recuerda que el concepto '%s' guarda un vínculo estrecho con '%s'." % [texto_izq, respuesta_esperada]
+				0: mensaje_pista = "¡Oh, no es correcto! Piensa un poco."
+				1: mensaje_pista = "Eso no coincide."
 				2: mensaje_pista = "¡Cerca, pero no! Intenta buscar una característica en la columna derecha que hable sobre '%s'." % respuesta_esperada
-				3: mensaje_pista = "No es la pareja correcta. Una pista: el elemento '%s' se asocia con '%s'. ¡Busca algo similar!" % [texto_izq, respuesta_esperada]
-				4: mensaje_pista = "¡Incorrecto! Vuelve a leer bien. '%s' no combina con '%s'. Te sugiero buscar '%s'." % [texto_izq, texto_der, respuesta_esperada]
+				3: mensaje_pista = "No es la pareja correcta."
+				4: mensaje_pista = "¡Incorrecto! Vuelve a leer bien.'."
 				
 			await decir_mensaje(mensaje_pista, 4.0)
 			
@@ -471,8 +471,8 @@ func _mostrar_pantalla_resultados(estrellas: int, puntos: int, monedas: int, tie
 	if panel_resultados == null: return
 	
 	if res_label_nivel: res_label_nivel.text = "NIVEL " + str(numero_de_nivel)
-	if res_label_puntos: res_label_puntos.text = " Puntaje Total: " + str(puntos)
-	if res_label_dinero: res_label_dinero.text = "Dinero Ganado: " + str(monedas)
+	if res_label_puntos: res_label_puntos.text = "Puntaje Total: " + str(puntos)
+	if res_label_dinero: res_label_dinero.text = "Dinero Ganado: " + str(monedas) + "Bs."
 	
 	var minutes := int(tiempo_seg) / 60
 	var segundos := int(tiempo_seg) % 60

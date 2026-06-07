@@ -2,10 +2,17 @@
 
 [ext_resource type="Script" uid="uid://cuw6wcibfy61k" path="res://nivelmemoria.gd" id="1_5mush"]
 [ext_resource type="Texture2D" uid="uid://b3wfnscgwckc" path="res://GFX/mapa.png" id="2_qovs0"]
+[ext_resource type="FontFile" uid="uid://cn65q6b06tv8u" path="res://font/Minecraft.ttf" id="3_d1cmx"]
 [ext_resource type="Texture2D" uid="uid://cbvp25frb7syk" path="res://GFX/Text.png" id="3_r6eu6"]
 [ext_resource type="FontFile" uid="uid://2s1p28deo8oy" path="res://GFX/Minecraft.ttf" id="4_o2mmk"]
 [ext_resource type="Texture2D" uid="uid://dy47jo5uk8" path="res://GFX/pausa.png" id="5_qovs0"]
 [ext_resource type="Texture2D" uid="uid://bwci2gcq7wc8u" path="res://GFX/boton-extras.png" id="6_r6eu6"]
+[ext_resource type="Texture2D" uid="uid://cldrkor4ic7f4" path="res://GFX/prev de niveles.png" id="8_wi5my"]
+[ext_resource type="Texture2D" uid="uid://bjmn2uaofj2dl" path="res://GFX/estrella vacia.png" id="9_wd2rl"]
+[ext_resource type="Texture2D" uid="uid://bltu0nyjlegap" path="res://GFX/reintentar.png" id="10_sw01m"]
+[ext_resource type="Texture2D" uid="uid://dqc410iysu5x" path="res://GFX/menu principal.png" id="11_8a2sb"]
+[ext_resource type="Texture2D" uid="uid://cu52xaf7patgc" path="res://GFX/selector de nivel.png" id="12_vu0xt"]
+[ext_resource type="Texture2D" uid="uid://bg00f8gp2cclh" path="res://GFX/siguiente.png" id="13_l0gf8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4evmm"]
 texture = ExtResource("3_r6eu6")
@@ -19,6 +26,9 @@ texture_margin_bottom = 10.0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4evmm"]
 load_path = "res://.godot/imported/boton-extras.png-4c47e73584a05b804668f9947712cb02.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fv1y6"]
+texture = ExtResource("8_wi5my")
 
 [node name="Control" type="Control" unique_id=1912207602]
 layout_mode = 3
@@ -46,14 +56,45 @@ anchor_left = 0.505
 anchor_top = 0.53300005
 anchor_right = 0.505
 anchor_bottom = 0.53300005
-offset_left = -579.605
-offset_top = -410.87305
-offset_right = 581.395
-offset_bottom = 411.12695
+offset_left = -701.605
+offset_top = -270.87305
+offset_right = 459.39502
+offset_bottom = 551.12695
 columns = 10
 
+[node name="InterfazJuego" type="CanvasLayer" parent="." unique_id=1592049102]
+
+[node name="Control" type="Control" parent="InterfazJuego" unique_id=756467845]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="InterfazJuego/Control" unique_id=698085353]
+layout_mode = 0
+offset_left = 521.0
+offset_top = 152.0
+offset_right = 669.0
+offset_bottom = 231.0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_d1cmx")
+theme_override_font_sizes/font_size = 45
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="InterfazJuego/Control" unique_id=1152830056]
+layout_mode = 0
+offset_left = 1533.0
+offset_top = 34.0
+offset_right = 1891.0
+offset_bottom = 70.0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_d1cmx")
+theme_override_font_sizes/font_size = 35
+text = "*"
+
 [node name="capapersonaje" type="CanvasLayer" parent="." unique_id=1985885730]
-visible = false
 
 [node name="SpritePersonaje" type="TextureRect" parent="capapersonaje" unique_id=450693865]
 anchors_preset = -1
@@ -72,10 +113,10 @@ anchor_left = 0.77400005
 anchor_top = 0.73
 anchor_right = 0.77400005
 anchor_bottom = 0.73
-offset_left = -255.4541
-offset_top = -112.130005
-offset_right = 254.5459
-offset_bottom = 112.869995
+offset_left = -172.4541
+offset_top = -117.130005
+offset_right = 308.5459
+offset_bottom = 127.869995
 theme_override_styles/panel = SubResource("StyleBoxTexture_4evmm")
 
 [node name="MarginContainer" type="MarginContainer" parent="capapersonaje/PanelContainer" unique_id=1263690886]
@@ -260,8 +301,176 @@ autowrap_mode = 1
 autowrap_trim_flags = 192
 icon_alignment = 1
 
+[node name="PantallaResultados" type="CanvasLayer" parent="." unique_id=452703890]
+layer = 10
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="PantallaResultados" unique_id=1041907524]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.7764706)
+
+[node name="Panel" type="Panel" parent="PantallaResultados" unique_id=1046510918]
+anchors_preset = -1
+anchor_left = 0.49400002
+anchor_top = 0.47800002
+anchor_right = 0.49400002
+anchor_bottom = 0.47800002
+offset_left = -466.57404
+offset_top = -419.91803
+offset_right = 483.42596
+offset_bottom = 446.08197
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_fv1y6")
+
+[node name="nivel" type="Label" parent="PantallaResultados/Panel" unique_id=709858280]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.517
+anchor_top = 0.079
+anchor_right = 0.517
+anchor_bottom = 0.079
+offset_left = -197.15002
+offset_top = -50.414
+offset_right = 196.84998
+offset_bottom = 49.586
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 25
+theme_override_fonts/font = ExtResource("4_o2mmk")
+theme_override_font_sizes/font_size = 100
+text = "NIVEL 1"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PantallaResultados/Panel" unique_id=1099245427]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.499
+anchor_top = 0.25500003
+anchor_right = 0.499
+anchor_bottom = 0.25500003
+offset_left = -341.05002
+offset_top = -105.83002
+offset_right = 341.94998
+offset_bottom = 105.16998
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="PantallaResultados/Panel/HBoxContainer" unique_id=689307937]
+custom_minimum_size = Vector2(225, 200)
+layout_mode = 2
+texture = ExtResource("9_wd2rl")
+expand_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="PantallaResultados/Panel/HBoxContainer" unique_id=413543554]
+custom_minimum_size = Vector2(225, 200)
+layout_mode = 2
+texture = ExtResource("9_wd2rl")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="PantallaResultados/Panel/HBoxContainer" unique_id=364230513]
+custom_minimum_size = Vector2(225, 200)
+layout_mode = 2
+texture = ExtResource("9_wd2rl")
+expand_mode = 5
+
+[node name="puntos" type="Label" parent="PantallaResultados/Panel" unique_id=698722632]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.372
+anchor_top = 0.46400002
+anchor_right = 0.372
+anchor_bottom = 0.46400002
+offset_left = -133.4
+offset_top = -24.824005
+offset_right = 180.6
+offset_bottom = 35.175995
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("4_o2mmk")
+theme_override_font_sizes/font_size = 60
+text = "Puntos: *"
+
+[node name="dinero" type="Label" parent="PantallaResultados/Panel" unique_id=1686085797]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.284
+anchor_top = 0.59400004
+anchor_right = 0.284
+anchor_bottom = 0.59400004
+offset_left = -195.80002
+offset_top = -18.404053
+offset_right = 118.19998
+offset_bottom = 27.595947
+theme_override_colors/font_color = Color(1, 0.80784315, 0.29411766, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("4_o2mmk")
+theme_override_font_sizes/font_size = 35
+text = "Puntos: *"
+
+[node name="tiempofinal" type="Label" parent="PantallaResultados/Panel" unique_id=1283039210]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.67600006
+anchor_top = 0.59400004
+anchor_right = 0.67600006
+anchor_bottom = 0.59400004
+offset_left = -136.20007
+offset_top = -18.404053
+offset_right = 177.79993
+offset_bottom = 27.595947
+theme_override_colors/font_color = Color(1, 0.80784315, 0.29411766, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("4_o2mmk")
+theme_override_font_sizes/font_size = 35
+text = "Puntos: *"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PantallaResultados/Panel" unique_id=996229224]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.503
+anchor_top = 0.77500004
+anchor_right = 0.503
+anchor_bottom = 0.77500004
+offset_left = -336.85
+offset_top = -68.150024
+offset_right = 337.15
+offset_bottom = 67.849976
+mouse_filter = 2
+alignment = 1
+
+[node name="Button3" type="Button" parent="PantallaResultados/Panel/HBoxContainer2" unique_id=1306215619]
+z_index = 10
+layout_mode = 2
+icon = ExtResource("10_sw01m")
+flat = true
+
+[node name="Button2" type="Button" parent="PantallaResultados/Panel/HBoxContainer2" unique_id=194423424]
+layout_mode = 2
+icon = ExtResource("11_8a2sb")
+flat = true
+
+[node name="Button4" type="Button" parent="PantallaResultados/Panel/HBoxContainer2" unique_id=1710256648]
+layout_mode = 2
+icon = ExtResource("12_vu0xt")
+flat = true
+
+[node name="Button" type="Button" parent="PantallaResultados/Panel/HBoxContainer2" unique_id=761039312]
+layout_mode = 2
+icon = ExtResource("13_l0gf8")
+flat = true
+
 [connection signal="pressed" from="Menupausa/CenterContainer/VBoxContainer/Button" to="." method="_on_continuar_pressed"]
 [connection signal="pressed" from="Menupausa/CenterContainer/VBoxContainer/Button2" to="." method="_on_opciones_pressed"]
 [connection signal="pressed" from="Menupausa/CenterContainer/VBoxContainer/Button3" to="." method="_on_salir_pressed"]
 [connection signal="pressed" from="confrimar/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/aceptar" to="." method="_on_boton_si_confirmar_salir_pressed"]
 [connection signal="pressed" from="confrimar/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/cancelar" to="." method="_on_boton_no_cancelar_pressed"]
+[connection signal="pressed" from="PantallaResultados/Panel/HBoxContainer2/Button3" to="." method="_on_btn_repetir_nivel_pressed"]
+[connection signal="pressed" from="PantallaResultados/Panel/HBoxContainer2/Button2" to="." method="_on_btn_menu_minijuegos_pressed"]
+[connection signal="pressed" from="PantallaResultados/Panel/HBoxContainer2/Button4" to="." method="_on_btn_selector_memoria_pressed"]
+[connection signal="pressed" from="PantallaResultados/Panel/HBoxContainer2/Button" to="." method="_on_btn_siguiente_nivel_pressed"]

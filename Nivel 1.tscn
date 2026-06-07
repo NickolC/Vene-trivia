@@ -134,10 +134,10 @@ offset_right = 31.15097
 offset_bottom = 24.797997
 
 [node name="PanelContainer" type="PanelContainer" parent="capapersonaje" unique_id=1728011945]
-offset_left = 969.0
-offset_top = 219.0
-offset_right = 1336.0
-offset_bottom = 436.0
+offset_left = 1031.0
+offset_top = 112.0
+offset_right = 1555.0
+offset_bottom = 421.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_dtf27")
 
 [node name="MarginContainer" type="MarginContainer" parent="capapersonaje/PanelContainer" unique_id=384979902]

@@ -113,9 +113,9 @@ anchor_top = 0.48200002
 anchor_right = 0.48000002
 anchor_bottom = 0.48200002
 offset_left = -395.08002
-offset_top = -387.842
+offset_top = -339.842
 offset_right = 394.91998
-offset_bottom = 387.158
+offset_bottom = 435.158
 theme_override_styles/panel = SubResource("StyleBoxFlat_hbt17")
 
 [node name="GridContainer" type="GridContainer" parent="Panel" unique_id=586340309]
@@ -140,15 +140,15 @@ anchor_left = 0.81200004
 anchor_top = 0.048
 anchor_right = 0.81200004
 anchor_bottom = 0.048
-offset_left = -339.6521
-offset_top = -26.088001
-offset_right = 329.3479
-offset_bottom = 29.911999
+offset_left = -143.6521
+offset_top = -21.088001
+offset_right = 525.3479
+offset_bottom = 34.912
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 5
+theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("3_plk0p")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 35
 text = "Palabras encontradas 0/10"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1555149349]
@@ -159,9 +159,9 @@ anchor_top = 0.46600002
 anchor_right = 0.13000001
 anchor_bottom = 0.46600002
 offset_left = -34.73001
-offset_top = -303.14603
+offset_top = -250.14603
 offset_right = 36.26999
-offset_bottom = 303.85397
+offset_bottom = 356.85397
 theme = SubResource("Theme_56dxb")
 theme_override_constants/separation = 10
 alignment = 1
@@ -332,6 +332,7 @@ icon_alignment = 1
 
 [node name="PantallaResultados" type="CanvasLayer" parent="." unique_id=1319402423]
 layer = 10
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="PantallaResultados" unique_id=1407604459]
 anchors_preset = 15
@@ -460,15 +461,15 @@ flat = true
 [node name="Label2" type="Label" parent="." unique_id=1445887382]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.47800002
-anchor_top = 0.060000002
-anchor_right = 0.47800002
-anchor_bottom = 0.060000002
-offset_left = -127.43805
-offset_top = -25.86
-offset_right = 128.56195
-offset_bottom = 25.14
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+anchor_left = 0.49400002
+anchor_top = 0.07700001
+anchor_right = 0.49400002
+anchor_bottom = 0.07700001
+offset_left = -127.574036
+offset_top = -16.53701
+offset_right = 128.42596
+offset_bottom = 34.46299
+theme_override_colors/font_color = Color(1, 0.35686275, 0.06666667, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("3_plk0p")
 theme_override_font_sizes/font_size = 45

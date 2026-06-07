@@ -81,24 +81,16 @@ var puntos = 0
 
 func decir_mensaje(texto: String, tiempo: float = 3.0):
 	label_dialogo.show() 
-	if label_dialogo.get_parent(): label_dialogo.get_parent().show() # MarginContainer
-	
-	# 2. Asignamos el texto ANTES de mostrar el panel
+	if label_dialogo.get_parent(): label_dialogo.get_parent().show()
 	label_dialogo.text = texto
 	
-	
-	# 4. Animación de aparición
 	var tween = create_tween()
 	panel_dialogo.modulate.a = 0
-	panel_dialogo.show() # Mostramos el PanelContainer principal
+	panel_dialogo.show()
 	tween.tween_property(panel_dialogo, "modulate:a", 1.0, 0.3)
-	
-	# Debug para confirmar en consola
-	print("Texto asignado: ", label_dialogo.text)
 	
 	await get_tree().create_timer(tiempo).timeout
 	
-	# 5. Desvanecimiento
 	var tween_out = create_tween()
 	tween_out.tween_property(panel_dialogo, "modulate:a", 0.0, 0.3)
 	await tween_out.finished
@@ -368,37 +360,33 @@ func actualizar_interfaz_puntos():
 	# Nota: Para que el escalado funcione desde el centro, 
 	# cambia el 'Pivot Offset' del Label a la mitad de su tamaño.
 
+# === 🌟 MODIFICADO: FUNCIÓN DE LECTURA ADAPTATIVA PARA CARGAR JSON DEL DOCENTE ===
 func cargar_json():
+	# Si el nivel es >= 16, cargamos el JSON dinámico correspondiente creado por el docente
 	var path = "res://Jsons/Preguntas_nivel_%d.json" % numero_de_nivel
+	
 	if FileAccess.file_exists(path):
 		var file = FileAccess.open(path, FileAccess.READ)
-		var json_string = file.get_as_text()
-		json_string = json_string.strip_edges()
+		var json_string = file.get_as_text().strip_edges()
 		var datos = JSON.parse_string(json_string)
 		if datos != null and datos is Array:
 			todas_las_preguntas = datos
-			# Al inicio, todas están disponibles
 			pool_disponible = todas_las_preguntas.duplicate()
-			pool_disponible.shuffle() # Barajeamos el mazo completo
-			print("JSON cargado con éxito")
+			pool_disponible.shuffle()
+			print("JSON del docente del nivel ", numero_de_nivel, " cargado con éxito.")
 		else:
-			push_error("Error: El JSON no es un Array válido o tiene errores de sintaxis.")
+			push_error("Error: El JSON del docente no es válido.")
 	else:
 		push_error("No existe el archivo de preguntas para el nivel %d" % numero_de_nivel)
 
 func preparar_nuevo_nivel():
 	if pool_disponible.size() < TOTAL_PREGUNTAS_RONDA:
-		print("Pocas preguntas restantes. Recargando mazo...")
 		pool_disponible = todas_las_preguntas.duplicate()
 		pool_disponible.shuffle()
-
 	preguntas_partida_actual.clear()
-	
 	for i in range(TOTAL_PREGUNTAS_RONDA):
 		var pregunta_sacada = pool_disponible.pop_front()
 		preguntas_partida_actual.append(pregunta_sacada)
-	
-	print("Preguntas listas para la partida. Quedan en reserva: ", pool_disponible.size())
 
 func comenzar_nivel():
 	indice_actual = 0
@@ -407,30 +395,34 @@ func comenzar_nivel():
 
 func mostrar_pregunta():
 	cambiar_pose(pose_normal)
-	
 	if indice_actual >= preguntas_partida_actual.size():
 		finalizar_nivel()
 		return
 
-		# Esto obliga al PanelContainer a reajustar su tamaño 
-		# inmediatamente según el nuevo texto del Label.
 	var datos_pregunta = preguntas_partida_actual[indice_actual]
 	label_pregunta.text = datos_pregunta["pregunta"]
 	_ajustar_fuente_pregunta(label_pregunta.text)
 	_ajustar_layout_pregunta()
-	
 	fondo_pregunta.pivot_offset = fondo_pregunta.size / 2
 
-	# Se limpian los botones anteriores
 	botones_respuesta.clear()
 	for n in contenedor_botones.get_children():
 		n.queue_free()
 	await get_tree().process_frame
-	# Se crean los 4 botones de respuesta
-	for i in range(datos_pregunta["opciones"].size()):
+
+	# Se barajan las opciones para que el docente pueda guardar siempre en la primera sin problemas
+	var opciones_originales : Array = datos_pregunta["opciones"].duplicate()
+	var indices_barajados := [0, 1, 2, 3]
+	indices_barajados.shuffle()
+
+	var correcta_original = datos_pregunta["correcta"]
+
+	for i in range(opciones_originales.size()):
+		var idx_mezclado = indices_barajados[i]
 		var boton := Button.new()
-		var texto_respuesta: String = datos_pregunta["opciones"][i]
+		var texto_respuesta: String = opciones_originales[idx_mezclado]
 		boton.text = texto_respuesta
+		
 		if texto_respuesta.length() > 25:
 			boton.add_theme_font_size_override("font_size", 20)
 		else:
@@ -443,13 +435,19 @@ func mostrar_pregunta():
 		boton.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		boton.custom_minimum_size = Vector2(800, 155) 
 		boton.expand_icon = true
-		
 		boton.add_theme_font_override("font", mi_fuente)
+		
 		if texto_respuesta.length() <= 25:
 			boton.add_theme_font_size_override("font_size", 28)
 		boton.add_theme_color_override("font_color", Color.BLACK)
 		
-		boton.pressed.connect(_on_respuesta_seleccionada.bind(i, boton))
+		# 🌟 SOLUCIÓN: Guardamos en los metadatos del botón si este corresponde a la opción correcta original
+		var es_esta_correcta = (idx_mezclado == correcta_original)
+		boton.set_meta("es_correcta", es_esta_correcta)
+		
+		# Conectamos únicamente pasando la referencia directa del propio botón presionado
+		boton.pressed.connect(_on_respuesta_seleccionada.bind(boton))
+		
 		contenedor_botones.add_child(boton)
 		botones_respuesta.append(boton)
 		
@@ -518,51 +516,45 @@ func actualizar_color_barra(tiempo):
 		var peso = porcentaje * 2 
 		barra_tiempo.self_modulate = Color.DARK_RED.lerp(Color.WEB_GREEN, peso)
 
-func _on_respuesta_seleccionada(id_elegido: int, boton_presionado: Button):
-	timer_pregunta.stop() # Detener el reloj inmediatamente
-	label_dialogo.get_parent().show() # Mostramos el cuadro
+func _on_respuesta_seleccionada(boton_presionado: Button):
+	timer_pregunta.stop() 
+	label_dialogo.get_parent().show() 
 	
-	# Bloquear todos los botones para que no sigan clickeando
 	for b in botones_respuesta:
 		b.disabled = true
 	
-	var correcta = preguntas_partida_actual[indice_actual]["correcta"]
+	# Leemos de forma automatizada los metadatos de respuesta correcta en el botón seleccionado
+	var es_correcto: bool = boton_presionado.get_meta("es_correcta", false)
 	
-	if id_elegido == correcta:
-		# Respuesta Correcta: Pintar de verde
+	if es_correcto:
 		puntos += PUNTOS_RESPUESTA_CORRECTA
 		actualizar_interfaz_puntos()
 		print("¡Correcto!")
 		cambiar_color_boton(boton_presionado, Color.GREEN)
-		actualizar_circulo_progreso(true) # <-- Círculo Verde
-		
+		actualizar_circulo_progreso(true)
 		cambiar_pose(pose_feliz)
 		
-		# 1. Creamos la lista de frases
-		var frases_exito = ["¡Excelente! Sigue así.", "¡Yo también pensaba que era esa!"]
-		# 2. Elegimos una al azar
-		var mensaje_elegido = frases_exito.pick_random()
-		# 3. Se la enviamos a la función (el tiempo es opcional, por defecto son 3.0s)
-		decir_mensaje(mensaje_elegido, 1.5)
-		await get_tree().create_timer(0.5).timeout
+		# Mostramos la explicación pedagógica del docente
+		var exp_pedagogica = preguntas_partida_actual[indice_actual]["explicacion"]
+		decir_mensaje("¡Correcto! " + exp_pedagogica, 6.0)
+		await get_tree().create_timer(3.0).timeout
 	else:
-		# Respuesta Incorrecta: Pintar el presionado de rojo y el correcto de verde
 		print("Incorrecto...")
 		cambiar_color_boton(boton_presionado, Color.RED)
-		cambiar_color_boton(botones_respuesta[correcta], Color.GREEN)
-		actualizar_circulo_progreso(false) # <-- Círculo Rojo
 		
+		# Buscamos en pantalla cuál botón tiene la respuesta correcta para pintarlo de Verde
+		for b in botones_respuesta:
+			if b.get_meta("es_correcta", false):
+				cambiar_color_boton(b, Color.GREEN)
+				break
+				
+		actualizar_circulo_progreso(false)
 		cambiar_pose(pose_preocupado)
-		var frases_perdido = ["¡Dios, eso estuvo cerca!", "Vaya... Yo pensaba que si era esa"]
-	# 2. Elegimos una al azar
-		var mensaje_elegido = frases_perdido.pick_random()
-	# 3. Se la enviamos a la función (el tiempo es opcional, por defecto son 3.0s)
 		
-		decir_mensaje(mensaje_elegido, 1.5)
-		await get_tree().create_timer(0.5).timeout
-		# Esperamos 2 segundos para que el usuario lea y seguimos
+		var exp_pedagogica = preguntas_partida_actual[indice_actual]["explicacion"]
+		decir_mensaje("¡Incorrecto! " + exp_pedagogica, 6.0)
+		await get_tree().create_timer(3.0).timeout
 		
-	
 	siguiente_pregunta()
 
 func cambiar_color_boton(boton: Button, color: Color):
@@ -594,6 +586,12 @@ func _on_timer_timeout() -> void:
 	siguiente_pregunta()
 
 func siguiente_pregunta():
+		# Al pasar de pregunta, mostramos el dato curioso si existe en el JSON
+	var datos_actual = preguntas_partida_actual[indice_actual]
+	if datos_actual.has("dato_curioso") and not str(datos_actual["dato_curioso"]).is_empty():
+		cambiar_pose(pose_pensativo)
+		await decir_mensaje("¿Sabías qué? " + str(datos_actual["dato_curioso"]), 4.0)
+	
 	indice_actual += 1
 	if indice_actual >= TOTAL_PREGUNTAS_RONDA:
 		finalizar_nivel()

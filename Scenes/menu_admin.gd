@@ -9,10 +9,28 @@ enum VistaDocente {
 	RENDIMIENTO
 }
 
+const LISTA_MINIJUEGOS = ["Sopa de Letras", "Memoria", "RelacionColumnas", "VerdaderoFalso", "CompletarFrases", "Ahorcado"]
+
+const MAPEO_RECURSOS_MINIJUEGOS := {
+	"Sopa de Letras": {"icono": "res://GFX/Minijuegos/Sopa.png", "titulo": "SOPA DE LETRAS"},
+	"Memoria": {"icono": "res://GFX/Minijuegos/Memoria.png", "titulo": "MEMORIA"},
+	"RelacionColumnas": {"icono": "res://GFX/Minijuegos/Columnas.png", "titulo": "COLUMNAS"},
+	"VerdaderoFalso": {"icono": "res://GFX/Minijuegos/TrueorFalse.png", "titulo": "VERDADERO O FALSO"},
+	"CompletarFrases": {"icono": "res://GFX/Minijuegos/Completar.png", "titulo": "COMPLETAR FRASES"},
+	"Ahorcado": {"icono": "res://GFX/Minijuegos/Ahorcado.png", "titulo": "AHORCADO"}
+}
+
+# RUTAS DE TUS RECURSOS PERSONALIZADOS (Ajusta la extensión o carpeta si es necesario)
+const RUTA_FUENTE_CUSTOM = "res://font/Minecraft.ttf"
+const RUTA_CHECK_CUSTOM = "res://GFX/switch de prendido.png" # Icono propio para los interruptores/checks
+const RUTA_CHECK_CUSTOM2 = "res://GFX/switch de desactivado.png" # Icono propio para los interruptores/checks
+
 var db: SQLite
 var _docente_nombre: String = ""
 var _vista_actual: int = VistaDocente.GESTION
 var _alumno_seleccionado_id: int = -1
+
+var _cambios_temporales_bloqueo: Dictionary = {}
 
 @onready var btn_canvas_gestion: Button = $MainPanel/Margin/VBox/NavBar/BtnCanvasGestion
 @onready var btn_canvas_auditoria: Button = $MainPanel/Margin/VBox/NavBar/BtnCanvasAuditoria
@@ -27,6 +45,8 @@ var _alumno_seleccionado_id: int = -1
 @onready var input_editar_usuario: LineEdit = $MainPanel/Margin/VBox/PanelEdicion/Margin/EdicionVBox/InputEditarUsuario
 @onready var input_editar_clave: LineEdit = $MainPanel/Margin/VBox/PanelEdicion/Margin/EdicionVBox/InputEditarClave
 @onready var label_estado_edicion: Label = $MainPanel/Margin/VBox/PanelEdicion/Margin/EdicionVBox/EstadoEdicion
+
+@onready var contenedor_bloqueos_minijuegos: VBoxContainer = $MainPanel/Margin/VBox/PanelEdicion/Margin/EdicionVBox/VBoxContainer
 
 @onready var canvas_auditoria: PanelContainer = $MainPanel/Margin/VBox/CanvasAuditoria
 @onready var input_filtro_auditoria: LineEdit = $MainPanel/Margin/VBox/CanvasAuditoria/Margin/AuditoriaVBox/FiltroAuditoria
@@ -44,6 +64,9 @@ func _ready() -> void:
 	SQLiteHelper.ensure_alumnos_activo_column(db)
 	SQLiteHelper.ensure_minijuegos_table(db)
 	SQLiteHelper.ensure_logros_table(db)
+	
+	_asegurar_tabla_bloqueos_minijuegos()
+	
 	_docente_nombre = GlobalUsuario.nombre_alumno
 	SQLiteHelper.log_activity(db, "docente", _docente_nombre, "acceso_panel_docente")
 
@@ -53,9 +76,41 @@ func _ready() -> void:
 	_setup_selectores_detalle()
 	_set_vista(VistaDocente.GESTION)
 	_agregar_botones_reporte()
+	_agregar_boton_crear_nivel()
+
+	if not arbol_alumnos.item_selected.is_connected(_on_arbol_alumnos_item_selected):
+		arbol_alumnos.item_selected.connect(_on_arbol_alumnos_item_selected)
+		# CAMBIO: Usar arbol_alumnos en lugar de $TablaAlumnos
+		arbol_alumnos.item_activated.connect(_on_alumno_seleccionado)
+
+
+func _on_alumno_seleccionado() -> void:
+	# 1. Obtenemos el elemento utilizando la variable real 'arbol_alumnos'
+	var item: TreeItem = arbol_alumnos.get_selected()
+	if not item:
+		return
+	
+	# 2. Extraemos el ID del alumno desde sus metadatos
+	var alumno_id: int = int(item.get_metadata(0)) 
+	
+	# 3. Validamos que el ID sea correcto y llamamos al panel
+	if alumno_id > 0:
+		_crear_y_mostrar_panel_bloqueos(alumno_id)
+	else:
+		print("Error: No se pudo recuperar un ID de alumno válido de esta fila.")
 
 func _exit_tree() -> void:
 	SQLiteHelper.close_db_connection(db)
+
+func _asegurar_tabla_bloqueos_minijuegos() -> void:
+	if db == null: return
+	var query := "CREATE TABLE IF NOT EXISTS minijuegos_bloqueos (
+		NU_USU INTEGER,
+		TX_MINIJUEGO TEXT,
+		SW_BLOQUEADO INTEGER DEFAULT 0,
+		PRIMARY KEY(NU_USU, TX_MINIJUEGO)
+	);"
+	db.query(query)
 
 func _set_vista(vista: int) -> void:
 	_vista_actual = vista
@@ -85,7 +140,7 @@ func _set_vista(vista: int) -> void:
 		_refresh_rendimiento_detalle()
 
 func _setup_tree_gestion() -> void:
-	arbol_alumnos.columns = 7
+	arbol_alumnos.columns = 8
 	arbol_alumnos.column_titles_visible = true
 	arbol_alumnos.hide_root = true
 	arbol_alumnos.set_column_title(0, "Alumno")
@@ -95,9 +150,10 @@ func _setup_tree_gestion() -> void:
 	arbol_alumnos.set_column_title(4, "Puntos")
 	arbol_alumnos.set_column_title(5, "Estrellas")
 	arbol_alumnos.set_column_title(6, "Aciertos %")
+	arbol_alumnos.set_column_title(7, "Tiempo por actividad")
 
 func _setup_tree_rendimiento_general() -> void:
-	arbol_rendimiento_general.columns = 6
+	arbol_rendimiento_general.columns = 7
 	arbol_rendimiento_general.column_titles_visible = true
 	arbol_rendimiento_general.hide_root = true
 	arbol_rendimiento_general.set_column_title(0, "Alumno")
@@ -106,9 +162,10 @@ func _setup_tree_rendimiento_general() -> void:
 	arbol_rendimiento_general.set_column_title(3, "Estrellas minijuegos")
 	arbol_rendimiento_general.set_column_title(4, "Puntos niveles")
 	arbol_rendimiento_general.set_column_title(5, "Partidas")
+	arbol_rendimiento_general.set_column_title(6, "Tiempo por actividad")
 
 func _setup_tree_rendimiento_detalle() -> void:
-	arbol_rendimiento_detalle.columns = 5
+	arbol_rendimiento_detalle.columns = 6
 	arbol_rendimiento_detalle.column_titles_visible = true
 	arbol_rendimiento_detalle.hide_root = true
 	arbol_rendimiento_detalle.set_column_title(0, "Tipo")
@@ -116,6 +173,8 @@ func _setup_tree_rendimiento_detalle() -> void:
 	arbol_rendimiento_detalle.set_column_title(2, "Estrellas")
 	arbol_rendimiento_detalle.set_column_title(3, "Puntos")
 	arbol_rendimiento_detalle.set_column_title(4, "Extra")
+	arbol_rendimiento_detalle.set_column_title(5, "Tiempo 
+	")
 
 func _setup_selectores_detalle() -> void:
 	selector_nivel_detalle.clear()
@@ -391,6 +450,246 @@ func _on_arbol_alumnos_item_selected() -> void:
 	input_editar_usuario.text = str(row.get("NM_ALUMNO", ""))
 	input_editar_clave.text = str(row.get("CO_PSW", ""))
 	label_estado_edicion.text = ""
+	
+	var btn_abrir = contenedor_bloqueos_minijuegos.get_node_or_null("BtnAbrirBloqueos")
+	if btn_abrir:
+		btn_abrir.disabled = false
+		
+	_crear_y_mostrar_panel_bloqueos(alumno_id)
+
+func _reconfigurar_contenedor_lateral_para_boton_emergente() -> void:
+	if contenedor_bloqueos_minijuegos == null: return
+	for hijo in contenedor_bloqueos_minijuegos.get_children():
+		hijo.queue_free()
+		
+	var btn_abrir_popup := Button.new()
+	btn_abrir_popup.name = "BtnAbrirBloqueos"
+	btn_abrir_popup.text = "Configurar Minijuegos ⚙"
+	btn_abrir_popup.custom_minimum_size = Vector2(0, 45)
+	btn_abrir_popup.disabled = true # Desactivado hasta seleccionar un alumno
+	btn_abrir_popup.pressed.connect(_on_btn_abrir_popup_pressed)
+	contenedor_bloqueos_minijuegos.add_child(btn_abrir_popup)
+
+func _on_btn_abrir_popup_pressed() -> void:
+	if _alumno_seleccionado_id <= 0: return
+	_crear_y_mostrar_panel_bloqueos(_alumno_seleccionado_id)
+
+func _crear_y_mostrar_panel_bloqueos(alumno_id: int) -> void:
+	# Si ya existe un panel previo por seguridad, lo eliminamos
+	var antiguo_panel = get_node_or_null("CapaSuperpuestaBloqueos")
+	if antiguo_panel: antiguo_panel.queue_free()
+
+	# 1. Contenedor Raíz de la capa de superposición (Oscurece el fondo levemente)
+	var capa_fondo := PanelContainer.new()
+	capa_fondo.name = "CapaSuperpuestaBloqueos"
+	capa_fondo.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	
+	var estilo_fondo := StyleBoxFlat.new()
+	estilo_fondo.bg_color = Color(0, 0, 0, 0.55) # Fondo oscuro semi-transparente
+	capa_fondo.add_theme_stylebox_override("panel", estilo_fondo)
+
+	# 2. Ventana de Diálogo Central
+	var panel_central := PanelContainer.new()
+	panel_central.custom_minimum_size = Vector2(750, 620)
+	panel_central.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	panel_central.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	
+	var estilo_ventana := StyleBoxFlat.new()
+	estilo_ventana.bg_color = Color(0.18, 0.18, 0.22, 1.0)
+	estilo_ventana.border_width_left = 3
+	estilo_ventana.border_width_top = 3
+	estilo_ventana.border_width_right = 3
+	estilo_ventana.border_width_bottom = 3
+	estilo_ventana.border_color = Color(0.4, 0.4, 0.45, 1.0)
+	estilo_ventana.corner_radius_top_left = 8
+	estilo_ventana.corner_radius_top_right = 8
+	estilo_ventana.corner_radius_bottom_right = 8
+	estilo_ventana.corner_radius_bottom_left = 8
+	panel_central.add_theme_stylebox_override("panel", estilo_ventana)
+	capa_fondo.add_child(panel_central)
+
+	# Margen interior de la ventana
+	var margin_container := MarginContainer.new()
+	margin_container.add_theme_constant_override("margin_top", 16)
+	margin_container.add_theme_constant_override("margin_bottom", 16)
+	margin_container.add_theme_constant_override("margin_left", 20)
+	margin_container.add_theme_constant_override("margin_right", 20)
+	panel_central.add_child(margin_container)
+
+	var vbox_principal := VBoxContainer.new()
+	vbox_principal.add_theme_constant_override("separation", 14)
+	margin_container.add_child(vbox_principal)
+
+	# 3. TÍTULO DEL PANEL
+	var lbl_titulo := Label.new()
+	lbl_titulo.text = "HABILITACIÓN O DESHABILITACIÓN DE MINIJUEGOS"
+	_aplicar_estilo_texto_custom(lbl_titulo, 40, true, Color.WHITE, Color.BLACK)
+	lbl_titulo.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	vbox_principal.add_child(lbl_titulo)
+
+	# Separador visual line
+	var line_sep := ColorRect.new()
+	line_sep.custom_minimum_size = Vector2(0, 2)
+	line_sep.color = Color(0.5, 0.5, 0.5, 0.4)
+	vbox_principal.add_child(line_sep)
+
+	# Contenedor con Scroll para albergar la lista de minijuegos ordenadamente
+	var scroll := ScrollContainer.new()
+	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	vbox_principal.add_child(scroll)
+
+	var grid_minijuegos := VBoxContainer.new()
+	grid_minijuegos.add_theme_constant_override("separation", 10)
+	grid_minijuegos.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	scroll.add_child(grid_minijuegos)
+
+	# Buscar estado actual de bloqueos en base de datos para inicializar el diccionario temporal
+	_cambios_temporales_bloqueo.clear()
+	var bloqueos_activos := {}
+	var query := "SELECT TX_MINIJUEGO, SW_BLOQUEADO FROM minijuegos_bloqueos WHERE NU_USU = %d;" % alumno_id
+	if db.query(query) and not db.query_result.is_empty():
+		for row in db.query_result:
+			bloqueos_activos[str(row.get("TX_MINIJUEGO", ""))] = int(row.get("SW_BLOQUEADO", 0))
+
+	# Cargar fuente e icono personalizado si existen
+	var fuente_personalizada = load(RUTA_FUENTE_CUSTOM) if ResourceLoader.exists(RUTA_FUENTE_CUSTOM) else null
+	var icono_check_personalizado = load(RUTA_CHECK_CUSTOM) if ResourceLoader.exists(RUTA_CHECK_CUSTOM) else null
+	var icono_check_personalizado2 = load(RUTA_CHECK_CUSTOM2) if ResourceLoader.exists(RUTA_CHECK_CUSTOM2) else null
+
+	# 4. ITERACIÓN PARA CONSTRUIR CADA COMPONENTE DE MINIJUEGO
+	for nombre_minijuego in LISTA_MINIJUEGOS:
+		var datos_recurso = MAPEO_RECURSOS_MINIJUEGOS.get(nombre_minijuego, {"icono": "", "titulo": nombre_minijuego.to_upper()})
+		var esta_bloqueado = bloqueos_activos.get(nombre_minijuego, 0) == 1
+		
+		# Guardamos en nuestra caché el estado actual inicial
+		_cambios_temporales_bloqueo[nombre_minijuego] = esta_bloqueado
+
+		# HBox para la fila del minijuego
+		var hbox_fila := HBoxContainer.new()
+		hbox_fila.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		hbox_fila.add_theme_constant_override("separation", 15)
+		
+		# Estilo de fondo sutil por fila
+		var p_fila := PanelContainer.new()
+		var st_fila := StyleBoxFlat.new()
+		st_fila.bg_color = Color(1, 1, 1, 0.03)
+		st_fila.set_corner_radius_all(4)
+		p_fila.add_theme_stylebox_override("panel", st_fila)
+		p_fila.add_child(hbox_fila)
+		grid_minijuegos.add_child(p_fila)
+
+		# A. Miniatura / Imagen del Minijuego
+		var tex_rect := TextureRect.new()
+		tex_rect.custom_minimum_size = Vector2(180, 180)
+		tex_rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		tex_rect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		
+		if ResourceLoader.exists(datos_recurso["icono"]):
+			tex_rect.texture = load(datos_recurso["icono"])
+		hbox_fila.add_child(tex_rect)
+
+		# Contenedor del Nombre del minijuego + Estado entre paréntesis
+		var vbox_texto := VBoxContainer.new()
+		vbox_texto.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		vbox_texto.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+		hbox_fila.add_child(vbox_texto)
+
+		var lbl_nombre_juego := Label.new()
+		lbl_nombre_juego.text = str(datos_recurso["titulo"])
+		_aplicar_estilo_texto_custom(lbl_nombre_juego, 35, false, Color.WHITE, Color.BLACK)
+		vbox_texto.add_child(lbl_nombre_juego)
+
+		var lbl_estado_parentesis := Label.new()
+		lbl_estado_parentesis.text = "(Activo)" if not esta_bloqueado else "(Inactivo)"
+		
+		# 🌟 SOLUCIÓN: Definimos la variable col_fuente localmente antes de usarla
+		var col_fuente := Color(0.12, 0.73, 0.28, 1.0) if not esta_bloqueado else Color(0.85, 0.18, 0.18, 1.0)
+		
+		_aplicar_estilo_texto_custom(lbl_estado_parentesis, 25, false, col_fuente, Color.BLACK)
+		lbl_estado_parentesis.modulate = Color(0.3, 0.85, 0.4) if not esta_bloqueado else Color(0.85, 0.3, 0.3)
+		vbox_texto.add_child(lbl_estado_parentesis)
+
+		# B. Interruptor CheckButton
+		var check_btn := CheckButton.new()
+		check_btn.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+		check_btn.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		
+		# Lógica Inversa: Activado significa acceso permitido (no bloqueado)
+		check_btn.button_pressed = not esta_bloqueado
+
+		# Aplicar icono propio si se suministró la ruta
+		if icono_check_personalizado:
+			check_btn.add_theme_icon_override("checked", icono_check_personalizado)
+			check_btn.add_theme_icon_override("unchecked", icono_check_personalizado2)
+
+		# Conectamos el cambio del interruptor a la caché de cambios locales temporales
+		check_btn.toggled.connect(func(esta_activo: bool):
+			var actual_bloqueado = not esta_activo
+			_cambios_temporales_bloqueo[nombre_minijuego] = actual_bloqueado
+			
+			# Modificar dinámicamente el texto aclaratorio del paréntesis al interactuar
+			lbl_estado_parentesis.text = "(Activo)" if esta_activo else "(Inactivo)"
+			lbl_estado_parentesis.modulate = Color(0.3, 0.85, 0.4) if esta_activo else Color(0.85, 0.3, 0.3)
+		)
+		hbox_fila.add_child(check_btn)
+
+	# Barra de botones inferiores (Guardar y Salir)
+	var hbox_botones := HBoxContainer.new()
+	hbox_botones.add_theme_constant_override("separation", 20)
+	hbox_botones.alignment = HBoxContainer.ALIGNMENT_CENTER
+	vbox_principal.add_child(hbox_botones)
+
+	# BOTÓN SALIR (Auto-guarda los cambios y destruye la interfaz flotante)
+	var btn_salir := Button.new()
+	btn_salir.text = "Guardar Permisos"
+	btn_salir.custom_minimum_size = Vector2(200, 42)
+	btn_salir.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+	btn_salir.pressed.connect(func():
+		_procesar_guardado_masivo_base_datos(alumno_id)
+		capa_fondo.queue_free() # Cierra el panel volviendo a la pantalla principal
+	)
+	hbox_botones.add_child(btn_salir)
+
+	# Finalmente añadimos la gran capa sobre el nodo principal de la escena actual
+	add_child(capa_fondo)
+
+func _aplicar_estilo_texto_custom(lbl: Label, tamano: int, es_titulo: bool, color_texto: Color, color_contorno: Color) -> void:
+	# Cargar fuente personalizada dinámica
+	if ResourceLoader.exists(RUTA_FUENTE_CUSTOM):
+		lbl.add_theme_font_override("font", load(RUTA_FUENTE_CUSTOM))
+	
+	lbl.add_theme_font_size_override("font_size", tamano)
+	
+	# Color de la letra y del contorno personalizados de manera dinámica
+	lbl.add_theme_color_override("font_color", color_texto)
+	lbl.add_theme_color_override("font_outline_color", color_contorno)
+	lbl.add_theme_constant_override("outline_size", 5 if es_titulo else 3)
+
+func _procesar_guardado_masivo_base_datos(alumno_id: int) -> void:
+	if db == null:
+		_set_estado_edicion("Fallo de conexión al guardar permisos.", Color(0.9, 0.2, 0.2))
+		return
+		
+	var error_detectado := false
+	
+	for minijuego in _cambios_temporales_bloqueo.keys():
+		var bloquear: bool = _cambios_temporales_bloqueo[minijuego]
+		var valor_bloqueo := 1 if bloquear else 0
+		
+		var query := "REPLACE INTO minijuegos_bloqueos (NU_USU, TX_MINIJUEGO, SW_BLOQUEADO) VALUES (%d, '%s', %d);" % [
+			alumno_id, SQLiteHelper.escape(minijuego), valor_bloqueo
+		]
+		
+		if not db.query(query):
+			error_detectado = true
+		else:
+			var accion_log = "deshabilito_minijuego:%s_para_alumno:%d" % [minijuego, alumno_id] if bloquear else "habilito_minijuego:%s_para_alumno:%d" % [minijuego, alumno_id]
+			SQLiteHelper.log_activity(db, "docente", _docente_nombre, accion_log)
+
+	if not error_detectado:
+		_set_estado_edicion("Todos los permisos de minijuegos aplicados con éxito.", Color(0.15, 0.6, 0.25))
+	else:
+		_set_estado_edicion("Errores parciales al guardar permisos en la Base de Datos.", Color(0.9, 0.2, 0.2))
 
 func _on_btn_guardar_edicion_pressed() -> void:
 	if _alumno_seleccionado_id <= 0:
@@ -529,3 +828,147 @@ func _on_btn_reporte_alumno_pressed() -> void:
 	ReporteDocente.guardar_y_abrir(html, archivo)
 	Alertas.mostrar_alerta("Reporte de %s generado (HTML + PDF)." % alumno_nombre, 2.0)
 	SQLiteHelper.log_activity(db, "docente", _docente_nombre, "genero_reporte_alumno:%d" % alumno_id)
+
+var _preguntas_temporales: Array = []
+var _numero_nivel_nuevo: int = 16 # Se podría consultar dinámicamente el último nivel existente
+
+func _agregar_boton_crear_nivel() -> void:
+	var navbar := get_node_or_null("MainPanel/Margin/VBox/NavBar")
+	if navbar:
+		var btn := Button.new()
+		btn.text = "CREAR NIVEL"
+		_estilizar_boton_reporte(btn) # Usamos tu estilo existente
+		btn.pressed.connect(_abrir_panel_creacion_nivel)
+		navbar.add_child(btn)
+	
+	var navbar2 := get_node_or_null("MainPanel/Margin/VBox/NavBar")
+	if navbar:
+		var btn_editar := Button.new()
+		btn_editar.text = "EDITAR NIVEL"
+		_estilizar_boton_reporte(btn_editar)
+		btn_editar.pressed.connect(_abrir_buscador_archivos)
+		navbar.add_child(btn_editar)
+
+func _abrir_panel_creacion_nivel(ruta_archivo: String = "") -> void:
+	if ruta_archivo == "": _preguntas_temporales = []
+	
+	# 1. Overlay y Panel (Código igual al anterior)
+	var overlay := ColorRect.new()
+	overlay.color = Color(0, 0, 0, 0.8)
+	overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	add_child(overlay)
+	
+	var center := CenterContainer.new()
+	center.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	overlay.add_child(center)
+	
+	var panel := PanelContainer.new()
+	panel.custom_minimum_size = Vector2(500, 700)
+	var estilo := StyleBoxFlat.new()
+	estilo.bg_color = Color(0.15, 0.15, 0.2)
+	estilo.set_border_width_all(2)
+	estilo.border_color = Color.WHITE
+	estilo.set_content_margin_all(20)
+	panel.add_theme_stylebox_override("panel", estilo)
+	center.add_child(panel)
+	
+	var vbox := VBoxContainer.new()
+	vbox.add_theme_constant_override("separation", 15)
+	panel.add_child(vbox)
+	
+	# Campos
+	var txt_pregunta := LineEdit.new(); txt_pregunta.placeholder_text = "Pregunta"
+	var txt_tipo := LineEdit.new(); txt_tipo.placeholder_text = "Tipo"
+	var opciones := []
+	for i in range(4):
+		var le := LineEdit.new()
+		le.placeholder_text = "Opción %d" % (i + 1)
+		vbox.add_child(le)
+		opciones.append(le)
+	
+	var opt_correcta := OptionButton.new()
+	for i in range(4): opt_correcta.add_item("Correcta: Opción %d" % (i + 1), i)
+	
+	var txt_expl := TextEdit.new(); txt_expl.custom_minimum_size.y = 60; txt_expl.placeholder_text = "Explicación"
+	var txt_dato := TextEdit.new(); txt_dato.custom_minimum_size.y = 60; txt_dato.placeholder_text = "Dato Curioso"
+	var lbl_contador := Label.new(); lbl_contador.text = "Preguntas guardadas: %d/15" % _preguntas_temporales.size()
+	
+	vbox.add_child(txt_pregunta); vbox.add_child(txt_tipo); vbox.add_child(opt_correcta)
+	vbox.add_child(txt_expl); vbox.add_child(txt_dato); vbox.add_child(lbl_contador)
+	
+	# Botones
+	var btn_guardar := Button.new(); btn_guardar.text = "Guardar Pregunta"
+	var btn_crear := Button.new(); btn_crear.text = "CREAR NIVEL"
+	var btn_cancelar := Button.new(); btn_cancelar.text = "Cancelar"
+	
+	vbox.add_child(btn_guardar)
+	vbox.add_child(btn_crear)
+	vbox.add_child(btn_cancelar)
+	
+	# --- LÓGICA DE BOTONES ---
+	
+	btn_cancelar.pressed.connect(func(): overlay.queue_free())
+	
+	btn_guardar.pressed.connect(func():
+		if _preguntas_temporales.size() < 15:
+			_preguntas_temporales.append({
+				"pregunta": txt_pregunta.text,
+				"tipo": txt_tipo.text,
+				"opciones": [opciones[0].text, opciones[1].text, opciones[2].text, opciones[3].text],
+				"correcta": opt_correcta.selected,
+				"explicacion": txt_expl.text,
+				"dato_curioso": txt_dato.text
+			})
+			lbl_contador.text = "Preguntas guardadas: %d/15" % _preguntas_temporales.size()
+			txt_pregunta.text = ""; for o in opciones: o.text = ""
+	)
+	
+	btn_crear.pressed.connect(func():
+		var path = ruta_archivo if ruta_archivo != "" else "res://Jsons/niveles creados por docentes/Preguntas_nivel_%d.json" % _numero_nivel_nuevo
+		var dir = DirAccess.open("res://")
+		if not dir.dir_exists("res://Jsons/niveles creados por docentes/"):
+			dir.make_dir_recursive("res://Jsons/niveles creados por docentes/")
+		
+		var file = FileAccess.open(path, FileAccess.WRITE)
+		file.store_string(JSON.stringify(_preguntas_temporales, "\t"))
+		file.close()
+		_mostrar_alerta("Nivel guardado correctamente en: " + path)
+		overlay.queue_free()
+	)
+
+func _mostrar_alerta(mensaje: String) -> void:
+	var alertas := get_node_or_null("/root/Alertas")
+	if alertas and alertas.has_method("mostrar_alerta"):
+		alertas.mostrar_alerta(mensaje, 1.5)
+	print(mensaje)
+
+var ruta_archivo: String = "" # Si está vacía, estamos creando; si tiene ruta, estamos editando
+
+func _abrir_buscador_archivos() -> void:
+	var file_dialog := FileDialog.new()
+	file_dialog.file_mode = FileDialog.FILE_MODE_OPEN_FILE
+	file_dialog.access = FileDialog.ACCESS_RESOURCES
+	file_dialog.filters = ["*.json; Archivos JSON de Niveles"]
+	file_dialog.current_dir = "res://Jsons/niveles creados por docentes/"
+	
+	file_dialog.file_selected.connect(func(path: String):
+		_cargar_json_para_edicion(path)
+	)
+	
+	add_child(file_dialog)
+	file_dialog.popup_centered(Vector2(600, 400))
+
+func _cargar_json_para_edicion(path: String) -> void:
+	var file = FileAccess.open(path, FileAccess.READ)
+	if file:
+		var json_text = file.get_as_text()
+		file.close()
+		
+		var json = JSON.new()
+		var error = json.parse(json_text)
+		if error == OK:
+			_preguntas_temporales = json.data
+			# Abrimos el panel de edición pasando los datos cargados
+			_abrir_panel_creacion_nivel(path) 
+		else:
+			_mostrar_alerta("Error al leer el archivo.")

@@ -14,9 +14,9 @@ const MONEDAS_POR_ESTRELLA := 50
 # --- NUEVO DICCIONARIO: TIEMPOS MÁXIMOS POR NIVEL (En segundos, max 8 minutos = 480s) ---
 const TIEMPOS_POR_NIVEL: Dictionary = {
 	1: 480.0,  # Nivel 1: 8 minutos
-	2: 450.0,  # Nivel 2: 7:30 minutos
+	2: 480.0,  # Nivel 2: 7:30 minutos
 	3: 480.0,  # Nivel 3: 8 minutos
-	4: 420.0,  # Nivel 4: 7 minutos
+	4: 480.0,  # Nivel 4: 7 minutos
 	5: 480.0,  # ... ajusta cada nivel como gustes sin pasarte de 480.0
 	6: 480.0,
 	7: 480.0,
