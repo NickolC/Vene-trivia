@@ -59,9 +59,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("14_8vcxa")
-minijuego_id = "verdadero_falso"
-minijuego_nombre = "Verdadero o Falso"
-scene_juego = "res://Scenes/minijuego_textual.tscn"
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1122689724]
 layout_mode = 1

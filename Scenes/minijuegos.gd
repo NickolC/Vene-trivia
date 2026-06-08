@@ -266,7 +266,7 @@ func _on_level_11_pressed() -> void:
 		
 	GlobalUsuario.minijuego_actual = "verdadero_falso"
 	GlobalUsuario.nivel_seleccionado = _nivel_minijuego_por_defecto()
-	Configuracion.change_scene_to_file("res://Scenes/minijuego_textual.tscn")
+	Configuracion.change_scene_to_file("res://selectorverdfal.tscn")
 
 func _on_level_12_pressed() -> void:
 	var boton := get_node("VBoxContainer/HBoxContainer3/Level 12") as Button
