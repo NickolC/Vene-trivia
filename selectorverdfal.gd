@@ -219,7 +219,7 @@ func _ir_al_nivel(n: int) -> void:
 		db = null 
 	
 	# Redirige a tu escena correspondiente (Sopa de letras)
-	Configuracion.change_scene_to_file("res://selectorverdfal.tscn")
+	Configuracion.change_scene_to_file("res://nivelverdfal.tscn")
 
 func _cargar_usuario_actual() -> void:
 	var query := ""
