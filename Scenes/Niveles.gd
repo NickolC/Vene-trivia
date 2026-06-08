@@ -79,6 +79,8 @@ var pose_pensativo = preload("res://GFX/pensativo.png")
 var indice_actual = 0
 var puntos = 0
 
+var tiempo_inicio: float = 0.0
+
 func decir_mensaje(texto: String, tiempo: float = 3.0):
 	label_dialogo.show() 
 	if label_dialogo.get_parent(): label_dialogo.get_parent().show()
@@ -152,6 +154,7 @@ func _ready() -> void:
 	_mostrar_ui_juego()
 	_actualizar_botones_comodines()
 	comenzar_nivel()
+	tiempo_inicio = Time.get_ticks_msec() # Inicia el cronómetro al cargar
 
 func _on_viewport_size_changed() -> void:
 	_ajustar_layout_pregunta()
@@ -536,8 +539,8 @@ func _on_respuesta_seleccionada(boton_presionado: Button):
 		
 		# Mostramos la explicación pedagógica del docente
 		var exp_pedagogica = preguntas_partida_actual[indice_actual]["explicacion"]
-		decir_mensaje("¡Correcto! " + exp_pedagogica, 6.0)
-		await get_tree().create_timer(3.0).timeout
+		decir_mensaje("¡Correcto! " + exp_pedagogica, 8.0)
+		await get_tree().create_timer(2.5).timeout
 	else:
 		print("Incorrecto...")
 		cambiar_color_boton(boton_presionado, Color.RED)
@@ -552,8 +555,8 @@ func _on_respuesta_seleccionada(boton_presionado: Button):
 		cambiar_pose(pose_preocupado)
 		
 		var exp_pedagogica = preguntas_partida_actual[indice_actual]["explicacion"]
-		decir_mensaje("¡Incorrecto! " + exp_pedagogica, 6.0)
-		await get_tree().create_timer(3.0).timeout
+		decir_mensaje("¡Incorrecto! " + exp_pedagogica, 8.0)
+		await get_tree().create_timer(2.5).timeout
 		
 	siguiente_pregunta()
 
@@ -601,6 +604,8 @@ func siguiente_pregunta():
 		mostrar_pregunta()
 
 func finalizar_nivel():
+	var tiempo_fin = Time.get_ticks_msec()
+	var tiempo_total_seg = (tiempo_fin - tiempo_inicio) / 1000.0
 	timer_pregunta.stop()
 	if indice_actual >= TOTAL_PREGUNTAS_RONDA:
 		_ocultar_ui_juego()
@@ -627,6 +632,7 @@ func finalizar_nivel():
 	var puntos_finales := (respuestas_correctas * 100) + bono_estrellas
 	
 	guardar_final_nivel(total_preguntas, respuestas_correctas, puntos_finales, estrellas_ganadas)
+	_guardar_tiempo_en_db(tiempo_total_seg)
 	mostrar_resultados(respuestas_correctas)
 
 func _calcular_estrellas(respuestas_correctas: int) -> int:
@@ -1050,3 +1056,10 @@ func _hay_siguiente_nivel() -> bool:
 func _existe_banco_nivel(nivel: int) -> bool:
 	var path := "res://Jsons/Preguntas_nivel_%d.json" % nivel
 	return FileAccess.file_exists(path)
+
+func _guardar_tiempo_en_db(segundos: float) -> void:
+	var tipo = "TRIVIA" # O detecta si es un minijuego basado en el nombre de la escena
+	var query = "REPLACE INTO tiempos_niveles (NU_USU, TX_TIPO_NIVEL, NU_NIVEL, TIEMPOTOTAL_SEGUNDOS) VALUES (%d, '%s', %d, %f);" % [
+		GlobalUsuario.usuario_actual_id, tipo, numero_de_nivel, segundos
+	]
+	db.query(query)

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bc7n4p8sw2jqe"]
 
-[ext_resource type="Script" uid="uid://bwgypbudyte4s" path="res://Scenes/menu_admin.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://bm083aeorigs" path="res://Scenes/menu_admin.gd" id="1_script"]
 [ext_resource type="Texture2D" uid="uid://dfyubnkjhps84" path="res://GFX/superadmin.png" id="2_bg"]
 [ext_resource type="FontFile" uid="uid://cn65q6b06tv8u" path="res://font/Minecraft.ttf" id="3_font"]
 [ext_resource type="Texture2D" uid="uid://bubif1mdng528" path="res://GFX/barra-docente.png" id="4_if1v6"]

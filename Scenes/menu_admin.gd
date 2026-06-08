@@ -61,11 +61,17 @@ var _cambios_temporales_bloqueo: Dictionary = {}
 
 func _ready() -> void:
 	db = SQLiteHelper.open_db_connection()
+	
+	# Damos un pequeño respiro al motor de SQLite para que libere bloqueos
+	await get_tree().process_frame 
+	SQLiteHelper.log_activity(db, "docente", _docente_nombre, "inicio_sesion")
+	
 	SQLiteHelper.ensure_alumnos_activo_column(db)
 	SQLiteHelper.ensure_minijuegos_table(db)
 	SQLiteHelper.ensure_logros_table(db)
 	
 	_asegurar_tabla_bloqueos_minijuegos()
+	_tiempoactividad()
 	
 	_docente_nombre = GlobalUsuario.nombre_alumno
 	SQLiteHelper.log_activity(db, "docente", _docente_nombre, "acceso_panel_docente")
@@ -140,7 +146,7 @@ func _set_vista(vista: int) -> void:
 		_refresh_rendimiento_detalle()
 
 func _setup_tree_gestion() -> void:
-	arbol_alumnos.columns = 8
+	arbol_alumnos.columns = 7
 	arbol_alumnos.column_titles_visible = true
 	arbol_alumnos.hide_root = true
 	arbol_alumnos.set_column_title(0, "Alumno")
@@ -150,10 +156,9 @@ func _setup_tree_gestion() -> void:
 	arbol_alumnos.set_column_title(4, "Puntos")
 	arbol_alumnos.set_column_title(5, "Estrellas")
 	arbol_alumnos.set_column_title(6, "Aciertos %")
-	arbol_alumnos.set_column_title(7, "Tiempo por actividad")
 
 func _setup_tree_rendimiento_general() -> void:
-	arbol_rendimiento_general.columns = 7
+	arbol_rendimiento_general.columns = 6
 	arbol_rendimiento_general.column_titles_visible = true
 	arbol_rendimiento_general.hide_root = true
 	arbol_rendimiento_general.set_column_title(0, "Alumno")
@@ -162,7 +167,6 @@ func _setup_tree_rendimiento_general() -> void:
 	arbol_rendimiento_general.set_column_title(3, "Estrellas minijuegos")
 	arbol_rendimiento_general.set_column_title(4, "Puntos niveles")
 	arbol_rendimiento_general.set_column_title(5, "Partidas")
-	arbol_rendimiento_general.set_column_title(6, "Tiempo por actividad")
 
 func _setup_tree_rendimiento_detalle() -> void:
 	arbol_rendimiento_detalle.columns = 6
@@ -352,11 +356,16 @@ func _refresh_rendimiento_detalle() -> void:
 		return
 
 	var nivel_id := selector_nivel_detalle.get_selected_id()
-	var where_nivel := "WHERE NU_USU = %d" % alumno_id
+	var where_nivel := "WHERE n.NU_USU = %d" % alumno_id
 	if nivel_id > 0:
-		where_nivel += " AND NU_NIVEL = %d" % nivel_id
+		where_nivel += " AND n.NU_NIVEL = %d" % nivel_id
 
-	var niveles_query := "SELECT NU_NIVEL, NU_ESTRELLAS, NU_PUNTOS, NU_RESPC, NU_PREG FROM niveles %s ORDER BY NU_NIVEL ASC;" % where_nivel
+	var niveles_query := """
+	SELECT n.NU_NIVEL, n.NU_ESTRELLAS, n.NU_PUNTOS, n.NU_RESPC, n.NU_PREG, t.TIEMPOTOTAL_SEGUNDOS 
+	FROM niveles n LEFT JOIN tiempos_niveles t ON n.NU_NIVEL = t.NU_NIVEL and n.NU_USU = t.NU_USU %s 
+	ORDER BY n.NU_NIVEL ASC;
+	""" % where_nivel
+	
 	if db.query(niveles_query) and not db.query_result.is_empty():
 		for row in db.query_result:
 			var item_nivel := arbol_rendimiento_detalle.create_item(root)
@@ -365,6 +374,14 @@ func _refresh_rendimiento_detalle() -> void:
 			item_nivel.set_text(2, "%d/3" % int(row.get("NU_ESTRELLAS", 0)))
 			item_nivel.set_text(3, str(int(row.get("NU_PUNTOS", 0))))
 			item_nivel.set_text(4, "%d/%d aciertos" % [int(row.get("NU_RESPC", 0)), int(row.get("NU_PREG", 0))])
+			# PROCESAR TIEMPO
+			var tiempo = row.get("TIEMPOTOTAL_SEGUNDOS", 0.0)
+			if tiempo != null and tiempo > 0:
+				var mins = int(tiempo) / 60
+				var secs = int(tiempo) % 60
+				item_nivel.set_text(5, "%02d:%02d" % [mins, secs])
+			else:
+				item_nivel.set_text(5, "--:--")
 	else:
 		var vacio_niveles := arbol_rendimiento_detalle.create_item(root)
 		vacio_niveles.set_text(0, "Nivel")
@@ -667,28 +684,30 @@ func _aplicar_estilo_texto_custom(lbl: Label, tamano: int, es_titulo: bool, colo
 
 func _procesar_guardado_masivo_base_datos(alumno_id: int) -> void:
 	if db == null:
-		_set_estado_edicion("Fallo de conexión al guardar permisos.", Color(0.9, 0.2, 0.2))
+		_set_estado_edicion("Fallo de conexión.", Color(0.9, 0.2, 0.2))
 		return
-		
+
+	# INICIAR TRANSACCIÓN
+	db.query("BEGIN TRANSACTION;")
 	var error_detectado := false
-	
 	for minijuego in _cambios_temporales_bloqueo.keys():
 		var bloquear: bool = _cambios_temporales_bloqueo[minijuego]
 		var valor_bloqueo := 1 if bloquear else 0
-		
 		var query := "REPLACE INTO minijuegos_bloqueos (NU_USU, TX_MINIJUEGO, SW_BLOQUEADO) VALUES (%d, '%s', %d);" % [
 			alumno_id, SQLiteHelper.escape(minijuego), valor_bloqueo
 		]
-		
 		if not db.query(query):
 			error_detectado = true
+			break # Salir si algo falla
 		else:
-			var accion_log = "deshabilito_minijuego:%s_para_alumno:%d" % [minijuego, alumno_id] if bloquear else "habilito_minijuego:%s_para_alumno:%d" % [minijuego, alumno_id]
-			SQLiteHelper.log_activity(db, "docente", _docente_nombre, accion_log)
+			var accion_log = "panel de minijuegos bloqueo" # Tu lógica de log aquí
 
+	# FINALIZAR TRANSACCIÓN
 	if not error_detectado:
+		db.query("COMMIT;")
 		_set_estado_edicion("Todos los permisos de minijuegos aplicados con éxito.", Color(0.15, 0.6, 0.25))
 	else:
+		db.query("ROLLBACK;")
 		_set_estado_edicion("Errores parciales al guardar permisos en la Base de Datos.", Color(0.9, 0.2, 0.2))
 
 func _on_btn_guardar_edicion_pressed() -> void:
@@ -707,6 +726,7 @@ func _on_btn_guardar_edicion_pressed() -> void:
 		_set_estado_edicion("Usuario y clave deben tener al menos 4 caracteres.", Color(0.9, 0.2, 0.2))
 		return
 
+	db.query("BEGIN TRANSACTION;")
 	var update_query := "UPDATE Alumnos SET NM_ALUMNO = '%s', CO_PSW = '%s' WHERE NU_USU = %d;" % [
 		SQLiteHelper.escape(nuevo_usuario),
 		SQLiteHelper.escape(nueva_clave),
@@ -714,11 +734,13 @@ func _on_btn_guardar_edicion_pressed() -> void:
 	]
 
 	if db.query(update_query):
+		db.query("COMMIT;")
 		SQLiteHelper.log_activity(db, "docente", _docente_nombre, "edito_alumno:%d" % _alumno_seleccionado_id)
 		_set_estado_edicion("Datos actualizados correctamente.", Color(0.15, 0.6, 0.25))
 		_refresh_gestion(filtro_input.text.strip_edges())
 		_refresh_selector_alumnos_detalle()
 	else:
+		db.query("ROLLBACK;")
 		_set_estado_edicion("No se pudo actualizar. Verifica que el usuario no exista.", Color(0.9, 0.2, 0.2))
 
 func _on_btn_actualizar_auditoria_pressed() -> void:
@@ -972,3 +994,15 @@ func _cargar_json_para_edicion(path: String) -> void:
 			_abrir_panel_creacion_nivel(path) 
 		else:
 			_mostrar_alerta("Error al leer el archivo.")
+
+func _tiempoactividad() -> void:
+	if db == null: return
+	var query := "CREATE TABLE IF NOT EXISTS tiempos_niveles (
+		NU_USU INTEGER NOT NULL,
+		TX_TIPO_NIVEL TEXT NOT NULL, -- 'trivia' o nombre del minijuego
+		NU_NIVEL INTEGER NOT NULL,
+		TIEMPO_TOTAL_SEGUNDOS REAL NOT NULL,
+		TX_FECHA_REGISTRO DATETIME DEFAULT CURRENT_TIMESTAMP,
+		PRIMARY KEY (NU_USU, TX_TIPO_NIVEL, NU_NIVEL)
+	)"
+	db.query(query)

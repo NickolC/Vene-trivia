@@ -49,6 +49,8 @@ static func ensure_niveles_table(database: SQLite) -> void:
 	if database == null:
 		return
 
+	# 1. Ejecutar en una transacción para mayor seguridad y velocidad
+	database.query("BEGIN TRANSACTION;")
 	var create_query := "CREATE TABLE IF NOT EXISTS niveles (" + \
 	"NU_NIVEL INTEGER NOT NULL, " + \
 	"NU_USU INTEGER NOT NULL, " + \
@@ -63,11 +65,20 @@ static func ensure_niveles_table(database: SQLite) -> void:
 	database.query(create_query)
 	database.query("CREATE INDEX IF NOT EXISTS idx_niveles_usu ON niveles (NU_USU);")
 
+	# 2. Verificar la existencia antes de intentar migrar
 	if _table_exists(database, "nivel_1"):
-		var migrate_query := "INSERT OR IGNORE INTO niveles " + \
-		"(NU_NIVEL, NU_USU, NM_ALUMNO, NU_PREG, NU_RESPC, NU_RESPI, NU_PUNTOS, NU_ESTRELLAS, SW_COM) " + \
-		"SELECT NU_NIVEL, NU_USU, NM_ALUMNO, NU_PREG, NU_RESPC, NU_RESPI, NU_PUNTOS, NU_ESTRELLAS, SW_COM FROM nivel_1;"
-		database.query(migrate_query)
+		# Verificar si la tabla niveles ya tiene datos para evitar errores de clave primaria
+		var count_query := "SELECT COUNT(*) as total FROM niveles;"
+		database.query(count_query)
+		if int(database.query_result[0]["total"]) == 0:
+			var migrate_query := "INSERT INTO niveles " + \
+			"(NU_NIVEL, NU_USU, NM_ALUMNO, NU_PREG, NU_RESPC, NU_RESPI, NU_PUNTOS, NU_ESTRELLAS, SW_COM) " + \
+			"SELECT NU_NIVEL, NU_USU, NM_ALUMNO, NU_PREG, NU_RESPC, NU_RESPI, NU_PUNTOS, NU_ESTRELLAS, SW_COM FROM nivel_1;"
+			database.query(migrate_query)
+			# Opcional: Eliminar la tabla vieja una vez migrada para evitar errores futuros
+			# database.query("DROP TABLE nivel_1;")
+	# 3. Cerrar transacción
+	database.query("COMMIT;")
 
 static func _table_exists(database: SQLite, table_name: String) -> bool:
 	var query := "SELECT name FROM sqlite_master WHERE type='table' AND name='%s' LIMIT 1;" % escape(table_name)
@@ -320,16 +331,21 @@ static func ensure_alumnos_minijuego_columns(database: SQLite) -> void:
 	if not "NU_NIVEL_MAX_MEMORIA" in columnas_existentes:
 		database.query("ALTER TABLE Alumnos ADD COLUMN NU_NIVEL_MAX_MEMORIA INTEGER DEFAULT 1;")
 
-static func log_activity(database: SQLite, tipo_usuario: String, usuario: String, accion: String) -> void:
+static func log_activity(database: SQLite, tipo_usuario: String, usuario: String, accion: String, es_parte_de_transaccion: bool = false) -> void:
 	if database == null:
 		return
-
-	ensure_activity_table(database)
-	var fecha := Time.get_datetime_string_from_system().replace("T", " ")
-	var query := "INSERT INTO actividad (TX_TIPO_USUARIO, TX_USUARIO, TX_ACCION, TX_FECHA) VALUES ('%s', '%s', '%s', '%s');" % [
-		escape(tipo_usuario),
-		escape(usuario),
-		escape(accion),
-		escape(fecha)
-	]
-	database.query(query)
+	# Solo iniciamos transacción si NO venimos de otra transacción
+	if not es_parte_de_transaccion:
+		database.query("BEGIN TRANSACTION;")
+		ensure_activity_table(database)
+		var fecha := Time.get_datetime_string_from_system().replace("T", " ")
+		var query := "INSERT INTO actividad (TX_TIPO_USUARIO, TX_USUARIO, TX_ACCION, TX_FECHA) VALUES ('%s', '%s', '%s', '%s');" % [
+			escape(tipo_usuario),
+			escape(usuario),
+			escape(accion),
+			escape(fecha)
+		]
+		database.query(query)
+	# Solo hacemos commit si nosotros iniciamos la transacción
+	if not es_parte_de_transaccion:
+		database.query("COMMIT;")

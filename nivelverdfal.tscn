@@ -1,6 +1,25 @@
 [gd_scene format=3 uid="uid://b30sv5ga2a5y2"]
 
 [ext_resource type="Texture2D" uid="uid://b3wfnscgwckc" path="res://GFX/mapa.png" id="1_2qtyb"]
+[ext_resource type="Texture2D" uid="uid://dy47jo5uk8" path="res://GFX/pausa.png" id="2_k1o6e"]
+[ext_resource type="Texture2D" uid="uid://c4hnb0dr6wir0" path="res://GFX/text preguntas.png" id="3_uq86x"]
+[ext_resource type="FontFile" uid="uid://2s1p28deo8oy" path="res://GFX/Minecraft.ttf" id="4_4j6h8"]
+[ext_resource type="Texture2D" uid="uid://cbvp25frb7syk" path="res://GFX/Text.png" id="5_30tw6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kmllm"]
+texture = ExtResource("3_uq86x")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f1iqs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ef3uu"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_prdr1"]
+texture = ExtResource("5_30tw6")
 
 [node name="Control" type="Control" unique_id=1872753710]
 layout_mode = 3
@@ -18,3 +37,138 @@ anchor_bottom = 0.9990001
 offset_right = -1779.1791
 offset_bottom = -940.01904
 texture = ExtResource("1_2qtyb")
+
+[node name="Buttonpausa" type="Button" parent="." unique_id=1856367173]
+process_mode = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.033
+anchor_top = 0.065000005
+anchor_right = 0.033
+anchor_bottom = 0.065000005
+offset_left = -61.125996
+offset_top = -58.83
+offset_right = 60.874004
+offset_bottom = 59.169994
+icon = ExtResource("2_k1o6e")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1729210213]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2" unique_id=1190700266]
+anchors_preset = -1
+anchor_left = 0.48800004
+anchor_top = 0.725
+anchor_right = 0.48800004
+anchor_bottom = 0.725
+offset_left = -526.1481
+offset_top = -160.72504
+offset_right = 527.8519
+offset_bottom = 161.27496
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer2/VBoxContainer" unique_id=88076744]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer2/VBoxContainer/CenterContainer" unique_id=1859074827]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_kmllm")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer2/VBoxContainer/CenterContainer/PanelContainer" unique_id=928345722]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="Label" type="Label" parent="CanvasLayer2/VBoxContainer/CenterContainer/PanelContainer/MarginContainer" unique_id=1992266214]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4j6h8")
+theme_override_font_sizes/font_size = 28
+text = "*"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer2/VBoxContainer" unique_id=812705785]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_f1iqs")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ef3uu")
+max_value = 10.0
+value = 1.0
+show_percentage = false
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer2/VBoxContainer" unique_id=1038884018]
+clip_contents = true
+layout_mode = 2
+columns = 2
+
+[node name="Button" type="Button" parent="CanvasLayer2/VBoxContainer/GridContainer" unique_id=334718971]
+clip_contents = true
+custom_minimum_size = Vector2(550, 100)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_4j6h8")
+button_mask = 0
+autowrap_trim_flags = 192
+clip_text = true
+icon_alignment = 1
+
+[node name="Button2" type="Button" parent="CanvasLayer2/VBoxContainer/GridContainer" unique_id=1181878100]
+clip_contents = true
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_4j6h8")
+button_mask = 0
+autowrap_trim_flags = 192
+clip_text = true
+icon_alignment = 1
+
+[node name="Timer" type="Timer" parent="CanvasLayer2/VBoxContainer" unique_id=738042574]
+process_mode = 1
+wait_time = 15.0
+one_shot = true
+
+[node name="capapersonaje" type="CanvasLayer" parent="." unique_id=1572352910]
+
+[node name="SpritePersonaje" type="TextureRect" parent="capapersonaje" unique_id=1322961318]
+anchors_preset = -1
+anchor_left = 0.26900002
+anchor_top = 0.042000003
+anchor_right = 0.26900002
+anchor_bottom = 0.042000003
+offset_left = -31.84903
+offset_top = -25.202003
+offset_right = 31.15097
+offset_bottom = 24.797997
+
+[node name="PanelContainer" type="PanelContainer" parent="capapersonaje" unique_id=377393638]
+offset_left = 1031.0
+offset_top = 112.0
+offset_right = 1555.0
+offset_bottom = 421.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_prdr1")
+
+[node name="MarginContainer" type="MarginContainer" parent="capapersonaje/PanelContainer" unique_id=2044966289]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 25
+
+[node name="Label" type="Label" parent="capapersonaje/PanelContainer/MarginContainer" unique_id=1624507453]
+z_index = 1
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4j6h8")
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
