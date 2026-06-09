@@ -4,6 +4,10 @@ const SQLiteHelper = preload("res://Scripts/sqlite_helper.gd")
 const RUTA_ESCENA_SELECCION := "res://Scenes/Minijuegos.tscn"
 const RUTA_DATOS_VERDFAL := "res://Data/minijuegos/verdadero_falso.json"
 
+# --- RUTAS DE RECURSOS VISUALES ---
+const RUTA_FUENTE = "res://font/Minecraft.ttf"
+const RUTA_FONDO_BTN = "res://GFX/boton-extras.png"
+
 @onready var capa_confirmacion = $confrimar
 @onready var menu_pausa = $Menupausa
 
@@ -16,19 +20,19 @@ const TIEMPO_TOTAL := 210.0 # 3:30 minutos en segundos
 const LIMITE_3_ESTRELLAS := 90.0 # 1:30 min
 const LIMITE_2_ESTRELLAS := 160.0 # 2:40 min
 
-# --- REFERENCIAS DE INTERFAZ DEL JUEGO ---
+# --- REFERENCIAS DE INTERFAZ DEL JUEGO (RUTAS CORREGIDAS) ---
 @onready var ui_juego = $CanvasLayer
 @onready var ui_juego2 = $CanvasLayer/CanvasLayer2
 @onready var contenedor_pregunta = $CanvasLayer/CanvasLayer2/VBoxContainer/CenterContainer
 @onready var fondo_pregunta = $CanvasLayer/CanvasLayer2/VBoxContainer/CenterContainer/PanelContainer
-@onready var label_pregunta =$CanvasLayer/CanvasLayer2/VBoxContainer/CenterContainer/PanelContainer/MarginContainer/Label
+@onready var label_pregunta = $CanvasLayer/CanvasLayer2/VBoxContainer/CenterContainer/PanelContainer/MarginContainer/Label
 @onready var btn_verdadero = $CanvasLayer/CanvasLayer2/VBoxContainer/GridContainer/Button
 @onready var btn_falso = $CanvasLayer/CanvasLayer2/VBoxContainer/GridContainer/Button2
-@onready var label_contador = $CanvasLayer/Label # Donde se muestra el tiempo (Ajusta la ruta si es diferente)
-@onready var label_progreso = $CanvasLayer/Label2 # Asegúrate de crear este Label para mostrar los aciertos
+@onready var label_contador = $CanvasLayer/Label
+@onready var label_progreso = $CanvasLayer/Label2
 
 # --- REFERENCIAS PARA LA PANTALLA DE RESULTADOS ---
-@onready var panel_resultados = $PantallaResultados
+@onready var panel_resultados =$PantallaResultados
 @onready var res_label_nivel = $PantallaResultados/Panel/nivel
 @onready var res_label_puntos = $PantallaResultados/Panel/puntos
 @onready var res_label_dinero = $PantallaResultados/Panel/dinero
@@ -76,8 +80,8 @@ func _ready() -> void:
 	tiempo_restante = TIEMPO_TOTAL
 	
 	# Ocultar todos los paneles inicialmente
-	ui_juego.hide()
-	ui_juego2.hide()
+	if ui_juego: ui_juego.hide()
+	if ui_juego2: ui_juego2.hide()
 	if panel_resultados: panel_resultados.hide()
 	if panel_dialogo: panel_dialogo.hide()
 	
@@ -88,19 +92,32 @@ func _ready() -> void:
 		Configuracion.change_scene_to_file("res://selectorverdaderofalso.tscn")
 		return
 
-	# Conectar los botones de opciones
-	if not btn_verdadero.pressed.is_connected(_on_btn_respuesta_pressed):
-		btn_verdadero.pressed.connect(_on_btn_respuesta_pressed.bind(true))
-	if not btn_falso.pressed.is_connected(_on_btn_respuesta_pressed):
-		btn_falso.pressed.connect(_on_btn_respuesta_pressed.bind(false))
-	
-	# Preparar textos de botones (opcional si ya los tienes seteados en el editor)
-	btn_verdadero.text = "VERDADERO"
-	btn_falso.text = "FALSO"
+	# Preparación visual y de interacciones
+	_ajustar_panel_pregunta()
+	_estilizar_y_conectar_botones()
 
 	_actualizar_cronometro()
 	_actualizar_progreso()
 	await _ejecutar_presentacion_inicial()
+	
+	_configurar_interactividad_botones()
+		# Conexión explícita por código (más seguro que el editor)
+	if btn_verdadero and not btn_verdadero.pressed.is_connected(_on_btn_verdadero_pressed):
+		btn_verdadero.pressed.connect(_on_btn_verdadero_pressed)
+		
+	if btn_falso and not btn_falso.pressed.is_connected(_on_btn_falso_pressed):
+		btn_falso.pressed.connect(_on_btn_falso_pressed)
+
+func _configurar_interactividad_botones() -> void:
+	var botones = [btn_verdadero, btn_falso]
+	for btn in botones:
+		if btn:
+			# CRÍTICO: Asegurar que el botón reciba el evento
+			btn.mouse_filter = Control.MOUSE_FILTER_STOP
+			# Forzar cursor de flecha estándar
+			btn.mouse_default_cursor_shape = Control.CURSOR_ARROW
+			# Asegurar que no sea transparente a clics
+			btn.flat = false 
 
 func _process(delta: float) -> void:
 	if juego_activo and not get_tree().paused:
@@ -109,9 +126,93 @@ func _process(delta: float) -> void:
 			tiempo_restante = 0.0
 			juego_activo = false
 			_actualizar_cronometro()
-			_procesar_fin_del_juego(true) # Finalizado por límite de tiempo
+			_procesar_fin_del_juego(true)
 		else:
 			_actualizar_cronometro()
+
+# --- ESTILIZACIÓN DE LA INTERFAZ DESDE CÓDIGO ---
+
+func _ajustar_panel_pregunta() -> void:
+	# Aseguramos que el contenedor de la pregunta se adapte perfectamente
+	if fondo_pregunta:
+		# Establecer un tamaño mínimo adecuado
+		fondo_pregunta.custom_minimum_size = Vector2(850, 220)
+		fondo_pregunta.size_flags_horizontal = Control.SIZE_EXPAND_FILL | Control.SIZE_SHRINK_CENTER
+		fondo_pregunta.size_flags_vertical = Control.SIZE_EXPAND_FILL | Control.SIZE_SHRINK_CENTER
+		
+		# CRÍTICO: Prevenir que el panel de la pregunta absorba clics dirigidos a otras áreas
+		fondo_pregunta.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		
+	if label_pregunta:
+		label_pregunta.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		label_pregunta.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		label_pregunta.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+		label_pregunta.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		label_pregunta.size_flags_vertical = Control.SIZE_EXPAND_FILL
+		
+		# CRÍTICO: Prevenir que el texto absorba clics
+		label_pregunta.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		
+		var mi_fuente = load(RUTA_FUENTE) if ResourceLoader.exists(RUTA_FUENTE) else null
+		if mi_fuente:
+			label_pregunta.add_theme_font_override("font", mi_fuente)
+		
+		# Texto grande para la pregunta
+		label_pregunta.add_theme_font_size_override("font_size", 34)
+
+func _estilizar_y_conectar_botones() -> void:
+	var mi_fuente = load(RUTA_FUENTE) if ResourceLoader.exists(RUTA_FUENTE) else null
+	var textura_btn = load(RUTA_FONDO_BTN) if ResourceLoader.exists(RUTA_FONDO_BTN) else null
+
+	var botones = [btn_verdadero, btn_falso]
+	for btn in botones:
+		if not btn: continue
+		
+		# 1. Limpiamos TODAS las conexiones viejas para evitar conflictos
+		for conn in btn.pressed.get_connections():
+			btn.pressed.disconnect(conn.callable)
+			
+		# 2. Forzamos a que el botón RECIBA LOS CLICS 
+		btn.mouse_filter = Control.MOUSE_FILTER_STOP
+		
+		# Mantener el cursor estándar del motor como pediste
+		btn.mouse_default_cursor_shape = Control.CURSOR_ARROW 
+		
+		btn.disabled = false
+		
+		# ¡CRUCIAL! Quitar flat = true para que el StyleBoxTexture (la imagen) se muestre siempre
+		btn.flat = false
+		
+		# 3. Aplicamos Fuente, Tamaño y Color Negro
+		if mi_fuente:
+			btn.add_theme_font_override("font", mi_fuente)
+			
+			btn.add_theme_font_size_override("font_size", 36)
+			btn.add_theme_color_override("font_color", Color.BLACK)
+			btn.add_theme_color_override("font_hover_color", Color(0.2, 0.2, 0.2))
+			btn.add_theme_color_override("font_pressed_color", Color.BLACK)
+			btn.add_theme_color_override("font_focus_color", Color.BLACK)
+		
+		# 4. APLICAMOS LA IMAGEN COMO BACKGROUND (StyleBox)
+			btn.icon = textura_btn
+			btn.icon_alignment = HORIZONTAL_ALIGNMENT_CENTER
+			btn.vertical_icon_alignment = VERTICAL_ALIGNMENT_CENTER
+			btn.flat = true
+			btn.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+			btn.custom_minimum_size = Vector2(800, 155) 
+			btn.expand_icon = true
+			btn.add_theme_font_override("font", mi_fuente)
+		
+	# 5. Conexiones limpias
+	if btn_verdadero:
+		btn_verdadero.text = "VERDADERO"
+		btn_verdadero.pressed.connect(_on_btn_verdadero_pressed)
+	
+	if btn_falso:
+		btn_falso.text = "FALSO"
+		btn_falso.pressed.connect(_on_btn_falso_pressed)
+
+# --- ACTUALIZACIÓN DE TEXTOS Y DATOS ---
 
 func _actualizar_cronometro() -> void:
 	if label_contador == null: return
@@ -124,7 +225,6 @@ func _actualizar_progreso() -> void:
 	if label_progreso:
 		label_progreso.text = "Aciertos: %d / %d" % [aciertos, datos_nivel.size()]
 
-# --- CARGA DEL JSON ---
 func _cargar_datos_nivel() -> void:
 	datos_nivel.clear()
 	if not FileAccess.file_exists(RUTA_DATOS_VERDFAL): return
@@ -185,37 +285,40 @@ func _ejecutar_presentacion_inicial() -> void:
 
 # --- FLUJO DEL JUEGO ---
 func _iniciar_nivel() -> void:
-	ui_juego.show() # Mostrar interfaz del juego
-	ui_juego2.show() # Mostrar interfaz del juego
+	if ui_juego2: ui_juego2.show()
+	if ui_juego: ui_juego.show() 
 	juego_activo = true
 	_mostrar_pregunta()
 
 func _mostrar_pregunta() -> void:
-	btn_verdadero.modulate = Color.WHITE
-	btn_falso.modulate = Color.WHITE
+	if btn_verdadero: btn_verdadero.modulate = Color.WHITE
+	if btn_falso: btn_falso.modulate = Color.WHITE
 	
 	if pregunta_actual < datos_nivel.size():
 		var p = datos_nivel[pregunta_actual]
-		label_pregunta.text = p.get("texto", "Error cargando la pregunta")
+		if label_pregunta:
+			label_pregunta.text = p.get("texto", "Error cargando la pregunta")
 		bloqueando_clicks = false
 	else:
-		_procesar_fin_del_juego(false) # Terminó respondiendo todas
+		_procesar_fin_del_juego(false) 
 
-func _on_btn_respuesta_pressed(es_verdadero: bool) -> void:
+func _on_btn_verdadero_pressed() -> void:
+	_procesar_respuesta(true, btn_verdadero)
+
+func _on_btn_falso_pressed() -> void:
+	_procesar_respuesta(false, btn_falso)
+
+func _procesar_respuesta(es_verdadero: bool, btn_presionado: Button) -> void:
 	if bloqueando_clicks or not juego_activo: return
-	bloqueando_clicks = true # Evitar doble click
+	bloqueando_clicks = true 
 	
 	var p = datos_nivel[pregunta_actual]
 	var respuesta_correcta: bool = p.get("respuesta", false)
 	var explicacion: String = p.get("explicacion", "")
 	
-	# Efecto visual en el botón seleccionado
-	if es_verdadero:
-		btn_verdadero.modulate = Color.YELLOW
-	else:
-		btn_falso.modulate = Color.YELLOW
+	if btn_presionado:
+		btn_presionado.modulate = Color.YELLOW
 		
-	# Pausar cronómetro brevemente mientras lee la explicación (Opcional)
 	var tiempo_guardado = juego_activo
 	juego_activo = false 
 	
@@ -229,29 +332,30 @@ func _on_btn_respuesta_pressed(es_verdadero: bool) -> void:
 		await decir_mensaje("¡Oh no! " + explicacion, 4.0)
 	
 	pregunta_actual += 1
-	juego_activo = tiempo_guardado # Reanudar el tiempo
+	juego_activo = tiempo_guardado
 	
 	if tiempo_restante > 0:
 		_mostrar_pregunta()
 	else:
 		_procesar_fin_del_juego(true)
+	
+	await get_tree().create_timer(1.0).timeout
+	bloqueando_clicks = false
 
 # --- PROCESAMIENTO FINAL ---
 func _procesar_fin_del_juego(por_tiempo_agotado: bool) -> void:
 	juego_activo = false
-	ui_juego.hide() # Ocultamos todo el tablero de juego
+	if ui_juego: ui_juego.hide()
+	if ui_juego2: ui_juego2.hide()
 	
 	var tiempo_transcurrido = TIEMPO_TOTAL - tiempo_restante
 	var estrellas = 0
-	
-	# Calcular ratio de completado si el tiempo se agota
 	var ratio_aciertos: float = float(aciertos) / float(maxi(1, datos_nivel.size()))
 	
 	if por_tiempo_agotado:
 		cambiar_pose(pose_preocupado)
 		await decir_mensaje("¡Se te acabó el tiempo!", 3.0)
 		
-		# Si se acabó el tiempo, evaluamos en base a su esfuerzo (las que sí pudo responder bien)
 		if ratio_aciertos >= 0.8:
 			estrellas = 2
 			await decir_mensaje("¡Pero respondiste la mayoría bien! Buen trabajo.", 3.0)
@@ -262,13 +366,11 @@ func _procesar_fin_del_juego(por_tiempo_agotado: bool) -> void:
 			estrellas = 0
 			await decir_mensaje("Faltó velocidad y precisión. ¡Volvamos a intentarlo!", 3.5)
 	else:
-		# Finalizó respondiendo todo antes del tiempo
-		if ratio_aciertos < 0.6: # Penalización si responde a lo loco (Menos del 60% bien)
+		if ratio_aciertos < 0.6: 
 			estrellas = 0
 			cambiar_pose(pose_pensativo)
 			await decir_mensaje("Terminaste rápido, pero tuviste demasiados errores. ¡Lee con más calma!", 4.0)
 		else:
-			# Completó con buen puntaje, evaluamos por TIEMPO RÁPIDO
 			if tiempo_transcurrido <= LIMITE_3_ESTRELLAS:
 				estrellas = 3
 				cambiar_pose(pose_feliz)
@@ -282,7 +384,6 @@ func _procesar_fin_del_juego(por_tiempo_agotado: bool) -> void:
 				cambiar_pose(pose_normal)
 				await decir_mensaje("¡Meta superada! Completaste el nivel dentro del límite. ¡1 ESTRELLA!", 3.5)
 
-	# Cálculo de recompensas
 	var puntos : int = estrellas * RECOMPENSA_BASE_PUNTOS + (aciertos * 10)
 	var monedas : int = estrellas * MONEDAS_POR_ESTRELLA
 	
@@ -319,7 +420,6 @@ func _on_btn_menu_minijuegos_pressed() -> void:
 
 func _on_btn_selector_verdaderofalso_pressed() -> void:
 	_cerrar_db_seguro()
-	# Asegúrate de colocar aquí el nombre exacto de tu escena selectora de niveles Verdadero/Falso
 	Configuracion.change_scene_to_file("res://selectorverdaderofalso.tscn")
 
 func _on_btn_siguiente_nivel_pressed() -> void:
@@ -337,11 +437,7 @@ func _guardar_progreso_db(pts: int, estrellas: int) -> void:
 	if estrellas == 0 or db == null: return
 	var id_user = GlobalUsuario.usuario_actual_id
 	var usr_name = SQLiteHelper.escape(GlobalUsuario.nombre_alumno)
-	var time_str = Time.get_datetime_string_from_system().replace("T", " ")
 	
-	var completado_juego := 1 if estrellas == 3 else 0
-	
-	# Usando tabla genérica de minijuegos como en columnas, adaptar según la que prefieras
 	db.query("INSERT INTO minijuegos_resultados (NU_USU, NM_ALUMNO, NM_MINIJUEGO, NU_PUNTOS, NU_ESTRELLAS, NU_INTENTOS) VALUES (%d, '%s', 'verdadero_falso_%d', %d, %d, 1);" % [id_user, usr_name, numero_de_nivel, pts, estrellas])
 	
 	var prox := numero_de_nivel + 1
@@ -354,28 +450,20 @@ func _guardar_progreso_db(pts: int, estrellas: int) -> void:
 	if not db.query_result.is_empty(): dinero_total = int(db.query_result[0].get("NU_DINERO", 0))
 	Logros.evaluar_post_nivel(estrellas, pts, dinero_total)
 
-# Detectar la tecla de escape o el botón de pausa
+# --- SISTEMA DE PAUSAS Y CONFIRMACIONES ---
 func _input(event):
 	if event.is_action_pressed("ui_cancel") and not capa_confirmacion.visible:
 		gestionar_pausa()
 
 func _on_boton_pausa_visual_pressed():
-	# El botón visual hace lo mismo que la tecla ESC
 	gestionar_pausa()
 
 func gestionar_pausa():
-	var nuevo_estado_pausa = !get_tree().paused # Invierte el estado actual del motor
+	var nuevo_estado_pausa = !get_tree().paused 
 	get_tree().paused = nuevo_estado_pausa
-	
-	if menu_pausa:
-		menu_pausa.visible = nuevo_estado_pausa
-		
-	# Si quitamos la pausa (regresamos al juego), nos aseguramos de limpiar las ventanas emergentes
+	if menu_pausa: menu_pausa.visible = nuevo_estado_pausa
 	if not nuevo_estado_pausa:
-		if capa_confirmacion:
-			capa_confirmacion.hide()
-
-# --- BOTONES DEL MENÚ ---
+		if capa_confirmacion: capa_confirmacion.hide()
 
 func _on_continuar_pressed():
 	gestionar_pausa()
@@ -384,45 +472,31 @@ func _on_continuar_pressed():
 const ESCENA_OPCIONES = preload("res://Opcionesnivel.tscn")
 
 func _on_opciones_pressed():
-	# 1. Ocultamos momentáneamente los botones del menú de pausa principal
 	$Menupausa/CenterContainer.visible = false
-	# 2. Creamos una instancia de la escena de opciones
 	var opciones_instancia = ESCENA_OPCIONES.instantiate()
-	# 3. Le asignamos un nombre único
 	opciones_instancia.name = "MenuOpcionesDinamico"
-	
-	# ¡IMPORTANTE!: Forzar a la nueva ventana de opciones a procesar en pausa
 	opciones_instancia.process_mode = Node.PROCESS_MODE_ALWAYS
-	# 4. La añadimos como hija del CanvasLayer de pausa
 	$Menupausa.add_child(opciones_instancia)
 
-
 func _on_salir_pressed():
-	# Mostrar el cuadro de confirmación antes de salir
 	capa_confirmacion.show()
 	
 func _on_confirmar_no_quedarme_pressed():
 	capa_confirmacion.hide()
 
-# --- LÓGICA DEL MENÚ DE PAUSA ---
-
 func _on_boton_salir_pressed():
-	# Al darle a "Salir" en el primer menú, ocultamos la pausa y mostramos confirmación
 	menu_pausa.hide()
 	capa_confirmacion.show()
-
-# --- LÓGICA DE LA CAPA DE CONFIRMACIÓN ---
 
 func _on_boton_si_confirmar_salir_pressed():
 	get_tree().paused = false
 	GlobalUsuario.nivel_seleccionado = numero_de_nivel
-	get_tree().change_scene_to_file("res://selectorsopaletras.tscn")
+	get_tree().change_scene_to_file("res://selectorverdaderofalso.tscn")
 
 func _on_boton_no_cancelar_pressed():
-	# Si se arrepiente, cerramos la confirmación y VOLVEMOS al menú de pausa
 	capa_confirmacion.hide()
 	menu_pausa.show()
 
 func _on_button_4_pressed() -> void:
 	get_tree().paused = false
-	get_tree().change_scene_to_file("res://selectorsopaletras.tscn")
+	get_tree().change_scene_to_file("res://selectorverdaderofalso.tscn")

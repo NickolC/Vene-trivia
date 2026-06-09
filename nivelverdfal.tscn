@@ -25,6 +25,12 @@ texture_margin_top = 15.0
 texture_margin_right = 15.0
 texture_margin_bottom = 15.0
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e8ur4"]
+texture = ExtResource("8_e8ur4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8lo3o"]
+texture = ExtResource("8_e8ur4")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2hho4"]
 texture = ExtResource("5_30tw6")
 texture_margin_left = 20.0
@@ -163,6 +169,7 @@ clip_contents = true
 custom_minimum_size = Vector2(550, 100)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_4j6h8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_e8ur4")
 button_mask = 0
 autowrap_trim_flags = 192
 clip_text = true
@@ -173,6 +180,7 @@ clip_contents = true
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_4j6h8")
+theme_override_styles/normal = SubResource("StyleBoxTexture_8lo3o")
 button_mask = 0
 autowrap_trim_flags = 192
 clip_text = true
@@ -511,5 +519,5 @@ layout_mode = 2
 icon = ExtResource("14_4hydx")
 flat = true
 
-[connection signal="pressed" from="CanvasLayer/CanvasLayer2/VBoxContainer/GridContainer/Button" to="." method="_on_btn_respuesta_pressed"]
-[connection signal="pressed" from="CanvasLayer/CanvasLayer2/VBoxContainer/GridContainer/Button2" to="." method="_on_btn_respuesta_pressed"]
+[connection signal="pressed" from="CanvasLayer/CanvasLayer2/VBoxContainer/GridContainer/Button" to="." method="_on_btn_verdadero_pressed"]
+[connection signal="pressed" from="CanvasLayer/CanvasLayer2/VBoxContainer/GridContainer/Button2" to="." method="_on_btn_falso_pressed"]
