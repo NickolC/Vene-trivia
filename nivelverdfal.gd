@@ -130,80 +130,84 @@ func _process(delta: float) -> void:
 		else:
 			_actualizar_cronometro()
 
-# --- ESTILIZACIÓN DE LA INTERFAZ DESDE CÓDIGO ---
+# ==========================================================
+# 🛠️ ESTILIZACIÓN Y DESBLOQUEO VISUAL
+# ==========================================================
 
 func _ajustar_panel_pregunta() -> void:
-	# Aseguramos que el contenedor de la pregunta se adapte perfectamente
+	# 1. Ajustar Panel contenedor para que domine el CenterContainer
 	if fondo_pregunta:
-		# Establecer un tamaño mínimo adecuado
-		fondo_pregunta.custom_minimum_size = Vector2(850, 220)
-		fondo_pregunta.size_flags_horizontal = Control.SIZE_EXPAND_FILL | Control.SIZE_SHRINK_CENTER
-		fondo_pregunta.size_flags_vertical = Control.SIZE_EXPAND_FILL | Control.SIZE_SHRINK_CENTER
-		
-		# CRÍTICO: Prevenir que el panel de la pregunta absorba clics dirigidos a otras áreas
+		fondo_pregunta.custom_minimum_size = Vector2(850, 100) # Tamaño fijo amplio
+		# CRÍTICO: Prevenir que este panel tape los clics de los botones
 		fondo_pregunta.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		
+	# 2. Ajustar Label de texto
 	if label_pregunta:
+		label_pregunta.custom_minimum_size = Vector2(200, 80)
 		label_pregunta.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		label_pregunta.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		label_pregunta.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-		label_pregunta.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		label_pregunta.size_flags_vertical = Control.SIZE_EXPAND_FILL
 		
-		# CRÍTICO: Prevenir que el texto absorba clics
+		# CRÍTICO: El texto tampoco debe tapar clics
 		label_pregunta.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		
-		var mi_fuente = load(RUTA_FUENTE) if ResourceLoader.exists(RUTA_FUENTE) else null
-		if mi_fuente:
-			label_pregunta.add_theme_font_override("font", mi_fuente)
+		if ResourceLoader.exists(RUTA_FUENTE):
+			label_pregunta.add_theme_font_override("font", load(RUTA_FUENTE))
 		
-		# Texto grande para la pregunta
-		label_pregunta.add_theme_font_size_override("font_size", 34)
+		# Letra grande
+		label_pregunta.add_theme_font_size_override("font_size", 38)
 
 func _estilizar_y_conectar_botones() -> void:
 	var mi_fuente = load(RUTA_FUENTE) if ResourceLoader.exists(RUTA_FUENTE) else null
-	var textura_btn = load(RUTA_FONDO_BTN) if ResourceLoader.exists(RUTA_FONDO_BTN) else null
+
+	var st = StyleBoxTexture.new()
+	st.texture = load("res://GFX/boton-extras.png")
+	# Agregamos padding para que la letra no quede pegada a los bordes de la imagen
+	st.content_margin_left = 20
+	st.content_margin_right = 20
+	st.content_margin_top = 10
+	st.content_margin_bottom = 10
 
 	var botones = [btn_verdadero, btn_falso]
 	for btn in botones:
 		if not btn: continue
 		
-		# 1. Limpiamos TODAS las conexiones viejas para evitar conflictos
+		# Limpiar conexiones fantasma del editor
 		for conn in btn.pressed.get_connections():
 			btn.pressed.disconnect(conn.callable)
 			
-		# 2. Forzamos a que el botón RECIBA LOS CLICS 
+		# CRÍTICO: Obligar al botón a atrapar el ratón
 		btn.mouse_filter = Control.MOUSE_FILTER_STOP
 		
-		# Mantener el cursor estándar del motor como pediste
+		# MANTENER CURSOR ORIGINAL (Evita que cambie o se esconda)
 		btn.mouse_default_cursor_shape = Control.CURSOR_ARROW 
 		
-		btn.disabled = false
-		
-		# ¡CRUCIAL! Quitar flat = true para que el StyleBoxTexture (la imagen) se muestre siempre
+		# IMPORTANTE: Desactivar 'flat' y el icono normal, usaremos el StyleBox
 		btn.flat = false
+		btn.icon = null 
 		
-		# 3. Aplicamos Fuente, Tamaño y Color Negro
+		if tex_fondo:
+			btn.add_theme_stylebox_override("normal", st)
+			btn.add_theme_stylebox_override("hover", st)
+			btn.add_theme_stylebox_override("pressed", st)
+			btn.add_theme_stylebox_override("focus", st)
+			
+		# Texto: Fuente, Tamaño GRANDE y Color NEGRO
 		if mi_fuente:
 			btn.add_theme_font_override("font", mi_fuente)
 			
-			btn.add_theme_font_size_override("font_size", 36)
-			btn.add_theme_color_override("font_color", Color.BLACK)
-			btn.add_theme_color_override("font_hover_color", Color(0.2, 0.2, 0.2))
-			btn.add_theme_color_override("font_pressed_color", Color.BLACK)
-			btn.add_theme_color_override("font_focus_color", Color.BLACK)
+		btn.add_theme_font_size_override("font_size", 42)
+		btn.add_theme_color_override("font_color", Color.BLACK)
+		btn.add_theme_color_override("font_hover_color", Color(0.2, 0.2, 0.2)) # Oscurece un poco al pasar el mouse
+		btn.add_theme_color_override("font_pressed_color", Color.BLACK)
+		btn.add_theme_color_override("font_focus_color", Color.BLACK)
 		
-		# 4. APLICAMOS LA IMAGEN COMO BACKGROUND (StyleBox)
-			btn.icon = textura_btn
-			btn.icon_alignment = HORIZONTAL_ALIGNMENT_CENTER
-			btn.vertical_icon_alignment = VERTICAL_ALIGNMENT_CENTER
-			btn.flat = true
-			btn.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-			btn.custom_minimum_size = Vector2(800, 155) 
-			btn.expand_icon = true
-			btn.add_theme_font_override("font", mi_fuente)
+		btn.custom_minimum_size = Vector2(600, 140)
 		
-	# 5. Conexiones limpias
+		# Elevamos el botón para que quede por encima de capas invisibles
+		btn.z_index = 100
+		
+	# Conexiones limpias por código
 	if btn_verdadero:
 		btn_verdadero.text = "VERDADERO"
 		btn_verdadero.pressed.connect(_on_btn_verdadero_pressed)
@@ -211,6 +215,21 @@ func _estilizar_y_conectar_botones() -> void:
 	if btn_falso:
 		btn_falso.text = "FALSO"
 		btn_falso.pressed.connect(_on_btn_falso_pressed)
+
+# ==========================================================
+# 🛡️ RESPALDO GLOBAL DE CLICS (FALLBACK ANTI-BLOQUEOS)
+# ==========================================================
+func _unhandled_input(event: InputEvent) -> void:
+	if not juego_activo or bloqueando_clicks: return
+	
+	# Si un panel invisible está tapando tus botones, este código fuerza el clic de todas formas
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if btn_verdadero and btn_verdadero.get_global_rect().has_point(event.global_position):
+			get_viewport().set_input_as_handled()
+			_on_btn_verdadero_pressed()
+		elif btn_falso and btn_falso.get_global_rect().has_point(event.global_position):
+			get_viewport().set_input_as_handled()
+			_on_btn_falso_pressed()
 
 # --- ACTUALIZACIÓN DE TEXTOS Y DATOS ---
 

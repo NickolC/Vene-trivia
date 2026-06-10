@@ -127,22 +127,26 @@ anchor_top = 0.725
 anchor_right = 0.48800004
 anchor_bottom = 0.725
 offset_left = -526.1481
-offset_top = -190.72504
+offset_top = -151.72504
 offset_right = 527.8519
-offset_bottom = 131.27496
+offset_bottom = 170.27496
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 alignment = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/CanvasLayer2/VBoxContainer" unique_id=88076744]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/CanvasLayer2/VBoxContainer/CenterContainer" unique_id=1859074827]
 layout_mode = 2
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_kmllm")
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CanvasLayer2/VBoxContainer/CenterContainer/PanelContainer" unique_id=928345722]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
@@ -162,6 +166,7 @@ autowrap_mode = 3
 [node name="GridContainer" type="GridContainer" parent="CanvasLayer/CanvasLayer2/VBoxContainer" unique_id=1038884018]
 clip_contents = true
 layout_mode = 2
+mouse_filter = 2
 columns = 2
 
 [node name="Button" type="Button" parent="CanvasLayer/CanvasLayer2/VBoxContainer/GridContainer" unique_id=334718971]
