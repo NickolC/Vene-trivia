@@ -238,7 +238,7 @@ func _on_level_1_pressed() -> void:
 		return
 		
 	GlobalUsuario.nivel_seleccionado = _nivel_minijuego_por_defecto()
-	Configuracion.change_scene_to_file("res://scenes/selectorsopaletras.tscn")
+	Configuracion.change_scene_to_file("res://selectorsopaletras.tscn")
 
 func _on_level_2_pressed() -> void:
 	var boton := get_node("VBoxContainer/HBoxContainer/Level 2") as Button

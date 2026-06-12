@@ -9,6 +9,9 @@ enum VistaDocente {
 	RENDIMIENTO
 }
 
+var _btn_reporte_general: Button
+var _btn_reporte_alumno: Button
+
 const LISTA_MINIJUEGOS = ["Sopa de Letras", "Memoria", "RelacionColumnas", "VerdaderoFalso", "CompletarFrases", "Ahorcado"]
 
 const MAPEO_RECURSOS_MINIJUEGOS := {
@@ -84,10 +87,8 @@ func _ready() -> void:
 	_agregar_botones_reporte()
 	_agregar_boton_crear_nivel()
 
-	if not arbol_alumnos.item_selected.is_connected(_on_arbol_alumnos_item_selected):
-		arbol_alumnos.item_selected.connect(_on_arbol_alumnos_item_selected)
-		# CAMBIO: Usar arbol_alumnos en lugar de $TablaAlumnos
-		arbol_alumnos.item_activated.connect(_on_alumno_seleccionado)
+	arbol_alumnos.item_selected.connect(_on_arbol_alumnos_item_selected) # Un clic
+	arbol_alumnos.item_activated.connect(_on_alumnos_seleccionado) # Doble clic
 
 
 func _on_alumno_seleccionado() -> void:
@@ -136,6 +137,16 @@ func _set_vista(vista: int) -> void:
 	btn_canvas_gestion.disabled = es_gestion
 	btn_canvas_auditoria.disabled = es_auditoria
 	btn_canvas_rendimiento.disabled = es_rendimiento
+
+	# --- CONTROL DE VISIBILIDAD DE REPORTES ---
+	# Reporte General: visible ÚNICAMENTE en Gestión
+	if _btn_reporte_general:
+		_btn_reporte_general.visible = es_gestion
+
+	# Reporte Alumno: visible ÚNICAMENTE en Rendimiento
+	if _btn_reporte_alumno:
+		_btn_reporte_alumno.visible = es_rendimiento
+	# ------------------------------------------
 
 	if es_gestion:
 		_refresh_gestion(filtro_input.text.strip_edges())
@@ -472,7 +483,25 @@ func _on_arbol_alumnos_item_selected() -> void:
 	if btn_abrir:
 		btn_abrir.disabled = false
 		
-	_crear_y_mostrar_panel_bloqueos(alumno_id)
+	# LÍNEA ELIMINADA / COMENTADA: 
+	# Al quitar esta línea, el panel ya no se abrirá con un solo clic.
+	# _crear_y_mostrar_panel_bloqueos(alumno_id)
+
+func _on_alumnos_seleccionado() -> void:
+	# 1. Obtenemos el elemento utilizando la variable real 'arbol_alumnos'
+	var item: TreeItem = arbol_alumnos.get_selected()
+	if not item:
+		return
+	
+	# 2. Extraemos el ID del alumno desde sus metadatos
+	var alumno_id: int = int(item.get_metadata(0)) 
+	
+	# 3. Validamos que el ID sea correcto y llamamos al panel
+	if alumno_id > 0:
+		# ESTA ES LA QUE SE EJECUTA CON EL DOBLE CLIC
+		_crear_y_mostrar_panel_bloqueos(alumno_id)
+	else:
+		print("Error: No se pudo recuperar un ID de alumno válido de esta fila.")
 
 func _reconfigurar_contenedor_lateral_para_boton_emergente() -> void:
 	if contenedor_bloqueos_minijuegos == null: return
@@ -765,20 +794,21 @@ func _set_estado_edicion(mensaje: String, color: Color) -> void:
 
 func _agregar_botones_reporte() -> void:
 	var navbar := get_node_or_null("MainPanel/Margin/VBox/NavBar")
-	if navbar == null:
-		return
-
-	var btn_general := Button.new()
-	btn_general.text = "REPORTE GENERAL"
-	_estilizar_boton_reporte(btn_general)
-	btn_general.pressed.connect(_on_btn_reporte_general_pressed)
-	navbar.add_child(btn_general)
-
-	var btn_alumno := Button.new()
-	btn_alumno.text = "REPORTE ALUMNO"
-	_estilizar_boton_reporte(btn_alumno)
-	btn_alumno.pressed.connect(_on_btn_reporte_alumno_pressed)
-	navbar.add_child(btn_alumno)
+	if navbar == null: return
+	
+	# Guardamos la referencia en la variable global del script
+	_btn_reporte_general = Button.new()
+	_btn_reporte_general.text = "REPORTE GENERAL"
+	_estilizar_boton_reporte(_btn_reporte_general)
+	_btn_reporte_general.pressed.connect(_on_btn_reporte_general_pressed)
+	navbar.add_child(_btn_reporte_general)
+	
+	# Guardamos la referencia en la variable global del script
+	_btn_reporte_alumno = Button.new()
+	_btn_reporte_alumno.text = "REPORTE ALUMNO"
+	_estilizar_boton_reporte(_btn_reporte_alumno)
+	_btn_reporte_alumno.pressed.connect(_on_btn_reporte_alumno_pressed)
+	navbar.add_child(_btn_reporte_alumno)
 
 func _estilizar_boton_reporte(btn: Button) -> void:
 	btn.clip_contents = true
@@ -874,7 +904,7 @@ func _agregar_boton_crear_nivel() -> void:
 func _abrir_panel_creacion_nivel(ruta_archivo: String = "") -> void:
 	if ruta_archivo == "": _preguntas_temporales = []
 	
-	# 1. Overlay y Panel (Código igual al anterior)
+	# 1. Overlay y Panel
 	var overlay := ColorRect.new()
 	overlay.color = Color(0, 0, 0, 0.8)
 	overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -900,8 +930,14 @@ func _abrir_panel_creacion_nivel(ruta_archivo: String = "") -> void:
 	
 	# Campos
 	var txt_pregunta := LineEdit.new(); txt_pregunta.placeholder_text = "Pregunta"
-	var txt_tipo := LineEdit.new(); txt_tipo.placeholder_text = "Tipo"
-	var opciones := []
+	
+	var txt_tipo := Label.new() 
+	txt_tipo.text = "Tipo de pregunta: Texto"
+	txt_tipo.add_theme_color_override("font_color", Color(0.6, 0.6, 0.6))
+	# Se eliminó txt_tipo.editable = false porque los Label no lo necesitan ni lo soportan
+	
+	# SOLUCIÓN AL ERROR: Declarar explícitamente que es un arreglo de LineEdit
+	var opciones: Array[LineEdit] = []
 	for i in range(4):
 		var le := LineEdit.new()
 		le.placeholder_text = "Opción %d" % (i + 1)
@@ -912,7 +948,7 @@ func _abrir_panel_creacion_nivel(ruta_archivo: String = "") -> void:
 	for i in range(4): opt_correcta.add_item("Correcta: Opción %d" % (i + 1), i)
 	
 	var txt_expl := TextEdit.new(); txt_expl.custom_minimum_size.y = 60; txt_expl.placeholder_text = "Explicación"
-	var txt_dato := TextEdit.new(); txt_dato.custom_minimum_size.y = 60; txt_dato.placeholder_text = "Dato Curioso"
+	var txt_dato := TextEdit.new(); txt_dato.custom_minimum_size.y = 60; txt_dato.placeholder_text = "Dato Curioso (Opcional)"
 	var lbl_contador := Label.new(); lbl_contador.text = "Preguntas guardadas: %d/15" % _preguntas_temporales.size()
 	
 	vbox.add_child(txt_pregunta); vbox.add_child(txt_tipo); vbox.add_child(opt_correcta)
@@ -921,6 +957,8 @@ func _abrir_panel_creacion_nivel(ruta_archivo: String = "") -> void:
 	# Botones
 	var btn_guardar := Button.new(); btn_guardar.text = "Guardar Pregunta"
 	var btn_crear := Button.new(); btn_crear.text = "CREAR NIVEL"
+	if btn_crear:
+		btn_crear.disabled = _preguntas_temporales.size() < 15
 	var btn_cancelar := Button.new(); btn_cancelar.text = "Cancelar"
 	
 	vbox.add_child(btn_guardar)
@@ -932,17 +970,36 @@ func _abrir_panel_creacion_nivel(ruta_archivo: String = "") -> void:
 	btn_cancelar.pressed.connect(func(): overlay.queue_free())
 	
 	btn_guardar.pressed.connect(func():
+		# Como el arreglo ya es Array[LineEdit], Godot sabe que '.text' es un String válido
+		var preg := txt_pregunta.text.strip_edges()
+		var op0 := opciones[0].text.strip_edges()
+		var op1 := opciones[1].text.strip_edges()
+		var op2 := opciones[2].text.strip_edges()
+		var op3 := opciones[3].text.strip_edges()
+		var expl := txt_expl.text.strip_edges()
+		
+		if preg == "" or op0 == "" or op1 == "" or op2 == "" or op3 == "" or expl == "":
+			_mostrar_alerta("Debes llenar todos los campos requeridos para guardar.")
+			return 
+		
 		if _preguntas_temporales.size() < 15:
 			_preguntas_temporales.append({
-				"pregunta": txt_pregunta.text,
-				"tipo": txt_tipo.text,
-				"opciones": [opciones[0].text, opciones[1].text, opciones[2].text, opciones[3].text],
+				"pregunta": preg,
+				"tipo": "Texto", 
+				"opciones": [op0, op1, op2, op3],
 				"correcta": opt_correcta.selected,
-				"explicacion": txt_expl.text,
-				"dato_curioso": txt_dato.text
+				"explicacion": expl,
+				"dato_curioso": txt_dato.text.strip_edges()
 			})
 			lbl_contador.text = "Preguntas guardadas: %d/15" % _preguntas_temporales.size()
-			txt_pregunta.text = ""; for o in opciones: o.text = ""
+			
+			txt_pregunta.text = ""
+			for o in opciones: o.text = ""
+			txt_expl.text = ""
+			txt_dato.text = ""
+			
+			if _preguntas_temporales.size() >= 15:
+				btn_crear.disabled = false
 	)
 	
 	btn_crear.pressed.connect(func():
@@ -954,7 +1011,7 @@ func _abrir_panel_creacion_nivel(ruta_archivo: String = "") -> void:
 		var file = FileAccess.open(path, FileAccess.WRITE)
 		file.store_string(JSON.stringify(_preguntas_temporales, "\t"))
 		file.close()
-		_mostrar_alerta("Nivel guardado correctamente en: " + path)
+		_mostrar_alerta("Nivel guardado correctamente.")
 		overlay.queue_free()
 	)
 

@@ -71,6 +71,12 @@ var bloqueando_clicks: bool = false
 var db: SQLite
 var numero_de_nivel: int = 1
 
+var aviso_3_estrellas_dado: bool = false
+var aviso_2_estrellas_dado: bool = false
+const TIEMPO_TOTAL := 480.0
+const LIMITE_3_ESTRELLAS := 300.0
+const LIMITE_2_ESTRELLAS := 180.0 
+
 func _ready() -> void:
 	self.process_mode = Node.PROCESS_MODE_ALWAYS
 	
@@ -126,6 +132,17 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if juego_activo and not get_tree().paused:
 		tiempo_restante -= delta
+		
+		# --- NUEVA VALIDACIÓN EN TIEMPO REAL ---
+		var tiempo_transcurrido = TIEMPO_TOTAL - tiempo_restante
+		
+		if tiempo_transcurrido > LIMITE_3_ESTRELLAS and not aviso_3_estrellas_dado:
+			aviso_3_estrellas_dado = true
+			_mostrar_aviso_tiempo(3)
+		elif tiempo_transcurrido > LIMITE_2_ESTRELLAS and not aviso_2_estrellas_dado:
+			aviso_2_estrellas_dado = true
+			_mostrar_aviso_tiempo(2)
+		# ---------------------------------------
 		if tiempo_restante <= 0.0:
 			tiempo_restante = 0.0
 			juego_activo = false
@@ -133,6 +150,11 @@ func _process(delta: float) -> void:
 			_procesar_fin_del_juego(true)
 		else:
 			_actualizar_interfaz_cronometro()
+
+func _mostrar_aviso_tiempo(estrellas_perdidas: int) -> void:
+	cambiar_pose(pose_preocupado)
+	await decir_mensaje("¡Oh no, has perdido la oportunidad de conseguir " + str(estrellas_perdidas) + " estrellas!", 3.0)
+	cambiar_pose(pose_normal)
 
 func _actualizar_interfaz_cronometro() -> void:
 	if label_cronometro == null: return
@@ -181,6 +203,7 @@ func _ejecutar_presentacion_inicial() -> void:
 	await decir_mensaje("Recuerda que tienes un tiempo máximo de 8 minutos para encontrar todas las parejas.", 3.0)
 	cambiar_pose(pose_feliz)
 	await decir_mensaje("¡Las barajas están listas! ¡Mucha suerte!", 2.0)
+	cambiar_pose(pose_normal)
 	if label_dialogo and label_dialogo.get_parent():
 		label_dialogo.get_parent().hide()
 
@@ -239,6 +262,7 @@ func _comprobar_pareja() -> void:
 			_procesar_fin_del_juego(false)
 		else:
 			await decir_mensaje(mensaje_correcto, 2.2)
+			cambiar_pose(pose_normal)
 	else:
 		_errores += 1
 		primera_carta.marcar_error()
@@ -254,6 +278,7 @@ func _comprobar_pareja() -> void:
 			3: mensaje_incorrecto = "¡Fallaste!"
 			
 		await decir_mensaje(mensaje_incorrecto, 2.5)
+		cambiar_pose(pose_normal)
 		
 		if is_instance_valid(primera_carta): primera_carta.mostrar_boca_abajo()
 		if is_instance_valid(segunda_carta): segunda_carta.mostrar_boca_abajo()
@@ -284,26 +309,29 @@ func _procesar_fin_del_juego(por_tiempo_agotado: bool) -> void:
 			await decir_mensaje("¡Increíble! ¡Tiempo récord! Has resuelto toda la memoria en menos de 3 minutos. ¡Eres un maestro!", 4.0)
 		elif tiempo_seg <= 300.0: # Menos de 5 minutos
 			estrellas = 2
-			cambiar_pose(pose_feliz)
+			cambiar_pose(pose_pensativo)
 			await decir_mensaje("¡Excelente trabajo! Completaste el juego de memoria en un tiempo medio muy bueno. ¡Sigue así!", 3.5)
 		else: # Menos de 8 minutos
 			estrellas = 1
-			cambiar_pose(pose_normal)
+			cambiar_pose(pose_pensativo)
 			await decir_mensaje("¡Bien hecho! Lograste resolver la memoria, pero necesitas más práctica para mejorar tu velocidad.", 3.5)
 	else:
+		cambiar_pose(pose_preocupado)
+		await decir_mensaje("¡Oh no, has perdido la oportunidad de conseguir estrellas por tiempo, evaluare si conseguiste en base a lo respondido!", 3.0)
+		cambiar_pose(pose_normal)
 		var ratio_completado : float = float(parejas_correctas_totales) / float(maxi(1, total_parejas_nivel))
 		if ratio_completado >= 0.75:
 			estrellas = 2
 			cambiar_pose(pose_pensativo)
-			await decir_mensaje("¡El tiempo se agotó! Pero lograste encontrar la gran mayoría de las parejas. ¡Buen esfuerzo!", 4.0)
+			await decir_mensaje("¡Lograste encontrar la gran mayoría de las parejas. ¡Buen esfuerzo!", 4.0)
 		elif ratio_completado >= 0.25:
 			estrellas = 1
-			cambiar_pose(pose_preocupado)
-			await decir_mensaje("¡Tiempo fuera! Lograste emparejar una cantidad mínima de cartas, nos faltó velocidad y memoria.", 4.0)
+			cambiar_pose(pose_pensativo)
+			await decir_mensaje("¡Lograste emparejar una cantidad mínima de cartas, nos faltó velocidad y memoria.", 4.0)
 		else:
 			estrellas = 0
 			cambiar_pose(pose_preocupado)
-			await decir_mensaje("¡Se acabó el tiempo! No lograste completar suficientes relaciones. ¡Debemos repasar y volver a intentarlo!", 4.0)
+			await decir_mensaje("¡No lograste completar suficientes relaciones. ¡Debemos repasar y volver a intentarlo!", 4.0)
 
 	var puntos := estrellas * RECOMPENSA_BASE_PUNTOS + maxi(0, 50 - _errores * 4)
 	var monedas := estrellas * MONEDAS_POR_ESTRELLA

@@ -103,6 +103,13 @@ const BANCO_PALABRAS_NIVELES: Dictionary = {
 	15: ["MUNDO", "VENEZUELA", "TALENTO", "PAIS", "BANDERA", "ORQUESTA", "EXITO"]
 }
 
+const TIEMPO_TOTAL := 480.0
+const LIMITE_3_ESTRELLAS := 300.0
+const LIMITE_2_ESTRELLAS := 180.0 
+
+var aviso_3_estrellas_dado: bool = false
+var aviso_2_estrellas_dado: bool = false
+
 var banco_palabras_niveles_runtime: Dictionary = BANCO_PALABRAS_NIVELES.duplicate(true)
 
 func _ready() -> void:
@@ -134,7 +141,7 @@ func _ready() -> void:
 	cambiar_pose(pose_pensativo)
 	var min_texto := int(tiempo_maximo_nivel) / 60
 	await decir_mensaje("Tienes un límite de %d minutos para hallar las palabras ocultas. ¡A por ello!" % min_texto, 3.0)
-	
+	cambiar_pose(pose_normal)
 	label_dialogo.get_parent().hide()
 	_mostrar_ui_juego()
 	
@@ -153,14 +160,30 @@ func _ready() -> void:
 	juego_activo = true
 
 func _process(delta: float) -> void:
-	if juego_activo:
+	if juego_activo and not get_tree().paused:
 		tiempo_restante -= delta
+		
+		# --- NUEVA VALIDACIÓN EN TIEMPO REAL ---
+		var tiempo_transcurrido = TIEMPO_TOTAL - tiempo_restante
+		
+		if tiempo_transcurrido > LIMITE_3_ESTRELLAS and not aviso_3_estrellas_dado:
+			aviso_3_estrellas_dado = true
+			_mostrar_aviso_tiempo(3)
+		elif tiempo_transcurrido > LIMITE_2_ESTRELLAS and not aviso_2_estrellas_dado:
+			aviso_2_estrellas_dado = true
+			_mostrar_aviso_tiempo(2)
+		# ---------------------------------------
 		_actualizar_cronometro_visual()
 		
 		if tiempo_restante <= 0:
 			tiempo_restante = 0
 			juego_activo = false
 			finalizar_nivel()
+
+func _mostrar_aviso_tiempo(estrellas_perdidas: int) -> void:
+	cambiar_pose(pose_preocupado)
+	await decir_mensaje("¡Oh no, has perdido la oportunidad de conseguir " + str(estrellas_perdidas) + " estrellas!", 3.0)
+	cambiar_pose(pose_normal)
 
 # --- NUEVA FUNCIÓN: Formatea y pinta el tiempo en la pantalla (MM:SS) ---
 func _actualizar_cronometro_visual() -> void:
@@ -462,7 +485,7 @@ func _on_btn_selector_pressed() -> void:
 
 func _on_btn_menu_pressed() -> void:
 	get_tree().paused = false
-	get_tree().change_scene_to_file("res://Scenes/menu-alumno.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Minijuegos.tscn")
 
 func crear_lista_palabras_visual() -> void:
 	for hijo in lista_palabras_ui.get_children(): hijo.queue_free()

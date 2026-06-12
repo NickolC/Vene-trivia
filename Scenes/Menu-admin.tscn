@@ -470,6 +470,7 @@ expand_icon = true
 [connection signal="pressed" from="MainPanel/Margin/VBox/NavBar/BtnCanvasRendimiento" to="." method="_on_btn_canvas_rendimiento_pressed"]
 [connection signal="text_submitted" from="MainPanel/Margin/VBox/FiltroBar/FiltroInput" to="." method="_on_filtro_text_submitted"]
 [connection signal="pressed" from="MainPanel/Margin/VBox/FiltroBar/BtnActualizar" to="." method="_on_btn_actualizar_pressed"]
+[connection signal="item_activated" from="MainPanel/Margin/VBox/ArbolAlumnos" to="." method="_on_alumnos_seleccionado"]
 [connection signal="item_selected" from="MainPanel/Margin/VBox/ArbolAlumnos" to="." method="_on_arbol_alumnos_item_selected"]
 [connection signal="pressed" from="MainPanel/Margin/VBox/PanelEdicion/Margin/EdicionVBox/BtnGuardarEdicion" to="." method="_on_btn_guardar_edicion_pressed"]
 [connection signal="pressed" from="MainPanel/Margin/VBox/CanvasAuditoria/Margin/AuditoriaVBox/BtnActualizarAuditoria" to="." method="_on_btn_actualizar_auditoria_pressed"]

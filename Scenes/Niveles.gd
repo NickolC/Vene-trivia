@@ -540,7 +540,7 @@ func _on_respuesta_seleccionada(boton_presionado: Button):
 		# Mostramos la explicación pedagógica del docente
 		var exp_pedagogica = preguntas_partida_actual[indice_actual]["explicacion"]
 		decir_mensaje("¡Correcto! " + exp_pedagogica, 8.0)
-		await get_tree().create_timer(2.5).timeout
+		await get_tree().create_timer(3.5).timeout
 	else:
 		print("Incorrecto...")
 		cambiar_color_boton(boton_presionado, Color.RED)
@@ -556,7 +556,7 @@ func _on_respuesta_seleccionada(boton_presionado: Button):
 		
 		var exp_pedagogica = preguntas_partida_actual[indice_actual]["explicacion"]
 		decir_mensaje("¡Incorrecto! " + exp_pedagogica, 8.0)
-		await get_tree().create_timer(2.5).timeout
+		await get_tree().create_timer(3.0).timeout
 		
 	siguiente_pregunta()
 

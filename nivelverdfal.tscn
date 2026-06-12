@@ -1,10 +1,22 @@
 [gd_scene format=3 uid="uid://b30sv5ga2a5y2"]
 
 [ext_resource type="Texture2D" uid="uid://b3wfnscgwckc" path="res://GFX/mapa.png" id="1_2qtyb"]
+[ext_resource type="Script" uid="uid://bielxc6t26dxo" path="res://nivelverdfal.gd" id="1_uq86x"]
 [ext_resource type="Texture2D" uid="uid://dy47jo5uk8" path="res://GFX/pausa.png" id="2_k1o6e"]
+[ext_resource type="FontFile" uid="uid://cn65q6b06tv8u" path="res://font/Minecraft.ttf" id="3_4j6h8"]
 [ext_resource type="Texture2D" uid="uid://c4hnb0dr6wir0" path="res://GFX/text preguntas.png" id="3_uq86x"]
 [ext_resource type="FontFile" uid="uid://2s1p28deo8oy" path="res://GFX/Minecraft.ttf" id="4_4j6h8"]
 [ext_resource type="Texture2D" uid="uid://cbvp25frb7syk" path="res://GFX/Text.png" id="5_30tw6"]
+[ext_resource type="Texture2D" uid="uid://bwci2gcq7wc8u" path="res://GFX/boton-extras.png" id="8_e8ur4"]
+[ext_resource type="Texture2D" uid="uid://cldrkor4ic7f4" path="res://GFX/prev de niveles.png" id="9_8lo3o"]
+[ext_resource type="Texture2D" uid="uid://bjmn2uaofj2dl" path="res://GFX/estrella vacia.png" id="10_va0xi"]
+[ext_resource type="Texture2D" uid="uid://bltu0nyjlegap" path="res://GFX/reintentar.png" id="11_hqunj"]
+[ext_resource type="Texture2D" uid="uid://dqc410iysu5x" path="res://GFX/menu principal.png" id="12_2obsc"]
+[ext_resource type="Texture2D" uid="uid://cu52xaf7patgc" path="res://GFX/selector de nivel.png" id="13_j6j2y"]
+[ext_resource type="Texture2D" uid="uid://bg00f8gp2cclh" path="res://GFX/siguiente.png" id="14_4hydx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_prdr1"]
+texture = ExtResource("5_30tw6")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kmllm"]
 texture = ExtResource("3_uq86x")
@@ -13,13 +25,18 @@ texture_margin_top = 15.0
 texture_margin_right = 15.0
 texture_margin_bottom = 15.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f1iqs"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ef3uu"]
-bg_color = Color(1, 1, 1, 1)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_prdr1"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2hho4"]
 texture = ExtResource("5_30tw6")
+texture_margin_left = 20.0
+texture_margin_top = 10.0
+texture_margin_right = 20.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f8jps"]
+load_path = "res://.godot/imported/boton-extras.png-4c47e73584a05b804668f9947712cb02.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x0ctp"]
+texture = ExtResource("9_8lo3o")
 
 [node name="Control" type="Control" unique_id=1872753710]
 layout_mode = 3
@@ -28,6 +45,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_uq86x")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1302530671]
 layout_mode = 1
@@ -38,103 +56,6 @@ offset_right = -1779.1791
 offset_bottom = -940.01904
 texture = ExtResource("1_2qtyb")
 
-[node name="Buttonpausa" type="Button" parent="." unique_id=1856367173]
-process_mode = 3
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.033
-anchor_top = 0.065000005
-anchor_right = 0.033
-anchor_bottom = 0.065000005
-offset_left = -61.125996
-offset_top = -58.83
-offset_right = 60.874004
-offset_bottom = 59.169994
-icon = ExtResource("2_k1o6e")
-flat = true
-icon_alignment = 1
-expand_icon = true
-
-[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1729210213]
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2" unique_id=1190700266]
-anchors_preset = -1
-anchor_left = 0.48800004
-anchor_top = 0.725
-anchor_right = 0.48800004
-anchor_bottom = 0.725
-offset_left = -526.1481
-offset_top = -160.72504
-offset_right = 527.8519
-offset_bottom = 161.27496
-grow_horizontal = 2
-grow_vertical = 2
-alignment = 1
-
-[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer2/VBoxContainer" unique_id=88076744]
-layout_mode = 2
-
-[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer2/VBoxContainer/CenterContainer" unique_id=1859074827]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_kmllm")
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer2/VBoxContainer/CenterContainer/PanelContainer" unique_id=928345722]
-layout_mode = 2
-theme_override_constants/margin_left = 15
-theme_override_constants/margin_top = 15
-theme_override_constants/margin_right = 15
-theme_override_constants/margin_bottom = 15
-
-[node name="Label" type="Label" parent="CanvasLayer2/VBoxContainer/CenterContainer/PanelContainer/MarginContainer" unique_id=1992266214]
-custom_minimum_size = Vector2(200, 40)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_4j6h8")
-theme_override_font_sizes/font_size = 28
-text = "*"
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-
-[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer2/VBoxContainer" unique_id=812705785]
-custom_minimum_size = Vector2(0, 10)
-layout_mode = 2
-theme_override_styles/background = SubResource("StyleBoxFlat_f1iqs")
-theme_override_styles/fill = SubResource("StyleBoxFlat_ef3uu")
-max_value = 10.0
-value = 1.0
-show_percentage = false
-
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer2/VBoxContainer" unique_id=1038884018]
-clip_contents = true
-layout_mode = 2
-columns = 2
-
-[node name="Button" type="Button" parent="CanvasLayer2/VBoxContainer/GridContainer" unique_id=334718971]
-clip_contents = true
-custom_minimum_size = Vector2(550, 100)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("4_4j6h8")
-button_mask = 0
-autowrap_trim_flags = 192
-clip_text = true
-icon_alignment = 1
-
-[node name="Button2" type="Button" parent="CanvasLayer2/VBoxContainer/GridContainer" unique_id=1181878100]
-clip_contents = true
-custom_minimum_size = Vector2(500, 0)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("4_4j6h8")
-button_mask = 0
-autowrap_trim_flags = 192
-clip_text = true
-icon_alignment = 1
-
-[node name="Timer" type="Timer" parent="CanvasLayer2/VBoxContainer" unique_id=738042574]
-process_mode = 1
-wait_time = 15.0
-one_shot = true
-
 [node name="capapersonaje" type="CanvasLayer" parent="." unique_id=1572352910]
 
 [node name="SpritePersonaje" type="TextureRect" parent="capapersonaje" unique_id=1322961318]
@@ -143,16 +64,16 @@ anchor_left = 0.26900002
 anchor_top = 0.042000003
 anchor_right = 0.26900002
 anchor_bottom = 0.042000003
-offset_left = -31.84903
+offset_left = -89.84903
 offset_top = -25.202003
-offset_right = 31.15097
+offset_right = -26.84903
 offset_bottom = 24.797997
 
 [node name="PanelContainer" type="PanelContainer" parent="capapersonaje" unique_id=377393638]
-offset_left = 1031.0
-offset_top = 112.0
-offset_right = 1555.0
-offset_bottom = 421.0
+offset_left = 861.0
+offset_top = 131.0
+offset_right = 1357.0
+offset_bottom = 391.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_prdr1")
 
 [node name="MarginContainer" type="MarginContainer" parent="capapersonaje/PanelContainer" unique_id=2044966289]
@@ -172,3 +93,441 @@ theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=47565040]
+
+[node name="Buttonpausa" type="Button" parent="CanvasLayer" unique_id=1856367173]
+process_mode = 3
+anchors_preset = -1
+anchor_left = 0.033
+anchor_top = 0.065000005
+anchor_right = 0.033
+anchor_bottom = 0.065000005
+offset_left = -61.125996
+offset_top = -58.83
+offset_right = 60.874004
+offset_bottom = 59.169994
+icon = ExtResource("2_k1o6e")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="CanvasLayer" unique_id=1729210213]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CanvasLayer2" unique_id=1190700266]
+anchors_preset = -1
+anchor_left = 0.48800004
+anchor_top = 0.725
+anchor_right = 0.48800004
+anchor_bottom = 0.725
+offset_left = -526.1481
+offset_top = -151.72504
+offset_right = 527.8519
+offset_bottom = 170.27496
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/CanvasLayer2/VBoxContainer" unique_id=88076744]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/CanvasLayer2/VBoxContainer/CenterContainer" unique_id=1859074827]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_kmllm")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CanvasLayer2/VBoxContainer/CenterContainer/PanelContainer" unique_id=928345722]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="Label" type="Label" parent="CanvasLayer/CanvasLayer2/VBoxContainer/CenterContainer/PanelContainer/MarginContainer" unique_id=1992266214]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4j6h8")
+theme_override_font_sizes/font_size = 28
+text = "*"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label" type="Label" parent="CanvasLayer/CanvasLayer2/VBoxContainer" unique_id=247535346]
+layout_mode = 2
+theme_override_font_sizes/font_size = 5
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/CanvasLayer2/VBoxContainer" unique_id=1038884018]
+clip_contents = true
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/h_separation = 15
+columns = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/CanvasLayer2/VBoxContainer/GridContainer" unique_id=334718971]
+clip_contents = true
+custom_minimum_size = Vector2(550, 100)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_4j6h8")
+button_mask = 0
+autowrap_trim_flags = 192
+clip_text = true
+icon_alignment = 1
+
+[node name="Button2" type="Button" parent="CanvasLayer/CanvasLayer2/VBoxContainer/GridContainer" unique_id=1181878100]
+clip_contents = true
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_4j6h8")
+button_mask = 0
+autowrap_trim_flags = 192
+clip_text = true
+icon_alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1077187245]
+offset_left = 139.0
+offset_top = 31.0
+offset_right = 287.0
+offset_bottom = 110.0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_4j6h8")
+theme_override_font_sizes/font_size = 45
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=179772471]
+offset_left = 1533.0
+offset_top = 34.0
+offset_right = 1891.0
+offset_bottom = 70.0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_4j6h8")
+theme_override_font_sizes/font_size = 35
+text = "*"
+
+[node name="Menupausa" type="CanvasLayer" parent="." unique_id=2063412133]
+process_mode = 3
+layer = 20
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Menupausa" unique_id=1710413889]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7764706)
+
+[node name="CenterContainer" type="CenterContainer" parent="Menupausa" unique_id=896904579]
+offset_left = 481.00003
+offset_top = 92.0
+offset_right = 1018.0
+offset_bottom = 643.0
+scale = Vector2(1.5, 1.5)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menupausa/CenterContainer" unique_id=1471458175]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Label" type="Label" parent="Menupausa/CenterContainer/VBoxContainer" unique_id=394059096]
+custom_minimum_size = Vector2(5, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_4j6h8")
+theme_override_font_sizes/font_size = 55
+text = "JUEGO EN PAUSA"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="Button" type="Button" parent="Menupausa/CenterContainer/VBoxContainer" unique_id=1030942868]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4j6h8")
+theme_override_font_sizes/font_size = 45
+text = "Reanudar"
+icon = ExtResource("8_e8ur4")
+flat = true
+autowrap_mode = 1
+autowrap_trim_flags = 192
+icon_alignment = 1
+
+[node name="Button2" type="Button" parent="Menupausa/CenterContainer/VBoxContainer" unique_id=1892494614]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4j6h8")
+theme_override_font_sizes/font_size = 45
+text = "Opciones"
+icon = ExtResource("8_e8ur4")
+flat = true
+autowrap_mode = 1
+autowrap_trim_flags = 192
+icon_alignment = 1
+
+[node name="Button3" type="Button" parent="Menupausa/CenterContainer/VBoxContainer" unique_id=1197685342]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4j6h8")
+theme_override_font_sizes/font_size = 45
+text = "Salir"
+icon = ExtResource("8_e8ur4")
+flat = true
+autowrap_mode = 1
+autowrap_trim_flags = 192
+icon_alignment = 1
+
+[node name="confrimar" type="CanvasLayer" parent="." unique_id=1863722500]
+process_mode = 3
+layer = 20
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="confrimar" unique_id=1056753226]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.9990001
+offset_bottom = -0.019042969
+color = Color(0, 0, 0, 0.7764706)
+
+[node name="CenterContainer" type="CenterContainer" parent="confrimar" unique_id=1397257513]
+offset_left = 303.0
+offset_top = 183.0
+offset_right = 1481.0
+offset_bottom = 845.0
+
+[node name="PanelContainer" type="PanelContainer" parent="confrimar/CenterContainer" unique_id=800427316]
+custom_minimum_size = Vector2(1000, 600)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_2hho4")
+
+[node name="MarginContainer" type="MarginContainer" parent="confrimar/CenterContainer/PanelContainer" unique_id=9407226]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="confrimar/CenterContainer/PanelContainer/MarginContainer" unique_id=759791963]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="confrimar/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=213803626]
+custom_minimum_size = Vector2(5, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4j6h8")
+theme_override_font_sizes/font_size = 44
+text = "
+
+¿Estás seguro de salir? Perderás todo el progreso de este nivel
+
+"
+horizontal_alignment = 1
+vertical_alignment = 2
+autowrap_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="confrimar/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1318343774]
+layout_mode = 2
+
+[node name="aceptar" type="Button" parent="confrimar/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1672118182]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4j6h8")
+theme_override_font_sizes/font_size = 30
+text = "Si"
+icon = SubResource("CompressedTexture2D_f8jps")
+flat = true
+autowrap_mode = 1
+autowrap_trim_flags = 192
+icon_alignment = 1
+
+[node name="cancelar" type="Button" parent="confrimar/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=507571331]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_4j6h8")
+theme_override_font_sizes/font_size = 30
+text = "NO"
+icon = ExtResource("8_e8ur4")
+flat = true
+autowrap_mode = 1
+autowrap_trim_flags = 192
+icon_alignment = 1
+
+[node name="PantallaResultados" type="CanvasLayer" parent="." unique_id=53643391]
+layer = 10
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="PantallaResultados" unique_id=168320211]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.7764706)
+
+[node name="Panel" type="Panel" parent="PantallaResultados" unique_id=1858186952]
+anchors_preset = -1
+anchor_left = 0.49400002
+anchor_top = 0.47800002
+anchor_right = 0.49400002
+anchor_bottom = 0.47800002
+offset_left = -466.57404
+offset_top = -419.91803
+offset_right = 483.42596
+offset_bottom = 446.08197
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_x0ctp")
+
+[node name="nivel" type="Label" parent="PantallaResultados/Panel" unique_id=1761557892]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.517
+anchor_top = 0.079
+anchor_right = 0.517
+anchor_bottom = 0.079
+offset_left = -197.15002
+offset_top = -50.414
+offset_right = 196.84998
+offset_bottom = 49.586
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 25
+theme_override_fonts/font = ExtResource("4_4j6h8")
+theme_override_font_sizes/font_size = 100
+text = "NIVEL 1"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PantallaResultados/Panel" unique_id=1667131698]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.499
+anchor_top = 0.25500003
+anchor_right = 0.499
+anchor_bottom = 0.25500003
+offset_left = -341.05002
+offset_top = -105.83002
+offset_right = 341.94998
+offset_bottom = 105.16998
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="PantallaResultados/Panel/HBoxContainer" unique_id=451702802]
+custom_minimum_size = Vector2(225, 200)
+layout_mode = 2
+texture = ExtResource("10_va0xi")
+expand_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="PantallaResultados/Panel/HBoxContainer" unique_id=2111127869]
+custom_minimum_size = Vector2(225, 200)
+layout_mode = 2
+texture = ExtResource("10_va0xi")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="PantallaResultados/Panel/HBoxContainer" unique_id=1581238623]
+custom_minimum_size = Vector2(225, 200)
+layout_mode = 2
+texture = ExtResource("10_va0xi")
+expand_mode = 5
+
+[node name="puntos" type="Label" parent="PantallaResultados/Panel" unique_id=683551652]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.372
+anchor_top = 0.46400002
+anchor_right = 0.372
+anchor_bottom = 0.46400002
+offset_left = -133.4
+offset_top = -24.824005
+offset_right = 180.6
+offset_bottom = 35.175995
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("4_4j6h8")
+theme_override_font_sizes/font_size = 60
+text = "Puntos: *"
+
+[node name="dinero" type="Label" parent="PantallaResultados/Panel" unique_id=801896730]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.284
+anchor_top = 0.59400004
+anchor_right = 0.284
+anchor_bottom = 0.59400004
+offset_left = -161.80002
+offset_top = -18.404053
+offset_right = 152.19998
+offset_bottom = 27.595947
+theme_override_colors/font_color = Color(1, 0.80784315, 0.29411766, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("4_4j6h8")
+theme_override_font_sizes/font_size = 35
+text = "Puntos: *"
+
+[node name="tiempofinal" type="Label" parent="PantallaResultados/Panel" unique_id=815375464]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.67600006
+anchor_top = 0.59400004
+anchor_right = 0.67600006
+anchor_bottom = 0.59400004
+offset_left = -54.200073
+offset_top = -18.404053
+offset_right = 259.79993
+offset_bottom = 27.595947
+theme_override_colors/font_color = Color(1, 0.80784315, 0.29411766, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("4_4j6h8")
+theme_override_font_sizes/font_size = 35
+text = "Puntos: *"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PantallaResultados/Panel" unique_id=1764454644]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.503
+anchor_top = 0.77500004
+anchor_right = 0.503
+anchor_bottom = 0.77500004
+offset_left = -336.85
+offset_top = -68.150024
+offset_right = 337.15
+offset_bottom = 67.849976
+mouse_filter = 2
+alignment = 1
+
+[node name="Button3" type="Button" parent="PantallaResultados/Panel/HBoxContainer2" unique_id=1280652669]
+z_index = 10
+layout_mode = 2
+icon = ExtResource("11_hqunj")
+flat = true
+
+[node name="Button2" type="Button" parent="PantallaResultados/Panel/HBoxContainer2" unique_id=763259960]
+layout_mode = 2
+icon = ExtResource("12_2obsc")
+flat = true
+
+[node name="Button4" type="Button" parent="PantallaResultados/Panel/HBoxContainer2" unique_id=253399244]
+layout_mode = 2
+icon = ExtResource("13_j6j2y")
+flat = true
+
+[node name="Button" type="Button" parent="PantallaResultados/Panel/HBoxContainer2" unique_id=1135539627]
+layout_mode = 2
+icon = ExtResource("14_4hydx")
+flat = true
+
+[connection signal="pressed" from="CanvasLayer/Buttonpausa" to="." method="_on_boton_pausa_visual_pressed"]
+[connection signal="pressed" from="Menupausa/CenterContainer/VBoxContainer/Button" to="." method="_on_continuar_pressed"]
+[connection signal="pressed" from="Menupausa/CenterContainer/VBoxContainer/Button2" to="." method="_on_opciones_pressed"]
+[connection signal="pressed" from="Menupausa/CenterContainer/VBoxContainer/Button3" to="." method="_on_salir_pressed"]
+[connection signal="pressed" from="confrimar/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/aceptar" to="." method="_on_boton_si_confirmar_salir_pressed"]
+[connection signal="pressed" from="confrimar/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/cancelar" to="." method="_on_boton_no_cancelar_pressed"]
+[connection signal="pressed" from="PantallaResultados/Panel/HBoxContainer2/Button3" to="." method="_on_btn_repetir_pressed"]
+[connection signal="pressed" from="PantallaResultados/Panel/HBoxContainer2/Button2" to="." method="_on_btn_menu_pressed"]
+[connection signal="pressed" from="PantallaResultados/Panel/HBoxContainer2/Button4" to="." method="_on_btn_mapa_pressed"]
+[connection signal="pressed" from="PantallaResultados/Panel/HBoxContainer2/Button" to="." method="_on_btn_siguiente_pressed"]

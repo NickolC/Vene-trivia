@@ -10,6 +10,9 @@ class ParejaRelacion:
 		self.texto_izq = _izq
 		self.texto_der = _der
 
+var aviso_3_estrellas_dado: bool = false
+var aviso_2_estrellas_dado: bool = false
+
 # --- CONFIGURACIÓN DE RECOMPENSAS BASE ---
 const RECOMPENSA_BASE_PUNTOS := 100
 const MONEDAS_POR_ESTRELLA := 50
@@ -32,6 +35,7 @@ var banco_relaciones: Array[ParejaRelacion] = []
 @onready var label_titulo_tematica: Label = $InterfazJuego/Control/Label
 @onready var label_cronometro: Label = $InterfazJuego/Control/Label2
 @onready var label_progreso_relaciones: Label = $InterfazJuego/Control/progreso
+@onready var contador_tematicas: Label = $InterfazJuego/Control/Contadorgeneral
 
 # --- REFERENCIAS PARA LA PANTALLA DE RESULTADOS ---
 @onready var panel_resultados = $PantallaResultados
@@ -74,6 +78,10 @@ var parejas_restantes: int = 0
 var total_parejas_nivel: int = 0
 var parejas_correctas_totales: int = 0
 var bloqueando_clicks: bool = false 
+
+const TIEMPO_TOTAL := 480.0
+const LIMITE_3_ESTRELLAS := 300.0
+const LIMITE_2_ESTRELLAS := 180.0 
 
 @onready var capa_confirmacion = $confrimar
 @onready var menu_pausa = $Menupausa
@@ -130,6 +138,17 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if juego_activo and not get_tree().paused:
 		tiempo_restante -= delta
+		
+		# --- NUEVA VALIDACIÓN EN TIEMPO REAL ---
+		var tiempo_transcurrido = TIEMPO_TOTAL - tiempo_restante
+		
+		if tiempo_transcurrido > LIMITE_3_ESTRELLAS and not aviso_3_estrellas_dado:
+			aviso_3_estrellas_dado = true
+			_mostrar_aviso_tiempo(3)
+		elif tiempo_transcurrido > LIMITE_2_ESTRELLAS and not aviso_2_estrellas_dado:
+			aviso_2_estrellas_dado = true
+			_mostrar_aviso_tiempo(2)
+		# ---------------------------------------
 		if tiempo_restante <= 0.0:
 			tiempo_restante = 0.0
 			juego_activo = false
@@ -144,15 +163,22 @@ func _process(delta: float) -> void:
 			if has_node("Node2D"):
 				get_node("Node2D").queue_redraw()
 
+func _mostrar_aviso_tiempo(estrellas_perdidas: int) -> void:
+	cambiar_pose(pose_preocupado)
+	await decir_mensaje("¡Oh no, has perdido la oportunidad de conseguir " + str(estrellas_perdidas) + " estrellas!", 3.0)
+	cambiar_pose(pose_normal)
+
 func _actualizar_interfaz_progreso_tematica() -> void:
-	if label_progreso_relaciones == null: return
-	
-	var total_parejas_tematica := banco_relaciones.size()
-	# Las correctas de ESTA temática son el total menos las que faltan por responder
-	var correctas_tematica := total_parejas_tematica - parejas_restantes
-	
-	# Cambia el texto para mostrar algo como: "Progreso: 2 / 5"
-	label_progreso_relaciones.text = "Progreso: %d / %d" % [correctas_tematica, total_parejas_tematica]
+	# 1. Actualiza el progreso de la temática actual (El que ya tenías)
+	if label_progreso_relaciones != null: 
+		var total_parejas_tematica := banco_relaciones.size()
+		var correctas_tematica := total_parejas_tematica - parejas_restantes
+		label_progreso_relaciones.text = "Progreso: %d / %d" % [correctas_tematica, total_parejas_tematica]
+
+	# 2. Actualiza el NUEVO contador general
+	if contador_tematicas != null:
+		# Utilizamos las variables globales que ya llevaban la cuenta en tu código
+		contador_tematicas.text = "Total General: %d / %d" % [parejas_correctas_totales, total_parejas_nivel]
 
 func _actualizar_interfaz_cronometro() -> void:
 	if label_cronometro == null: return
@@ -197,6 +223,7 @@ func _ejecutar_presentacion_inicial() -> void:
 	await decir_mensaje("Recuerda que tienes un tiempo máximo de 8 minutos para superar este reto.", 3.0)
 	cambiar_pose(pose_feliz)
 	await decir_mensaje("¡La ronda comienza ahora! ¡Mucha suerte!", 2.0)
+	cambiar_pose(pose_normal)
 	if label_dialogo and label_dialogo.get_parent():
 		label_dialogo.get_parent().hide()
 
@@ -359,6 +386,7 @@ func _on_item_seleccionado(btn: Button) -> void:
 				4: mensaje_correcto = "¡Acertaste, sigue asi!"
 				
 			await decir_mensaje(mensaje_correcto, 3.2)
+			cambiar_pose(pose_normal)
 			
 			if parejas_restantes <= 0:
 				_comprobar_victoria_tematica()
@@ -386,6 +414,7 @@ func _on_item_seleccionado(btn: Button) -> void:
 				4: mensaje_pista = "¡Incorrecto! Vuelve a leer bien.'."
 				
 			await decir_mensaje(mensaje_pista, 4.0)
+			cambiar_pose(pose_normal)
 			
 			if is_instance_valid(b_izq_temp) and not b_izq_temp.disabled: b_izq_temp.modulate = Color.WHITE
 			if is_instance_valid(b_der_temp) and not b_der_temp.disabled: b_der_temp.modulate = Color.WHITE
@@ -396,7 +425,7 @@ func _comprobar_victoria_tematica() -> void:
 	if tematica_actual <= 3:
 		cambiar_pose(pose_feliz)
 		await decir_mensaje("¡Grandioso! Has completado esta temática correctamente.", 2.0)
-		
+		cambiar_pose(pose_normal)
 		conexiones_establecidas.clear()
 		if has_node("Node2D"): get_node("Node2D").queue_redraw()
 		
@@ -438,26 +467,29 @@ func _procesar_fin_del_juego(por_tiempo_agotado: bool) -> void:
 			await decir_mensaje("¡Increíble! ¡Tiempo récord! Has resuelto todas las temáticas en menos de 3 minutos. ¡Eres un maestro!", 4.0)
 		elif tiempo_seg <= 300.0:
 			estrellas = 2
-			cambiar_pose(pose_feliz)
+			cambiar_pose(pose_pensativo)
 			await decir_mensaje("¡Excelente trabajo! Completaste el nivel en un tiempo medio muy bueno. ¡Sigue así!", 3.5)
 		else:
 			estrellas = 1
 			cambiar_pose(pose_normal)
 			await decir_mensaje("¡Bien hecho! Lograste resolver el nivel antes de que se acabara el tiempo límite. ¡Prueba superada!", 3.5)
 	else:
+		cambiar_pose(pose_pensativo)
+		await decir_mensaje("¡Oh no, has perdido la oportunidad de conseguir estrellas por tiempo, evaluare si conseguiste en base a lo respondido!", 3.0)
+		cambiar_pose(pose_normal)
 		var ratio_completado : float = float(parejas_correctas_totales) / float(maxi(1, total_parejas_nivel))
 		if ratio_completado >= 0.75:
 			estrellas = 2
 			cambiar_pose(pose_pensativo)
-			await decir_mensaje("¡El tiempo se agotó! Pero lograste completar una gran cantidad de relaciones correctas. ¡Buen esfuerzo!", 4.0)
+			await decir_mensaje("¡Lograste completar una gran cantidad de relaciones correctas. ¡Buen esfuerzo!", 4.0)
 		elif ratio_completado >= 0.40:
 			estrellas = 1
-			cambiar_pose(pose_preocupado)
-			await decir_mensaje("¡Tiempo fuera! Lograste emparejar de manera decente algunas columnas, pero nos faltó velocidad.", 4.0)
+			cambiar_pose(pose_pensativo)
+			await decir_mensaje("¡Lograste emparejar de manera decente algunas columnas, pero nos faltó velocidad.", 4.0)
 		else:
 			estrellas = 0
 			cambiar_pose(pose_preocupado)
-			await decir_mensaje("¡Se acabó el tiempo! No lograste completar suficientes relaciones. ¡Debemos repasar y volver a intentarlo!", 4.0)
+			await decir_mensaje("¡No lograste completar suficientes relaciones. ¡Debemos repasar y volver a intentarlo!", 4.0)
 
 	var puntos := estrellas * RECOMPENSA_BASE_PUNTOS + maxi(0, 50 - _errores * 4)
 	var monedas := estrellas * MONEDAS_POR_ESTRELLA

@@ -72,10 +72,10 @@ offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="InterfazJuego/Control" unique_id=698085353]
 layout_mode = 0
-offset_left = 521.0
-offset_top = 152.0
-offset_right = 669.0
-offset_bottom = 231.0
+offset_left = 527.0
+offset_top = 128.0
+offset_right = 675.0
+offset_bottom = 207.0
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("3_d1cmx")
 theme_override_font_sizes/font_size = 45
