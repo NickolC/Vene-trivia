@@ -1047,10 +1047,281 @@ func _cargar_json_para_edicion(path: String) -> void:
 		var error = json.parse(json_text)
 		if error == OK:
 			_preguntas_temporales = json.data
-			# Abrimos el panel de edición pasando los datos cargados
-			_abrir_panel_creacion_nivel(path) 
+			# CAMBIO: Ahora llamamos al panel de desglose intermedio
+			_abrir_panel_desglose_edicion(path) 
 		else:
-			_mostrar_alerta("Error al leer el archivo.")
+			_mostrar_alerta("Error al leer el archivo...")
+
+func _abrir_panel_desglose_edicion(ruta_archivo: String) -> void:
+	var overlay := ColorRect.new()
+	overlay.color = Color(0, 0, 0, 0.85)
+	overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	add_child(overlay)
+	
+	var center := CenterContainer.new()
+	center.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	overlay.add_child(center)
+	
+	var panel := PanelContainer.new()
+	panel.custom_minimum_size = Vector2(550, 650)
+	var estilo := StyleBoxFlat.new()
+	estilo.bg_color = Color(0.12, 0.12, 0.18)
+	estilo.set_border_width_all(2)
+	estilo.border_color = Color.WHITE
+	estilo.set_content_margin_all(20)
+	panel.add_theme_stylebox_override("panel", estilo)
+	center.add_child(panel)
+	
+	var vbox := VBoxContainer.new()
+	vbox.add_theme_constant_override("separation", 15)
+	panel.add_child(vbox)
+	
+	var lbl_titulo := Label.new()
+	lbl_titulo.text = "Desglose de Preguntas Existentes"
+	lbl_titulo.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	vbox.add_child(lbl_titulo)
+	
+	var scroll := ScrollContainer.new()
+	scroll.custom_minimum_size.y = 400
+	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	vbox.add_child(scroll)
+	
+	var lista_vbox := VBoxContainer.new()
+	lista_vbox.size_flags_horizontal = Control.SIZE_EXPAND_FILL 
+	lista_vbox.add_theme_constant_override("separation", 8)
+	scroll.add_child(lista_vbox)
+	
+	# Imprimimos los botones de las preguntas directamente
+	if typeof(_preguntas_temporales) != TYPE_ARRAY:
+		var lbl_err := Label.new()
+		lbl_err.text = "El archivo JSON está vacío o no tiene un formato válido."
+		lista_vbox.add_child(lbl_err)
+	else:
+		for i in range(_preguntas_temporales.size()):
+			var item = _preguntas_temporales[i]
+			var texto_mostrar = "Pregunta desconocida"
+			
+			if typeof(item) == TYPE_DICTIONARY:
+				if item.has("pregunta"):
+					texto_mostrar = str(item["pregunta"])
+				elif item.has("Pregunta"):
+					texto_mostrar = str(item["Pregunta"])
+			
+			var btn_preg := Button.new()
+			btn_preg.text = "%d. %s" % [i + 1, texto_mostrar] 
+			btn_preg.alignment = HORIZONTAL_ALIGNMENT_LEFT
+			btn_preg.clip_text = true
+			btn_preg.custom_minimum_size = Vector2(0, 45)
+			btn_preg.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+			lista_vbox.add_child(btn_preg)
+			
+			# IMPORTANTE: El .bind(i) asegura que el clic le envíe el ID correcto de la pregunta
+			var accion_boton = func(idx_preg):
+				_abrir_formulario_pregunta(ruta_archivo, idx_preg, false, overlay)
+			btn_preg.pressed.connect(accion_boton.bind(i))
+			
+	var btn_nueva_pregunta := Button.new()
+	btn_nueva_pregunta.text = "Añadir Nueva Pregunta"
+	btn_nueva_pregunta.custom_minimum_size.y = 45 
+	vbox.add_child(btn_nueva_pregunta)
+	btn_nueva_pregunta.pressed.connect(func():
+		_abrir_formulario_pregunta(ruta_archivo, -1, true, overlay)
+	)
+	
+	var btn_cancelar_desglose := Button.new()
+	btn_cancelar_desglose.text = "Cancelar y Salir de Edición"
+	btn_cancelar_desglose.custom_minimum_size.y = 45 
+	vbox.add_child(btn_cancelar_desglose)
+	btn_cancelar_desglose.pressed.connect(func():
+		overlay.queue_free()
+	)
+
+# NOTA: Se eliminó el parámetro callback_refrescar
+func _abrir_formulario_pregunta(ruta_archivo: String, indice_pregunta: int, es_nueva: bool, overlay_desglose: Control) -> void:
+	var overlay_form := ColorRect.new()
+	overlay_form.color = Color(0, 0, 0, 0.9)
+	overlay_form.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	overlay_desglose.add_child(overlay_form)
+	
+	var center := CenterContainer.new()
+	center.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	overlay_form.add_child(center)
+	
+	var panel := PanelContainer.new()
+	panel.custom_minimum_size = Vector2(500, 680)
+	var estilo := StyleBoxFlat.new()
+	estilo.bg_color = Color(0.15, 0.15, 0.2)
+	estilo.set_border_width_all(2)
+	estilo.border_color = Color.WHITE
+	estilo.set_content_margin_all(20)
+	panel.add_theme_stylebox_override("panel", estilo)
+	center.add_child(panel)
+	
+	var vbox := VBoxContainer.new()
+	vbox.add_theme_constant_override("separation", 12)
+	panel.add_child(vbox)
+	
+	var lbl_subtitulo := Label.new()
+	lbl_subtitulo.text = "Crear Nueva Pregunta" if es_nueva else "Editar Pregunta Existente"
+	lbl_subtitulo.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	vbox.add_child(lbl_subtitulo)
+	
+	var txt_pregunta := LineEdit.new(); txt_pregunta.placeholder_text = "Pregunta"
+	
+	var txt_tipo := Label.new() 
+	txt_tipo.text = "Tipo de pregunta: Texto"
+	txt_tipo.add_theme_color_override("font_color", Color(0.6, 0.6, 0.6))
+	
+	var opciones: Array[LineEdit] = []
+	for i in range(4):
+		var le := LineEdit.new()
+		le.placeholder_text = "Opción %d" % (i + 1)
+		vbox.add_child(le)
+		opciones.append(le)
+		
+	var opt_correcta := OptionButton.new()
+	for i in range(4): opt_correcta.add_item("Correcta: Opción %d" % (i + 1), i)
+	
+	var txt_expl := TextEdit.new(); txt_expl.custom_minimum_size.y = 50; txt_expl.placeholder_text = "Explicación"
+	var txt_dato := TextEdit.new(); txt_dato.custom_minimum_size.y = 50; txt_dato.placeholder_text = "Dato Curioso (Opcional)"
+	
+	vbox.add_child(txt_pregunta); vbox.add_child(txt_tipo); vbox.add_child(opt_correcta)
+	vbox.add_child(txt_expl); vbox.add_child(txt_dato)
+	
+	if not es_nueva and indice_pregunta >= 0:
+		var datos: Dictionary = _preguntas_temporales[indice_pregunta]
+		txt_pregunta.text = str(datos.get("pregunta", ""))
+		txt_expl.text = str(datos.get("explicacion", ""))
+		txt_dato.text = str(datos.get("dato_curioso", ""))
+		opt_correcta.selected = int(datos.get("correcta", 0))
+		
+		var ops = datos.get("opciones", ["", "", "", ""])
+		for i in range(min(4, ops.size())):
+			opciones[i].text = str(ops[i])
+			
+	# --- BOTONES DE ACCIÓN ---
+	var btn_guardar := Button.new()
+	btn_guardar.text = "Guardar Pregunta" if es_nueva else "Guardar Cambios"
+	vbox.add_child(btn_guardar)
+	
+	# Botón de eliminar (Aparece solo si estamos editando)
+	if not es_nueva:
+		var btn_eliminar := Button.new()
+		btn_eliminar.text = "Eliminar Pregunta"
+		btn_eliminar.add_theme_color_override("font_color", Color(0.9, 0.3, 0.3)) # Color rojo para advertencia
+		vbox.add_child(btn_eliminar)
+		
+		btn_eliminar.pressed.connect(func():
+			# 1. Crear el Panel de Confirmación Oscuro
+			var overlay_conf := ColorRect.new()
+			overlay_conf.color = Color(0, 0, 0, 0.95)
+			overlay_conf.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+			overlay_form.add_child(overlay_conf)
+			
+			var center_conf := CenterContainer.new()
+			center_conf.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+			overlay_conf.add_child(center_conf)
+			
+			var panel_conf := PanelContainer.new()
+			var estilo_conf := StyleBoxFlat.new()
+			estilo_conf.bg_color = Color(0.15, 0.1, 0.1) # Fondo ligeramente rojizo
+			estilo_conf.set_border_width_all(2)
+			estilo_conf.border_color = Color(0.8, 0.2, 0.2)
+			estilo_conf.set_content_margin_all(20)
+			panel_conf.add_theme_stylebox_override("panel", estilo_conf)
+			center_conf.add_child(panel_conf)
+			
+			var vbox_conf := VBoxContainer.new()
+			vbox_conf.add_theme_constant_override("separation", 20)
+			panel_conf.add_child(vbox_conf)
+			
+			var lbl_conf := Label.new()
+			lbl_conf.text = "¿Estás seguro de eliminar esta pregunta?"
+			lbl_conf.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+			vbox_conf.add_child(lbl_conf)
+			
+			var hbox_conf := HBoxContainer.new()
+			hbox_conf.alignment = BoxContainer.ALIGNMENT_CENTER
+			hbox_conf.add_theme_constant_override("separation", 15)
+			vbox_conf.add_child(hbox_conf)
+			
+			var btn_si := Button.new()
+			btn_si.text = "Sí, eliminar"
+			btn_si.add_theme_color_override("font_color", Color(0.9, 0.3, 0.3))
+			
+			var btn_no := Button.new()
+			btn_no.text = "No, mantener"
+			
+			hbox_conf.add_child(btn_si)
+			hbox_conf.add_child(btn_no)
+			
+			# Lógica si el usuario se arrepiente (Cierra solo la alerta)
+			btn_no.pressed.connect(func():
+				overlay_conf.queue_free()
+			)
+			
+			# Lógica si el usuario confirma la eliminación
+			btn_si.pressed.connect(func():
+				_preguntas_temporales.remove_at(indice_pregunta)
+				
+				var file = FileAccess.open(ruta_archivo, FileAccess.WRITE)
+				if file:
+					file.store_string(JSON.stringify(_preguntas_temporales, "\t"))
+					file.close()
+					
+				_mostrar_alerta("Pregunta eliminada satisfactoriamente.")
+				
+				# Destruimos el menú raíz entero para forzar un refresco
+				overlay_desglose.queue_free()
+				_abrir_panel_desglose_edicion(ruta_archivo)
+			)
+		)
+
+	var btn_cancelar := Button.new()
+	btn_cancelar.text = "Cancelar"
+	vbox.add_child(btn_cancelar)
+	
+	# --- SEÑALES ---
+	btn_cancelar.pressed.connect(func():
+		overlay_form.queue_free() 
+	)
+	
+	btn_guardar.pressed.connect(func():
+		var preg := txt_pregunta.text.strip_edges()
+		var op0 := opciones[0].text.strip_edges()
+		var op1 := opciones[1].text.strip_edges()
+		var op2 := opciones[2].text.strip_edges()
+		var op3 := opciones[3].text.strip_edges()
+		var expl := txt_expl.text.strip_edges()
+		
+		if preg == "" or op0 == "" or op1 == "" or op2 == "" or op3 == "" or expl == "":
+			_mostrar_alerta("Debes de tener todos los campos requeridos llenos con lo que se desea guardar.")
+			return 
+			
+		var dict_pregunta := {
+			"pregunta": preg,
+			"tipo": "Texto",
+			"opciones": [op0, op1, op2, op3],
+			"correcta": opt_correcta.selected,
+			"explicacion": expl,
+			"dato_curioso": txt_dato.text.strip_edges()
+		}
+		
+		if es_nueva:
+			_preguntas_temporales.append(dict_pregunta)
+		else:
+			_preguntas_temporales[indice_pregunta] = dict_pregunta
+			
+		var file = FileAccess.open(ruta_archivo, FileAccess.WRITE)
+		if file:
+			file.store_string(JSON.stringify(_preguntas_temporales, "\t"))
+			file.close()
+			
+		_mostrar_alerta("Cambios guardados correctamente." if not es_nueva else "Nueva pregunta anexada correctamente.")
+		
+		overlay_desglose.queue_free()
+		_abrir_panel_desglose_edicion(ruta_archivo)
+	)
 
 func _tiempoactividad() -> void:
 	if db == null: return
