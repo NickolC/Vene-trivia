@@ -39,6 +39,8 @@ const TEMAS_NIVELES: Dictionary = {
 
 @onready var Prevnivel = $PrevNiveles/Label2
 @onready var prevtema = $PrevNiveles/MarginContainer/VBoxContainer/MarginContainer2/Label
+# VIS-01: imagen de previsualización temática por nivel
+@onready var prev_imagen: TextureRect = $"PrevNiveles/MarginContainer/VBoxContainer/MarginContainer/TextureRect"
 @onready var contenedor1: HBoxContainer = $VBoxContainer/HBoxContainer
 @onready var contenedor2: HBoxContainer = $VBoxContainer/HBoxContainer2
 @onready var contenedor3: HBoxContainer = $VBoxContainer/HBoxContainer3
@@ -60,12 +62,17 @@ func _on_atras_pressed() -> void:
 func configurar_selector() -> void:
 	var nivel_disponible := maxi(1, int(GlobalUsuario.nivel_maximo))
 	nivel_actual = nivel_disponible
-	
+
+	# BUG-03: ademas del contador NU_NIVEL_MAX, validamos contra la tabla niveles.
+	# Si el docente borra el registro de un nivel, el nivel siguiente vuelve a
+	# bloquearse (el desbloqueo exige que el nivel previo tenga un registro real).
+	var niveles_completados := _cargar_niveles_completados()
+
 	var todos_los_botones: Array[Node] = []
 	todos_los_botones.append_array(contenedor1.get_children())
 	todos_los_botones.append_array(contenedor2.get_children())
 	todos_los_botones.append_array(contenedor3.get_children())
-	
+
 	for i in range(todos_los_botones.size()):
 		var n_nivel := i + 1
 		var btn := todos_los_botones[i] as Button
@@ -77,10 +84,26 @@ func configurar_selector() -> void:
 				desbloquear_boton(btn, n_nivel)
 			else:
 				configurar_boton_nivel_tienda_bloqueado(btn, n_nivel)
-		elif n_nivel <= nivel_disponible:
+		elif n_nivel <= nivel_disponible and (n_nivel == 1 or niveles_completados.has(n_nivel - 1)):
 			desbloquear_boton(btn, n_nivel)
 		else:
 			bloquear_boton(btn)
+
+# BUG-03: devuelve un set {NU_NIVEL: true} de niveles con registro completado
+# (estrellas > 0) en la tabla niveles para el alumno actual.
+func _cargar_niveles_completados() -> Dictionary:
+	var completados: Dictionary = {}
+	if db == null:
+		return completados
+	var q := ""
+	if GlobalUsuario.usuario_actual_id > 0:
+		q = "SELECT NU_NIVEL FROM niveles WHERE NU_USU = %d AND NU_ESTRELLAS > 0;" % GlobalUsuario.usuario_actual_id
+	else:
+		q = "SELECT NU_NIVEL FROM niveles WHERE NM_ALUMNO = '%s' AND NU_ESTRELLAS > 0;" % SQLiteHelper.escape(GlobalUsuario.nombre_alumno)
+	db.query(q)
+	for fila in db.query_result:
+		completados[int(fila.get("NU_NIVEL", 0))] = true
+	return completados
 
 func desbloquear_boton(btn: Button, num: int) -> void:
 	btn.disabled = false
@@ -122,6 +145,12 @@ func _on_nivel_seleccionado_desde_mapa(num: int) -> void:
 	# Cambiamos los textos del panel de previsualización
 	Prevnivel.text = "NIVEL " + str(num)
 	prevtema.text = tema
+
+	# VIS-01: imagen temática del nivel en la previsualización
+	if prev_imagen:
+		var ruta_img := "res://GFX/Niveles/%d.png" % num
+		if ResourceLoader.exists(ruta_img):
+			prev_imagen.texture = load(ruta_img)
 	
 # 2. CONSULTA SQL: Averiguar cuántas estrellas tiene este nivel específico
 	var cant_estrellas: int = 0 # Empezamos asumiendo que tiene 0

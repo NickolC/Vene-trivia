@@ -385,9 +385,9 @@ func _on_item_seleccionado(btn: Button) -> void:
 				3: mensaje_correcto = "¡Perfecto, relacionaste una columna!"
 				4: mensaje_correcto = "¡Acertaste, sigue asi!"
 				
-			await decir_mensaje(mensaje_correcto, 3.2)
+			await decir_mensaje(mensaje_correcto, 1.2)
 			cambiar_pose(pose_normal)
-			
+
 			if parejas_restantes <= 0:
 				_comprobar_victoria_tematica()
 		else:
@@ -413,7 +413,7 @@ func _on_item_seleccionado(btn: Button) -> void:
 				3: mensaje_pista = "No es la pareja correcta."
 				4: mensaje_pista = "¡Incorrecto! Vuelve a leer bien.'."
 				
-			await decir_mensaje(mensaje_pista, 4.0)
+			await decir_mensaje(mensaje_pista, 1.8)
 			cambiar_pose(pose_normal)
 			
 			if is_instance_valid(b_izq_temp) and not b_izq_temp.disabled: b_izq_temp.modulate = Color.WHITE
@@ -461,10 +461,11 @@ func _procesar_fin_del_juego(por_tiempo_agotado: bool) -> void:
 	var estrellas := 0
 	
 	if not por_tiempo_agotado:
-		if tiempo_seg <= 180.0:
+		# Regla unificada: 3 estrellas exige completar a tiempo Y sin errores.
+		if tiempo_seg <= 180.0 and _errores == 0:
 			estrellas = 3
 			cambiar_pose(pose_feliz)
-			await decir_mensaje("¡Increíble! ¡Tiempo récord! Has resuelto todas las temáticas en menos de 3 minutos. ¡Eres un maestro!", 4.0)
+			await decir_mensaje("¡Increíble! ¡Tiempo récord y sin errores! Has resuelto todas las temáticas en menos de 3 minutos. ¡Eres un maestro!", 4.0)
 		elif tiempo_seg <= 300.0:
 			estrellas = 2
 			cambiar_pose(pose_pensativo)
@@ -495,7 +496,8 @@ func _procesar_fin_del_juego(por_tiempo_agotado: bool) -> void:
 	var monedas := estrellas * MONEDAS_POR_ESTRELLA
 	
 	if estrellas > 0:
-		_guardar_progreso_db(puntos, estrellas)
+		# REP-02: mejor tiempo solo si completó (no por tiempo agotado)
+		_guardar_progreso_db(puntos, estrellas, tiempo_seg if not por_tiempo_agotado else 0.0)
 
 	_mostrar_pantalla_resultados(estrellas, puntos, monedas, tiempo_seg)
 
@@ -542,7 +544,7 @@ func _cerrar_db_seguro() -> void:
 
 # --- BASE DE DATOS Y PAUSAS ---
 
-func _guardar_progreso_db(pts: int, estrellas: int) -> void:
+func _guardar_progreso_db(pts: int, estrellas: int, tiempo_seg: float = 0.0) -> void:
 	if estrellas == 0 or db == null: return
 	var id_user = GlobalUsuario.usuario_actual_id
 	var usr_name = SQLiteHelper.escape(GlobalUsuario.nombre_alumno)
@@ -561,8 +563,11 @@ func _guardar_progreso_db(pts: int, estrellas: int) -> void:
 			
 	var prox := numero_de_nivel + 1
 	db.query("UPDATE Alumnos SET NU_NIVEL_MAX_COLUMNAS = %d WHERE NU_USU = %d AND NU_NIVEL_MAX_COLUMNAS < %d;" % [prox, id_user, prox])
-	SQLiteHelper.mirror_minijuegos_resultados(db, id_user, GlobalUsuario.nombre_alumno, "columnas", pts, estrellas)
-	
+	SQLiteHelper.mirror_minijuegos_resultados(db, id_user, GlobalUsuario.nombre_alumno, "columnas", pts, estrellas, tiempo_seg)
+
+	# BUG-02: acreditar las monedas ganadas (estrellas * MONEDAS_POR_ESTRELLA)
+	SQLiteHelper.sumar_dinero(db, id_user, estrellas * MONEDAS_POR_ESTRELLA)
+
 	db.query("SELECT NU_DINERO FROM Alumnos WHERE NU_USU = %d;" % id_user)
 	var dinero_total := 0
 	if not db.query_result.is_empty(): dinero_total = int(db.query_result[0].get("NU_DINERO", 0))

@@ -49,7 +49,8 @@ func actualizar_ui_con_valores():
 		musica.value = Configuracion.volumen_musica * 100.0
 	if efectos:
 		efectos.value = Configuracion.volumen_sfx * 100.0
-	aplicar_todo()
+	# OPC-01: al abrir NO forzamos modo de ventana; solo sincronizamos visibilidad.
+	_sync_visibilidad_resolucion()
 
 func aplicar_todo():
 	# Lógica para aplicar pantalla completa, resolución, etc.
@@ -82,25 +83,25 @@ func _on_resolucion_item_selected(index: int) -> void:
 
 
 func _on_pantalla_completa_toggled(toggled_on: bool) -> void:
+	Configuracion.fullscreen = toggled_on
 	if toggled_on:
 		# Activar Pantalla Completa
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	else:
 		# Volver a Modo Ventana
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-	pass # Replace with function body.
+	# OPC-01: ocultar/mostrar resolución segun el check
+	_sync_visibilidad_resolucion()
 
 func _on_brillo_value_changed(value: float) -> void:
+	# BUG-05: el env ahora es global (autoload), aplicamos directo y en tiempo real.
 	Configuracion.brillo = value
-	var world_env = get_tree().root.find_child("WorldGamma", true, false)
-	if world_env:
-		Configuracion.aplicar_ajustes(world_env.environment)
+	Configuracion.aplicar_ajustes()
 
 func _on_gamma_value_changed(value: float) -> void:
 	Configuracion.saturacion = value
-	var world_env = get_tree().root.find_child("WorldGamma", true, false)
-	if world_env:
-		Configuracion.aplicar_ajustes(world_env.environment)
+	Configuracion.contraste = value
+	Configuracion.aplicar_ajustes()
 
 func _on_volumen_maestro_value_changed(value: float) -> void:
 	Configuracion.volumen_maestro = value / 100.0
@@ -140,7 +141,12 @@ func _on_restablecer_pressed() -> void:
 	Configuracion.contraste = Configuracion.DEFAULT_CONTRAST
 	Configuracion.fullscreen = Configuracion.DEFAULT_FULLSCREEN
 	Configuracion.res_index = Configuracion.DEFAULT_RES_INDEX
-	
+	# OPC-02: restablecer tambien el audio
+	Configuracion.volumen_maestro = Configuracion.DEFAULT_VOL_MAESTRO
+	Configuracion.volumen_musica = Configuracion.DEFAULT_VOL_MUSICA
+	Configuracion.volumen_sfx = Configuracion.DEFAULT_VOL_SFX
+	Configuracion.aplicar_volumenes()
+
 	# Actualizamos la visualización de los sliders/botones
 	actualizar_ui_con_valores()
 	Alertas.mostrar_alerta("Ajustes restablecidas con éxito.", 1.0)

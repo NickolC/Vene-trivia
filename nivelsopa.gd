@@ -407,11 +407,13 @@ func finalizar_nivel() -> void:
 	var monedas_ganadas = estrellas_obtenidas * MONEDAS_POR_ESTRELLA
 	
 	# Guardamos el resultado si aprobó (obtuvo estrellas)
-	guardar_datos_progreso(puntos_totales, estrellas_obtenidas)
+	# REP-02: el tiempo solo cuenta como "mejor tiempo" si completó (estrellas>0)
+	guardar_datos_progreso(puntos_totales, estrellas_obtenidas, tiempo_empleado)
 	
 	# Configurar UI de Resultados
 	label_titulo_resultados.text = "NIVEL %d" % numero_de_nivel
-	label_puntaje_total.text = "Puntaje: %d | Monedas: +%d" % [puntos_totales, monedas_ganadas]
+	# MINI-SOPA 6.2: mostrar palabras encontradas vs total (incl. fin de tiempo)
+	label_puntaje_total.text = "Palabras: %d/%d | Puntaje: %d | Monedas: +%d" % [palabras_encontradas_contador, total_palabras, puntos_totales, monedas_ganadas]
 	
 	var nodos_estrellas = contenedor_estrellas.get_children()
 	for i in range(nodos_estrellas.size()):
@@ -433,7 +435,7 @@ func finalizar_nivel() -> void:
 			
 	pantalla_resultados.show()
 
-func guardar_datos_progreso(puntos_totales: int, estrellas: int) -> void:
+func guardar_datos_progreso(puntos_totales: int, estrellas: int, tiempo_seg: float = 0.0) -> void:
 	if db == null: return
 
 	var id_alumno: int = GlobalUsuario.usuario_actual_id
@@ -460,7 +462,10 @@ func guardar_datos_progreso(puntos_totales: int, estrellas: int) -> void:
 		var sgte_lvl := numero_de_nivel + 1
 		db.query("UPDATE Alumnos SET NU_NIVEL_MAX_SOPA = %d WHERE NU_USU = %d AND NU_NIVEL_MAX_SOPA < %d;" % [sgte_lvl, id_alumno, sgte_lvl])
 
-	SQLiteHelper.mirror_minijuegos_resultados(db, id_alumno, GlobalUsuario.nombre_alumno, "sopa", puntos_totales, estrellas)
+	SQLiteHelper.mirror_minijuegos_resultados(db, id_alumno, GlobalUsuario.nombre_alumno, "sopa", puntos_totales, estrellas, tiempo_seg if estrellas > 0 else 0.0)
+
+	# BUG-02: acreditar las monedas ganadas (estrellas * MONEDAS_POR_ESTRELLA)
+	SQLiteHelper.sumar_dinero(db, id_alumno, estrellas * MONEDAS_POR_ESTRELLA)
 
 	db.query("SELECT NU_DINERO FROM Alumnos WHERE NU_USU = %d;" % id_alumno)
 	var dinero_total := 0

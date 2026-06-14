@@ -29,7 +29,18 @@ const MENU_SCENES := {
 	"res://Scenes/Minijuegos.tscn": true,
 	"res://Scenes/SuperAdmin.tscn": true,
 	"res://Mapa.tscn": true,
-	"res://Scenes/principal.tscn": true
+	"res://Scenes/principal.tscn": true,
+	# VIS-03: escenas de minijuegos y selectores que antes quedaban en silencio.
+	# Usan la música de menú como fondo (el check de menú tiene prioridad).
+	"res://selectorsopaletras.tscn": true,
+	"res://selectormemoria.tscn": true,
+	"res://selectorelacioncolumn.tscn": true,
+	"res://selectorverdfal.tscn": true,
+	"res://nivelsopa.tscn": true,
+	"res://nivelmemoria.tscn": true,
+	"res://nivel columna.tscn": true,
+	"res://nivelverdfal.tscn": true,
+	"res://Scenes/minijuego_textual.tscn": true
 }
 
 const LEVEL1_SCENES := {

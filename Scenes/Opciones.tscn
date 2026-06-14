@@ -506,9 +506,6 @@ theme_override_font_sizes/font_size = 30
 text = "Musica"
 horizontal_alignment = 1
 
-[node name="WorldGamma" type="WorldEnvironment" parent="TextureRect3" unique_id=1010080964]
-environment = SubResource("Environment_7rfdi")
-
 [node name="TextureRect4" type="TextureRect" parent="." unique_id=1721266548]
 visible = false
 layout_mode = 1

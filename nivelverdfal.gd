@@ -439,7 +439,8 @@ func _procesar_fin_del_juego(por_tiempo_agotado: bool) -> void:
 	var monedas : int = estrellas * MONEDAS_POR_ESTRELLA
 	
 	if estrellas > 0:
-		_guardar_progreso_db(puntos, estrellas)
+		# REP-02: mejor tiempo solo si completó (no por tiempo agotado)
+		_guardar_progreso_db(puntos, estrellas, tiempo_transcurrido if not por_tiempo_agotado else 0.0)
 
 	_mostrar_pantalla_resultados(estrellas, puntos, monedas, tiempo_transcurrido)
 
@@ -484,7 +485,7 @@ func _cerrar_db_seguro() -> void:
 		db = null
 
 # --- BASE DE DATOS ---
-func _guardar_progreso_db(pts: int, estrellas: int) -> void:
+func _guardar_progreso_db(pts: int, estrellas: int, tiempo_seg: float = 0.0) -> void:
 	if estrellas == 0 or db == null: return
 	var id_user = GlobalUsuario.usuario_actual_id
 	var usr_name = SQLiteHelper.escape(GlobalUsuario.nombre_alumno)
@@ -494,8 +495,11 @@ func _guardar_progreso_db(pts: int, estrellas: int) -> void:
 	var prox := numero_de_nivel + 1
 	db.query("UPDATE Alumnos SET NU_NIVEL_MAX = %d WHERE NU_USU = %d AND NU_NIVEL_MAX < %d;" % [prox, id_user, prox])
 	
-	SQLiteHelper.mirror_minijuegos_resultados(db, id_user, GlobalUsuario.nombre_alumno, "verdadero_falso", pts, estrellas)
-	
+	SQLiteHelper.mirror_minijuegos_resultados(db, id_user, GlobalUsuario.nombre_alumno, "verdadero_falso", pts, estrellas, tiempo_seg)
+
+	# BUG-02: acreditar las monedas ganadas (estrellas * MONEDAS_POR_ESTRELLA)
+	SQLiteHelper.sumar_dinero(db, id_user, estrellas * MONEDAS_POR_ESTRELLA)
+
 	db.query("SELECT NU_DINERO FROM Alumnos WHERE NU_USU = %d;" % id_user)
 	var dinero_total := 0
 	if not db.query_result.is_empty(): dinero_total = int(db.query_result[0].get("NU_DINERO", 0))

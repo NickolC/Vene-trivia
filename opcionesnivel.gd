@@ -55,7 +55,10 @@ func actualizar_ui_con_valores():
 		slider_musica.value = Configuracion.volumen_musica * 100.0
 	if slider_efectos:
 		slider_efectos.value = Configuracion.volumen_sfx * 100.0
-	Configuracion.aplicar_ajustes_actuales()
+	# OPC-01: al abrir aplicamos solo lo visual (sin forzar modo de ventana) y
+	# sincronizamos la visibilidad de la resolución segun el check.
+	Configuracion.aplicar_ajustes()
+	_sync_visibilidad_resolucion()
 
 func _on_resolucion_item_selected(index: int) -> void:
 	if not Configuracion.RESOLUTIONS.has(index):
@@ -68,14 +71,14 @@ func _on_resolucion_item_selected(index: int) -> void:
 func _on_pantalla_completa_toggled(toggled_on: bool) -> void:
 	Configuracion.fullscreen = toggled_on
 	if toggled_on:
-		option_res.disabled = true
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	else:
-		option_res.disabled = false
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 		if Configuracion.RESOLUTIONS.has(option_res.selected):
 			var res: Vector2i = Configuracion.RESOLUTIONS[option_res.selected]
 			DisplayServer.window_set_size(res)
+	# OPC-01: ocultar/mostrar resolución segun el check
+	_sync_visibilidad_resolucion()
 
 func _on_brillo_value_changed(value: float) -> void:
 	Configuracion.brillo = value

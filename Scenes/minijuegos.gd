@@ -275,7 +275,8 @@ func _on_level_12_pressed() -> void:
 		return
 		
 	GlobalUsuario.minijuego_actual = "completar_frases"
-	GlobalUsuario.nivel_seleccionado = _nivel_minijuego_por_defecto()
+	# BUG-04: nivel propio del minijuego, no el del juego principal
+	GlobalUsuario.nivel_seleccionado = _nivel_textual_por_defecto("completar_frases")
 	Configuracion.change_scene_to_file("res://Scenes/minijuego_textual.tscn")
 
 func _on_level_13_pressed() -> void:
@@ -285,8 +286,19 @@ func _on_level_13_pressed() -> void:
 		return
 		
 	GlobalUsuario.minijuego_actual = "ahorcado"
-	GlobalUsuario.nivel_seleccionado = _nivel_minijuego_por_defecto()
+	# BUG-04: nivel propio del minijuego, no el del juego principal
+	GlobalUsuario.nivel_seleccionado = _nivel_textual_por_defecto("ahorcado")
 	Configuracion.change_scene_to_file("res://Scenes/minijuego_textual.tscn")
 
 func _nivel_minijuego_por_defecto() -> int:
 	return clampi(GlobalUsuario.nivel_maximo, 1, 15)
+
+# BUG-04: nivel por defecto basado en el tracker independiente del minijuego textual.
+func _nivel_textual_por_defecto(modo: String) -> int:
+	if db == null or GlobalUsuario.usuario_actual_id <= 0:
+		return 1
+	var col := "NU_NIVEL_MAX_COMPLETAR" if modo == "completar_frases" else "NU_NIVEL_MAX_AHORCADO"
+	db.query("SELECT %s AS mx FROM Alumnos WHERE NU_USU = %d LIMIT 1;" % [col, GlobalUsuario.usuario_actual_id])
+	if not db.query_result.is_empty():
+		return clampi(int(db.query_result[0].get("mx", 1)), 1, 15)
+	return 1

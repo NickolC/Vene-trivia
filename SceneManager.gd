@@ -42,15 +42,36 @@ const SAVE_PATH = "user://configuracion_usuario.cfg"
 
 signal scene_changing(from_scene: String, to_scene: String)
 signal scene_changed(to_scene: String)
+# BUG-05: se emite cada vez que se aplican ajustes visuales/volumen para que la
+# escena activa reaccione sin reiniciar (señal en lugar de polling).
+signal ajustes_visuales_actualizados
 
 var current_scene_path: String
 
+# BUG-05: WorldEnvironment global, hijo del autoload. Al estar bajo /root aplica
+# sus ajustes (brillo/saturacion/contraste) a TODA escena automaticamente, sin
+# depender de que cada escena tenga su propio nodo WorldGamma.
+var _world_env: WorldEnvironment
+
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	_crear_world_environment_global()
 	current_scene_path = get_tree().current_scene.scene_file_path
 	get_tree().tree_changed.connect(_on_tree_changed)
 	cargar_ajustes()
 	aplicar_volumenes()
+
+func _crear_world_environment_global() -> void:
+	if _world_env != null:
+		return
+	var env := Environment.new()
+	env.background_mode = Environment.BG_CANVAS
+	env.adjustment_enabled = true
+	var we := WorldEnvironment.new()
+	we.name = "WorldGammaGlobal"
+	we.environment = env
+	add_child(we)
+	_world_env = we
 
 func change_scene_to_file(scene_path: String) -> void:
 	# Guardar configuraciones antes de cambiar escena
@@ -93,17 +114,26 @@ func cargar_ajustes() -> void:
 		volumen_maestro = config.get_value("Ajustes", "volumen_maestro", DEFAULT_VOL_MAESTRO)
 		volumen_musica = config.get_value("Ajustes", "volumen_musica", DEFAULT_VOL_MUSICA)
 		volumen_sfx = config.get_value("Ajustes", "volumen_sfx", DEFAULT_VOL_SFX)
-	var env_nodo := get_tree().root.find_child("WorldGamma", true, false)
-	if env_nodo and env_nodo is WorldEnvironment:
-		aplicar_ajustes(env_nodo.environment)
+	aplicar_ajustes()
 	aplicar_volumenes()
 
-func aplicar_ajustes(env: Environment) -> void:
+# BUG-05: aplica brillo/saturacion/contraste. Si se pasa un env concreto (callers
+# legacy) tambien se le escribe; en todo caso se actualiza el env global y se
+# emite la señal para que la escena activa reaccione de inmediato.
+func aplicar_ajustes(env: Environment = null) -> void:
 	if env:
-		env.set("adjustments_enabled", true)
-		env.set("adjustment_brightness", brillo)
-		env.set("adjustment_saturation", saturacion)
-		env.set("adjustment_contrast", contraste)
+		_escribir_ajustes_en_env(env)
+	if _world_env and _world_env.environment:
+		_escribir_ajustes_en_env(_world_env.environment)
+	ajustes_visuales_actualizados.emit()
+
+func _escribir_ajustes_en_env(env: Environment) -> void:
+	# Nombres correctos de Godot 4 (el codigo viejo usaba "adjustments_enabled",
+	# propiedad inexistente, por lo que el brillo nunca se activaba).
+	env.adjustment_enabled = true
+	env.adjustment_brightness = brillo
+	env.adjustment_saturation = saturacion
+	env.adjustment_contrast = contraste
 
 func aplicar_ajustes_actuales() -> void:
 	if fullscreen:
@@ -115,9 +145,7 @@ func aplicar_ajustes_actuales() -> void:
 			DisplayServer.window_set_size(res)
 			var screen_center := DisplayServer.screen_get_position() + (DisplayServer.screen_get_size() / 2) - (res / 2)
 			DisplayServer.window_set_position(screen_center)
-	var env_nodo := get_tree().root.find_child("WorldGamma", true, false)
-	if env_nodo and env_nodo is WorldEnvironment:
-		aplicar_ajustes(env_nodo.environment)
+	aplicar_ajustes()
 	aplicar_volumenes()
 
 func aplicar_volumenes() -> void:

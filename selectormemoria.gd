@@ -172,13 +172,20 @@ func _desconectar_senales_boton(btn: Button) -> void:
 	for conexion in btn.pressed.get_connections():
 		btn.pressed.disconnect(conexion.callable)
 
+# VIS-02: previsualización por dificultad (últimos 5 niveles = Difícil)
+func _dificultad_nivel(n: int) -> String:
+	if n >= 11:
+		return "Dificultad: Difícil"
+	elif n >= 6:
+		return "Dificultad: Intermedio"
+	return "Dificultad: Fácil"
+
 func _on_nivel_seleccionado_desde_mapa(num: int) -> void:
 	print("🚀 ¡FUNCIÓN EJECUTADA! Se presionó el nivel: ", num)
 	nivel_seleccionado_temp = num 
-	var tema: String = TEMAS_NIVELES.get(num, "Tema Desconocido")
-	
-	Prevnivel.text = "nivelsopa"
-	prevtema.text = tema
+	# VIS-02: previsualización por dificultad en lugar del tema
+	Prevnivel.text = "Nivel " + str(num)
+	prevtema.text = _dificultad_nivel(num)
 	
 	var cant_estrellas: int = 0 
 	var q_estrellas := ""

@@ -156,8 +156,16 @@ func _set_vista(vista: int) -> void:
 		_refresh_rendimiento_general()
 		_refresh_rendimiento_detalle()
 
+# REP-02/03: formatea segundos a mm:ss para columnas de tiempo de los arboles.
+func _fmt_seg(t) -> String:
+	var seg := float(t) if t != null else 0.0
+	if seg <= 0.0:
+		return "--:--"
+	var total := int(round(seg))
+	return "%02d:%02d" % [total / 60, total % 60]
+
 func _setup_tree_gestion() -> void:
-	arbol_alumnos.columns = 7
+	arbol_alumnos.columns = 8
 	arbol_alumnos.column_titles_visible = true
 	arbol_alumnos.hide_root = true
 	arbol_alumnos.set_column_title(0, "Alumno")
@@ -167,9 +175,10 @@ func _setup_tree_gestion() -> void:
 	arbol_alumnos.set_column_title(4, "Puntos")
 	arbol_alumnos.set_column_title(5, "Estrellas")
 	arbol_alumnos.set_column_title(6, "Aciertos %")
+	arbol_alumnos.set_column_title(7, "Tiempo total")
 
 func _setup_tree_rendimiento_general() -> void:
-	arbol_rendimiento_general.columns = 6
+	arbol_rendimiento_general.columns = 7
 	arbol_rendimiento_general.column_titles_visible = true
 	arbol_rendimiento_general.hide_root = true
 	arbol_rendimiento_general.set_column_title(0, "Alumno")
@@ -178,6 +187,7 @@ func _setup_tree_rendimiento_general() -> void:
 	arbol_rendimiento_general.set_column_title(3, "Estrellas minijuegos")
 	arbol_rendimiento_general.set_column_title(4, "Puntos niveles")
 	arbol_rendimiento_general.set_column_title(5, "Partidas")
+	arbol_rendimiento_general.set_column_title(6, "Tiempo total")
 
 func _setup_tree_rendimiento_detalle() -> void:
 	arbol_rendimiento_detalle.columns = 6
@@ -235,7 +245,8 @@ func _refresh_gestion(filtro: String = "") -> void:
 		"COALESCE(SUM(n.NU_PUNTOS), 0) AS total_puntos, " +
 		"COALESCE(SUM(n.NU_RESPC), 0) AS total_correctas, " +
 		"COALESCE(SUM(n.NU_PREG), 0) AS total_preguntas, " +
-		"COALESCE(AVG(CAST(n.NU_ESTRELLAS AS REAL)), 0.0) AS prom_estrellas " +
+		"COALESCE(AVG(CAST(n.NU_ESTRELLAS AS REAL)), 0.0) AS prom_estrellas, " +
+		"(SELECT COALESCE(SUM(tn.TIEMPOTOTAL_SEGUNDOS),0) FROM tiempos_niveles tn WHERE tn.NU_USU = a.NU_USU AND tn.TX_TIPO_NIVEL = 'TRIVIA') AS tiempo_total " +
 		"FROM Alumnos a LEFT JOIN niveles n ON n.NU_USU = a.NU_USU " +
 		where_clause +
 		" GROUP BY a.NU_USU ORDER BY total_puntos DESC, a.NM_ALUMNO ASC;"
@@ -274,10 +285,11 @@ func _refresh_gestion(filtro: String = "") -> void:
 		item.set_text(4, str(puntos))
 		item.set_text(5, "%.1f estrs" % prom_estrellas)
 		item.set_text(6, "%.1f%%" % pct_aciertos)
+		item.set_text(7, _fmt_seg(data.get("tiempo_total", 0.0)))
 		item.set_metadata(0, id_alumno)
 
 		if activo == 0:
-			for col in range(7):
+			for col in range(8):
 				item.set_custom_color(col, Color(0.55, 0.35, 0.35))
 
 		total_alumnos += 1
@@ -325,7 +337,8 @@ func _refresh_rendimiento_general() -> void:
 		"COALESCE(nv.estrellas_niveles, 0) AS estrellas_niveles, " +
 		"COALESCE(nv.puntos_niveles, 0) AS puntos_niveles, " +
 		"COALESCE(nv.partidas_niveles, 0) AS partidas_niveles, " +
-		"COALESCE(mj.estrellas_minijuegos, 0) AS estrellas_minijuegos " +
+		"COALESCE(mj.estrellas_minijuegos, 0) AS estrellas_minijuegos, " +
+		"(SELECT COALESCE(SUM(tn.TIEMPOTOTAL_SEGUNDOS),0) FROM tiempos_niveles tn WHERE tn.NU_USU = a.NU_USU AND tn.TX_TIPO_NIVEL = 'TRIVIA') AS tiempo_total " +
 		"FROM Alumnos a " +
 		"LEFT JOIN (" +
 		"SELECT NU_USU, SUM(NU_ESTRELLAS) AS estrellas_niveles, SUM(NU_PUNTOS) AS puntos_niveles, COUNT(*) AS partidas_niveles " +
@@ -350,6 +363,7 @@ func _refresh_rendimiento_general() -> void:
 		item.set_text(3, str(int(row.get("estrellas_minijuegos", 0))))
 		item.set_text(4, str(int(row.get("puntos_niveles", 0))))
 		item.set_text(5, str(int(row.get("partidas_niveles", 0))))
+		item.set_text(6, _fmt_seg(row.get("tiempo_total", 0.0)))
 
 	_refresh_selector_alumnos_detalle()
 
@@ -398,7 +412,7 @@ func _refresh_rendimiento_detalle() -> void:
 		vacio_niveles.set_text(0, "Nivel")
 		vacio_niveles.set_text(1, "Sin registros")
 
-	var mini_query := "SELECT NM_MINIJUEGO, NU_ESTRELLAS, NU_PUNTOS, NU_INTENTOS FROM minijuegos_resultados WHERE NU_USU = %d ORDER BY NM_MINIJUEGO ASC;" % alumno_id
+	var mini_query := "SELECT NM_MINIJUEGO, NU_ESTRELLAS, NU_PUNTOS, NU_INTENTOS, COALESCE(NU_MEJOR_TIEMPO,0) AS mejor_t FROM minijuegos_resultados WHERE NU_USU = %d ORDER BY NM_MINIJUEGO ASC;" % alumno_id
 	if db.query(mini_query) and not db.query_result.is_empty():
 		for row_mini in db.query_result:
 			var item_mini := arbol_rendimiento_detalle.create_item(root)
@@ -407,6 +421,8 @@ func _refresh_rendimiento_detalle() -> void:
 			item_mini.set_text(2, str(int(row_mini.get("NU_ESTRELLAS", 0))))
 			item_mini.set_text(3, str(int(row_mini.get("NU_PUNTOS", 0))))
 			item_mini.set_text(4, "%d intentos" % int(row_mini.get("NU_INTENTOS", 0)))
+			# REP-02/03: mejor tiempo del minijuego
+			item_mini.set_text(5, _fmt_seg(row_mini.get("mejor_t", 0.0)))
 
 	_refresh_logros(alumno_id)
 

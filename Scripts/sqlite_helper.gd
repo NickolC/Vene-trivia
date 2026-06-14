@@ -14,7 +14,20 @@ static func open_db_connection() -> SQLite:
 	ensure_columnas_tables(database)
 	ensure_memoria_tables(database)
 	ensure_alumnos_minijuego_columns(database)
+	ensure_minijuego_tiempo_column(database)
 	return database
+
+# REP-02: columna de MEJOR tiempo (segundos) por minijuego. Se conserva el menor
+# valor registrado (no se sobreescribe con tiempos peores).
+static func ensure_minijuego_tiempo_column(database: SQLite) -> void:
+	if database == null:
+		return
+	database.query("PRAGMA table_info(minijuegos_resultados);")
+	var cols: Array = []
+	for c in database.query_result:
+		cols.append(c["name"])
+	if not "NU_MEJOR_TIEMPO" in cols:
+		database.query("ALTER TABLE minijuegos_resultados ADD COLUMN NU_MEJOR_TIEMPO REAL DEFAULT 0;")
 
 static func escape(value: String) -> String:
 	return value.replace("'", "''")
@@ -152,16 +165,17 @@ static func ensure_niveles_intentos_table(database: SQLite) -> void:
 	database.query(query)
 	database.query("CREATE INDEX IF NOT EXISTS idx_niveles_intentos_usu_nivel ON niveles_intentos (NU_USU, NU_NIVEL);")
 
-static func mirror_minijuegos_resultados(database: SQLite, id_usu: int, nombre: String, minijuego: String, pts: int, estrellas: int) -> void:
+static func mirror_minijuegos_resultados(database: SQLite, id_usu: int, nombre: String, minijuego: String, pts: int, estrellas: int, tiempo_seg: float = 0.0) -> void:
 	if database == null:
 		return
 	var fecha := Time.get_datetime_string_from_system().replace("T", " ")
 	database.query(
-		"SELECT NU_ID, NU_INTENTOS, NU_PUNTOS, NU_ESTRELLAS FROM minijuegos_resultados WHERE NU_USU = %d AND NM_MINIJUEGO = '%s' LIMIT 1;" % [id_usu, escape(minijuego)]
+		"SELECT NU_ID, NU_INTENTOS, NU_PUNTOS, NU_ESTRELLAS, NU_MEJOR_TIEMPO FROM minijuegos_resultados WHERE NU_USU = %d AND NM_MINIJUEGO = '%s' LIMIT 1;" % [id_usu, escape(minijuego)]
 	)
 	if database.query_result.is_empty():
+		var t_ini := maxf(0.0, tiempo_seg)
 		database.query(
-			"INSERT INTO minijuegos_resultados (NU_USU, NM_ALUMNO, NM_MINIJUEGO, NU_INTENTOS, NU_PUNTOS, NU_ESTRELLAS, FE_ULTIMO) VALUES (%d, '%s', '%s', 1, %d, %d, '%s');" % [id_usu, escape(nombre), escape(minijuego), pts, estrellas, escape(fecha)]
+			"INSERT INTO minijuegos_resultados (NU_USU, NM_ALUMNO, NM_MINIJUEGO, NU_INTENTOS, NU_PUNTOS, NU_ESTRELLAS, FE_ULTIMO, NU_MEJOR_TIEMPO) VALUES (%d, '%s', '%s', 1, %d, %d, '%s', %f);" % [id_usu, escape(nombre), escape(minijuego), pts, estrellas, escape(fecha), t_ini]
 		)
 	else:
 		var row := database.query_result[0]
@@ -169,9 +183,21 @@ static func mirror_minijuegos_resultados(database: SQLite, id_usu: int, nombre: 
 		var mejor_pts := maxi(pts, int(row.get("NU_PUNTOS", 0)))
 		var mejor_est := maxi(estrellas, int(row.get("NU_ESTRELLAS", 0)))
 		var nu_id := int(row.get("NU_ID", 0))
+		# REP-02: conservar el MENOR tiempo positivo (mejor tiempo).
+		var prev_t := float(row.get("NU_MEJOR_TIEMPO", 0.0))
+		var mejor_t := prev_t
+		if tiempo_seg > 0.0:
+			mejor_t = tiempo_seg if prev_t <= 0.0 else minf(prev_t, tiempo_seg)
 		database.query(
-			"UPDATE minijuegos_resultados SET NU_INTENTOS = %d, NU_PUNTOS = %d, NU_ESTRELLAS = %d, FE_ULTIMO = '%s' WHERE NU_ID = %d;" % [intentos, mejor_pts, mejor_est, escape(fecha), nu_id]
+			"UPDATE minijuegos_resultados SET NU_INTENTOS = %d, NU_PUNTOS = %d, NU_ESTRELLAS = %d, FE_ULTIMO = '%s', NU_MEJOR_TIEMPO = %f WHERE NU_ID = %d;" % [intentos, mejor_pts, mejor_est, escape(fecha), mejor_t, nu_id]
 		)
+
+## BUG-02: acreditar monedas ganadas en un minijuego al saldo del alumno.
+## Los minijuegos calculaban las monedas pero nunca las escribian en NU_DINERO.
+static func sumar_dinero(database: SQLite, id_usu: int, monedas: int) -> void:
+	if database == null or monedas <= 0:
+		return
+	database.query("UPDATE Alumnos SET NU_DINERO = NU_DINERO + %d WHERE NU_USU = %d;" % [monedas, id_usu])
 
 static func nivel_comprado(database: SQLite, id_usu: int, tp_minijuego: String, nv: int) -> bool:
 	if database == null:
@@ -330,6 +356,11 @@ static func ensure_alumnos_minijuego_columns(database: SQLite) -> void:
 		database.query("ALTER TABLE Alumnos ADD COLUMN NU_NIVEL_MAX_COLUMNAS INTEGER DEFAULT 1;")
 	if not "NU_NIVEL_MAX_MEMORIA" in columnas_existentes:
 		database.query("ALTER TABLE Alumnos ADD COLUMN NU_NIVEL_MAX_MEMORIA INTEGER DEFAULT 1;")
+	# BUG-04: trackers de nivel independientes para los minijuegos textuales.
+	if not "NU_NIVEL_MAX_COMPLETAR" in columnas_existentes:
+		database.query("ALTER TABLE Alumnos ADD COLUMN NU_NIVEL_MAX_COMPLETAR INTEGER DEFAULT 1;")
+	if not "NU_NIVEL_MAX_AHORCADO" in columnas_existentes:
+		database.query("ALTER TABLE Alumnos ADD COLUMN NU_NIVEL_MAX_AHORCADO INTEGER DEFAULT 1;")
 
 static func log_activity(database: SQLite, tipo_usuario: String, usuario: String, accion: String, es_parte_de_transaccion: bool = false) -> void:
 	if database == null:

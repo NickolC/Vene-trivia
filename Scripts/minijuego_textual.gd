@@ -12,6 +12,11 @@ const RUTA_MINIJUEGOS := "res://Scenes/Minijuegos.tscn"
 
 const ALFABETO := "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
 
+# Economía y tiempo (alineado con los demás minijuegos)
+const MONEDAS_POR_ESTRELLA := 50
+const TIEMPO_TOTAL := 480.0          # 8 minutos
+const LIMITE_3_ESTRELLAS := 240.0    # completar en <=4 min para optar a 3 estrellas
+
 var db: SQLite
 var modo: String = "verdadero_falso"
 var nivel: int = 1
@@ -25,7 +30,12 @@ var pista_actual: String = ""
 var letras_usadas: Dictionary = {}
 var fallos_restantes: int = 6
 
+# Estado de cronómetro
+var tiempo_restante: float = TIEMPO_TOTAL
+var juego_activo: bool = false
+
 var titulo_label: Label
+var cronometro_label: Label
 var estado_label: Label
 var pregunta_label: Label
 var pista_label: Label
@@ -51,7 +61,28 @@ func _ready() -> void:
 		boton_selector.visible = true
 		return
 
+	tiempo_restante = TIEMPO_TOTAL
+	juego_activo = true
 	_mostrar_item_actual()
+
+func _process(delta: float) -> void:
+	if not juego_activo:
+		return
+	tiempo_restante -= delta
+	if tiempo_restante <= 0.0:
+		tiempo_restante = 0.0
+		_actualizar_cronometro()
+		juego_activo = false
+		_finalizar_juego(true)
+		return
+	_actualizar_cronometro()
+
+func _actualizar_cronometro() -> void:
+	if cronometro_label == null:
+		return
+	var total := int(tiempo_restante)
+	cronometro_label.text = "Tiempo: %02d:%02d" % [total / 60, total % 60]
+	cronometro_label.add_theme_color_override("font_color", Color.RED if tiempo_restante <= 30.0 else Color.WHITE)
 
 func _exit_tree() -> void:
 	if db:
@@ -81,6 +112,12 @@ func _crear_ui_base() -> void:
 	titulo_label.add_theme_font_size_override("font_size", 36)
 	titulo_label.text = _nombre_modo() + " - Nivel %d" % nivel
 	root_box.add_child(titulo_label)
+
+	cronometro_label = Label.new()
+	cronometro_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	cronometro_label.add_theme_font_size_override("font_size", 24)
+	cronometro_label.text = "Tiempo: 08:00"
+	root_box.add_child(cronometro_label)
 
 	estado_label = Label.new()
 	estado_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
@@ -176,7 +213,7 @@ func _cargar_ronda_desde_json() -> bool:
 
 func _mostrar_item_actual() -> void:
 	if indice >= ronda.size():
-		_finalizar_juego()
+		_finalizar_juego(false)
 		return
 
 	estado_label.text = "Pregunta %d/%d  |  Puntaje: %d" % [indice + 1, ronda.size(), puntaje]
@@ -308,32 +345,50 @@ func _on_boton_siguiente_pressed() -> void:
 	indice += 1
 	_mostrar_item_actual()
 
-func _finalizar_juego() -> void:
+func _finalizar_juego(por_tiempo_agotado: bool = false) -> void:
+	juego_activo = false
 	var total := maxi(1, ronda.size())
 	var ratio := float(aciertos) / float(total)
+	var tiempo_empleado := TIEMPO_TOTAL - tiempo_restante
+
+	# Regla unificada de estrellas: 3 exige TODO correcto + tiempo restante
+	# (no agotado) y dentro del límite rápido. Si se agota el tiempo, máx 2.
 	var estrellas := 0
-	if ratio >= 0.8:
-		estrellas = 3
-	elif ratio >= 0.5:
-		estrellas = 2
-	elif ratio > 0.0:
-		estrellas = 1
+	if por_tiempo_agotado:
+		if ratio >= 0.8:
+			estrellas = 2
+		elif ratio >= 0.5:
+			estrellas = 1
+	else:
+		if ratio >= 1.0 and tiempo_empleado <= LIMITE_3_ESTRELLAS:
+			estrellas = 3
+		elif ratio >= 1.0:
+			estrellas = 2
+		elif ratio >= 0.6:
+			estrellas = 2
+		elif ratio > 0.0:
+			estrellas = 1
+
+	var monedas := estrellas * MONEDAS_POR_ESTRELLA
 
 	pregunta_label.text = "Resultado final"
-	pista_label.text = "Aciertos: %d/%d" % [aciertos, total]
+	cronometro_label.visible = false
+	pista_label.text = "Aciertos: %d/%d  |  Tiempo: %02d:%02d" % [aciertos, total, int(tiempo_empleado) / 60, int(tiempo_empleado) % 60]
 	mascara_label.visible = false
 	opciones_box.visible = false
 	teclado_grid.visible = false
-	feedback_label.text = "Puntaje: %d | Estrellas: %d" % [puntaje, estrellas]
+	feedback_label.text = "Puntaje: %d  |  Estrellas: %d  |  Dinero: +%d Bs." % [puntaje, estrellas, monedas]
 
-	_guardar_resultado(puntaje, estrellas)
+	# Best time solo cuenta si completó todo y no se agotó el tiempo
+	var tiempo_para_db := tiempo_empleado if (not por_tiempo_agotado and ratio >= 1.0) else 0.0
+	_guardar_resultado(puntaje, estrellas, tiempo_para_db)
 
 	boton_siguiente.visible = false
 	boton_reintentar.visible = true
 	boton_selector.visible = true
 	boton_menu.visible = true
 
-func _guardar_resultado(puntos: int, estrellas: int) -> void:
+func _guardar_resultado(puntos: int, estrellas: int, tiempo_seg: float = 0.0) -> void:
 	if db == null:
 		return
 	if GlobalUsuario.usuario_actual_id <= 0:
@@ -344,8 +399,21 @@ func _guardar_resultado(puntos: int, estrellas: int) -> void:
 		GlobalUsuario.nombre_alumno,
 		modo,
 		puntos,
-		estrellas
+		estrellas,
+		tiempo_seg
 	)
+	# BUG-02: acreditar monedas ganadas
+	SQLiteHelper.sumar_dinero(db, GlobalUsuario.usuario_actual_id, estrellas * MONEDAS_POR_ESTRELLA)
+	# BUG-04: avanzar el tracker de nivel propio del minijuego (si aprobó)
+	if estrellas > 0:
+		var col := ""
+		if modo == "completar_frases":
+			col = "NU_NIVEL_MAX_COMPLETAR"
+		elif modo == "ahorcado":
+			col = "NU_NIVEL_MAX_AHORCADO"
+		if not col.is_empty():
+			var prox := nivel + 1
+			db.query("UPDATE Alumnos SET %s = %d WHERE NU_USU = %d AND %s < %d;" % [col, prox, GlobalUsuario.usuario_actual_id, col, prox])
 
 func _on_selector_pressed() -> void:
 	Configuracion.change_scene_to_file(RUTA_MINIJUEGOS)

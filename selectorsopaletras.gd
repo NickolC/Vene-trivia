@@ -175,10 +175,10 @@ func _desconectar_senales_boton(btn: Button) -> void:
 func _on_nivel_seleccionado_desde_mapa(num: int) -> void:
 	print("🚀 ¡FUNCIÓN EJECUTADA! Se presionó el nivel: ", num)
 	nivel_seleccionado_temp = num 
-	var tema: String = TEMAS_NIVELES.get(num, "Tema Desconocido")
+	var _tema: String = TEMAS_NIVELES.get(num, "Tema Desconocido")
 	
 	Prevnivel.text = "Nivel " + str(num)
-	prevtema.text = tema
+	prevtema.text = _dificultad_nivel(num)
 	
 	var cant_estrellas: int = 0 
 	var q_estrellas := ""
@@ -247,3 +247,11 @@ func _mostrar_alerta(mensaje: String) -> void:
 	if alertas and alertas.has_method("mostrar_alerta"):
 		alertas.mostrar_alerta(mensaje, 1.0)
 	print(mensaje)
+
+# VIS-02: previsualización por dificultad (últimos 5 niveles = Difícil)
+func _dificultad_nivel(n: int) -> String:
+	if n >= 11:
+		return "Dificultad: Difícil"
+	elif n >= 6:
+		return "Dificultad: Intermedio"
+	return "Dificultad: Fácil"

@@ -14,6 +14,19 @@ var textura_dorso = preload("res://GFX/estrella vacia.png") # Imagen de la carta
 
 signal carta_seleccionada(carta)
 
+# Fix deuda técnica: add_theme_stylebox_override espera un StyleBox, no un
+# Texture2D. Envolvemos la textura en un StyleBoxTexture para que el fondo de la
+# carta se pinte de verdad (antes load(...png) fallaba en silencio).
+func _stylebox_textura(ruta: String) -> StyleBoxTexture:
+	var sb := StyleBoxTexture.new()
+	sb.texture = load(ruta)
+	return sb
+
+func _aplicar_fondo(ruta: String) -> void:
+	var sb := _stylebox_textura(ruta)
+	for estado in ["normal", "hover", "pressed", "focus", "disabled"]:
+		add_theme_stylebox_override(estado, sb)
+
 func _ready() -> void:
 	custom_minimum_size = Vector2(185, 135)
 	autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
@@ -32,20 +45,20 @@ func mostrar_boca_abajo() -> void:
 	volteada = false
 	text = ""
 	icon = null # Limpiamos el icono para que se vea el fondo
-	
-	# 🌟 Ahora cargamos el recurso .tres que sí es un StyleBox válido
-	add_theme_stylebox_override("normal", load("res://GFX/estrella vacia.png"))
-	
+
+	# Fondo de carta boca abajo (StyleBoxTexture válido)
+	_aplicar_fondo("res://GFX/estrella vacia.png")
+
 	modulate = Color.WHITE
 
 func voltear_boca_arriba() -> void:
 	if volteada or completada: return
 	volteada = true
 	icon = null
-	
-	# Cambiar el fondo a la carta descubierta
-	add_theme_stylebox_override("normal", load("res://GFX/estrella completada.png"))
-	
+
+	# Cambiar el fondo a la carta descubierta (StyleBoxTexture válido)
+	_aplicar_fondo("res://GFX/estrella completada.png")
+
 	if es_texto:
 		icon = null
 		text = pista_asociada

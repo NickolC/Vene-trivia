@@ -518,10 +518,6 @@ theme_override_font_sizes/font_size = 30
 text = "Efectos"
 horizontal_alignment = 1
 
-[node name="WorldGamma" type="WorldEnvironment" parent="TextureRect3" unique_id=1142398697]
-process_mode = 3
-environment = SubResource("Environment_gbyod")
-
 [node name="TextureRect4" type="TextureRect" parent="." unique_id=1848037378]
 process_mode = 3
 visible = false

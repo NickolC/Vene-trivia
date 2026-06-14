@@ -303,10 +303,11 @@ func _procesar_fin_del_juego(por_tiempo_agotado: bool) -> void:
 	var estrellas := 0
 	
 	if not por_tiempo_agotado:
-		if tiempo_seg <= 180.0: # Menos de 3 minutos
+		# Regla unificada: 3 estrellas exige completar a tiempo Y sin errores.
+		if tiempo_seg <= 180.0 and _errores == 0: # Menos de 3 minutos y sin fallos
 			estrellas = 3
 			cambiar_pose(pose_feliz)
-			await decir_mensaje("¡Increíble! ¡Tiempo récord! Has resuelto toda la memoria en menos de 3 minutos. ¡Eres un maestro!", 4.0)
+			await decir_mensaje("¡Increíble! ¡Tiempo récord y sin fallos! Has resuelto toda la memoria en menos de 3 minutos. ¡Eres un maestro!", 4.0)
 		elif tiempo_seg <= 300.0: # Menos de 5 minutos
 			estrellas = 2
 			cambiar_pose(pose_pensativo)
@@ -337,7 +338,8 @@ func _procesar_fin_del_juego(por_tiempo_agotado: bool) -> void:
 	var monedas := estrellas * MONEDAS_POR_ESTRELLA
 	
 	if estrellas > 0:
-		_guardar_progreso(puntos, estrellas)
+		# REP-02: mejor tiempo solo si completó (no por tiempo agotado)
+		_guardar_progreso(puntos, estrellas, tiempo_seg if not por_tiempo_agotado else 0.0)
 
 	_mostrar_pantalla_resultados(estrellas, puntos, monedas, tiempo_seg)
 
@@ -415,7 +417,7 @@ func _obtener_parejas_del_nivel(nivel: int) -> Array[ParMemoria]:
 
 # --- BASE DE DATOS Y PAUSAS ---
 
-func _guardar_progreso(puntos: int, estrellas: int) -> void:
+func _guardar_progreso(puntos: int, estrellas: int, tiempo_seg: float = 0.0) -> void:
 	if db == null: return
 	var id: int = GlobalUsuario.usuario_actual_id
 	var nombre := SQLiteHelper.escape(GlobalUsuario.nombre_alumno)
@@ -434,7 +436,10 @@ func _guardar_progreso(puntos: int, estrellas: int) -> void:
 
 	var prox := numero_de_nivel + 1
 	db.query("UPDATE Alumnos SET NU_NIVEL_MAX_MEMORIA = %d WHERE NU_USU = %d AND NU_NIVEL_MAX_MEMORIA < %d;" % [prox, id, prox])
-	SQLiteHelper.mirror_minijuegos_resultados(db, id, GlobalUsuario.nombre_alumno, "memoria", puntos, estrellas)
+	SQLiteHelper.mirror_minijuegos_resultados(db, id, GlobalUsuario.nombre_alumno, "memoria", puntos, estrellas, tiempo_seg)
+
+	# BUG-02: acreditar las monedas ganadas (estrellas * MONEDAS_POR_ESTRELLA)
+	SQLiteHelper.sumar_dinero(db, id, estrellas * MONEDAS_POR_ESTRELLA)
 
 	db.query("SELECT NU_DINERO FROM Alumnos WHERE NU_USU = %d;" % id)
 	var dinero_total := 0

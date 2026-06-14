@@ -33,6 +33,11 @@ var mi_fuente = load("res://GFX/Minecraft.ttf")
 var ya_aviso_tiempo_mediano = false
 var ya_aviso_tiempo_corto = false # Para que no repita el aviso de 5 segundos
 
+# BUG-01: token para que un mensaje viejo no oculte/desvanezca al mensaje nuevo
+var _mensaje_token: int = 0
+# BUG-01: recordar si la ultima respuesta fue correcta (dato curioso solo si acerto)
+var ultima_respuesta_correcta: bool = false
+
 var comodin_usado = false
 var comodin_llamada_usado = false
 var comodin_publico_usado = false
@@ -82,20 +87,30 @@ var puntos = 0
 var tiempo_inicio: float = 0.0
 
 func decir_mensaje(texto: String, tiempo: float = 3.0):
-	label_dialogo.show() 
+	# BUG-01: cada llamada toma un token nuevo. Si otra llamada mas reciente
+	# aparece mientras esta espera, esta aborta sin ocultar el panel para que
+	# el mensaje nuevo no se desvanezca antes de tiempo.
+	_mensaje_token += 1
+	var token := _mensaje_token
+
+	label_dialogo.show()
 	if label_dialogo.get_parent(): label_dialogo.get_parent().show()
 	label_dialogo.text = texto
-	
+
 	var tween = create_tween()
 	panel_dialogo.modulate.a = 0
 	panel_dialogo.show()
 	tween.tween_property(panel_dialogo, "modulate:a", 1.0, 0.3)
-	
+
 	await get_tree().create_timer(tiempo).timeout
-	
+	if token != _mensaje_token:
+		return
+
 	var tween_out = create_tween()
 	tween_out.tween_property(panel_dialogo, "modulate:a", 0.0, 0.3)
 	await tween_out.finished
+	if token != _mensaje_token:
+		return
 	panel_dialogo.hide()
 
 func cambiar_pose(nueva_textura):
@@ -116,6 +131,11 @@ func _ready() -> void:
 	_cargar_usuario_actual()
 	numero_de_nivel = _obtener_nivel_actual()
 	GlobalUsuario.nivel_seleccionado = numero_de_nivel
+
+	# VIS-01: fondo de partida segun la temática del nivel
+	var ruta_fondo := "res://GFX/Niveles/%d.png" % numero_de_nivel
+	if ResourceLoader.exists(ruta_fondo):
+		$TextureRect.texture = load(ruta_fondo)
 
 	cargar_json()
 	if todas_las_preguntas.is_empty():
@@ -528,7 +548,8 @@ func _on_respuesta_seleccionada(boton_presionado: Button):
 	
 	# Leemos de forma automatizada los metadatos de respuesta correcta en el botón seleccionado
 	var es_correcto: bool = boton_presionado.get_meta("es_correcta", false)
-	
+	ultima_respuesta_correcta = es_correcto # BUG-01: dato curioso solo si acerto
+
 	if es_correcto:
 		puntos += PUNTOS_RESPUESTA_CORRECTA
 		actualizar_interfaz_puntos()
@@ -566,7 +587,8 @@ func cambiar_color_boton(boton: Button, color: Color):
 
 
 func _on_timer_timeout() -> void:
-	# 1. Bloqueamos todos los botones para que el usuario no pueda 
+	ultima_respuesta_correcta = false # BUG-01: tiempo agotado = sin dato curioso
+	# 1. Bloqueamos todos los botones para que el usuario no pueda
 	# hacer clic justo cuando el tiempo termina.
 	for b in botones_respuesta:
 		b.disabled = true
@@ -589,9 +611,10 @@ func _on_timer_timeout() -> void:
 	siguiente_pregunta()
 
 func siguiente_pregunta():
-		# Al pasar de pregunta, mostramos el dato curioso si existe en el JSON
+		# BUG-01: el dato curioso solo se muestra si la respuesta fue CORRECTA.
+		# Si fallo o se agoto el tiempo, ya se mostro solo el explicativo.
 	var datos_actual = preguntas_partida_actual[indice_actual]
-	if datos_actual.has("dato_curioso") and not str(datos_actual["dato_curioso"]).is_empty():
+	if ultima_respuesta_correcta and datos_actual.has("dato_curioso") and not str(datos_actual["dato_curioso"]).is_empty():
 		cambiar_pose(pose_pensativo)
 		await decir_mensaje("¿Sabías qué? " + str(datos_actual["dato_curioso"]), 4.0)
 	
