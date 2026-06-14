@@ -25,15 +25,6 @@ texture_margin_top = 15.0
 texture_margin_right = 15.0
 texture_margin_bottom = 15.0
 
-<<<<<<< HEAD
-=======
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e8ur4"]
-texture = ExtResource("8_e8ur4")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8lo3o"]
-texture = ExtResource("8_e8ur4")
-
->>>>>>> ef36522456eca286dd96f450deeb7ca291e452de
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2hho4"]
 texture = ExtResource("5_30tw6")
 texture_margin_left = 20.0
@@ -73,7 +64,6 @@ anchor_left = 0.26900002
 anchor_top = 0.042000003
 anchor_right = 0.26900002
 anchor_bottom = 0.042000003
-<<<<<<< HEAD
 offset_left = -89.84903
 offset_top = -25.202003
 offset_right = -26.84903
@@ -83,17 +73,6 @@ offset_bottom = 24.797997
 offset_left = 861.0
 offset_top = 131.0
 offset_right = 1357.0
-=======
-offset_left = 138.15097
-offset_top = -25.202003
-offset_right = 201.15097
-offset_bottom = 24.797997
-
-[node name="PanelContainer" type="PanelContainer" parent="capapersonaje" unique_id=377393638]
-offset_left = 1087.0
-offset_top = 131.0
-offset_right = 1583.0
->>>>>>> ef36522456eca286dd96f450deeb7ca291e452de
 offset_bottom = 391.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_prdr1")
 
@@ -178,21 +157,15 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-<<<<<<< HEAD
 [node name="Label" type="Label" parent="CanvasLayer/CanvasLayer2/VBoxContainer" unique_id=247535346]
 layout_mode = 2
 theme_override_font_sizes/font_size = 5
 
-=======
->>>>>>> ef36522456eca286dd96f450deeb7ca291e452de
 [node name="GridContainer" type="GridContainer" parent="CanvasLayer/CanvasLayer2/VBoxContainer" unique_id=1038884018]
 clip_contents = true
 layout_mode = 2
 mouse_filter = 2
-<<<<<<< HEAD
 theme_override_constants/h_separation = 15
-=======
->>>>>>> ef36522456eca286dd96f450deeb7ca291e452de
 columns = 2
 
 [node name="Button" type="Button" parent="CanvasLayer/CanvasLayer2/VBoxContainer/GridContainer" unique_id=334718971]
@@ -200,10 +173,6 @@ clip_contents = true
 custom_minimum_size = Vector2(550, 100)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_4j6h8")
-<<<<<<< HEAD
-=======
-theme_override_styles/normal = SubResource("StyleBoxTexture_e8ur4")
->>>>>>> ef36522456eca286dd96f450deeb7ca291e452de
 button_mask = 0
 autowrap_trim_flags = 192
 clip_text = true
@@ -214,10 +183,6 @@ clip_contents = true
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_4j6h8")
-<<<<<<< HEAD
-=======
-theme_override_styles/normal = SubResource("StyleBoxTexture_8lo3o")
->>>>>>> ef36522456eca286dd96f450deeb7ca291e452de
 button_mask = 0
 autowrap_trim_flags = 192
 clip_text = true
@@ -492,15 +457,9 @@ anchor_left = 0.284
 anchor_top = 0.59400004
 anchor_right = 0.284
 anchor_bottom = 0.59400004
-<<<<<<< HEAD
 offset_left = -161.80002
 offset_top = -18.404053
 offset_right = 152.19998
-=======
-offset_left = -195.80002
-offset_top = -18.404053
-offset_right = 118.19998
->>>>>>> ef36522456eca286dd96f450deeb7ca291e452de
 offset_bottom = 27.595947
 theme_override_colors/font_color = Color(1, 0.80784315, 0.29411766, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -516,15 +475,9 @@ anchor_left = 0.67600006
 anchor_top = 0.59400004
 anchor_right = 0.67600006
 anchor_bottom = 0.59400004
-<<<<<<< HEAD
 offset_left = -54.200073
 offset_top = -18.404053
 offset_right = 259.79993
-=======
-offset_left = -136.20007
-offset_top = -18.404053
-offset_right = 177.79993
->>>>>>> ef36522456eca286dd96f450deeb7ca291e452de
 offset_bottom = 27.595947
 theme_override_colors/font_color = Color(1, 0.80784315, 0.29411766, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -568,7 +521,6 @@ layout_mode = 2
 icon = ExtResource("14_4hydx")
 flat = true
 
-<<<<<<< HEAD
 [connection signal="pressed" from="CanvasLayer/Buttonpausa" to="." method="_on_boton_pausa_visual_pressed"]
 [connection signal="pressed" from="Menupausa/CenterContainer/VBoxContainer/Button" to="." method="_on_continuar_pressed"]
 [connection signal="pressed" from="Menupausa/CenterContainer/VBoxContainer/Button2" to="." method="_on_opciones_pressed"]
@@ -579,7 +531,3 @@ flat = true
 [connection signal="pressed" from="PantallaResultados/Panel/HBoxContainer2/Button2" to="." method="_on_btn_menu_pressed"]
 [connection signal="pressed" from="PantallaResultados/Panel/HBoxContainer2/Button4" to="." method="_on_btn_mapa_pressed"]
 [connection signal="pressed" from="PantallaResultados/Panel/HBoxContainer2/Button" to="." method="_on_btn_siguiente_pressed"]
-=======
-[connection signal="pressed" from="CanvasLayer/CanvasLayer2/VBoxContainer/GridContainer/Button" to="." method="_on_btn_verdadero_pressed"]
-[connection signal="pressed" from="CanvasLayer/CanvasLayer2/VBoxContainer/GridContainer/Button2" to="." method="_on_btn_falso_pressed"]
->>>>>>> ef36522456eca286dd96f450deeb7ca291e452de
